@@ -1,0 +1,113 @@
+
+.menu_bar {
+    position: static;
+    /* min-width: 300px; */
+    width: 68.7%;
+    /* max-width: 75%; */
+    margin: 4.5% auto 0;
+    background-color: #222222;
+    border-radius: 5px;
+    z-index: 100;
+
+}
+.nav-link {
+    text-align: center;
+    color: antiquewhite;
+    font-size: 1.2rem;
+    font-weight:500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-link:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(179, 160, 136);
+}
+
+.menu_ul {
+    display: flex;
+    align-content: center;
+}
+ .nav-item {
+flex: 1 0 0;
+}
+
+.dropdown-menu {
+    background-color: antiquewhite;
+}
+
+.dropdown-item {
+    color: black;
+    font-weight: 800;
+
+}
+
+.container_CarlosC {
+    margin: 1em 0 0 21em;
+    z-index: 20;
+    border-radius: 50%;
+    width: 10em
+}
+
+.register2 {
+    display: none;
+
+}
+
+
+ @media (max-width: 449px) {
+.register1 {
+    display: none;
+}
+
+.register2 {
+    display: block;
+
+}
+
+    .menu_bar {
+        width: 99.7%;
+
+}
+    .nav-item {flex: 1 0 0;
+}
+    .nav-link {
+        font-size: 1.1em;
+}
+    .dropdown-item {
+        font-size: .8em;
+}
+}
+
+@media (min-width: 450px) {
+    .dropdown-item {
+        font-size: 3em;
+}
+}
+
+/* @media (min-width: 451px) {
+    .dropdown-item {
+        font-size: .8rem;
+
+    }
+    } */
+@media (max-width: 1455px) {
+    .register1 {
+        display: none;
+    }
+    
+    .register2 {
+        display: block;
+    
+    }
+    
+    .dropdown-item {
+        font-size: 1rem;
+
+    }
+    }
+@media (min-width: 951px) {
+    .dropdown-item {
+        font-size: .9rem;
+
+    }
+    }
