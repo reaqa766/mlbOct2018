@@ -23,6 +23,7 @@
     margin: 0.2em auto;
 }
 
+
 .table-header {
     background-color: rgba(12, 10, 9, 0.5);
     color: antiquewhite;
@@ -31,4 +32,31 @@
     background-color: antiquewhite;
     color: rgb(12, 10, 9);
 
+}
+
+.player-name {
+    color: black;
+}
+.player-name:hover {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 1.15rem;
+    text-decoration: none;
+}
+
+.row-color {
+    background-color: rgb(245, 223, 195);
+
+}
+.row-color:hover {
+    background-color: rgb(255, 255, 255);
+
+}
+.row-color1:hover {
+    background-color: rgb(255, 255, 255);
+
+}
+
+.title-rows_header {
+    text-align: center;
 }
