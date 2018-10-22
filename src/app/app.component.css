@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-/* .container-fluid {
-    background: url(../assets/fondo3.jpg);
-    background-size:cover;
-    background-repeat:no-repeat;
-}    */
-=======
->>>>>>> 1a24004a8a3128ab7a6894df12ba7c44edd45d8a
-
-h1 {
+.central-title {
     color: antiquewhite;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',  Verdana, sans-serif; */
     font-size: 3vw;
     text-align: center;
 }

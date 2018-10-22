@@ -15,19 +15,19 @@ const routes: Routes = [
   { path:'',
   component: HomeComponent},
   { path:'news',
-  component: NewsComponent}
+  component: NewsComponent},
   { path:'aboutUs',
-  component: AboutusComponent}
+  component: AboutusComponent},
   { path:'register',
-  component: RegisterComponent}
+  component: RegisterComponent},
   { path:'position',
-  component: BypositionComponent}
+  component: BypositionComponent},
   { path:'team',
-  component: ByteamComponent}
+  component: ByteamComponent},
   { path:'daily',
-  component: DailyComponent}
+  component: DailyComponent},
   { path:'actives',
-  component: ActivesComponent}
+  component: ActivesComponent},
   { path:'contactUs',
   component: ContactUsComponent}
 
