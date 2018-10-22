@@ -1,4 +1,4 @@
-.team-title {
+.contactUs-title {
     color: antiquewhite;
     font-size: 2rem;
     text-align: center;
@@ -6,6 +6,6 @@
     padding: .5rem 0; 
     background-color: rgba(3, 2, 2, 0.5);
     width: 8em;
-    height: 2.75em;
+    height: 1.5em;
     border-radius: 7px;
 }

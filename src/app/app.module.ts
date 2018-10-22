@@ -14,6 +14,8 @@ import { DailyComponent } from './components/players/daily/daily.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { FooterComponent } from './components/footer/footer.component';
     DailyComponent,
     AboutusComponent,
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    ContactUsComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
