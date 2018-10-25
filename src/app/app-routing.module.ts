@@ -9,6 +9,7 @@ import { BypositionComponent} from '../app/components/players/byposition/byposit
 import { ByteamComponent} from '../app/components/players/byteam/byteam.component';
 import { DailyComponent} from '../app/components/players/daily/daily.component';
 import { ActivesComponent} from '../app/components/players/actives/actives.component';
+import { BioActivesComponent} from '../app/components/players/bio-actives/bio-actives.component';
 
 const routes: Routes = [
 
@@ -28,6 +29,8 @@ const routes: Routes = [
   component: DailyComponent},
   { path:'actives',
   component: ActivesComponent},
+  { path:'bioActives',
+  component: BioActivesComponent},
   { path:'contactUs',
   component: ContactUsComponent}
 

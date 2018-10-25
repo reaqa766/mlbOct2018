@@ -1,14 +1,44 @@
-.byPosition-title {
+.bioActives-title {
     color: antiquewhite;
     font-size: 2rem;
     text-align: center;
     margin: 1.5rem auto 0; 
     padding: .5rem 0; 
     background-color: rgba(3, 2, 2, 0.5);
-    width: 13em;
+    width: 12em;
     height: 1.75em;
     border-radius: 7px;
 }
+.title-position{
+    color: antiquewhite;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 13em;
+    margin-bottom: 0;
+}
+
+.table {
+    width: 68%;
+    margin: 0.2em auto;
+}
+
+.table-header {
+    background-color: rgba(12, 10, 9, 0.9);
+    color: antiquewhite;
+}
+.table-header2 {
+    background-color: rgba(12, 10, 9, 0.75);
+    color: antiquewhite;
+}
+.title-rows {
+    background-color: antiquewhite;
+    color: rgb(12, 10, 9);
+
+}
+
+
+/* BOrrar todo */
+
 
 .advancedSearchTextbox{
     color: rgb(2, 1, 0);
@@ -34,14 +64,9 @@
 
 
 .table-header {
-    background-color: rgba(12, 10, 9, 0.9);
-    color: antiquewhite;
-}
-.table-header2 {
     background-color: rgba(12, 10, 9, 0.75);
     color: antiquewhite;
 }
-
 .title-rows {
     background-color: antiquewhite;
     color: rgb(12, 10, 9);

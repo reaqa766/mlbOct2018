@@ -1,6 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FormsModule }   from '@angular/forms';
+import { GrdFilterPipe } from './components/grd-filter.pipe';
+
+import { HttpClientModule } from '@angular/common/http';
+import { PlayersService } from '../services/players.service'; 
+
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -16,6 +24,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { RegisterComponent } from './components/register/register.component';
+import { BioActivesComponent } from './components/players/bio-actives/bio-actives.component';
 
 @NgModule({
   declarations: [
@@ -32,13 +41,18 @@ import { RegisterComponent } from './components/register/register.component';
     MenuComponent,
     FooterComponent,
     ContactUsComponent,
-    RegisterComponent
+    RegisterComponent, 
+    GrdFilterPipe, BioActivesComponent
+  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,  
+    FormsModule,
+    HttpClientModule,
+    // Ng2SmartTableModule
   ],
-  providers: [],
+  providers: [PlayersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

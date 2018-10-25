@@ -6,11 +6,11 @@ import { Players } from '../../../../interfaces/players';
 
 
 @Component({
-  selector: 'app-actives',
-  templateUrl: './actives.component.html',
-  styleUrls: ['./actives.component.css']
+  selector: 'app-bio-actives',
+  templateUrl: './bio-actives.component.html',
+  styleUrls: ['./bio-actives.component.css']
 })
-export class ActivesComponent implements OnInit {
+export class BioActivesComponent implements OnInit {
 
   public players = [];
   public playersSort = [];
@@ -65,8 +65,6 @@ ngOnInit() {
   this.getPlayersMap();
   console.log('players', this.players);
   this.getPlayerBybirthCountry();
-  this.playersSort = this.players.sort(((a,b) => b - a));
-  console.log('nuevoSort', this.playersSort);
   
 
   

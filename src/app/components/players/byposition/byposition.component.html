@@ -3,49 +3,37 @@
 </div>
 <p class="title-position"> OUTFIELDERS </p>
 
-<table class="table table-hover ">
-    <thead class="table-header" >
-      <tr  >
-        <th scope="col">Name</th>
-        <th scope="col">Team</th>
-        <th scope="col">Vb</th>
-        <th scope="col">Avg</th>
-        <th scope="col">Hits</th>
-        <th scope="col">BB</th>
-        <th scope="col">Strks</th>
-        <th scope="col">Hr</th>
-      </tr>
-    </thead>
-    <tbody class="title-rows" >
-      <tr class="row-color" >
-        <th scope="row"><a class="player-name"  href=""> Ronald Acuña</a></th>
-        <td>Bravos de Atlanta </td>
-        <td>427</td>
-        <td>297</td>
-        <td>142</td>
-        <td>75</td>
-        <td>45</td>
-        <td>25</td>
-      </tr>
-      <tr class="row-color1">
-        <th scope="row"><a class="player-name"  href="">Ender Inciarte</a></th>
-        <td>Bravos de Atlanta</td>
-        <td>557</td>
-        <td>242</td>
-        <td>133</td>
-        <td>38</td>
-        <td>56</td>
-        <td>15</td>
-      </tr>
-      <tr class="row-color">
-        <th scope="row"><a class="player-name"  href="">Gerardo Parra</a></th>
-        <td>Rockies de Colorado</td>
-        <td>537</td>
-        <td>283</td>
-        <td>175</td>
-        <td>68</td>
-        <td>84</td>
-        <td>19</td>
-      </tr>
-    </tbody>
-  </table>
+<input [(ngModel)]="searchText" placeholder="Buscar Jugador.." class="advancedSearchTextbox">
+<p></p>
+<table class="table table-hover " >
+
+<thead class="table-header" >
+  <tr  >
+    <th style="width: 5%;" scope="col">Id</th>
+    <th style="width: 15%;" scope="col">Name</th>
+    <th style="width: 15%;"  scope="col">Team</th>
+    <th style="width: 5%;" scope="col">Vb</th>
+    <th style="width: 5%;" scope="col">Avg</th>
+    <th style="width: 5%;" scope="col">Hits</th>
+    <th style="width: 5%;" scope="col">BB</th>
+    <th style="width: 5%;" scope="col">Strks</th>
+    <th style="width: 5%;" scope="col">Hr</th>
+  </tr>
+</thead>
+</table>
+<table class="table table-hover "  *ngFor="let player of playerData | grdFilter: {Name: searchText, Team:searchText,  Vb: searchText,  Avg: searchText,  Hits: searchText,  BB: searchText,  Strks: searchText,  Hr: searchText }; let i=index;">
+  <thead class="table-header2" >
+  <tr>
+    <td style="width: 5%;">{{i +1}}</td>
+    <td style="width: 15%;">{{player.Name}}</td>
+    <td style="width: 15%;">{{player.Team}}</td>
+    <td style="width: 5%;">{{player.Vb}}</td>
+    <td style="width: 5%;">{{player.Avg}}</td>
+    <td style="width: 5%;">{{player.Hits}}</td>
+    <td style="width: 5%;">{{player.BB}}</td>
+    <td style="width: 5%;">{{player.Strks}}</td>
+    <td style="width: 5%;">{{player.Hr}}</td>
+  </tr>
+</thead>
+
+</table>

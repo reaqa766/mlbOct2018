@@ -4,64 +4,45 @@
 
 <p class="title-position"> 15 Septiembre 2.018 </p>
 
-<table class="table table-hover">
-    <thead class="table-header" >
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Team</th>
-        <th scope="col">Vb</th>
-        <th scope="col">CA</th>
-        <th scope="col">Hits</th>
-        <th scope="col">BB</th>
-        <th scope="col">Strks</th>
-        <th scope="col">Hr</th>
-        <th scope="col">CI</th>
-      </tr>
-    </thead>
-    <tbody class="title-rows" >
-      <tr>
-        <th scope="row">Ronald Acuña</th>
-        <td>Bravos de Atlanta </td>
-        <td>4</td>
-        <td>2</td>
-        <td>1</td>
-        <td>0</td>
-        <td>2</td>
-        <td>0</td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <th scope="row">Ender Inciarte</th>
-        <td>Bravos de Atlanta</td>
-        <td>5</td>
-        <td>2</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1</td>
-        <td>0</td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <th scope="row">Gerardo Parra</th>
-        <td>Rockies de Colorado </td>
-        <td>3</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>1</td>
-        <td>3</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <th scope="row">Gleyber TOrres</th>
-        <td>Yankees de New York</td>
-        <td>4</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1</td>
-        <td>0</td>
-        <td>0</td>
-      </tr>
-    </tbody>
-  </table>
+
+  <!-- Borrar arriba -->
+  
+  <input [(ngModel)]="searchText" placeholder="Buscar Jugador.." class="advancedSearchTextbox">
+<p></p>
+<table class="table table-hover " >
+
+<thead class="table-header1" >
+  <tr  >
+    <!-- <th style="width: 5%;" scope="col">Id</th> -->
+    <th style="width: 10%;" scope="col">Name</th>
+    <th style="width: 10%;"  scope="col">Team</th>
+    <th style="width: 5%;" scope="col">Vb</th>
+    <th style="width: 5%;" scope="col">CA</th>
+    <!-- <th style="width: 5%;" scope="col">Avg</th> -->
+    <th style="width: 5%;" scope="col">Hits</th>
+    <th style="width: 5%;" scope="col">BB</th>
+    <th style="width: 5%;" scope="col">Strks</th>
+    <th style="width: 5%;" scope="col">Hr</th>
+    <th style="width: 5%;" scope="col">CI</th>
+  </tr>
+</thead>
+</table>
+<table class="table table-hover "  *ngFor="let player of players | grdFilter: {Name: searchText, Team:searchText,  Vb: searchText,  Avg: searchText,  Hits: searchText,  BB: searchText,  Strks: searchText,  Hr: searchText }; let i=index;">
+  <thead class="table-header" >
+  <tr>
+    <!-- <td style="width: 5%;">{{i +1}}</td> -->
+    <td style="width: 15%;">{{player.fullName}}</td>
+    <td style="width: 5%;">{{player.stats[0].splits[0].stat.atBats}}</td>
+    <td style="width: 5%;">{{player.stats[0].splits[0].stat.avg}}</td>
+    <td style="width: 5%;">{{player.stats[0].splits[0].stat.runs}}</td>
+    <td style="width: 5%;">{{player.stats[0].splits[0].stat.hits}}</td>
+    <td style="width: 5%;">{{player.stats[0].splits[0].stat.strikeOuts}}</td>
+    <td style="width: 5%;">{{player.stats[0].splits[0].stat.baseOnBalls}}</td>
+    <td style="width: 5%;">{{player.stats[0].splits[0].stat.rbi}}</td>
+    <td style="width: 5%;">{{player.stats[0].splits[0].stat.homeRuns}}</td>
+    <td style="width: 5%;">{{player.stats[0].splits[0].stat.stolenBases}}</td>
+  </tr>
+</thead>
+
+</table>
+  
