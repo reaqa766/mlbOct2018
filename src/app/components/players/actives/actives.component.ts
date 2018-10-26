@@ -40,6 +40,8 @@ export class ActivesComponent implements OnInit {
     position : "Centerfield"}
 
   ]
+  isLoading: boolean;
+
 
 
 
@@ -61,12 +63,10 @@ export class ActivesComponent implements OnInit {
 // }
 
 ngOnInit() {
+  this.isLoading = true;
   // this.playerService.getPlayerDaily();
   this.getPlayersMap();
   console.log('players', this.players);
-  this.getPlayerBybirthCountry();
-  this.playersSort = this.players.sort(((a,b) => b - a));
-  console.log('nuevoSort', this.playersSort);
   
 
   
@@ -89,7 +89,18 @@ ngOnInit() {
           const newPlayer: Players = {};
           Object.assign(newPlayer, player.people[0]);
           return newPlayer;
+        })
+        .sort(({fullName: a}, {fullName: b}) => {
+          if (a > b) {
+            return 1;
+          } else if (a < b) {
+            return -1;
+          } else if (a === b) {
+            return 0;
+          }
         });
+        this.isLoading = false;
+        console.log(JSON.stringify(this.players[0]));
       }
       index++;
     })
@@ -97,9 +108,17 @@ ngOnInit() {
 
 }
 
-getPlayerBybirthCountry() {
-
-}
+get filterPlayers(){
+ 
+  return this.searchText?
+  
+  this.players.filter(player => 
+  player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
+  player.fullName.toLowerCase().includes(this.searchText) || 
+  player.nickName.toLowerCase().includes(this.searchText) ) 
+  
+  : this.players;
+  }
 
 
 }

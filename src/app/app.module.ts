@@ -25,6 +25,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { RegisterComponent } from './components/register/register.component';
 import { BioActivesComponent } from './components/players/bio-actives/bio-actives.component';
+import{ PaginationPipe } from '../pipes/pagination.pipe';
 
 @NgModule({
   declarations: [
@@ -41,8 +42,10 @@ import { BioActivesComponent } from './components/players/bio-actives/bio-active
     MenuComponent,
     FooterComponent,
     ContactUsComponent,
-    RegisterComponent, 
-    GrdFilterPipe, BioActivesComponent
+    RegisterComponent,
+    GrdFilterPipe, 
+    PaginationPipe,
+    BioActivesComponent
   
   ],
   imports: [

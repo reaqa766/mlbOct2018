@@ -2,45 +2,50 @@
   <h1 class="team-title">JUGADORES POR EQUIPO</h1>
 </div>
 
-<p class="title-position"> BRAVOS DE ATLANTA </p>
+<div class="title-position"> EQUIPO</div>
 
-<input [(ngModel)]="searchText" placeholder="Buscar Jugador.." class="advancedSearchTextbox">
+<input #busqueda [(ngModel)]="searchText" placeholder="Nombre del Equipo..." class="advancedSearchTextbox">
 <p></p>
-<table class="table table-hover " >
+<ng-container *ngIf="!isLoading">
 
-<thead class="table-header" >
-  <tr  >
-    <!-- <th style="width: 5%;" scope="col">Id</th> -->
-    <th style="width: 15%;" scope="col">Name</th>
-    <th style="width: 15%;"  scope="col">Team</th>
-    <th style="width: 5%;" scope="col">Vb</th>
-    <th style="width: 5%;" scope="col">Avg</th>
-    <th style="width: 5%;" scope="col">CA</th>
-    <th style="width: 5%;" scope="col">Hits</th>
-    <th style="width: 5%;" scope="col">BB</th>
-    <th style="width: 5%;" scope="col">Strks</th>
-    <th style="width: 5%;" scope="col">CI</th>
-    <th style="width: 5%;" scope="col">Hr</th>
-    <th style="width: 5%;" scope="col">Br</th>
-  </tr>
-</thead>
-</table>
-<table class="table table-hover "  *ngFor="let player of players | grdFilter: {fullName: searchText, name: searchText  }; let i=index;">
-  <thead class="table-header2" >
-  <tr>
-    <!-- <td style="width: 5%;">{{i +1}}</td> -->
-    <td style="width: 15%;">{{player.fullName}}</td>
-    <td style="width: 15%;">{{player.stats[0].splits[0].team.name}}</td>
-    <td style="width: 5%;">{{player.stats[0].splits[0].stat.atBats}}</td>
-    <td style="width: 5%;">{{player.stats[0].splits[0].stat.avg}}</td>
-    <td style="width: 5%;">{{player.stats[0].splits[0].stat.runs}}</td>
-    <td style="width: 5%;">{{player.stats[0].splits[0].stat.hits}}</td>
-    <td style="width: 5%;">{{player.stats[0].splits[0].stat.baseOnBalls}}</td>
-    <td style="width: 5%;">{{player.stats[0].splits[0].stat.strikeOuts}}</td>
-    <td style="width: 5%;">{{player.stats[0].splits[0].stat.rbi}}</td>
-    <td style="width: 5%;">{{player.stats[0].splits[0].stat.homeRuns}}</td>
-    <td style="width: 5%;">{{player.stats[0].splits[0].stat.stolenBases}}</td>
-  </tr>
-</thead>
+  <table class="table table-hover ">
 
-</table>
+    <thead class="table-header">
+      <tr>
+        <!-- <th style="width: 5%;" scope="col">Id</th> -->
+        <th style="width: 15%;" scope="col">Name</th>
+        <th style="width: 15%;" scope="col">Team</th>
+        <th style="width: 5%;" scope="col">Vb</th>
+        <th style="width: 5%;" scope="col">Avg</th>
+        <th style="width: 5%;" scope="col">CA</th>
+        <th style="width: 5%;" scope="col">Hits</th>
+        <th style="width: 5%;" scope="col">BB</th>
+        <th style="width: 5%;" scope="col">Strks</th>
+        <th style="width: 5%;" scope="col">CI</th>
+        <th style="width: 5%;" scope="col">Hr</th>
+        <th style="width: 5%;" scope="col">Br</th>
+      </tr>
+    </thead>
+  </table>
+  <table class="table table-hover " >
+    <thead class="table-header2">
+      <tr *ngFor="let player of filterPlayers">
+        <!-- <td style="width: 5%;">{{i +1}}</td> -->
+        <td style="width: 15%;">{{player.fullName}}</td>
+        <td style="width: 15%;">{{player.stats[0].splits[0].team.name}}</td>
+        <td style="width: 5%;">{{player.stats[0].splits[0].stat.atBats}}</td>
+        <td style="width: 5%;">{{player.stats[0].splits[0].stat.avg}}</td>
+        <td style="width: 5%;">{{player.stats[0].splits[0].stat.runs}}</td>
+        <td style="width: 5%;">{{player.stats[0].splits[0].stat.hits}}</td>
+        <td style="width: 5%;">{{player.stats[0].splits[0].stat.baseOnBalls}}</td>
+        <td style="width: 5%;">{{player.stats[0].splits[0].stat.strikeOuts}}</td>
+        <td style="width: 5%;">{{player.stats[0].splits[0].stat.rbi}}</td>
+        <td style="width: 5%;">{{player.stats[0].splits[0].stat.homeRuns}}</td>
+        <td style="width: 5%;">{{player.stats[0].splits[0].stat.stolenBases}}</td>
+      </tr>
+      <span *ngIf="!filterPlayers[0]" class="d-flex justify-content-center"> <h1> Error: '{{ busqueda.value }}' no existe</h1></span>
+
+    </thead>
+
+  </table>
+</ng-container>

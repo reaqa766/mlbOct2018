@@ -32,12 +32,13 @@ export class PlayersService {
 
   // Array de Codigo de Jugadores
   private playersCode = [
+    650402,
     660670,
-    542255,
+    542583,
     514888,
     503556,
+    542255,
     444489,
-    542583
   ]
 
   private gameCode = [
@@ -57,6 +58,7 @@ export class PlayersService {
   private _url1 = 'http://statsapi.mlb.com/api/v1/people/' + this.playerCode + '/stats/game/' + this.gameCode ;
   private _url4 = 'https://statsapi.mlb.com/api/v1/teams/109/roster?hydrate=person(stats(type=season,season=2018),education)&rosterType=Active';
   private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(type=season=2018),%20team(currentteam)';
+  private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2018&hydrate=stats(type=gameLog)';
 
 
   constructor(private http: HttpClient) { }
@@ -71,27 +73,57 @@ export class PlayersService {
     let dataAllPlayers: Observable<StatsDayliPlayer | undefined>[] = [];
     for (let code of this.playersCode) {
       this._url = this._url.replace(this.playerCode.toString(), code.toString())
-      // this._url = this._url.replace(this.playerCode.toString(), code.toString())
       let dataP = this.getPlayeActive();
       dataAllPlayers.push(dataP);
       this.playerCode = code;
     }
     return dataAllPlayers
   }
-  //Obtencion de los datos diarios de un solo jugador
-  getPlayerDaily(): Observable<StatsDayliPlayer> {
-    return this.http.get<StatsDayliPlayer>(this._url);
-  }
 
-  // Para colocar todos los Json en un solo array. Genera Obsrvables
-  getAllPlayersDaily(): Observable<StatsDayliPlayer | undefined>[] {
-    let dataAllPlayers: Observable<StatsDayliPlayer | undefined>[] = [];
-    for (let code of this.playersCode) {
-      this._url = this._url.replace(this.playerCode.toString(), code.toString())
-      let dataP = this.getPlayerDaily();
-      dataAllPlayers.push(dataP);
-      this.playerCode = code;
-    }
-    return dataAllPlayers
-  }
+
+
+
+
+
+  // //Obtencion de los datos diarios de un solo jugador
+  // getPlayerDaily(): Observable<StatsDayliPlayer> {
+  //   return this.http.get<StatsDayliPlayer>(this._url);
+  // }
+
+  // // Para colocar todos los Json en un solo array. Genera Obsrvables
+  // getAllPlayersDaily(): Observable<StatsDayliPlayer | undefined>[] {
+  //   let dataAllPlayers1: Observable<StatsDayliPlayer | undefined>[] = [];
+  //   for (let code of this.playersCode) {
+  //     this._url = this._url.replace(this.playerCode.toString(), code.toString())
+  //     let dataP1 = this.getPlayerDaily();
+  //     dataAllPlayers1.push(dataP1);
+  //     this.playerCode = code;
+  //   }
+  //   return dataAllPlayers1
+  // }
+
+
+
+
+
+
+
+  // //Obtencion de los datos diarios de un solo jugador
+  // getPlayerDaily2(): Observable<StatsDayliPlayer> {
+  //   return this.http.get<StatsDayliPlayer>(this._url6);
+  // }
+
+
+
+  // // Para colocar todos los Json en un solo array. Genera Obsrvables
+  // getAllPlayersDaily2(): Observable<StatsDayliPlayer | undefined>[] {
+  //   let dataAllPlayers2: Observable<StatsDayliPlayer | undefined>[] = [];
+  //   for (let code of this.playersCode) {
+  //     this._url6 = this._url6.replace(this.playerCode.toString(), code.toString())
+  //     let dataP2 = this.getPlayerDaily2();
+  //     dataAllPlayers2.push(dataP2);
+  //     this.playerCode = code;
+  //   }
+  //   return dataAllPlayers2
+  // }
 }

@@ -1,5 +1,5 @@
 <div class="container-actives">
-  <h1 class="bioActives-title">JUGADORES ACTIVOS</h1>
+  <h1 class="bioActives-title">BIOGRAFIA DE JUGADORES ACTIVOS</h1>
 </div>
 
 <p class="title-position"> TEMP. 2018 </p>
@@ -13,36 +13,54 @@
     <thead class="table-header">
       <tr>
         <!-- <th style="width: 5%;" scope="col">Id</th> -->
-        <th style="width: 12%;" scope="col">Name</th>
-        <th style="width: 12%;" scope="col">Team</th>
-        <th style="width: 10%;" scope="col">L. Nac.</th>
-        <th style="width: 10%;" scope="col">F. Nac.</th>
-        <th style="width: 5%;" scope="col">Edad</th>
-        <th style="width: 10%;" scope="col">Sobrenombre</th>
+        <th style="width: 15%;" scope="col">Nombre</th>
+        <th style="width: 20%;" scope="col">Equipo</th>
+        <!-- <th style="width: 15%;" scope="col">L.Nac.</th> -->
+        <th style="width: 10%;" scope="col">F.Nac.</th>
+        <!-- <th style="width: 5%;" scope="col">Edad</th> -->
+        <th style="width: 10%;" scope="col">Mote</th>
         <th style="width: 5%;" scope="col">Altura</th>
-        <th style="width: 10%;" scope="col">Debut</th>
-        <th style="width: 5%;" scope="col">Numero</th>
-        <th style="width: 5%;" scope="col">Posición</th>
+        <th style="width: 15%;" scope="col">Debut</th>
+        <th style="width: 5%;" scope="col">Num.</th>
+        <th style="width: 5%;" scope="col">Pos.</th>
       </tr>
     </thead>
   </table>
   
   <table class="table table-hover">
     <thead class="table-header2">
-      <tr *ngFor="let player of filterPlayers">
+      <tr *ngFor="let player of (filterPlayers | pagination:0:3)">
         <!-- <td style="width: 5%;">{{i +1}}</td> -->
-        <td style="width: 12%;">{{player.fullName}}</td>
-        <td style="width: 12%;">{{player.stats[0].splits[0].team.name}}</td>
-        <td style="width: 10%;">{{player.birthCity}}</td>
+        <td style="width: 15%;">{{player.fullName}}</td>
+        <td style="width: 20%;">{{player.stats[0].splits[0].team.name}}</td>
+        <!-- <td style="width: 15%;">{{player.birthCity}}</td> -->
         <td style="width: 10%;">{{player.birthDate}}</td>
-        <td style="width: 5%;">{{player.currentAge}}</td>
+        <!-- <td style="width: 5%;">{{player.currentAge}}</td> -->
         <td style="width: 10%;">{{player.nickName}}</td>
         <td style="width: 5%;">{{player.height}}</td>
-        <td style="width: 10%;">{{player.mlbDebutDate}}</td>
+        <td style="width: 15%;">{{player.mlbDebutDate}}</td>
         <td style="width: 5%;">{{player.primaryNumber}}</td>
         <td style="width: 5%;">{{player.primaryPosition.abbreviation}}</td>
       </tr>
       <span *ngIf="!filterPlayers[0]" class="d-flex justify-content-center"> <h1> Error: '{{ busqueda.value }}' no existe</h1></span>
     </thead>
   </table>
+<!-- PAGINATION-->
+
+<nav aria-label="...">
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active">
+      <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+
 </ng-container>

@@ -5,14 +5,57 @@ import { Players } from '../interfaces/players';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+import { StatsDayliPlayer } from '../interfaces/stats-dayli-player';
+
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class DataPlayersService {
   playerCode = 596115;
+  // gameCode = 563385;
 
 
-  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&&gamePk=529410&hydrate=stats(type=gameLog)';
+  // playersList = [
+  //   {name:"Jose Altuve",
+  //   position : "segunda base"},
+    
+  //   {name : "Gleyber Torres",
+  //   position : "segunda base"},
+
+  //   {name : "Ronald Acuña Jr.",
+  //   position : "Leftfield"},
+
+  //   {name : "Ender Inciarte",
+  //   position : "Centerfield"}
+
+  // ]
+
+
+
+  // Array de Codigo de Jugadores
+  private playersCode = [
+    650402,
+    660670,
+    542583,
+    514888,
+    503556,
+    542255,
+    444489,
+  ]
+
+  private gameCode = [
+    531368,
+    // 531824,
+    // 531829,
+    // 531825,
+    // 531833,
+    // 531835,  
+  ]
+
+
+  private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2018&hydrate=stats(type=gameLog)';
 
 
   constructor(private http: HttpClient) { }
@@ -21,38 +64,30 @@ export class DataPlayersService {
     return this.http.get<Players[]>(this._url);
   }
 
+    //Obtencion de los datos diarios de un solo jugador
+  getPlayerDaily2(): Observable<StatsDayliPlayer> {
+    return this.http.get<StatsDayliPlayer>(this._url6);
+  }
+
+
+
+  // Para colocar todos los Json en un solo array. Genera Obsrvables
+  getAllPlayersDaily2(): Observable<StatsDayliPlayer | undefined>[] {
+    let dataAllPlayers2: Observable<StatsDayliPlayer | undefined>[] = [];
+    for (let code of this.playersCode) {
+      this._url6 = this._url6.replace(this.playerCode.toString(), code.toString())
+      let dataP2 = this.getPlayerDaily2();
+      dataAllPlayers2.push(dataP2);
+      this.playerCode = code;
+    }
+    return dataAllPlayers2
+  }
+
+
 }
 
 
 
 
-
-  // getStatsForPlayer(playerCode: number) {
-  //   return new Promise(resolve => {
-
-  //     let firebaseStats = getFirebaseStatsForPlayer(playerCode);
-
-  //     let date = new Date();
-  //     let stringDate = date.getMonth()+'-'+date.getDate()+'-'+date.getFullYear();
-
-  //     if (!firebaseStats || firebaseStats.date != stringDate) {
-  //       let url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + playerCode + '&season=2018&hydrate=stats(group=hitting,type=gameLog)';
-        
-  //       let promise = this.http.get<APIResponse<Stats>>(url).toPromise().then((response) => {
-  //         // if (response.data[0] && response.data[0].splits) {
-  //         //   let split = response.data[0].splits.find((s) => s.group === "hitting");
-  //         //   return split.stat;
-  //         // }
-  //         return parseAPIResponse(response.data);
-  //       }).then(stats => {
-  //         return uploadToFirebase(playerCode, stats, stringDate);
-  //       }).then((stats) => {
-  //         resolve(stats);
-  //       });
-  //     } else {
-  //       resolve(firebaseStats)
-  //     }
-  //   })
-  // }
 
 

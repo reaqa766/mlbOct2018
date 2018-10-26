@@ -5,7 +5,7 @@
     margin: 1.5rem auto 0; 
     padding: .5rem 0; 
     background-color: rgba(3, 2, 2, 0.5);
-    width: 12em;
+    width: 18em;
     height: 1.75em;
     border-radius: 7px;
 }
@@ -25,20 +25,21 @@
 .table-header {
     background-color: rgba(12, 10, 9, 0.9);
     color: antiquewhite;
+    text-align: center;
 }
 .table-header2 {
     background-color: rgba(12, 10, 9, 0.75);
     color: antiquewhite;
+    text-align: center;
+
 }
 .title-rows {
     background-color: antiquewhite;
     color: rgb(12, 10, 9);
+    text-align: center;
+
 
 }
-
-
-/* BOrrar todo */
-
 
 .advancedSearchTextbox{
     color: rgb(2, 1, 0);
@@ -49,29 +50,6 @@
 
 }
 
-.title-position{
-    color: antiquewhite;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-left: 13em;
-    margin-bottom: 0;
-}
-
-.table {
-    width: 68%;
-    margin: 0.2em auto;
-}
-
-
-.table-header {
-    background-color: rgba(12, 10, 9, 0.75);
-    color: antiquewhite;
-}
-.title-rows {
-    background-color: antiquewhite;
-    color: rgb(12, 10, 9);
-
-}
 
 .player-name {
     color: black;
@@ -98,4 +76,15 @@
 
 .title-rows_header {
     text-align: center;
+}
+
+th {
+    font-size:2vh;
+    width: auto;
+  
+}
+td  {
+    font-size: 1.8vh;
+    width: auto;
+
 }

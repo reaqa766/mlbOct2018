@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PlayersService } from '../../../../services/players.service';
+import { DataPlayersService } from '../../../../services/data-players.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../../interfaces/players';
 
@@ -39,55 +39,59 @@ export class DailyComponent implements OnInit {
 
   ]
 
-  // public searchText : string;
-  // public playerData : any;
+  isLoading: boolean;
 
-  constructor(private playerService: PlayersService) { }
-
-  // ngOnInit() {
-//     this.playerData = [
-//       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 4, "CA" : 2,"CI" : 2, "Avg" : 295, "Hits" : 2, "BB" : 2, "Strks" : 2, "Hr" : 1  },
-//       {"Name": 'Ender Inciarte', "Team": 'Bravos de Atlanta', "Vb" : 5, "CA" : 0, "CI" : 0, "Avg" : 295, "Hits" : 3, "BB" : 1, "Strks" : 0, "Hr" : 0 },
-//       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 3, "CA" : 0, "CI" : 1, "Avg" : 295, "Hits" : 2, "BB" : 1, "Strks" : 1, "Hr" : 1  },
-//       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 4, "CA" : 1, "CI" : 1, "Avg" : 295, "Hits" : 1, "BB" : 0, "Strks" : 1, "Hr" : 0  },
-//       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 4, "CA" : 2, "CI" : 0, "Avg" : 295, "Hits" : 1, "BB" : 0, "Strks" : 0, "Hr" : 0  },
-//       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 5, "CA" : 1, "CI" : 0, "Avg" : 295, "Hits" : 0, "BB" : 1, "Strks" : 0, "Hr" : 0  },
-//       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 6, "CA" : 1, "CI" : 3, "Avg" : 295, "Hits" : 0, "BB" : 0, "Strks" : 0, "Hr" : 0  },
-//     ]
-// }
-
+  constructor(private playerService: DataPlayersService) { }
 
   ngOnInit() {
-  this.playerService.getPlayerDaily();
-  this.getPlayersMap();
-  console.log('playersDaily', this.players);
-  
-  // this.playerAuxList=this.playersList;
-  // if (this.counter=1) {
-    
-  // }
-}
+    this.isLoading = true;
+    // this.playerService.getPlayerDaily();
+    this.getPlayersMap();
+    console.log('players', this.players);
+  }
 
+  
 //Convertir el Array de Observables a un Array de Objetos. Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
 getPlayersMap() {
-  let InfoObsPlayer = this.playerService.getAllPlayersDaily();
+  let InfoObsPlayer = this.playerService.getAllPlayersDaily2();
   let index = 0;
   for (let obs of InfoObsPlayer) {
     obs.pipe(take(1)).subscribe(res => {
       this.players.push(res);
-      // console.log('active2', res);
-      
-      
+
       if ((InfoObsPlayer.length - 1) === index) {
         this.players = this.players.map(player => {
           const newPlayer: Players = {};
           Object.assign(newPlayer, player.people[0]);
           return newPlayer;
+        })
+        .sort(({fullName: a}, {fullName: b}) => {
+          if (a > b) {
+            return 1;
+          } else if (a < b) {
+            return -1;
+          } else if (a === b) {
+            return 0;
+          }
         });
+        this.isLoading = false;
+        // console.log(JSON.stringify(this.players[0]));
+           console.log('playersDaily', this.players);
       }
       index++;
     })
   }
-  
+
 }
+get filterPlayers(){
+ 
+  return this.searchText?
+  
+  this.players.filter(player => 
+  player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
+  player.fullName.toLowerCase().includes(this.searchText) || 
+  player.nickName.toLowerCase().includes(this.searchText)) 
+  
+  : this.players;
+  }
 }

@@ -10,7 +10,8 @@ import { Players } from '../../../../interfaces/players';
   templateUrl: './byteam.component.html',
   styleUrls: ['./byteam.component.css']
 })
-export class ByteamComponent implements OnInit {public players = [];
+export class ByteamComponent implements OnInit {
+  public players = [];
   groups: any;
   selectedGroup: any;
   elarray: any;
@@ -24,19 +25,30 @@ export class ByteamComponent implements OnInit {public players = [];
   n10: number = 5;
 
   playersList = [
-    {name:"Jose Altuve",
-    position : "segunda base"},
-    
-    {name : "Gleyber Torres",
-    position : "segunda base"},
+    {
+      name: "Jose Altuve",
+      position: "segunda base"
+    },
 
-    {name : "Ronald Acuña Jr.",
-    position : "Leftfield"},
+    {
+      name: "Gleyber Torres",
+      position: "segunda base"
+    },
 
-    {name : "Ender Inciarte",
-    position : "Centerfield"}
+    {
+      name: "Ronald Acuña Jr.",
+      position: "Leftfield"
+    },
+
+    {
+      name: "Ender Inciarte",
+      position: "Centerfield"
+    }
 
   ]
+
+  isLoading: boolean;
+
 
 
 
@@ -45,53 +57,70 @@ export class ByteamComponent implements OnInit {public players = [];
 
   constructor(private playerService: PlayersService) { }
 
-//   ngOnInit() {
-//     this.playerData = [
-//       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 410, "CA" : 115, "CI" : 95, "Avg" : 295, "Hits" : 195, "BB" : 65, "Strks" : 32, "Hr" : 25  },
-//       {"Name": 'Ender Inciarte', "Team": 'Bravos de Atlanta', "Vb" : 475, "CA" : 115, "CI" : 95, "Avg" : 295, "Hits" : 195, "BB" : 65, "Strks" : 32, "Hr" : 25 },
-//       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 410, "CA" : 115, "CI" : 95, "Avg" : 295, "Hits" : 195, "BB" : 65, "Strks" : 32, "Hr" : 25  },
-//       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 410, "CA" : 115, "CI" : 95, "Avg" : 295, "Hits" : 195, "BB" : 65, "Strks" : 32, "Hr" : 25  },
-//       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 410, "CA" : 115, "CI" : 95, "Avg" : 295, "Hits" : 195, "BB" : 65, "Strks" : 32, "Hr" : 25  },
-//       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 410, "CA" : 115, "CI" : 95, "Avg" : 295, "Hits" : 195, "BB" : 65, "Strks" : 32, "Hr" : 25  },
-//       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 410, "CA" : 115, "CI" : 95, "Avg" : 295, "Hits" : 195, "BB" : 65, "Strks" : 32, "Hr" : 25  },
-//     ]
-// }
-
-ngOnInit() {
-  // this.playerService.getPlayerDaily();
-  this.getPlayersMap();
-  console.log('players', this.players);
-  this.getPlayerBybirthCountry();
-  
-  // this.playerAuxList=this.playersList;
-  // if (this.counter=1) {
-    
+  //   ngOnInit() {
+  //     this.playerData = [
+  //       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 410, "CA" : 115, "CI" : 95, "Avg" : 295, "Hits" : 195, "BB" : 65, "Strks" : 32, "Hr" : 25  },
+  //       {"Name": 'Ender Inciarte', "Team": 'Bravos de Atlanta', "Vb" : 475, "CA" : 115, "CI" : 95, "Avg" : 295, "Hits" : 195, "BB" : 65, "Strks" : 32, "Hr" : 25 },
+  //       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 410, "CA" : 115, "CI" : 95, "Avg" : 295, "Hits" : 195, "BB" : 65, "Strks" : 32, "Hr" : 25  },
+  //       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 410, "CA" : 115, "CI" : 95, "Avg" : 295, "Hits" : 195, "BB" : 65, "Strks" : 32, "Hr" : 25  },
+  //       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 410, "CA" : 115, "CI" : 95, "Avg" : 295, "Hits" : 195, "BB" : 65, "Strks" : 32, "Hr" : 25  },
+  //       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 410, "CA" : 115, "CI" : 95, "Avg" : 295, "Hits" : 195, "BB" : 65, "Strks" : 32, "Hr" : 25  },
+  //       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 410, "CA" : 115, "CI" : 95, "Avg" : 295, "Hits" : 195, "BB" : 65, "Strks" : 32, "Hr" : 25  },
+  //     ]
   // }
-}
 
-//Convertir el Array de Observables a un Array de Objetos. Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
- getPlayersMap() {
-  let InfoObsPlayer = this.playerService.getAllPlayersActives();
-  let index = 0;
-  for (let obs of InfoObsPlayer) {
-    obs.pipe(take(1)).subscribe(res => {
-      this.players.push(res);
-      
-      if ((InfoObsPlayer.length - 1) === index)   {
-        this.players = this.players.map(player => {
-          const newPlayer: Players = {};
-          Object.assign(newPlayer,  player.people[0]);
-          
-          return newPlayer;
-        });
-      }
-      index++;
-    })
+  ngOnInit() {
+    this.isLoading = true;
+    // this.playerService.getPlayerDaily();
+    this.getPlayersMap();
+    console.log('players', this.players);
   }
 
+  //Convertir el Array de Observables a un Array de Objetos. Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
+  getPlayersMap() {
+    let InfoObsPlayer = this.playerService.getAllPlayersActives();
+    let index = 0;
+    for (let obs of InfoObsPlayer) {
+      obs.pipe(take(1)).subscribe(res => {
+        this.players.push(res);
+
+        if ((InfoObsPlayer.length - 1) === index) {
+          this.players = this.players.map(player => {
+            const newPlayer: Players = {};
+            Object.assign(newPlayer, player.people[0]);
+            return newPlayer;
+          })
+            .sort((a, b) => {
+              a = a.stats[0].splits[0].team.name;
+              b = b.stats[0].splits[0].team.name;
+              if (a > b) {
+                return 1;
+              } else if (a < b) {
+                return -1;
+              } else if (a === b) {
+                return 0;
+              }
+            });
+          this.isLoading = false;
+          console.log(JSON.stringify(this.players[0]));
+        }
+        index++;
+      })
+    }
+
+  }
+
+
+  get filterPlayers() {
+
+    return this.searchText?
+
+      this.players.filter(player =>
+        player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
+        player.fullName.toLowerCase().includes(this.searchText) ||
+        player.nickName.toLowerCase().includes(this.searchText))
+
+      : this.players;
+  }
 }
 
-getPlayerBybirthCountry() {
-
-}
-}
