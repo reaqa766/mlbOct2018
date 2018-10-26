@@ -13,7 +13,6 @@ import { Players } from '../../../../interfaces/players';
 export class BioActivesComponent implements OnInit {
 
   public players = [];
-  public playersSort = [];
   groups: any;
   selectedGroup: any;
   elarray: any;
@@ -41,6 +40,7 @@ export class BioActivesComponent implements OnInit {
 
   ]
 
+  isLoading: boolean;
 
 
   // public searchText : string;
@@ -61,10 +61,10 @@ export class BioActivesComponent implements OnInit {
 // }
 
 ngOnInit() {
+  this.isLoading = true;
   // this.playerService.getPlayerDaily();
   this.getPlayersMap();
   console.log('players', this.players);
-  this.getPlayerBybirthCountry();
   
 
   
@@ -87,7 +87,9 @@ ngOnInit() {
           const newPlayer: Players = {};
           Object.assign(newPlayer, player.people[0]);
           return newPlayer;
-        });
+        })
+        this.isLoading = false;
+        console.log(JSON.stringify(this.players[0]));
       }
       index++;
     })
@@ -95,9 +97,16 @@ ngOnInit() {
 
 }
 
-getPlayerBybirthCountry() {
 
-}
-
-
+get filterPlayers(){
+  let regex 
+  return this.searchText?
+  
+  this.players.filter(player => 
+  player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
+  player.fullName.toLowerCase().includes(this.searchText) || 
+  player.nickName.toLowerCase().includes(this.searchText) ) 
+  
+  : this.players;
+  }
 }
