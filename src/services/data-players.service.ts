@@ -61,7 +61,7 @@ export class DataPlayersService {
   constructor(private http: HttpClient) { }
 
   getDataPlayers(): Observable<Players[]> {
-    return this.http.get<Players[]>(this._url);
+    return this.http.get<Players[]>(this._url6);
   }
 
     //Obtencion de los datos diarios de un solo jugador
