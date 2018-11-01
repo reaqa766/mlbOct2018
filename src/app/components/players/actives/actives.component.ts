@@ -66,7 +66,7 @@ ngOnInit() {
   this.isLoading = true;
   // this.playerService.getPlayerDaily();
   this.getPlayersMap();
-  console.log('players', this.players);
+
   
 
   

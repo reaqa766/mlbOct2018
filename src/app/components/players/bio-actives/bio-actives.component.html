@@ -26,41 +26,76 @@
       </tr>
     </thead>
   </table>
-  
   <table class="table table-hover">
     <thead class="table-header2">
-      <tr *ngFor="let player of (filterPlayers | pagination:0:3)">
-        <!-- <td style="width: 5%;">{{i +1}}</td> -->
-        <td style="width: 15%;">{{player.fullName}}</td>
-        <td style="width: 20%;">{{player.stats[0].splits[0].team.name}}</td>
-        <!-- <td style="width: 15%;">{{player.birthCity}}</td> -->
-        <td style="width: 10%;">{{player.birthDate}}</td>
-        <!-- <td style="width: 5%;">{{player.currentAge}}</td> -->
-        <td style="width: 10%;">{{player.nickName}}</td>
-        <td style="width: 5%;">{{player.height}}</td>
-        <td style="width: 15%;">{{player.mlbDebutDate}}</td>
-        <td style="width: 5%;">{{player.primaryNumber}}</td>
-        <td style="width: 5%;">{{player.primaryPosition.abbreviation}}</td>
-      </tr>
-      <span *ngIf="!filterPlayers[0]" class="d-flex justify-content-center"> <h1> Error: '{{ busqueda.value }}' no existe</h1></span>
+      <ng-container *ngIf="!(pager.totalItems-1 === pager.endIndex)">
+        <tr *ngFor="let player of filterPlayers | pagination:pager.startIndex:pager.pageSize">
+          <!-- <td style="width: 5%;">{{i +1}}</td> -->
+          <td style="width: 15%;">{{player.fullName}}</td>
+          <td style="width: 20%;">{{player.stats[0].splits[0].team.name}}</td>
+          <!-- <td style="width: 15%;">{{player.birthCity}}</td> -->
+          <td style="width: 10%;">{{player.birthDate}}</td>
+          <!-- <td style="width: 5%;">{{player.currentAge}}</td> -->
+          <td style="width: 10%;">{{player.nickName}}</td>
+          <td style="width: 5%;">{{player.height}}</td>
+          <td style="width: 15%;">{{player.mlbDebutDate}}</td>
+          <td style="width: 5%;">{{player.primaryNumber}}</td>
+          <td style="width: 5%;">{{player.primaryPosition.abbreviation}}</td>
+        </tr>
+      </ng-container>
+
+
+      <ng-container *ngIf="pager.totalItems-1 === pager.endIndex">
+        <tr *ngFor="let player of filterPlayers | pagination:pager.startIndex:pager.totalItems-((pager.totalPages-1)*5)">
+
+
+          <!-- <td style="width: 5%;">{{i +1}}</td> -->
+          <td style="width: 15%;">{{player.fullName}}</td>
+          <td style="width: 20%;">{{player.stats[0].splits[0].team.name}}</td>
+          <!-- <td style="width: 15%;">{{player.birthCity}}</td> -->
+          <td style="width: 10%;">{{player.birthDate}}</td>
+          <!-- <td style="width: 5%;">{{player.currentAge}}</td> -->
+          <td style="width: 10%;">{{player.nickName}}</td>
+          <td style="width: 5%;">{{player.height}}</td>
+          <td style="width: 15%;">{{player.mlbDebutDate}}</td>
+          <td style="width: 5%;">{{player.primaryNumber}}</td>
+          <td style="width: 5%;">{{player.primaryPosition.abbreviation}}</td>
+        </tr>
+      </ng-container>
+      <span *ngIf="!filterPlayers[0]" class="d-flex justify-content-center">
+        <h1> Error: '{{ busqueda.value }}' no existe</h1>
+      </span>
     </thead>
   </table>
-<!-- PAGINATION-->
+  <!-- PAGINATION-->
 
-<nav aria-label="...">
-  <ul class="pagination">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1">Previous</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item active">
-      <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</nav>
+  <div>
+    <div class="container">
+      <div class="text-center">
+        <!-- items being paged -->
+        <!-- <div *ngFor="let item of pagedItems">{{item.name}}</div> -->
+
+        <!-- pager -->
+        <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
+          <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+            <a (click)="setPage(1)" class="page-link">First</a>
+          </li>
+          <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+            <a (click)="setPage(pager.currentPage - 1)" class="page-link">Previous</a>
+          </li>
+          <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
+            <a (click)="setPage(page)" class="page-link">{{page}}</a>
+          </li>
+          <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+            <a (click)="setPage(pager.currentPage + 1)" class="page-link">Next</a>
+          </li>
+          <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+            <a (click)="setPage(pager.totalPages)" class="page-link">Last</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr />
+  </div>
 
 </ng-container>

@@ -7,6 +7,7 @@ import { GrdFilterPipe } from './components/grd-filter.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { PlayersService } from '../services/players.service'; 
 
+import { PagerService } from '../services/index';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -55,7 +56,7 @@ import{ PaginationPipe } from '../pipes/pagination.pipe';
     HttpClientModule,
     // Ng2SmartTableModule
   ],
-  providers: [PlayersService],
+  providers: [PlayersService, PagerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

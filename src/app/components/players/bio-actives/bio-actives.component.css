@@ -88,3 +88,9 @@ td  {
     width: auto;
 
 }
+.page-link {
+background-color: rgba(250, 235, 215,0.8)!important;
+border:solid 2px #7e7b7b;
+color: rgb(0, 0, 0)!important;
+font-weight: 400;
+}
