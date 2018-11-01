@@ -67,7 +67,7 @@ export class BioActivesComponent implements OnInit {
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
     // console.log('players', this.players);
-    console.log('FilterPlayers', this.filterPlayers);
+    // console.log('FilterPlayers', this.filterPlayers);
 
 
 

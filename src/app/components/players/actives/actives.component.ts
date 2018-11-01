@@ -100,7 +100,7 @@ ngOnInit() {
           }
         });
         this.isLoading = false;
-        console.log(JSON.stringify(this.players[0]));
+        // console.log(JSON.stringify(this.players[0]));
       }
       index++;
     })

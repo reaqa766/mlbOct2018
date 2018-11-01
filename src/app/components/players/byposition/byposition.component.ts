@@ -48,7 +48,7 @@ export class BypositionComponent implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    console.log('players', this.players);
+    // console.log('players', this.players);
   }
 
   
@@ -76,7 +76,7 @@ getPlayersMap() {
           }
         });
         this.isLoading = false;
-        console.log(JSON.stringify(this.players[0]));
+        // console.log(JSON.stringify(this.players[0]));
       }
       index++;
     })

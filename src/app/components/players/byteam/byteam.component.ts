@@ -73,7 +73,7 @@ export class ByteamComponent implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    console.log('players', this.players);
+    // console.log('players', this.players);
   }
 
   //Convertir el Array de Observables a un Array de Objetos. Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
@@ -102,7 +102,7 @@ export class ByteamComponent implements OnInit {
               }
             });
           this.isLoading = false;
-          console.log(JSON.stringify(this.players[0]));
+          // console.log(JSON.stringify(this.players[0]));
         }
         index++;
       })
