@@ -24,20 +24,20 @@ export class DailyComponent implements OnInit {
   n1: number = 12;
   n10: number = 5;
 
-  playersList = [
-    {name:"Jose Altuve",
-    position : "segunda base"},
+  // playersList = [
+  //   {name:"Jose Altuve",
+  //   position : "segunda base"},
     
-    {name : "Gleyber Torres",
-    position : "segunda base"},
+  //   {name : "Gleyber Torres",
+  //   position : "segunda base"},
 
-    {name : "Ronald Acuña Jr.",
-    position : "Leftfield"},
+  //   {name : "Ronald Acuña Jr.",
+  //   position : "Leftfield"},
 
-    {name : "Ender Inciarte",
-    position : "Centerfield"}
+  //   {name : "Ender Inciarte",
+  //   position : "Centerfield"}
 
-  ]
+  // ]
 
   isLoading: boolean;
 
