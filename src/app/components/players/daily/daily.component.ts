@@ -27,7 +27,7 @@ export class DailyComponent implements OnInit {
   playersList = [
     {name:"Jose Altuve",
     position : "segunda base"},
-    
+
     {name : "Gleyber Torres",
     position : "segunda base"},
 
@@ -50,7 +50,7 @@ export class DailyComponent implements OnInit {
     // console.log('players', this.players);
   }
 
-  
+
 //Convertir el Array de Observables a un Array de Objetos. Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
 getPlayersMap() {
   let InfoObsPlayer = this.playerService.getAllPlayersDaily2();
@@ -84,14 +84,13 @@ getPlayersMap() {
 
 }
 get filterPlayers(){
- 
+
   return this.searchText?
-  
-  this.players.filter(player => 
+
+  this.players.filter(player =>
   player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
-  player.fullName.toLowerCase().includes(this.searchText) || 
-  player.nickName.toLowerCase().includes(this.searchText)) 
-  
+  player.fullName.toLowerCase().includes(this.searchText))
+
   : this.players;
   }
 }

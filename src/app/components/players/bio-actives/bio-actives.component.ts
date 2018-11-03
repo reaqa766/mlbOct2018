@@ -121,7 +121,7 @@ export class BioActivesComponent implements OnInit {
       this.players.filter(player =>
         player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
         player.fullName.toLowerCase().includes(this.searchText) ||
-        player.nickName.toLowerCase().includes(this.searchText))
+        (player.nickName && player.nickName.toLowerCase().includes(this.searchText)))
 
       : this.players;
   }

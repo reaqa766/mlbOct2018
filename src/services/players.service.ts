@@ -16,7 +16,7 @@ export class PlayersService {
   // playersList = [
   //   {name:"Jose Altuve",
   //   position : "segunda base"},
-    
+
   //   {name : "Gleyber Torres",
   //   position : "segunda base"},
 
@@ -36,7 +36,7 @@ export class PlayersService {
     542255, 444489, 501303, 621237, 462101,
     516472, 606115, 553902, 641319, 501593,
     620439, 453923, 611093, 593993, 452678,
-    408234, 471911, 620454, 
+    408234, 471911, 620454,
 
   ]
 
@@ -46,7 +46,7 @@ export class PlayersService {
     // 531829,
     // 531825,
     // 531833,
-    // 531835,  
+    // 531835
   ]
 
 
@@ -54,10 +54,10 @@ export class PlayersService {
   // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(group=hitting,type=gameLog)';
   // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(group=[hitting,pitching],type=[career,statSplits],sitCodes=a,sportId=12)';
   private _url5 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(group=[hitting],type=[pecota],sportId=12)';
-  private _url1 = 'http://statsapi.mlb.com/api/v1/people/' + this.playerCode + '/stats/game/' + this.gameCode ;
+  private _url1 = 'http://statsapi.mlb.com/api/v1/people/' + this.playerCode + '/stats/game/' + this.gameCode;
   private _url4 = 'https://statsapi.mlb.com/api/v1/teams/109/roster?hydrate=person(stats(type=season,season=2018),education)&rosterType=Active';
   private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(type=season=2018),%20team(currentteam)';
-  private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2018&hydrate=stats(type=gameLog)';
+  private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(type=gameLog)';
 
 
   constructor(private http: HttpClient) { }
