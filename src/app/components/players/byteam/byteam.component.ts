@@ -24,28 +24,28 @@ export class ByteamComponent implements OnInit {
   n1: number = 12;
   n10: number = 5;
 
-  playersList = [
-    {
-      name: "Jose Altuve",
-      position: "segunda base"
-    },
+  // playersList = [
+  //   {
+  //     name: "Jose Altuve",
+  //     position: "segunda base"
+  //   },
 
-    {
-      name: "Gleyber Torres",
-      position: "segunda base"
-    },
+  //   {
+  //     name: "Gleyber Torres",
+  //     position: "segunda base"
+  //   },
 
-    {
-      name: "Ronald Acuña Jr.",
-      position: "Leftfield"
-    },
+  //   {
+  //     name: "Ronald Acuña Jr.",
+  //     position: "Leftfield"
+  //   },
 
-    {
-      name: "Ender Inciarte",
-      position: "Centerfield"
-    }
+  //   {
+  //     name: "Ender Inciarte",
+  //     position: "Centerfield"
+  //   }
 
-  ]
+  // ]
 
   isLoading: boolean;
 
@@ -57,17 +57,6 @@ export class ByteamComponent implements OnInit {
 
   constructor(private playerService: PlayersService) { }
 
-  //   ngOnInit() {
-  //     this.playerData = [
-  //       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 410, "CA" : 115, "CI" : 95, "Avg" : 295, "Hits" : 195, "BB" : 65, "Strks" : 32, "Hr" : 25  },
-  //       {"Name": 'Ender Inciarte', "Team": 'Bravos de Atlanta', "Vb" : 475, "CA" : 115, "CI" : 95, "Avg" : 295, "Hits" : 195, "BB" : 65, "Strks" : 32, "Hr" : 25 },
-  //       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 410, "CA" : 115, "CI" : 95, "Avg" : 295, "Hits" : 195, "BB" : 65, "Strks" : 32, "Hr" : 25  },
-  //       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 410, "CA" : 115, "CI" : 95, "Avg" : 295, "Hits" : 195, "BB" : 65, "Strks" : 32, "Hr" : 25  },
-  //       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 410, "CA" : 115, "CI" : 95, "Avg" : 295, "Hits" : 195, "BB" : 65, "Strks" : 32, "Hr" : 25  },
-  //       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 410, "CA" : 115, "CI" : 95, "Avg" : 295, "Hits" : 195, "BB" : 65, "Strks" : 32, "Hr" : 25  },
-  //       {"Name": 'Ronald Acuña', "Team": 'Bravos de Atlanta', "Vb" : 410, "CA" : 115, "CI" : 95, "Avg" : 295, "Hits" : 195, "BB" : 65, "Strks" : 32, "Hr" : 25  },
-  //     ]
-  // }
 
   ngOnInit() {
     this.isLoading = true;

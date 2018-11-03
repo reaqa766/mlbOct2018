@@ -34,16 +34,16 @@
   <tr   *ngFor="let player of filterPlayers">
     <!-- <td style="width: 5%;">{{i +1}}</td> -->
     <td style="width: 10%;">{{player.fullName}}</td>
-    <td style="width: 10%;">{{player.stats[0].splits[player.stats[0].splits.length-1].team.name}}</td>
-    <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.atBats}}</td>
-    <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.avg}}</td>
-    <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.runs}}</td>
-    <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.hits}}</td>
-    <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.strikeOuts}}</td>
-    <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.baseOnBalls}}</td>
-    <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.rbi}}</td>
-    <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.homeRuns}}</td>
-    <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.stolenBases}}</td>
+    <td style="width: 10%;">{{player.stats[0].splits[player.stats[0].splits.length-10].team.name}}</td>
+    <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-10].stat.atBats}}</td>
+    <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-10].stat.avg}}</td>
+    <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-10].stat.runs}}</td>
+    <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-10].stat.hits}}</td>
+    <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-10].stat.strikeOuts}}</td>
+    <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-10].stat.baseOnBalls}}</td>
+    <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-10].stat.rbi}}</td>
+    <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-10].stat.homeRuns}}</td>
+    <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-10].stat.stolenBases}}</td>
   </tr>
   <span *ngIf="!filterPlayers[0]" class="d-flex justify-content-center"> <h1> Error: '{{ busqueda.value }}' no existe</h1></span>
 </thead>

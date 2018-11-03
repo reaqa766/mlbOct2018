@@ -46,7 +46,7 @@
 
 
       <ng-container *ngIf="pager.totalItems-1 === pager.endIndex">
-        <tr *ngFor="let player of filterPlayers | pagination:pager.startIndex:pager.totalItems-((pager.totalPages-1)*5)">
+        <tr *ngFor="let player of filterPlayers | pagination:pager.startIndex:pager.totalItems-((pager.totalPages-1)*10)">
 
 
           <!-- <td style="width: 5%;">{{i +1}}</td> -->
