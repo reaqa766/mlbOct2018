@@ -56,7 +56,7 @@ export class PlayersService {
     553878, 622713
 
 
-  ]
+  ];
 
   private gameCode = [
     531368,
@@ -65,36 +65,45 @@ export class PlayersService {
     // 531825,
     // 531833,
     // 531835
-  ]
+  ];
 
 
   // Url del Api con los datos de cada juego para un Jugador particular
-  // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(group=hitting,type=gameLog)';
-  // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(group=[hitting,pitching],type=[career,statSplits],sitCodes=a,sportId=12)';
-  private _url5 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(group=[hitting],type=[pecota],sportId=12)';
-  private _url1 = 'http://statsapi.mlb.com/api/v1/people/' + this.playerCode + '/stats/game/' + this.gameCode;
+  // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +
+  // '&season=2018&hydrate=stats(group=hitting,type=gameLog)';
+  // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +
+  // '&season=2018&hydrate=stats(group=[hitting,pitching],type=[career,statSplits],sitCodes=a,sportId=12)';
+  private _url5 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +
+  '&season=2018&hydrate=stats(group=[hitting],type=[pecota],sportId=12)';
+  private _url1 = 'http://statsapi.mlb.com/api/v1/people/' + this.playerCode + '/stats/game/' +
+  this.gameCode;
+  // tslint:disable-next-line:max-line-length
   private _url4 = 'https://statsapi.mlb.com/api/v1/teams/109/roster?hydrate=person(stats(type=season,season=2018),education)&rosterType=Active';
+  // tslint:disable-next-line:max-line-length
   private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(type=season=2018),%20team(currentteam)';
   private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(type=gameLog)';
 
 
   constructor(private http: HttpClient) { }
 
-  //Obtencion de los datos de temporada de un solo jugador
+  // Obtencion de los datos de temporada de un solo jugador
   getPlayeActive(): Observable<StatsDayliPlayer> {
     return this.http.get<StatsDayliPlayer>(this._url);
   }
 
   // Para colocar todos los Json en un solo array. Genera Observables
   getAllPlayersActives(): Observable<StatsDayliPlayer | undefined>[] {
+    // tslint:disable-next-line:prefer-const
     let dataAllPlayers: Observable<StatsDayliPlayer | undefined>[] = [];
+    // tslint:disable-next-line:prefer-const
     for (let code of this.playersCode) {
-      this._url = this._url.replace(this.playerCode.toString(), code.toString())
+      this._url = this._url.replace(this.playerCode.toString(), code.toString());
+      // tslint:disable-next-line:prefer-const
       let dataP = this.getPlayeActive();
       dataAllPlayers.push(dataP);
       this.playerCode = code;
     }
-    return dataAllPlayers
+    return dataAllPlayers;
   }
 
 }
