@@ -2,6 +2,7 @@ export interface Players {
   people?:any[],
   id?:number,
   fullName?:string,
+  abbreviation?: string,
   link?:string,
   primaryNumber?:number,
   birthDate?:Date,
@@ -20,7 +21,7 @@ export interface Players {
   date?: Date,
   stat?:any[],
   atBats?: 5
-  avg?:string, 
+  avg?:string,
   baseOnBalls?:number,
   caughtStealing?: number,
   doubles?: number,
@@ -104,4 +105,4 @@ export interface Players {
   // abbreviation: string;
 
   }
-  
+

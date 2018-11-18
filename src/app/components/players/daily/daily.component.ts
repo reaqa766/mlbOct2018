@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import * as moment from 'moment';
 import { DataPlayersService } from '../../../../services/data-players.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../../interfaces/players';
@@ -26,7 +26,7 @@ export class DailyComponent implements OnInit {
   m: number;
   n1 = 12;
   n10 = 5;
-  dia = new Date();
+  dia = moment().format('YYYY-MM-DD');
   private allItems: any[];
 
   // pager object
@@ -55,6 +55,8 @@ export class DailyComponent implements OnInit {
   constructor(private playerService: DataPlayersService, private pagerService: PagerService) { }
 
   ngOnInit() {
+    console.log(this.dia);
+
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
@@ -87,7 +89,7 @@ getPlayersMap() {
           } else if (a === b) {
             return 0;
           }
-        });
+        }).filter(player =>  player.stats[0].splits[player.stats[0].splits.length-1].date === '2018-09-30') ;
         this.isLoading = false;
         // console.log(JSON.stringify(this.players[0]));
           //  console.log('playersDaily', this.players);
