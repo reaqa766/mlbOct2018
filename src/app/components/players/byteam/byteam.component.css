@@ -1,9 +1,13 @@
+/* .container_players_actives {
+  margin-top: 20%;
+} */
+
 .team-title {
     color: antiquewhite;
     font-size: 2rem;
     text-align: center;
-    margin: 1.5rem auto 0; 
-    padding: .5rem 0; 
+    margin: 1.5rem auto 0;
+    padding: .5rem 0;
     background-color: rgba(3, 2, 2, 0.5);
     width: 13em;
     height: 1.75em;

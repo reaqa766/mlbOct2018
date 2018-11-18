@@ -1,18 +1,19 @@
 
 .menu_bar {
-    position: static;
+    position: sticky;
     /* min-width: 300px; */
-    width: 68.7%;
+    /* width: 68.7%; */
     /* max-width: 75%; */
-    margin: 4.5% auto 0;
+    /* margin: 4.5% auto 0; */
     background-color: #222222;
     border-radius: 5px;
     z-index: 100;
+    top: 0;
 
 }
 .nav-link {
     text-align: center;
-    color: antiquewhite;
+    color: rgb(250, 232, 215);
     font-size: 1.2rem;
     font-weight:500;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -20,7 +21,7 @@
 
 .nav-link:hover {
     color: rgb(0, 0, 0);
-    background-color: rgb(179, 160, 136);
+    background-color: rgb(231, 226, 219);
 }
 
 .menu_ul {
@@ -32,7 +33,7 @@ flex: 1 0 0;
 }
 
 .dropdown-menu {
-    background-color: antiquewhite;
+    background-color: rgb(255, 243, 229);
 }
 
 .dropdown-item {
@@ -83,15 +84,15 @@ flex: 1 0 0;
     .register1 {
         display: none;
     }
-    
+
     .register2 {
         display: block;
-    
+
     }
-    
+
         .menu_bar {
             width: 99.7%;
-    
+
     }
         .nav-item {flex: 1 0 0;
     }
@@ -125,12 +126,12 @@ flex: 1 0 0;
     .register1 {
         display: none;
     }
-    
+
     .register2 {
         display: block;
-    
+
     }
-    
+
     .dropdown-item {
         font-size: 1rem;
 

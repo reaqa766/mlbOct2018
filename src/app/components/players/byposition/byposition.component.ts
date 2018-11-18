@@ -16,37 +16,40 @@ export class BypositionComponent implements OnInit {
   groups: any;
   selectedGroup: any;
   elarray: any;
+  // tslint:disable-next-line:no-inferrable-types
   datesN: number = 10;
   searchText: string;
   playerAuxList = [];
   counter: number;
   n: number;
   m: number;
+  // tslint:disable-next-line:no-inferrable-types
   n1: number = 12;
+  // tslint:disable-next-line:no-inferrable-types
   n10: number = 5;
 
   playersList = [
     {
-      name: "Jose Altuve",
-      position: "segunda base"
+      name: 'Jose Altuve',
+      position: 'segunda base'
     },
 
     {
-      name: "Gleyber Torres",
-      position: "segunda base"
+      name: 'Gleyber Torres',
+      position: 'segunda base'
     },
 
     {
-      name: "Ronald Acuña Jr.",
-      position: "Leftfield"
+      name: 'Ronald Acuña Jr.',
+      position: 'Leftfield'
     },
 
     {
-      name: "Ender Inciarte",
-      position: "Centerfield"
+      name: 'Ender Inciarte',
+      position: 'Centerfield'
     }
 
-  ]
+  ];
 
   isLoading: boolean;
 
@@ -60,10 +63,13 @@ export class BypositionComponent implements OnInit {
   }
 
 
-  //Convertir el Array de Observables a un Array de Objetos. Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
+  // tslint:disable-next-line:max-line-length
+  // Convertir el Array de Observables a un Array de Objetos. Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
+    // tslint:disable-next-line:prefer-const
     let InfoObsPlayer = this.playerService.getAllPlayersActives();
     let index = 0;
+    // tslint:disable-next-line:prefer-const
     for (let obs of InfoObsPlayer) {
       obs.pipe(take(1)).subscribe(res => {
         this.players.push(res);
@@ -87,7 +93,7 @@ export class BypositionComponent implements OnInit {
           // console.log(JSON.stringify(this.players[0]));
         }
         index++;
-      })
+      });
     }
 
   }

@@ -10,29 +10,32 @@ import { ByteamComponent} from '../app/components/players/byteam/byteam.componen
 import { DailyComponent} from '../app/components/players/daily/daily.component';
 import { ActivesComponent} from '../app/components/players/actives/actives.component';
 import { BioActivesComponent} from '../app/components/players/bio-actives/bio-actives.component';
+import { PpalComponent} from '../app/components/news/ppal/ppal.component';
 
 const routes: Routes = [
 
-  { path:'',
+  { path: '',
   component: HomeComponent},
-  { path:'news',
+  { path: 'news',
   component: NewsComponent},
-  { path:'aboutUs',
+  { path: 'aboutUs',
   component: AboutusComponent},
-  { path:'register',
+  { path: 'register',
   component: RegisterComponent},
-  { path:'position',
+  { path: 'position',
   component: BypositionComponent},
-  { path:'team',
+  { path: 'team',
   component: ByteamComponent},
-  { path:'daily',
+  { path: 'daily',
   component: DailyComponent},
-  { path:'actives',
+  { path: 'actives',
   component: ActivesComponent},
-  { path:'bioActives',
+  { path: 'bioActives',
   component: BioActivesComponent},
-  { path:'contactUs',
-  component: ContactUsComponent}
+  { path: 'contactUs',
+  component: ContactUsComponent},
+  { path: 'news_ppal',
+  component: PpalComponent}
 
 
 

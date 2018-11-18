@@ -1,9 +1,13 @@
+.container-actives {
+  margin-top: 22%;
+}
+
 .bioActives-title {
     color: antiquewhite;
     font-size: 2rem;
     text-align: center;
-    margin: 1.5rem auto 0; 
-    padding: .5rem 0; 
+    margin: 1.5rem auto 0;
+    padding: .5rem 0;
     background-color: rgba(3, 2, 2, 0.5);
     width: 18em;
     height: 1.75em;
@@ -13,12 +17,12 @@
     color: antiquewhite;
     font-size: 1.5rem;
     font-weight: bold;
-    margin-left: 13em;
+    margin-left: 11.5%;
     margin-bottom: 0;
 }
 
 .table {
-    width: 68%;
+    width: 80%;
     margin: 0.2em auto;
 }
 
@@ -26,6 +30,8 @@
     background-color: rgba(12, 10, 9, 0.9);
     color: antiquewhite;
     text-align: center;
+    width: 100%;
+
 }
 .table-header2 {
     background-color: rgba(12, 10, 9, 0.75);
@@ -45,7 +51,7 @@
     color: rgb(2, 1, 0);
     font-size: 1rem;
     font-weight: bold;
-    margin-left: 19.5em;
+    margin-left: 10%;
     margin-bottom: 0;
 
 }
@@ -81,7 +87,7 @@
 th {
     font-size:2vh;
     width: auto;
-  
+
 }
 td  {
     font-size: 1.8vh;

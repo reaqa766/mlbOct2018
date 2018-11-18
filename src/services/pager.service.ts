@@ -2,15 +2,16 @@ export class PagerService {
     getPager(totalItems: number, currentPage: number = 1, pageSize: number = 10) {
         console.log('totalItems', totalItems);
         // calculate total pages
+        // tslint:disable-next-line:prefer-const
         let totalPages = Math.ceil(totalItems / pageSize);
 
         // ensure current page isn't out of range
-        if (currentPage < 1) { 
-            currentPage = 1; 
-        } else if (currentPage > totalPages) { 
-            currentPage = totalPages; 
+        if (currentPage < 1) {
+            currentPage = 1;
+        } else if (currentPage > totalPages) {
+            currentPage = totalPages;
         }
-        
+
         let startPage: number, endPage: number;
         if (totalPages <= 10) {
             // less than 10 total pages so show all
@@ -31,11 +32,11 @@ export class PagerService {
         }
 
         // calculate start and end item indexes
-        let startIndex = (currentPage - 1) * pageSize;
-        let endIndex = Math.min(startIndex + pageSize - 1, totalItems - 1);
+        const startIndex = (currentPage - 1) * pageSize;
+        const endIndex = Math.min(startIndex + pageSize - 1, totalItems - 1);
 
         // create an array of pages to ng-repeat in the pager control
-        let pages = Array.from(Array((endPage + 1) - startPage).keys()).map(i => startPage + i);
+        const pages = Array.from(Array((endPage + 1) - startPage).keys()).map(i => startPage + i);
 
         // return object with all pager properties required by the view
         return {
@@ -50,6 +51,4 @@ export class PagerService {
             pages: pages
         };
     }
-    
-    
 }
