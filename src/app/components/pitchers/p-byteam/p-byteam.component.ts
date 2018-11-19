@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { PlayersService } from '../../../../services/players.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../../interfaces/players';
@@ -6,29 +7,25 @@ import { Players } from '../../../../interfaces/players';
 import { PagerService } from '../../../../services/index';
 
 
+
 @Component({
-  selector: 'app-byposition',
-  templateUrl: './byposition.component.html',
-  styleUrls: ['./byposition.component.css']
+  selector: 'app-p-byteam',
+  templateUrl: './p-byteam.component.html',
+  styleUrls: ['./p-byteam.component.css']
 })
-export class BypositionComponent implements OnInit {
-
-
+export class PByteamComponent implements OnInit {
   public players = [];
   groups: any;
   selectedGroup: any;
   elarray: any;
-  // tslint:disable-next-line:no-inferrable-types
-  datesN: number = 10;
+  datesN = 10;
   searchText: string;
   playerAuxList = [];
   counter: number;
   n: number;
   m: number;
-  // tslint:disable-next-line:no-inferrable-types
-  n1: number = 12;
-  // tslint:disable-next-line:no-inferrable-types
-  n10: number = 5;
+  n1 = 12;
+  n10 = 5;
 
   private allItems: any[];
   // pager object
@@ -41,30 +38,37 @@ export class BypositionComponent implements OnInit {
 
   // playersList = [
   //   {
-  //     name: 'Jose Altuve',
-  //     position: 'segunda base'
+  //     name: "Jose Altuve",
+  //     position: "segunda base"
   //   },
 
   //   {
-  //     name: 'Gleyber Torres',
-  //     position: 'segunda base'
+  //     name: "Gleyber Torres",
+  //     position: "segunda base"
   //   },
 
   //   {
-  //     name: 'Ronald Acuña Jr.',
-  //     position: 'Leftfield'
+  //     name: "Ronald Acuña Jr.",
+  //     position: "Leftfield"
   //   },
 
   //   {
-  //     name: 'Ender Inciarte',
-  //     position: 'Centerfield'
+  //     name: "Ender Inciarte",
+  //     position: "Centerfield"
   //   }
 
-  // ];
+  // ]
 
   isLoading: boolean;
 
+
+
+
+  // public searchText : string;
+  // public playerData : any;
+
   constructor(private playerService: PlayersService, private pagerService: PagerService) { }
+
 
   ngOnInit() {
     this.isLoading = true;
@@ -73,13 +77,10 @@ export class BypositionComponent implements OnInit {
     // console.log('players', this.players);
   }
 
-
-  // tslint:disable-next-line:max-line-length
   // Convertir el Array de Observables a un Array de Objetos.
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
-    // tslint:disable-next-line:prefer-const
-    let InfoObsPlayer = this.playerService.getAllPlayersActives();
+    const InfoObsPlayer = this.playerService.getAllPlayersActives();
     let index = 0;
     // tslint:disable-next-line:prefer-const
     for (let obs of InfoObsPlayer) {
@@ -92,7 +93,9 @@ export class BypositionComponent implements OnInit {
             Object.assign(newPlayer, player.people[0]);
             return newPlayer;
           })
-            .sort(({ fullName: a }, { fullName: b }) => {
+            .sort((a, b) => {
+              a = a.stats[0].splits[0].team.name;
+              b = b.stats[0].splits[0].team.name;
               if (a > b) {
                 return 1;
               } else if (a < b) {
@@ -103,7 +106,6 @@ export class BypositionComponent implements OnInit {
             });
             this.allItems = this.players;
             this.setPage(1);
-
           this.isLoading = false;
           // console.log(JSON.stringify(this.players[0]));
         }
@@ -112,13 +114,13 @@ export class BypositionComponent implements OnInit {
     }
 
   }
+
+
   onSearchChange() {
     if (this.searchText) {
       this.allItems = this.players.filter(player =>
         player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
-        player.primaryPosition.abbreviation.toLowerCase().includes(this.searchText) ||
-        player.fullName.toLowerCase().includes(this.searchText) ||
-        player.primaryPosition.abbreviation.toLowerCase().includes(this.searchText));
+        player.fullName.toLowerCase().includes(this.searchText));
         this.setPage(this.pager.currentPage);
       } else {
           this.allItems = this.players;
@@ -127,13 +129,12 @@ export class BypositionComponent implements OnInit {
         return this.allItems;
       }
 
-  setPage(page: number) {
-    // get pager object from service
-    this.pager = this.pagerService.getPager(this.allItems.length, page);
+      setPage(page: number) {
+        // get pager object from service
+        this.pager = this.pagerService.getPager(this.allItems.length, page);
 
-    // get current page of items
-    this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
-  }
-
-
+        // get current page of items
+        this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
+      }
 }
+

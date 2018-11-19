@@ -11,6 +11,10 @@ import { DailyComponent} from '../app/components/players/daily/daily.component';
 import { ActivesComponent} from '../app/components/players/actives/actives.component';
 import { BioActivesComponent} from '../app/components/players/bio-actives/bio-actives.component';
 import { PpalComponent} from '../app/components/news/ppal/ppal.component';
+import { PDailyComponent} from '../app/components/pitchers/p-daily/p-daily.component';
+import { PByteamComponent } from './components/pitchers/p-byteam/p-byteam.component';
+import { PBioActivesComponent } from './components/pitchers/p-bio-actives/p-bio-actives.component';
+import { PActivesComponent } from './components/pitchers/p-actives/p-actives.component';
 
 const routes: Routes = [
 
@@ -35,7 +39,15 @@ const routes: Routes = [
   { path: 'contactUs',
   component: ContactUsComponent},
   { path: 'news_ppal',
-  component: PpalComponent}
+  component: PpalComponent},
+  { path: 'p_daily',
+  component: PDailyComponent},
+  { path: 'p_byteam',
+  component: PByteamComponent},
+  { path: 'p_bio',
+  component: PBioActivesComponent},
+  { path: 'p_actives',
+  component: PActivesComponent}
 
 
 

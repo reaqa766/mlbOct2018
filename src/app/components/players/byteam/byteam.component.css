@@ -1,6 +1,6 @@
-/* .container_players_actives {
+.container-team {
   margin-top: 20%;
-} */
+}
 
 .team-title {
     color: antiquewhite;
@@ -22,7 +22,7 @@
     color: rgb(2, 1, 0);
     font-size: 1rem;
     font-weight: bold;
-    margin-left: 19.5em;
+    margin-left: 10%;
     margin-bottom: 0;
     width: 15em;
 
@@ -30,14 +30,14 @@
 
 .title-position{
     color: antiquewhite;
-    font-size: 3rem;
-    font-weight: bold;
-    margin-left: 19.5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-left: 10%;
     margin-bottom: 0;
 }
 
 .table {
-    width: 68%;
+    width: 80%;
     margin: 0.2em auto;
 }
 

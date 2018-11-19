@@ -1,3 +1,48 @@
+.container-actives_cards {
+  margin-top: 25%;
+  margin-left: 7%;
+  display: grid;
+  grid-template-columns: repeat(5, fr);
+  grid-column-gap: 10px;
+}
+
+.card-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.card1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.card2 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.card1 {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.card1 {
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+.card1 {
+  grid-column: 5/6;
+  grid-row: 1/2;
+}
+
+
+
+
+
+
+
+
+
+
+
 .container-actives {
   margin-top: 22%;
 }

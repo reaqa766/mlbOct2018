@@ -16,14 +16,14 @@ export class ByteamComponent implements OnInit {
   groups: any;
   selectedGroup: any;
   elarray: any;
-  datesN: number = 10;
+  datesN = 10;
   searchText: string;
   playerAuxList = [];
   counter: number;
   n: number;
   m: number;
-  n1: number = 12;
-  n10: number = 5;
+  n1 = 12;
+  n10 = 5;
 
   private allItems: any[];
   // pager object
@@ -78,8 +78,9 @@ export class ByteamComponent implements OnInit {
   // Convertir el Array de Observables a un Array de Objetos.
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
-    let InfoObsPlayer = this.playerService.getAllPlayersActives();
+    const InfoObsPlayer = this.playerService.getAllPlayersActives();
     let index = 0;
+    // tslint:disable-next-line:prefer-const
     for (let obs of InfoObsPlayer) {
       obs.pipe(take(1)).subscribe(res => {
         this.players.push(res);
@@ -107,20 +108,19 @@ export class ByteamComponent implements OnInit {
           // console.log(JSON.stringify(this.players[0]));
         }
         index++;
-      })
+      });
     }
 
   }
 
 
   onSearchChange() {
-    if(this.searchText){
-      this.allItems =this.players.filter(player =>
+    if (this.searchText) {
+      this.allItems = this.players.filter(player =>
         player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
-        player.fullName.toLowerCase().includes(this.searchText)));
+        player.fullName.toLowerCase().includes(this.searchText));
         this.setPage(this.pager.currentPage);
-      }
-        else {
+      } else {
           this.allItems = this.players;
           this.setPage(this.pager.currentPage);
         }

@@ -1,19 +1,51 @@
-.container_players_actives {
+.container-actives {
   margin-top: 22%;
 }
-.daily-title {
+
+.bioActives-title {
     color: antiquewhite;
     font-size: 2rem;
     text-align: center;
     margin: 1.5rem auto 0;
     padding: .5rem 0;
-    background-color: rgba(19, 12, 12, 0.5);
+    background-color: rgba(3, 2, 2, 0.5);
     width: 18em;
     height: 1.75em;
     border-radius: 7px;
 }
+.title-position{
+    color: antiquewhite;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 11.5%;
+    margin-bottom: 0;
+}
+
+.table {
+    width: 80%;
+    margin: 0.2em auto;
+}
+
+.table-header {
+    background-color: rgba(12, 10, 9, 0.9);
+    color: antiquewhite;
+    text-align: center;
+    width: 100%;
+
+}
+.table-header2 {
+    background-color: rgba(12, 10, 9, 0.75);
+    color: antiquewhite;
+    text-align: center;
+
+}
+.title-rows {
+    background-color: antiquewhite;
+    color: rgb(12, 10, 9);
+    text-align: center;
 
 
+}
 
 .advancedSearchTextbox{
     color: rgb(2, 1, 0);
@@ -24,33 +56,6 @@
 
 }
 
-.title-position{
-    color: antiquewhite;
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-left: 12%;
-    margin-bottom: 0;
-}
-
-.table {
-    width: 80%;
-    margin: 0.2em auto;
-}
-
-
-.table-header1 {
-    background-color: rgba(12, 10, 9, 0.9);
-    color: antiquewhite;
-}
-.table-header {
-    background-color: rgba(12, 10, 9, 0.75);
-    color: antiquewhite;
-}
-.title-rows {
-    background-color: antiquewhite;
-    color: rgb(12, 10, 9);
-
-}
 
 .player-name {
     color: black;
@@ -77,4 +82,21 @@
 
 .title-rows_header {
     text-align: center;
+}
+
+th {
+    font-size:2vh;
+    width: auto;
+
+}
+td  {
+    font-size: 1.8vh;
+    width: auto;
+
+}
+.page-link {
+background-color: rgba(250, 235, 215,0.8)!important;
+border:solid 2px #7e7b7b;
+color: rgb(0, 0, 0)!important;
+font-weight: 400;
 }

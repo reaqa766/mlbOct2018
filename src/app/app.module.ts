@@ -28,6 +28,10 @@ import { RegisterComponent } from './components/register/register.component';
 import { BioActivesComponent } from './components/players/bio-actives/bio-actives.component';
 import{ PaginationPipe } from '../pipes/pagination.pipe';
 import { PpalComponent } from './components/news/ppal/ppal.component';
+import { PActivesComponent } from './components/pitchers/p-actives/p-actives.component';
+import { PBioActivesComponent } from './components/pitchers/p-bio-actives/p-bio-actives.component';
+import { PByteamComponent } from './components/pitchers/p-byteam/p-byteam.component';
+import { PDailyComponent } from './components/pitchers/p-daily/p-daily.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +52,11 @@ import { PpalComponent } from './components/news/ppal/ppal.component';
     GrdFilterPipe, 
     PaginationPipe,
     BioActivesComponent,
-    PpalComponent
+    PpalComponent,
+    PActivesComponent,
+    PBioActivesComponent,
+    PByteamComponent,
+    PDailyComponent
   
   ],
   imports: [

@@ -1,69 +1,64 @@
-<div class="container_players_actives"></div>
 <div class="container-actives">
-  <h1 class="actives-title">BATEADORES ACTIVOS</h1>
+  <h1 class="bioActives-title">BIOGRAFIA DE PITCHERS ACTIVOS</h1>
 </div>
 
 <p class="title-position"> TEMP. 2018 </p>
 
 <!-- Borarr Arriba -->
 <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchTextbox">
+<p></p>
 
 <ng-container *ngIf="!isLoading">
   <table class="table table-hover ">
     <thead class="table-header">
       <tr>
         <!-- <th style="width: 5%;" scope="col">Id</th> -->
-        <th style="width: 15%;" scope="col">Name</th>
-        <!-- <th style="width: 15%;" scope="col">Codigo</th> -->
-        <th style="width: 10%;" scope="col">Posicion</th>
-        <th style="width: 10%;" scope="col">At Bats</th>
-        <th style="width: 5%;" scope="col">Avg</th>
-        <th style="width: 5%;" scope="col">CA</th>
-        <th style="width: 5%;" scope="col">Hits</th>
-        <th style="width: 5%;" scope="col">StrksO</th>
-        <th style="width: 5%;" scope="col">BB</th>
-        <th style="width: 5%;" scope="col">CI</th>
-        <th style="width: 5%;" scope="col">Hr</th>
-        <th style="width: 5%;" scope="col">Br</th>
+        <th style="width: 15%;" scope="col">Nombre</th>
+        <th style="width: 20%;" scope="col">Equipo</th>
+        <th style="width: 15%;" scope="col">L.Nac.</th>
+        <th style="width: 10%;" scope="col">F.Nac.</th>
+        <th style="width: 5%;" scope="col">Edad</th>
+        <th style="width: 10%;" scope="col">Mote</th>
+        <th style="width: 15%;" scope="col">Debut</th>
+        <th style="width: 5%;" scope="col">Num.</th>
+        <th style="width: 5%;" scope="col">Pos.</th>
       </tr>
     </thead>
   </table>
-  <table class="table table-hover ">
+  <table class="table table-hover">
     <thead class="table-header2">
       <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
         <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
           <!-- <td style="width: 5%;">{{i +1}}</td> -->
           <td style="width: 15%;">{{player.fullName}}</td>
-          <!-- <td style="width: 15%;">{{player.id}}</td> -->
-          <td style="width: 10%;">{{player.primaryPosition.abbreviation}}</td>
-          <td style="width: 10%;">{{player.stats[0].splits[0].stat.atBats}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[0].stat.avg}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[0].stat.runs}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[0].stat.hits}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[0].stat.strikeOuts}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[0].stat.baseOnBalls}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[0].stat.rbi}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[0].stat.homeRuns}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[0].stat.stolenBases}}</td>
+          <td style="width: 20%;">{{player.stats[0].splits[0].team.name}}</td>
+          <td style="width: 15%;">{{player.birthCity}}</td>
+          <td style="width: 10%;">{{player.birthDate}}</td>
+          <td style="width: 5%;">{{player.currentAge}}</td>
+          <td style="width: 10%;">{{player.nickName}}</td>
+          <td style="width: 15%;">{{player.mlbDebutDate}}</td>
+          <td style="width: 5%;">{{player.primaryNumber}}</td>
+          <td style="width: 5%;">{{player.primaryPosition.abbreviation}}</td>
         </tr>
       </ng-container>
 
+
       <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
         <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
+
+
           <!-- <td style="width: 5%;">{{i +1}}</td> -->
           <td style="width: 15%;">{{player.fullName}}</td>
-          <!-- <td style="width: 15%;">{{player.id}}</td> -->
-          <td style="width: 10%;">{{player.primaryPosition.abbreviation}}</td>
-          <td style="width: 10%;">{{player.stats[0].splits[0].stat.atBats}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[0].stat.avg}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[0].stat.runs}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[0].stat.hits}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[0].stat.strikeOuts}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[0].stat.baseOnBalls}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[0].stat.rbi}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[0].stat.homeRuns}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[0].stat.stolenBases}}</td>
-
+          <td style="width: 20%;">{{player.stats[0].splits[0].team.name}}</td>
+          <td style="width: 15%;">{{player.birthCity}}</td>
+          <td style="width: 10%;">{{player.birthDate}}</td>
+          <td style="width: 5%;">{{player.currentAge}}</td>
+          <td style="width: 10%;">{{player.nickName}}</td>
+          <td style="width: 5%;">{{player.height}}</td>
+          <td style="width: 15%;">{{player.mlbDebutDate}}</td>
+          <td style="width: 5%;">{{player.primaryNumber}}</td>
+          <td style="width: 5%;">{{player.primaryPosition.abbreviation}}</td>
+        </tr>
       </ng-container>
       <span *ngIf="!allItems[0]" class="d-flex justify-content-center">
         <h1> Error: '{{ busqueda.value }}' no existe</h1>

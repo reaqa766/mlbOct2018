@@ -1,10 +1,131 @@
-<div class="container-actives">
-  <h1 class="bioActives-title">BIOGRAFIA DE JUGADORES ACTIVOS</h1>
+<!--PRUEBA DE CARDS -->
+<div class="container-actives_cards " *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
+<!-- <div class="card card1" style="width: 90%;">
+  <img class="card-img-top" src="../../../../assets/fotoalcidesescobar.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div> -->
+<div class="card card2" style="width: 90%;">
+  <img class="card-img-top" src="../../../../assets/fotoanibalsanchez.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{player.fullName}}</h5>
+    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><strong> Equipo:</strong> {{player.stats[0].splits[0].team.name}}</li>
+    <li class="list-group-item"><strong>L. Nac.:</strong> {{player.birthCity}}</li>
+    <li class="list-group-item"><strong>F. Nac.:</strong> {{player.birthDate}}</li>
+    <li class="list-group-item"><strong> Edad:</strong> {{player.currentAge}}</li>
+    <li class="list-group-item"><strong>Mote:</strong> {{player.nickName}}</li>
+    <li class="list-group-item"><strong>F. Debut:</strong> {{player.mlbDebutDate}}</li>
+    <li class="list-group-item"><strong>Numero:</strong> {{player.primaryNumber}}</li>
+    <li class="list-group-item"><strong>Posición</strong> {{player.primaryPosition.abbreviation}}</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+<!-- <div class="card card3" style="width: 90%;">
+  <img class="card-img-top" src="../../../../assets/fotoasdrubalcabrera.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+<div class="card card4" style="width: 90%;">
+  <img class="card-img-top" src="../../../../assets/fotocarlosgonzalez.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+<div class="card card5" style="width: 90%;">
+  <img class="card-img-top" src="../../../../assets/fotoeduardoescobar.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div> -->
+
+
+  <!-- <hr />
+</div> -->
+</div>
+<div class="container">
+    <div class="text-center">
+      <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
+        <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+          <a (click)="setPage(1)" class="page-link">First</a>
+        </li>
+        <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+          <a (click)="setPage(pager.currentPage - 1)" class="page-link">Previous</a>
+        </li>
+        <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
+          <a (click)="setPage(page)" class="page-link">{{page}}</a>
+        </li>
+        <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+          <a (click)="setPage(pager.currentPage + 1)" class="page-link">Next</a>
+        </li>
+        <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+          <a (click)="setPage(pager.totalPages)" class="page-link">Last</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container-actives">
+  <h1 class="bioActives-title">BIOGRAFIA DE BATEADORES ACTIVOS</h1>
 </div>
 
 <p class="title-position"> TEMP. 2018 </p>
 
-<!-- Borarr Arriba -->
 <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchTextbox">
 <p></p>
 
@@ -12,7 +133,6 @@
   <table class="table table-hover ">
     <thead class="table-header">
       <tr>
-        <!-- <th style="width: 5%;" scope="col">Id</th> -->
         <th style="width: 15%;" scope="col">Nombre</th>
         <th style="width: 20%;" scope="col">Equipo</th>
         <th style="width: 15%;" scope="col">L.Nac.</th>
@@ -29,7 +149,6 @@
     <thead class="table-header2">
       <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
         <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
-          <!-- <td style="width: 5%;">{{i +1}}</td> -->
           <td style="width: 15%;">{{player.fullName}}</td>
           <td style="width: 20%;">{{player.stats[0].splits[0].team.name}}</td>
           <td style="width: 15%;">{{player.birthCity}}</td>
@@ -47,7 +166,6 @@
         <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
 
 
-          <!-- <td style="width: 5%;">{{i +1}}</td> -->
           <td style="width: 15%;">{{player.fullName}}</td>
           <td style="width: 20%;">{{player.stats[0].splits[0].team.name}}</td>
           <td style="width: 15%;">{{player.birthCity}}</td>
@@ -65,15 +183,10 @@
       </span>
     </thead>
   </table>
-  <!-- PAGINATION-->
 
   <div>
     <div class="container">
       <div class="text-center">
-        <!-- items being paged -->
-        <!-- <div *ngFor="let item of pagedItems">{{item.name}}</div> -->
-
-        <!-- pager -->
         <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
           <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
             <a (click)="setPage(1)" class="page-link">First</a>
@@ -96,4 +209,4 @@
     <hr />
   </div>
 
-</ng-container>
+</ng-container> -->
