@@ -14,7 +14,6 @@ import { PagerService } from '../../../../services/index';
   styleUrls: ['./actives.component.css']
 })
 export class ActivesComponent implements OnInit {
-
   public players = [];
   public playersSort = [];
   groups: any;
@@ -69,16 +68,7 @@ export class ActivesComponent implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    console.log(this.players);
-
-
-
-
-
-    // this.playerAuxList=this.playersList;
-    // if (this.counter=1) {
-
-    // }
+    // console.log(this.players);
   }
 
   // Convertir el Array de Observables a un Array de Objetos.
@@ -107,33 +97,33 @@ export class ActivesComponent implements OnInit {
                 return 0;
               }
             });
+          this.allItems = this.players;
+          this.setPage(1);
           this.isLoading = false;
           // console.log(JSON.stringify(this.players[0]));
         }
         index++;
       });
     }
-    // set items to json response
-    this.allItems = InfoObsPlayer;
-
-    // initialize to page 1
-    this.setPage(1);
 
   }
 
-  get filterPlayers() {
-
-    return this.searchText ?
-
-
-      this.players.filter(player =>
+  onSearchChange() {
+    if(this.searchText){
+      this.allItems = this.players.filter(player =>
         player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
         (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
         (player.nickName && player.nickName.toLowerCase().includes(this.searchText))  ||
-        player.mlbDebutDate.includes(this.searchText))
+        player.mlbDebutDate.includes(this.searchText)));
+        this.setPage(this.pager.currentPage);
+      }
+        else {
+          this.allItems = this.players;
+          this.setPage(this.pager.currentPage);
+        }
+        return this.allItems;
+      }
 
-      : this.players;
-  }
   setPage(page: number) {
     // get pager object from service
     this.pager = this.pagerService.getPager(this.allItems.length, page);

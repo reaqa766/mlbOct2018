@@ -106,6 +106,8 @@ export class BioActivesComponent implements OnInit {
                 return 0;
               }
             });
+            this.allItems = this.players;
+            this.setPage(1);
           this.isLoading = false;
           // console.log(JSON.stringify(this.players[0]));
         }
@@ -121,19 +123,22 @@ export class BioActivesComponent implements OnInit {
   }
 
 
-  get filterPlayers() {
-
-    return this.searchText ?
-
-      this.players.filter(player =>
+  onSearchChange() {
+    if(this.searchText){
+      this.allItems = this.players.filter(player =>
         player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
         (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
         (player.nickName && player.nickName.toLowerCase().includes(this.searchText))  ||
-        player.mlbDebutDate.includes(this.searchText))
+        player.mlbDebutDate.includes(this.searchText)));
+        this.setPage(this.pager.currentPage);
+      }
 
-      : this.players;
-  }
-
+        else {
+          this.allItems = this.players;
+          this.setPage(this.pager.currentPage);
+        }
+        return this.allItems;
+      }
   setPage(page: number) {
     // get pager object from service
     this.pager = this.pagerService.getPager(this.allItems.length, page);

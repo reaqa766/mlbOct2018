@@ -5,7 +5,7 @@
 <p class="title-position"> TEMP. 2018 </p>
 
 <!-- Borarr Arriba -->
-<input #busqueda [(ngModel)]="searchText" placeholder="Buscar Jugador..." class="advancedSearchTextbox">
+<input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchTextbox">
 <p></p>
 
 <ng-container *ngIf="!isLoading">
@@ -27,8 +27,8 @@
   </table>
   <table class="table table-hover">
     <thead class="table-header2">
-      <ng-container *ngIf="!(pager.totalItems-1 === pager.endIndex)">
-        <tr *ngFor="let player of filterPlayers | pagination:pager.startIndex:pager.pageSize">
+      <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
+        <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
           <!-- <td style="width: 5%;">{{i +1}}</td> -->
           <td style="width: 15%;">{{player.fullName}}</td>
           <td style="width: 20%;">{{player.stats[0].splits[0].team.name}}</td>
@@ -43,8 +43,8 @@
       </ng-container>
 
 
-      <ng-container *ngIf="pager.totalItems-1 === pager.endIndex">
-        <tr *ngFor="let player of filterPlayers | pagination:pager.startIndex:pager.totalItems-((pager.totalPages-1)*10)">
+      <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
+        <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
 
 
           <!-- <td style="width: 5%;">{{i +1}}</td> -->
@@ -60,7 +60,7 @@
           <td style="width: 5%;">{{player.primaryPosition.abbreviation}}</td>
         </tr>
       </ng-container>
-      <span *ngIf="!filterPlayers[0]" class="d-flex justify-content-center">
+      <span *ngIf="!allItems[0]" class="d-flex justify-content-center">
         <h1> Error: '{{ busqueda.value }}' no existe</h1>
       </span>
     </thead>
