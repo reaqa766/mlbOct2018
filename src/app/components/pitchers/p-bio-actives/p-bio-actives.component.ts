@@ -71,7 +71,7 @@ export class PBioActivesComponent implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    // console.log('players', this.players);
+    console.log('players', this.players);
     // console.log('FilterPlayers', this.filterPlayers);
 
 
