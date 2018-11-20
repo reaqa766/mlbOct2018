@@ -1,12 +1,12 @@
 .container-team {
-  margin-top: 20%;
+  margin-top: 22%;
 }
 
 .team-title {
     color: antiquewhite;
     font-size: 2rem;
     text-align: center;
-    margin: 1.5rem auto 0;
+    margin: 1.5rem auto 0.5rem;
     padding: .5rem 0;
     background-color: rgba(3, 2, 2, 0.5);
     width: 13em;

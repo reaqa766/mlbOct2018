@@ -1,11 +1,16 @@
+.container-byPosition {
+    margin-top: 22%;
+
+}
+
 .byPosition-title {
     color: antiquewhite;
     font-size: 2rem;
     text-align: center;
-    margin: 1.5rem auto 0; 
+    margin: 1.5rem auto 0.5rem; 
     padding: .5rem 0; 
     background-color: rgba(3, 2, 2, 0.5);
-    width: 13em;
+    width: 15em;
     height: 1.75em;
     border-radius: 7px;
 }
@@ -14,7 +19,7 @@
     color: rgb(2, 1, 0);
     font-size: 1rem;
     font-weight: bold;
-    margin-left: 19.5em;
+    margin-left: 10%;
     margin-bottom: 0;
 
 }
@@ -23,12 +28,12 @@
     color: antiquewhite;
     font-size: 1.5rem;
     font-weight: bold;
-    margin-left: 13em;
+    margin-left: 12%;
     margin-bottom: 0;
 }
 
 .table {
-    width: 68%;
+    width: 80%;
     margin: 0.2em auto;
 }
 
