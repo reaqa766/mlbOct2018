@@ -32,8 +32,8 @@
   </ng-container>
 
   <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
-    <div *ngIf="pager.allItems-1 === 0">
-    <div class="card card1" style="width: 25%; margin-left: 36%" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
+    <!-- <div *ngIf="pager.allItems-1 === 0"> -->
+    <div class="card card1"  *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
       <img class="card-img-top" src="../../../../assets/{{player.id}}.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{player.fullName}} </h5>
@@ -52,30 +52,8 @@
         <a href="#" class="card-link">Card link</a>
         <a href="#" class="card-link">Another link</a>
       </div>
-    </div>
+    <!-- </div> -->
   </div>
-  <div *ngIf="pager.allItems-1 >= 1">
-    <div class="card card1" style="width: 95%;" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
-      <img class="card-img-top" src="../../../../assets/{{player.id}}.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">{{player.fullName}}</h5>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"><strong> Equipo:</strong> {{player.stats[0].splits[0].team.name}}</li>
-        <li class="list-group-item"><strong>L. Nac.:</strong> {{player.birthCity}}</li>
-        <li class="list-group-item"><strong>F. Nac.:</strong> {{player.birthDate}}</li>
-        <li class="list-group-item"><strong> Edad:</strong> {{player.currentAge}}</li>
-        <li class="list-group-item"><strong>Mote:</strong> {{player.nickName}}</li>
-        <li class="list-group-item"><strong>F. Debut:</strong> {{player.mlbDebutDate}}</li>
-        <li class="list-group-item"><strong>Numero:</strong> {{player.primaryNumber}}</li>
-        <li class="list-group-item"><strong>Posición</strong> {{player.primaryPosition.abbreviation}}</li>
-      </ul>
-      <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
-      </div>
-    </div>
 
   </ng-container>
 </div>
