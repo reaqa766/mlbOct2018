@@ -139,7 +139,7 @@ export class BioActivesComponent implements OnInit {
       }
   setPage(page: number) {
     // get pager object from service
-    this.pager = this.pagerService.getPager(this.allItems.length, page);
+    this.pager = this.pagerService.getPager2(this.allItems.length, page);
 
     // get current page of items
     this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);

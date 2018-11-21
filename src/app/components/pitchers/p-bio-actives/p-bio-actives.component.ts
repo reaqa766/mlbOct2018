@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PlayersService } from '../../../../services/players.service';
+import { PitchersService } from '../../../services/pitchers.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../../interfaces/players';
 
@@ -64,7 +64,7 @@ export class PBioActivesComponent implements OnInit {
 
   isLoading: boolean;
 
-  constructor(private playerService: PlayersService, private pagerService: PagerService) { }
+  constructor(private playerService: PitchersService, private pagerService: PagerService) { }
 
 
   ngOnInit() {
@@ -116,10 +116,10 @@ export class PBioActivesComponent implements OnInit {
       });
     }
     // set items to json response
-    this.allItems = InfoObsPlayer;
+    // this.allItems = InfoObsPlayer;
 
     // initialize to page 1
-    this.setPage(1);
+    // this.setPage(1);
 
   }
 
@@ -140,7 +140,7 @@ export class PBioActivesComponent implements OnInit {
       }
   setPage(page: number) {
     // get pager object from service
-    this.pager = this.pagerService.getPager(this.allItems.length, page);
+    this.pager = this.pagerService.getPager2(this.allItems.length, page);
 
     // get current page of items
     this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);

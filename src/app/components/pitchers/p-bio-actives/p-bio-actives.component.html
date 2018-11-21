@@ -3,100 +3,85 @@
 </div>
 
 <p class="title-position"> TEMP. 2018 </p>
-
-<!-- Borarr Arriba -->
+<!--LOADER -->
+<div *ngIf="!allItems" >
+    <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
+    <p class="spiner_load">CARGANDO</p>
+   </div>
+   
+   <div *ngIf="allItems" >
 <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchTextbox">
-<p></p>
 
-<ng-container *ngIf="!isLoading">
-  <table class="table table-hover ">
-    <thead class="table-header">
-      <tr>
-        <!-- <th style="width: 5%;" scope="col">Id</th> -->
-        <th style="width: 15%;" scope="col">Nombre</th>
-        <th style="width: 15%;" scope="col">CODIGO</th>
-        <th style="width: 20%;" scope="col">Equipo</th>
-        <th style="width: 15%;" scope="col">L.Nac.</th>
-        <th style="width: 10%;" scope="col">F.Nac.</th>
-        <th style="width: 5%;" scope="col">Edad</th>
-        <th style="width: 10%;" scope="col">Mote</th>
-        <th style="width: 15%;" scope="col">Debut</th>
-        <th style="width: 5%;" scope="col">Num.</th>
-        <th style="width: 5%;" scope="col">Pos.</th>
-      </tr>
-    </thead>
-  </table>
-  <table class="table table-hover">
-    <thead class="table-header2">
-      <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
-        <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
-          <!-- <td style="width: 5%;">{{i +1}}</td> -->
-          <td style="width: 15%;">{{player.fullName}}</td>
-          <td style="width: 15%;">{{player.id}}</td>
-          <td style="width: 20%;">{{player.stats[0].splits[0].team.name}}</td>
-          <td style="width: 15%;">{{player.birthCity}}</td>
-          <td style="width: 10%;">{{player.birthDate}}</td>
-          <td style="width: 5%;">{{player.currentAge}}</td>
-          <td style="width: 10%;">{{player.nickName}}</td>
-          <td style="width: 15%;">{{player.mlbDebutDate}}</td>
-          <td style="width: 5%;">{{player.primaryNumber}}</td>
-          <td style="width: 5%;">{{player.primaryPosition.abbreviation}}</td>
-        </tr>
-      </ng-container>
-
-
-      <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
-        <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
-
-
-          <!-- <td style="width: 5%;">{{i +1}}</td> -->
-          <td style="width: 15%;">{{player.fullName}}</td>
-          <td style="width: 15%;">{{player.id}}</td>
-          <td style="width: 20%;">{{player.stats[0].splits[0].team.name}}</td>
-          <td style="width: 15%;">{{player.birthCity}}</td>
-          <td style="width: 10%;">{{player.birthDate}}</td>
-          <td style="width: 5%;">{{player.currentAge}}</td>
-          <td style="width: 10%;">{{player.nickName}}</td>
-          <td style="width: 5%;">{{player.height}}</td>
-          <td style="width: 15%;">{{player.mlbDebutDate}}</td>
-          <td style="width: 5%;">{{player.primaryNumber}}</td>
-          <td style="width: 5%;">{{player.primaryPosition.abbreviation}}</td>
-        </tr>
-      </ng-container>
-      <span *ngIf="!allItems[0]" class="d-flex justify-content-center">
-        <h1> Error: '{{ busqueda.value }}' no existe</h1>
-      </span>
-    </thead>
-  </table>
-  <!-- PAGINATION-->
-
-  <div>
-    <div class="container">
-      <div class="text-center">
-        <!-- items being paged -->
-        <!-- <div *ngFor="let item of pagedItems">{{item.name}}</div> -->
-
-        <!-- pager -->
-        <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
-          <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-            <a (click)="setPage(1)" class="page-link">First</a>
-          </li>
-          <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-            <a (click)="setPage(pager.currentPage - 1)" class="page-link">Previous</a>
-          </li>
-          <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
-            <a (click)="setPage(page)" class="page-link">{{page}}</a>
-          </li>
-          <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-            <a (click)="setPage(pager.currentPage + 1)" class="page-link">Next</a>
-          </li>
-          <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-            <a (click)="setPage(pager.totalPages)" class="page-link">Last</a>
-          </li>
-        </ul>
+<!--PRUEBA DE CARDS -->
+<div class="container-actives_cards ">
+  <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
+    <div class="card card1" style="width: 95%;" *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
+      <img class="card-img-top" src="../../../../assets/{{player.id}}.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{player.fullName}}</h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong> Equipo:</strong> {{player.stats[0].splits[0].team.name}}</li>
+        <li class="list-group-item"><strong>L. Nac.:</strong> {{player.birthCity}}</li>
+        <li class="list-group-item"><strong>F. Nac.:</strong> {{player.birthDate}} </li>
+        <li class="list-group-item"><strong> Edad:</strong> {{player.currentAge}}</li>
+        <li class="list-group-item"><strong>Mote:</strong> {{player.nickName}}</li>
+        <li class="list-group-item"><strong>F. Debut:</strong> {{player.mlbDebutDate}}</li>
+        <li class="list-group-item"><strong>Numero:</strong> {{player.primaryNumber}}</li>
+        <li class="list-group-item"><strong>Posición</strong> {{player.primaryPosition.name}}</li>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
       </div>
     </div>
-    <hr />
+  </ng-container>
+
+  <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
+    <!-- <div *ngIf="pager.allItems-1 === 0"> -->
+    <div class="card card1"  *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*5)">
+      <img class="card-img-top" src="../../../../assets/{{player.id}}.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{player.fullName}} </h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong> Equipo:</strong> {{player.stats[0].splits[0].team.name}}</li>
+        <li class="list-group-item"><strong>L. Nac.:</strong> {{player.birthCity}}</li>
+        <li class="list-group-item"><strong>F. Nac.:</strong> {{player.birthDate}}</li>
+        <li class="list-group-item"><strong> Edad:</strong> {{player.currentAge}}</li>
+        <li class="list-group-item"><strong>Mote:</strong> {{player.nickName}}</li>
+        <li class="list-group-item"><strong>F. Debut:</strong> {{player.mlbDebutDate}}</li>
+        <li class="list-group-item"><strong>Numero:</strong> {{player.primaryNumber}}</li>
+        <li class="list-group-item"><strong>Posición</strong> {{player.primaryPosition.name}}</li>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    <!-- </div> -->
   </div>
 
-</ng-container>
+  </ng-container>
+</div>
+<div class="container">
+  <div class="text-center">
+    <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
+      <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+        <a (click)="setPage(1)" class="page-link">First</a>
+      </li>
+      <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+        <a (click)="setPage(pager.currentPage - 1)" class="page-link">Previous</a>
+      </li>
+      <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
+        <a (click)="setPage(page)" class="page-link">{{page}}</a>
+      </li>
+      <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+        <a (click)="setPage(pager.currentPage + 1)" class="page-link">Next</a>
+      </li>
+      <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+        <a (click)="setPage(pager.totalPages)" class="page-link">Last</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>

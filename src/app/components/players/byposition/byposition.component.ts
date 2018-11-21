@@ -115,10 +115,10 @@ export class BypositionComponent implements OnInit {
   onSearchChange() {
     if (this.searchText) {
       this.allItems = this.players.filter(player =>
-        player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
+        // player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
         player.primaryPosition.abbreviation.toLowerCase().includes(this.searchText) ||
-        player.fullName.toLowerCase().includes(this.searchText) ||
-        player.primaryPosition.abbreviation.toLowerCase().includes(this.searchText));
+        // player.fullName.toLowerCase().includes(this.searchText) ||
+        player.primaryPosition.name.toLowerCase().includes(this.searchText));
         this.setPage(this.pager.currentPage);
       } else {
           this.allItems = this.players;
