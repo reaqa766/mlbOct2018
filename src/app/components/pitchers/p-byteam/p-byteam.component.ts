@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PlayersService } from '../../../../services/players.service';
+import { PitchersService } from '../../../services/pitchers.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../../interfaces/players';
 
@@ -67,14 +67,14 @@ export class PByteamComponent implements OnInit {
   // public searchText : string;
   // public playerData : any;
 
-  constructor(private playerService: PlayersService, private pagerService: PagerService) { }
+  constructor(private playerService: PitchersService, private pagerService: PagerService) { }
 
 
   ngOnInit() {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    // console.log('players', this.players);
+    console.log('players', this.players);
   }
 
   // Convertir el Array de Observables a un Array de Objetos.

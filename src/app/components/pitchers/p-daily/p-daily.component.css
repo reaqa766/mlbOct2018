@@ -23,6 +23,15 @@
     margin-bottom: 0;
 
 }
+.error_search {
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    color: antiquewhite;
+    background-color: rgba(12, 10, 9, 0.75);
+
+}
+
 
 .title-position{
     color: antiquewhite;

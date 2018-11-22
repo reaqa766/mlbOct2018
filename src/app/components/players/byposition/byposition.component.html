@@ -4,7 +4,18 @@
 <p class="title-position"> TEMP. 2018 </p>
 
 <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchTextbox">
-<p></p>
+<div *ngIf="!allItems[0]" class="error_search d-flex justify-content-center">
+    <h1> <strong>'{{searchText}}'</strong>  no existe</h1>
+  </div>
+
+    <!-- LOADER -->
+<div *ngIf="!allItems" >
+    <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
+    <p class="spiner_load">CARGANDO</p>
+   </div>
+
+
+
 <ng-container *ngIf="!isLoading">
 <table class="table table-hover " >
 <thead class="table-header" >
@@ -22,6 +33,9 @@
   </tr>
 </thead>
 </table>
+
+<ng-container *ngIf="!(pager.allItems === 0)">
+
 <table class="table table-hover " >
   <thead class="table-header2" >
     <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
@@ -91,4 +105,5 @@
   </div>
   <hr />
 </div>
+</ng-container>
 </ng-container>

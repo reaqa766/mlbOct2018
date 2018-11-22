@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import * as moment from 'moment';
-import { DataPlayersService } from '../../../../services/data-players.service';
+import { DataPitchersService } from '../../../../services/data-pitchers.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../../interfaces/players';
 
@@ -53,11 +53,10 @@ export class PDailyComponent implements OnInit {
 
   isLoading: boolean;
 
-  constructor(private playerService: DataPlayersService, private pagerService: PagerService) { }
+  constructor(private playerService: DataPitchersService, private pagerService: PagerService) { }
 
   ngOnInit() {
-    console.log(this.dia);
-
+    // console.log(this.dia);
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
@@ -90,34 +89,35 @@ getPlayersMap() {
           } else if (a === b) {
             return 0;
           }
-        }).filter(player =>  player.stats[0].splits[player.stats[0].splits.length-1].date === '2018-09-30') ;
+        });
+        // .filter(player =>  player.stats[0].splits[player.stats[0].splits.length-1].date === '2018-09-30') ;
         this.allItems = this.players;
         this.setPage(1);
         this.isLoading = false;
         // console.log(JSON.stringify(this.players[0]));
           //  console.log('playersDaily', this.players);
-      }
-      index++;
-    });
-  }
+        }
+        index++;
+      });
+    }
 
   }
 
   onSearchChange() {
-    if(this.searchText){
+    if (this.searchText) {
       this.allItems = this.players.filter(player =>
         player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
-        (player.fullName && player.fullName.toLowerCase().includes(this.searchText)));
+        player.fullName.toLowerCase().includes(this.searchText));
         this.setPage(this.pager.currentPage);
+      } else {
+        this.allItems = this.players;
+        this.setPage(this.pager.currentPage);
+      }
+      return this.allItems;
     }
-    else{
-      this.allItems = this.players;
-      this.setPage(this.pager.currentPage);
-    }
-    return this.allItems;
-  }
+
   setPage(page: number) {
-    console.log('Changing to page '+page);
+    // console.log('Changing to page '+page);
 
     // get pager object from service
     this.pager = this.pagerService.getPager(this.allItems.length, page);

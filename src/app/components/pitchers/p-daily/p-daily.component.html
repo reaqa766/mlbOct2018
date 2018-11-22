@@ -5,8 +5,15 @@
 <p class="title-position">{{dia | date }} </p>
 <!-- Borrar arriba -->
 
-<input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchTextbox">
+<input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Pitcher..." class="advancedSearchTextbox">
 
+
+  <!-- LOADER -->
+  <div *ngIf="!allItems" >
+      <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
+      <p class="spiner_load">CARGANDO</p>
+     </div>
+  
 <ng-container *ngIf="!isLoading">
   <table class="table table-hover ">
     <thead class="table-header1">
@@ -26,9 +33,13 @@
       </tr>
     </thead>
   </table>
+
+  <ng-container *ngIf="!(pager.allItems === 0)">
+
   <table class="table table-hover ">
     <thead class="table-header">
-      <ng-container *ngIf="!(pager.totalItems-1 === pager.endIndex) && allItems.length !== 0">
+        <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
+            <!-- <ng-container *ngIf="!(pager.totalItems-1 === pager.endIndex) && allItems.length !== 0"> -->
         <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
           <!-- <td style="width: 5%;">{{i +1}}</td> -->
           <td style="width: 10%;">{{player.fullName}}</td>
@@ -45,7 +56,8 @@
         </tr>
       </ng-container>
       <ng-container *ngIf="pager.totalItems-1 === pager.endIndex">
-        <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.totalItems-((pager.totalPages-1)*10)">
+          <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
+              <!-- <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize"> -->
           <td style="width: 10%;">{{player.fullName}}</td>
           <td style="width: 10%;">{{player.stats[0].splits[player.stats[0].splits.length-1].team.name}}</td>
           <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.atBats}}</td>
@@ -61,15 +73,15 @@
       </ng-container>
 
       <span *ngIf="!allItems[0] && busqueda.value" class="d-flex justify-content-center">
-        <h1> Error: '{{ busqueda.value }}' no existe</h1>
+        <h1> '{{ busqueda.value }}' no existe</h1>
       </span>
       <span *ngIf="!allItems[0] && !busqueda.value" class="d-flex justify-content-center">
-        <h1> Error: No hubo juegos hoy </h1>
+        <h1> No hubo juegos hoy </h1>
       </span>
     </thead>
   </table>
 
-    <div class="container" *ngIf="allItems.length > 10">
+    <div class="container" >
       <div class="text-center">
         <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
           <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
@@ -91,5 +103,6 @@
       </div>
     </div>
     <hr/>
+</ng-container>
 </ng-container>
 

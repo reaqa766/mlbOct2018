@@ -61,10 +61,10 @@
       </ng-container>
 
       <span *ngIf="!allItems[0] && busqueda.value" class="d-flex justify-content-center">
-        <h1> Error: '{{ busqueda.value }}' no existe</h1>
+        <h1> '{{ busqueda.value }}' no existe</h1>
       </span>
       <span *ngIf="!allItems[0] && !busqueda.value" class="d-flex justify-content-center">
-        <h1> Error: No hubo juegos hoy </h1>
+        <h1> No hubo juegos hoy </h1>
       </span>
     </thead>
   </table>

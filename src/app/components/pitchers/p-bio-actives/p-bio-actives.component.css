@@ -26,6 +26,16 @@
     color: rgba(80, 57, 43, 0.40);
 }
 
+.error_search {
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    color: antiquewhite;
+    background-color: rgba(12, 10, 9, 0.75);
+
+}
+
+
 
 .container-actives_cards .card:nth-child(1) {
     grid-column: 1/2;
