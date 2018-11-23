@@ -6,17 +6,17 @@
 
 <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Nombre del Equipo..." class="advancedSearchTextbox">
 <div *ngIf="!allItems[0]" class="error_search d-flex justify-content-center">
-    <h1> <strong>'{{searchText}}'</strong>  no existe</h1>
+    <h1> <strong>'{{searchText}}'</strong>  Su dato no existe, ingrese solo Equipos y Jugadores...</h1>
   </div>
   <!-- LOADER -->
   <div *ngIf="!allItems" >
       <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
       <p class="spiner_load">CARGANDO</p>
-     </div>
+    </div>
   
 
 <ng-container *ngIf="!isLoading">
-  <table class="table table-hover ">
+  <table class="table table-hover text-center">
     <thead class="table-header">
       <tr>
         <!-- <th style="width: 5%;" scope="col">Id</th> -->
@@ -33,12 +33,12 @@
         <th style="width: 5%;" scope="col">Br</th>
       </tr>
     </thead>
-  </table>
+  <!-- </table> -->
 
   <ng-container *ngIf="!(pager.allItems === 0)">
 
-  <table class="table table-hover " >
-    <thead class="table-header2">
+  <!-- <table class="table table-hover " > -->
+    <tbody class="table-header2">
       <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
         <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
         <!-- <td style="width: 5%;">{{i +1}}</td> -->
@@ -72,14 +72,16 @@
       <td style="width: 5%;">{{player.stats[0].splits[0].stat.stolenBases}}</td>
     </tr>
   </ng-container>
-  <span *ngIf="!allItems[0]" class="d-flex justify-content-center">
+  <!-- <span *ngIf="!allItems[0]" class="d-flex justify-content-center">
     <h1> Error: '{{ busqueda.value }}' no existe</h1>
-  </span>
-</thead>
-  </table>
-   <!-- PAGINATION-->
+  </span> -->
+</tbody>
+</ng-container>
 
-   <div>
+  </table>
+  <!-- PAGINATION-->
+
+  <div>
     <div class="container">
       <div class="text-center">
         <!-- items being paged -->
@@ -107,5 +109,4 @@
     </div>
     <hr />
   </div>
-</ng-container>
 </ng-container>
