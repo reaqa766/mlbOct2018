@@ -16,11 +16,12 @@ import { PagerService } from '../../../../services/index'
 })
 export class PDailyComponent implements OnInit {
   public players = [];
+  public playersSort = [];
   groups: any;
   selectedGroup: any;
   elarray: any;
   datesN = 10;
-  searchText: string;
+  searchText: any ='';
   playerAuxList = [];
   counter: number;
   n: number;
@@ -60,7 +61,8 @@ export class PDailyComponent implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    // console.log('players', this.players);
+    console.log('allItems', this.allItems);
+    console.log('players', this.players);
   }
 
 
@@ -106,15 +108,20 @@ getPlayersMap() {
   onSearchChange() {
     if (this.searchText) {
       this.allItems = this.players.filter(player =>
-        player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
-        player.fullName.toLowerCase().includes(this.searchText));
+        // player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
+        player.fullName && player.fullName.toLowerCase().includes(this.searchText));
+        // (player.nickName && player.nickName.toLowerCase().includes(this.searchText))  ||
+        // player.mlbDebutDate.includes(this.searchText));
         this.setPage(this.pager.currentPage);
+        
       } else {
-        this.allItems = this.players;
-        this.setPage(this.pager.currentPage);
+          this.allItems = this.players;
+          this.setPage(this.pager.currentPage);
+
+        }
+        return this.allItems;
+
       }
-      return this.allItems;
-    }
 
   setPage(page: number) {
     // console.log('Changing to page '+page);

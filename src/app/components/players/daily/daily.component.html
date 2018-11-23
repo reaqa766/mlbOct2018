@@ -6,6 +6,19 @@
 <!-- Borrar arriba -->
 
 <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchTextbox">
+<div *ngIf="!allItems[0] && busqueda.value" class="error_search d-flex justify-content-center">
+  <h1> '{{ busqueda.value }}' no existe</h1>
+</div>
+<div *ngIf="!allItems[0] && !busqueda.value" class="error_search d-flex justify-content-center">
+  <h1> No hubo juegos hoy </h1>
+</div>
+
+<!-- LOADER -->
+<div *ngIf="!allItems">
+  <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
+  <p class="spiner_load">CARGANDO</p>
+</div>
+
 
 <ng-container *ngIf="!isLoading">
   <table class="table table-hover ">
@@ -26,9 +39,11 @@
       </tr>
     </thead>
   </table>
+  <ng-container *ngIf="!(pager.allItems === 0)">
+
   <table class="table table-hover ">
     <thead class="table-header">
-      <ng-container *ngIf="!(pager.totalItems-1 === pager.endIndex) && allItems.length !== 0">
+      <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
         <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
           <!-- <td style="width: 5%;">{{i +1}}</td> -->
           <td style="width: 10%;">{{player.fullName}}</td>
@@ -44,8 +59,8 @@
           <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.stolenBases}}</td>
         </tr>
       </ng-container>
-      <ng-container *ngIf="pager.totalItems-1 === pager.endIndex">
-        <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.totalItems-((pager.totalPages-1)*10)">
+      <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
+        <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
           <td style="width: 10%;">{{player.fullName}}</td>
           <td style="width: 10%;">{{player.stats[0].splits[player.stats[0].splits.length-1].team.name}}</td>
           <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.atBats}}</td>
@@ -60,12 +75,6 @@
         </tr>
       </ng-container>
 
-      <span *ngIf="!allItems[0] && busqueda.value" class="d-flex justify-content-center">
-        <h1> '{{ busqueda.value }}' no existe</h1>
-      </span>
-      <span *ngIf="!allItems[0] && !busqueda.value" class="d-flex justify-content-center">
-        <h1> No hubo juegos hoy </h1>
-      </span>
     </thead>
   </table>
 
@@ -91,4 +100,5 @@
       </div>
     </div>
     <hr/>
+</ng-container>
 </ng-container>

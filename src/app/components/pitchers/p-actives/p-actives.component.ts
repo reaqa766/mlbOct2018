@@ -67,7 +67,8 @@ export class PActivesComponent implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    // console.log(this.players);
+    console.log('allItems', this.allItems);
+    console.log('players', this.players);
   }
 
   // Convertir el Array de Observables a un Array de Objetos.
@@ -115,6 +116,7 @@ export class PActivesComponent implements OnInit {
         (player.nickName && player.nickName.toLowerCase().includes(this.searchText))  ||
         player.mlbDebutDate.includes(this.searchText));
         this.setPage(this.pager.currentPage);
+        
       } else {
           this.allItems = this.players;
           this.setPage(this.pager.currentPage);
@@ -128,6 +130,7 @@ export class PActivesComponent implements OnInit {
 
     // get current page of items
     this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
+    
   }
 
 
