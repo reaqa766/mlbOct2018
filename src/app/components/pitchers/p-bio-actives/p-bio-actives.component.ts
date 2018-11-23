@@ -132,6 +132,7 @@ export class PBioActivesComponent implements OnInit {
         (player.nickName && player.nickName.toLowerCase().includes(this.searchText))  ||
         player.mlbDebutDate.includes(this.searchText));
         this.setPage(this.pager.currentPage);
+
       } else {
           this.allItems = this.players;
           this.setPage(this.pager.currentPage);

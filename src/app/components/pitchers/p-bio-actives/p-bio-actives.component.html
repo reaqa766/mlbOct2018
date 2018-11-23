@@ -12,7 +12,7 @@
 <div *ngIf="allItems">
   <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchTextbox">
   <div *ngIf="!allItems[0]" class="error_search d-flex justify-content-center">
-    <h1> Error: <strong>'"'{{searchText}}'"'</strong> no existe !!!</h1>
+    <h1> <strong>'{{searchText}}'</strong> El Pitcher no existe, solo busque por nombre, mote y equipo</h1>
   </div>
 
 

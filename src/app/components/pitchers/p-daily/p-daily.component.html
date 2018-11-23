@@ -17,28 +17,28 @@
   <p class="spiner_load">CARGANDO</p>
 </div>
 
-<ng-container *ngIf="!isLoading">
-  <table class="table table-hover  text-center">
-    <thead class="table-header1">
-      <tr>
-        <!-- <th style="width: 3%;" scope="col">Id</th> -->
-        <th style="width: 12%;" scope="col">Nombre del Pitcher</th>
-        <th style="width: 12%;" scope="col">Equipo del Pitcher</th>
-        <th style="width: 12%;" scope="col">Equipo Contrario</th>
-        <th style="width: 3%;" scope="col">G</th>
-        <th style="width: 3%;" scope="col">P</th>
-        <th style="width: 3%;" scope="col">S</th>
-        <th style="width: 3%;" scope="col">Efect</th>
-        <th style="width: 3%;" scope="col">CL</th>
-        <th style="width: 3%;" scope="col">CS</th>
-        <th style="width: 3%;" scope="col">Pches</th>
-        <th style="width: 3%;" scope="col">BB</th>
-        <th style="width: 3%;" scope="col">Hr</th>
-      </tr>
-    </thead>
-    <!-- </table> -->
+<ng-container *ngIf="!(pager.allItems === 0)">
+  <ng-container *ngIf="!isLoading">
+    <table class="table table-hover  text-center">
+      <thead class="table-header1">
+        <tr>
+          <!-- <th style="width: 3%;" scope="col">Id</th> -->
+          <th style="width: 12%;" scope="col">Nombre del Pitcher</th>
+          <th style="width: 12%;" scope="col">Equipo del Pitcher</th>
+          <th style="width: 12%;" scope="col">Equipo Contrario</th>
+          <th style="width: 3%;" scope="col">G</th>
+          <th style="width: 3%;" scope="col">P</th>
+          <th style="width: 3%;" scope="col">S</th>
+          <th style="width: 3%;" scope="col">Efect</th>
+          <th style="width: 3%;" scope="col">CL</th>
+          <th style="width: 3%;" scope="col">CS</th>
+          <th style="width: 3%;" scope="col">Pches</th>
+          <th style="width: 3%;" scope="col">BB</th>
+          <th style="width: 3%;" scope="col">Hr</th>
+        </tr>
+      </thead>
+      <!-- </table> -->
 
-    <ng-container *ngIf="!(pager.allItems === 0)">
 
       <!-- <table class="table table-hover text-right"> -->
       <tbody class="table-header">
@@ -79,32 +79,33 @@
         </ng-container>
 
       </tbody>
-      </ng-container>
 
-  </table>
+    </table>
 
-  <!-- PAGINATION-->
+    <!-- PAGINATION-->
 
-  <div class="container">
-    <div class="text-center">
-      <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
-        <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-          <a (click)="setPage(1)" class="page-link">First</a>
-        </li>
-        <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-          <a (click)="setPage(pager.currentPage - 1)" class="page-link">Previous</a>
-        </li>
-        <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
-          <a (click)="setPage(page)" class="page-link">{{page}}</a>
-        </li>
-        <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-          <a (click)="setPage(pager.currentPage + 1)" class="page-link">Next</a>
-        </li>
-        <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-          <a (click)="setPage(pager.totalPages)" class="page-link">Last</a>
-        </li>
-      </ul>
+    <div class="container">
+      <div class="text-center">
+        <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
+          <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+            <a (click)="setPage(1)" class="page-link">First</a>
+          </li>
+          <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+            <a (click)="setPage(pager.currentPage - 1)" class="page-link">Previous</a>
+          </li>
+          <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
+            <a (click)="setPage(page)" class="page-link">{{page}}</a>
+          </li>
+          <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+            <a (click)="setPage(pager.currentPage + 1)" class="page-link">Next</a>
+          </li>
+          <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+            <a (click)="setPage(pager.totalPages)" class="page-link">Last</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <hr />
+    <hr />
+  </ng-container>
+
 </ng-container>
