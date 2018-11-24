@@ -69,6 +69,12 @@
 
 }
 
+.error_message {
+  padding-top: 10px;
+
+}
+
+
 .fa-baseball-ball {
     font-size: 10rem;
     margin: 5% 45% 0 !important;

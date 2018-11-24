@@ -3,6 +3,7 @@
 </div>
 
 <p class="title-position"> TEMP. 2018 </p>
+
 <!--LOADER -->
 <div *ngIf="!allItems">
   <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
@@ -12,10 +13,9 @@
 <div *ngIf="allItems">
   <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchTextbox">
   <div *ngIf="!allItems[0]" class="error_search d-flex justify-content-center">
-    <h1> <strong>'{{searchText}}'</strong> El Pitcher no existe, solo busque por nombre, mote y equipo</h1>
+    <h4 class="error_message"> <strong>'{{searchText}}'</strong> El Pitcher no existe. Solo busque por nombre, mote y
+      equipo</h4>
   </div>
-
-
 
   <!--PRUEBA DE CARDS -->
   <ng-container *ngIf="!(pager.allItems === 0)">
@@ -45,7 +45,6 @@
       </ng-container>
 
       <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
-        <!-- <div *ngIf="pager.allItems-1 === 0"> -->
         <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*5)">
           <img class="card-img-top" src="../../../../assets/{{player.id}}.jpg" alt="Card image cap">
           <div class="card-body">
@@ -61,13 +60,7 @@
             <li class="list-group-item"><strong>Numero:</strong> {{player.primaryNumber}}</li>
             <li class="list-group-item"><strong>Posición</strong> {{player.primaryPosition.name}}</li>
           </ul>
-          <!-- <div class="card-body">
-            <a routerLink="/news" class="card-link">Noticias</a>
-            <a routerLink="/" class="card-link">Inicio</a>
-          </div> -->
-          <!-- </div> -->
         </div>
-
       </ng-container>
     </div>
     <div class="container">
@@ -91,6 +84,5 @@
         </ul>
       </div>
     </div>
-
   </ng-container>
 </div>

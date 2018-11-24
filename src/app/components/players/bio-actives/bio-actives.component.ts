@@ -70,7 +70,7 @@ export class BioActivesComponent implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    // console.log('players', this.players);
+    console.log('allItems', this.allItems);
     // console.log('FilterPlayers', this.filterPlayers);
 
 
@@ -115,10 +115,10 @@ export class BioActivesComponent implements OnInit {
       });
     }
     // set items to json response
-    this.allItems = InfoObsPlayer;
+    // this.allItems = InfoObsPlayer;
 
     // initialize to page 1
-    this.setPage(1);
+    // this.setPage(1);
 
   }
 

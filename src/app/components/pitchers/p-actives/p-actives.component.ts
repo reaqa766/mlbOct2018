@@ -111,11 +111,12 @@ export class PActivesComponent implements OnInit {
   onSearchChange() {
     if (this.searchText) {
       this.allItems = this.players.filter(player =>
-        player.fullName.includes(this.searchText) ||
+        player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
+        (player.stats[0].splits[0].team.name.toUpperCase().includes(this.searchText)) ||
+        (player.fullName.includes(this.searchText)) ||
         (player.fullName.toLowerCase().includes(this.searchText)) ||
         (player.fullName.toUpperCase().includes(this.searchText)));
         this.setPage(this.pager.currentPage);
-        
       } else {
           this.allItems = this.players;
           this.setPage(this.pager.currentPage);
@@ -129,7 +130,6 @@ export class PActivesComponent implements OnInit {
 
     // get current page of items
     this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
-    
   }
 
 

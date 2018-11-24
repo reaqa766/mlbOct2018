@@ -22,9 +22,15 @@
 
 .fa-baseball-ball {
     font-size: 10rem;
-    margin: 5% 45% 0 !important;
+    margin: 5% 40% 0 !important;
     color: rgba(80, 57, 43, 0.40);
 }
+.spiner_load {
+  font-size: 5rem;
+  margin: 0 35% !important;
+  color: rgba(80, 57, 43, 0.95);
+}
+
 
 .error_search {
     width: 80%;
@@ -35,39 +41,44 @@
 
 }
 
+.error_message {
+  padding-top: 10px;
+
+}
+
 
 
 .container-actives_cards .card:nth-child(1) {
     grid-column: 1/2;
     grid-row: 1/2;
     margin-bottom: 20px;
-} 
+}
 .container-actives_cards .card:nth-child(2) {
     grid-column: 2/3;
     grid-row: 1/2;
     margin-bottom: 20px;
-} 
+}
 .container-actives_cards .card:nth-child(3) {
     grid-column: 3/4;
     grid-row: 1/2;
     margin-bottom: 20px;
-} 
+}
 .container-actives_cards .card:nth-child(4) {
     grid-column: 4/5;
     grid-row: 1/2;
     margin-bottom: 20px;
-} 
+}
 .container-actives_cards .card:nth-child(5) {
     grid-column: 5/6;
     grid-row: 1/2;
     margin-bottom: 20px;
-} 
+}
 .card-img-top {
     max-height: 580px;
 }
 
 .container {
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 .list-group-item {
@@ -130,6 +141,7 @@
     margin-left: 7%;
     margin-bottom: 0;
 
+
 }
 
 
@@ -182,7 +194,7 @@ font-weight: 400;
     .container-actives {
         margin-top: 22%;
       }
-      
+
 
     .container-actives_cards {
         margin-top: 1%;
@@ -193,37 +205,37 @@ font-weight: 400;
         grid-column-gap: 7px;
         grid-row-gap: 20px;
 
-    
+
     }
-    
+
      .container-actives_cards .card:nth-child(1) {
         grid-column: 1/2;
         grid-row: 1/2;
         margin-bottom: 20px;
-    } 
+    }
     .container-actives_cards .card:nth-child(2) {
         grid-column: 2/3;
         grid-row: 1/2;
         margin-bottom: 20px;
-    } 
+    }
     .container-actives_cards .card:nth-child(3) {
         grid-column: 3/4;
         grid-row: 1/2;
         margin-bottom: 20px;
-    } 
+    }
     .container-actives_cards .card:nth-child(4) {
         grid-column: 4/5;
         grid-row: 1/2;
         margin-bottom: 20px;
-    } 
+    }
     .container-actives_cards .card:nth-child(5) {
         display: none;
         grid-column: 5/6;
         grid-row: 1/2;
         margin-bottom: 20px;
-    } 
-   
-    
+    }
+
+
 
 
 }

@@ -71,7 +71,7 @@ export class PBioActivesComponent implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    console.log('players', this.players);
+    console.log('allItems', this.allItems);
     // console.log('FilterPlayers', this.filterPlayers);
 
 
@@ -128,7 +128,9 @@ export class PBioActivesComponent implements OnInit {
     if (this.searchText) {
       this.allItems = this.players.filter(player =>
         player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
+      (player.stats[0].splits[0].team.name.toUpperCase().includes(this.searchText)) ||
         (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
+        (player.fullName.toUpperCase().includes(this.searchText)) ||
         (player.nickName && player.nickName.toLowerCase().includes(this.searchText))  ||
         player.mlbDebutDate.includes(this.searchText));
         this.setPage(this.pager.currentPage);

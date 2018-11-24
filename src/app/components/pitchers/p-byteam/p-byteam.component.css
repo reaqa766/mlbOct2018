@@ -1,6 +1,3 @@
-/* .container_players_actives {
-  margin-top: 20%;
-} */
 .container-team {
   margin-top: 22%;
 }
@@ -19,9 +16,6 @@
 }
 
 
-/* borrar arriba  */
-
-
 .advancedSearchTextbox{
   color: rgb(2, 1, 0);
   font-size: 1rem;
@@ -29,7 +23,17 @@
   margin-left: 10%;
   margin-bottom: 0;
   width: 15em;
+}
 
+.fa-baseball-ball {
+  font-size: 10rem;
+  margin: 5% 42% 0 !important;
+  color: rgba(80, 57, 43, 0.40);
+}
+.spiner_load {
+  font-size: 5rem;
+  margin: 0 37% !important;
+  color: rgba(80, 57, 43, 0.95);
 }
 
 .title-position{
@@ -94,4 +98,9 @@
   background-color: rgba(12, 10, 9, 0.75);
 
 }
+.error_message {
+  padding-top: 10px;
+
+}
+
 

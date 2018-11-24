@@ -3,15 +3,6 @@
   <h1 class="daily-title">ACTUACION DIARIA BATEADORES</h1>
 </div>
 <p class="title-position">{{dia | date }} </p>
-<!-- Borrar arriba -->
-
-<input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchTextbox">
-<div *ngIf="!allItems[0] && busqueda.value" class="error_search d-flex justify-content-center">
-  <h1> '{{ busqueda.value }}' no existe</h1>
-</div>
-<div *ngIf="!allItems[0] && !busqueda.value" class="error_search d-flex justify-content-center">
-  <h1> No hubo juegos hoy </h1>
-</div>
 
 <!-- LOADER -->
 <div *ngIf="!allItems">
@@ -19,65 +10,74 @@
   <p class="spiner_load">CARGANDO</p>
 </div>
 
+<div *ngIf="allItems">
+  <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchTextbox">
+  <div *ngIf="!allItems[0] && busqueda.value" class="error_search d-flex justify-content-center">
+    <h4 class="error_message"> '{{ busqueda.value }}' No se encuentra el Jugador</h4>
+  </div>
+  <div *ngIf="!allItems[0] && !busqueda.value" class="error_search d-flex justify-content-center">
+    <h1> No hubo juegos hoy </h1>
+  </div>
 
-<ng-container *ngIf="!isLoading">
-  <table class="table table-hover text-center">
-    <thead class="table-header1">
-      <tr>
-        <!-- <th style="width: 5%;" scope="col">Id</th> -->
-        <th style="width: 10%;" scope="col">Name</th>
-        <th style="width: 10%;" scope="col">Team</th>
-        <th style="width: 5%;" scope="col">Vb</th>
-        <th style="width: 5%;" scope="col">Avg</th>
-        <th style="width: 5%;" scope="col">CA</th>
-        <th style="width: 5%;" scope="col">Hits</th>
-        <th style="width: 5%;" scope="col">Strks</th>
-        <th style="width: 5%;" scope="col">BB</th>
-        <th style="width: 5%;" scope="col">CI</th>
-        <th style="width: 5%;" scope="col">Hr</th>
-        <th style="width: 5%;" scope="col">B.Rob</th>
-      </tr>
-    </thead>
-  <!-- </table> -->
-  <ng-container *ngIf="!(pager.allItems === 0)">
 
-  <!-- <table class="table table-hover "> -->
-    <tbody class="table-header">
-      <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
-        <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
-          <!-- <td style="width: 5%;">{{i +1}}</td> -->
-          <td style="width: 10%;">{{player.fullName}}</td>
-          <td style="width: 10%;">{{player.stats[0].splits[player.stats[0].splits.length-1].team.name  }}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.atBats}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.avg}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.runs}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.hits}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.strikeOuts}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.baseOnBalls}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.rbi}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.homeRuns}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.stolenBases}}</td>
+  <ng-container *ngIf="!isLoading">
+    <table class="table table-hover text-center">
+      <thead class="table-header1">
+        <tr>
+          <!-- <th style="width: 5%;" scope="col">Id</th> -->
+          <th style="width: 10%;" scope="col">Name</th>
+          <th style="width: 10%;" scope="col">Team</th>
+          <th style="width: 5%;" scope="col">Vb</th>
+          <th style="width: 5%;" scope="col">Avg</th>
+          <th style="width: 5%;" scope="col">CA</th>
+          <th style="width: 5%;" scope="col">Hits</th>
+          <th style="width: 5%;" scope="col">Strks</th>
+          <th style="width: 5%;" scope="col">BB</th>
+          <th style="width: 5%;" scope="col">CI</th>
+          <th style="width: 5%;" scope="col">Hr</th>
+          <th style="width: 5%;" scope="col">B.Rob</th>
         </tr>
-      </ng-container>
+      </thead>
+      <!-- </table> -->
+      <ng-container *ngIf="!(pager.allItems === 0)">
 
-      <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
-        <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
-          <td style="width: 10%;">{{player.fullName}}</td>
-          <td style="width: 10%;">{{player.stats[0].splits[player.stats[0].splits.length-1].team.name}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.atBats}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.avg}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.runs}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.hits}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.strikeOuts}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.baseOnBalls}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.rbi}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.homeRuns}}</td>
-          <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.stolenBases}}</td>
-        </tr>
+        <!-- <table class="table table-hover "> -->
+        <tbody class="table-header">
+          <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
+            <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
+              <!-- <td style="width: 5%;">{{i +1}}</td> -->
+              <td style="width: 10%;">{{player.fullName}}</td>
+              <td style="width: 10%;">{{player.stats[0].splits[player.stats[0].splits.length-1].team.name }}</td>
+              <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.atBats}}</td>
+              <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.avg}}</td>
+              <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.runs}}</td>
+              <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.hits}}</td>
+              <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.strikeOuts}}</td>
+              <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.baseOnBalls}}</td>
+              <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.rbi}}</td>
+              <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.homeRuns}}</td>
+              <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.stolenBases}}</td>
+            </tr>
+          </ng-container>
+
+          <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
+            <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
+              <td style="width: 10%;">{{player.fullName}}</td>
+              <td style="width: 10%;">{{player.stats[0].splits[player.stats[0].splits.length-1].team.name}}</td>
+              <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.atBats}}</td>
+              <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.avg}}</td>
+              <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.runs}}</td>
+              <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.hits}}</td>
+              <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.strikeOuts}}</td>
+              <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.baseOnBalls}}</td>
+              <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.rbi}}</td>
+              <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.homeRuns}}</td>
+              <td style="width: 5%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.stolenBases}}</td>
+            </tr>
+          </ng-container>
+        </tbody>
       </ng-container>
-    </tbody>
-    </ng-container>
-  </table>
+    </table>
 
     <div class="container" *ngIf="allItems.length > 10">
       <div class="text-center">
@@ -100,5 +100,6 @@
         </ul>
       </div>
     </div>
-    <hr/>
-</ng-container>
+    <hr />
+  </ng-container>
+</div>
