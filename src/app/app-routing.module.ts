@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NewsComponent} from '../app/components/news/news.component';
 import { AboutusComponent} from '../app/components/aboutus/aboutus.component';
-import { RegisterComponent} from '../app/components/register/register.component';
+// import { RegisterComponent} from '../app/components/register/register.component';
 import { ContactUsComponent} from '../app/components//contact-us/contact-us.component';
 import { HomeComponent} from '../app/components/home/home.component';
 import { BypositionComponent} from '../app/components/players/byposition/byposition.component';
@@ -15,6 +15,10 @@ import { PDailyComponent} from '../app/components/pitchers/p-daily/p-daily.compo
 import { PByteamComponent } from './components/pitchers/p-byteam/p-byteam.component';
 import { PBioActivesComponent } from './components/pitchers/p-bio-actives/p-bio-actives.component';
 import { PActivesComponent } from './components/pitchers/p-actives/p-actives.component';
+import { LoginComponent } from './components/user/login/login.component';
+import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
+import { RegisterComponent } from './components/user/register/register.component';
+
 
 const routes: Routes = [
 
@@ -47,7 +51,11 @@ const routes: Routes = [
   { path: 'p_bio',
   component: PBioActivesComponent},
   { path: 'p_actives',
-  component: PActivesComponent}
+  component: PActivesComponent},
+  { path: 'login',
+  component: LoginComponent}
+  { path: '**',
+  component: NotFoundPageComponent}
 
 
 

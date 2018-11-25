@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { GrdFilterPipe } from './components/grd-filter.pipe';
 
 import { HttpClientModule } from '@angular/common/http';
-import { PlayersService } from '../services/players.service'; 
+import { PlayersService } from '../services/players.service';
 
 import { PagerService } from '../services/index';
 
@@ -24,14 +24,17 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
-import { RegisterComponent } from './components/register/register.component';
+import { RegisterComponent } from './components/user/register/register.component';
 import { BioActivesComponent } from './components/players/bio-actives/bio-actives.component';
-import{ PaginationPipe } from '../pipes/pagination.pipe';
+import { PaginationPipe } from '../pipes/pagination.pipe';
 import { PpalComponent } from './components/news/ppal/ppal.component';
 import { PActivesComponent } from './components/pitchers/p-actives/p-actives.component';
 import { PBioActivesComponent } from './components/pitchers/p-bio-actives/p-bio-actives.component';
 import { PByteamComponent } from './components/pitchers/p-byteam/p-byteam.component';
 import { PDailyComponent } from './components/pitchers/p-daily/p-daily.component';
+import { LoginComponent } from './components/user/login/login.component';
+import { ProfileComponent } from './components/user/profile/profile.component';
+import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 
 @NgModule({
   declarations: [
@@ -49,19 +52,22 @@ import { PDailyComponent } from './components/pitchers/p-daily/p-daily.component
     FooterComponent,
     ContactUsComponent,
     RegisterComponent,
-    GrdFilterPipe, 
+    GrdFilterPipe,
     PaginationPipe,
     BioActivesComponent,
     PpalComponent,
     PActivesComponent,
     PBioActivesComponent,
     PByteamComponent,
-    PDailyComponent
-  
+    PDailyComponent,
+    LoginComponent,
+    ProfileComponent,
+    NotFoundPageComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,  
+    AppRoutingModule,
     FormsModule,
     HttpClientModule,
     // Ng2SmartTableModule
