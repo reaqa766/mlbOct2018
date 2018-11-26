@@ -36,6 +36,14 @@ import { LoginComponent } from './components/user/login/login.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 
+import { AuthService } from '../app/services/auth.service';
+
+import {AngularFireModule} from 'angularfire2';
+import {AngularFireAuthModule} from 'angularfire2/auth';
+
+import {environment} from '../environments/environment';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,9 +78,11 @@ import { NotFoundPageComponent } from './components/not-found-page/not-found-pag
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     // Ng2SmartTableModule
   ],
-  providers: [PlayersService, PagerService],
+  providers: [PlayersService, PagerService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
