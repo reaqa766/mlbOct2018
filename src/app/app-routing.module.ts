@@ -53,7 +53,7 @@ const routes: Routes = [
   { path: 'p_actives',
   component: PActivesComponent},
   { path: 'login',
-  component: LoginComponent}
+  component: LoginComponent},
   { path: '**',
   component: NotFoundPageComponent}
 
