@@ -47,4 +47,10 @@ export class AuthService {
     return this.afAuth.auth.signOut();
   }
 
+  get authenticated(): boolean {
+    return this.afAuth !== null;
+  }
+  get currentUserObservable(): any {
+    return this.afAuth.authState;
+}
 }
