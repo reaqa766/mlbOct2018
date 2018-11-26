@@ -9,6 +9,9 @@ import { PlayersService } from '../services/players.service';
 
 import { PagerService } from '../services/index';
 
+import {FlashMessagesModule} from 'angular2-flash-messages';
+import {FlashMessagesService} from 'angular2-flash-messages';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,6 +38,16 @@ import { PDailyComponent } from './components/pitchers/p-daily/p-daily.component
 import { LoginComponent } from './components/user/login/login.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
+
+import { AuthService } from '../app/services/auth.service';
+
+import {AngularFireModule} from 'angularfire2';
+import {AngularFireAuthModule} from 'angularfire2/auth';
+
+import {environment} from '../environments/environment';
+
+import {AuthGuard} from './guards/auth.guard';
+
 
 @NgModule({
   declarations: [
@@ -70,9 +83,12 @@ import { NotFoundPageComponent } from './components/not-found-page/not-found-pag
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    FlashMessagesModule
     // Ng2SmartTableModule
   ],
-  providers: [PlayersService, PagerService],
+  providers: [PlayersService, PagerService, AuthService, AuthGuard,FlashMessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -19,6 +19,8 @@ import { LoginComponent } from './components/user/login/login.component';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 import { RegisterComponent } from './components/user/register/register.component';
 
+import {AuthGuard} from './guards/auth.guard';
+
 
 const routes: Routes = [
 
@@ -39,7 +41,7 @@ const routes: Routes = [
   { path: 'actives',
   component: ActivesComponent},
   { path: 'bioActives',
-  component: BioActivesComponent},
+  component: BioActivesComponent, canActivate: [AuthGuard]},
   { path: 'contactUs',
   component: ContactUsComponent},
   { path: 'news_ppal',
