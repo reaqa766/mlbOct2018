@@ -33,9 +33,9 @@ const routes: Routes = [
   { path: 'register',
   component: RegisterComponent},
   { path: 'position',
-  component: BypositionComponent},
+  component: BypositionComponent, canActivate: [AuthGuard]},
   { path: 'team',
-  component: ByteamComponent},
+  component: ByteamComponent, canActivate: [AuthGuard]},
   { path: 'daily',
   component: DailyComponent},
   { path: 'actives',
@@ -49,18 +49,15 @@ const routes: Routes = [
   { path: 'p_daily',
   component: PDailyComponent},
   { path: 'p_byteam',
-  component: PByteamComponent},
+  component: PByteamComponent,canActivate: [AuthGuard]},
   { path: 'p_bio',
   component: PBioActivesComponent},
   { path: 'p_actives',
-  component: PActivesComponent},
+  component: PActivesComponent, canActivate: [AuthGuard]},
   { path: 'login',
   component: LoginComponent},
   { path: '**',
   component: NotFoundPageComponent}
-
-
-
 ];
 
 @NgModule({
