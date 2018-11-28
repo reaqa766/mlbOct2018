@@ -98,10 +98,9 @@ export class ActivesComponent implements OnInit {
             });
           this.allItems = this.players;
 
-    console.log(this.players.length);
+    // console.log(JSON.stringify(this.players), 'pbajson');
           this.setPage(1);
           this.isLoading = false;
-          // console.log(JSON.stringify(this.players[0]));
         }
         index++;
       });
