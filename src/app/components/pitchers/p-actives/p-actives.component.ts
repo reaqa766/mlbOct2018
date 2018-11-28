@@ -97,7 +97,10 @@ export class PActivesComponent implements OnInit {
                 return 0;
               }
             });
+
           this.allItems = this.players;
+              // console.log(JSON.stringify(this.players), 'pbajson');
+
           this.setPage(1);
           this.isLoading = false;
           // console.log(JSON.stringify(this.players[0]));

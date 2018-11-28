@@ -68,7 +68,6 @@ export class ActivesComponent implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    // console.log(this.players);
   }
 
   // Convertir el Array de Observables a un Array de Objetos.
@@ -98,6 +97,8 @@ export class ActivesComponent implements OnInit {
               }
             });
           this.allItems = this.players;
+
+    console.log(this.players.length);
           this.setPage(1);
           this.isLoading = false;
           // console.log(JSON.stringify(this.players[0]));
