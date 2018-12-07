@@ -339,13 +339,16 @@ img {
   font-weight: lighter;
   padding-top: 50%;
 }
-.span_first_itemA {
-  font-size: 1.55rem;
-  font-weight: 700;
-  padding-top: 50%;
-
-
+.p_first_itemA {
+  font-size: 1.25rem;
+  font-weight: 100;
+  padding: 1em 0.5em;
+  text-align : justify;
 }
+.img_second_grid {
+  border-radius: 4px;
+}
+
 .span_first_item {
   font-size: 0.95rem;
   font-weight: 100;
