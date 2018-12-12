@@ -1,325 +1,44 @@
-.container_home{
-    width: 100%;
-    height: 50em;
-    margin-top: 4em;
+.container_home {
+    /* background-color: #fff; */
+    margin: 24% 32% 0 0; 
+    
 }
 
-.cuadro_Central {
-    width: 100%;
-    height: 100%;
-    margin: .5em auto;
-    padding: 1.5em 0 0em;
+.card-deck{
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr;
+    grid-column-gap: 2%;
+    width: 130%;
 }
-.card-deck {
-    justify-content: center;
-    width: 100%;
-    padding: 1em 1.3em;
-    margin: auto;
-  }
-.leer_mas {
-  font-size: 1rem;
-  font-weight: bold;
+.news0 {
+grid-column: 1/2;
+grid-row: 1/2;
+/* width: 600px; */
 }
-.leer_mas:hover {
-  /* font-size: 1.25rem; */
-  font-weight: bolder;
-  color: rgb(0, 0, 0);
+.news1 {
+grid-column: 2/3;
+grid-row: 1/2;
+}
+.news2 {
+grid-column: 3/4;
+grid-row: 1/2;
 }
 
+.card-img-top {
+    max-height: 85%;
 
-.card {
-    background-color:  rgba(250, 250, 250, 0.9);
-    border: solid rgba(207, 193, 175, 0.7) 1px;
-    max-width: 100%;
-    height: auto;
+}
+
+/* .news3 {
+grid-column: 4/5;
+grid-row: 1/2;
+} */
+
+.card-text {
+    font-size: 0.75em !important;
 }
 
 .card-title {
-    font-size: 1.5rem;
-    font-weight: 800;
-    text-align: center;
-    color: black;
-}
-
-.card-text {
-    font-size: 1.5rem;
-    text-align : justify;
-}
-
-
-@media only screen and (min-width: 320px)  {
-  .container_home{
-    width: 100%;
-    height: 50em;
-    margin-top: 8em;
-}
-    .cuadro_Central {
-        width: 95%;
-        height: 100%;
-        margin: .5em auto;
-        padding: .2em 1em;
-    }
-    .card-deck {
-        justify-content: center;
-        width: 100%;
-        padding: 0 1em;
-        margin: 0 auto;
-    }
-    .card-title {
-        font-size: .95rem;
-    }
-    .card-text {
-        display:none;
-      }
-    .btn {
-        font-size: .8rem;
-    }
-
-    .card-body {
-        height: 4em;
-    }
-    .card-footer {
-        margin: 0.5rem auto;
-        height: 3em;
-
-    }
-
-}
- @media only screen and (min-width: 480px)  {
-  .container_home{
-    width: 100%;
-    height: 50em;
-    margin-top: 17em;
-}
-
-    .cuadro_Central {
-        width: 95%;
-        height: 100%;
-        margin: .5em auto;
-        padding: .2em 1em;
-    }
-
-    .card{
-      width: 100%;
-      flex: none;
-      margin-top: 1em;
-    }
-
-    /* .news2 {
-      display: none;
-    }
-    .news3 {
-      display: none;
-    }
-    .news4 {
-      display: none;
-    } */
-    .card-deck {
-        justify-content: center;
-        width: 100%;
-        padding: 0 1em;
-        margin: 0 auto;
-    }
-    .card-title {
-        font-size: .95rem;
-    }
-    .card-text {
-      text-align : justify;
-      height: 4em;
-  }
-      .btn {
-        font-size: .8rem;
-    }
-
-    .card-body {
-        height: 4em;
-    }
-    .card-footer {
-        margin: 0.5rem auto;
-        height: 3em;
-
-    }
-
-}
- @media only screen and (min-width: 768px)  {
-  .container_home{
-    width: 100%;
-    height: 50em;
-    margin-top: 12em;
-}
-    .cuadro_Central {
-        width: 95%;
-        height: 100%;
-        margin: .5em auto;
-        padding: .2em 1em;
-    }
-    .card-deck {
-        justify-content: center;
-        width: 100%;
-        padding: 0 1em;
-        margin: 0 auto;
-    }
-    .card {
-      flex: 1 0 0;
-
-    }
-    .card-title {
-        font-size: .95rem;
-    }
-    .btn {
-        font-size: .8rem;
-    }
-
-    .card-body {
-        height: 4em;
-    }
-    .card-footer {
-        margin: 0.5rem auto;
-        height: 3em;
-
-    }
-    .card-text{
-      display: inline-block;
-    }
-    .news4 {
-      display: none;
-    }
-
-
-}
- @media only screen and (min-width: 900px)  {
-  .container_home{
-    width: 100%;
-    height: 25em;
-    margin-top: 15em;
-}
-
-    .cuadro_Central {
-        width: 100%;
-        height: 100%;
-        margin: .5em auto;
-        padding: .2em 1em;
-    }
-
-
-    .news1 {
-        grid-column: 1/2;
-        grid-row: 1/2
-    }
-    .news2 {
-        grid-column: 2/3;
-        grid-row: 1/2
-    }
-    .news3 {
-        grid-column: 1/3;
-        grid-row: 2/3
-    }
-    /* .news4 {
-        grid-column: 2/3;
-        grid-row: 2/3
-    } */
-    .card-deck {
-        display: grid;
-        grid-template-columns: (2, auto);
-        grid-template-rows: (2, auto);
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;
-        justify-content: center;
-        width: 100%;
-        padding: .7em 1em;
-        margin: auto;
-    }
-
-    .card-deck {
-        width: 100%;
-    }
-
-    .card-title {
-        font-size: .95rem;
-    }
-    .card-text {
-        display: none;
-    }
-    .btn {
-        font-size: .8rem;
-}
-}
- @media only screen and (min-width: 1200px)  {
-      .container_home{
-        width: 100%;
-        margin-top: 18em;
-    }
-
-    .news1 {
-      grid-column: 1/2;
-      grid-row: 1/2
-  }
-  .news2 {
-      grid-column: 2/3;
-      grid-row: 1/2
-  }
-  .news3 {
-      grid-column: 3/4;
-      grid-row: 1/2
-  }
-  .card-deck {
-      display: grid;
-      grid-template-columns: (3, auto);
-      grid-template-rows: (1, auto);
-      grid-column-gap: 10px;
-      grid-row-gap: 10px;
-      justify-content: center;
-      width: 100%;
-      padding: .7em 1em;
-      margin: auto;
-  }
-
-    .cuadro_Central {
-        width: 100%;
-    }
-    .card-deck {
-        justify-content: center;
-        width: 100%;
-        height: 30em;
-
-    }
-    .card-title {
-        font-size: 1.25rem;
-    }
-    .card-text {
-      font-size: .95rem;
-      display:block;
-
-    }
-    .btn {
-        font-size: .75rem;
-}
-}
-@media only screen and (min-width: 1440px) {
-
-  .container_home{
-    width: 100%;
-    height: 35em;
-    margin-top: 22em;
-}
-
-    .cuadro_Central {
-        width: 100%;
-        height: 100%;
-        margin: 1em auto;
-        padding: 2em 1em;
-    }
-    .card-deck {
-        justify-content: center;
-        width: 100%;
-        padding: .7em 1em;
-        margin: auto;
-    }
-    .card-text {
-      text-align : justify;
-      font-size: .95rem;
-  }
-
-
-
+    font-size: 1em !important;
+   
 }
