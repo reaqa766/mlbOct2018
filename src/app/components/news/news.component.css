@@ -1,3 +1,8 @@
+a {
+    text-decoration:none;
+    color: black;
+}
+
 .cuadro_fondo_blanco {
     height: 1200px;
     box-shadow: inset 0px 0px 10px 10px #d5c8c1;
@@ -46,7 +51,7 @@ img {
 }
 .first_grid {
     display: grid;
-    grid-template-columns: repeat(3 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 10px;
 
 }
@@ -58,7 +63,7 @@ img {
     height: 100%;
 
     display: grid;
-    grid-template-columns: repeat(3 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 10px;
 
 }
@@ -70,7 +75,7 @@ img {
     height: 100%;
 
     display: grid;
-    grid-template-columns: repeat(3 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 10px;
 
 }
@@ -82,7 +87,7 @@ img {
     height: 100%;
 
     display: grid;
-    grid-template-columns: repeat(3 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 10px;
 
 }
@@ -103,7 +108,7 @@ img {
 
 .second-grid {
     display: grid;
-    grid-template-columns: repeat(2 1fr);
+    grid-template-columns: 3fr 3fr 1fr;
     grid-column-gap: 10px;
 
 }
@@ -111,15 +116,15 @@ img {
 
 
 .second_grid_item1 {
-    margin: 10px;
+    margin: 5px;
     grid-column: 1/3;
-    grid-row: 1/2;
+    /* grid-row: 1/2; */
     width: 99%;
     height: 100%;
 
     display: grid;
     grid-template-columns:  1fr;
-    grid-template-rows: 6fr 1fr;
+    /* grid-template-rows: 6fr 1fr; */
 
     grid-column-gap: 10px;
 
@@ -127,7 +132,7 @@ img {
 .second_item2{
     margin: 10px;
     grid-column: 1/2;
-    grid-row: 1/2;
+    /* grid-row: 1/2; */
     width: 99%;
     height: 100%
 }
@@ -142,15 +147,15 @@ img {
 
 .second_grid_item2 {
     margin: 10px;
-    grid-column: 2/3;
+    grid-column: 3/4;
     grid-row: 1/2;
     width: 99%;
     height: 100%;
 
 
     display: grid;
-    grid-template-columns: repeat(1 1fr);
-    grid-template-rows: repeat(9 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 3% 30% 2px 30% 2px  30%;
     grid-column-gap: 10px;
 
 }
@@ -172,12 +177,13 @@ img {
     grid-row: 2/3;
     width: 99%;
     height: 100%;
+    
  
 
   
 
     display: grid;
-    grid-template-columns: repeat(4 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 10px;
 
 }
@@ -186,7 +192,7 @@ img {
     grid-column: 1/2;
     grid-row: 3/4;
     width: 99%;
-    height: 10px;
+    height: 1px;
 
 }
 .second_grid_item_section2 {
@@ -197,7 +203,7 @@ img {
     height: 100%;
 
     display: grid;
-    grid-template-columns: repeat(4 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 10px;
 
 }
@@ -217,7 +223,7 @@ img {
     height: 100%;
 
     display: grid;
-    grid-template-columns: repeat(4 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 10px;
 
 }
@@ -237,7 +243,7 @@ img {
     height: 100%;
 
     display: grid;
-    grid-template-columns: repeat(4 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 10px;
 
 }
@@ -262,15 +268,18 @@ img {
     grid-column: 2/3;
     grid-row: 1/2;
     width: 99%;
-    height: 100%
+    height: 100%;
+    padding-top: 10%;
 
 }
 .second_item5{
     margin: 10px;
     grid-column: 3/4;
     grid-row: 1/2;
-    width: 99%;
-    height: 100%
+    width: 12rem;
+    height: 100%;
+    padding-top: 10%;
+
 
 }
 .second_item6{
@@ -283,7 +292,7 @@ img {
 }
 
 
-.second_item3 {
+/* .second_item3 {
     grid-column: 1/2;
     grid-row: 1/2;
     width: 90%;
@@ -297,6 +306,7 @@ img {
     width: 90%;
     font-size: 1.2rem;
     font-weight: 500;
+    padding-top: 
 
 }
 .second_item5 {
@@ -306,10 +316,10 @@ img {
     font-size: 1.2rem;
     font-weight: 500;
 
-}
+} */
 
 
-.second_grid_item2 {
+/* .second_grid_item2 {
     margin: 10px;
     grid-column:3/4;
     grid-row: 1/2;
@@ -317,10 +327,10 @@ img {
     height: 100%;
 
     display: grid;
-    grid-template-columns: repeat(3 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 10px;
 
-}
+} */
 
 .first_grid_item2 {
     margin: 10px;
@@ -341,7 +351,7 @@ img {
 
 
 .first_grid_line {
-    height: 5px;
+    height: 1px;
     width: 98%;
 }
 

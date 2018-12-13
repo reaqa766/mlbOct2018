@@ -18,6 +18,7 @@ import { PActivesComponent } from './components/pitchers/p-actives/p-actives.com
 import { LoginComponent } from './components/user/login/login.component';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 import { RegisterComponent } from './components/user/register/register.component';
+import { NewsgralComponent } from './components/news/newsgral/newsgral.component';
 
 import {AuthGuard} from './guards/auth.guard';
 
@@ -56,6 +57,8 @@ const routes: Routes = [
   component: PActivesComponent, canActivate: [AuthGuard]},
   { path: 'login',
   component: LoginComponent},
+  { path: 'newsgral',
+  component: NewsgralComponent},
   { path: '**',
   component: NotFoundPageComponent}
 ];

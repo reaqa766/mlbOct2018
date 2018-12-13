@@ -47,6 +47,7 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
 import {environment} from '../environments/environment';
 
 import {AuthGuard} from './guards/auth.guard';
+import { NewsgralComponent } from './components/news/newsgral/newsgral.component';
 
 
 @NgModule({
@@ -75,7 +76,8 @@ import {AuthGuard} from './guards/auth.guard';
     PDailyComponent,
     LoginComponent,
     ProfileComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    NewsgralComponent
 
   ],
   imports: [
