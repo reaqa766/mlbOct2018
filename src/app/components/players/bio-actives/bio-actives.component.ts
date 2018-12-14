@@ -70,7 +70,7 @@ export class BioActivesComponent implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    console.log('allItems', this.allItems);
+    // console.log('allItems', this.allItems);
     // console.log('FilterPlayers', this.filterPlayers);
 
 

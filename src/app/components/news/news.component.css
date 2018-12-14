@@ -1,11 +1,11 @@
 a {
     text-decoration:none;
-    color: black;
+    color: rgb(64, 142, 214);;
     cursor: pointer;
 }
 .link_out {
-  color: blue;
-  font-weight: bold;
+  color: rgb(64, 142, 214);
+  font-weight: 100;
 }
 
 .modal-title {

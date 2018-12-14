@@ -48,6 +48,7 @@ import {environment} from '../environments/environment';
 
 import {AuthGuard} from './guards/auth.guard';
 import { NewsgralComponent } from './components/news/newsgral/newsgral.component';
+import { PlayerinfoComponent } from './components/playerinfo/playerinfo.component';
 
 
 @NgModule({
@@ -77,7 +78,8 @@ import { NewsgralComponent } from './components/news/newsgral/newsgral.component
     LoginComponent,
     ProfileComponent,
     NotFoundPageComponent,
-    NewsgralComponent
+    NewsgralComponent,
+    PlayerinfoComponent
 
   ],
   imports: [

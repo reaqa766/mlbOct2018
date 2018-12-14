@@ -38,21 +38,21 @@
         <div class="second_grid_item2">
 
             <div class="second_grid_item_section1A">
-                <span>Noticias Populares</span>
+                <span>Noticias</span>
             </div>
 
           <div class="second_grid_item_section1">
 
             <div class="second_item3">
-              <p class="p_grids">1.</p>
+              <p class="p_grids"></p>
             </div>
 
             <div class="second_item4">
-              <span class="span_first_item">Los Boston Red Sox siempre estuvieron acoplados y actuaron como familia ....</span>
+              <a data-toggle="modal" data-target="#exampleModal" (click)= news1()><p class="span_first_item">Cardenales se entretiene con ofertas por José Martínez. <span class="link_out" >Lee la noticia en MLB.com</span></p></a>
             </div>
 
             <div class="second_item5">
-              <img src="../../../assets/BOSTON RED SOX.jpg" alt="">
+              <a data-toggle="modal" data-target="#exampleModal" (click)= news1()><img src="../../../../assets/noticia 1.JPG" alt="baseball News"></a>
             </div>
           </div>
 
@@ -63,15 +63,15 @@
           <div class="second_grid_item_section2">
 
             <div class="second_item3">
-              <p class="p_grids">2.</p>
+              <p class="p_grids"></p>
             </div>
 
             <div class="second_item4">
-              <span class="span_first_item">Muchos jugadores de biesbol extrañan de sobremanera las epocas de pelotas viejas y guantes prestados  ....</span>
+              <a data-toggle="modal" data-target="#exampleModal" (click)= news2()><p class="span_first_item">Los Mets pretenden ser creativos para adquirir a J.T. Realmuto.<span class="link_out" >Lee la noticia en Las Mayores.com</span></p></a>
             </div>
 
             <div class="second_item5">
-              <img src="../../../assets/bsb05jpg.jpg" alt="">
+              <a data-toggle="modal" data-target="#exampleModal" (click)= news2()><img src="../../../../assets/Noticia2.JPG" alt="baseball News"></a>
             </div>
 
           </div>
@@ -82,15 +82,15 @@
           <div class="second_grid_item_section3">
 
             <div class="second_item3">
-              <p class="p_grids">3.</p>
+              <p class="p_grids"></p>
             </div>
 
             <div class="second_item4">
-              <span class="span_first_item">Dodgers a pesar que no quedaron campeones realizaron un extraordinaria campaña ....</span>
+              <a data-toggle="modal" data-target="#exampleModal" (click)= news3()> <p class="span_first_item">Ausmus buscará balancear el tiempo de juego de Pujols y Ohtani.<span class="link_out" >Lee la noticia en Las Mayores.com</span></p></a>
             </div>
 
             <div class="second_item5">
-              <img src="../../../assets/dodgers.jpg" alt="">
+              <a data-toggle="modal" data-target="#exampleModal" (click)= news3()><img src="../../../../assets/Noticia3.JPG" alt="baseball News"></a>
             </div>
 
           </div>
@@ -102,15 +102,15 @@
           <div class="second_grid_item_section4">
 
             <div class="second_item3">
-              <p class="p_grids">4.</p>
+              <p class="p_grids"></p>
             </div>
 
             <div class="second_item4">
-              <span class="span_first_item">Este año los campos de juego estrarán mejor acondicionados y en especial el Home Plate ....</span>
+              <a data-toggle="modal" data-target="#exampleModal" (click)= news4()><p class="span_first_item">Cuatro abridores disponibles aptos para reforzar cualquier rotación. <span class="link_out" >Lee la noticia en Las Mayores.com</span></p></a>
             </div>
 
             <div class="second_item5">
-              <img src="../../../assets/home-15646_1920.jpg" alt="">
+              <a data-toggle="modal" data-target="#exampleModal" (click)= news4()><img src="../../../../assets/noticia4.JPG" alt="baseball News"></a>
             </div>
 
           </div>
@@ -140,5 +140,26 @@
 
     </div>
 
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">Link Externo</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Se esta dirigiendo a un Link externo a vinotintosMLB.com
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No ir</button>
+        <button type="button" class="btn btn-primary" (click)="urladdress()" data-dismiss="modal">Ir</button>
+      </div>
+    </div>
   </div>
 </div>

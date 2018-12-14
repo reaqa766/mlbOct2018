@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
     .then( (res) => {
       this.flashMensaje.show('Usuario logado correctamente.',
       {cssClass: 'alert-success', timeout: 4000});
-      this.router.navigate(['/privado']);
+      this.router.navigate(['/news_ppal']);
     }).catch((err) => {
       this.flashMensaje.show(err.message,
       {cssClass: 'alert-danger', timeout: 4000});

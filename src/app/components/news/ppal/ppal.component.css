@@ -13,11 +13,22 @@
 
 .header_card{
   background-color: rgba(255, 255, 255, 0.8);
-  width: 35%;
+  width: 30%;
   height: 3em;
   margin: 18% 35% 0;
   border-radius: 10px;
 }
+
+a {
+  text-decoration:none;
+  color: rgb(64, 142, 214);
+  cursor: pointer;
+}
+.link_out {
+color: rgb(64, 142, 214);
+font-weight: 100;
+}
+
 
 p {
   font-size: 2em;

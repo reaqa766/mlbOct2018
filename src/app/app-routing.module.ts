@@ -19,6 +19,7 @@ import { LoginComponent } from './components/user/login/login.component';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 import { RegisterComponent } from './components/user/register/register.component';
 import { NewsgralComponent } from './components/news/newsgral/newsgral.component';
+import { PlayerinfoComponent } from './components/playerinfo/playerinfo.component';
 
 import {AuthGuard} from './guards/auth.guard';
 
@@ -59,6 +60,8 @@ const routes: Routes = [
   component: LoginComponent},
   { path: 'newsgral',
   component: NewsgralComponent},
+  { path: 'playerinfo',
+  component: PlayerinfoComponent},
   { path: '**',
   component: NotFoundPageComponent}
 ];
