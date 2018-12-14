@@ -17,7 +17,7 @@
           <thead class="table-header">
             <tr>
               <th style="width: 15%;" scope="col">Name</th>
-              <!-- <th style="width: 10%;" scope="col">Posicion</th> -->
+              <th style="width: 10%;" scope="col">Posicion</th>
               <th style="width: 10%;" scope="col">At Bats</th>
               <th style="width: 5%;" scope="col">Avg</th>
               <th style="width: 5%;" scope="col">CA</th>
@@ -30,33 +30,33 @@
             </tr>
           </thead>
 
-            <tbody class="table-header2"  >
+            <tbody class="table-header2" >
                 <tr>
-                  <td style="width: 15%;">{{player.fullName}}</td>
-                  <!-- <td style="width: 10%;">{{player.primaryPosition.abbreviation}}</td> -->
-                  <td style="width: 10%;">{{player.stats[0].splits[0].stat.atBats}}</td>
-                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.avg}}</td>
-                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.runs}}</td>
-                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.hits}}</td>
-                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.strikeOuts}}</td>
-                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.baseOnBalls}}</td>
-                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.rbi}}</td>
-                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.homeRuns}}</td>
-                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.stolenBases}}</td>
+                  <td style="width: 15%;">{{player?.fullName}}</td>
+                  <td style="width: 10%;">{{player?.primaryPosition.abbreviation}}</td>
+                  <td style="width: 10%;">{{player?.stats[0].splits[0].stat.atBats}}</td>
+                  <td style="width: 5%;">{{player?.stats[0].splits[0].stat.avg}}</td>
+                  <td style="width: 5%;">{{player?.stats[0].splits[0].stat.runs}}</td>
+                  <td style="width: 5%;">{{player?.stats[0].splits[0].stat.hits}}</td>
+                  <td style="width: 5%;">{{player?.stats[0].splits[0].stat.strikeOuts}}</td>
+                  <td style="width: 5%;">{{player?.stats[0].splits[0].stat.baseOnBalls}}</td>
+                  <td style="width: 5%;">{{player?.stats[0].splits[0].stat.rbi}}</td>
+                  <td style="width: 5%;">{{player?.stats[0].splits[0].stat.homeRuns}}</td>
+                  <td style="width: 5%;">{{player?.stats[0].splits[0].stat.stolenBases}}</td>
                 </tr>
             </tbody>
           </table>
 
           <div class="player_data">
             <ul class="list-group list-group-flush">
-              <li class="list-group-item"><strong> Equipo: </strong> {{player.stats[0].splits[0].team.name}}</li>
-              <li class="list-group-item"><strong>L. Nac.: </strong> {{player.birthCity}}</li>
-              <li class="list-group-item"><strong>F. Nac.: </strong> {{player.birthDate}} </li>
-              <li class="list-group-item"><strong> Edad: </strong> {{player.currentAge}}</li>
-              <li class="list-group-item"><strong>Mote: </strong> {{player.nickName}}</li>
-              <li class="list-group-item"><strong>F. Debut: </strong> {{player.mlbDebutDate}}</li>
-              <li class="list-group-item"><strong>Numero: </strong> {{player.primaryNumber}}</li>
-              <li class="list-group-item"><strong>Posición: </strong> {{player.primaryPosition.name}}</li>
+              <li class="list-group-item"><strong> Equipo: </strong> {{player?.stats[0].splits[0].team.name}}</li>
+              <li class="list-group-item"><strong>L. Nac.: </strong> {{player?.birthCity}}</li>
+              <li class="list-group-item"><strong>F. Nac.: </strong> {{player?.birthDate}} </li>
+              <li class="list-group-item"><strong> Edad: </strong> {{player?.currentAge}}</li>
+              <li class="list-group-item"><strong>Mote: </strong> {{player?.nickName}}</li>
+              <li class="list-group-item"><strong>F. Debut: </strong> {{player?.mlbDebutDate}}</li>
+              <li class="list-group-item"><strong>Numero: </strong> {{player?.primaryNumber}}</li>
+              <li class="list-group-item"><strong>Posición: </strong> {{player?.primaryPosition.name}}</li>
             </ul>
           </div>
            <!-- </div> -->
