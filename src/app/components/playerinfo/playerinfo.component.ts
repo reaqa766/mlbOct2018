@@ -3,6 +3,8 @@ import { PlayersService } from '../../../services/players.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../interfaces/players';
 import { PagerService } from '../../../services/index';
+import { Route } from '@angular/compiler/src/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -30,7 +32,7 @@ export class PlayerinfoComponent implements OnInit { public players = [];
   private allItems: any[];
     // pager object
     pager: any = {};
-    idplayer: any = 596059;
+    idplayer: any;
     jugador: any = {};
 
     // paged items
@@ -62,16 +64,19 @@ export class PlayerinfoComponent implements OnInit { public players = [];
 
 
 
-  constructor(private playerService: PlayersService, private pagerService: PagerService) { }
+  constructor(private playerService: PlayersService, private pagerService: PagerService, private route: ActivatedRoute) { }
 
 
   ngOnInit() {
-    this.isLoading = true;
-    // this.playerService.getPlayerDaily();
+    // this.isLoading = true;
     this.getPlayersMap();
-    // console.log('items', this.player);
-    // console.log('items2', this.players);
-    // console.log('items3', this.jugador.id);
+    this.route.params.subscribe( params =>{
+      this.idplayer = params.id;
+      console.log(this.idplayer);
+      
+    })
+    console.log('items6', this.players );
+
     
   }
 
@@ -99,8 +104,8 @@ export class PlayerinfoComponent implements OnInit { public players = [];
               this.player = jugador;
               break;
             }
-            console.log('items5', 1+1);
-
+            console.log('items5', 1);
+            console.log('items7', this.idplayer);
 
           }
 

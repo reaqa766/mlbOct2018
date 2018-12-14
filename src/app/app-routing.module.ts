@@ -60,8 +60,9 @@ const routes: Routes = [
   component: LoginComponent},
   { path: 'newsgral',
   component: NewsgralComponent},
-  { path: 'playerinfo',
-  component: PlayerinfoComponent},
+  { path: 'playerinfo/:id',
+  component: PlayerinfoComponent, 
+  pathMatch: 'full'},
   { path: '**',
   component: NotFoundPageComponent}
 ];
