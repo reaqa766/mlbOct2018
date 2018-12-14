@@ -74,7 +74,7 @@ export class PlayerinfoComponent implements OnInit { public players = [];
       
       if(this.idplayer !== params.id){
         this.idplayer = params.id;
-        // console.log(this.idplayer);
+        console.log(this.players);
         this.getPlayersMap();
       }
     })
