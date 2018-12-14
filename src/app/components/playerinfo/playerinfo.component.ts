@@ -69,11 +69,14 @@ export class PlayerinfoComponent implements OnInit { public players = [];
 
   ngOnInit() {
     // this.isLoading = true;
-    this.getPlayersMap();
+    
     this.route.params.subscribe( params =>{
-      this.idplayer = params.id;
-      console.log(this.idplayer);
       
+      if(this.idplayer !== params.id){
+        this.idplayer = params.id;
+        // console.log(this.idplayer);
+        this.getPlayersMap();
+      }
     })
     console.log('items6', this.players );
 
@@ -99,13 +102,15 @@ export class PlayerinfoComponent implements OnInit { public players = [];
           });
 
           for(let jugador of this.players) {
-            if (jugador.id === this.idplayer) {
-              console.log('items4', jugador.fullName);
+            // console.log('Comparando: '+jugador.id+' con '+this.idplayer);
+            
+            if (jugador.id == this.idplayer) {
+              // console.log('items4', jugador.fullName);
               this.player = jugador;
               break;
             }
-            console.log('items5', 1);
-            console.log('items7', this.idplayer);
+            // console.log('items5', 1);
+            // console.log('items7', this.idplayer);
 
           }
 
