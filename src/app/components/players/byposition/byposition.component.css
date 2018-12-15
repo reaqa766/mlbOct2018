@@ -45,7 +45,10 @@
     background-color: rgba(12, 10, 9, 0.75);
 
 }
-
+.link_player {
+  text-decoration:none;
+  color: antiquewhite;
+}
 
 .title-position{
     color: antiquewhite;

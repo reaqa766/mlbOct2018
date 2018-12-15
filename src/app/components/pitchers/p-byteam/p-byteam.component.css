@@ -14,6 +14,11 @@
   height: 1.75em;
   border-radius: 7px;
 }
+.link_player {
+  text-decoration:none;
+  color: antiquewhite;
+}
+
 
 
 .advancedSearchTextbox{

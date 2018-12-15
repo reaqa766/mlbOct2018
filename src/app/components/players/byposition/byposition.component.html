@@ -37,7 +37,7 @@
         <tbody class="table-header2">
           <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
             <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
-              <td style="width: 15%;">{{player.fullName}}</td>
+              <a routerLink="/playerinfo/{{player.id}}" class="link_player"><td style="width: 15%;">{{player.fullName}}</td></a>
               <td style="width: 15%;">{{player.stats[0].splits[0].team.name}}</td>
               <td style="width: 5%;">{{player.primaryPosition.name}}</td>
               <td style="width: 5%;">{{player.stats[0].splits[0].stat.atBats}}</td>
@@ -51,7 +51,7 @@
 
           <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
             <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
-              <td style="width: 15%;">{{player.fullName}}</td>
+              <a routerLink="/playerinfo/{{player.id}}" class="link_player"><td style="width: 15%;">{{player.fullName}}</td></a>
               <td style="width: 15%;">{{player.stats[0].splits[0].team.name}}</td>
               <td style="width: 5%;">{{player.primaryPosition.name}}</td>
               <td style="width: 5%;">{{player.stats[0].splits[0].stat.atBats}}</td>

@@ -79,3 +79,7 @@
     margin: 0 35% !important;
     color: rgba(80, 57, 43, 0.95);
 }
+.link_player {
+  text-decoration:none;
+  color: antiquewhite;
+}

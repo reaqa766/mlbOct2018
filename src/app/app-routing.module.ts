@@ -20,6 +20,7 @@ import { NotFoundPageComponent } from './components/not-found-page/not-found-pag
 import { RegisterComponent } from './components/user/register/register.component';
 import { NewsgralComponent } from './components/news/newsgral/newsgral.component';
 import { PlayerinfoComponent } from './components/playerinfo/playerinfo.component';
+import { PitcherinfoComponent } from './components/pitcherinfo/pitcherinfo.component';
 
 import {AuthGuard} from './guards/auth.guard';
 
@@ -61,7 +62,10 @@ const routes: Routes = [
   { path: 'newsgral',
   component: NewsgralComponent},
   { path: 'playerinfo/:id',
-  component: PlayerinfoComponent, 
+  component: PlayerinfoComponent,
+  pathMatch: 'full'},
+  { path: 'pitcherinfo/:id',
+  component: PitcherinfoComponent,
   pathMatch: 'full'},
   { path: '**',
   component: NotFoundPageComponent}

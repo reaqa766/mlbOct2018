@@ -15,8 +15,10 @@
 }
 
 
-/* borrar arriba  */
-
+.link_player {
+  text-decoration:none;
+  color: antiquewhite;
+}
 
 .advancedSearchTextbox{
     color: rgb(2, 1, 0);

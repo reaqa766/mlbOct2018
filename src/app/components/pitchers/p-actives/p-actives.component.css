@@ -20,6 +20,11 @@
     margin-left: 11.5%;
     margin-bottom: 0;
 }
+.link_player {
+  text-decoration:none;
+  color: antiquewhite;
+}
+
 
 .table {
     width: 80%;

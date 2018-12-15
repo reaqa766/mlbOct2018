@@ -46,7 +46,7 @@
           <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
             <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
               <!-- <td style="width: 5%;">{{i +1}}</td> -->
-              <td style="width: 15%;">{{player.fullName}}</td>
+              <a routerLink="/playerinfo/{{player.id}}" ><td class="link_player" style="width: 15%;">{{player.fullName}}</td></a>
               <td style="width: 15%;">{{player.stats[0].splits[0].team.name}}</td>
               <td style="width: 5%;">{{player.stats[0].splits[0].stat.atBats}}</td>
               <td style="width: 5%;">{{player.stats[0].splits[0].stat.avg}}</td>
@@ -63,7 +63,7 @@
           <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
             <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
               <!-- <td style="width: 5%;">{{i +1}}</td> -->
-              <td style="width: 15%;">{{player.fullName}}</td>
+              <a routerLink="/playerinfo/{{player.id}}" ><td class="link_player" style="width: 15%;">{{player.fullName}}</td></a>
               <td style="width: 15%;">{{player.stats[0].splits[0].team.name}}</td>
               <td style="width: 5%;">{{player.stats[0].splits[0].stat.atBats}}</td>
               <td style="width: 5%;">{{player.stats[0].splits[0].stat.avg}}</td>

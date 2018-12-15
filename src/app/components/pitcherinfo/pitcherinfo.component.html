@@ -1,11 +1,6 @@
 <div class="container-actives">
-  <h1 class="bioActives-title">Estadísticas del Jugador</h1>
+  <h1 class="bioActives-title">Estadísticas del Pitcher</h1>
 
-  <!-- <p class="title-position"> TEMP. 2018 </p> -->
-
-  <!-- <div class="card-body">
-    <h5 class="card-title">{{player.fullName}}</h5>
-  </div> -->
 
   <div class="player_grid">
     <div class="player_pict">
@@ -20,33 +15,35 @@
           <thead class="table-header">
             <tr>
               <!-- <th style="width: 15%;" scope="col">Name</th> -->
-              <th style="width: 10%;" scope="col">Posicion</th>
-              <th style="width: 10%;" scope="col">Veces al bate</th>
-              <th style="width: 5%;" scope="col">Avg</th>
-              <th style="width: 5%;" scope="col">CA</th>
-              <th style="width: 5%;" scope="col">Hits</th>
-              <th style="width: 5%;" scope="col">StrksO</th>
+              <th style="width: 10%;" scope="col">Equipo</th>
+              <th style="width: 5%;" scope="col">Inic</th>
+              <th style="width: 5%;" scope="col">G</th>
+              <th style="width: 5%;" scope="col">P</th>
+              <th style="width: 5%;" scope="col">Salv</th>
+              <th style="width: 5%;" scope="col">InnP</th>
+              <th style="width: 5%;" scope="col">Efect</th>
+              <th style="width: 5%;" scope="col">Pches</th>
               <th style="width: 5%;" scope="col">BB</th>
-              <th style="width: 5%;" scope="col">CI</th>
-              <th style="width: 5%;" scope="col">Hr</th>
-              <th style="width: 5%;" scope="col">Br</th>
-            </tr>
+              <th style="width: 5%;" scope="col">Cl</th>
+              <th style="width: 5%;" scope="col">CS</th>
+              </tr>
           </thead>
 
             <tbody class="table-header2" >
-                <tr *ngIf="player && player.primaryPosition && player.stats">
+                <tr *ngIf="player  && player.stats">
                   <!-- <td style="width: 15%;">{{player?.fullName}}</td> -->
-                  <td style="width: 10%;">{{player.primaryPosition.abbreviation}}</td>
-                  <td style="width: 10%;">{{player.stats[0].splits[0].stat.atBats}}</td>
-                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.avg}}</td>
-                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.runs}}</td>
-                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.hits}}</td>
+                  <td style="width: 10%;">{{player.stats[0].splits[0].team.name}}</td>
+                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.gamesPitched}}</td>
+                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.wins}}</td>
+                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.losses}}</td>
+                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.saves}}</td>
+                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.inningsPitched}}</td>
+                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.era}}</td>
                   <td style="width: 5%;">{{player.stats[0].splits[0].stat.strikeOuts}}</td>
                   <td style="width: 5%;">{{player.stats[0].splits[0].stat.baseOnBalls}}</td>
-                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.rbi}}</td>
-                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.homeRuns}}</td>
-                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.stolenBases}}</td>
-                </tr>
+                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.earnedRuns}}</td>
+                  <td style="width: 5%;">{{player.stats[0].splits[0].stat.runs}}</td>
+                    </tr>
             </tbody>
           </table>
         </div>
@@ -64,12 +61,10 @@
             </ul>
           </div>
 
-          <div class="logo_team" *ngIf="player && player.stats">
-            <img src="../../../assets/{{player.stats[0].splits[0].team.id}}.png" alt="">
+    <div class="logo_team" *ngIf="player && player.stats">
+      <img src="../../../assets/{{player.stats[0].splits[0].team.id}}.png" alt="">
 
-          </div>
-          <a href="javascript:history.back(-1)"><button class="button btn-primary" >Volver a la página anterior</button></a>
-
+    </div>
+    <a href="javascript:history.back(-1)"><button class="button btn-primary" >Volver a la página anterior</button></a>
   </div>
-
 </div>

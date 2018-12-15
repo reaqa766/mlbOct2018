@@ -38,7 +38,10 @@
 
 }
 
-
+.link_player {
+  text-decoration:none;
+  color: antiquewhite;
+}
 
 .title-position{
     color: antiquewhite;
