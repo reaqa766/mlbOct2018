@@ -72,11 +72,11 @@ export class PlayerinfoComponent implements OnInit { public players = [];
     this.route.params.subscribe( params => {
       if (this.idplayer !== params.id) {
         this.idplayer = params.id;
-        console.log(this.players);
+        // console.log('players', this.players);
         this.getPlayersMap();
       }
     });
-    console.log('items6', this.players );
+    // console.log('items6', this.players );
 
   }
 
