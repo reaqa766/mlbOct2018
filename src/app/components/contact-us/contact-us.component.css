@@ -2,10 +2,54 @@
     color: antiquewhite;
     font-size: 2rem;
     text-align: center;
-    margin: 1.5rem auto 0; 
-    padding: .5rem 0; 
+    margin: 1.5rem auto 0;
+    padding: .5rem 0;
     background-color: rgba(3, 2, 2, 0.5);
     width: 8em;
     height: 1.5em;
     border-radius: 7px;
 }
+
+.img_ppal {
+  margin-left: 28%;
+  margin-top: 18%;
+  }
+  .img_ppal1{
+    width: 50rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 34px rgba(255, 255, 255, 0.3);
+    /* z-index: -2; */
+
+  }
+  .fa-twitter {
+    position: relative;
+    left: 22rem;
+    top:-6rem;
+    color: rgb(0, 85, 241);
+    font-size: 6rem;
+    font-weight: 300;
+    z-index: 300;
+
+  }
+  .mail {
+    position: relative;
+    left: 33rem;
+    top:-6rem;
+    color: rgb(255, 255, 255);
+    font-size: 6rem;
+    font-weight: 300;
+    z-index: 299;
+
+
+  }
+  .fa-instagram {
+    position: relative;
+    left: 45rem;
+    top:-6rem;
+    color: rgb(0, 0, 0);
+    font-size: 6rem;
+    font-weight: 300;
+    z-index: 198;
+
+
+  }
