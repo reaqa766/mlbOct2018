@@ -2,8 +2,9 @@
     color: antiquewhite;
     font-size: 2rem;
     text-align: center;
-    margin: 1.5rem auto 0;
-    padding: .5rem 0;
+    margin-top: 24rem;
+    margin-left: 74rem;
+    padding: .2rem 0;
     background-color: rgba(3, 2, 2, 0.5);
     width: 8em;
     height: 1.5em;
@@ -12,7 +13,7 @@
 
 .img_ppal {
   margin-left: 45%;
-  margin-top: 22%;
+  margin-top: 1.5%;
   }
   .img_ppal1{
     width: 50rem;

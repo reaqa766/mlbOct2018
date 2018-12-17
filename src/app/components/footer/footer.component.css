@@ -1,48 +1,8 @@
+
 .footer {
-    color: black;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    height: 2em;
-    width: 100%;
-    background-color:rgba(165, 88, 52, 0.4);
-    color: white;
-    text-align: center;
-}
-
-.foot {
-    grid-column: 1/4;
-    grid-row: 1/2;
-    color: antiquewhite;
-    font-weight:800; 
-    font-size: .75rem;
-    padding: .5em 0;
-
-
-}
-
-.iconF {
-    grid-column: 4/7;
-    grid-row: 1/2;
-    color: antiquewhite;
-    font-size: 1.5rem;
-}
-
-.iconF1 {
-text-align: end; 
-}
-.iconF2 {
-    text-align: center; 
-
-}
-.iconF3 {
-    text-align: start; 
-
-}
-
-a {
-    text-align: end;
-    margin-right: 1em; 
+  position: absolute;
+  width: 100%;
+  height: 6rem;
+  top: 4%;
+  left: 3%;
 }

@@ -54,10 +54,20 @@ flex: 1 0 0;
     width: 10em
 }
 
-/* .register2 {
-    display: none;
 
-} */
+.fa-twitter {
+  width: 15%;
+
+}
+.mail {
+  width: 15%;
+  margin: 0 .5rem;
+
+}
+.fa-instagram {
+  width: 15%;
+
+}
 
 
  @media (max-width: 449px) {

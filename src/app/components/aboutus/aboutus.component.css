@@ -70,6 +70,18 @@
   color: rgb(117, 184, 247);
   font-size: 1.10em;
   font-weight: 500;
+}
 
+.span_txt {
+  font-weight: 600;
+  color: antiquewhite;
+}
 
+@media only screen and (max-width: 1440px) {
+  .nosotros_ppal {
+
+  width: 80%;
+  margin-left: 8%;
+
+  }
 }

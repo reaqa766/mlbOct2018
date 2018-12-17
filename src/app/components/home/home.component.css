@@ -1,7 +1,7 @@
 .container_home {
     /* background-color: #fff; */
-    margin: 24% 32% 0 0; 
-    
+    margin: 24% 32% 0 0;
+
 }
 
 .card-deck{
@@ -29,10 +29,6 @@ grid-row: 1/2;
 
 }
 
-/* .news3 {
-grid-column: 4/5;
-grid-row: 1/2;
-} */
 
 .card-text {
     font-size: 0.75em !important;
@@ -40,5 +36,5 @@ grid-row: 1/2;
 
 .card-title {
     font-size: 1em !important;
-   
+
 }
