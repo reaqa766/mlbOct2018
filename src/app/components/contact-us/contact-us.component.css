@@ -11,8 +11,8 @@
 }
 
 .img_ppal {
-  margin-left: 28%;
-  margin-top: 18%;
+  margin-left: 45%;
+  margin-top: 22%;
   }
   .img_ppal1{
     width: 50rem;
@@ -22,34 +22,44 @@
 
   }
   .fa-twitter {
-    position: relative;
+    /* position: relative;
     left: 22rem;
-    top:-6rem;
-    color: rgb(0, 85, 241);
+    top:-6rem; */
+    /* color: rgb(0, 85, 241);
     font-size: 6rem;
-    font-weight: 300;
+    font-weight: 300; */
     z-index: 300;
+    width: 25%;
+    margin: 1rem;
 
   }
   .mail {
-    position: relative;
+    /* position: relative;
     left: 33rem;
-    top:-6rem;
-    color: rgb(255, 255, 255);
+    top:-6rem; */
+    /* color: rgb(255, 255, 255);
     font-size: 6rem;
-    font-weight: 300;
+    font-weight: 300; */
     z-index: 299;
+    width: 25%;
+    margin: 1rem;
+
+
 
 
   }
   .fa-instagram {
-    position: relative;
-    left: 45rem;
-    top:-6rem;
-    color: rgb(0, 0, 0);
+    /* position: relative;
+    left: 415rem;
+    top:-6rem; */
+    /* color: rgb(0, 0, 0);
     font-size: 6rem;
-    font-weight: 300;
+    font-weight: 300; */
     z-index: 198;
+    width: 25%;
+    margin: 1rem;
+
+
 
 
   }
