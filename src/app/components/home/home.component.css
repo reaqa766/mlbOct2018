@@ -1,6 +1,6 @@
 .container_home {
     /* background-color: #fff; */
-    margin: 24% 32% 0 0;
+    margin: 23% 32% 0 0;
 
 }
 
@@ -8,7 +8,7 @@
     display: grid;
     grid-template-columns: 3fr 2fr 2fr;
     grid-column-gap: 2%;
-    width: 130%;
+    width: 90rem;
 }
 .news0 {
 grid-column: 1/2;
@@ -36,5 +36,74 @@ grid-row: 1/2;
 
 .card-title {
     font-size: 1em !important;
+
+}
+
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  .container_home {
+    margin: 38% 10% 0 0;
+}
+  .card-deck{
+    display: grid;
+    grid-template-columns: 20% 22% 22%;
+    grid-column-gap: 5px;
+    width: 75rem;
+    height: 20rem;
+}
+.news1 {
+    width: 80%;
+  }
+  .news2 {
+    width: 80%;
+  }
+
+  }
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .container_home {
+    margin: 20% 32% 0 20%;
+
+}
+  .card-deck{
+    display: grid;
+    grid-template-columns: 20% 38% 38%;
+    grid-column-gap: 5px;
+    width: 50rem;
+    height: 20rem;
+}
+.news1 {
+    width: 90%;
+  }
+  .news2 {
+    width: 90%;
+  }
+
+  }
+@media only screen and (min-width: 1440px) and (max-width: 1620px) {
+
+  .card-deck{
+    display: grid;
+    grid-template-columns: 25% 40% 40%;
+    grid-column-gap: 5px;
+    width: 50rem;
+    height: 20rem;
+}
+  .container_home {
+    width: 70%;
+    margin: 19% 10% 0 15%;
+}
+.card-deck{
+  width: 65rem;
+  margin-left: 1rem;
+}
+.news0 {
+width: 10%;
+  }
+.news1 {
+width: 85%;
+  }
+.news2 {
+width: 85%;
+  }
 
 }

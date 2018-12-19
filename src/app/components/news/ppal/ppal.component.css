@@ -366,3 +366,29 @@ img {
   font-size: 0.95rem;
   font-weight: 100;
 }
+
+
+@media only screen and (max-width: 1440px) {
+
+  .header_card {
+  width: 33%;
+  font-size: 0.75em;
+  }
+}
+@media only screen and (max-width: 1025px) {
+  .cuadro_fondo_blanco {
+    width: 100%;
+  }
+
+  .header_card {
+  width: 33%;
+  font-size: 0.55em;
+  }
+}
+@media only screen and (max-width: 769px) {
+
+  .header_card {
+  width: 42%;
+  font-size: 0.55em;
+  }
+}
