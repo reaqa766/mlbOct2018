@@ -14,18 +14,18 @@ export class PpalComponent implements OnInit {
 
   ngOnInit() {
   }
- news1() {
-   this.num = 'news1'
- }
- news2() {
-   this.num = 'news2'
- }
- news3() {
-   this.num = 'news3'
- }
- news4() {
-   this.num = 'news4'
- }
+  news1() {
+    this.num = 'news1';
+  }
+  news2() {
+    this.num = 'news2';
+  }
+  news3() {
+    this.num = 'news3';
+  }
+  news4() {
+    this.num = 'news4';
+  }
 
 //   urladdress(): void {
 //            window.open('https://www.mlb.com/news/cardinals-open-to-trading-jose-martinez/c-301791482', '_blank');

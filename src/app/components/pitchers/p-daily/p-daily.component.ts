@@ -21,7 +21,7 @@ export class PDailyComponent implements OnInit {
   selectedGroup: any;
   elarray: any;
   datesN = 10;
-  searchText: any ='';
+  searchText: any = '';
   playerAuxList = [];
   counter: number;
   n: number;
@@ -113,7 +113,6 @@ getPlayersMap() {
         // (player.nickName && player.nickName.toLowerCase().includes(this.searchText))  ||
         // player.mlbDebutDate.includes(this.searchText));
         this.setPage(this.pager.currentPage);
-        
       } else {
           this.allItems = this.players;
           this.setPage(this.pager.currentPage);
