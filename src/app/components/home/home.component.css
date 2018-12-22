@@ -39,7 +39,7 @@
 
 
 .boton {
-  grid-column: 2/3;
+  grid-column: 3/4;
   grid-row: 2/3;
   margin-top: 2rem;
   margin-right: -4rem;
@@ -47,8 +47,8 @@
 }
 
 .btn {
-  width: 13rem;
-  font-size: 2rem;
+  width: 20rem;
+  font-size: 3rem;
   background-color: rgba(8, 117, 243, 0.75) !important;
 }
 
@@ -217,7 +217,7 @@ p {
 }
 .txt_final {
   color: black;
-  font-size: 1.15em;
+  /* font-size: 3em; */
   font-weight: bold;
   padding: 0.75em 0.5em;
   margin-bottom: 0px;
@@ -226,7 +226,7 @@ p {
 @media only screen and (min-width:1900px )  {
 
   .container_central {
-    margin-top: 32em;
+    margin-top: 34em;
     grid-column-gap: 15em;
     grid-row-gap: 5em;
 
@@ -252,10 +252,10 @@ p {
   }
 
   .title {
-    top: 8%;
+    top: 11%;
   }
   .title_h1 {
-    font-size: 2em;
+    font-size: 3em;
 
   }
   .final_text {
@@ -264,13 +264,37 @@ p {
     top: 100%;
     width: 100%    }
 
-  }
+
   .txt_final {
-    font-size: 1.75em;
-
+    font-size: 2em;
+  }
   }
 
-@media only screen and (min-width:1220px ) and (max-width: 1899px) {
+@media only screen and (min-width:1351px ) and (max-width: 1899px) {
+
+  .container_central {
+    margin-top: 20em;
+  }
+  .title {
+    top: 8%;
+  }
+  .title_h1 {
+    font-size: 2em;
+
+  }
+  .final_text {
+    position: absolute;
+    top: 100%;
+    width: 100%
+   }
+
+
+  .txt_final {
+    font-size: 1em;
+
+  }
+}
+@media only screen and (min-width:1220px ) and (max-width: 1350px) {
 
   .container_central {
     margin-top: 18em;
@@ -289,7 +313,7 @@ p {
 
   }
   .txt_final {
-    font-size: 1em;
+    /* font-size: 1em; */
 
   }
 
@@ -298,9 +322,9 @@ p {
       margin-top: 12rem;
     }
     .title {
-      display: none;
+      top: 7%;
     }
-    .title_h1 {
+      .title_h1 {
       font-size: 1.5em;
 
     }
@@ -374,7 +398,7 @@ p {
   }
   @media only screen and (min-width:377px ) and (max-width: 766px) {
   .container_central {
-      margin-top: 9rem;
+      margin-top: 12em;
       margin-left: 0px;
       display: grid;
       grid-template-columns: 1fr;
@@ -432,7 +456,7 @@ p {
   }
   @media only screen and (min-width:322px ) and (max-width: 376px) {
   .container_central {
-      margin-top: 5.75em;
+      margin-top: 10em;
       margin-left: 0;
       display: grid;
       grid-template-columns: 1fr;
@@ -447,10 +471,10 @@ p {
     }
 
     .title {
-      top: 13%;
+      top: 11%;
     }
     .title_h1 {
-      display: none;
+      font-size: 1em;
     }
 
     .img_pic_1, .img_pic_2, .img_pic_3, .img_pic_4, .img_pic_5, .img_pic_6, .img_pic_7, .img_pic_8 {
@@ -498,7 +522,7 @@ p {
   }
   @media only screen and (min-width:310px ) and (max-width: 321px) {
   .container_central {
-      margin-top: 5.75em;
+      margin-top: 10em;
       margin-left: 0;
       display: grid;
       grid-template-columns: 1fr;
@@ -513,10 +537,10 @@ p {
     } */
 
     .title {
-      top: 13%;
+      top: 10%;
     }
     .title_h1 {
-      display: none;
+      font-size: 1em;
     }
 
     .img_pic_1, .img_pic_2, .img_pic_3, .img_pic_4, .img_pic_5, .img_pic_6, .img_pic_7, .img_pic_8 {
@@ -531,14 +555,13 @@ p {
     .boton {
       position: absolute;
       bottom: 5rem;
-      margin-left: 30px;
-      margin-top: 50px;
+      margin-top: 2em;
 
     }
     .btn {
       position: relative;
       top: 4.5em;
-      left: 4em;
+      left: 3em;
       width: 8
 
       em;

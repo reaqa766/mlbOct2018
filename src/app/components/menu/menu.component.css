@@ -4,11 +4,11 @@
   /* border-radius: 5px; */
   z-index: 100;
   top: 0;
-  height: 3.2rem;
+  height: 1.75em;
 
 }
 .menu_ul {
-  height: 4rem;
+  height: 1.75em;
 
 }
 
@@ -80,7 +80,7 @@
 
 @media (max-width: 449px) {
   .menu_bar {
-    height: 5.75rem;
+    height: 1.75em;
 
   }
   .menu_ul {
@@ -144,6 +144,11 @@
 }
 
 @media only screen and (min-width: 1243px) {
+  .menu_bar {
+    height: 2.75em;
+
+  }
+
   .nav-link {
     font-size: 1rem;
   }
