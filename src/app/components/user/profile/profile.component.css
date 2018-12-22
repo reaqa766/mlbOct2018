@@ -21,3 +21,77 @@ p {
   color: white;
   background-color: rgba(241, 0, 0, 0.5);
 }
+
+@media only screen and (min-width:1220px ) and (max-width: 1440px) {
+
+
+  p {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (min-width:1024px ) and (max-width: 1219px) {
+
+  .title_page {
+    margin-left: 50%;
+
+  }
+
+  p {
+    font-size: 1em;
+    margin-top: -5%;
+    margin-right: 25%;
+
+  }
+  .card {
+    margin-left: 45%;
+    /* margin-top: -5%; */
+    width: 45vw;
+
+  }
+}
+@media only screen and (min-width:767px ) and (max-width: 1023px) {
+
+  .title_page {
+    margin-left: 40%;
+
+  }
+
+  p {
+    font-size: 1em;
+    margin-top: -5%;
+
+  }
+  .card {
+    margin-left: 35%;
+    /* margin-top: -5%; */
+    width: 60vw;
+
+  }
+}
+@media only screen and (min-width:315px ) and (max-width: 766px) {
+
+  .title_page {
+    margin-left: 13%;
+    margin-top: 38%;
+
+
+  }
+
+  p {
+    font-size: 0.90em;
+    margin-top: -5%;
+    margin-left: 0%;
+
+  }
+  .card {
+    margin-left: 12%;
+    /* margin-top: -5%; */
+    width: 75vw;
+
+  }
+  .btn-secondary {
+    margin-left: 1em;
+    margin-top: 1em;
+  }
+
+}

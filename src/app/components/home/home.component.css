@@ -229,15 +229,221 @@ p {
     margin-top: 16rem;
   }
   .title {
-    top: 6.5%;
+    top: 8%;
   }
   .title_h1 {
     font-size: 2em;
 
   }
+  .final_text {
+    position: absolute;
+    top: 100%;
+    width: 100%    }
+
   }
+  @media only screen and (min-width:1024px ) and (max-width: 1219px) {
+  .container_central {
+      margin-top: 12rem;
+    }
+    .title {
+      display: none;
+    }
+    .title_h1 {
+      font-size: 1.5em;
+
+    }
+
+    .img_pic_1, .img_pic_2, .img_pic_3, .img_pic_4, .img_pic_5, .img_pic_6, .img_pic_7, .img_pic_8 {
+      width: 4.8rem;
+      margin-bottom: 0.7rem;
+        }
+    .players_pic {
+      margin-left: 6rem;
+      grid-row-gap: 6rem;
+
+    }
+    .boton {
+      grid-column: 1/2;
+      grid-row: 3/4;
+
+    }
 
 
+    .txt_final {
+      font-size: 0.95em;
+    }
+
+    .final_text {
+      position: absolute;
+      top: 100%;
+      width: 100%    }
+
+
+  }
+  @media only screen and (min-width:767px ) and (max-width: 1023px) {
+  .container_central {
+      margin-top: 9rem;
+    }
+    .title {
+      top: 17%;
+    }
+    .title_h1 {
+      font-size: 1.5em;
+
+    }
+
+    .img_pic_1, .img_pic_2, .img_pic_3, .img_pic_4, .img_pic_5, .img_pic_6, .img_pic_7, .img_pic_8 {
+      width: 4.8rem;
+      margin-bottom: 0.7rem;
+        }
+    .players_pic {
+      margin-left: 2rem;
+      grid-column-gap: 2rem;
+
+    }
+    .boton {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      margin-top: 5.5rem;
+
+    }
+
+
+    .txt_final {
+      font-size: 0.95em;
+    }
+
+    .final_text {
+      position: absolute;
+      top: 100%;
+      width: 100%    }
+
+
+  }
+  @media only screen and (min-width:374px ) and (max-width: 766px) {
+  .container_central {
+      margin-top: 9rem;
+      margin-left: 0px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column-gap: 5px;
+      width: 98%;
+    }
+    .title {
+      top: 11%;
+    }
+    .title_h1 {
+      font-size: 1.2em;
+    }
+
+    .img_pic_1, .img_pic_2, .img_pic_3, .img_pic_4, .img_pic_5, .img_pic_6, .img_pic_7, .img_pic_8 {
+      width: 3.2rem;
+      margin-bottom: 0.7rem;
+        }
+    .players_pic {
+      margin: 0 1rem;
+      grid-column-gap: 1.20rem;
+
+    }
+    .boton {
+      position: absolute;
+      bottom: 5rem;
+      margin-left: 7.5rem;
+      margin-top: 30px;
+    }
+    .btn {
+      position: relative;
+      width: 8rem;
+      font-size: 1rem;
+
+    }
+
+
+    .text_11 {
+      font-size: 0.85em;
+    }
+
+    .text_12 {
+      font-size: 1.1em;
+    }
+
+    .txt_final {
+      font-size: 0.75em;
+    }
+
+    .final_text {
+      position: absolute;
+      top: 100%;
+      width: 100%    }
+
+
+  }
+  @media only screen and (min-width:320px ) and (max-width: 373px) {
+  .container_central {
+      margin-top: 7rem;
+      margin-left: 0px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column-gap: 5px;
+      width: 98%;
+    }
+    .boton {
+      position: absolute;
+      top: 32rem;
+      left: 50%;
+
+    }
+
+    .title {
+      top: 13%;
+    }
+    .title_h1 {
+      font-size: 1.2em;
+    }
+
+    .img_pic_1, .img_pic_2, .img_pic_3, .img_pic_4, .img_pic_5, .img_pic_6, .img_pic_7, .img_pic_8 {
+      width: 3.2rem;
+      margin-bottom: 0.7rem;
+        }
+    .players_pic {
+      margin: 0 1rem;
+      grid-column-gap: 1rem;
+
+    }
+    .boton {
+      position: absolute;
+      bottom: 5rem;
+      margin-left: 30px;
+      margin-top: 50px;
+
+    }
+    .btn {
+      position: relative;
+      right: 7rem;
+      width: 8rem;
+      font-size: 1rem;
+
+    }
+
+    .text_11 {
+      font-size: 0.85em;
+    }
+
+    .text_12 {
+      font-size: 1.1em;
+    }
+
+    .txt_final {
+      font-size: 0.55em;
+    }
+
+    .final_text {
+      position: absolute;
+      top: 100%;
+      width: 100%    }
+
+
+  }
 
 
 
