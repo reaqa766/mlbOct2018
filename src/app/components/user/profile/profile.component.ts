@@ -39,7 +39,7 @@ export class ProfileComponent implements OnInit {
     this.profileService.getProfiles();
     this.resetForm();
   }
-  onSubmit(profileForm: NgForm) {
+  onSubmit(profileForm: any) {
     console.log('datos', profileForm);
 
     if (profileForm.value.$key == null) {
@@ -52,7 +52,7 @@ export class ProfileComponent implements OnInit {
     this.toastr.success('Subscripció Exitosa', 'Perfil Registrado');
   }
 
-  resetForm(profileForm?: NgForm) {
+  resetForm(profileForm?: any) {
     if (profileForm != null) {
       profileForm.reset();
     }
