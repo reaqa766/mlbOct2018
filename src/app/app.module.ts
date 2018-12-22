@@ -1,7 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
+
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { GrdFilterPipe } from './components/grd-filter.pipe';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -43,6 +48,7 @@ import { AuthService } from '../app/services/auth.service';
 
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireAuthModule} from 'angularfire2/auth';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
 
 import {environment} from '../environments/environment';
 
@@ -50,7 +56,6 @@ import {AuthGuard} from './guards/auth.guard';
 import { NewsgralComponent } from './components/news/newsgral/newsgral.component';
 import { PlayerinfoComponent } from './components/playerinfo/playerinfo.component';
 import { PitcherinfoComponent } from './components/pitcherinfo/pitcherinfo.component';
-
 
 @NgModule({
   declarations: [
@@ -91,10 +96,15 @@ import { PitcherinfoComponent } from './components/pitcherinfo/pitcherinfo.compo
     HttpClientModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    FlashMessagesModule
+    FlashMessagesModule,
+    AngularFireDatabaseModule,
+    CommonModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    ReactiveFormsModule
     // Ng2SmartTableModule
   ],
-  providers: [PlayersService, PagerService, AuthService, AuthGuard,FlashMessagesService],
+  providers: [PlayersService, PagerService, AuthService, AuthGuard, FlashMessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

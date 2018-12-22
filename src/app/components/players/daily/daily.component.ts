@@ -27,7 +27,7 @@ export class DailyComponent implements OnInit {
   n1 = 12;
   n10 = 5;
   dia = moment().format('YYYY-MM-DD');
-  private allItems: any[];
+  public allItems: any[];
 
   // pager object
   pager: any = {};

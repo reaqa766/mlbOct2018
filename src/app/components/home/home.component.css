@@ -2,20 +2,23 @@
 
 
 .title {
+  width: 100%;
   position: absolute;
   top: 7%;
-  left: 43rem;
 }
 
 .title_h1 {
+  width: 103%;
   color: white;
   font-size: 3em;
   font-weight: bold;
+  text-align: center;
 }
 
 .container_central {
   margin-top: 20rem;
   margin-left: 12%;
+  margin-bottom: 0px;
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-gap: 5px;
@@ -44,8 +47,9 @@
 }
 
 .btn {
-  width: 15rem;
+  width: 13rem;
   font-size: 2rem;
+  background-color: rgba(8, 117, 243, 0.75) !important;
 }
 
 .players_pic {
@@ -56,7 +60,6 @@
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* grid-template-rows: 2fr 1fr 2fr 1fr; */
   grid-column-gap: 4rem;
 }
 
@@ -207,14 +210,60 @@ p {
 }
 
 .final_text {
-  height: 4.75rem;
+  height: 5.3rem;
   background-color: rgba(255, 255, 255,0.7);
+  margin-bottom: 0px;
+
 }
 .txt_final {
   color: black;
+  font-size: 1.15em;
   font-weight: bold;
-  padding: 1em 0.5em;
+  padding: 0.75em 0.5em;
+  margin-bottom: 0px;
 }
+
+@media only screen and (min-width:1220px ) and (max-width: 1440px) {
+
+  .container_central {
+    margin-top: 16rem;
+  }
+  .title {
+    top: 6.5%;
+  }
+  .title_h1 {
+    font-size: 2em;
+
+  }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* -- Home Inicial -- */
 

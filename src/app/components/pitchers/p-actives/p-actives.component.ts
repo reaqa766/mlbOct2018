@@ -30,7 +30,7 @@ export class PActivesComponent implements OnInit {
   // tslint:disable-next-line:no-inferrable-types
   n10: number = 5;
 
-  private allItems: any[];
+  public allItems: any[];
     // pager object
     pager: any = {};
 

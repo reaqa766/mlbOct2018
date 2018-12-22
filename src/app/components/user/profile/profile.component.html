@@ -1,3 +1,61 @@
-<p>
-  profile works!
-</p>
+<div class="title_page">
+  <p>Regístrese para conocer cuando se activa la página</p>
+</div>
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]='profileForm' (ngSubmit)="onSubmit(profileForm)">
+      <div class="form-group">
+        <div [class]="form-container">
+          <div class="form-group">
+            <input type="text" formControlName="name" class="form-control" placeholder="Nombre">
+            <div class="alert" *ngIf="!profileForm.controls['name'].valid && profileForm.controls['name'].touched">Colocar su Nombre</div>
+          </div>
+
+          <div class="form-group">
+            <input type="text" formControlName="lastname" class="form-control" placeholder="Apellido">
+            <div class="alert" *ngIf="!profileForm.controls['lastname'].valid && profileForm.controls['lastname'].touched">Colocar su Apellido</div>
+          </div>
+
+          <div class="form-group">
+            <input type="email" formControlName="email" class="form-control" placeholder="Correo">
+            <div class="alert" *ngIf="!profileForm.controls['email'].valid && profileForm.controls['email'].touched">Colocar un email válido</div>
+          </div>
+
+          <div class="form-group">
+            <input type="number" formControlName="age" class="form-control" placeholder="Edad">
+            <div class="alert" *ngIf="!profileForm.controls['age'].valid && profileForm.controls['age'].touched">Colocar su Edad</div>
+          </div>
+
+          <div class="form-group">
+            <select type="text" formControlName="gender">
+              <option [disabled]="true" [selected]="true" value="Género">Género</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Femenino">Femenino</option>
+              <option value="Otro">Otro</option>
+            </select>
+            <div class="alert" *ngIf="!profileForm.controls['gender'].valid && profileForm.controls['gender'].touched">Colocar su Genero</div>
+          </div>
+
+          <div class="form-group">
+            <input type="text" formControlName="country" class="form-control" placeholder="País">
+            <div class="alert" *ngIf="!profileForm.controls['country'].valid && profileForm.controls['country'].touched">Colocar su País</div>
+          </div>
+
+          <div class="form-group">
+            <input type="text" formControlName="comments" class="form-control" placeholder="¿Qué quisieras que cubriera la página?">
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" value="Register" [disabled]="!profileForm.valid">
+              <i class="fas fa-plus-circle"></i> Subscríbase
+            </button>
+            <button class="btn btn-secondary" type="reset" (click)="resetForm(profileForm)">
+              <i class="fas fa-sync-alt"></i> Resetear
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>

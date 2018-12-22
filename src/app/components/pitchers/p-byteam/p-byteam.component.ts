@@ -27,7 +27,7 @@ export class PByteamComponent implements OnInit {
   n1 = 12;
   n10 = 5;
 
-  private allItems: any[];
+  public allItems: any[];
   // pager object
   pager: any = {};
 

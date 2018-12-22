@@ -1,0 +1,23 @@
+.title_page {
+  color: white;
+  font-weight: 700;
+  margin-top: 20%;
+  margin-left: 55%;
+
+}
+p {
+  font-size: 1.5em;
+}
+.card {
+  margin-left: 54%;
+  width: 35vw;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+.btn-secondary {
+  margin-left: 1em;
+}
+.alert {
+  color: white;
+  background-color: rgba(241, 0, 0, 0.5);
+}
