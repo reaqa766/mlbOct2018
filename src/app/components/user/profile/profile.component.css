@@ -78,14 +78,12 @@ p {
 
   .title_page {
     margin-left: 13%;
-    margin-top: 45%;
-
-
+    margin-top: 12em;
   }
 
   p {
     font-size: 0.90em;
-    margin-top: -5%;
+    /* margin-top: -5%; */
     margin-left: 0%;
 
   }
