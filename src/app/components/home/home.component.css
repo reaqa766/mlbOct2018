@@ -320,7 +320,7 @@ p {
 
 
   }
-  @media only screen and (min-width:376x ) and (max-width: 766px) {
+  @media only screen and (min-width:377px ) and (max-width: 766px) {
   .container_central {
       margin-top: 9rem;
       margin-left: 0px;
@@ -378,13 +378,13 @@ p {
 
 
   }
-  @media only screen and (min-width:315px ) and (max-width: 375px) {
+  @media only screen and (min-width:322px ) and (max-width: 376px) {
   .container_central {
-      margin-top: 4.75rem;
-      margin-left: 0px;
+      margin-top: 5.75em;
+      margin-left: 0;
       display: grid;
       grid-template-columns: 1fr;
-      grid-column-gap: 5px;
+      grid-column-gap: 10%;
       width: 100%;
     }
     .boton {
@@ -430,7 +430,74 @@ p {
     }
 
     .text_12 {
-      font-size: 1.1em;
+      font-size: .9em;
+    }
+
+    .txt_final {
+      font-size: 0.55em;
+    }
+
+    .final_text {
+      position: absolute;
+      top: 100%;
+      width: 100%    }
+
+
+  }
+  @media only screen and (min-width:310px ) and (max-width: 321px) {
+  .container_central {
+      margin-top: 5.75em;
+      margin-left: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column-gap: 4%;
+      width: 100%;
+    }
+    /* .boton {
+      position: absolute;
+      top: 28.5em;
+      left: 55%;
+
+    } */
+
+    .title {
+      top: 13%;
+    }
+    .title_h1 {
+      display: none;
+    }
+
+    .img_pic_1, .img_pic_2, .img_pic_3, .img_pic_4, .img_pic_5, .img_pic_6, .img_pic_7, .img_pic_8 {
+      width: 3.2rem;
+      margin-bottom: 0.7rem;
+        }
+    .players_pic {
+      margin: 0;
+      grid-column-gap: 1rem;
+
+    }
+    .boton {
+      position: absolute;
+      bottom: 5rem;
+      margin-left: 30px;
+      margin-top: 50px;
+
+    }
+    .btn {
+      position: relative;
+      top: 4.5em;
+      left: 4em;
+      width: 8em;
+      font-size: 1rem;
+
+    }
+
+    .text_11 {
+      font-size: 0.85em;
+    }
+
+    .text_12 {
+      font-size: .9em;
     }
 
     .txt_final {
@@ -445,7 +512,9 @@ p {
 
   }
 
+  @media screen and (mmin-width:315px) and (max-width: 670px) and (orientation : landscape){
 
+  }
 
 
 
