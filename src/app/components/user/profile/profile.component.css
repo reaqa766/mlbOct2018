@@ -13,13 +13,19 @@ p {
   width: 35vw;
   background-color: whitesmoke;
   border-radius: 10px;
-}
-.btn-secondary {
-  margin-left: 1em;
+  margin-bottom: 2%;
 }
 .alert {
   color: white;
   background-color: rgba(241, 0, 0, 0.5);
+}
+
+.btn-primary {
+  width: 100%;
+  margin-bottom: 1em;
+}
+.btn-secondary {
+  width: 100%;
 }
 
 @media only screen and (min-width:1220px ) and (max-width: 1440px) {
@@ -90,7 +96,6 @@ p {
 
   }
   .btn-secondary {
-    margin-left: 1em;
     margin-top: 1em;
   }
 
