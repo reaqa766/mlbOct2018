@@ -1,5 +1,66 @@
-/* -- Landing Page -- */
-html {
+/*-- Landing Page 2 -- */
+
+header div  h1 {
+  font-size: 2em;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px #111;
+  color: white;
+  text-align: center;
+  margin-top: 3%;
+  /* line-height: 5em; */
+
+}
+
+.players_pic {
+  margin-top: 8em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10%;
+  padding: 0 12%;
+  border-radius: 6px;
+
+
+}
+
+main div div div img {
+  width: 8em;
+  border-radius: 6px;
+  box-shadow: 2px 2px 8px #111;
+}
+.img_pic_5, .img_pic_6, .img_pic_7, .img_pic_8 {
+display: none;
+}
+.text_5, .text_6, .text_7, .text_8 {
+display: none;
+}
+
+main div div div p{
+  width: 8em;
+  line-height: 1em;
+  margin: 5% 0;
+  color: white;
+  font-weight: 400;
+  text-shadow: 2px 2px 8px #111;
+  text-justify: distribute-all-lines;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-- Landing Page -- */
+/*  html {
   min-height: 100%;
   position: relative;
 }
@@ -7,14 +68,6 @@ body {
   margin: 0;
   margin-bottom: 40px;
 }
-/* footer {
-  background-color: black;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-  color: white;
-} */
 
 .title {
   width: 100%;
@@ -32,7 +85,6 @@ body {
 
 .container_central {
   margin-top: 20rem;
-  /* margin-left: 12%; */
   margin-bottom: 0px;
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -236,7 +288,6 @@ p {
 }
 .txt_final {
   color: black;
-  /* font-size: 3em; */
   font-weight: bold;
   padding: 0.75em 0.5em;
   margin-bottom: 0px;
@@ -343,10 +394,6 @@ p {
     position: absolute;
     top: 100%;
     width: 100%    }
-
-  }
-  .txt_final {
-    /* font-size: 1em; */
 
   }
 
@@ -524,7 +571,6 @@ p {
       position: absolute;
       bottom: 5rem;
       margin-top: 2em;
-      /* width: 100%; */
     }
     .btn {
       position: relative;
@@ -587,8 +633,6 @@ p {
     .btn {
       position: relative;
       top: 4.5em;
-      /* left: 3em; */
-      /* width: 8em; */
       font-size: 1rem;
 
     }

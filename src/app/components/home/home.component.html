@@ -1,6 +1,52 @@
+<!-- Landing Page 2 -->
+<header>
+  <div class="title">
+    <h1 class="title_h1">Temporada 2019</h1>
+  </div>
+</header>
+
+<main>
+  <div  class="players_pic">
+    <div *ngFor="let player of players; let i=index" >
+      <div [ngClass]="'pic_'+ (i+1)">
+        <img [ngClass]="'img_pic_'+ (i+1)" [src]="'../../../assets/'  + player.code + '.jpg'" alt="Player Image">
+      </div>
+
+      <div [ngClass]="'text_'+ (i+1)">
+        <div *ngIf="player.activo">
+          <p class="text_11" (click)='textChange(i)'>{{player.pregunta}}</p>
+        </div>
+        <div *ngIf="!player.activo">
+          <p class="text_12" (click)='textChange(i)'>{{player.respuesta}}</p>
+        </div>
+      </div>
+    </div>
+    </div>
+</main>
+
+<footer>
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Landing Page -->
 
-<div class="container_home">
+<!-- <div class="container_home">
 
   <div class="title">
     <h1 class="title_h1">Temporada 2019</h1>
@@ -9,14 +55,11 @@
   <div class="container_central">
     <div class="social_icons">
       <div class="instagram">
-        <!-- <img class="instagram" src="../../../assets/INSTAGRAM1.png" alt="Instagram icon"> -->
       </div>
       <div class="boton">
         <a routerLink="profile"><button class="btn btn-primary">Subscríbase</button></a>
-        <!-- <img class="mail" src="../../../assets/MAIL1.png" alt="Mail icon"> -->
       </div>
       <div class="Twitter">
-        <!-- <img class="Twitter" src="../../../assets/TWITTER1.png" alt="Twitter icon"> -->
       </div>
     </div>
 
@@ -44,7 +87,7 @@
   </div>
 
 </div>
-
+ -->
 
 
 
