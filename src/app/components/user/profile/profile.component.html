@@ -30,9 +30,6 @@
           <div class="form-group  form-group_select">
             <input type="number" formControlName="age" class="form-control form_age" placeholder="Edad">
             <div class="alert" *ngIf="!profileForm.controls['age'].valid && profileForm.controls['age'].touched">Colocar su Edad</div>
-          <!-- </div>
-
-          <div class="form-group"> -->
             <select class="form_text"  type="text" formControlName="gender">
               <option [disabled]="true" [selected]="true" value="Género">Género</option>
               <option value="Masculino">Masculino</option>

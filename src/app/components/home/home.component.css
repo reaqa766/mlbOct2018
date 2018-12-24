@@ -91,11 +91,430 @@ font-size: 1.75em;
 footer {
 margin: 0;
 }
+@media only screen and (min-width:500px ) and (max-width: 915px)  {
+  header div  h1 {
+    font-size: 1.4em;
+    margin-top: 3rem;
+    padding-left: 4rem !important;
+
+  }
 
 
+  .players_pic {
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10%;
+    /* padding: 0 20%; */
+    margin-left: 3rem;
+    border-radius: 6px;
+      }
+
+  main div div div img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px #111;
+  }
+  .img_pic_5, .img_pic_6 {
+  display: block;
+  }
+
+  .img_pic_7, .img_pic_8 {
+    display: none;
+
+  }
+  .text_5, .text_6 {
+    display: block;
+  }
+  .text_7, .text_8 {
+    display: none;
+  }
+  .text_11 {
+    width: 100%;
+    line-height: 1.6em;
+    color: white;
+    font-size: 1.3em;
+    font-weight: 400;
+    text-shadow: 2px 2px 8px #111;
+    text-justify: distribute-all-lines;
+    cursor: pointer;
+
+  }
+
+  .text_12 {
+    width: 100%;
+    line-height: 1.6em;
+    font-weight: bold;
+    font-size: 1.6em;
+    color: rgb(0, 0, 0) !important;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+    text-align: center;
+    text-justify: distribute-all-lines;
+    cursor: pointer;
+
+  }
+  .boton {
+    display: table;
+    height: 2.2em;
+    margin: 2% auto 10%;
+  }
+  .btn {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 2em;
 
 
+  }
 
+}
+@media only screen and (min-width:916px ) and (max-width: 1024px)  {
+  header div  h1 {
+    font-size: 1.8em;
+    margin-top: 3rem;
+    padding-left: 1.25rem;
+
+  }
+
+
+  .players_pic {
+    margin-top: 12rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 6%;
+    /* padding: 0 20%; */
+    margin-left: 3rem;
+    border-radius: 6px;
+      }
+
+  main div div div img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px #111;
+  }
+  .img_pic_5, .img_pic_6, .img_pic_7, .img_pic_8 {
+  display: block;
+  }
+  .text_5, .text_6,.text_7, .text_8 {
+    display: block;
+  }
+
+  .text_11 {
+    width: 100%;
+    line-height: 1.6em;
+    color: white;
+    font-size: 1.3em;
+    font-weight: 400;
+    text-shadow: 2px 2px 8px #111;
+    text-justify: distribute-all-lines;
+    cursor: pointer;
+
+  }
+
+  .text_12 {
+    width: 100%;
+    line-height: 1.6em;
+    font-weight: bold;
+    font-size: 1.6em;
+    color: rgb(0, 0, 0) !important;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+    text-align: center;
+    text-justify: distribute-all-lines;
+    cursor: pointer;
+
+  }
+  .boton {
+    display: table;
+    height: 2.2em;
+    margin: 2% auto 10%;
+  }
+  .btn {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 2.5em;
+
+
+  }
+  .final_text {
+    display: table;
+    width: 100%;
+    background-color: #fff;
+    padding: 0.75em;
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: 600;
+  }
+  .txt_final {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.25em;
+
+  }
+  footer {
+  margin: 0;
+  }
+
+}
+@media only screen and (min-width:1025px ) and (max-width: 1450px)  {
+  header div  h1 {
+    font-size: 2.75em;
+    margin-top: 5rem;
+    padding-left: 4rem;
+
+  }
+
+
+  .players_pic {
+    margin-top: 17rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 6%;
+    /* padding: 0 20%; */
+    margin-left: 3rem;
+    border-radius: 6px;
+      }
+
+  main div div div img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px #111;
+  }
+  .img_pic_5, .img_pic_6, .img_pic_7, .img_pic_8 {
+  display: block;
+  }
+  .text_5, .text_6,.text_7, .text_8 {
+    display: block;
+  }
+
+  .text_11 {
+    width: 100%;
+    line-height: 1.6em;
+    color: white;
+    font-size: 1.3em;
+    font-weight: 400;
+    text-shadow: 2px 2px 8px #111;
+    text-justify: distribute-all-lines;
+    cursor: pointer;
+
+  }
+
+  .text_12 {
+    width: 100%;
+    line-height: 1.6em;
+    font-weight: bold;
+    font-size: 1.6em;
+    color: rgb(0, 0, 0) !important;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+    text-align: center;
+    text-justify: distribute-all-lines;
+    cursor: pointer;
+
+  }
+  .boton {
+    display: table;
+    height: 3em;
+    margin: 2% auto 10%;
+  }
+  .btn {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 3em;
+
+
+  }
+  .final_text {
+    display: table;
+    width: 100%;
+    background-color: #fff;
+    padding: 0.75em;
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: 600;
+  }
+  .txt_final {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.75em;
+
+  }
+  footer {
+  margin: 0;
+  }
+
+}
+@media only screen and (min-width:1455px ) and (max-width: 1920px)  {
+  header div  h1 {
+    font-size: 3em;
+    margin-top: 7rem;
+    padding-left: 3rem;
+
+  }
+
+
+  .players_pic {
+    margin-top: 21rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 6%;
+    /* padding: 0 20%; */
+    margin-left: 3rem;
+    border-radius: 6px;
+      }
+
+  main div div div img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px #111;
+  }
+  .img_pic_5, .img_pic_6, .img_pic_7, .img_pic_8 {
+  display: block;
+  }
+  .text_5, .text_6,.text_7, .text_8 {
+    display: block;
+  }
+
+  .text_11 {
+    width: 100%;
+    line-height: 1.6em;
+    color: white;
+    font-size: 1.3em;
+    font-weight: 400;
+    text-shadow: 2px 2px 8px #111;
+    text-justify: distribute-all-lines;
+    cursor: pointer;
+
+  }
+
+  .text_12 {
+    width: 100%;
+    line-height: 1.6em;
+    font-weight: bold;
+    font-size: 1.6em;
+    color: rgb(0, 0, 0) !important;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+    text-align: center;
+    text-justify: distribute-all-lines;
+    cursor: pointer;
+
+  }
+  .boton {
+    display: table;
+    height: 3em;
+    margin: 4% auto 5%;
+  }
+  .btn {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 3em;
+
+
+  }
+  .final_text {
+    display: table;
+    width: 100%;
+    background-color: #fff;
+    padding: 0.75em;
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: 600;
+  }
+  .txt_final {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.75em;
+
+  }
+  footer {
+  margin: 0;
+  }
+
+}
+@media only screen and (min-width:1921px ) and (max-width: 2600px)  {
+  header div  h1 {
+    font-size: 4em;
+    margin-top: 12rem;
+    padding-left: 6rem;
+
+  }
+
+
+  .players_pic {
+    margin-top: 21rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 6%;
+    /* padding: 0 20%; */
+    margin-left: 3rem;
+    border-radius: 6px;
+      }
+
+  main div div div img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px #111;
+  }
+  .img_pic_5, .img_pic_6, .img_pic_7, .img_pic_8 {
+  display: block;
+  }
+  .text_5, .text_6,.text_7, .text_8 {
+    display: block;
+  }
+
+  .text_11 {
+    width: 100%;
+    line-height: 1.6em;
+    color: white;
+    font-size: 1.3em;
+    font-weight: 400;
+    text-shadow: 2px 2px 8px #111;
+    text-justify: distribute-all-lines;
+    cursor: pointer;
+
+  }
+
+  .text_12 {
+    width: 100%;
+    line-height: 1.6em;
+    font-weight: bold;
+    font-size: 1.6em;
+    color: rgb(0, 0, 0) !important;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+    text-align: center;
+    text-justify: distribute-all-lines;
+    cursor: pointer;
+
+  }
+  .boton {
+    display: table;
+    height: 3em;
+    margin: 2% auto 10%;
+  }
+  .btn {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 3em;
+
+
+  }
+  .final_text {
+    display: table;
+    width: 100%;
+    background-color: #fff;
+    padding: 0.75em;
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: 600;
+  }
+  .txt_final {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.75em;
+
+  }
+  footer {
+  margin: 0;
+  }
+
+}
 
 
 

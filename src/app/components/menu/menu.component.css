@@ -1,5 +1,6 @@
 body {
   box-sizing: border-box;
+
 }
 .menu_bar {
   position: sticky;
@@ -8,7 +9,7 @@ body {
   z-index: 100;
   top: 0;
   height: 2em;
-  width: max-content;
+  width: 100%;
 
 }
 .menu_ul {
@@ -22,9 +23,10 @@ body {
 }
 
 .nav-link {
+  padding: 0 !important;
   text-align: center;
   color: rgb(250, 232, 215);
-  font-size: 1.5em;
+  font-size: 1.25em;
   font-weight: 500;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -34,10 +36,10 @@ body {
   background-color: rgb(231, 226, 219);
 }
 
-.menu_ul {
+/* .menu_ul {
   display: flex;
   align-content: center;
-}
+} */
 
 .nav-item {
   flex: 1 0 0;
@@ -81,84 +83,57 @@ body {
   padding-top: 0.25em;
 }
 
-
-@media (max-width: 449px) {
+@media only screen and (min-width:500px ) and (max-width: 915px)  {
   .menu_bar {
-    height: 1.75em;
-
+    height: 2.2em;
   }
-  .menu_ul {
-    height: 5.75rem;
-
   }
 
 
-
-  .register2 {
-    display: block;
-
-  }
-
-  .menu_bar {
-    width: 100%;
-
-  }
-
+@media only screen and (min-width:916px ) and (max-width: 1439px)  {
   .nav-item {
-    flex: 1 0 0;
+    display: table;
   }
-
   .nav-link {
-    font-size: 1em;
-    padding-top: 0;
+    padding: 0 !important;
+    display: table-cell;
+    vertical-align: middle;
+    height: 3rem;
   }
-
-  .dropdown-item {
-    font-size: .8rem;
-  }
-
-}
-
-@media only screen and (min-width: 770px) {
-  .register2 {
-    display: block;
-  }
-
-
-  .nav-item {
-    flex: 1 0 0;
-  }
-
-  .nav-link {
-    font-size: .55rem;
-  }
-
-  .dropdown-item {
-    font-size: .55rem;
-  }
-}
-
-@media only screen and (min-width: 1023px) {
-  .nav-link {
-    font-size: 0.75rem;
-  }
-
-  .dropdown-item {
-    font-size: 0.75rem;
-  }
-}
-
-@media only screen and (min-width: 1243px) {
   .menu_bar {
-    height: 2.75em;
-
+    height: 3em;
   }
 
+  }
+@media only screen and (min-width:1440px ) and (max-width: 1920px)  {
+  .nav-item {
+    display: table;
+  }
   .nav-link {
-    font-size: 1rem;
+    padding: 0 !important;
+    display: table-cell;
+    vertical-align: middle;
+    height: 4rem;
+    font-size: 2em;
+  }
+  .menu_bar {
+    height: 4em;
   }
 
-  .dropdown-item {
-    font-size: 1rem;
   }
+@media only screen and (min-width:1920px ) and (max-width: 2600px)  {
+  .nav-item {
+    display: table;
+  }
+  .nav-link {
+    padding: 0 !important;
+    display: table-cell;
+    vertical-align: middle;
+    height: 6rem;
+    font-size: 4em;
+  }
+  .menu_bar {
+    height: 6em;
+  }
+
 }
