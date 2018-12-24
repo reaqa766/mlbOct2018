@@ -5,7 +5,7 @@ header div  h1 {
   color: white;
   text-align: center;
   margin-top: 1rem;
-  margin-left: -1rem;
+  /* margin-left: -1rem; */
   /* line-height: 5em; */
 
 }
@@ -81,6 +81,10 @@ p {
   .title_page p {
     font-size: 1.75em;
   }
+  .title_h1 {
+    margin-left: 4%;
+
+  }
 
   .card {
     margin-left: 12%;
@@ -93,7 +97,7 @@ p {
     height: 2em;
   }
   .btn {
-font-size: 2em;
+font-size: 1.5em;
 }
 }
 @media only screen and (min-width:1024px ) and (max-width: 1440px) {
@@ -121,11 +125,11 @@ header div h1 {
 
   }
   .form-control {
-    font-size: 2em;
+    font-size: 1em;
     height: 3em;
   }
   .btn {
-font-size: 3em;
+    font-size: 1em;
 }
 }
 @media only screen and (min-width:1441px ) and (max-width: 2600px) {
@@ -155,10 +159,10 @@ font-size: 3em;
     }
 
     .form-control {
-      font-size: 2em;
+      font-size: 1em;
       height: 3em;
     }
     .btn {
-font-size: 3em;
+      font-size: 1em;
 }
     }
