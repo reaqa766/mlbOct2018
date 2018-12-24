@@ -5,6 +5,7 @@ body {
   background: url(./assets/FondoWEBMODIF.png);
   background-size:cover;
   background-repeat:no-repeat;
+  background-position: center;
   font-family: 'Roboto', sans-serif;
   /* font-family: 'Lato', sans-serif; */
   box-sizing: border-box;
@@ -14,11 +15,12 @@ body {
 @media only screen and (max-width: 767px) {
 
   body {
-    background: url(./assets/FondoPAGWEBMaderaNVOMod.png);
+    background: url(./assets/FondoPAGWEBMaderaNVO.png);
     background-size: cover;
     background-repeat:repeat;
     font-family: 'Roboto', sans-serif;
-    /* box-sizing: border-box; */
+    /* background-position: center; */
+    box-sizing: border-box;
   }
 }
 

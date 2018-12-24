@@ -1,22 +1,27 @@
 /*-- Landing Page 2 -- */
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 header div  h1 {
-  font-size: 2em;
+  font-size: 1.20em;
   font-weight: 700;
   text-shadow: 2px 2px 8px #111;
   color: white;
   text-align: center;
-  margin-top: 3%;
+  margin-top: 1rem;
   /* line-height: 5em; */
 
 }
 
 .players_pic {
-  margin-top: 8em;
+  margin-top: 6rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 10%;
-  padding: 0 12%;
+  padding: 0 10%;
   border-radius: 6px;
 
 
@@ -34,20 +39,58 @@ display: none;
 display: none;
 }
 
-main div div div p{
+.text_11 {
   width: 8em;
   line-height: 1em;
-  margin: 5% 0;
+  margin: 1rem 0 1.5rem;
   color: white;
   font-weight: 400;
   text-shadow: 2px 2px 8px #111;
   text-justify: distribute-all-lines;
   text-align: center;
+  cursor: pointer;
+
 }
 
+.text_12 {
+  font-weight: bold;
+  font-size: 1.25em;
+  color: rgb(0, 0, 0) !important;
+  text-shadow: 2px 2px 4px rgb(255, 255, 255);
+  text-align: center;
+  cursor: pointer;
+
+}
+.boton {
+  display: table;
+  height: 2.2em;
+  margin: 2% auto 10%;
+}
+.btn {
+display: table-cell;
+vertical-align: middle;
+font-size: 1.75em;
 
 
+}
+.final_text {
+  display: table;
+  width: 100%;
+  height: max-content;
+  background-color: #fff;
+  padding: 0.75em;
+  text-align: justify;
+  text-justify: inter-word;
+  font-weight: 600;
+}
+.txt_final {
+  display: table-cell;
+  vertical-align: middle;
 
+}
+footer {
+margin: 0;
+}
 
 
 

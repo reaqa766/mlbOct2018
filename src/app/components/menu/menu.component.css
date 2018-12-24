@@ -1,3 +1,6 @@
+body {
+  box-sizing: border-box;
+}
 .menu_bar {
   position: sticky;
   background-color: #222222;

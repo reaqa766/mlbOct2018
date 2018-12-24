@@ -1,5 +1,11 @@
+<header>
+  <div class="title">
+    <h1 class="title_h1">Temporada 2019</h1>
+  </div>
+</header>
+
 <div class="title_page">
-  <p>Regístrese para conocer cuando se activa la página</p>
+  <p>Subscríbase para cuando inicie la Web</p>
 </div>
 <div class="card">
   <div class="card-body">
@@ -21,13 +27,13 @@
             <div class="alert" *ngIf="!profileForm.controls['email'].valid && profileForm.controls['email'].touched">Colocar un email válido</div>
           </div>
 
-          <div class="form-group">
-            <input type="number" formControlName="age" class="form-control" placeholder="Edad">
+          <div class="form-group  form-group_select">
+            <input type="number" formControlName="age" class="form-control form_age" placeholder="Edad">
             <div class="alert" *ngIf="!profileForm.controls['age'].valid && profileForm.controls['age'].touched">Colocar su Edad</div>
-          </div>
+          <!-- </div>
 
-          <div class="form-group">
-            <select type="text" formControlName="gender">
+          <div class="form-group"> -->
+            <select class="form_text"  type="text" formControlName="gender">
               <option [disabled]="true" [selected]="true" value="Género">Género</option>
               <option value="Masculino">Masculino</option>
               <option value="Femenino">Femenino</option>

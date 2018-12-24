@@ -6,8 +6,8 @@
 </header>
 
 <main>
-  <div  class="players_pic">
-    <div *ngFor="let player of players; let i=index" >
+  <div class="players_pic">
+    <div *ngFor="let player of players; let i=index">
       <div [ngClass]="'pic_'+ (i+1)">
         <img [ngClass]="'img_pic_'+ (i+1)" [src]="'../../../assets/'  + player.code + '.jpg'" alt="Player Image">
       </div>
@@ -21,10 +21,19 @@
         </div>
       </div>
     </div>
-    </div>
+  </div>
 </main>
 
 <footer>
+  <div class="boton">
+    <a routerLink="profile"><button class="btn btn-primary">Subscríbase</button></a>
+  </div>
+  <div class="final_text">
+    <p class="txt_final">Muy pronto tendrás acceso a todos los venezolanos activos en las Grandes Ligas,
+      de una forma cómoda, diaria, sin tener que buscar y buscar estadísticas durante horas.
+      Podrás conocer de forma inmediata la posición, el equipo, el nombre, el apodo e inclusive la cara de todos los
+      Vinotintos en MLB.</p>
+  </div>
 
 </footer>
 

@@ -1,20 +1,61 @@
+header div  h1 {
+  font-size: 1.20em;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px #111;
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+  margin-left: -1rem;
+
+}
+
+
 .title_page {
   color: white;
   font-weight: 700;
-  margin-top: 20%;
-  margin-left: 55%;
-
+  margin-top: 23%;
+  margin-left: 8%;
+  width: 85%;
+  text-align: center;
+  text-shadow: 2px 2px 8px #111;
 }
 p {
-  font-size: 1.5em;
+  font-size: 1em;
+
 }
 .card {
-  margin-left: 54%;
-  width: 35vw;
+  margin-left: 5%;
+  width: 90%;
   background-color: whitesmoke;
   border-radius: 10px;
-  margin-bottom: 2%;
+  margin-bottom: 4%;
 }
+.form-control {
+  font-size: 0.85em;
+  color: rgb(189, 184, 184);
+
+}
+.form-group_select {
+  display: flex;
+}
+
+.form_age {
+  width: 45%;
+
+}
+.form_text {
+  margin-left: 2rem;
+  font-size: 0.85em;
+  color: rgb(116, 113, 113) !important;
+  height: 2.5em;
+  border: solid 1px rgb(211, 208, 208) !important;
+  border-radius: 2px !important;
+  width: 45%;
+
+
+}
+
+
 .alert {
   color: white;
   background-color: rgba(241, 0, 0, 0.5);
@@ -28,11 +69,23 @@ p {
   width: 100%;
 }
 
-@media only screen and (min-width:1220px ) and (max-width: 1440px) {
+@media only screen and (min-width:767px ) and (max-width: 1023px) {
 
+  .title_page {
+    margin-left: 40%;
+
+  }
 
   p {
-    font-size: 1.2em;
+    font-size: 1em;
+    margin-top: -5%;
+
+  }
+  .card {
+    margin-left: 35%;
+    /* margin-top: -5%; */
+    width: 60vw;
+
   }
 }
 @media only screen and (min-width:1024px ) and (max-width: 1219px) {
@@ -55,46 +108,10 @@ p {
 
   }
 }
-@media only screen and (min-width:767px ) and (max-width: 1023px) {
+@media only screen and (min-width:1220px ) and (max-width: 1440px) {
 
-  .title_page {
-    margin-left: 40%;
 
-  }
-
-  p {
-    font-size: 1em;
-    margin-top: -5%;
-
-  }
-  .card {
-    margin-left: 35%;
-    /* margin-top: -5%; */
-    width: 60vw;
-
-  }
-}
-@media only screen and (min-width:315px ) and (max-width: 766px) {
-
-  .title_page {
-    margin-left: 13%;
-    margin-top: 12em;
-  }
-
-  p {
-    font-size: 0.90em;
-    /* margin-top: -5%; */
-    margin-left: 0%;
-
-  }
-  .card {
-    margin-left: 12%;
-    /* margin-top: -5%; */
-    width: 75vw;
-
-  }
-  .btn-secondary {
-    margin-top: 1em;
-  }
-
-}
+      p {
+        font-size: 1.2em;
+      }
+    }
