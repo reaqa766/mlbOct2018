@@ -69,9 +69,10 @@ export class PlayerinfoComponent implements OnInit { public players = [];
 
   ngOnInit() {
     // this.isLoading = true;
+    // Cambio de ID potr CODE Dic 2018
     this.route.params.subscribe( params => {
-      if (this.idplayer !== params.id) {
-        this.idplayer = params.id;
+      if (this.idplayer !== params.code) {
+        this.idplayer = params.code;
         // console.log('players', this.players);
         this.getPlayersMap();
       }

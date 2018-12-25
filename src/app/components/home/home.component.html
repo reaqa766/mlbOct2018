@@ -9,7 +9,9 @@
   <div class="players_pic">
     <div *ngFor="let player of players; let i=index">
       <div [ngClass]="'pic_'+ (i+1)">
-        <img [ngClass]="'img_pic_'+ (i+1)" (click)='textChange(i)' [src]="'../../../assets/'  + player.code + '.jpg'" alt="Player Image">
+        <a routerLink="/playerinfo/{{player.code}}">
+
+        <img [ngClass]="'img_pic_'+ (i+1)" (click)='textChange(i)' [src]="'../../../assets/'  + player.code + '.jpg'" alt="Player Image"></a>
       </div>
 
       <div [ngClass]="'text_'+ (i+1)">
