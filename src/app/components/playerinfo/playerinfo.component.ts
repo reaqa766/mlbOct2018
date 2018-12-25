@@ -5,6 +5,7 @@ import { Players } from '../../../interfaces/players';
 import { PagerService } from '../../../services/index';
 import { Route } from '@angular/compiler/src/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { url } from 'inspector';
 
 
 @Component({
@@ -14,6 +15,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class PlayerinfoComponent implements OnInit { public players = [];
   public playersSort = [];
+  // Cambiar  a false cuando este en linea
+  isOffline = true;
   groups: any;
   selectedGroup: any;
   elarray: any;
@@ -34,7 +37,7 @@ export class PlayerinfoComponent implements OnInit { public players = [];
     pager: any = {};
     idplayer: any;
     jugador: any = {};
-
+    data = '';
     // paged items
     pagedItems: any[];
 
@@ -84,38 +87,49 @@ export class PlayerinfoComponent implements OnInit { public players = [];
   // Convertir el Array de Observables a un Array de Objetos.
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
-    // tslint:disable-next-line:prefer-const
-    let InfoObsPlayer = this.playerService.getAllPlayersActives();
-    let index = 0;
-    // tslint:disable-next-line:prefer-const
-    for (let obs of InfoObsPlayer) {
-      obs.pipe(take(1)).subscribe(res => {
-        this.players.push(res);
-
-        if ((InfoObsPlayer.length - 1) === index) {
-          this.players = this.players.map(player => {
-            const newPlayer: Players = {};
-            Object.assign(newPlayer, player.people[0]);
-            return newPlayer;
-          });
-
-          // tslint:disable-next-line:prefer-const
-          for (let jugador of this.players) {
-            // console.log('Comparando: '+jugador.id+' con '+this.idplayer);
-            // tslint:disable-next-line:triple-equals
-            if (jugador.id == this.idplayer) {
-              // console.log('items4', jugador.fullName);
-              this.player = jugador;
-              break;
+    if (!this.isOffline) {
+      // tslint:disable-next-line:prefer-const
+      let InfoObsPlayer = this.playerService.getAllPlayersActives();
+      let index = 0;
+      // tslint:disable-next-line:prefer-const
+      for (let obs of InfoObsPlayer) {
+        obs.pipe(take(1)).subscribe(res => {
+          this.players.push(res);
+          if ((InfoObsPlayer.length - 1) === index) {
+            this.players = this.players.map(player => {
+              const newPlayer: Players = {};
+              Object.assign(newPlayer, player.people[0]);
+              return newPlayer;
+            });
+            // tslint:disable-next-line:prefer-const
+            for (let jugador of this.players) {
+              // console.log('Comparando: '+jugador.id+' con '+this.idplayer);
+              // tslint:disable-next-line:triple-equals
+              if (jugador.id == this.idplayer) {
+                // console.log('items4', jugador.fullName);
+                this.player = jugador;
+                break;
+              }
+              // console.log('items5', 1);
+              // console.log('items7', this.idplayer);
             }
-            // console.log('items5', 1);
-            // console.log('items7', this.idplayer);
-
           }
-
+          index++;
+        });
+      }
+    } else {
+      this.players = this.playerService.getAllPlayersActivesOffline();
+      for (const jugador of this.players) {
+        // console.log('Comparando: '+jugador.id+' con '+this.idplayer);
+        // tslint:disable-next-line:triple-equals
+        if (jugador.id == this.idplayer) {
+          // console.log('items4', jugador.fullName);
+          this.player = jugador;
+          break;
         }
-        index++;
-      });
+        // console.log('items5', 1);
+        // console.log('items7', this.idplayer);
+      }
     }
 
   }

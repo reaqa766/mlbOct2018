@@ -32,12 +32,11 @@
 
 
 .player_grid {
-    width: 350px;
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 3fr 4fr 1fr 1fr;
     background-color: rgb(255, 255, 255);
-    margin: 1rem 1rem;
+    margin-top: 1rem;
     border-radius: 5px;
 
 }
@@ -48,68 +47,68 @@
   text-align: center;
 }
 .player_pict2 {
-    width: 50%;
+    width: 60%;
     border-radius: 4px;
     text-align: center;
     border: solid black 1px;
 }
 
 
-/* .card-title{
-  color:rgb(255, 255, 255);
-  text-shadow: 2px 2px 8px black;
+.card-title{
+  color:rgb(0, 0, 0);
   font-size: 1.5rem;
   text-align: center;
-} */
+  padding-top: 1rem;
+}
 
 .logo_team {
   grid-column: 2/3;
   grid-row: 1/2;
-  /* margin: auto; */
-  /* width: 100%; */
-
 }
 .logo_team img {
   margin: auto;
-  width: 5rem;
+  width: 100%;
   padding-top: 5rem;
 
 }
 
-/* .player_stats {
-  width: 10rem;
+.player_stats {
+    width: 10rem;
     grid-column: 1/3;
     grid-row: 3/4;
     border-radius: 5px;
-} */
+    margin: 0 .5rem 0 0;
+}
 
-/* .table td, table th {
-  padding: 3px !important;
-} */
+.table td, table th {
+  padding: 5px !important;
 
-/* .player_data {
+}
+
+.player_data {
     grid-column: 1/3;
     grid-row: 2/3;
     height: 2%;
     margin-top: 2rem;
-} */
-
-/* .button {
+}
+.boton {
   grid-column: 1/3;
   grid-row: 4/5;
+
+  text-align: center;
+}
+.button {
   border-radius: 5px;
   cursor: pointer;
-} */
+}
 
-
-
-/* .table-header {
+.table-header {
     background-color: rgb(221, 216, 216);
 }
 .table-header2 {
     background-color: rgb(240, 235, 235);
 
-} */
+}
 
 
 

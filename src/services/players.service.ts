@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Players } from '../interfaces/players';
 import { StatsDayliPlayer } from '../interfaces/stats-dayli-player';
+import playerData from '../assets/data';
 
 import { Observable } from 'rxjs';
 
@@ -108,6 +109,14 @@ export class PlayersService {
     return this.http.get<StatsDayliPlayer>(this._url);
   }
 
+  getPlayeActiveOffline(code: number): any {
+    for (const player of playerData) {
+      if (player.id === code) {
+        return player;
+      }
+    }
+  }
+
   // Para colocar todos los Json en un solo array. Genera Observables
   getAllPlayersActives(): Observable<StatsDayliPlayer | undefined>[] {
     // tslint:disable-next-line:prefer-const
@@ -119,6 +128,18 @@ export class PlayersService {
       let dataP = this.getPlayeActive();
       dataAllPlayers.push(dataP);
       this.playerCode = code;
+    }
+    return dataAllPlayers;
+  }
+
+  getAllPlayersActivesOffline(): any[] {
+    // tslint:disable-next-line:prefer-const
+    let dataAllPlayers: any[] = [];
+    // tslint:disable-next-line:prefer-const
+    for (let code of this.playersCode) {
+      // tslint:disable-next-line:prefer-const
+      let dataP = this.getPlayeActiveOffline(code);
+      dataAllPlayers.push(dataP);
     }
     return dataAllPlayers;
   }
