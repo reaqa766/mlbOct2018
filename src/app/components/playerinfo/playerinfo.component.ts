@@ -5,7 +5,7 @@ import { Players } from '../../../interfaces/players';
 import { PagerService } from '../../../services/index';
 import { Route } from '@angular/compiler/src/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { url } from 'inspector';
+// import { url } from 'inspector';
 
 
 @Component({
