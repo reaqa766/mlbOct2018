@@ -1,3 +1,5 @@
+<!-- <div class="container-top"></div> -->
+
 <div class="container-actives">
 <div class="container-all">
   <h1 class="bioActives-title">Estadísticas del Jugador</h1>
@@ -13,7 +15,7 @@
       <div class="player_pict">
         <h5 class="card-title">{{player.fullName}}</h5>
         <img class="player_pict2" src="../../../assets/{{player.id}}.jpg" alt="Player Picture">
-        <p class="title-position"> TEMP. 2018 </p>
+        <p class="title-position"> Temp. 2018 </p>
       </div>
       <div class="logo_team" *ngIf="player && player.stats">
           <img src="../../../assets/{{player.stats[0].splits[0].team.id}}.png" alt="">
@@ -23,8 +25,8 @@
         <table class="table table-hover  text-center">
           <thead class="table-header">
             <tr>
-              <th style="width: 10%;" scope="col">Pos</th>
-              <th style="width: 10%;" scope="col">VB</th>
+              <th style="width: 5%;" scope="col">Pos</th>
+              <th style="width: 5%;" scope="col">VB</th>
               <th style="width: 5%;" scope="col">Avg</th>
               <th style="width: 5%;" scope="col">CA</th>
               <th style="width: 5%;" scope="col">Hits</th>
@@ -38,8 +40,8 @@
 
           <tbody class="table-header2">
             <tr *ngIf="player && player.primaryPosition && player.stats">
-              <td style="width: 10%;">{{player.primaryPosition.abbreviation}}</td>
-              <td style="width: 10%;">{{player.stats[0].splits[0].stat.atBats}}</td>
+              <td style="width: 5%;">{{player.primaryPosition.abbreviation}}</td>
+              <td style="width: 5%;">{{player.stats[0].splits[0].stat.atBats}}</td>
               <td style="width: 5%;">{{player.stats[0].splits[0].stat.avg}}</td>
               <td style="width: 5%;">{{player.stats[0].splits[0].stat.runs}}</td>
               <td style="width: 5%;">{{player.stats[0].splits[0].stat.hits}}</td>
