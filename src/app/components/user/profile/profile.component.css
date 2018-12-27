@@ -132,7 +132,7 @@ header div h1 {
     font-size: 1em;
 }
 }
-@media only screen and (min-width:1441px ) and (max-width: 2600px) {
+@media only screen and (min-width:1441px ) and (max-width: 1599px) {
 
 
   header div h1 {
@@ -144,6 +144,40 @@ header div h1 {
     .title_page {
       margin-left: 8%;
       margin-top: 20%;
+      margin-bottom: 0 !important;
+
+    }
+    .title_page p {
+      font-size: 3em;
+    }
+
+    .card {
+      margin-left: 22%;
+      /* margin-top: -5%; */
+      width: 60vw;
+
+    }
+
+    .form-control {
+      font-size: 1em;
+      height: 3em;
+    }
+    .btn {
+      font-size: 1em;
+}
+    }
+@media only screen and (min-width:1600px ) and (max-width: 2600px) {
+
+
+  header div h1 {
+    font-size: 4.5em;
+    margin-top: 5%;
+    margin-left: 2.5rem;
+  }
+
+    .title_page {
+      margin-left: 8%;
+      margin-top: 14%;
       margin-bottom: 0 !important;
 
     }

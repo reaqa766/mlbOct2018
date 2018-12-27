@@ -30,9 +30,7 @@ export class ProfileComponent implements OnInit {
                   'gender': [null, Validators.required],
                   'age': [null, Validators.required],
                   'country': [null, Validators.required],
-                  'comments': [null],
-
-
+                  'comments': [null]
                 });
               }
   ngOnInit() {

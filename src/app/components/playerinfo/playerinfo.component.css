@@ -11,12 +11,12 @@
 .bioActives-title {
     color: antiquewhite;
     font-size: 1.25rem;
-    padding: .3rem;
+    padding-top: .3rem;
     background-color: rgba(3, 2, 2, 0.5);
-    width: 12em;
+    /* width: 16em; */
     height: 1.75em;
     border-radius: 5px;
-    margin: 0 auto;
+    text-align: center;
   }
 
 .fa-baseball-ball {
@@ -124,13 +124,14 @@
 @media only screen and (min-width:767px ) and (max-width: 1023px) {
   .container-all {
     position: absolute;
-    top: 11rem;
+    top: 13rem;
 
   }
 
   .bioActives-title {
       font-size: 1.75rem;
-      margin: 0 auto;
+      padding-top: .45rem;
+
   }
 
   .player_grid {
@@ -192,24 +193,36 @@
 }
 @media only screen and (min-width:1024px ) and (max-width: 1279px) {
   .container-all {
-    top: 14.45rem;
+    top: 16rem;
   }
 
   .bioActives-title {
-      width: 14em;
       font-size: 2.25rem;
+  	  padding: 0.5rem 0;
   }
 
   .player_grid {
       display: grid;
-      grid-template-columns: 3fr 2fr;
-      grid-template-rows: 2fr 3fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 3fr ;
+      grid-template-rows: 3fr 1fr 1fr;
   }
+  .player_pict {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
   .player_pict2 {
-    width: 40%;
+    width: 85%;
 }
+.logo_team {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
 .logo_team img {
-  width: 65%;
+  padding-top: 5rem;
+  padding-right: 1rem;
+  width: 100%;
 
 }
 
@@ -221,13 +234,11 @@
 
   }
 
-  .logo_team img {
-    padding-top: 9rem;
-    padding-right: 1.5rem;
-  }
 
   .player_stats {
-      width: 100%;
+    grid-column: 1/4;
+    grid-row: 2/3;
+    width: 100%;
   }
 
   .table td, table th {
@@ -236,188 +247,335 @@
   }
 
   .player_data {
-      font-size: 2rem;
+    grid-column: 3/4;
+    grid-row: 1/2;
+    width: 100%;
+    font-size: 1.25rem;
   }
+  .boton {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    text-align: center;
+  }
+
   .button {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .table-header {
-    font-size: 1.85rem;
+    font-size: 1.25rem;
 }
 .table-header2 {
-    font-size: 1.85rem;
+    font-size: 1.25rem;
 }
 }
 @media only screen and (min-width:1280px ) and (max-width: 1439px) {
   .container-all {
     width: 100% !important;
     position: absolute;
-    top: 18rem;
+    top: 20em;
 
   }
 
   .bioActives-title {
-      width: 14em;
       font-size: 2.85rem;
-      margin-left:  21rem;
+      padding-top: .7rem;
+
   }
 
   .player_grid {
-      grid-template-rows: 4fr 4fr 1fr 1fr;
-  }
-  .player_pict2 {
-    width: 45%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr ;
+    grid-template-rows: 3fr 1fr 1fr;
 }
+.player_pict {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.player_pict2 {
+  width: 85%;
+}
+.logo_team {
+grid-column: 2/3;
+grid-row: 1/2;
+}
+
 .logo_team img {
-  width: 60%;
+padding-top: 5rem;
+padding-right: 1rem;
+width: 100%;
 
 }
 
-  .card-title{
-      font-size: 2rem;
-  }
-  .title-position {
-      font-size: 1.75rem;
+.card-title{
+  font-size: 2rem;
+}
+.title-position {
+  font-size: 1.75rem;
 
-  }
+}
 
-  .logo_team img {
-      padding-top: 6rem;
-      padding-right: 1.5rem;
-  }
 
-  .player_stats {
-      width: 100%;
-  }
+.player_stats {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  width: 100%;
+}
 
-  .table td, table th {
-    padding: 7px !important;
-  }
+.table td, table th {
+  padding: 7px !important;
 
-  .player_data {
-    font-size: 2rem;
-  }
-  .button {
-    font-size: 2rem;
-  }
+}
 
-  .table-header {
-    font-size: 1.85rem;
+.player_data {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  width: 100%;
+  font-size: 1.25rem;
+}
+.boton {
+  grid-column: 1/4;
+  grid-row: 3/4;
+  text-align: center;
+}
+
+.button {
+  font-size: 1.5rem;
+}
+
+.table-header {
+  font-size: 1.25rem;
 }
 .table-header2 {
-    font-size: 1.85rem;
+  font-size: 1.25rem;
 }
 }
-@media only screen and (min-width:1440px ) and (max-width: 1920px) {
+@media only screen and (min-width:1440px ) and (max-width: 1599px) {
   .container-all {
-    top: 25rem;
+    top: 22rem;
   }
 
   .bioActives-title {
-      width: 14em;
       font-size: 2.85rem;
-  }
+      padding-top: .7rem;
 
+  }
   .player_grid {
-      grid-template-columns: 3fr 2fr;
-      grid-template-rows: 2fr 2fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr ;
+    grid-template-rows: 4fr 1fr 1fr;
+    height: 100%;
+}
+
+
+  .player_pict {
+    grid-column: 1/2;
+    grid-row: 1/2;
   }
+
   .player_pict2 {
-      width: 30%;
+    width: 85%;
 }
+.logo_team {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
 .logo_team img {
-    width: 60%;
-
+  padding-top: 8rem;
+  padding-right: 1rem;
+  width: 90%;
 }
-
-
   .card-title{
-      font-size: 2rem;
+    font-size: 2rem;
   }
   .title-position {
-      font-size: 1.75rem;
-
+    font-size: 1.75rem;
   }
-
-  .logo_team img {
-    padding-top: 9rem;
-    padding-right: 1.5rem;
-  }
-
   .player_stats {
+    grid-column: 1/4;
+    grid-row: 2/3;
     width: 100%;
   }
 
   .table td, table th {
     padding: 7px !important;
+
   }
 
   .player_data {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    width: 100%;
     font-size: 2rem;
   }
+  .boton {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    text-align: center;
+  }
+
   .button {
     font-size: 2rem;
   }
 
   .table-header {
-    font-size: 1.85rem;
+    font-size: 2rem;
 }
 .table-header2 {
-    font-size: 1.85rem;
+    font-size: 2rem;
 }
 }
-@media only screen and (min-width:1921px ) and (max-width: 3500px) {
+@media only screen and (min-width:1600px ) and (max-width: 1920px) {
   .container-all {
-    top: 36rem;
+    top: 28rem;
   }
 
   .bioActives-title {
-      width: 14em;
-      font-size: 3.2rem;
-  }
+      font-size: 2.85rem;
+      padding-top: .7rem;
 
-  .player_grid {
-      display: grid;
-      grid-template-columns: 3fr 2fr;
-      grid-template-rows: 5fr 3fr 1fr 1fr;
   }
-  .player_pict2 {
-    width: 60%;
+  .player_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr ;
+    grid-template-rows: 4fr 1fr 1fr;
+    height: 100%;
 }
 
+
+  .player_pict {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .player_pict2 {
+    width: 85%;
+}
+.logo_team {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.logo_team img {
+  padding-top: 8rem;
+  padding-right: 1rem;
+  width: 90%;
+}
   .card-title{
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .title-position {
-    font-size: 2.5rem;
-
+    font-size: 1.75rem;
   }
-
-  .logo_team img {
-    padding-top: 9rem;
-    padding-right: 1.5rem;
-  }
-
   .player_stats {
-      width: 100%;
+    grid-column: 1/4;
+    grid-row: 2/3;
+    width: 100%;
   }
 
   .table td, table th {
     padding: 7px !important;
+
   }
 
   .player_data {
-    font-size: 3rem;
+    grid-column: 3/4;
+    grid-row: 1/2;
+    width: 100%;
+    font-size: 2rem;
   }
+  .boton {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    text-align: center;
+  }
+
   .button {
-    font-size: 3.25rem;
+    font-size: 2rem;
   }
 
   .table-header {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
-  .table-header2 {
-    font-size: 2.5rem;
+.table-header2 {
+    font-size: 2rem;
+}
+}
+@media only screen and (min-width:1921px ) and (max-width: 3500px) {
+  .container-all {
+    top: 25rem;
+  }
+
+  .bioActives-title {
+      font-size: 2.85rem;
+      padding-top: .7rem;
+
+  }
+  .player_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr ;
+    grid-template-rows: 4fr 1fr 1fr;
+    height: 100%;
+}
+
+
+  .player_pict {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .player_pict2 {
+    width: 85%;
+}
+.logo_team {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.logo_team img {
+  padding-top: 8rem;
+  padding-right: 1rem;
+  width: 90%;
+}
+  .card-title{
+    font-size: 2rem;
+  }
+  .title-position {
+    font-size: 1.75rem;
+  }
+  .player_stats {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    width: 100%;
+  }
+
+  .table td, table th {
+    padding: 7px !important;
+
+  }
+
+  .player_data {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    width: 100%;
+    font-size: 2rem;
+  }
+  .boton {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    text-align: center;
+  }
+
+  .button {
+    font-size: 2rem;
+  }
+
+  .table-header {
+    font-size: 2rem;
+}
+.table-header2 {
+    font-size: 2rem;
 }
 }
