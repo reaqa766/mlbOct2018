@@ -99,14 +99,67 @@ footer {
 margin: 0;
 }
 
-@media only screen and (min-width:631px ) and (max-width: 820px) and (orientation: landscape) {
-
+@media only screen and (min-width:320px ) and (max-width: 331px)  {
   header div  h1 {
-    margin-top: 2rem !important;
-    margin-left: 1rem !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
     padding-left: 0 !important;
 
   }
+
+  .players_pic {
+    position: relative !important;
+    /* margin-top: 6rem; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10%;
+    /* padding: 0 10%; */
+    border-radius: 6px;
+    top: 1rem !important;
+
+
+  }
+  .boton {
+    margin: 0% !important;
+    width: 100% !important;
+  }
+  .btn-primary {
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+
+}
+
+@media only screen and (min-width:631px ) and (max-width: 820px) and (orientation: landscape) {
+
+  header div  h1 {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+
+  }
+
+  .players_pic {
+    position: relative !important;
+    /* margin-top: 6rem; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10%;
+    /* padding: 0 10%; */
+    border-radius: 6px;
+    top: 1rem !important;
+
+
+  }
+  .boton {
+    margin: 0% !important;
+    width: 100% !important;
+  }
+  .btn-primary {
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+
 
 }
 @media only screen and (min-width:500px ) and (max-width: 915px)  {
@@ -180,6 +233,7 @@ margin: 0;
   display: table-cell;
   vertical-align: middle;
   font-size: 2em;
+
 
 
   }
@@ -449,7 +503,7 @@ margin: 0;
 @media only screen and (min-width:1921px ) and (max-width: 2600px)  {
   header div  h1 {
     font-size: 4em;
-    margin-top: 12rem;
+    margin-top: 16rem;
     padding-left: 6rem;
 
   }
