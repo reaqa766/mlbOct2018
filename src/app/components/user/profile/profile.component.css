@@ -70,6 +70,81 @@ p {
   width: 100%;
 }
 
+@media only screen and (min-width:320px ) and (max-width: 1023px) and (orientation: landscape) {
+
+  header div  h1 {
+    font-size: 1.50em;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px #111;
+    color: white;
+    text-align: center;
+    margin-top: 2.5rem;
+    /* margin-left: -1rem; */
+    /* line-height: 5em; */
+
+  }
+
+
+  .title_page {
+    color: white;
+    font-weight: 700;
+    font-size: 1.75em !important;
+    margin-top: 16% !important;
+    margin-left: 8%;
+    width: 85%;
+    text-align: center;
+    text-shadow: 2px 2px 8px #111;
+  }
+  p {
+    font-size: 1em;
+
+  }
+  .card {
+    margin-left: 5%;
+    width: 90%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin-bottom: 6%;
+  }
+  .form-control {
+    font-size: 0.85em;
+    color: rgb(189, 184, 184);
+
+  }
+  .form-group_select {
+    display: flex;
+  }
+
+  .form_age {
+    width: 45%;
+
+  }
+  .form_text {
+    margin-left: 2rem;
+    font-size: 0.85em;
+    color: rgb(116, 113, 113) !important;
+    height: 2.5em;
+    border: solid 1px rgb(170, 166, 166) !important;
+    border-radius: 2px !important;
+    width: 45%;
+
+
+  }
+
+
+  .alert {
+    color: white;
+    background-color: rgba(241, 0, 0, 0.5);
+  }
+
+  .btn-primary {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  .btn-secondary {
+    width: 100%;
+  }
+  }
 @media only screen and (min-width:767px ) and (max-width: 1023px) {
 
   .title_page {

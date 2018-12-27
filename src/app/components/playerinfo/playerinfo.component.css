@@ -34,7 +34,7 @@
 .player_grid {
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 2fr 3fr 1fr 1fr;
+    grid-template-rows: 3fr 4fr 1fr 1fr;
     background-color: rgb(255, 255, 255);
     margin-top: 1rem;
     justify-content: center;
@@ -121,6 +121,162 @@
 
 }
 
+@media only screen and (min-width:320px ) and (max-width: 799px) and (orientation: landscape) {
+  .container-all {
+    top: 12rem;
+  }
+
+  .bioActives-title {
+      font-size: 2.25rem;
+  	  padding: 0.5rem 0;
+  }
+
+  .player_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 3fr ;
+      grid-template-rows: 3fr 1fr 1fr;
+  }
+  .player_pict {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .player_pict2 {
+    width: 85%;
+}
+.logo_team {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.logo_team img {
+  padding-top: 8rem;
+  padding-right: 1rem;
+  width: 100%;
+
+}
+
+  .card-title{
+    font-size: 2rem;
+  }
+  .title-position {
+    font-size: 1.75rem;
+
+  }
+
+
+  .player_stats {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    width: 100%;
+  }
+
+  .table td, table th {
+    padding: 7px !important;
+
+  }
+
+  .player_data {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    width: 100%;
+    font-size: 1.25rem;
+  }
+  .boton {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    text-align: center;
+  }
+
+  .button {
+    font-size: 1.5rem;
+  }
+
+  .table-header {
+    font-size: 1.25rem;
+}
+.table-header2 {
+    font-size: 1.25rem;
+}
+}
+@media only screen and (min-width:800px ) and (max-width: 1023px) and (orientation: landscape) {
+  .container-all {
+    top: 12rem;
+  }
+
+  .bioActives-title {
+      font-size: 2.25rem;
+  	  padding: 0.5rem 0;
+  }
+
+  .player_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 3fr ;
+      grid-template-rows: 4fr 1fr 1fr !important;
+  }
+  .player_pict {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .player_pict2 {
+    width: 85%;
+}
+.logo_team {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.logo_team img {
+  padding-top: 9rem !important;
+  padding-right: 1rem;
+  width: 120%;
+
+}
+
+  .card-title{
+    font-size: 2rem;
+  }
+  .title-position {
+    font-size: 1.75rem;
+
+  }
+
+
+  .player_stats {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    width: 100%;
+  }
+
+  .table td, table th {
+    padding: 7px !important;
+
+  }
+
+  .player_data {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    width: 100%;
+    font-size: 1.25rem;
+  }
+  .boton {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    text-align: center;
+  }
+
+  .button {
+    font-size: 1.5rem;
+  }
+
+  .table-header {
+    font-size: 1.25rem;
+}
+.table-header2 {
+    font-size: 1.25rem;
+}
+}
 @media only screen and (min-width:767px ) and (max-width: 1023px) {
   .container-all {
     position: absolute;
