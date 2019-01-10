@@ -56,6 +56,7 @@ import {AuthGuard} from './guards/auth.guard';
 import { NewsgralComponent } from './components/news/newsgral/newsgral.component';
 import { PlayerinfoComponent } from './components/playerinfo/playerinfo.component';
 import { PitcherinfoComponent } from './components/pitcherinfo/pitcherinfo.component';
+import { TriviaComponent } from './components/trivia/trivia.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +87,8 @@ import { PitcherinfoComponent } from './components/pitcherinfo/pitcherinfo.compo
     NotFoundPageComponent,
     NewsgralComponent,
     PlayerinfoComponent,
-    PitcherinfoComponent
+    PitcherinfoComponent,
+    TriviaComponent
 
   ],
   imports: [

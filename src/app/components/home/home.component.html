@@ -1,111 +1,4 @@
-<!-- Landing Page 2 -->
-<header>
-  <div class="title">
-    <h1 class="title_h1" style="color:transparent">Temporada 2019</h1>
-  </div>
-</header>
-<!-- <div class="separador"><h1 style="height: 2rem;"></h1></div> -->
-<main>
-  <div class="players_pic">
-    <div *ngFor="let player of players; let i=index">
-      <div [ngClass]="'pic_'+ (i+1)">
-        <a routerLink="/playerinfo/{{player.code}}">
-
-        <img [ngClass]="'img_pic_'+ (i+1)" (click)='textChange(i)' [src]="'../../../assets/'  + player.code + '.jpg'" alt="Player Image"></a>
-      </div>
-
-      <div [ngClass]="'text_'+ (i+1)">
-        <div *ngIf="player.activo">
-          <p class="text_11" (click)='textChange(i)'>{{player.pregunta}}</p>
-        </div>
-        <div *ngIf="!player.activo">
-          <p class="text_12" (click)='textChange(i)'>{{player.respuesta}}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</main>
-
-<footer>
-  <div class="boton">
-    <a routerLink="profile"><button class="btn btn-primary">Subscríbase</button></a>
-  </div>
-  <div class="final_text">
-    <p class="txt_final">Muy pronto tendrás acceso a todos los venezolanos activos en las Grandes Ligas,
-      de una forma cómoda, diaria, sin tener que buscar y buscar estadísticas durante horas.
-      Podrás conocer de forma inmediata la posición, el equipo, el nombre, el apodo e inclusive la cara de todos los
-      Vinotintos en MLB.</p>
-  </div>
-
-</footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Landing Page -->
-
-<!-- <div class="container_home">
-
-  <div class="title">
-    <h1 class="title_h1">Temporada 2019</h1>
-  </div>
-
-  <div class="container_central">
-    <div class="social_icons">
-      <div class="instagram">
-      </div>
-      <div class="boton">
-        <a routerLink="profile"><button class="btn btn-primary">Subscríbase</button></a>
-      </div>
-      <div class="Twitter">
-      </div>
-    </div>
-
-    <div  class="players_pic">
-    <div *ngFor="let player of players; let i=index" >
-      <div [ngClass]="'pic_'+ (i+1)">
-        <img [ngClass]="'img_pic_'+ (i+1)" [src]="'../../../assets/'  + player.code + '.jpg'" alt="Player Image">
-      </div>
-
-      <div [ngClass]="'text_'+ (i+1)">
-        <div *ngIf="player.activo">
-          <p class="text_11" (click)='textChange(i)'>{{player.pregunta}}</p>
-        </div>
-        <div *ngIf="!player.activo">
-          <p class="text_12" (click)='textChange(i)'>{{player.respuesta}}</p>
-        </div>
-      </div>
-    </div>
-    </div>
-  </div>
-  <div class="final_text">
-    <p class="txt_final">Muy pronto tendrás acceso a todos los venezolanos activos en las Grandes Ligas,
-      de una forma cómoda, diaria, sin tener que buscar y buscar estadísticas durante horas.
-      Podrás conocer de forma inmediata la posición, el equipo, el nombre, el apodo e inclusive la cara de todos los Vinotintos en MLB.</p>
-  </div>
-
-</div>
- -->
-
-
-
-
-
-
-<!-- <div class="container_home">
+<div class="container_home">
   <div class="card-deck">
 
     <div class=" news0">
@@ -118,9 +11,9 @@
         <a routerLink="news_ppal">
           <h5 class="card-title">¿VENEZUELA EN MLB?</h5>
         </a>
-        <p class="card-text">Revisa la actuación diaria de los jugadores VENEZOLANOS en Grandes Ligas.
-          Visita la sección de BATEADORES, PITCHERS
-          y hasta Noticias Diarias de nuestros héroes nacionales.<a routerLink="news_ppal" class="leer_mas"> Ver más
+        <p class="card-text">Revisa la actuación diaria de los jugadores venezolanos en Grandes Ligas.
+          Visita la sección de <i> Bateadores, Pitchers </i> 
+          y hasta <i> noticias diarias</i> de nuestros héroes nacionales.<a routerLink="news_ppal" class="leer_mas"> Ver más
           </a>
       </div>
     </div>
@@ -136,4 +29,4 @@
         </p>
       </div>
     </div>
-  </div> -->
+  </div>
