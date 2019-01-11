@@ -1,6 +1,6 @@
 <div class="container_players_actives"></div>
 <div class="container-actives">
-  <h1 class="actives-title">BATEADORES ACTIVOS</h1>
+  <h1 class="actives-title">Bateadores Activos</h1>
 </div>
 
 <p class="title-position"> TEMP. 2018 </p>
@@ -26,16 +26,16 @@
         <!-- <th style="width: 5%;" scope="col">Id</th> -->
         <th style="width: 15%;" scope="col">Name</th>
         <!-- <th style="width: 15%;" scope="col">Codigo</th> -->
-        <th style="width: 10%;" scope="col">Posicion</th>
-        <th style="width: 10%;" scope="col">At Bats</th>
-        <th style="width: 5%;" scope="col">Avg</th>
-        <th style="width: 5%;" scope="col">CA</th>
-        <th style="width: 5%;" scope="col">Hits</th>
-        <th style="width: 5%;" scope="col">StrksO</th>
-        <th style="width: 5%;" scope="col">BB</th>
-        <th style="width: 5%;" scope="col">CI</th>
-        <th style="width: 5%;" scope="col">Hr</th>
-        <th style="width: 5%;" scope="col">Br</th>
+        <th class="th1" style="width: 10%;" scope="col">Posicion</th>
+        <th class="th2" style="width: 5%;" scope="col">At Bats</th>
+        <th class="th3" style="width: 5%;" scope="col">Avg</th>
+        <th class="th4" style="width: 5%;" scope="col">CA</th>
+        <th class="th5" style="width: 5%;" scope="col">Hits</th>
+        <th class="th6" style="width: 5%;" scope="col">StrksO</th>
+        <th class="th7" style="width: 5%;" scope="col">BB</th>
+        <th class="th8" style="width: 5%;" scope="col">CI</th>
+        <th class="th9" style="width: 5%;" scope="col">Hr</th>
+        <th class="th10" style="width: 5%;" scope="col">Br</th>
       </tr>
     </thead>
     <!-- </table> -->
@@ -49,16 +49,16 @@
             <!-- <td style="width: 5%;">{{i +1}}</td> -->
             <a routerLink="/playerinfo/{{player.id}}" class="link_player"><td style="width: 15%;" class="link_player">{{player.fullName}}</td></a>
             <!-- <td style="width: 15%;">{{player.id}}</td> -->
-            <td style="width: 10%;">{{player.primaryPosition.abbreviation}}</td>
-            <td style="width: 10%;">{{player.stats[0].splits[0].stat.atBats}}</td>
-            <td style="width: 5%;">{{player.stats[0].splits[0].stat.avg}}</td>
-            <td style="width: 5%;">{{player.stats[0].splits[0].stat.runs}}</td>
-            <td style="width: 5%;">{{player.stats[0].splits[0].stat.hits}}</td>
-            <td style="width: 5%;">{{player.stats[0].splits[0].stat.strikeOuts}}</td>
-            <td style="width: 5%;">{{player.stats[0].splits[0].stat.baseOnBalls}}</td>
-            <td style="width: 5%;">{{player.stats[0].splits[0].stat.rbi}}</td>
-            <td style="width: 5%;">{{player.stats[0].splits[0].stat.homeRuns}}</td>
-            <td style="width: 5%;">{{player.stats[0].splits[0].stat.stolenBases}}</td>
+            <td class="th1" style="width: 10%;">{{player.primaryPosition.abbreviation}}</td>
+            <td class="th2" style="width: 10%;">{{player.stats[0].splits[0].stat.atBats}}</td>
+            <td class="th3" style="width: 5%;">{{player.stats[0].splits[0].stat.avg}}</td>
+            <td class="th4" style="width: 5%;">{{player.stats[0].splits[0].stat.runs}}</td>
+            <td class="th5" style="width: 5%;">{{player.stats[0].splits[0].stat.hits}}</td>
+            <td class="th6" style="width: 5%;">{{player.stats[0].splits[0].stat.strikeOuts}}</td>
+            <td class="th7" style="width: 5%;">{{player.stats[0].splits[0].stat.baseOnBalls}}</td>
+            <td class="th8" style="width: 5%;">{{player.stats[0].splits[0].stat.rbi}}</td>
+            <td class="th9" style="width: 5%;">{{player.stats[0].splits[0].stat.homeRuns}}</td>
+            <td class="th10" style="width: 5%;">{{player.stats[0].splits[0].stat.stolenBases}}</td>
           </tr>
         </ng-container>
 
@@ -67,16 +67,16 @@
             <!-- <td style="width: 5%;">{{i +1}}</td> -->
             <a routerLink="/playerinfo/{{player.id}}" class="link_player"><td class="link_player" style="width: 15%;">{{player.fullName}}</td></a>
             <!-- <td style="width: 15%;">{{player.id}}</td> -->
-            <td style="width: 10%;">{{player.primaryPosition.abbreviation}}</td>
-            <td style="width: 10%;">{{player.stats[0].splits[0].stat.atBats}}</td>
-            <td style="width: 5%;">{{player.stats[0].splits[0].stat.avg}}</td>
-            <td style="width: 5%;">{{player.stats[0].splits[0].stat.runs}}</td>
-            <td style="width: 5%;">{{player.stats[0].splits[0].stat.hits}}</td>
-            <td style="width: 5%;">{{player.stats[0].splits[0].stat.strikeOuts}}</td>
-            <td style="width: 5%;">{{player.stats[0].splits[0].stat.baseOnBalls}}</td>
-            <td style="width: 5%;">{{player.stats[0].splits[0].stat.rbi}}</td>
-            <td style="width: 5%;">{{player.stats[0].splits[0].stat.homeRuns}}</td>
-            <td style="width: 5%;">{{player.stats[0].splits[0].stat.stolenBases}}</td>
+            <td class="th1" style="width: 10%;">{{player.primaryPosition.abbreviation}}</td>
+            <td class="th2" style="width: 10%;">{{player.stats[0].splits[0].stat.atBats}}</td>
+            <td class="th3" style="width: 5%;">{{player.stats[0].splits[0].stat.avg}}</td>
+            <td class="th4" style="width: 5%;">{{player.stats[0].splits[0].stat.runs}}</td>
+            <td class="th5" style="width: 5%;">{{player.stats[0].splits[0].stat.hits}}</td>
+            <td class="th6" style="width: 5%;">{{player.stats[0].splits[0].stat.strikeOuts}}</td>
+            <td class="th7" style="width: 5%;">{{player.stats[0].splits[0].stat.baseOnBalls}}</td>
+            <td class="th8" style="width: 5%;">{{player.stats[0].splits[0].stat.rbi}}</td>
+            <td class="th9" style="width: 5%;">{{player.stats[0].splits[0].stat.homeRuns}}</td>
+            <td class="th10" style="width: 5%;">{{player.stats[0].splits[0].stat.stolenBases}}</td>
 
         </ng-container>
         <!-- <span *ngIf="!allItems[0]" class="d-flex justify-content-center">
@@ -90,26 +90,26 @@
 
   <div>
     <div class="container">
-      <div class="text-center">
+      <div class="text-center paginator">
         <!-- items being paged -->
         <!-- <div *ngFor="let item of pagedItems">{{item.name}}</div> -->
 
         <!-- pager -->
         <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
           <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-            <a (click)="setPage(1)" class="page-link">First</a>
+            <a (click)="setPage(1)" class="page-link paginator_item">First</a>
           </li>
           <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-            <a (click)="setPage(pager.currentPage - 1)" class="page-link">Previous</a>
+            <a (click)="setPage(pager.currentPage - 1)" class="page-link paginator_item">Previous</a>
           </li>
           <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
             <a (click)="setPage(page)" class="page-link">{{page}}</a>
           </li>
           <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-            <a (click)="setPage(pager.currentPage + 1)" class="page-link">Next</a>
+            <a (click)="setPage(pager.currentPage + 1)" class="page-link paginator_item">Next</a>
           </li>
           <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-            <a (click)="setPage(pager.totalPages)" class="page-link">Last</a>
+            <a (click)="setPage(pager.totalPages)" class="page-link paginator_item">Last</a>
           </li>
         </ul>
       </div>

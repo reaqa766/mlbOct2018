@@ -105,7 +105,220 @@
     width: 0.15rem;
   }
 
-  } 
+  }
+  
+  @media only screen and (min-width:401px ) and (max-width: 500px)  {
+ 
+  
+    .fa-twitter {
+      width: 10%;
+    }
+    
+    .mail {
+      width: 10%;
+    }
+    
+    .fa-instagram {
+      width: 10%;
+    }
+    
+    .social_items {
+      padding: 0;
+      margin: 1rem 0.25rem 0 0;
+    }
+  
+    }  
+    @media only screen and (min-width:501px ) and (max-width: 766px)  {
+   
+      .menu_bar {
+        height: 3.0em;
+      
+      }
+      .menu_ul {
+        height: 3.95em;
+      
+      }
+      
+      
+      .nav-link {
+        font-size: 0.6em;
+      }
+      
+      
+      
+      .nav-item {
+        width: 6em;
+        height: 2.5em;
+        padding: 1em .55rem;
+      }
+      
+      
+      .fa-twitter {
+        width: 20%;
+        margin: 0 .15rem;
+        padding: 0 !important;
+      
+      
+      }
+      
+      .mail {
+        width: 20%;
+        margin: 0 .15rem;
+        padding: 0 !important;
+      }
+      
+      .fa-instagram {
+        width: 20%;
+        margin: 0 .15rem;
+        padding: 0 !important;
+      }
+      
+      .social_items {
+        padding: 0;
+        margin: 0.75em 0;
+      } 
+  
+  
+    }  
+    @media only screen and (min-width:767px ) and (max-width: 770px)  {
+  
+      .menu_bar {
+        height: 4em !important;
+      
+      }
+          
+      .nav-link  {
+        font-size: 0.75em !important;
+      }
+      .nav-item {
+        width: 5em !important;
+        height: 3.5em;
+        padding: 1em 0;
+      }
+      .fa-twitter {
+        width: 20%;
+      
+      
+      }
+      
+      .mail {
+        width: 20%;
+      }
+      
+      .fa-instagram {
+        width: 20%;
+      }
+      
+        
+      .social_items {
+        padding: 0;
+        margin: 0.75em 0;
+        width: 9em !important;
+      } 
+  
+  
+  
+    }
+    @media only screen and (min-width:771px ) and (max-width: 1025px)  {
+   
+      .menu_bar {
+        height: 4em;
+      
+      }
+      .menu_ul {
+        height: 3.95em;
+      }
+      .nav-link {
+        font-size: .75em;
+      }
+      
+      .nav-item {
+        width:7.5em;
+        height: 2.5em;
+        padding: 1em 0.25rem;
+      }
+      
+      .social_items {
+        padding: 0;
+        margin: 0.75em 0;
+      } 
+  
+    }  
+    @media only screen and (min-width:1026px ) and (max-width: 1441px)  {
+   
+      .menu_bar {
+        height: 3em;
+      
+      }
+      .menu_ul {
+        height: 3.95em;
+      }
+      .nav-link {
+        font-size: 1.05em;
+      }
+      
+      .nav-item {
+        width: 11.0em;
+        height: 2.5em;
+        padding: 1em 0.45rem;
+      }
+      
+      .social_items {
+        padding: 0;
+        margin: 0.75em 0;
+      } 
+  
+    }  
+    @media only screen and (min-width:1027px ) and (max-width: 1520px)  {
+   
+      .menu_bar {
+        height: 3.5em;
+      
+      }
+      .menu_ul {
+        height: 3.95em;
+      }
+      .nav-link {
+        font-size: 1.0em;
+      }
+      
+      .nav-item {
+        width: 14.0em;
+        height: 2.5em;
+        padding: 1em 0.95rem;
+      }
+      
+      .social_items {
+        padding: 0;
+        margin: 0.75em 0;
+      } 
+  
+    }  
+    @media only screen and (min-width:1521px ) and (max-width: 4200px)  {
+   
+      .menu_bar {
+        height: 7.5em;
+      
+      }
+      .menu_ul {
+        height: 5.95em;
+      }
+      .nav-link {
+        font-size: 1.75em !important;
+      }
+      
+      .nav-item {
+        width: 19.5em;
+        height: 2.5em;
+        padding: 1em 0.95rem;
+      }
+      
+      .social_items {
+        padding: 0;
+        margin: 0.75em 0;
+      } 
+  
+    } 
 
   @media only screen and (orientation : landscape) and (min-width:501px ) and (max-width: 600px)  {
     .menu_bar {
@@ -312,153 +525,6 @@
     
   } 
 
-  @media only screen and (min-width:401px ) and (max-width: 500px)  {
- 
   
-  .fa-twitter {
-    width: 10%;
-  }
-  
-  .mail {
-    width: 10%;
-  }
-  
-  .fa-instagram {
-    width: 10%;
-  }
-  
-  .social_items {
-    padding: 0;
-    margin: 1rem 0.25rem 0 0;
-  }
-
-  }  
-  @media only screen and (min-width:501px ) and (max-width: 770px)  {
- 
-    .menu_bar {
-      height: 3.0em;
-    
-    }
-    .menu_ul {
-      height: 3.95em;
-    
-    }
-    
-    
-    .nav-link {
-      font-size: 0.6em;
-    }
-    
-    
-    
-    .nav-item {
-      width: 6em;
-      height: 2.5em;
-      padding: 1em .55rem;
-    }
-    
-    
-    .fa-twitter {
-      width: 20%;
-      margin: 0 .15rem;
-      padding: 0 !important;
-    
-    
-    }
-    
-    .mail {
-      width: 20%;
-      margin: 0 .15rem;
-      padding: 0 !important;
-    }
-    
-    .fa-instagram {
-      width: 20%;
-      margin: 0 .15rem;
-      padding: 0 !important;
-    }
-    
-    .social_items {
-      padding: 0;
-      margin: 0.75em 0;
-    } 
-
-
-  }  
-  @media only screen and (min-width:771px ) and (max-width: 1025px)  {
- 
-    .menu_bar {
-      height: 4em;
-    
-    }
-    .menu_ul {
-      height: 3.95em;
-    }
-    .nav-link {
-      font-size: .75em;
-    }
-    
-    .nav-item {
-      width:7.5em;
-      height: 2.5em;
-      padding: 1em 0.25rem;
-    }
-    
-    .social_items {
-      padding: 0;
-      margin: 0.75em 0;
-    } 
-
-  }  
-  @media only screen and (min-width:1026px ) and (max-width: 1441px)  {
- 
-    .menu_bar {
-      height: 3em;
-    
-    }
-    .menu_ul {
-      height: 3.95em;
-    }
-    .nav-link {
-      font-size: 1.05em;
-    }
-    
-    .nav-item {
-      width: 11.0em;
-      height: 2.5em;
-      padding: 1em 0.45rem;
-    }
-    
-    .social_items {
-      padding: 0;
-      margin: 0.75em 0;
-    } 
-
-  }  
-  @media only screen and (min-width:1027px ) and (max-width: 4000px)  {
- 
-    .menu_bar {
-      height: 3.5em;
-    
-    }
-    .menu_ul {
-      height: 3.95em;
-    }
-    .nav-link {
-      font-size: 1.0em;
-    }
-    
-    .nav-item {
-      width: 14.0em;
-      height: 2.5em;
-      padding: 1em 0.95rem;
-    }
-    
-    .social_items {
-      padding: 0;
-      margin: 0.75em 0;
-    } 
-
-  }  
 
 

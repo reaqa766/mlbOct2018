@@ -57,6 +57,7 @@ import { NewsgralComponent } from './components/news/newsgral/newsgral.component
 import { PlayerinfoComponent } from './components/playerinfo/playerinfo.component';
 import { PitcherinfoComponent } from './components/pitcherinfo/pitcherinfo.component';
 import { TriviaComponent } from './components/trivia/trivia.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -88,7 +89,8 @@ import { TriviaComponent } from './components/trivia/trivia.component';
     NewsgralComponent,
     PlayerinfoComponent,
     PitcherinfoComponent,
-    TriviaComponent
+    TriviaComponent,
+    HeaderComponent
 
   ],
   imports: [

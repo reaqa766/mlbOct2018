@@ -1,12 +1,12 @@
 .container_players_actives {
-  margin-top: 22%;
+  margin-top: 1%;
 }
 
 .actives-title {
     color: antiquewhite;
-    font-size: 2rem;
+    font-size: 0.75rem;
     text-align: center;
-    margin: 1.5rem auto 0;
+    margin: 0.15rem auto 0;
     padding: .5rem 0;
     background-color: rgba(3, 2, 2, 0.5);
     width: 18em;
@@ -24,6 +24,8 @@
 .table {
     width: 80%;
     margin: 0.2em auto;
+    display: table;
+
 }
 
 .table-header {
@@ -46,11 +48,6 @@
 
 
 }
-
-
-/* BOrrar todo */
-
-
 .advancedSearchTextbox{
     color: rgb(2, 1, 0);
     font-size: 1rem;
@@ -83,3 +80,481 @@
   text-decoration:none;
   color: antiquewhite;
 }
+
+@media only screen and (min-width:300px ) and (max-width: 320px) {
+
+.container_players_actives {
+    margin-top:1% !important;
+}
+
+.actives-title {
+    font-size: 1.25rem;
+    width: 12rem;
+    margin: 1rem auto;
+    padding-bottom: 2rem !important; 
+}
+.title-position{
+    color: antiquewhite;
+    font-size: 0.75rem;
+    margin-left: 2%;
+}
+
+.table {
+    width: 100%;
+    margin: 0.2em 0;
+}
+
+.table-header {
+    font-size: 1rem;
+    width: 1rem;
+
+}
+.table-header2 {
+    font-size: 1rem;
+    width: 1rem;
+
+}
+.title-rows {
+    background-color: antiquewhite;
+}
+.advancedSearchTextbox{
+    font-size: 0.85rem;
+    margin-left: 2%;
+}
+.error_search {
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    color: antiquewhite;
+    background-color: rgba(12, 10, 9, 0.75);
+
+}
+.th1, .th4, .th6, .th7, .th9, .th10 {
+    display: none;
+}
+.paginator_item {
+    display: none;
+
+}
+.paginator {
+    font-size: 0.75rem;
+    width: 20%;
+    margin: auto;
+}
+}
+@media only screen and (orientation : landscape) and (min-width:500px ) and (max-width: 600px) {
+
+    .container_players_actives {
+        margin-top: 1% !important;
+    }
+    
+    .actives-title {
+        font-size: 1.5rem;
+        width: 40%;
+    }
+    .title-position{
+        font-size: 1rem;
+        margin-top: 1em !important;
+        margin-left: 2%;
+    }
+    
+    
+    .table {
+        width: 100%;
+        margin: 0.2em 0;
+    }
+    
+    .table-header {
+        font-size: 0.85rem;
+        width: 1rem;
+    
+    }
+    .table-header2 {
+        font-size: 0.85rem;
+        width: 1rem;
+
+    }
+    .title-rows {
+        background-color: antiquewhite;
+    }
+    .advancedSearchTextbox{
+        font-size: 0.85rem;
+        margin-left: 2%;
+    }
+    h1 {
+        font-size: 1em;
+
+    }
+    .error_search {
+        width: 40%;
+        margin-left: 2%;
+        margin-top: 2%;
+
+    }
+    .th1, .th6, .th7, .th10 {
+        display: none;
+    }
+    .paginator {
+        font-size: 0.75rem;
+        width: 90%;
+        margin-left: 1em;
+        margin-top: 1em;
+    }
+    }
+    @media only screen and (min-width:321px ) and (max-width: 355px) {
+
+        .container_players_actives {
+            margin-top:85% !important;
+        }
+        
+        .actives-title {
+            position: absolute;
+            top: 37%;
+            left: 5%;
+            font-size: 1.5rem;
+            width: 90%;
+        }
+        .title-position{
+            position: absolute;
+            top: 55%;
+            left: 0;
+            color: antiquewhite;
+            font-size: 1rem;
+            margin-left: 2%;
+
+        }
+        
+        
+        .table {
+            width: 100%;
+            margin: 0.2em 0;
+        }
+        
+        .table-header {
+            font-size: 0.65rem;
+            width: 1rem;
+        
+        }
+        .table-header2 {
+            font-size: 0.65rem;
+            width: 1rem;
+        
+        }
+        .title-rows {
+            background-color: antiquewhite;
+        }
+        .advancedSearchTextbox{
+            position: absolute;
+            top: 61%;
+            left: 0;
+            font-size: 0.85rem;
+            margin-left: 2%;
+        }
+        .error_search {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            color: antiquewhite;
+            background-color: rgba(12, 10, 9, 0.75);
+        
+        }
+        .th1, .th4, .th6, .th7, .th9, .th10 {
+            display: none;
+        }
+        .paginator_item {
+            display: none;
+        
+        }
+        
+        .paginator {
+            font-size: 0.50rem;
+            width: 45%;
+            margin: auto;
+        }
+        }
+    @media only screen and (min-width:356px ) and (max-width: 365px) {
+
+        .container_players_actives {
+            margin-top:1% !important;
+        }
+        
+        .actives-title {
+            font-size: 1rem;
+            width: 60%;
+            padding-bottom: 7%;
+            margin-bottom: 5%; 
+        }
+        .title-position{
+            color: antiquewhite;
+            font-size: 0.75em;
+            margin-left: 2%;
+
+        }
+        
+        
+        .table {
+            width: 100%;
+            margin: 0.2em 0;
+        }
+        
+        .table-header {
+            font-size: 0.65rem;
+            width: 1rem;
+        
+        }
+        .table-header2 {
+            font-size: 0.65rem;
+            width: 1rem;
+        
+        }
+        .title-rows {
+            background-color: antiquewhite;
+        }
+        .advancedSearchTextbox{
+            font-size: 0.75rem;
+            margin-left: 2%;
+        }
+        .error_search {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            color: antiquewhite;
+            background-color: rgba(12, 10, 9, 0.75);
+        
+        }
+        .th1, .th4, .th6, .th7, .th9, .th10 {
+            display: none;
+        }
+        .paginator_item {
+            display: none;
+        
+        }
+        
+        .paginator {
+            font-size: 0.75rem;
+            width: 45%;
+            margin: auto;
+        }
+        }
+    @media only screen and (min-width:366px ) and (max-width: 408px) {
+
+        .container_players_actives {
+            margin-top:55% !important;
+        }
+        
+        .actives-title {
+            position: absolute;
+            top: 28%;
+            left: 5%;
+            font-size: 1.5rem;
+            width: 90%;
+        }
+        .title-position{
+            position: absolute;
+            top: 40%;
+            left: 0;
+            color: antiquewhite;
+            font-size: 1rem;
+            margin-left: 2%;
+
+        }
+        
+        
+        .table {
+            position: absolute;
+            top: 48%;
+            left: 0;
+
+            width: 100%;
+            margin: 0.2em 0;
+        }
+        
+        .table-header {
+            font-size: 0.65rem;
+            width: 1rem;
+        
+        }
+        .table-header2 {
+            font-size: 0.65rem;
+            width: 1rem;
+        
+        }
+        .title-rows {
+            background-color: antiquewhite;
+        }
+        .advancedSearchTextbox{
+            position: absolute;
+            top: 44%;
+            left: 0;
+            font-size: 0.85rem;
+            margin-left: 2%;
+        }
+        .error_search {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            color: antiquewhite;
+            background-color: rgba(12, 10, 9, 0.75);
+        
+        }
+        .th1, .th4, .th6, .th7, .th9, .th10 {
+            display: none;
+        }
+        .paginator_item {
+            display: none;
+        
+        }
+        
+        .paginator {
+            position: absolute;
+            top: 115%;
+            left: 28%;
+            font-size: 0.50rem;
+            width: 45%;
+            /* margin: auto; */
+        }
+        }
+        
+    @media only screen and (min-width:409px ) and (max-width: 425px) {
+
+        .container_players_actives {
+            margin-top:55% !important;
+        }
+        
+        .actives-title {
+            position: absolute;
+            top: 28%;
+            left: 21%;
+            font-size: 1rem;
+            width: 50%;
+            padding-bottom: 7%;
+        }
+        .title-position{
+            position: absolute;
+            top: 40%;
+            left: 0;
+            color: antiquewhite;
+            font-size: 1rem;
+            margin-left: 2%;
+
+        }
+        
+        
+        .table {
+            position: absolute;
+            top: 48%;
+            left: 0;
+            width: 100%;
+            margin: 0.2em 0;
+        }
+        
+        .table-header {
+            font-size: 0.65rem;
+            width: 1rem;
+        
+        }
+        .table-header2 {
+            font-size: 0.65rem;
+            width: 1rem;
+        
+        }
+        .title-rows {
+            background-color: antiquewhite;
+        }
+        .advancedSearchTextbox{
+            position: absolute;
+            top: 43%;
+            left: 0;
+            font-size: 0.85rem;
+            margin-left: 2%;
+        }
+        .error_search {
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            color: antiquewhite;
+            background-color: rgba(12, 10, 9, 0.75);
+        
+        }
+        .th1, .th4, .th6, .th7, .th9, .th10 {
+            display: none;
+        }
+        .paginator_item {
+            display: none;
+        
+        }
+        
+        .paginator {
+            position: absolute;
+            top: 110%;
+            left: 28%;
+            font-size: 0.50rem;
+            width: 45%;
+            /* margin: auto; */
+        }
+        }
+        
+        @media only screen and (orientation : landscape) and (min-width:601px ) and (max-width: 815px) {
+            .container_players_actives {
+                margin-top: 20% !important;
+            }
+            
+            .actives-title {
+                font-size: 1.5rem;
+                width: 50%;
+            }
+            .title-position{
+                font-size: 1rem;
+                margin-top: 1em !important;
+                margin-left: 2%;
+            }
+            
+            
+            .table {
+                width: 100%;
+                margin: 0.2em 0;
+            }
+            
+            .table-header {
+                font-size: 0.85rem;
+                width: 1rem;
+            
+            }
+            .table-header2 {
+                font-size: 0.85rem;
+                width: 1rem;
+        
+            }
+            .title-rows {
+                background-color: antiquewhite;
+            }
+            .advancedSearchTextbox{
+                font-size: 0.85rem;
+                margin-left: 2%;
+            }
+            h1 {
+                font-size: 1em;
+        
+            }
+            .error_search {
+                width: 40%;
+                margin-left: 2%;
+                margin-top: 2%;
+        
+            }
+            .th1, .th6, .th7, .th10 {
+                display: none;
+            }
+            .paginator {
+                font-size: 0.75rem;
+                width: 90%;
+                margin-left: 1em;
+            }
+        }
+        @media only screen and (min-width:1920px ) and (max-width: 3000px) {
+
+            .container_players_actives {
+                margin-top: 25%;
+              }
+              
+            }

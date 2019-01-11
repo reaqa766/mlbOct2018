@@ -1,12 +1,12 @@
 /* -- Home Inicial -- */
 
 .container_home {
-    margin: 25% auto 0;
+    margin: 5% auto 0;
 
 }
 
 .card-deck{
-    margin: 25% auto 0;
+    margin: 5% auto 0;
     width: 90%;
   }
  
@@ -27,15 +27,12 @@
 
 } 
 
-@media only screen and (orientation : landscape) and (min-width:501px ) and (max-width: 600px) {
-    .container_home {
-        margin: 25% 0;
+@media only screen and (orientation : landscape) and (min-width:501px ) and (max-width: 900px) {
     
-    }
     
     .card-deck{
-        margin: 40% auto 0;
         width: 90%;
+        margin-bottom: 5%;
       }
      
     
@@ -46,7 +43,7 @@
     
     
     .card-text {
-        font-size: 0.90em !important;
+        font-size: 1em !important;
         text-align: justify;
     }
     
@@ -69,6 +66,32 @@
     
     .card-img-top {
         max-height: 95%;
+    
+    }
+    
+    
+    .card-text {
+        font-size: 0.90em !important;
+        text-align: justify;
+    }
+    
+    .card-title {
+        font-size: 1.25em !important;
+    
+    }  
+}
+@media only screen and (min-width:1270px ) and (max-width: 3500px) {
+    .container_home {
+        margin-top: 2%;
+    }
+    .card-deck{
+        margin: 1% auto 0 !important;
+        width: 75%;
+      }
+     
+    
+    .card-img-top {
+        max-height: 75%;
     
     }
     

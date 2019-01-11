@@ -2,7 +2,7 @@
 
 /* You can add global styles to this file, and also import other style files */
 body {
-  background: url(./assets/FondoWEBMODIF.png);
+  background: url(./assets/FondoWebEnero2019.png);
   background-size:cover;
   background-repeat:no-repeat;
   /* background-position: center; */
@@ -14,16 +14,23 @@ body {
 @media only screen and (max-width: 450px) {
 
   body {
-    background: url(./assets/FondoPAGWEBMaderaNVO.png);
+    background: url(./assets/FondoWebEnero2019.png);
     background-size: cover;
-    background-repeat:repeat;
+    background-repeat: repeat;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
   }
 }
+@media only screen and (orientation: landscape) and (min-width:500px ) and (max-width: 600px)  {
+  body {
+    background: url(./assets/FondoWebEnero2019.png);
+    background-size: cover;
+    background-repeat: repeat;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+  }
 
-
-
+}
 
 
 
