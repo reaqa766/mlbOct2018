@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-between  sticky-top ">
   <a class="navbar-brand nav-link" routerLink="/">
-    <img src="../../../assets/Logo VinotintosMLB.png" width="50" height="50" alt="">
+    <img src="../../../assets/Logo VinotintosMLB.png" width="40" height="40" alt="">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -11,58 +11,54 @@
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Jugadores
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Act. Diaria</a>
-                <a class="dropdown-item" href="#">Por equipo</a>
-                <a class="dropdown-item" href="#">Por Posición</a>
+              <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" routerLink="daily">Act. Diaria</a>
+                <a class="dropdown-item" routerLink="team">Por equipo</a>
+                <a class="dropdown-item" routerLink="position">Por Posición</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Temporada 2018 </a>
+                <a class="dropdown-item" routerLink="actives">Temporada 2018 </a>
+                <a class="dropdown-item" routerLink="bioActives">Biografía </a>
                 <a class="dropdown-item" href="#">Temporada 2019 </a>
               </div>
             </li>
-            <li class="nav-item mr-5 dropdown">
+            <li class="nav-item mr-4 dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Pitchers
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Act. Diaria</a>
-                    <a class="dropdown-item" href="#">Por equipo</a>
+                <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" routerLink="p_daily">Act. Diaria</a>
+                    <a class="dropdown-item" routerLink="p_byteam">Por equipo</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Temporada 2018 </a>
+                    <a class="dropdown-item" routerLink="p_actives">Temporada 2018 </a>
+                    <a class="dropdown-item" routerLink="p_bio">Biografía </a>
                     <a class="dropdown-item" href="#">Temporada 2019 </a>
                     </div>
               </li>
-            <li class="nav-item mr-5 dropdown">
+              <li class="nav-item mr-4">
+                  <a class="nav-link" routerLink="news">Noticias</a>
+                </li>
+            <li class="nav-item mr-4 dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Multimedia
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Noticias</a>
+                <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">Videos</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Trivia </a>
                     </div>
               </li>
-        <!-- <li class="nav-item mr-5">
-          <a class="nav-link" href="#">Noticias <span class="sr-only">(current)</span></a>
+        
+        <li class="nav-item mr-4">
+          <a class="nav-link" routerLink="aboutUs">Nosotros</a>
         </li>
-        <li class="nav-item mr-5">
-          <a class="nav-link" href="#">Videos</a>
+        <li class="nav-item mr-4">
+          <a class="nav-link " *ngIf="isLogin" href="#">Perfil</a>
         </li>
-        <li class="nav-item mr-5">
-          <a class="nav-link" href="#">Trivia</a>
-        </li> -->
-        <li class="nav-item mr-5">
-          <a class="nav-link" href="#">Nosotros</a>
+        <li class="nav-item mr-4" *ngIf="!isLogin">
+          <a class="nav-link active" routerLink="login">Login</a>
         </li>
-        <li class="nav-item mr-5">
-          <a class="nav-link " href="#">Register</a>
-        </li>
-        <li class="nav-item mr-5">
-          <a class="nav-link active" href="#">Login</a>
-        </li>
-        <li class="nav-item mr-5">
-          <a class="nav-link " href="#">Logout</a>
+        <li class="nav-item  mr-4" *ngIf="isLogin">
+          <a class="nav-link " href="#" (click)="onClickLogOut()">Logout</a>
         </li>
       </ul>
     </div>
