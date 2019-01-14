@@ -25,7 +25,7 @@
           <div class="card-body">
             <h5 class="card-title">{{player.fullName}}</h5>
           </div>
-          <ul class="list-group list-group-flush">
+          <!-- <ul class="list-group list-group-flush">
             <li class="list-group-item"><strong> Equipo: </strong> {{player.stats[0].splits[0].team.name}}</li>
             <li class="list-group-item"><strong>L. Nac.: </strong> {{player.birthCity}}</li>
             <li class="list-group-item"><strong>F. Nac.: </strong> {{player.birthDate}} </li>
@@ -34,16 +34,16 @@
             <li class="list-group-item"><strong>F. Debut: </strong> {{player.mlbDebutDate}}</li>
             <li class="list-group-item"><strong>Numero: </strong> {{player.primaryNumber}}</li>
             <li class="list-group-item"><strong>Posición: </strong> {{player.primaryPosition.name}}</li>
-          </ul>
+          </ul> -->
         </div>
       </ng-container>
       <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
-        <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*5)">
+        <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
             <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top" src="../../../../assets/{{player.id}}.jpg" alt="Card image cap"></a>
           <div class="card-body">
             <h5 class="card-title">{{player.fullName}} </h5>
           </div>
-          <ul class="list-group list-group-flush">
+          <!-- <ul class="list-group list-group-flush">
             <li class="list-group-item"><strong> Equipo: </strong> {{player.stats[0].splits[0].team.name}}</li>
             <li class="list-group-item"><strong>L. Nac.: </strong> {{player.birthCity}}</li>
             <li class="list-group-item"><strong>F. Nac.: </strong> {{player.birthDate}}</li>
@@ -52,7 +52,7 @@
             <li class="list-group-item"><strong>F. Debut: </strong> {{player.mlbDebutDate}}</li>
             <li class="list-group-item"><strong>Numero: </strong> {{player.primaryNumber}}</li>
             <li class="list-group-item"><strong>Posición: </strong> {{player.primaryPosition.name}}</li>
-          </ul>
+          </ul> -->
           <div class="card-body">
             <a href="#" class="card-link">Card link</a>
             <a href="#" class="card-link">Another link</a>

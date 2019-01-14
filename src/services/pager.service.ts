@@ -1,5 +1,5 @@
 export class PagerService {
-    getPager(allItems: number, currentPage: number = 1, pageSize: number = 10) {
+    getPager(allItems: number, currentPage: number = 1, pageSize: number = 7) {
         // tslint:disable-next-line:prefer-const
         let totalPages = Math.ceil(allItems / pageSize);
 
@@ -24,7 +24,7 @@ export class PagerService {
                 startPage = totalPages - 9;
                 endPage = totalPages;
             } else {
-                startPage = currentPage - 5;
+                startPage = currentPage - 7;
                 endPage = currentPage + 4;
             }
         }
@@ -53,7 +53,7 @@ export class PagerService {
 
 
 
-    getPager2(allItems: number, currentPage: number = 1, pageSize: number = 5) {
+    getPager2(allItems: number, currentPage: number = 1, pageSize: number = 7) {
         // tslint:disable-next-line:prefer-const
         let totalPages = Math.ceil(allItems / pageSize);
 
@@ -78,7 +78,7 @@ export class PagerService {
                 startPage = totalPages - 9;
                 endPage = totalPages;
             } else {
-                startPage = currentPage - 5;
+                startPage = currentPage - 7;
                 endPage = currentPage + 4;
             }
         }
