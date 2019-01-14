@@ -28,7 +28,7 @@ export class BioActivesComponent implements OnInit {
   // tslint:disable-next-line:no-inferrable-types
   n1: number = 12;
   // tslint:disable-next-line:no-inferrable-types
-  n10: number = 5;
+  n10: number = 10;
   public allItems: any[];
 
   // pager object
