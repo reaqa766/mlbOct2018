@@ -70,7 +70,7 @@
     grid-column-gap: 2px;
     justify-items: center;
     width: 80%;
-    
+
 }
 
 .card-title {
@@ -179,8 +179,18 @@ font-weight: 400;
 }
 .paginator_text {
     display: none;
-} 
+}
 
+@media only screen and (min-width:768px ) and (max-width: 3200px)  {
+  .paginator {
+    margin: auto;
+    font-size: 1.25rem
+}
+  .paginator_text {
+    display: table;
+    font-size: 1.25rem;
+}
+}
 /* @media only screen and (min-width:300px ) and (max-width: 321px)  {
     .container-actives {
         margin-top: 22%;
@@ -195,14 +205,14 @@ font-weight: 400;
         font-size: 1rem;
         margin: 4% 0  0 4%;
     }
-    
+
     .advancedSearchTextbox {
         font-size: 1rem;
         margin: 0 0  0 4%;
-    
+
     }
-    
-    
+
+
     .container-actives_cards {
         margin-top: 1%;
         margin-left: 2%;
@@ -212,13 +222,13 @@ font-weight: 400;
         grid-column-gap: 2px;
         justify-items: center;
     }
-    
+
     .card {
         max-width: 100%;
         margin: 0 auto;
     }
-    
-    
+
+
     .fa-baseball-ball {
         font-size: 5rem;
         margin: 5% 20% 0 !important;
@@ -233,9 +243,9 @@ font-weight: 400;
         text-align: center;
         color: antiquewhite;
         background-color: rgba(12, 10, 9, 0.75);
-    
+
     }
-    
+
     .container-actives_cards .card:nth-child(1) {
         grid-column: 1/2;
         grid-row: 1/2;
@@ -264,15 +274,15 @@ font-weight: 400;
         grid-row: 1/2;
         margin-bottom: 20px;
     }
-    
-    
+
+
     .list-group-item {
         padding: 0.2rem 1.25rem;
         font-size: 0.85rem;
     }
-    
- 
-    
+
+
+
     .page-link {
     background-color: rgba(250, 235, 215,0.8)!important;
     border:solid 2px #7e7b7b;
@@ -285,7 +295,7 @@ font-weight: 400;
     }
     .paginator_text {
         display: none;
-    }     
+    }
 }
 
 @media only screen and (orientation: landscape) and (min-width:500px ) and (max-width: 600px)  {
@@ -304,9 +314,9 @@ font-weight: 400;
     }
     .paginator_text {
         display: table-cell;
-    }     
+    }
 
-      
+
 
 }
 
@@ -326,9 +336,9 @@ font-weight: 400;
     }
     .paginator_text {
         display: table-cell;
-    }     
+    }
 
-      
+
 
 }
 
