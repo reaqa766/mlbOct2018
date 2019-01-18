@@ -17,7 +17,7 @@
 }
 
 .card-body{
-    max-height: 1rem;
+    max-height: 4rem;
     margin: 0 auto 1rem;
 
 }
@@ -98,7 +98,7 @@
 }
 
 .container-actives {
-  margin-top: 22%;
+  margin-top: 1rem;
 }
 
 .bioActives-title {
@@ -204,7 +204,7 @@ font-weight: 400;
 @media only screen and (max-width: 1030px)  {
 
     .container-actives {
-        margin-top: 22%;
+        margin-top: 1rem;
       }
 
 
