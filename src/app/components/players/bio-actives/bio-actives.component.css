@@ -117,7 +117,7 @@
 .container-actives_cards .card:nth-child(8) {
     grid-column: 8/9;
     grid-row: 1/2;
-    margin-botto3m: 20px;
+    margin-bottom: 20px;
 }
 
  .card-img-top {
