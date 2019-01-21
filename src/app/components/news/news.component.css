@@ -13,6 +13,14 @@ a {
   font-weight: bold;
 }
 
+.modal-content {
+    background-color: rgba(31, 27, 26, 0.95);
+    color: antiquewhite;
+    border: 1px solid rgba(240, 230, 230, .90);
+
+}
+
+
 
 .cuadro_fondo_blanco {
     height: 1200px;

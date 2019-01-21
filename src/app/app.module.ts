@@ -58,6 +58,8 @@ import { PlayerinfoComponent } from './components/playerinfo/playerinfo.componen
 import { PitcherinfoComponent } from './components/pitcherinfo/pitcherinfo.component';
 import { TriviaComponent } from './components/trivia/trivia.component';
 import { HeaderComponent } from './components/header/header.component';
+import { VideosComponent } from './components/videos/videos.component';
+import { PlayerOfTheWeekComponent } from './components/player-of-the-week/player-of-the-week.component';
 
 @NgModule({
   declarations: [
@@ -90,7 +92,9 @@ import { HeaderComponent } from './components/header/header.component';
     PlayerinfoComponent,
     PitcherinfoComponent,
     TriviaComponent,
-    HeaderComponent
+    HeaderComponent,
+    VideosComponent,
+    PlayerOfTheWeekComponent
 
   ],
   imports: [

@@ -100,6 +100,11 @@
     text-align: center;
 }
 
+.spiner {
+    margin-left: 20% !important;
+
+}
+
 .fa-baseball-ball {
     font-size: 8rem;
     margin: 5% 0 0 25%  !important;
@@ -107,7 +112,6 @@
 }
 .spiner_load {
     font-size: 2.5rem;
-    margin: 0 0 0 20% !important;
     color: rgba(80, 57, 43, 0.95);
 }
 
