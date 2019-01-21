@@ -22,6 +22,7 @@ import { NewsgralComponent } from './components/news/newsgral/newsgral.component
 import { PlayerinfoComponent } from './components/playerinfo/playerinfo.component';
 import { PitcherinfoComponent } from './components/pitcherinfo/pitcherinfo.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
+import { TriviaComponent } from './components/trivia/trivia.component';
 
 import {AuthGuard} from './guards/auth.guard';
 
@@ -64,6 +65,8 @@ const routes: Routes = [
   component: NewsgralComponent},
   { path: 'profile',
   component: ProfileComponent},
+  { path: 'trivia',
+  component: TriviaComponent},
   { path: 'playerinfo/:code',
   component: PlayerinfoComponent, pathMatch: 'full'},
   { path: 'pitcherinfo/:id',
