@@ -24,6 +24,7 @@ import { PitcherinfoComponent } from './components/pitcherinfo/pitcherinfo.compo
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { TriviaComponent } from './components/trivia/trivia.component';
 import { VideosComponent } from './components/videos/videos.component';
+import { PActives2019Component } from './components/pitchers/p-actives2019/p-actives2019.component';
 
 import {AuthGuard} from './guards/auth.guard';
 
@@ -60,6 +61,8 @@ const routes: Routes = [
   component: PBioActivesComponent},
   { path: 'p_actives',
   component: PActivesComponent},
+  { path: 'p_actives19',
+  component: PActives2019Component},
   { path: 'login',
   component: LoginComponent},
   { path: 'newsgral',

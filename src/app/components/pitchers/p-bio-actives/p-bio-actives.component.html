@@ -1,5 +1,5 @@
 <div class="container-actives">
-  <h1 class="bioActives-title">BIOGRAFIA DE PITCHERS ACTIVOS</h1>
+  <h1 class="bioActives-title">Biografía de Pitchers Activos</h1>
 </div>
 
 <p class="title-position"> TEMP. 2018 </p>
@@ -62,23 +62,23 @@
         </div>
       </ng-container>
     </div>
-    <div class="container">
+    <div class="container paginator">
       <div class="text-center">
         <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
           <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-            <a (click)="setPage(1)" class="page-link">First</a>
+            <a (click)="setPage(1)" class="page-link paginator_text">First</a>
           </li>
           <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-            <a (click)="setPage(pager.currentPage - 1)" class="page-link">Previous</a>
+            <a (click)="setPage(pager.currentPage - 1)" class="page-link paginator_text">Previous</a>
           </li>
           <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
             <a (click)="setPage(page)" class="page-link">{{page}}</a>
           </li>
           <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-            <a (click)="setPage(pager.currentPage + 1)" class="page-link">Next</a>
+            <a (click)="setPage(pager.currentPage + 1)" class="page-link paginator_text">Next</a>
           </li>
           <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-            <a (click)="setPage(pager.totalPages)" class="page-link">Last</a>
+            <a (click)="setPage(pager.totalPages)" class="page-link paginator_text">Last</a>
           </li>
         </ul>
       </div>

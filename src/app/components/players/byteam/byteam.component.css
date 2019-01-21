@@ -138,17 +138,17 @@
     }
     .table-header2 {
         font-size: 0.68rem;
-    
+
     }
 
-    
+
 }
 @media only screen and (orientation: landscape) and (min-width:500px ) and (max-width: 600px) {
     .container-team {
         margin-top: 5% !important;
       }
-      
-      
+
+
     .team-title {
         font-size: 1.25rem;
         text-align: center;
@@ -170,7 +170,7 @@
         color: antiquewhite;
         font-size: 0.75rem !important;
     }
-    
+
     .th3, .th5, .th7, .th8, .th9 {
         display: table-cell;
     }
@@ -190,7 +190,7 @@
         margin: 0.15rem auto 0.5rem;
         padding: .5rem 0;
     }
-      
+
     .table-header {
         background-color: rgba(12, 10, 9, 0.9);
         color: antiquewhite;
@@ -201,24 +201,24 @@
         background-color: rgba(12, 10, 9, 0.75);
         color: antiquewhite;
         font-size: 1rem;
-    
+
     }
     .error_search {
         font-size: 1.25rem;
-    
+
     }
-    
-    
-    
+
+
+
     .th3, .th5, .th7, .th8, .th9, .th10, .th11 {
         display: table-cell;
     }
     .paginator_text {
         display: table-cell;
     }
-    
-    
-    
+
+
+
 }
 @media only screen and (min-width:1021px ) and (max-width: 1439px) {
     .container-team {
@@ -229,7 +229,7 @@
         margin: 0.15rem auto 0.5rem !important;
         padding: .5rem 0;
     }
-      
+
     .table-header {
         background-color: rgba(12, 10, 9, 0.9);
         color: antiquewhite;
@@ -240,26 +240,26 @@
         background-color: rgba(12, 10, 9, 0.75);
         color: antiquewhite;
         font-size: 1rem;
-    
+
     }
     .error_search {
         font-size: 1.5rem;
-    
+
     }
 
-    
+
     .th3, .th5, .th7, .th8, .th9, .th10, .th11 {
         display: table-cell;
     }
     .paginator {
         font-size: 1.25rem    }
-    
+
     .paginator_text {
         display: table-cell;
     }
-    
-    
-    
+
+
+
 }
 @media only screen and (min-width:1440px ) and (max-width: 3500px) {
     .container-team {
@@ -273,7 +273,7 @@
 
     .advancedSearchTextbox{
         font-size: 1.25rem;
-   
+
     }
 
     .title-position{
@@ -283,31 +283,31 @@
     }
     .error_search {
         font-size: 1.5rem;
-    
+
     }
 
 
-      
+
     .table-header {
         font-size: 1.25rem;
     }
     .table-header2 {
         font-size: 1.25rem;
-    
+
     }
-    
+
     .th3, .th5, .th7, .th8, .th9, .th10, .th11 {
         display: table-cell;
     }
     .paginator {
         font-size: 1.25rem    }
-    
+
     .paginator_text {
         display: table-cell;
     }
-    
-    
-    
+
+
+
 }
 @media only screen and (orientation: landscape) and (min-width:601px ) and (max-width: 668px) {
     .container-team {
@@ -328,7 +328,7 @@
         background-color: rgba(12, 10, 9, 0.75);
         color: antiquewhite;
         font-size: 0.7rem;
-    
+
     }
 }
 @media only screen and (orientation: landscape) and (min-width:668px ) and (max-width: 730px) {
@@ -341,7 +341,7 @@
         padding: .5rem 0;
     }
 
-      
+
     .table-header {
         background-color: rgba(12, 10, 9, 0.9);
         color: antiquewhite;
@@ -352,19 +352,19 @@
         background-color: rgba(12, 10, 9, 0.75);
         color: antiquewhite;
         font-size: 0.68rem;
-    
+
     }
-    
-    
+
+
     .th3, .th5, .th7, .th8, .th9, .th10, .th11 {
         display: table-cell;
     }
     .paginator_text {
         display: table-cell;
     }
-    
-    
-    
+
+
+
 }
 @media only screen and (orientation: landscape) and (min-width:731px ) and (max-width: 1020px) {
     .container-team {
@@ -376,7 +376,7 @@
         padding: .5rem 0;
     }
 
-      
+
     .table-header {
         background-color: rgba(12, 10, 9, 0.9);
         color: antiquewhite;
@@ -387,19 +387,19 @@
         background-color: rgba(12, 10, 9, 0.75);
         color: antiquewhite;
         font-size: 0.68rem;
-    
+
     }
-    
-    
+
+
     .th3, .th5, .th7, .th8, .th9, .th10, .th11 {
         display: table-cell;
     }
     .paginator_text {
         display: table-cell;
     }
-    
-    
-    
+
+
+
 }
 @media only screen and (orientation: landscape) and (min-width:1021px ) and (max-width: 1300px) {
     .container-team {
@@ -411,7 +411,7 @@
         padding: .5rem 0;
     }
 
-      
+
     .table-header {
         background-color: rgba(12, 10, 9, 0.9);
         color: antiquewhite;
@@ -422,19 +422,19 @@
         background-color: rgba(12, 10, 9, 0.75);
         color: antiquewhite;
         font-size: 1rem;
-    
+
     }
-    
-    
+
+
     .th3, .th5, .th7, .th8, .th9, .th10, .th11 {
         display: table-cell;
     }
     .paginator_text {
         display: table-cell;
     }
-    
-    
-    
+
+
+
 }
 @media only screen and (orientation: landscape) and (min-width:1301px ) and (max-width: 1500px) {
     .container-team {
@@ -445,10 +445,10 @@
         margin: 0.15rem auto !important;
         padding: .5rem 0;
     }
-    
+
     .advancedSearchTextbox{
         font-size: 1rem;
-   
+
     }
 
     .title-position{
@@ -456,8 +456,8 @@
         margin-left: 2%;
         margin-bottom: 0;
     }
-    
-    
+
+
     .table-header {
         background-color: rgba(12, 10, 9, 0.9);
         color: antiquewhite;
@@ -468,19 +468,19 @@
         background-color: rgba(12, 10, 9, 0.75);
         color: antiquewhite;
         font-size: 1.25rem;
-    
+
     }
-    
-    
+
+
     .th3, .th5, .th7, .th8, .th9, .th10, .th11 {
         display: table-cell;
     }
     .paginator_text {
         display: table-cell;
     }
-    
-    
-    
+
+
+
 }
 
 

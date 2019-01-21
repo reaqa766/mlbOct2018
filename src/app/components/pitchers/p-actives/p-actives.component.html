@@ -23,52 +23,52 @@
       <table class="table table-hover text-center">
         <thead class="table-header">
           <tr>
-            <th style="width: 10%;" scope="col">Nombre</th>
-            <th style="width: 10%;" scope="col">Equipo</th>
-            <th style="width: 5%;" scope="col">Inic</th>
-            <th style="width: 5%;" scope="col">G</th>
-            <th style="width: 5%;" scope="col">P</th>
-            <th style="width: 5%;" scope="col">Salv</th>
-            <th style="width: 5%;" scope="col">InnP</th>
-            <th style="width: 5%;" scope="col">Efect</th>
-            <th style="width: 5%;" scope="col">Pches</th>
-            <th style="width: 5%;" scope="col">BB</th>
-            <th style="width: 5%;" scope="col">Cl</th>
-            <th style="width: 5%;" scope="col">CS</th>
+            <th class="th2" style="width: 10%;" scope="col">Nombre</th>
+            <th class="th3" style="width: 10%;" scope="col">Equipo</th>
+            <th class="th4" style="width: 5%;" scope="col">Inic</th>
+            <th class="th5" style="width: 5%;" scope="col">G</th>
+            <th class="th6" style="width: 5%;" scope="col">P</th>
+            <th class="th7" style="width: 5%;" scope="col">Salv</th>
+            <th class="th8" style="width: 5%;" scope="col">InnP</th>
+            <th class="th9" style="width: 5%;" scope="col">Efect</th>
+            <th class="th10" style="width: 5%;" scope="col">Pches</th>
+            <th class="th11" style="width: 5%;" scope="col">BB</th>
+            <th class="th12" style="width: 5%;" scope="col">Cl</th>
+            <th class="th13" style="width: 5%;" scope="col">CS</th>
           </tr>
         </thead>
         <tbody class="table-header2">
           <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
             <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
-              <a routerLink="/pitcherinfo/{{player.id}}" class="link_player"><td class="link_player" style="width: 10%;">{{player.fullName}}</td></a>
-              <td style="width: 10%;">{{player.stats[0].splits[0].team.name}}</td>
-              <td style="width: 5%;">{{player.stats[0].splits[0].stat.gamesPitched}}</td>
-              <td style="width: 5%;">{{player.stats[0].splits[0].stat.wins}}</td>
-              <td style="width: 5%;">{{player.stats[0].splits[0].stat.losses}}</td>
-              <td style="width: 5%;">{{player.stats[0].splits[0].stat.saves}}</td>
-              <td style="width: 5%;">{{player.stats[0].splits[0].stat.inningsPitched}}</td>
-              <td style="width: 5%;">{{player.stats[0].splits[0].stat.era}}</td>
-              <td style="width: 5%;">{{player.stats[0].splits[0].stat.strikeOuts}}</td>
-              <td style="width: 5%;">{{player.stats[0].splits[0].stat.baseOnBalls}}</td>
-              <td style="width: 5%;">{{player.stats[0].splits[0].stat.earnedRuns}}</td>
-              <td style="width: 5%;">{{player.stats[0].splits[0].stat.runs}}</td>
+              <a routerLink="/pitcherinfo/{{player.id}}" class="link_player"><td class="link_player" class="th1" style="width: 10%;">{{player.fullName}}</td></a>
+              <td class="th2" style="width: 10%;">{{player.stats[0].splits[0].team.name}}</td>
+              <td class="th3" style="width: 5%;">{{player.stats[0].splits[0].stat.gamesPitched}}</td>
+              <td class="th4" style="width: 5%;">{{player.stats[0].splits[0].stat.wins}}</td>
+              <td class="th5" style="width: 5%;">{{player.stats[0].splits[0].stat.losses}}</td>
+              <td class="th6" style="width: 5%;">{{player.stats[0].splits[0].stat.saves}}</td>
+              <td class="th7" style="width: 5%;">{{player.stats[0].splits[0].stat.inningsPitched}}</td>
+              <td class="th8" style="width: 5%;">{{player.stats[0].splits[0].stat.era}}</td>
+              <td class="th9" style="width: 5%;">{{player.stats[0].splits[0].stat.strikeOuts}}</td>
+              <td class="th10" style="width: 5%;">{{player.stats[0].splits[0].stat.baseOnBalls}}</td>
+              <td class="th11" style="width: 5%;">{{player.stats[0].splits[0].stat.earnedRuns}}</td>
+              <td class="th12" style="width: 5%;">{{player.stats[0].splits[0].stat.runs}}</td>
             </tr>
 
           </ng-container>
           <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
             <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
-              <a routerLink="/pitcherinfo/{{player.id}}" class="link_player"><td class="link_player" style="width: 10%;">{{player.fullName}}</td></a>
-              <td style="width: 10%;">{{player.stats[0].splits[0].team.name}}</td>
-              <td style="width: 5%;">{{player.stats[0].splits[0].stat.gamesPitched}}</td>
-              <td style="width: 5%;">{{player.stats[0].splits[0].stat.wins}}</td>
-              <td style="width: 5%;">{{player.stats[0].splits[0].stat.losses}}</td>
-              <td style="width: 5%;">{{player.stats[0].splits[0].stat.saves}}</td>
-              <td style="width: 5%;">{{player.stats[0].splits[0].stat.inningsPitched}}</td>
-              <td style="width: 5%;">{{player.stats[0].splits[0].stat.era}}</td>
-              <td style="width: 5%;">{{player.stats[0].splits[0].stat.strikeOuts}}</td>
-              <td style="width: 5%;">{{player.stats[0].splits[0].stat.baseOnBalls}}</td>
-              <td style="width: 5%;">{{player.stats[0].splits[0].stat.earnedRuns}}</td>
-              <td style="width: 5%;">{{player.stats[0].splits[0].stat.runs}}</td>
+              <a routerLink="/pitcherinfo/{{player.id}}" class="link_player"><td class="link_player" class="th1" style="width: 10%;">{{player.fullName}}</td></a>
+              <td class="th2" style="width: 10%;">{{player.stats[0].splits[0].team.name}}</td>
+              <td class="th3" style="width: 5%;">{{player.stats[0].splits[0].stat.gamesPitched}}</td>
+              <td class="th4" style="width: 5%;">{{player.stats[0].splits[0].stat.wins}}</td>
+              <td class="th5" style="width: 5%;">{{player.stats[0].splits[0].stat.losses}}</td>
+              <td class="th6" style="width: 5%;">{{player.stats[0].splits[0].stat.saves}}</td>
+              <td class="th7" style="width: 5%;">{{player.stats[0].splits[0].stat.inningsPitched}}</td>
+              <td class="th8" style="width: 5%;">{{player.stats[0].splits[0].stat.era}}</td>
+              <td class="th9" style="width: 5%;">{{player.stats[0].splits[0].stat.strikeOuts}}</td>
+              <td class="th10" style="width: 5%;">{{player.stats[0].splits[0].stat.baseOnBalls}}</td>
+              <td class="th11" style="width: 5%;">{{player.stats[0].splits[0].stat.earnedRuns}}</td>
+              <td class="th12" style="width: 5%;">{{player.stats[0].splits[0].stat.runs}}</td>
             </tr>
           </ng-container>
         </tbody>
@@ -77,25 +77,25 @@
       <!-- PAGINATION-->
 
       <div>
-        <div class="container">
+        <div class="container paginator">
           <div class="text-center">
 
             <!-- pager -->
             <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
               <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-                <a (click)="setPage(1)" class="page-link">First</a>
+                <a (click)="setPage(1)" class="page-link  paginator_item">First</a>
               </li>
               <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-                <a (click)="setPage(pager.currentPage - 1)" class="page-link">Previous</a>
+                <a (click)="setPage(pager.currentPage - 1)" class="page-link  paginator_item">Previous</a>
               </li>
               <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
                 <a (click)="setPage(page)" class="page-link">{{page}}</a>
               </li>
               <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-                <a (click)="setPage(pager.currentPage + 1)" class="page-link">Next</a>
+                <a (click)="setPage(pager.currentPage + 1)" class="page-link  paginator_item">Next</a>
               </li>
               <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-                <a (click)="setPage(pager.totalPages)" class="page-link">Last</a>
+                <a (click)="setPage(pager.totalPages)" class="page-link  paginator_item">Last</a>
               </li>
             </ul>
           </div>

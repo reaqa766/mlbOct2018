@@ -60,6 +60,7 @@ import { TriviaComponent } from './components/trivia/trivia.component';
 import { HeaderComponent } from './components/header/header.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { PlayerOfTheWeekComponent } from './components/player-of-the-week/player-of-the-week.component';
+import { PActives2019Component } from './components/pitchers/p-actives2019/p-actives2019.component';
 
 @NgModule({
   declarations: [
@@ -94,7 +95,8 @@ import { PlayerOfTheWeekComponent } from './components/player-of-the-week/player
     TriviaComponent,
     HeaderComponent,
     VideosComponent,
-    PlayerOfTheWeekComponent
+    PlayerOfTheWeekComponent,
+    PActives2019Component
 
   ],
   imports: [
