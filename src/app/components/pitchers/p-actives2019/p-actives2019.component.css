@@ -1,0 +1,8 @@
+h1 {
+  margin-top: 2rem;
+  color: antiquewhite;
+  font-size: 4rem;
+  text-align: center;
+  text-shadow: 2px 2px 8px black;
+  background-color:rgba(66, 53, 37, .5);
+}
