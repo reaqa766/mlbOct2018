@@ -23,6 +23,7 @@ import { PlayerinfoComponent } from './components/playerinfo/playerinfo.componen
 import { PitcherinfoComponent } from './components/pitcherinfo/pitcherinfo.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { TriviaComponent } from './components/trivia/trivia.component';
+import { VideosComponent } from './components/videos/videos.component';
 
 import {AuthGuard} from './guards/auth.guard';
 
@@ -67,6 +68,8 @@ const routes: Routes = [
   component: ProfileComponent},
   { path: 'trivia',
   component: TriviaComponent},
+  { path: 'videos',
+  component: VideosComponent},
   { path: 'playerinfo/:code',
   component: PlayerinfoComponent, pathMatch: 'full'},
   { path: 'pitcherinfo/:id',
