@@ -42,23 +42,25 @@ export class NewsComponent implements OnInit {
 //  }
   urladdress(): void {
     if (this.num === 'news1') {
-          window.open('https://www.mlb.com/news/cardinals-open-to-trading-jose-martinez/c-301791482', '_blank');
+          // tslint:disable-next-line:max-line-length
+          window.open('https://www.mlb.com/es/news/que-se-puede-esperar-del-venezolano-gleyber-torres-en-grandes-ligas/c-273383100', '_blank');
   } else if (this.num === 'news2') {
-    window.open('https://www.mlb.com/es/news/ny-busca-ser-creativo-en-busca-de-realmuto/c-301840382', '_blank');
+    window.open('https://www.directvsports.com/beisbol/mlb/noticias/cuando-comienza-temporada-2019-mlb', '_blank');
   } else if (this.num === 'news3') {
-    window.open('https://www.mlb.com/es/news/ausmus-buscara-un-balance-para-pujols-y-ohtani/c-301831468', '_blank');
+    // tslint:disable-next-line:max-line-length
+    window.open('https://www.mlb.com/es/news/keibert-ruiz-tiene-los-bonos-bien-altos-en-los-dodgers-como-receptor-del-futuro/c-302632976', '_blank');
   } else if (this.num === 'news4') {
     // tslint:disable-next-line:max-line-length
     window.open('http://www.espn.com.ve/beisbol/nota/_/id/5077318/tigres-miguel-cabrera-dividira-labores-en-1b-y-como-bateador-designado', '_blank');
   } else if (this.num === 'news5') {
     // tslint:disable-next-line:max-line-length
-    window.open('http://www.espn.com.ve/beisbol/nota/_/id/5079474/edwin-encarnacion-a-seattle-carlos-santana-retorna-a-cleveland', '_blank');
+    window.open('https://www.12up.com/es/posts/6256619-los-5-mejores-prospectos-venezolanos-de-las-grandes-ligas-en-2019', '_blank');
   } else if (this.num === 'news6') {
     // tslint:disable-next-line:max-line-length
-    window.open('http://www.espn.com.ve/beisbol/nota/_/id/5080034/brewers-adquieren-a-pitcher-boricua-alex-claudio-de-los-rangers', '_blank');
+    window.open('https://www.mlb.com/news/d-backs-agree-to-terms-with-wilmer-flores-on-a-1-year-contract/c-302952200', '_blank');
   } else if (this.num === 'news7') {
     // tslint:disable-next-line:max-line-length
-    window.open('http://www.espn.com.ve/beisbol/nota/_/id/5077441/azulejos-tienen-certeza-de-que-vladimir-guerrero-jr-debutara-en-gl-durante-2019', '_blank');
+    window.open('https://beisbolplay.americadigital.com/2019/01/22/asdrubal-cabrera-firmo-con-rangers/', '_blank');
   }
 }
 }
