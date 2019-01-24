@@ -18,8 +18,23 @@
           <p class="text_11" (click)='textChange(i)'>{{player.pregunta}}</p>
         </div>
         <div *ngIf="!player.activo">
-          <p class="text_12" (click)='textChange(i)'>{{player.respuesta}}</p>
+            <form class="form_container" >
+              <input  type="radio" name="question" (click)='textChange(i)' value="1" > {{player.opcion1}}<br>
+              <input type="radio" name="question" (click)='textChange(i)' value="2"> {{player.opcion2}}<br>
+              <input type="radio" name="question" (click)='textChange(i)' value="3"> {{player.opcion3}}<br><br>
+              <!-- <input class="submit" type="submit" (click)='respChange(i)'> -->
+            </form> 
+          <div *ngIf='player.option'>
+            <div *ngIf='resp === player.respuesta'>
+              <p>Respuesta correcta</p>
+        
         </div>
+            <div *ngIf='!player.option'>
+              <p>Respuesta incorrecta</p>
+          <p class="text_12" (click)='textChange(i)'>La respuesta es: {{player.respuesta}}</p>
+        </div>
+      </div>
+      </div>
       </div>
     </div>
   </div>

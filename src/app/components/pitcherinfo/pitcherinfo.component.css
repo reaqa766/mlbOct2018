@@ -350,6 +350,9 @@
 @media only screen and (min-width:1024px ) and (max-width: 1279px) {
   .container-all {
     top: 1rem;
+    width: 75%;
+    left:14%;
+
   }
 
   .bioActives-title {
@@ -427,9 +430,11 @@
 }
 @media only screen and (min-width:1280px ) and (max-width: 1439px) {
   .container-all {
-    width: 100% !important;
     position: absolute;
     top: 1rem;
+    width: 72%;
+    left:14%;
+
 
   }
 
@@ -510,6 +515,9 @@ width: 100%;
 @media only screen and (min-width:1440px ) and (max-width: 1599px) {
   .container-all {
     top: 1rem;
+    width: 72%;
+    left:14%;
+
   }
 
   .bioActives-title {
@@ -586,6 +594,9 @@ width: 100%;
 @media only screen and (min-width:1600px ) and (max-width: 1920px) {
   .container-all {
     top: 1rem;
+    width: 72%;
+    left:14%;
+
   }
 
   .bioActives-title {
@@ -662,6 +673,9 @@ width: 100%;
 @media only screen and (min-width:1921px ) and (max-width: 3500px) {
   .container-all {
     top: 1rem;
+    width: 72%;
+    left:14%;
+
   }
 
   .bioActives-title {
