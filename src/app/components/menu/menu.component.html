@@ -44,7 +44,7 @@
                 <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" routerLink="videos">Videos</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" routerLink="trivia">Trivia </a> 
+                    <a class="dropdown-item" routerLink="trivia">Trivia </a>
                     </div>
               </li>
 
@@ -55,7 +55,7 @@
           <a class="nav-link " *ngIf="isLogin" href="#">Perfil</a>
         </li>
         <li class="nav-item mr-4" *ngIf="!isLogin">
-          <a class="nav-link active" routerLink="login">Login</a>
+          <a class="nav-link active" routerLink="login">Login/Regístrate</a>
         </li>
         <li class="nav-item  mr-4" *ngIf="isLogin">
           <a class="nav-link " href="#" (click)="onClickLogOut()">Logout</a>
