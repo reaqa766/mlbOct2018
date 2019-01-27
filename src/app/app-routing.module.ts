@@ -25,6 +25,7 @@ import { ProfileComponent } from './components/user/profile/profile.component';
 import { TriviaComponent } from './components/trivia/trivia.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { PActives2019Component } from './components/pitchers/p-actives2019/p-actives2019.component';
+import { Actives2019Component } from './components/temp2019/players2019/actives2019/actives2019.component';
 
 import {AuthGuard} from './guards/auth.guard';
 
@@ -78,6 +79,8 @@ const routes: Routes = [
   { path: 'pitcherinfo/:id',
   component: PitcherinfoComponent,
   pathMatch: 'full'},
+  { path: 'actives2019',
+  component: Actives2019Component},
   { path: '**',
   component: NotFoundPageComponent}
 ];
