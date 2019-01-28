@@ -1,16 +1,17 @@
 <header>
   <div class="title_trivia">
-    <h1 class="title_h1" >Trivia 2018</h1>
+    <h1 class="title_h1">Trivia 2018</h1>
   </div>
 </header>
 <!-- <div class="separador"><h1 style="height: 2rem;"></h1></div> -->
 <main>
-  <div class="players_pic" >
+  <div class="players_pic">
     <div *ngFor="let player of players; let i=index">
       <div [ngClass]="'pic_'+ (i+1)">
         <a routerLink="/playerinfo/{{player.code}}">
 
-        <img  [ngClass]="'img_pic_'+ (i+1)" (click)='textChange(i)' [src]="'../../../assets/'  + player.code + '.jpg'" alt="Player Image" data-toggle="tooltip" data-placement="top" title="Pincha para ver Biografía"></a>
+          <img [ngClass]="'img_pic_'+ (i+1)" (click)='textChange(i)' [src]="'../../../assets/'  + player.code + '.jpg'"
+            alt="Player Image" data-toggle="tooltip" data-placement="top" title="Pincha para ver Biografía"></a>
       </div>
 
       <div [ngClass]="'text_'+ (i+1)">
@@ -18,26 +19,34 @@
           <p class="text_11" (click)='textChange(i)'>{{player.pregunta}}</p>
         </div>
         <div *ngIf="!player.activo">
-            <form class="form_container" >
-              <input  type="radio" name="question" (click)='textChange(i)' value="1" > {{player.opcion1}}<br>
-              <input type="radio" name="question" (click)='textChange(i)' value="2"> {{player.opcion2}}<br>
-              <input type="radio" name="question" (click)='textChange(i)' value="3"> {{player.opcion3}}<br><br>
-              <!-- <input class="submit" type="submit" (click)='respChange(i)'> -->
-            </form> 
-          <div *ngIf='player.option'>
-            <div *ngIf='resp === player.respuesta'>
-              <p>Respuesta correcta</p>
-        
-        </div>
-            <div *ngIf='!player.option'>
-              <p>Respuesta incorrecta</p>
-          <p class="text_12" (click)='textChange(i)'>La respuesta es: {{player.respuesta}}</p>
+        <div *ngIf="form_container">
+
+          <form class="form_container">
+            <input [(ngModel)]="opcion" type="radio" name="question" (click)='respChange(i)' value="1"> {{player.opcion1}}<br>
+            <input [(ngModel)]="opcion" type="radio" name="question" (click)='respChange(i)' value="2"> {{player.opcion2}}<br>
+            <input [(ngModel)]="opcion" type="radio" name="question" (click)='respChange(i)' value="3"> {{player.opcion3}}<br><br>
+            <!-- <input class="submit" type="submit" (click)='respChange(i)'> -->
+          </form>
         </div>
       </div>
-      </div>
+
+
+
+          <div *ngIf='players.option; then thenBlock else elseBlock'>
+            <ng-template #thenBlock>
+              <div *ngIf='opcion === player.respuesta; then correct_answer else incorrect_answer'>
+                <ng-template #correct_answer>
+                  <p (click)='textChange(i)'>Respuesta correcta</p>
+                </ng-template>
+                <ng-template #incorrect_answer>
+
+                  <p>Respuesta incorrecta</p>
+                  <p class="text_12" (click)='textChange(i)'>La respuesta es: {{player.respuesta}}</p>
+                </ng-template>
+              </div>
+            </ng-template>
+          </div>
       </div>
     </div>
   </div>
 </main>
-
-
