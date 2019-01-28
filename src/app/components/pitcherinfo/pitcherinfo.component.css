@@ -34,7 +34,7 @@
 .player_grid {
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 3fr 4fr 1fr 1fr;
+    grid-template-rows: 3fr 4fr 1fr 50px;
     background-color: rgb(255, 255, 255);
     margin-top: 1rem;
     justify-content: center;
@@ -120,6 +120,9 @@
 
 
 }
+.bottom_space {
+  height: 1rem;
+}
 
 @media only screen and (min-width:320px ) and (max-width: 799px) and (orientation: landscape) {
   .container-all {
@@ -134,7 +137,7 @@
   .player_grid {
       display: grid;
       grid-template-columns: 1fr 1fr 3fr ;
-      grid-template-rows: 3fr 1fr 1fr;
+      grid-template-rows: 3fr 1fr 50px;
   }
   .player_pict {
     grid-column: 1/2;
@@ -198,6 +201,10 @@
 .table-header2 {
     font-size: 1.25rem;
 }
+.bottom_space {
+  height: 1rem;
+}
+
 }
 @media only screen and (min-width:800px ) and (max-width: 1023px) and (orientation: landscape) {
   .container-all {
@@ -212,7 +219,7 @@
   .player_grid {
       display: grid;
       grid-template-columns: 1fr 1fr 3fr ;
-      grid-template-rows: 4fr 1fr 1fr !important;
+      grid-template-rows: 4fr 1fr 50px !important;
   }
   .player_pict {
     grid-column: 1/2;
@@ -276,6 +283,10 @@
 .table-header2 {
     font-size: 1.25rem;
 }
+.bottom_space {
+  height: 1rem;
+}
+
 }
 @media only screen and (min-width:767px ) and (max-width: 1023px) {
   .container-all {
@@ -293,7 +304,7 @@
   .player_grid {
       display: grid;
       grid-template-columns: 3fr 2fr;
-      grid-template-rows: 4fr 4fr 1fr 1fr;
+      grid-template-rows: 4fr 4fr 1fr 50px;
   }
   .card-title{
     font-size: 1.85rem;
@@ -346,6 +357,10 @@
 .table-header2 {
     font-size: 1.55rem;
 }
+.bottom_space {
+  height: 1rem;
+}
+
 }
 @media only screen and (min-width:1024px ) and (max-width: 1279px) {
   .container-all {
@@ -363,7 +378,7 @@
   .player_grid {
       display: grid;
       grid-template-columns: 1fr 1fr 3fr ;
-      grid-template-rows: 3fr 1fr 1fr;
+      grid-template-rows: 3fr 1fr 50px;
   }
   .player_pict {
     grid-column: 1/2;
@@ -427,6 +442,10 @@
 .table-header2 {
     font-size: 1.25rem;
 }
+.bottom_space {
+  height: 1rem;
+}
+
 }
 @media only screen and (min-width:1280px ) and (max-width: 1439px) {
   .container-all {
@@ -447,7 +466,7 @@
   .player_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 3fr ;
-    grid-template-rows: 3fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr 50px;
 }
 .player_pict {
   grid-column: 1/2;
@@ -511,6 +530,10 @@ width: 100%;
 .table-header2 {
   font-size: 1.25rem;
 }
+.bottom_space {
+  height: 1rem;
+}
+
 }
 @media only screen and (min-width:1440px ) and (max-width: 1599px) {
   .container-all {
@@ -528,7 +551,7 @@ width: 100%;
   .player_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 3fr ;
-    grid-template-rows: 4fr 1fr 1fr;
+    grid-template-rows: 4fr 1fr 75px;
     height: 100%;
 }
 
@@ -590,6 +613,10 @@ width: 100%;
 .table-header2 {
     font-size: 2rem;
 }
+.bottom_space {
+  height: 1rem;
+}
+
 }
 @media only screen and (min-width:1600px ) and (max-width: 1920px) {
   .container-all {
@@ -607,7 +634,7 @@ width: 100%;
   .player_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 3fr ;
-    grid-template-rows: 4fr 1fr 1fr;
+    grid-template-rows: 4fr 1fr 75px;
     height: 100%;
 }
 
@@ -669,6 +696,10 @@ width: 100%;
 .table-header2 {
     font-size: 2rem;
 }
+.bottom_space {
+  height: 2rem;
+}
+
 }
 @media only screen and (min-width:1921px ) and (max-width: 3500px) {
   .container-all {
@@ -686,7 +717,7 @@ width: 100%;
   .player_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 3fr ;
-    grid-template-rows: 4fr 1fr 1fr;
+    grid-template-rows: 4fr 1fr 50px;
     height: 100%;
 }
 
@@ -748,6 +779,10 @@ width: 100%;
 .table-header2 {
     font-size: 2rem;
 }
+.bottom_space {
+  height: 1rem;
+}
+
 }
 
 
