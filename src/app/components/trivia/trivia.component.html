@@ -15,11 +15,26 @@
       </div>
 
       <div [ngClass]="'text_'+ (i+1)">
-        <div *ngIf="player.activo" data-toggle="tooltip" data-placement="bottom" title="Pincha para ver Respuesta">
+        <div *ngIf="player.activo" data-toggle="tooltip" data-placement="bottom" title="Pincha para  Responder">
           <p class="text_11" (click)='textChange(i)'>{{player.pregunta}}</p>
         </div>
-        <div *ngIf="!player.activo" data-toggle="tooltip" data-placement="bottom" title="Pincha para ver Respuesta">
-        <p class="text_12" (click)='textChange(i)'>{{player.respuesta}}</p>
+        <!-- <div *ngIf='respuesta_def' > -->
+        <div class="respuesta" *ngIf="!player.activo" >
+            <form >
+              <input [(ngModel)]="username" type="radio" name='username'  value="{{player.opcion1}}" (click)='respDada()'> {{player.opcion1}}<br>
+              <input [(ngModel)]="username" type="radio" name='username' value="{{player.opcion2}}" (click)='respDada()'> {{player.opcion2}}<br>
+              <input [(ngModel)]="username" type="radio" name='username' value="{{player.opcion3}}" (click)='respDada()'> {{player.opcion3}}<br>  
+
+            </form>
+            <p>Hello {{username}}!</p>
+
+          <!-- </div> -->
+          <!-- <p class="text_12" (click)='textChange(i)'>{{player.respuesta}}</p> -->
+        </div>
+      <!-- <div *ngIf='!respuesta_def' >  -->
+      <div class="respuesta_dada" *ngIf='username == player.respuesta'>
+          <p>Respuesta: {{username}} </p><br>
+        <!-- </div>  -->
       </div>
       </div>
     </div>

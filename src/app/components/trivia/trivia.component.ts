@@ -10,6 +10,10 @@ import { CodegenComponentFactoryResolver } from '@angular/core/src/linker/compon
 export class TriviaComponent implements OnInit {
   // text_11 = true;
   // text_22 = true;
+  answerDef = ' ' ;
+  username = '';
+  answer = ' ';
+  respuesta_def = true;
   form_container = true;
   opcion = '0' ;
   selection = ' ' ;
@@ -53,13 +57,10 @@ textChange(i) {
   this.players[i].activo = !this.players[i].activo;
 }
 
-respChange(i) {
-  this.players[i].option = !this.players[i].option;
-  // this.form_container = !this.form_container;
-  // this.selection = this.opcion;
-
-
-
+respDada() {
+  console.log('answer', this.username);
+  this.respuesta_def = !this.respuesta_def;
+  
 }
 }
 

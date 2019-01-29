@@ -112,6 +112,11 @@ footer {
     margin: 0;
 }
 
+.respuesta {
+    margin: .5rem;
+    color: antiquewhite;
+}
+
 @media only screen and (min-width:320px ) and (max-width: 331px)  {
 .players_pic {
     padding: 0 5%;
