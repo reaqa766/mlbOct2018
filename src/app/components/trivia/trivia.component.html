@@ -27,10 +27,9 @@
             <input [(ngModel)]="opcion" type="radio" name="question" (click)='respChange(i)' value="3"> {{player.opcion3}}<br><br>
             <!-- <input class="submit" type="submit" (click)='respChange(i)'> -->
           </form>
+          <p>Seleccion {{opcion}}</p>
         </div>
       </div>
-
-
 
           <div *ngIf='players.option; then thenBlock else elseBlock'>
             <ng-template #thenBlock>
