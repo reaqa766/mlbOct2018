@@ -18,34 +18,11 @@
         <div *ngIf="player.activo" data-toggle="tooltip" data-placement="bottom" title="Pincha para ver Respuesta">
           <p class="text_11" (click)='textChange(i)'>{{player.pregunta}}</p>
         </div>
-        <div *ngIf="!player.activo">
-        <div *ngIf="form_container">
-
-          <form class="form_container">
-            <input [(ngModel)]="opcion" type="radio" name="question" (click)='respChange(i)' value="1"> {{player.opcion1}}<br>
-            <input [(ngModel)]="opcion" type="radio" name="question" (click)='respChange(i)' value="2"> {{player.opcion2}}<br>
-            <input [(ngModel)]="opcion" type="radio" name="question" (click)='respChange(i)' value="3"> {{player.opcion3}}<br><br>
-            <!-- <input class="submit" type="submit" (click)='respChange(i)'> -->
-          </form>
-          <p>Seleccion {{opcion}}</p>
-        </div>
+        <div *ngIf="!player.activo" data-toggle="tooltip" data-placement="bottom" title="Pincha para ver Respuesta">
+        <p class="text_12" (click)='textChange(i)'>{{player.respuesta}}</p>
       </div>
-
-          <div *ngIf='players.option; then thenBlock else elseBlock'>
-            <ng-template #thenBlock>
-              <div *ngIf='opcion === player.respuesta; then correct_answer else incorrect_answer'>
-                <ng-template #correct_answer>
-                  <p (click)='textChange(i)'>Respuesta correcta</p>
-                </ng-template>
-                <ng-template #incorrect_answer>
-
-                  <p>Respuesta incorrecta</p>
-                  <p class="text_12" (click)='textChange(i)'>La respuesta es: {{player.respuesta}}</p>
-                </ng-template>
-              </div>
-            </ng-template>
-          </div>
       </div>
     </div>
   </div>
+
 </main>

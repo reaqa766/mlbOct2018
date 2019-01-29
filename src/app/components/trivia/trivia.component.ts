@@ -11,7 +11,7 @@ export class TriviaComponent implements OnInit {
   // text_11 = true;
   // text_22 = true;
   form_container = true;
-  opcion = ' ' ;
+  opcion = '0' ;
   selection = ' ' ;
   players = [
   {code: 444482, pregunta: '¿Qué posición juega?',
@@ -54,11 +54,9 @@ textChange(i) {
 }
 
 respChange(i) {
-  console.log('opcion', this.opcion);
   this.players[i].option = !this.players[i].option;
   // this.form_container = !this.form_container;
-  this.selection = this.opcion;
-  console.log('selection', this.selection);
+  // this.selection = this.opcion;
 
 
 
