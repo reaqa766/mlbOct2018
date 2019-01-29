@@ -21,12 +21,12 @@
         <!-- <div *ngIf='respuesta_def' > -->
         <div class="respuesta" *ngIf="!player.activo" >
             <form >
-              <input [(ngModel)]="username" type="radio" name='username'  value="{{player.opcion1}}" (click)='respDada()'> {{player.opcion1}}<br>
-              <input [(ngModel)]="username" type="radio" name='username' value="{{player.opcion2}}" (click)='respDada()'> {{player.opcion2}}<br>
-              <input [(ngModel)]="username" type="radio" name='username' value="{{player.opcion3}}" (click)='respDada()'> {{player.opcion3}}<br>  
+              <input [(ngModel)]="answer[i]" type="radio" name='answer'  value="{{player.opcion1}}" (click)='respDada(i)'> {{player.opcion1}}<br>
+              <input [(ngModel)]="answer[i]" type="radio" name='answer' value="{{player.opcion2}}" (click)='respDada(i)'> {{player.opcion2}}<br>
+              <input [(ngModel)]="answer[i]" type="radio" name='answer' value="{{player.opcion3}}" (click)='respDada(i)'> {{player.opcion3}}<br>  
 
             </form>
-            <p>Hello {{username}}!</p>
+            <p>Hello {{answer[i]}}!</p>
 
           <!-- </div> -->
           <!-- <p class="text_12" (click)='textChange(i)'>{{player.respuesta}}</p> -->

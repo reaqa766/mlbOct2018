@@ -9,10 +9,11 @@ import { CodegenComponentFactoryResolver } from '@angular/core/src/linker/compon
 })
 export class TriviaComponent implements OnInit {
   // text_11 = true;
-  // text_22 = true;
+  // text_22 = true;s
   answerDef = ' ' ;
-  username = '';
-  answer = ' ';
+  answer_array: Array<string[]> = [];
+  answer: Array<string[]> =  [];
+  // answer = ' ';
   respuesta_def = true;
   form_container = true;
   opcion = '0' ;
@@ -50,6 +51,11 @@ export class TriviaComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    for (var answer_array  of  this.answer) {
+      this.answer_array.push;
+      console.log('answer', this.answer_array);
+      
+    }
 
   }
 
@@ -57,9 +63,10 @@ textChange(i) {
   this.players[i].activo = !this.players[i].activo;
 }
 
-respDada() {
-  console.log('answer', this.username);
+respDada(i) {
   this.respuesta_def = !this.respuesta_def;
+  console.log('answer', this.answer_array[i]);
+
   
 }
 }
