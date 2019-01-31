@@ -18,23 +18,27 @@
         <div *ngIf="player.activo" data-toggle="tooltip" data-placement="bottom" title="Pincha para  Responder">
           <p class="text_11" (click)='textChange(i)'>{{player.pregunta}}</p>
         </div>
-        <!-- <div *ngIf='respuesta_def' > -->
         <div class="respuesta" *ngIf="!player.activo" >
-            <form >
+          <form >
               <input [(ngModel)]="answer[i]" type="radio" name='answer'  value="{{player.opcion1}}" (click)='respDada(i)'> {{player.opcion1}}<br>
               <input [(ngModel)]="answer[i]" type="radio" name='answer' value="{{player.opcion2}}" (click)='respDada(i)'> {{player.opcion2}}<br>
               <input [(ngModel)]="answer[i]" type="radio" name='answer' value="{{player.opcion3}}" (click)='respDada(i)'> {{player.opcion3}}<br>  
 
             </form>
-            <p>Hello {{answer[i]}}!</p>
 
-          <!-- </div> -->
           <!-- <p class="text_12" (click)='textChange(i)'>{{player.respuesta}}</p> -->
         </div>
-      <!-- <div *ngIf='!respuesta_def' >  -->
-      <div class="respuesta_dada" *ngIf='username == player.respuesta'>
-          <p>Respuesta: {{username}} </p><br>
-        <!-- </div>  -->
+      <div *ngIf='!respuesta_def' > 
+        <!-- <p>Seleccion {{answer[i]}}</p>
+        <p>resp Correcta {{player.respuesta}}</p> -->
+      <div class="respuesta_dada" *ngIf='answer[i] == player.respuesta; else other_answer'>
+          <p>Respuesta Correcta: {{player.respuesta}} </p><br>
+        </div> 
+        <ng-template #other_answer> 
+            <p>Respuesta Incorrecta,</p><br>
+            <p>La respuesta es: {{player.respuesta}} </p>
+
+        </ng-template>
       </div>
       </div>
     </div>

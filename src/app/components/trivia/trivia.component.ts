@@ -15,6 +15,7 @@ export class TriviaComponent implements OnInit {
   answer: Array<string[]> =  [];
   // answer = ' ';
   respuesta_def = true;
+  respuesta_dada = true;
   form_container = true;
   opcion = '0' ;
   selection = ' ' ;
@@ -53,7 +54,7 @@ export class TriviaComponent implements OnInit {
   ngOnInit() {
     for (var answer_array  of  this.answer) {
       this.answer_array.push;
-      console.log('answer', this.answer_array);
+      console.log('answer_OnInit', this.answer_array);
       
     }
 
@@ -64,8 +65,15 @@ textChange(i) {
 }
 
 respDada(i) {
+  this.respuesta_def = true;
+  this.respuesta_dada = true;
   this.respuesta_def = !this.respuesta_def;
-  console.log('answer', this.answer_array[i]);
+  this.respuesta_dada = !this.respuesta_dada;
+  console.log('answer', this.answer);
+  console.log('respuesta_def', this.respuesta_def);
+  console.log('respuesta_dada', this.respuesta_dada);
+  console.log('correcta', this.players[i].respuesta);
+  
 
   
 }
