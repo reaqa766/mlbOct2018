@@ -30,8 +30,15 @@ header div  h1 {
     grid-column-gap: 10%;
     padding: 0 10%;
     border-radius: 6px;
+}
 
+.img_picture_element{
+    transition: .4s;
+}
 
+.img_picture_box:hover .img_picture_element{
+    transform: scale(1.075);
+    opacity: .98;
 }
 
 main div div div img {
@@ -170,6 +177,7 @@ footer {
         grid-column-gap: 10%;
         padding: 0 25%;
     }
+
     .img_pic_8 {
         display: none;
     }
