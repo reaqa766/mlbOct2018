@@ -35,8 +35,8 @@ export class TriviaComponent implements OnInit {
   {code: 467092, pregunta: '¿Equipo para el 2019?',
   respuesta: 'Mets', activo: true, option: true, opcion1: 'Tampa', opcion2: 'Yankees', opcion3: 'Mets' },
 
-  {code: 514888, pregunta: '¿Fecha de  su lesión?',
-  respuesta: '29 de julio de 2018', activo: true, option: true, opcion1: '5 Abril', opcion2: '29 de julio de 2018', opcion3: '3 Octubre' },
+  {code: 514888, pregunta: '¿Fecha de  su última lesión?',
+  respuesta: '29 de julio de 2018', activo: true, option: true, opcion1: '5 Abril de 2018', opcion2: '29 de julio de 2018', opcion3: '3 Octubre de 2017' },
 
   {code: 506702, pregunta: '¿Cuantos Hits bateó?',
   respuesta: '47', activo: true, option: true, opcion1: '75', opcion2: '47', opcion3: '53' },
