@@ -4,36 +4,39 @@ import { Players2019Service } from '../../../../services/players2019.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../../../interfaces/players';
 
-import { PagerService } from '../../../../../services/index';
+// tslint:disable-next-line:semicolon
+import { PagerService } from '../../../../../services/index'
 
 
 @Component({
-  selector: 'app-byteam2019',
-  templateUrl: './byteam2019.component.html',
-  styleUrls: ['./byteam2019.component.css']
+  selector: 'app-bio-actives2019',
+  templateUrl: './bio-actives2019.component.html',
+  styleUrls: ['./bio-actives2019.component.css']
 })
-export class Byteam2019Component implements OnInit {
+export class BioActives2019Component implements OnInit {
 
   public players = [];
   groups: any;
   selectedGroup: any;
   elarray: any;
-  datesN = 10;
+  // tslint:disable-next-line:no-inferrable-types
+  datesN: number = 10;
   searchText: string;
   playerAuxList = [];
   counter: number;
   n: number;
   m: number;
-  n1 = 12;
-  n10 = 5;
-
+  // tslint:disable-next-line:no-inferrable-types
+  n1: number = 12;
+  // tslint:disable-next-line:no-inferrable-types
+  n10: number = 10;
   public allItems: any[];
+
   // pager object
   pager: any = {};
 
   // paged items
   pagedItems: any[];
-
 
 
   // playersList = [
@@ -61,12 +64,6 @@ export class Byteam2019Component implements OnInit {
 
   isLoading: boolean;
 
-
-
-
-  // public searchText : string;
-  // public playerData : any;
-
   constructor(private playerService: Players2019Service, private pagerService: PagerService) { }
 
 
@@ -74,18 +71,26 @@ export class Byteam2019Component implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    // console.log('players', this.players);
+    // console.log('allItems', this.allItems);
+    // console.log('FilterPlayers', this.filterPlayers);
+
+
+
   }
+
 
   // Convertir el Array de Observables a un Array de Objetos.
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
-    const InfoObsPlayer = this.playerService.getAllPlayersActives();
+    // tslint:disable-next-line:prefer-const
+    let InfoObsPlayer = this.playerService.getAllPlayersActives();
+    // let InfoObsPlayer = this.playerService.getAllPlayersActives();
     let index = 0;
     // tslint:disable-next-line:prefer-const
     for (let obs of InfoObsPlayer) {
       obs.pipe(take(1)).subscribe(res => {
         this.players.push(res);
+
 
         if ((InfoObsPlayer.length - 1) === index) {
           this.players = this.players.map(player => {
@@ -93,9 +98,7 @@ export class Byteam2019Component implements OnInit {
             Object.assign(newPlayer, player.people[0]);
             return newPlayer;
           })
-            .sort((a, b) => {
-              a = a.stats[0].splits[0].team.name;
-              b = b.stats[0].splits[0].team.name;
+            .sort(({ fullName: a }, { fullName: b }) => {
               if (a > b) {
                 return 1;
               } else if (a < b) {
@@ -112,6 +115,11 @@ export class Byteam2019Component implements OnInit {
         index++;
       });
     }
+    // set items to json response
+    // this.allItems = InfoObsPlayer;
+
+    // initialize to page 1
+    // this.setPage(1);
 
   }
 
@@ -120,7 +128,9 @@ export class Byteam2019Component implements OnInit {
     if (this.searchText) {
       this.allItems = this.players.filter(player =>
         player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
-        player.fullName.toLowerCase().includes(this.searchText));
+        (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
+        (player.nickName && player.nickName.toLowerCase().includes(this.searchText))  ||
+        player.mlbDebutDate.includes(this.searchText));
         this.setPage(this.pager.currentPage);
       } else {
           this.allItems = this.players;
@@ -128,13 +138,11 @@ export class Byteam2019Component implements OnInit {
         }
         return this.allItems;
       }
+  setPage(page: number) {
+    // get pager object from service
+    this.pager = this.pagerService.getPager2(this.allItems.length, page);
 
-      setPage(page: number) {
-        // get pager object from service
-        this.pager = this.pagerService.getPager(this.allItems.length, page);
-
-        // get current page of items
-        this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
-      }
+    // get current page of items
+    this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
+  }
 }
-

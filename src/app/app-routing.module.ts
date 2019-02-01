@@ -26,6 +26,10 @@ import { TriviaComponent } from './components/trivia/trivia.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { PActives2019Component } from './components/pitchers/p-actives2019/p-actives2019.component';
 import { Actives2019Component } from './components/temp2019/players2019/actives2019/actives2019.component';
+import { BioActives2019Component } from './components/temp2019/players2019/bio-actives2019/bio-actives2019.component';
+import { Byposition2019Component } from './components/temp2019/players2019/byposition2019/byposition2019.component';
+import { Playerinfo2019Component } from './components/temp2019/players2019/playerinfo2019/playerinfo2019.component';
+import { Byteam2019Component } from './components/temp2019/players2019/byteam2019/byteam2019.component';
 
 import {AuthGuard} from './guards/auth.guard';
 
@@ -42,8 +46,12 @@ const routes: Routes = [
   component: RegisterComponent},
   { path: 'position',
   component: BypositionComponent},
+  { path: 'position2019',
+  component: Byposition2019Component},
   { path: 'team',
   component: ByteamComponent},
+  { path: 'team2019',
+  component: Byteam2019Component},
   { path: 'daily',
   component: DailyComponent},
   { path: 'actives',
@@ -76,11 +84,15 @@ const routes: Routes = [
   component: VideosComponent},
   { path: 'playerinfo/:code',
   component: PlayerinfoComponent, pathMatch: 'full'},
+  { path: 'playerinfo2019/:code',
+  component: Playerinfo2019Component, pathMatch: 'full'},
   { path: 'pitcherinfo/:id',
   component: PitcherinfoComponent,
   pathMatch: 'full'},
   { path: 'actives2019',
   component: Actives2019Component},
+  { path: 'bio_actives2019',
+  component: BioActives2019Component},
   { path: '**',
   component: NotFoundPageComponent}
 ];

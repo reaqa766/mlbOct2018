@@ -68,6 +68,7 @@ import { Playerinfo2019Component } from './components/temp2019/players2019/playe
 import { PBioActives2019Component } from './components/temp2019/pitchers2019/p-bio-actives2019/p-bio-actives2019.component';
 import { PByteam2019Component } from './components/temp2019/pitchers2019/p-byteam2019/p-byteam2019.component';
 import { Pitcherinfo2019Component } from './components/temp2019/pitchers2019/pitcherinfo2019/pitcherinfo2019.component';
+import { BioActives2019Component } from './components/temp2019/players2019/bio-actives2019/bio-actives2019.component';
 
 @NgModule({
   declarations: [
@@ -110,7 +111,8 @@ import { Pitcherinfo2019Component } from './components/temp2019/pitchers2019/pit
     Playerinfo2019Component,
     PBioActives2019Component,
     PByteam2019Component,
-    Pitcherinfo2019Component
+    Pitcherinfo2019Component,
+    BioActives2019Component
 
   ],
   imports: [
