@@ -27,6 +27,14 @@
   margin: 0 0  0 10.35%;
 
 }
+.img_picture_element{
+    transition: .4s;
+}
+
+.img_picture_box:hover .img_picture_element{
+    transform: scale(1.075);
+    opacity: .98;
+}
 .card-body{
   max-height: 1rem;
   margin: 0 auto 1rem;
