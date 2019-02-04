@@ -11,6 +11,9 @@ import { ToastrService } from 'ngx-toastr';
 
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
+import {Router } from '@angular/router';
+
+
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -22,13 +25,13 @@ export class ProfileComponent implements OnInit {
 
 
   constructor( private profileService: FirebaseService,
+               public router: Router,
               private toastr: ToastrService, fb: FormBuilder) {
                 this.profileForm = fb.group({
                   'name': [null, Validators.required],
                   'lastname': [null, Validators.required],
-                  'email': [null, [Validators.required, Validators.email]],
                   'gender': [null, Validators.required],
-                  'age': [null, Validators.required],
+                  'birdthDate': [null, Validators.required],
                   'country': [null, Validators.required],
                   'comments': [null]
                 });
@@ -47,7 +50,8 @@ export class ProfileComponent implements OnInit {
     }
 
     this.resetForm(profileForm);
-    this.toastr.success('Subscripció Exitosa', 'Perfil Registrado');
+    this.toastr.success('Datos Guardados', 'Registre Correo y Contraseña');
+    this.router.navigate(['/register']);
   }
 
   resetForm(profileForm?: any) {

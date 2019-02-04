@@ -1,9 +1,10 @@
+import { DatePipe } from "@angular/common";
+
 export class Profile {
   $key: string;
   name: string;
   lastname: string;
-  email: string;
-  age: number;
+  birdthDate: Date;
   gender: string;
   country: string;
   comments: string;

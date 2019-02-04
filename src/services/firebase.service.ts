@@ -33,8 +33,8 @@ insertProfile(profile: Profile) {
   this.profileList.push({
     name: profile.name,
     lastname: profile.lastname,
-    email: profile.email,
-    age: profile.age,
+    // email: profile.email,
+    birdthDate: profile.birdthDate,
     gender: profile.gender,
     country: profile.country,
     comments: profile.comments

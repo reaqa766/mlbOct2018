@@ -1,11 +1,11 @@
 <header>
   <div class="title">
-    <h1 class="title_h1" style="color:transparent">Temporada 2019</h1>
+    <h1 class="title_h1" >Temporada 2019</h1>
   </div>
 </header>
 
 <div class="title_page">
-  <p>Subscríbase para cuando inicie la Web</p>
+  <p>Coloque sus datos</p>
 </div>
 <div class="card">
   <div class="card-body">
@@ -22,15 +22,15 @@
             <div class="alert" *ngIf="!profileForm.controls['lastname'].valid && profileForm.controls['lastname'].touched">Colocar su Apellido</div>
           </div>
 
-          <div class="form-group">
+          <!-- <div class="form-group">
             <input type="email" formControlName="email" class="form-control" placeholder="Correo">
             <div class="alert" *ngIf="!profileForm.controls['email'].valid && profileForm.controls['email'].touched">Colocar un email válido</div>
-          </div>
+          </div> -->
 
           <div class="form-group  form-group_select">
-            <input type="number" formControlName="age" class="form-control form_age" placeholder="Edad">
-            <div class="alert" *ngIf="!profileForm.controls['age'].valid && profileForm.controls['age'].touched">Colocar su Edad</div>
-            <select class="form_text"  type="text" formControlName="gender">
+            <input type="date" formControlName="birdthDate" id= "date" class="form-control form_age" placeholder="Fecha de Nacimiento: ">
+            <div class="alert" *ngIf="!profileForm.controls['birdthDate'].valid && profileForm.controls['birdthDate'].touched">Colocar su Fecha de Nacimiento</div>
+            <select class="form_text"  style="height:3rem;" type="text" formControlName="gender">
               <option [disabled]="true" [selected]="true" value="Género">Género</option>
               <option value="Masculino">Masculino</option>
               <option value="Femenino">Femenino</option>
@@ -50,7 +50,7 @@
 
           <div class="form-group">
             <button type="submit" class="btn btn-primary" value="Register" [disabled]="!profileForm.valid">
-              <i class="fas fa-plus-circle"></i> Subscríbase
+              <i class="fas fa-plus-circle"></i> Registre sus Datos
             </button>
             <button class="btn btn-secondary" type="reset" (click)="resetForm(profileForm)">
               <i class="fas fa-sync-alt"></i> Resetear

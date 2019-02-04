@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { GrdFilterPipe } from './components/grd-filter.pipe';
 
 import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { PlayersService } from '../services/players.service';
 
 import { PagerService } from '../services/index';
@@ -69,6 +70,9 @@ import { PBioActives2019Component } from './components/temp2019/pitchers2019/p-b
 import { PByteam2019Component } from './components/temp2019/pitchers2019/p-byteam2019/p-byteam2019.component';
 import { Pitcherinfo2019Component } from './components/temp2019/pitchers2019/pitcherinfo2019/pitcherinfo2019.component';
 import { BioActives2019Component } from './components/temp2019/players2019/bio-actives2019/bio-actives2019.component';
+import { PostListComponent } from './components/posts/post-list/post-list.component';
+import { PostDetailComponent } from './components/posts/post-detail/post-detail.component';
+import { PostDashboardComponent } from './components/posts/post-dashboard/post-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -112,7 +116,11 @@ import { BioActives2019Component } from './components/temp2019/players2019/bio-a
     PBioActives2019Component,
     PByteam2019Component,
     Pitcherinfo2019Component,
-    BioActives2019Component
+    BioActives2019Component,
+    PostListComponent,
+    PostDetailComponent,
+    PostDashboardComponent,
+    HttpModule
 
   ],
   imports: [

@@ -1,15 +1,18 @@
 import { Injectable } from '@angular/core';
 
 import { AngularFireAuth } from 'angularfire2/auth';
-import * as firebase from 'firebase/app';
+import * as firebase from 'firebase/app'
 import { map, take } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService { 
+  authState: any = null
 
-  constructor (public afAuth: AngularFireAuth) { }
+  constructor (public afAuth: AngularFireAuth) {
+    this.afAuth.authState.subscribe(data => this.authState = data)
+   }
 
   // loginTwitter () {
   //   return this.afAuth.auth.signInWithPopup( new firebase.auth.TwitterAuthProvider());
@@ -53,4 +56,8 @@ export class AuthService {
   get currentUserObservable(): any {
     return this.afAuth.authState;
 }
+  get currentUserId(): string {
+  return this.authenticated ? this.authState.uid : null
+}
+
 }

@@ -31,6 +31,19 @@ import { Byposition2019Component } from './components/temp2019/players2019/bypos
 import { Playerinfo2019Component } from './components/temp2019/players2019/playerinfo2019/playerinfo2019.component';
 import { Byteam2019Component } from './components/temp2019/players2019/byteam2019/byteam2019.component';
 
+// import { SharedModule } from '../shared/shared.module'
+
+import { PostDashboardComponent } from '../app/components/posts/post-dashboard/post-dashboard.component'
+import { PostDetailComponent } from '../app/components/posts/post-detail/post-detail.component'
+import { PostListComponent } from '../app/components/posts/post-list/post-list.component'
+import { PostService } from '../app/components/posts/post.service'
+
+
+
+
+
+
+
 import {AuthGuard} from './guards/auth.guard';
 
 
@@ -93,6 +106,14 @@ const routes: Routes = [
   component: Actives2019Component},
   { path: 'bio_actives2019',
   component: BioActives2019Component},
+  { path: 'postDashboard',
+  component: PostDashboardComponent},
+  { path: 'postDetail',
+  component: PostDetailComponent},
+  { path: 'postList',
+  component: PostListComponent},
+  { path: 'postService',
+  component: PostService},
   { path: '**',
   component: NotFoundPageComponent}
 ];
