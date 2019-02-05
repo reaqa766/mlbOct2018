@@ -10,7 +10,7 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { GrdFilterPipe } from './components/grd-filter.pipe';
 
 import { HttpClientModule } from '@angular/common/http';
-import { HttpModule } from '@angular/http';
+// import { HttpModule } from '@angular/http';
 import { PlayersService } from '../services/players.service';
 
 import { PagerService } from '../services/index';
@@ -120,7 +120,6 @@ import { PostDashboardComponent } from './components/posts/post-dashboard/post-d
     PostListComponent,
     PostDetailComponent,
     PostDashboardComponent,
-    HttpModule
 
   ],
   imports: [
@@ -135,8 +134,7 @@ import { PostDashboardComponent } from './components/posts/post-dashboard/post-d
     CommonModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    ReactiveFormsModule
-    // Ng2SmartTableModule
+    ReactiveFormsModule,
   ],
   providers: [PlayersService, PagerService, AuthService, AuthGuard, FlashMessagesService],
   bootstrap: [AppComponent]
