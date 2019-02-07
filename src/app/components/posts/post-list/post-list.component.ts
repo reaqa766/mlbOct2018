@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 
-
-import { PostService } from '../post.service'
-import { Post } from '../Post'
-import {AuthService } from '../../../services/auth.service';
+import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 
 @Component({
@@ -13,19 +10,19 @@ import {AuthService } from '../../../services/auth.service';
   styleUrls: ['./post-list.component.css']
 })
 export class PostListComponent implements OnInit {
-  posts: Observable<Post[]>
-  constructor(private postService: PostService, public auth: AuthService) {}
+  private postDoc: AngularFirestoreDocument;
+  post: any;
 
-  ngOnInit() {
-    // this.posts= this.postService.getPosts().subscribe(result => this.posts = result);
-    //     // this.postService.getPosts().subscribe(posts => {
-    //   console.log(this.posts);
-    // //   this.posts = posts;
-
+  constructor(private afs: AngularFirestore, private route: ActivatedRoute) {
   }
 
-  // delete(id: string) {
-  //   this.postService.delete(id)
-  // }
-
+  ngOnInit(){
+    this.route.paramMap.subscribe(params => {
+      this.getPost(params.get('id'));
+    });
+}
+getPost(postId) {
+  this.postDoc = this.afs.doc('posts/' + postId);
+  this.post = this.postDoc.valueChanges();
+}
 }

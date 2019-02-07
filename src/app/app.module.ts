@@ -10,7 +10,7 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { GrdFilterPipe } from './components/grd-filter.pipe';
 
 import { HttpClientModule } from '@angular/common/http';
-import { HttpModule } from '@angular/http';
+// import { HttpModule } from '@angular/http';
 import { PlayersService } from '../services/players.service';
 
 import { PagerService } from '../services/index';
@@ -48,6 +48,7 @@ import { NotFoundPageComponent } from './components/not-found-page/not-found-pag
 import { AuthService } from '../app/services/auth.service';
 
 import {AngularFireModule} from 'angularfire2';
+import { AngularFirestore } from 'angularfire2/firestore';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 
@@ -73,6 +74,8 @@ import { BioActives2019Component } from './components/temp2019/players2019/bio-a
 import { PostListComponent } from './components/posts/post-list/post-list.component';
 import { PostDetailComponent } from './components/posts/post-detail/post-detail.component';
 import { PostDashboardComponent } from './components/posts/post-dashboard/post-dashboard.component';
+import { AuthComponent } from './components/auth/auth/auth.component';
+import { PostListsComponent } from './components/posts/post-lists/post-lists.component';
 
 @NgModule({
   declarations: [
@@ -120,6 +123,8 @@ import { PostDashboardComponent } from './components/posts/post-dashboard/post-d
     PostListComponent,
     PostDetailComponent,
     PostDashboardComponent,
+    AuthComponent,
+    PostListsComponent,
 
   ],
   imports: [
@@ -127,7 +132,7 @@ import { PostDashboardComponent } from './components/posts/post-dashboard/post-d
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    HttpModule,
+    // HttpModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     FlashMessagesModule,
@@ -135,10 +140,10 @@ import { PostDashboardComponent } from './components/posts/post-dashboard/post-d
     CommonModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    ReactiveFormsModule
-    // Ng2SmartTableModule
+    ReactiveFormsModule,
+    AngularFireAuthModule
   ],
-  providers: [PlayersService, PagerService, AuthService, AuthGuard, FlashMessagesService],
+  providers: [PlayersService, PagerService,AngularFirestore, AuthService, AuthGuard, FlashMessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,32 +1,22 @@
-<section>
-    <div class="mat-accordion"  >
-      <div class="mat-expansion-panel" >
-  
-        <div class="mat-expansion-panel-header" >
-          <div class="mat-panel-title" >
-            Create a Post
-          </div>
-          </div>
-  
-        <input type="file" name="file" id="file" (change)="uploadImage($event)">
-        <div [hidden]="!uploadPercent">
-          <input class="mat-progress-bar"  mode="determinate" value="{{ uploadPercent | async }}">
-        </div>
-        <div [hidden]="!image">
-          <img [src]="image || '//:0' ">
-        </div>
-  
-        <div class="mat-form-field" >
-          <input matInput placeholder="Post title" [(ngModel)]="title" name="title">
-        </div>
-        <br>
-        <div class="mat-form-field">
-          <textarea matInput placeholder="Post content" [(ngModel)]="content" name="content" rows="10"></textarea>
-        </div>
-        <br>
-        <button mat-raised-button (click)="createPost()" color="accent" [disabled]="!title || !content || !image">{{saving}}</button>
-  
-      </div>
-    </div>
-  </section>
-  
+<!-- <p>Logged in as {{ user.displayName }}!</p> -->
+<div class="container-dashboard">
+<h4 class="titulo-post" >Crear un nuevo Post</h4>
+<form class="py-2" #f="ngForm">
+	<div class="form-group">
+		<input class="form-control input-titulo-Post" type="text" name="post-title" [(ngModel)]="postTitle"  #new_post_title="ngModel"  placeholder="Titulo del Post" (keyup.enter)="onEnter(new_post_title);" required>
+	</div>
+	<button class="btn btn-dark" (click)="onEnter()" [disabled]="new_post_title.invalid">Save</button>
+</form>
+ 
+<h3 class="titulo-post t-post">Posts</h3>
+<ul class="list-unstyled">
+	<li class="mb-3 pb-2 post-name" *ngFor="let post of posts | async">
+		   <a class="btn btn-md btn-dark abutton" href="/blog/{{ post.id }}">Editar</a>
+		   <a class="btn btn-md btn-dark abutton" href="/blogL/{{ post.id }}">Leer</a>
+		   <span class="blog-title" >{{ post.data.title }}</span>  
+     	</li>
+</ul>
+ 
+<p class="text-right medium "><a class="logout" href="/auth/logout">Logout</a></p>
+
+</div>

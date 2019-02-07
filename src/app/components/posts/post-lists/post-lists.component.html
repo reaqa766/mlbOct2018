@@ -1,0 +1,9 @@
+<div class="container-blog">
+<h3 class="blog-title" >Blogs</h3>
+<ul class="list-unstyled blog-lists">
+        <li class="mb-3 pb-2 blog-item" *ngFor="let post of posts | async; index as i;">
+               <a  href="/blogL/{{ post.id }}"><span class="blog-number">{{i+1}}_</span> <span class="blog-name">{{ post.data.title }}</span></a>
+           </li>
+
+</ul>
+</div>

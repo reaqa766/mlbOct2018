@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Router, ActivatedRoute } from '@angular/router'
-
-import { PostService } from '../post.service'
-import { Post } from '../post'
-import {AuthService } from '../../../services/auth.service';
-
+import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
+import {Post} from '../Post';
 
 @Component({
   selector: 'app-post-detail',
@@ -13,41 +11,30 @@ import {AuthService } from '../../../services/auth.service';
   styleUrls: ['./post-detail.component.css']
 })
 export class PostDetailComponent implements OnInit {
+  private postDoc: AngularFirestoreDocument;
+  formModel: Post;
 
-  post: Post
-  // editing: boolean = false
+  constructor(private afs: AngularFirestore, private route: ActivatedRoute) {}
 
-  constructor(
-    // private route: ActivatedRoute,
-    // private router: Router,
-    // private postService: PostService,
-    // public auth: AuthService
-  ) {}
-
-  ngOnInit() {
-    // this.getPost()
-    console.log('Post List');
-    
+  update() {
+    if (typeof this.postDoc !== "undefined") {
+    // TODO throttle update
+      this.postDoc.update(this.formModel);
+    }
   }
 
-  // getPost(): void {
-  //   const id = this.route.snapshot.paramMap.get('id')
-  //   this.postService.getPostData(id).subscribe(post => (this.post = post))
-  // }
-
-  // updatePost() {
-  //   const formData = {
-  //     title: this.post.title,
-  //     content: this.post.content
-  //   }
-  //   const id = this.route.snapshot.paramMap.get('id')
-  //   this.postService.update(id, formData)
-  //   this.editing = false
-  // }
-
-  // delete() {
-  //   const id = this.route.snapshot.paramMap.get('id')
-  //   this.postService.delete(id)
-  //   this.router.navigate(['/blog'])
-  // }
+  ngOnInit() {
+    this.formModel = {title: '', content: ''};
+     // subscribe to the parameters observable
+    this.route.paramMap.subscribe(params => {
+      this.getPost(params.get('id'));
+    });
+    
+  }
+  getPost(postId) {
+    this.postDoc = this.afs.doc('posts/' + postId);
+    this.postDoc.valueChanges().subscribe(v => {
+      this.formModel = v;
+    });
+  }
 }

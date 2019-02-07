@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ActivatedRoute, ParamMap } from '@angular/router';
+
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
  
 export interface Post {title: string; content: string; }
 
 @Component({
-  selector: 'app-post-dashboard',
-  templateUrl: './post-dashboard.component.html',
-  styleUrls: ['./post-dashboard.component.css']
+  selector: 'app-post-lists',
+  templateUrl: './post-lists.component.html',
+  styleUrls: ['./post-lists.component.css']
 })
-export class PostDashboardComponent implements OnInit {
+export class PostListsComponent implements OnInit {
   private postsCollection: AngularFirestoreCollection<Post>;
   posts: Observable<any[]>;
   postTitle: string;

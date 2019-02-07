@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app'
 import { map, take } from 'rxjs/operators';
@@ -51,7 +50,8 @@ export class AuthService {
   }
 
   get authenticated(): boolean {
-    return this.afAuth !== null;
+    // return this.afAuth !== null;
+    return this.authState !== null
   }
   get currentUserObservable(): any {
     return this.afAuth.authState;
@@ -59,5 +59,9 @@ export class AuthService {
   get currentUserId(): string {
   return this.authenticated ? this.authState.uid : null
 }
+login() {
+  this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
+}
+
 
 }

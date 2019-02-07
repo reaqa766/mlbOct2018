@@ -1,5 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
+import { EditorAuthGuard } from '../app/components/guards/editor-auth.guard.guard';
+ 
+import {AuthComponent} from '../app/components/auth/auth/auth.component';
+
 import { NewsComponent} from '../app/components/news/news.component';
 import { AboutusComponent} from '../app/components/aboutus/aboutus.component';
 // import { RegisterComponent} from '../app/components/register/register.component';
@@ -36,6 +41,7 @@ import { Byteam2019Component } from './components/temp2019/players2019/byteam201
 import { PostDashboardComponent } from '../app/components/posts/post-dashboard/post-dashboard.component'
 import { PostDetailComponent } from '../app/components/posts/post-detail/post-detail.component'
 import { PostListComponent } from '../app/components/posts/post-list/post-list.component'
+import { PostListsComponent } from '../app/components/posts/post-lists/post-lists.component'
 import { PostService } from '../app/components/posts/post.service'
 
 
@@ -106,20 +112,44 @@ const routes: Routes = [
   component: Actives2019Component},
   { path: 'bio_actives2019',
   component: BioActives2019Component},
-  { path: 'postDashboard',
-  component: PostDashboardComponent},
-  { path: 'postDetail',
+  { path: 'dashboard',
+  component: AuthComponent},
+  // component: PostDashboardComponent},
+  { path: 'blog/:id',
   component: PostDetailComponent},
-  { path: 'postList',
+  { path: 'blogL/:id',
   component: PostListComponent},
+  { path: 'blogLs/:id',
+  component: PostListsComponent},
   { path: 'postService',
   component: PostService},
   { path: '**',
   component: NotFoundPageComponent}
 ];
 
+const appRoutes: Routes = [
+  {
+    path: 'auth',
+    children: [
+      { path: 'login', component: AuthComponent},
+      { path: 'logout', component: AuthComponent}
+    ]
+  },
+  {
+    path: '',
+    loadChildren: 'app/modules/reader/reader.module#ReaderModule'
+  },
+  {
+    path: 'editor',
+    canActivateChild: [EditorAuthGuard],
+    loadChildren: 'app/modules/editor/editor.module#EditorModule'
+  },
+  { path: '**', component: NotFoundPageComponent }
+];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [EditorAuthGuard]
 })
 export class AppRoutingModule { }

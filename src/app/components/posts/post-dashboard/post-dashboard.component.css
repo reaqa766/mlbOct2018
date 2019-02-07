@@ -1,11 +1,46 @@
-section {
-    max-width: 700px;
-    margin: 2em auto;
-  }
-  mat-form-field {
-    width: 100%;
-  }
-  img {
-    width: 100%;
-  }
-  
+
+.container-dashboard {
+    padding: 2% 10%;
+}
+
+.titulo-post, .post-name {
+color: antiquewhite;
+text-shadow: 2px 2px 8px black;
+}
+
+.t-post {
+padding: .5rem 0 0; 
+}
+
+.input-titulo-Post {
+    width: 25%;
+}
+
+.abutton {
+    margin: 0 .25rem;
+    background-color: #fff;
+    color: rgb(0, 0, 0) !important;
+    text-shadow: none !important;
+
+}
+
+.blog-title {
+    font-size: 1.5em;
+    padding-left: 1rem;
+    vertical-align: middle;
+}
+
+
+ul:empty::after {
+    content: "Create a post Luke"
+   }
+    
+   ul li {
+    border-bottom: 1px solid #000;
+   }
+
+   .logout {
+    color: antiquewhite;
+    text-shadow: 2px 2px 8px black;
+      
+   }
