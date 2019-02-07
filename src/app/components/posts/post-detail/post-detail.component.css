@@ -1,0 +1,22 @@
+.container-edit {
+    padding: 2% 10%;
+
+}
+.titulo-blog  {
+    color: antiquewhite;
+    text-shadow: 2px 2px 8px black;
+    font-size: 1.5em;
+    width: 25%;
+
+}
+.contenido-blog {
+    color: antiquewhite;
+    text-shadow: 2px 2px 8px black;
+    font-size: 1.5em;
+    width: 100%;
+
+}
+
+.contenido-blog-text {
+    color: black;
+}

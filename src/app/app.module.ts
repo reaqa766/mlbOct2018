@@ -48,6 +48,7 @@ import { NotFoundPageComponent } from './components/not-found-page/not-found-pag
 import { AuthService } from '../app/services/auth.service';
 
 import {AngularFireModule} from 'angularfire2';
+import { AngularFirestore } from 'angularfire2/firestore';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 
@@ -73,6 +74,8 @@ import { BioActives2019Component } from './components/temp2019/players2019/bio-a
 import { PostListComponent } from './components/posts/post-list/post-list.component';
 import { PostDetailComponent } from './components/posts/post-detail/post-detail.component';
 import { PostDashboardComponent } from './components/posts/post-dashboard/post-dashboard.component';
+import { AuthComponent } from './components/auth/auth/auth.component';
+import { PostListsComponent } from './components/posts/post-lists/post-lists.component';
 
 @NgModule({
   declarations: [
@@ -120,6 +123,8 @@ import { PostDashboardComponent } from './components/posts/post-dashboard/post-d
     PostListComponent,
     PostDetailComponent,
     PostDashboardComponent,
+    AuthComponent,
+    PostListsComponent,
 
   ],
   imports: [
@@ -135,8 +140,9 @@ import { PostDashboardComponent } from './components/posts/post-dashboard/post-d
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     ReactiveFormsModule,
+    AngularFireAuthModule
   ],
-  providers: [PlayersService, PagerService, AuthService, AuthGuard, FlashMessagesService],
+  providers: [PlayersService, PagerService,AngularFirestore, AuthService, AuthGuard, FlashMessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

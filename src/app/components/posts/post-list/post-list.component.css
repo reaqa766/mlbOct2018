@@ -1,0 +1,22 @@
+.container-blog { 
+   padding: 2% 10%;
+}
+
+.blog-title {
+    color: antiquewhite;
+    text-shadow: 2px 2px 8px black;
+    padding-left: 1rem; 
+      
+}
+.blog-content {
+    font-size: 1.25em;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, .5);
+    height: 500px;
+    width: 60%;
+    padding: 1rem; 
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px rgb(255, 255, 255, .8);
+
+}

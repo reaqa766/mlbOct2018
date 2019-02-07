@@ -1,0 +1,11 @@
+<div class="container-edit">
+    <div class="form-group titulo-blog">
+    <label>Titulo</label>
+    <input class="form-control" type="text" [(ngModel)]="formModel.title" (change)="update()"> 
+    </div>
+    <div class="form-group contenido-blog">
+    <label>Contenido</label>
+    <textarea class="form-control contenido-blog-text" [(ngModel)]="formModel.content" (change)="update()"></textarea> 
+    </div>
+    
+   </div>
