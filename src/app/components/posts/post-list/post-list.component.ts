@@ -17,11 +17,11 @@ export class PostListComponent implements OnInit {
   constructor(private postService: PostService, public auth: AuthService) {}
 
   ngOnInit() {
-    this.posts= this.postService.getPosts().subscribe(result => this.posts = result);
-        // this.postService.getPosts().subscribe(posts => {
-      console.log(this.posts);
-    //   this.posts = posts;
-    
+    // this.posts= this.postService.getPosts().subscribe(result => this.posts = result);
+    //     // this.postService.getPosts().subscribe(posts => {
+    //   console.log(this.posts);
+    // //   this.posts = posts;
+
   }
 
   // delete(id: string) {

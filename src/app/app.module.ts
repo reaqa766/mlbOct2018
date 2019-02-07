@@ -120,7 +120,6 @@ import { PostDashboardComponent } from './components/posts/post-dashboard/post-d
     PostListComponent,
     PostDetailComponent,
     PostDashboardComponent,
-    HttpModule
 
   ],
   imports: [
@@ -128,6 +127,7 @@ import { PostDashboardComponent } from './components/posts/post-dashboard/post-d
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    HttpModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     FlashMessagesModule,
