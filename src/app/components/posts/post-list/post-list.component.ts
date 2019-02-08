@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { ActivatedRoute, ParamMap } from '@angular/router';
- 
+
 
 @Component({
   selector: 'app-post-list',

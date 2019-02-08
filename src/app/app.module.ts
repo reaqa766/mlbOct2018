@@ -132,6 +132,7 @@ import { PostListsComponent } from './components/posts/post-lists/post-lists.com
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    // HttpModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     FlashMessagesModule,
