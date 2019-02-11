@@ -28,6 +28,10 @@
         width: 95%;
     }
 
+    .img1, .img2, .img3 {
+        cursor: pointer;     
+    }
+
 
 @media only screen and (min-width:300px ) and (max-width: 500px)  {
     .title_infographics {
