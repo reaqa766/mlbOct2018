@@ -35,6 +35,7 @@ import { BioActives2019Component } from './components/temp2019/players2019/bio-a
 import { Byposition2019Component } from './components/temp2019/players2019/byposition2019/byposition2019.component';
 import { Playerinfo2019Component } from './components/temp2019/players2019/playerinfo2019/playerinfo2019.component';
 import { Byteam2019Component } from './components/temp2019/players2019/byteam2019/byteam2019.component';
+import { InfogShowComponent } from './components/infographics/infog-show/infog-show.component';
 
 // import { SharedModule } from '../shared/shared.module'
 
@@ -112,6 +113,8 @@ const routes: Routes = [
   component: Actives2019Component},
   { path: 'bio_actives2019',
   component: BioActives2019Component},
+  { path: 'infog_Show',
+  component: InfogShowComponent},
   { path: 'dashboard',
   component: AuthComponent},
   // component: PostDashboardComponent},

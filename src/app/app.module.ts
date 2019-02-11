@@ -76,6 +76,7 @@ import { PostDetailComponent } from './components/posts/post-detail/post-detail.
 import { PostDashboardComponent } from './components/posts/post-dashboard/post-dashboard.component';
 import { AuthComponent } from './components/auth/auth/auth.component';
 import { PostListsComponent } from './components/posts/post-lists/post-lists.component';
+import { InfogShowComponent } from './components/infographics/infog-show/infog-show.component';
 
 @NgModule({
   declarations: [
@@ -125,6 +126,7 @@ import { PostListsComponent } from './components/posts/post-lists/post-lists.com
     PostDashboardComponent,
     AuthComponent,
     PostListsComponent,
+    InfogShowComponent,
 
   ],
   imports: [
