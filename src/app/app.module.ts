@@ -126,7 +126,7 @@ import { InfogShowComponent } from './components/infographics/infog-show/infog-s
     PostDashboardComponent,
     AuthComponent,
     PostListsComponent,
-    InfogShowComponent,
+    InfogShowComponent
 
   ],
   imports: [
@@ -145,7 +145,7 @@ import { InfogShowComponent } from './components/infographics/infog-show/infog-s
     ReactiveFormsModule,
     AngularFireAuthModule
   ],
-  providers: [PlayersService, PagerService,AngularFirestore, AuthService, AuthGuard, FlashMessagesService],
+  providers: [PlayersService, PagerService, AngularFirestore, AuthService, AuthGuard, FlashMessagesService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

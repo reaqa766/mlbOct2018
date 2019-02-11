@@ -16,7 +16,7 @@ export class PostListComponent implements OnInit {
   constructor(private afs: AngularFirestore, private route: ActivatedRoute) {
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.getPost(params.get('id'));
     });

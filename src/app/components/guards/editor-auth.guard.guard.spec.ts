@@ -1,6 +1,6 @@
 import { TestBed, async, inject } from '@angular/core/testing';
 
-import { EditorAuth.GuardGuard } from './editor-auth.guard.guard';
+import { EditorAuth.GuardGuard } from './../guards/editor-auth.guard.guard';
 
 describe('EditorAuth.GuardGuard', () => {
   beforeEach(() => {
