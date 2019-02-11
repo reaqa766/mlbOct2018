@@ -21,7 +21,7 @@
     <div class="container-actives_cards ">
       <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
         <div class="card card1 img_picture_box" style="width: 95%;" *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
-            <a routerLink="/playerinfo2019/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Card image cap"></a>
+            <a routerLink="/playerinfo2019/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
           <div class="card-body">
             <h5 class="card-title">{{player.fullName}}</h5>
           </div>
@@ -39,7 +39,7 @@
       </ng-container>
       <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
         <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
-            <a routerLink="/playerinfo2019/{{player.id}}"><img class="card-img-top" src="../../../../assets/{{player.id}}.jpg" alt="Card image cap"></a>
+            <a routerLink="/playerinfo2019/{{player.id}}"><img class="card-img-top" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
           <div class="card-body">
             <h5 class="card-title">{{player.fullName}} </h5>
           </div>
