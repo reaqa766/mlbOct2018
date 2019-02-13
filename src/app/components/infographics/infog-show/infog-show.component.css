@@ -28,7 +28,7 @@
         width: 95%;
     }
 
-    .img1, .img2, .img3, .img4 {
+    .img1, .img2, .img3, .img4, .img5 {
         cursor: pointer;
     }
 
@@ -38,7 +38,7 @@
     }
 
     .img4 {
-    padding: 0 20%;
+    padding: 0 5%;
     }
 
 
