@@ -7,17 +7,17 @@
     border-radius: 6px;
 }
 
-  
+
     .title_infographics {
         color: antiquewhite;
     }
-    
+
     .container_infographics {
         width: 95%;
         margin: 1% 21%;
         /* border: 2px solid white;
         box-shadow: 4px 4px 8px black;   */
-    } 
+    }
 
     .image_click {
         width: 20%;
@@ -28,8 +28,17 @@
         width: 95%;
     }
 
-    .img1, .img2, .img3 {
-        cursor: pointer;     
+    .img1, .img2, .img3, .img4 {
+        cursor: pointer;
+    }
+
+    .infograf2 {
+      margin-top: 1.5rem;
+
+    }
+
+    .img4 {
+    padding: 0 20%;
     }
 
 
@@ -40,14 +49,14 @@
         font-size: 1.25em;
         text-align: center;
     }
-  
+
 .container_infographics {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-        
+
 }
-        
+
 .img1 {
     grid-column: 1/2;
     grid-row: 1/2;
@@ -67,5 +76,5 @@
     margin: 0 10%;
 }
 
-    
+
     }

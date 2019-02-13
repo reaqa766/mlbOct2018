@@ -2,25 +2,33 @@
   <h1 class="title_infographics">INFOGRAFIAS</h1>
 </div>
 <div class="container_infographics">
-    <span data-toggle="modal" data-target="#exampleModal">
-          <a  class=" img1" data-toggle="modal" data-target="#exampleModal" > <img  (click)="showMyImage1()" class=" image_click " src="../../../../assets/VZLA EN MLB PORTADA.jpg"
-          alt="Infographic Venezuelans in MLB 2018 by Team"></a></span>
+  <span data-toggle="modal" data-target="#exampleModal">
+    <a class=" img1" data-toggle="modal" data-target="#exampleModal"> <img (click)="showMyImage1()" class=" image_click "
+        src="../../../../assets/VZLA EN MLB PORTADA.jpg" alt="Infographic Venezuelans in MLB 2018 by Team"></a></span>
 
-          <a class="img2" data-toggle="modal" data-target="#exampleModal" ><img (click)="showMyImage2()" class=" image_click " src="../../../../assets/VZLA EN MLB LIGA NACIONAL.jpg"
-        alt="Infographic Venezuelans in MLB 2018 by Team"></a>
-        <a class=" img3" data-toggle="modal" data-target="#exampleModal" ><img (click)="showMyImage3()" class=" image_click " src="../../../../assets/VZLA EN MLB LIGA AMERICANA.jpg" alt="Infographic Venezuelans in MLB 2018 by Team"></a>
+  <a class="img2" data-toggle="modal" data-target="#exampleModal"><img (click)="showMyImage2()" class=" image_click "
+      src="../../../../assets/VZLA EN MLB LIGA NACIONAL.jpg" alt="Infographic Venezuelans in MLB 2018 by Team"></a>
+  <a class=" img3" data-toggle="modal" data-target="#exampleModal"><img (click)="showMyImage3()" class=" image_click "
+      src="../../../../assets/VZLA EN MLB LIGA AMERICANA.jpg" alt="Infographic Venezuelans in MLB 2018 by Team"></a>
+
+
+  <div class="infograf2">
+    <a class="img4" data-toggle="modal" data-target="#exampleModal"><img (click)="showMyImage4()" class=" image_click "
+        src="../../../../assets/JugadoresGLVZLAporEstados20181.jpg" alt="Infographic Venezuelans in MLB 2018 by Venezuela's states"></a>
   </div>
 
-  <!-- Button trigger modal -->
+</div>
+
+<!-- Button trigger modal -->
 
 <!-- Modal -->
-<div  data-backdrop="static" 
-data-keyboard="false" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Infografía</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="showMyImage_all()" >
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="showMyImage_all()">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -33,6 +41,9 @@ data-keyboard="false" class="modal fade" id="exampleModal" tabindex="-1" role="d
         </div>
         <div *ngIf="img3">
           <img class="img-modal-body" src="../../../../assets/VZLA EN MLB LIGA AMERICANA.jpg" alt="">
+        </div>
+        <div *ngIf="img4">
+          <img class="img-modal-body" src="../../../../assets/JugadoresGLVZLAporEstados20181.jpg" alt="">
         </div>
       </div>
       <div class="modal-footer">
