@@ -2,20 +2,32 @@
   <h1 class="title_infographics">INFOGRAFIAS</h1>
 </div>
 <div class="container_infographics">
-  <span data-toggle="modal" data-target="#exampleModal">
-    <a class=" img1" data-toggle="modal" data-target="#exampleModal"> <img (click)="showMyImage1()" class=" image_click "
-        src="../../../../assets/VZLA EN MLB PORTADA.jpg" alt="Infographic Venezuelans in MLB 2018 by Team"></a></span>
-
-  <a class="img2" data-toggle="modal" data-target="#exampleModal"><img (click)="showMyImage2()" class=" image_click "
-      src="../../../../assets/VZLA EN MLB LIGA NACIONAL.jpg" alt="Infographic Venezuelans in MLB 2018 by Team"></a>
-  <a class=" img3" data-toggle="modal" data-target="#exampleModal"><img (click)="showMyImage3()" class=" image_click "
-      src="../../../../assets/VZLA EN MLB LIGA AMERICANA.jpg" alt="Infographic Venezuelans in MLB 2018 by Team"></a>
-
-
-  <div class="infograf2">
-    <a class="img4" data-toggle="modal" data-target="#exampleModal"><img (click)="showMyImage4()" class=" image_click "
-        src="../../../../assets/JugadoresGLVZLAporEstados20181.jpg" alt="Infographic Venezuelans in MLB 2018 by Venezuela's states"></a>
+  <div class="img1" data-toggle="modal" data-target="#exampleModal">
+    <a data-toggle="modal" data-target="#exampleModal"> <img (click)="showMyImage1()" class=" image_click " src="../../../../assets/VZLA EN MLB PORTADA.jpg"
+        alt="Infographic Venezuelans in MLB 2018 by Team"></a></div>
+  <div class="img2">
+    <a data-toggle="modal" data-target="#exampleModal"><img (click)="showMyImage2()" class=" image_click " src="../../../../assets/VZLA EN MLB LIGA NACIONAL.jpg"
+        alt="Infographic Venezuelans in MLB 2018 by Team"></a>
   </div>
+  <div class="img3">
+    <a data-toggle="modal" data-target="#exampleModal"><img (click)="showMyImage3()" class=" image_click " src="../../../../assets/VZLA EN MLB LIGA AMERICANA.jpg"
+        alt="Infographic Venezuelans in MLB 2018 by Team"></a>
+  </div>
+  <!-- <div class="infograf2"> -->
+  <div class="img4">
+    <a data-toggle="modal" data-target="#exampleModal"><img (click)="showMyImage4()" class=" image_click " src="../../../../assets/JugadoresGLVZLAporEstados20181.jpg"
+        alt="Infographic Venezuelans in MLB 2018 by Venezuela's states"></a>
+  </div>
+  <div class="img5">
+    <a data-toggle="modal" data-target="#exampleModal"><img (click)="showMyImage5()" class=" image_click " src="../../../../assets/INFOSPRINGTNATIONALEST.png"
+        alt="Infographic Venezuelans in MLB 2019 by team and division"></a>
+  </div>
+  <div class="img6">
+    <a data-toggle="modal" data-target="#exampleModal"><img (click)="showMyImage6()" class=" image_click " src="../../../../assets/VZLAEQUIPOSNATIONALCENTRAL.jpg"
+        alt="Infographic Venezuelans in MLB 2019 by team and division 2"></a>
+  </div>
+
+  <!-- </div> -->
 
 </div>
 
@@ -44,6 +56,12 @@
         </div>
         <div *ngIf="img4">
           <img class="img-modal-body" src="../../../../assets/JugadoresGLVZLAporEstados20181.jpg" alt="">
+        </div>
+        <div *ngIf="img5">
+          <img class="img-modal-body" src="../../../../assets/INFOSPRINGTNATIONALEST.png" alt="">
+        </div>
+        <div *ngIf="img6">
+          <img class="img-modal-body" src="../../../../assets/VZLAEQUIPOSNATIONALCENTRAL.jpg" alt="">
         </div>
       </div>
       <div class="modal-footer">
