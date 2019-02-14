@@ -11,6 +11,7 @@ export class InfogShowComponent implements OnInit {
   img3 = false;
   img4 = false;
   img5 = false;
+  img6 = false;
 
   constructor() { }
 
@@ -32,7 +33,11 @@ export class InfogShowComponent implements OnInit {
 
   }
   showMyImage5() {
-    this.img5 = !this.img4;
+    this.img5 = !this.img5;
+
+  }
+  showMyImage6() {
+    this.img6 = !this.img6;
 
   }
 
@@ -42,6 +47,7 @@ export class InfogShowComponent implements OnInit {
     this.img3 = false;
     this.img4 = false;
     this.img5 = false;
+    this.img6 = false;
 
   }
 }
