@@ -2,6 +2,33 @@
   box-sizing: border-box;
 
 }
+/* .nav-link, .dropdown-item  {
+font-size: 2em !important;
+
+}
+.nav-img {
+  width: 100px;
+  height: 100px;
+}
+
+.navbar-toggler-icon {
+  font-size: 3em;
+
+}
+
+
+@media only screen and (min-width:1023px ) {
+  .nav-link, .dropdown-item  {
+    font-size: 1em !important;
+    
+    }
+  .nav-img {
+    width: 40px;
+    height: 40px;
+    }
+    
+  }     */
+
 
 /* .container_menu {
   position: -webkit-sticky;
