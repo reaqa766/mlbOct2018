@@ -12,6 +12,10 @@ export class InfogShowComponent implements OnInit {
   img4 = false;
   img5 = false;
   img6 = false;
+  img7 = false;
+  img8 = false;
+  img9 = false;
+  img10 = false;
 
   constructor() { }
 
@@ -40,6 +44,22 @@ export class InfogShowComponent implements OnInit {
     this.img6 = !this.img6;
 
   }
+  showMyImage7() {
+    this.img7 = !this.img7;
+
+  }
+  showMyImage8() {
+    this.img8 = !this.img8;
+
+  }
+  showMyImage9() {
+    this.img9 = !this.img9;
+
+  }
+  showMyImage10() {
+    this.img10 = !this.img10;
+
+  }
 
   showMyImage_all() {
     this.img1 = false;
@@ -48,6 +68,10 @@ export class InfogShowComponent implements OnInit {
     this.img4 = false;
     this.img5 = false;
     this.img6 = false;
+    this.img7 = false;
+    this.img8 = false;
+    this.img9 = false;
+    this.img10 = false;
 
   }
 }
