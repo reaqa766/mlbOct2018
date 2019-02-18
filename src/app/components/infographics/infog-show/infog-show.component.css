@@ -107,6 +107,7 @@ width: 100%;
 
 .img4 {
 padding: 0 0;
+
 }
 
 
@@ -175,6 +176,10 @@ padding: 0 0;
     .img10 {
     grid-column: 1/2;
     grid-row: 4/5;
+    }
+
+    .modal-lg {
+        width: 120%;
     }
 
 }
