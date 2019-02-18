@@ -29,7 +29,7 @@ import { PitcherinfoComponent } from './components/pitcherinfo/pitcherinfo.compo
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { TriviaComponent } from './components/trivia/trivia.component';
 import { VideosComponent } from './components/videos/videos.component';
-import { PActives2019Component } from './components/pitchers/p-actives2019/p-actives2019.component';
+import { PActives2019Component } from './components/temp2019/pitchers2019/p-actives2019/p-actives2019.component';
 import { Actives2019Component } from './components/temp2019/players2019/actives2019/actives2019.component';
 import { BioActives2019Component } from './components/temp2019/players2019/bio-actives2019/bio-actives2019.component';
 import { Byposition2019Component } from './components/temp2019/players2019/byposition2019/byposition2019.component';
