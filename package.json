@@ -19,7 +19,9 @@
     "@angular/http": "^6.0.3",
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
+    "@angular/platform-server": "^7.2.5",
     "@angular/router": "^6.0.3",
+    "@nguniversal/module-map-ngfactory-loader": "^7.1.0",
     "angular2-flash-message": "^1.0.2",
     "angular2-flash-messages": "^3.0.1",
     "angularfire2": "^5.1.1",
@@ -30,6 +32,8 @@
     "ngx-toastr": "^9.1.2",
     "rxjs": "6.0.0",
     "rxjs-compat": "^6.4.0",
+    "ts-loader": "^5.3.3",
+    "webpack-cli": "^3.2.3",
     "zone.js": "^0.8.29"
   },
   "devDependencies": {

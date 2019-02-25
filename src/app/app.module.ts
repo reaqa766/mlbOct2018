@@ -131,6 +131,7 @@ import { InfogShowComponent } from './components/infographics/infog-show/infog-s
   ],
   imports: [
     BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'mlbOct2018' }),
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
