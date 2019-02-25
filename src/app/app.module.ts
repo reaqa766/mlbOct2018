@@ -62,7 +62,7 @@ import { TriviaComponent } from './components/trivia/trivia.component';
 import { HeaderComponent } from './components/header/header.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { PlayerOfTheWeekComponent } from './components/player-of-the-week/player-of-the-week.component';
-import { PActives2019Component } from './components/pitchers/p-actives2019/p-actives2019.component';
+import { PActives2019Component } from './components/temp2019/pitchers2019/p-actives2019/p-actives2019.component';
 import { Byposition2019Component } from './components/temp2019/players2019/byposition2019/byposition2019.component';
 import { Byteam2019Component } from './components/temp2019/players2019/byteam2019/byteam2019.component';
 import { Actives2019Component } from './components/temp2019/players2019/actives2019/actives2019.component';

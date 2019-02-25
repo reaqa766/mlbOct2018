@@ -3,7 +3,8 @@
 <h4 class="titulo-post" >Crear un nuevo Post</h4>
 <form class="py-2" #f="ngForm">
 	<div class="form-group">
-		<input class="form-control input-titulo-Post" type="text" name="post-title" [(ngModel)]="postTitle"  #new_post_title="ngModel"  placeholder="Titulo del Post" (keyup.enter)="onEnter(new_post_title);" required>
+		<input class="form-control input-titulo-Post" type="text" name="post-title" [(ngModel)]="postTitle"  #new_post_title="ngModel"  placeholder="Titulo del Post" (keyup.enter)="onEnter()" required>
+		<!-- >(keyup.enter)="onEnter(new_post_title)"-->
 	</div>
 	<button class="btn btn-dark" (click)="onEnter()" [disabled]="new_post_title.invalid">Save</button>
 </form>
