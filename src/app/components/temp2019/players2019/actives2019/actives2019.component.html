@@ -1,12 +1,13 @@
 <div class="container_players_actives"></div>
 <div class="container-actives">
-  <h1 class="actives-title">Bateadores Activos</h1>
+    <h1 class="actives-title">La Temporada 2019 no ha iniciado</h1>
+  <!-- <h1 class="actives-title">Bateadores Activos</h1> -->
 </div>
 
-<p class="title-position"> TEMP. 2019 </p>
-
+<!-- <p class="title-position"> TEMP. 2019 </p>
+ -->
 <!-- LOADER -->
-<div *ngIf="!allItems">
+<!-- <div *ngIf="!allItems">
   <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
   <p class="spiner_load">CARGANDO</p>
 </div>
@@ -22,11 +23,11 @@
 <ng-container *ngIf="!isLoading">
   <table class="table table-hover  text-center">
     <thead class="table-header">
-      <tr>
+      <tr> -->
         <!-- <th style="width: 5%;" scope="col">Id</th> -->
-        <th style="width: 15%;" scope="col">Name</th>
+        <!-- <th style="width: 15%;" scope="col">Name</th> -->
         <!-- <th style="width: 15%;" scope="col">Codigo</th> -->
-        <th class="th1" style="width: 10%;" scope="col">Posicion</th>
+        <!-- <th class="th1" style="width: 10%;" scope="col">Posicion</th>
         <th class="th2" style="width: 5%;" scope="col">VB</th>
         <th class="th3" style="width: 5%;" scope="col">Avg</th>
         <th class="th4" style="width: 5%;" scope="col">CA</th>
@@ -37,19 +38,19 @@
         <th class="th9" style="width: 5%;" scope="col">Hr</th>
         <th class="th10" style="width: 5%;" scope="col">Br</th>
       </tr>
-    </thead>
+    </thead> -->
     <!-- </table> -->
 
-    <ng-container *ngIf="!(pager.allItems === 0)">
+    <!-- <ng-container *ngIf="!(pager.allItems === 0)"> -->
 
       <!-- <table class="table table-hover "> -->
-      <tbody class="table-header2">
+      <!-- <tbody class="table-header2">
         <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
-          <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
+          <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize"> -->
             <!-- <td style="width: 5%;">{{i +1}}</td> -->
-            <a routerLink="/playerinfo/{{player.id}}" class="link_player"><td style="width: 15%;" class="link_player">{{player.fullName}}</td></a>
+            <!-- <a routerLink="/playerinfo/{{player.id}}" class="link_player"><td style="width: 15%;" class="link_player">{{player.fullName}}</td></a> -->
             <!-- <td style="width: 15%;">{{player.id}}</td> -->
-            <td class="th1" style="width: 10%;">{{player.primaryPosition.abbreviation}}</td>
+            <!-- <td class="th1" style="width: 10%;">{{player.primaryPosition.abbreviation}}</td>
             <td class="th2" style="width: 10%;">{{player.stats[0].splits[0].stat.atBats}}</td>
             <td class="th3" style="width: 5%;">{{player.stats[0].splits[0].stat.avg}}</td>
             <td class="th4" style="width: 5%;">{{player.stats[0].splits[0].stat.runs}}</td>
@@ -60,14 +61,14 @@
             <td class="th9" style="width: 5%;">{{player.stats[0].splits[0].stat.homeRuns}}</td>
             <td class="th10" style="width: 5%;">{{player.stats[0].splits[0].stat.stolenBases}}</td>
           </tr>
-        </ng-container>
+        </ng-container> -->
 
-        <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
-          <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
+        <!-- <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
+          <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)"> -->
             <!-- <td style="width: 5%;">{{i +1}}</td> -->
-            <a routerLink="/playerinfo/{{player.id}}" class="link_player"><td class="link_player" style="width: 15%;">{{player.fullName}}</td></a>
+            <!-- <a routerLink="/playerinfo/{{player.id}}" class="link_player"><td class="link_player" style="width: 15%;">{{player.fullName}}</td></a> -->
             <!-- <td style="width: 15%;">{{player.id}}</td> -->
-            <td class="th1" style="width: 10%;">{{player.primaryPosition.abbreviation}}</td>
+            <!-- <td class="th1" style="width: 10%;">{{player.primaryPosition.abbreviation}}</td>
             <td class="th2" style="width: 10%;">{{player.stats[0].splits[0].stat.atBats}}</td>
             <td class="th3" style="width: 5%;">{{player.stats[0].splits[0].stat.avg}}</td>
             <td class="th4" style="width: 5%;">{{player.stats[0].splits[0].stat.runs}}</td>
@@ -78,24 +79,24 @@
             <td class="th9" style="width: 5%;">{{player.stats[0].splits[0].stat.homeRuns}}</td>
             <td class="th10" style="width: 5%;">{{player.stats[0].splits[0].stat.stolenBases}}</td>
 
-        </ng-container>
+        </ng-container> -->
         <!-- <span *ngIf="!allItems[0]" class="d-flex justify-content-center">
         <h1> Error: '{{ busqueda.value }}' no existe</h1>
       </span> -->
-      </tbody>
+      <!-- </tbody>
     </ng-container>
 
-  </table>
+  </table> -->
   <!-- PAGINATION-->
 
-  <div>
+  <!-- <div>
     <div class="container">
-      <div class="text-center paginator">
+      <div class="text-center paginator"> -->
         <!-- items being paged -->
         <!-- <div *ngFor="let item of pagedItems">{{item.name}}</div> -->
 
         <!-- pager -->
-        <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
+        <!-- <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
           <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
             <a (click)="setPage(1)" class="page-link paginator_item">First</a>
           </li>
@@ -117,4 +118,4 @@
     <hr />
   </div>
 
-</ng-container>
+</ng-container> -->

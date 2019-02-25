@@ -1,10 +1,12 @@
 <div class="container-actives">
-  <h1 class="bioActives-title">Biografía de Bateadores Activos</h1>
-<!-- </div> -->
+  <h1 class="bioActives-title">La Temporada 2019 no ha iniciado</h1>
+  <!-- <h1 class="bioActives-title">Biografía de Bateadores Activos</h1> -->
 <p class="title-position"> TEMP. 2019 </p>
 
+
+
 <!--LOADER -->
-<div *ngIf="!allItems">
+<!-- <div *ngIf="!allItems">
   <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
   <p class="spiner_load">CARGANDO</p>
 </div>
@@ -24,7 +26,7 @@
             <a routerLink="/playerinfo2019/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
           <div class="card-body">
             <h5 class="card-title">{{player.fullName}}</h5>
-          </div>
+          </div> -->
           <!-- <ul class="list-group list-group-flush">
             <li class="list-group-item"><strong> Equipo: </strong> {{player.stats[0].splits[0].team.name}}</li>
             <li class="list-group-item"><strong>L. Nac.: </strong> {{player.birthCity}}</li>
@@ -35,14 +37,14 @@
             <li class="list-group-item"><strong>Numero: </strong> {{player.primaryNumber}}</li>
             <li class="list-group-item"><strong>Posición: </strong> {{player.primaryPosition.name}}</li>
           </ul> -->
-        </div>
+        <!-- </div>
       </ng-container>
       <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
         <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
             <a routerLink="/playerinfo2019/{{player.id}}"><img class="card-img-top" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
           <div class="card-body">
             <h5 class="card-title">{{player.fullName}} </h5>
-          </div>
+          </div> -->
           <!-- <ul class="list-group list-group-flush">
             <li class="list-group-item"><strong> Equipo: </strong> {{player.stats[0].splits[0].team.name}}</li>
             <li class="list-group-item"><strong>L. Nac.: </strong> {{player.birthCity}}</li>
@@ -57,7 +59,7 @@
             <a href="#" class="card-link">Card link</a>
             <a href="#" class="card-link">Another link</a>
           </div> -->
-        </div>
+        <!-- </div>
       </ng-container>
     </div>
     <div class="container paginator">
@@ -83,4 +85,4 @@
     </div>
   </ng-container>
 </div>
-</div>
+</div> -->
