@@ -40,7 +40,7 @@
   }
 
 
-.texto_img_cuadro, .texto_img_cuadro2  {
+.texto_img_cuadro, .texto_img_izquierdo_cuadro2  {
     position: absolute;
     bottom: 1px;
     /* left: 1%; */
@@ -52,7 +52,7 @@
     text-align: center;
     margin: .5rem;
 }
-.texto_img_cuadro1 {
+.texto_img_izquierdo_cuadro1 {
     position: absolute;
     top: 40%;
     /* left: 1%; */
@@ -166,17 +166,47 @@
     width: 100%;
 }
 
-.texto_img_cuadro1 {
-    position: absolute;
+.t_i_d {
     top: 40%;
     /* left: 1%; */
     width: 90%;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px black;
     text-align: center;
     margin: 1rem;
+
+}
+
+.texto_img_cuadro1 {
+    position: absolute;
+    top: 1rem;
+    
+   
+}
+.texto_img_cuadro2 {
+    position: absolute;
+    top: 10rem;
+
+   
+}
+.texto_img_cuadro3 {
+    position: absolute;
+    top: 20rem;
+
+   
+}
+.texto_img_cuadro4 {
+    position: absolute;
+    top: 30rem;
+   
+}
+
+.sitio_web {
+    color:gray;
+    font-size: 1.1rem;
+
 }
 
 
