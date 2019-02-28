@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { EditorAuthGuard } from '../app/components/guards/editor-auth.guard.guard';
- 
+
 import {AuthComponent} from '../app/components/auth/auth/auth.component';
 
 import { NewsComponent} from '../app/components/news/news.component';
@@ -36,14 +36,16 @@ import { Byposition2019Component } from './components/temp2019/players2019/bypos
 import { Playerinfo2019Component } from './components/temp2019/players2019/playerinfo2019/playerinfo2019.component';
 import { Byteam2019Component } from './components/temp2019/players2019/byteam2019/byteam2019.component';
 import { InfogShowComponent } from './components/infographics/infog-show/infog-show.component';
+import { PlayerWeekComponent } from './components/player-week/player-week.component';
+import { PitcherrWeekComponent } from './components/pitcherr-week/pitcherr-week.component';
 
 // import { SharedModule } from '../shared/shared.module'
 
-import { PostDashboardComponent } from '../app/components/posts/post-dashboard/post-dashboard.component'
-import { PostDetailComponent } from '../app/components/posts/post-detail/post-detail.component'
-import { PostListComponent } from '../app/components/posts/post-list/post-list.component'
-import { PostListsComponent } from '../app/components/posts/post-lists/post-lists.component'
-import { PostService } from '../app/components/posts/post.service'
+import { PostDashboardComponent } from '../app/components/posts/post-dashboard/post-dashboard.component';
+import { PostDetailComponent } from '../app/components/posts/post-detail/post-detail.component';
+import { PostListComponent } from '../app/components/posts/post-list/post-list.component';
+import { PostListsComponent } from '../app/components/posts/post-lists/post-lists.component';
+import { PostService } from '../app/components/posts/post.service';
 
 
 
@@ -126,6 +128,10 @@ const routes: Routes = [
   component: PostListsComponent},
   { path: 'postService',
   component: PostService},
+  { path: 'playerWeek',
+  component: PlayerWeekComponent},
+  { path: 'pitcherWeek',
+  component: PitcherrWeekComponent},
   { path: '**',
   component: NotFoundPageComponent}
 ];

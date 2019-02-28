@@ -77,6 +77,8 @@ import { PostDashboardComponent } from './components/posts/post-dashboard/post-d
 import { AuthComponent } from './components/auth/auth/auth.component';
 import { PostListsComponent } from './components/posts/post-lists/post-lists.component';
 import { InfogShowComponent } from './components/infographics/infog-show/infog-show.component';
+import { PlayerWeekComponent } from './components/player-week/player-week.component';
+import { PitcherrWeekComponent } from './components/pitcherr-week/pitcherr-week.component';
 
 @NgModule({
   declarations: [
@@ -126,7 +128,9 @@ import { InfogShowComponent } from './components/infographics/infog-show/infog-s
     PostDashboardComponent,
     AuthComponent,
     PostListsComponent,
-    InfogShowComponent
+    InfogShowComponent,
+    PlayerWeekComponent,
+    PitcherrWeekComponent
 
   ],
   imports: [
