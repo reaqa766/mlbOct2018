@@ -131,7 +131,7 @@
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows:repeat(5, 1fr);
+    grid-template-rows:repeat(auto-fit, minmax(1rem,2rem));
 }
 
 .container_central_derecho_1 {
@@ -228,9 +228,9 @@
 
 .cuadro_container_inferior_izquierdo {
     grid-column: 1/2;
-    justify-self: center;
+    /* justify-self: center; */
     /* background-color: rgb(11, 39, 167); */
-    width: 100%;
+    /* width: 100%; */
 
     display: grid;
     grid-template-columns: 1fr;
@@ -240,7 +240,7 @@
 .cuadro_container_inferior_izquierdo1 {
     grid-column: 1/2;
     grid-row: 1/2;
-    justify-self: center;
+    /* justify-self: center; */
     /* background-color: rgb(0, 0, 0); */
     /* width: 100%; */
     position: relative;
@@ -263,13 +263,10 @@
     grid-row: 2/3;
     justify-self: center;
     width: 100%;
-    position: relative;
 
  }
 
 .text_in_iz2 {
-    position: absolute;
-    bottom: .1rem;
     width: 25rem;
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px black;
@@ -288,13 +285,10 @@
     justify-self: center;
     /* background-color: rgb(0, 0, 0); */
     width: 100%;
-    position: relative;
 
 }
 
 .text_in_iz3 {
-    position: absolute;
-    bottom: .1rem;
     width: 25rem;
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px black;
@@ -308,13 +302,10 @@
     justify-self: center;
     /* background-color: rgb(0, 0, 0); */
     width: 100%;
-    position: relative;
 
 }
 
 .text_in_iz4 {
-    position: absolute;
-    bottom: .1rem;
     width: 25rem;
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px black;
@@ -338,7 +329,6 @@
     grid-column: 1/2;
     grid-row: 1/2;
     justify-self: center;
-    /* background-color: rgb(0, 0, 0); */
     /* width: 100%; */
 
     display: grid;
@@ -353,7 +343,6 @@
 }
 
 .text_in_c1 {
-    bottom: .1rem;
     width: 25rem;
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px black;
@@ -370,10 +359,9 @@
     grid-column: 1/2;
     grid-row: 2/3;
     justify-self: center;
-    /* background-color: rgb(0, 0, 0); */
-    width: 100%;
+    /* background-color: rgb(247, 1, 1); */
+    /* width: 100%; */
   
-
     display: grid;
     grid-template-columns: 1fr 4fr;
 }
@@ -464,41 +452,40 @@
 
 .cuadro_container_inferior_derecho {
     grid-column: 3/4;
-    justify-self: center;
-    /* background-color: rgb(194, 206, 160); */
-    width: 100%;
-
-    display: grid;
+    
+    /* display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr; */
 
 }
 
 .cuadro_container_inferior_derecho1 {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    justify-self: center;
-    /* background-color: rgb(221, 90, 96); */
-    width: 100%;
+    padding-top: 5rem;
+    /* grid-column: 1/2;
+    grid-row: 1/2; */
+    justify-items: center;
+   /* background-color: rgb(221, 90, 96); */
+
     
 }
+
+.img_cuadro_inferior_derecho1 {
+    margin: 0 10%;
+}
 .text_in_id1 {
-    bottom: .1rem;
-    width: 25rem;
+    /* width: 25rem; */
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px black;
     font-weight: bold;
     font-size: 1rem; 
     padding: 0 .5rem; 
 }
-.cuadro_container_inferior_derecho2 {
+/* .cuadro_container_inferior_derecho2 {
     grid-column: 1/2;
     grid-row: 2/3;
-    justify-self: center;
-    width: 100%;
+    justify-items: center;
 }
 .text_in_id2 {
-    bottom: .1rem;
     width: 25rem;
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px black;
@@ -509,21 +496,14 @@
 
 .cuadro_container_inferior_derecho3 {
     grid-column: 1/2;
-    grid-row: 3/5;
-    justify-self: center;
-    /* background-color: rgb(71, 113, 192); */
-    width: 100%;
-    position: relative;
+    grid-row: 3/4;
+    justify-items: center;
 
  }
- /* .img_cuadro_inferior_derecho3 {
-    width: 100%;
- } */
+
 
 
 .text_in_id3 {
-    position: absolute;
-    bottom: .1rem;
     width: 25rem;
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px black;
@@ -531,6 +511,25 @@
     font-size: 1rem; 
     padding: 0 .5rem; 
 }
+
+.cuadro_container_inferior_derecho4 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    justify-self: center;
+    position: relative;
+    bottom: .1rem;
+    left: .01rem
+ }
+
+.text_in_id4 {
+    position: absolute;
+    bottom: .1rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px black;
+    font-weight: bold;
+    font-size: 1rem; 
+    padding: 0 .5rem; 
+} */
 
 .line_white {
     display: block;
