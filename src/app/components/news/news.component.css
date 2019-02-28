@@ -220,7 +220,8 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 50px;
-    justify-content: center;	
+    justify-content: center;
+    background-color: rgb(10, 10, 10);	
 
 }
 
@@ -241,8 +242,9 @@
     grid-row: 1/2;
     justify-self: center;
     /* background-color: rgb(0, 0, 0); */
-    width: 100%;
+    /* width: 100%; */
     position: relative;
+    align-items: center;
 
  }
 
@@ -253,7 +255,7 @@
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px black;
     font-weight: bold;
-    font-size: 1.25rem; 
+    font-size: 1rem; 
     padding: 0 .5rem; 
 }
 .cuadro_container_inferior_izquierdo2 {
@@ -272,7 +274,7 @@
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px black;
     font-weight: bold;
-    font-size: 1.25rem; 
+    font-size: 1rem; 
     padding: 0 .5rem; 
 }
 
@@ -297,7 +299,7 @@
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px black;
     font-weight: bold;
-    font-size: 1.25rem; 
+    font-size: 1rem; 
     padding: 0 .5rem; 
 }
 .cuadro_container_inferior_izquierdo4 {
@@ -317,7 +319,7 @@
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px black;
     font-weight: bold;
-    font-size: 1.25rem; 
+    font-size: 1rem; 
     padding: 0 .5rem; 
 }
 
@@ -356,7 +358,7 @@
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px black;
     font-weight: bold;
-    font-size: 1.25rem; 
+    font-size: 1rem; 
     padding: 0 .5rem; 
 
     grid-column: 2/3;
@@ -389,7 +391,7 @@
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px black;
     font-weight: bold;
-    font-size: 1.25rem; 
+    font-size: 1rem; 
     padding: 0 .5rem; 
 
     grid-column: 2/3;
@@ -420,7 +422,7 @@
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px black;
     font-weight: bold;
-    font-size: 1.25rem; 
+    font-size: 1rem; 
     padding: 0 .5rem; 
 
     grid-column: 2/3;
@@ -451,7 +453,7 @@
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px black;
     font-weight: bold;
-    font-size: 1.25rem; 
+    font-size: 1rem; 
     padding: 0 .5rem; 
 
     grid-column: 2/3;
@@ -486,7 +488,7 @@
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px black;
     font-weight: bold;
-    font-size: 1.25rem; 
+    font-size: 1rem; 
     padding: 0 .5rem; 
 }
 .cuadro_container_inferior_derecho2 {
@@ -501,7 +503,7 @@
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px black;
     font-weight: bold;
-    font-size: 1.25rem; 
+    font-size: 1rem; 
     padding: 0 .5rem; 
 }
 
@@ -526,7 +528,7 @@
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px black;
     font-weight: bold;
-    font-size: 1.25rem; 
+    font-size: 1rem; 
     padding: 0 .5rem; 
 }
 

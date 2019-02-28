@@ -1,0 +1,139 @@
+.pow-title {
+    color: antiquewhite;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0.15rem auto 0;
+    padding: .5rem 0;
+    background-color: rgba(3, 2, 2, 0.5);
+    width: 38rem;
+    height: 1.25em;
+    border-radius: 7px;
+  }
+  .pow-title-week {
+    color: antiquewhite;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0.15rem auto 0;
+    padding: .5rem 0 0;
+    background-color: rgba(3, 2, 2, 0.5);
+    width: 15rem;
+    height: 1.5em;
+    border-radius: 7px;
+  }
+  .container_player_o_w {
+    display: grid;
+    grid-template-columns: 2fr 4fr 2fr;
+    /* grid-column-gap: 10px; */
+    margin: 1% 5%;
+  }
+  
+  .photo_pow {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+  
+  
+  
+    /* grid-column: 1/2; */
+    /* width: 50%; */
+    height: 100%;
+    margin: 1rem auto;
+  }
+  .data_pow {
+    position: absolute;
+    top: .25rem;
+    bottom: .25rem;
+    left: .25rem;
+  
+    grid-column: 1/2;
+    color: rgb(255, 255, 255);
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: left;
+    /* margin: 0; */
+    padding: 0 .5rem;
+    background-color: rgba(3, 2, 2, 0.5);
+    width: 12%;
+    height: 45%;
+    border-radius: 7px;
+  
+  
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+  
+  }
+  .img_photo_pow {
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px black;
+  }
+  .container_text {
+    grid-column: 1/3;
+  
+    position: absolute;
+    bottom: 1.75rem;
+    /* right: 10rem; */
+    background-color: rgba(3, 2, 2, 0.5);
+    color: rgb(248, 240, 206);
+    font-size: 1.2em;
+    justify-content: space-evenly;
+    padding: 0 .5rem;
+  }
+  
+  .pow_txt_name {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+  
+  }
+  .data_pow_num {
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+  
+  }
+  
+  .data   {
+    margin: auto 0;
+    padding: .2rem 0;
+  }
+  
+  .vb {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .hits {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .avg {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  
+  }
+  .ce {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .ca {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+  .bb {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+  .stk {
+    grid-column: 1/2;
+    grid-row: 7/8;
+  }
+  .hr {
+    grid-column: 1/2;
+    grid-row: 8/9;
+  }
+  
+  .separation_lines {
+    color: white;
+  }
+  

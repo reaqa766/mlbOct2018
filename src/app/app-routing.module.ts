@@ -36,6 +36,7 @@ import { Byposition2019Component } from './components/temp2019/players2019/bypos
 import { Playerinfo2019Component } from './components/temp2019/players2019/playerinfo2019/playerinfo2019.component';
 import { Byteam2019Component } from './components/temp2019/players2019/byteam2019/byteam2019.component';
 import { InfogShowComponent } from './components/infographics/infog-show/infog-show.component';
+import { PlayerOfTheWeekComponent } from './components/player-of-the-week/player-of-the-week.component';
 
 // import { SharedModule } from '../shared/shared.module'
 
@@ -106,6 +107,8 @@ const routes: Routes = [
   component: PlayerinfoComponent, pathMatch: 'full'},
   { path: 'playerinfo2019/:code',
   component: Playerinfo2019Component, pathMatch: 'full'},
+  { path: 'playeroftheweek',
+  component: PlayerOfTheWeekComponent, pathMatch: 'full'},
   { path: 'pitcherinfo/:id',
   component: PitcherinfoComponent,
   pathMatch: 'full'},
