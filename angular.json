@@ -93,10 +93,18 @@
               "**/node_modules/**"
             ]
           }
-        }
+       },
+    "server": {
+      "builder": "@angular-devkit/build-angular:server",
+      "options": {
+        "outputPath": "dist/server",
+        "main": "src/main.server.ts",
+        "tsConfig": "src/tsconfig.server.json"
       }
-    },
-    "mlbOct2018-e2e": {
+    }
+  }
+},
+"mlbOct2018-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {

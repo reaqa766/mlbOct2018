@@ -135,6 +135,7 @@ import { PitcherrWeekComponent } from './components/pitcherr-week/pitcherr-week.
   ],
   imports: [
     BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'mlbOct2018' }),
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
