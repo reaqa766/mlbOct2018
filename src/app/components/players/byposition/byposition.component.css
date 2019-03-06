@@ -5,16 +5,105 @@
 
 .byPosition-title {
     color: antiquewhite;
-    font-size: 1rem;
+    font-size: 2.25rem;
     text-align: center;
     margin: 0.1rem auto 1rem;
     padding: .25rem 0;
     background-color: rgba(3, 2, 2, 0.5);
-    width: 15em;
+    width: 12em;
     height: 1.75em;
     border-radius: 7px;
 }
+.byPosition-season-title {
+    color: antiquewhite;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0.1rem auto 1rem;
+    padding: .25rem 0;
+    background-color: rgba(3, 2, 2, 0.5);
+    width: 8em;
+    height: 1.5em;
+    border-radius: 7px;
+}
+.baseball_field {
+    width: 50%;
+    margin: 5rem 25%;
 
+}
+.button {
+    background-color: rgb(48, 131, 61);
+    /* border: 2px solid white; */
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px black;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-justify: auto;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 5rem;    
+  }
+
+  .container-position{
+      background-size: cover;
+      border-radius: 8px;
+      /* margin: 5rem 17%; */
+      width: 100%;
+      padding: 2rem;
+      border-radius: 6px;
+      /* display: grid;
+      grid-template-columns: repeat (5, 5px);
+      grid-template-rows: repeat (5, 20px);
+      grid-column-gap: 10px;
+      grid-row-gap: 40px; */
+  }
+
+  .bbalfield {
+      width: 60%;
+      margin: 2rem 20%;
+      position: relative;
+  }
+
+  .catcher {
+      position: absolute;
+      bottom: 33%;
+      left: 47%;
+      justify-self: center
+  }
+  .pitcher{
+    justify-self: center
+  }
+  .prim_B {
+    justify-self: center
+  }
+  .segunda_B {
+    justify-self: center
+  }
+  .ss {
+    justify-self: center
+  }
+  .tercera_B {
+    justify-self: center
+  }
+  .rf {
+    justify-self: center
+  }
+  .cf {
+    justify-self: center
+  }
+  .lf {
+    justify-self: center
+  }
+
+
+
+/* VIEJO DISEÑO */
+
+/* 
 .advancedSearchTextbox{
     color: rgb(2, 1, 0);
     font-size: 0.75rem;
@@ -170,4 +259,4 @@
         font-size: 1rem;
     }
     
-}
+} */
