@@ -1,6 +1,9 @@
 <div class="container_players_actives"></div>
 <div class="container-daily">
   <h1 class="daily-title">Actuación Diaria de Pitchers </h1>
+  <br>
+  <h3 class="daily-title">Srping Training 2019</h3>
+
 </div>
 <p class="title-position">{{dia | date }} </p>
 
@@ -35,6 +38,7 @@
           <th class="td12" style="width: 3%;" scope="col">Hr</th>
         </tr>
       </thead>
+      <ng-container *ngIf="!(pager.allItems === 0)">
       <tbody class="table-header">
         <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
           <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
@@ -70,6 +74,8 @@
         </ng-container>
 
       </tbody>
+    </ng-container>
+
 
     </table>
 

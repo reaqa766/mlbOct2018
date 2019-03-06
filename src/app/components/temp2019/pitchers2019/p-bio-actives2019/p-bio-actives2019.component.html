@@ -1,25 +1,26 @@
 <div class="container-actives">
     <h1 class="bioActives-title">Biografía de Pitchers Activos</h1>
   </div>
-  
-  <p class="title-position"> TEMP. 2018 </p>
-  
+
+  <p class="title-position"> SPRING T. 2019 </p>
+  <!-- <p class="title-position"> TEMP. 2019 </p> -->
+
   <!--LOADER -->
   <div *ngIf="!allItems">
     <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
     <p class="spiner_load">CARGANDO</p>
   </div>
-  
+
   <div *ngIf="allItems">
     <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchTextbox">
     <div *ngIf="!allItems[0]" class="error_search d-flex justify-content-center">
       <h4 class="error_message"> <strong>'{{searchText}}'</strong> El Pitcher no existe. Solo busque por nombre, mote y
         equipo</h4>
     </div>
-  
+
     <!--PRUEBA DE CARDS -->
     <ng-container *ngIf="!(pager.allItems === 0)">
-  
+
       <div class="container-actives_cards ">
         <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
           <div class="card card1 img_picture_box" style="width: 95%;" *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
@@ -42,7 +43,7 @@
             </div> -->
           </div>
         </ng-container>
-  
+
         <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
           <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*5)">
               <a routerLink="/pitcherinfo/{{player.id}}"><img class="card-img-top" src="../../../../assets/{{player.id}}.jpg" alt="Foto de jugador de Grandes Ligas"></a>
@@ -85,4 +86,3 @@
       </div>
     </ng-container>
   </div>
-  

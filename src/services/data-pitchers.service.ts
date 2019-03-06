@@ -36,26 +36,38 @@ export class DataPitchersService {
 
   // Array de Codigo de Jugadores
   private playersCode = [
-    621237,
-    501593,
-    593993, 
-    471911, 620454,  
-    468504, 630023, 571035,
-    521655,
-    491646, 
-    448855, 622694,
-    433587, 500872, 
-    641154, 608566, 
-    622795, 591672, 622382,
-    622161, 
-    527048, 433589,
-    591693, 
-    593958, 600965, 541652, 444468,
-    614179, 434671, 
-    622608, 462515,
-    624133, 
-    553878
+    433587, 433589, 434671, 444468, 448855,
+    468504, 471911, 491646, 501593,
+    501625, 521655, 527048, 553878, 575070,
+    591693, 593163, 593958, 606208, 608566,
+    611093, 612792, 621237, 621592, 622382,
+    622608, 622694, 622786, 622795, 624133,
+    630023, 640470, 641154, 642511, 650347,
+    650382, 650671, 656001, 658530, 658648,
+    659262, 660761
   ];
+
+  // PITCHERS 2018
+    // 501593, 621237,
+    // 501593,
+    // 593993,
+    // 471911, 620454,
+    // 468504, 630023, 571035,
+    // 521655,
+    // 491646,
+    // 448855, 622694,
+    // 433587, 500872,
+    // 641154, 608566,
+    // 622795, 591672, 622382,
+    // 622161,
+    // 527048, 433589,
+    // 591693,
+    // 593958, 600965, 541652, 444468,
+    // 614179, 434671,
+    // 622608, 462515,
+    // 624133,
+    // 553878
+
   // private playersCode = [
   //   650402, 660670, 542583, 514888, 503556,
   //   542255, 444489, 501303, 621237, 462101,
@@ -92,8 +104,11 @@ export class DataPitchersService {
   ]
 
 
-  private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2018&hydrate=stats(type=gameLog)';
-  // private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(type=season=2018),%20team(currentteam)';
+  private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(group=pitching,type=season,season=2019,gameType=S)';
+  // private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +
+  //  '&season=2018&hydrate=stats(type=gameLog)';
+  // private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +
+  //  '&season=2018&hydrate=stats(type=season=2018),%20team(currentteam)';
 
 
   constructor(private http: HttpClient) { }

@@ -16,7 +16,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class PlayerinfoComponent implements OnInit { public players = [];
   public playersSort = [];
   // Cambiar  a false cuando este en linea
-  isOffline = true;
+  isOffline = false;
   groups: any;
   selectedGroup: any;
   elarray: any;
