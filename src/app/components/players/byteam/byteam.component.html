@@ -5,26 +5,105 @@
 </div>
 
 <!-- LOADER -->
-<div *ngIf="!allItems">
+<!-- <div *ngIf="!allItems">
   <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
   <p class="spiner_load">CARGANDO</p>
-</div>
+</div> -->
 
-<div *ngIf="allItems">
+<!-- <div *ngIf="allItems"> -->
 
-<main>
-  <div class="team_logo">
-    <div *ngFor="let teamAmEs of teamsAmE; let i=index">
-      <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
-        <a routerLink="/playerinfo/{{team.code}}">
+<main class="liga_americana">
+  <div class="container_americana_este container_border">
+    <h3 class="titulo_liga">Americana Este</h3>
+    <div class="team_logo">
 
-          <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)='textChange(i)' [src]="'../../../assets/'  + teamAmEs.code + '.jpg'"
-            alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
+      <div *ngFor="let team of teamsAmE; let i=index">
+        <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
+          <a routerLink="/playerinfo/{{team.code}}">
+
+            <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)='textChange(i)' [src]="'../../../assets/'  + team.code + '.png'"
+              alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
+        </div>
       </div>
-      </div>
-      </div>
-    </main>
+    </div>
   </div>
+
+  <div class="container_americana_central container_border">
+    <h3 class="titulo_liga">Americana Central</h3>
+    <div class="team_logo">
+
+      <div *ngFor="let team of teamsAmC; let i=index">
+        <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
+          <a routerLink="/playerinfo/{{team.code}}">
+
+            <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)='textChange(i)' [src]="'../../../assets/'  + team.code + '.png'"
+              alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container_americana_oeste container_border">
+    <h3 class="titulo_liga">Americana Oeste</h3>
+    <div class="team_logo">
+
+      <div *ngFor="let team of teamsAmO; let i=index">
+        <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
+          <a routerLink="/playerinfo/{{team.code}}">
+
+            <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)='textChange(i)' [src]="'../../../assets/'  + team.code + '.png'"
+              alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container_nacional_este container_border">
+    <h3 class="titulo_liga">Nacional Este</h3>
+    <div class="team_logo">
+
+      <div *ngFor="let team of teamsNacE; let i=index">
+        <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
+          <a routerLink="/playerinfo/{{team.code}}">
+
+            <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)='textChange(i)' [src]="'../../../assets/'  + team.code + '.png'"
+              alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container_nacional_central container_border">
+    <h3 class="titulo_liga">Nacional Central</h3>
+    <div class="team_logo">
+
+      <div *ngFor="let team of teamsNacC; let i=index">
+        <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
+          <a routerLink="/playerinfo/{{team.code}}">
+
+            <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)='textChange(i)' [src]="'../../../assets/'  + team.code + '.png'"
+              alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container_nacional_oeste container_border">
+    <h3 class="titulo_liga">Nacional Oeste</h3>
+    <div class="team_logo">
+
+      <div *ngFor="let team of teamsNacO; let i=index">
+        <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
+          <a routerLink="/playerinfo/{{team.code}}">
+
+            <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)='textChange(i)' [src]="'../../../assets/'  + team.code + '.png'"
+              alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+  <!-- </div> -->
 
 
 

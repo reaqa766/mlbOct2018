@@ -25,23 +25,55 @@
   height: 1.5em;
   border-radius: 7px;
 }
-
-.players_pic {
-  margin-top: 1rem;
+.titulo_liga {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  text-decoration: underline rgb(214, 214, 214);
+}
+.liga_americana {
+  width: 90%;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 10%;
-  padding: 0 10%;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 5px;
+  background-color: rgba(0, 0, 0, 0.596);
+
+
+}
+.team_logo{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 1px;
   border-radius: 6px;
 }
 
+
+.img_picture_box {
+  text-align: center;
+}
 .img_picture_element{
+  margin: 1rem 0;
+  width: 45%;
   transition: .4s;
 }
 
 .img_picture_box:hover .img_picture_element{
   transform: scale(1.075);
   opacity: .98;
+}
+.container_border{
+  padding: 2rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.787);
+}
+
+.container_americana_este, .container_americana_central, .container_americana_oeste {
+  background-color: rgba(40, 138, 218, 0.465);
+}
+.container_nacional_este, .container_nacional_central, .container_nacional_oeste {
+  background-color: rgba(253, 69, 100, 0.465);
 }
 
 
