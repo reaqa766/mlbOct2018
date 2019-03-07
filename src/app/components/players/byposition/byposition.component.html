@@ -11,23 +11,89 @@
 </div>
 
 
-<div class="container-position">
+<div class="container-position" *ngIf='buscando'>
     <!-- <img class="bbalfield" src="../../../../assets/bbalF.png" alt=""> -->
     <!-- <div class="button catcher"> <button >C</button> </div> -->
     <div class="espacio_superior"></div>
     <div class="espacio_superior2"></div>
-    <button class="button catcher">C</button>
-    <button class="button pitcher">P</button>
-    <button class="button prim_B">1B</button>
-    <button class="button ss">SS</button>
-    <button class="button segunda_B">2B</button>
-    <button class="button tercera_B">3B</button>
-    <button class="button rf">RF</button>
-    <button class="button cf">CF</button>
-    <button class="button lf">LF</button>
+    <button class="button catcher" (click)="onSearchChange('catcher')">C</button>
+    <button class="button pitcher"(click)="onSearchChange('pitcher')">P</button>
+    <button class="button prim_B"(click)="onSearchChange('1b')">1B</button>
+    <button class="button ss"(click)="onSearchChange('ss')">SS</button>
+    <button class="button segunda_B"(click)="onSearchChange('2b')">2B</button>
+    <button class="button tercera_B"(click)="onSearchChange('3b')">3B</button>
+    <button class="button rf"(click)="onSearchChange('rf')">RF</button>
+    <button class="button cf"(click)="onSearchChange('cf')">CF</button>
+    <button class="button lf"(click)="onSearchChange('lf')">LF</button>
     <div class="espacio_inferior"></div>
 </div>
+<div class="container-position-results" *ngIf='!buscando'>
+  <ng-container *ngIf="!(pager.allItems === 0)">
 
+    <div class="container-actives_cards ">
+      <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
+        <div class="card card1 img_picture_box" style="width: 95%;" *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
+            <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/Jugadores Spring T 2019/Bateadores/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
+          <div class="card-body">
+            <h5 class="card-title">{{player.fullName}}</h5>
+          </div>
+          <!-- <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong> Equipo: </strong> {{player.stats[0].splits[0].team.name}}</li>
+            <li class="list-group-item"><strong>L. Nac.: </strong> {{player.birthCity}}</li>
+            <li class="list-group-item"><strong>F. Nac.: </strong> {{player.birthDate}} </li>
+            <li class="list-group-item"><strong> Edad: </strong> {{player.currentAge}}</li>
+            <li class="list-group-item"><strong>Mote: </strong> {{player.nickName}}</li>
+            <li class="list-group-item"><strong>F. Debut: </strong> {{player.mlbDebutDate}}</li>
+            <li class="list-group-item"><strong>Numero: </strong> {{player.primaryNumber}}</li>
+            <li class="list-group-item"><strong>Posición: </strong> {{player.primaryPosition.name}}</li>
+          </ul> -->
+        </div>
+      </ng-container>
+      <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
+        <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
+            <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top" src="../../../../assets/Jugadores Spring T 2019/Bateadores/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
+          <div class="card-body">
+            <h5 class="card-title">{{player.fullName}} </h5>
+          </div>
+          <!-- <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong> Equipo: </strong> {{player.stats[0].splits[0].team.name}}</li>
+            <li class="list-group-item"><strong>L. Nac.: </strong> {{player.birthCity}}</li>
+            <li class="list-group-item"><strong>F. Nac.: </strong> {{player.birthDate}}</li>
+            <li class="list-group-item"><strong> Edad: </strong> {{player.currentAge}}</li>
+            <li class="list-group-item"><strong>Mote: </strong> {{player.nickName}}</li>
+            <li class="list-group-item"><strong>F. Debut: </strong> {{player.mlbDebutDate}}</li>
+            <li class="list-group-item"><strong>Numero: </strong> {{player.primaryNumber}}</li>
+            <li class="list-group-item"><strong>Posición: </strong> {{player.primaryPosition.name}}</li>
+          </ul> -->
+          <!-- <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div> -->
+        </div>
+      </ng-container>
+    </div>
+    <div class="container paginator">
+      <div class="text-center">
+        <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
+          <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+            <a (click)="setPage(1)" class="page-link paginator_text">First</a>
+          </li>
+          <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+            <a (click)="setPage(pager.currentPage - 1)" class="page-link paginator_text">Previous</a>
+          </li>
+          <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
+            <a (click)="setPage(page)" class="page-link">{{page}}</a>
+          </li>
+          <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+            <a (click)="setPage(pager.currentPage + 1)" class="page-link paginator_text">Next</a>
+          </li>
+          <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+            <a (click)="setPage(pager.totalPages)" class="page-link paginator_text">Last</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </ng-container></div>
 
 
 

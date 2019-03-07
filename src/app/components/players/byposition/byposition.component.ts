@@ -13,7 +13,7 @@ import { PagerService } from '../../../../services/index';
 })
 export class BypositionComponent implements OnInit {
 
-
+  buscando = true;
   public players = [];
   groups: any;
   selectedGroup: any;
@@ -112,13 +112,14 @@ export class BypositionComponent implements OnInit {
     }
 
   }
-  onSearchChange() {
-    if (this.searchText) {
+  onSearchChange(position) {
+    this.buscando = false;
+    if (position) {
       this.allItems = this.players.filter(player =>
-        // player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
-        player.primaryPosition.abbreviation.toLowerCase().includes(this.searchText) ||
-        // player.fullName.toLowerCase().includes(this.searchText) ||
-        player.primaryPosition.name.toLowerCase().includes(this.searchText));
+        // player.stats[0].splits[0].team.name.toLowerCase().includes(position) ||
+        player.primaryPosition.abbreviation.toLowerCase().includes(position) ||
+        // player.fullName.toLowerCase().includes(position) ||
+        player.primaryPosition.name.toLowerCase().includes(position));
         this.setPage(this.pager.currentPage);
       } else {
           this.allItems = this.players;

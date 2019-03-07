@@ -34,28 +34,64 @@ export class ByteamComponent implements OnInit {
 
 
 
-  // playersList = [
-  //   {
-  //     name: "Jose Altuve",
-  //     position: "segunda base"
-  //   },
+  // text_11 = true;
+  // text_22 = true;s
+  answerDef = ' ' ;
+  answer: Array<string> =  [];
+  // answer = ' ';
+  respuesta_def: Array<boolean> = [];
+  respuesta_dada: Array<boolean> = [];
+  form_container = true;
+  opcion = '0' ;
+  selection = ' ' ;
+  teamsAmE = [
+  {code: 147, equipo: 'Yankees', liga: 'Americana', division: 'este'},
+  {code: 111, equipo: 'Boston', liga: 'Americana', division: 'este'},
+  {code: 139, equipo: 'Tampa', liga: 'Americana', division: 'este'},
+  {code: 110, equipo: 'Baltimore', liga: 'Americana', division: 'este'},
+  {code: 141, equipo: 'Toronto', liga: 'Americana', division: 'este'}
+];
 
-  //   {
-  //     name: "Gleyber Torres",
-  //     position: "segunda base"
-  //   },
+teamsAmC = [
 
-  //   {
-  //     name: "Ronald Acuña Jr.",
-  //     position: "Leftfield"
-  //   },
+  {code: 116, equipo: 'Detroit', liga: 'Americana', division: 'central'},
+  {code: 114, equipo: 'Cleveland', liga: 'Americana', division: 'central'},
+  {code: 142, equipo: 'Minnesota', liga: 'Americana', division: 'central'},
+  {code: 118, equipo: 'Kansas', liga: 'Americana', division: 'central'},
+  {code: 145, equipo: 'ChicagoW', liga: 'Americana', division: 'central'}
+];
 
-  //   {
-  //     name: "Ender Inciarte",
-  //     position: "Centerfield"
-  //   }
+teamsAmO = [
+  {code: 117, equipo: 'Houston', liga: 'Americana', division: 'oeste'},
+  {code: 133, equipo: 'Oakland', liga: 'Americana', division: 'oeste'},
+  {code: 108, equipo: 'Angels', liga: 'Americana', division: 'oeste'},
+  {code: 136, equipo: 'Seattle', liga: 'Americana', division: 'oeste'},
+  {code: 140, equipo: 'Texas', liga: 'Americana', division: 'oeste'}
+];
 
-  // ]
+teamsNacE = [
+  {code: 144, equipo: 'Atlanta', liga: 'Nacional', division: 'este'},
+  {code: 143, equipo: 'Philadelphia', liga: 'Nacional', division: 'este'},
+  {code: 120, equipo: 'Washington', liga: 'Nacional', division: 'este'},
+  {code: 121, equipo: 'Mets', liga: 'Nacional', division: 'este'},
+  {code: 146, equipo: 'Miami', liga: 'Nacional', division: 'este'}
+];
+
+teamsNacC = [
+  {code: 112, equipo: 'ChicagoC', liga: 'Nacional', division: 'central'},
+  {code: 158, equipo: 'Milwakee', liga: 'Nacional', division: 'central'},
+  {code: 138, equipo: 'SaintL', liga: 'Nacional', division: 'central'},
+  {code: 134, equipo: 'Pittsburgh', liga: 'Nacional', division: 'central'},
+  {code: 113, equipo: 'Cincinati', liga: 'Nacional', division: 'central'}
+];
+
+teamsNacO = [
+  {code: 119, equipo: 'Dodgers', liga: 'Nacional', division: 'oeste'},
+  {code: 115, equipo: 'Colorado', liga: 'Nacional', division: 'oeste'},
+  {code: 109, equipo: 'Arizona', liga: 'Nacional', division: 'oeste'},
+  {code: 137, equipo: 'SanFrancisco', liga: 'Nacional', division: 'oeste'},
+  {code: 135, equipo: 'SanDiego', liga: 'Nacional', division: 'oeste'}
+];
 
   isLoading: boolean;
 

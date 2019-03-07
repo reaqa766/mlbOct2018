@@ -79,6 +79,7 @@ import { PostListsComponent } from './components/posts/post-lists/post-lists.com
 import { InfogShowComponent } from './components/infographics/infog-show/infog-show.component';
 import { PlayerWeekComponent } from './components/player-week/player-week.component';
 import { PitcherrWeekComponent } from './components/pitcherr-week/pitcherr-week.component';
+import { PositionComponent } from './components/players/byposition/position/position.component';
 
 @NgModule({
   declarations: [
@@ -130,7 +131,8 @@ import { PitcherrWeekComponent } from './components/pitcherr-week/pitcherr-week.
     PostListsComponent,
     InfogShowComponent,
     PlayerWeekComponent,
-    PitcherrWeekComponent
+    PitcherrWeekComponent,
+    PositionComponent
 
   ],
   imports: [

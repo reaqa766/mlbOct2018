@@ -1,8 +1,8 @@
-<div class="container-team">
-  <h1 class="team-title">Bateadores por Equipo</h1>
-</div>
+<div class="container-byPosition">
+  <h1 class="byPosition-title">Jugadores por Equipo</h1>
+  <h3 class="byPosition-season-title">Spring Training</h3>
 
-<div class="title-position"> Busque su Equipo</div>
+</div>
 
 <!-- LOADER -->
 <div *ngIf="!allItems">
@@ -11,20 +11,167 @@
 </div>
 
 <div *ngIf="allItems">
-  <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Nombre del Equipo..." class="advancedSearchTextbox">
-  <div *ngIf="!allItems[0]" class="error_search d-flex justify-content-center">
-    <h1 class="error_search"><strong>'{{searchText}}'</strong> Su dato no existe, ingrese solo Equipos y Jugadores...</h1>
+
+<main>
+  <div class="team_logo">
+    <div *ngFor="let teamAmEs of teamsAmE; let i=index">
+      <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
+        <a routerLink="/playerinfo/{{team.code}}">
+
+          <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)='textChange(i)' [src]="'../../../assets/'  + teamAmEs.code + '.jpg'"
+            alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
+      </div>
+      </div>
+      </div>
+    </main>
   </div>
 
 
 
 
-  <ng-container *ngIf="!isLoading">
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container-position" *ngIf='buscando'>
+  <div class="espacio_superior"></div>
+  <div class="espacio_superior2"></div>
+  <button class="button boston" (click)="onSearchChange('catcher')">C</button>
+  <button class="button yankees"(click)="onSearchChange('pitcher')">P</button>
+  <button class="button toronto"(click)="onSearchChange('1b')">1B</button>
+  <button class="button baltimore"(click)="onSearchChange('ss')">SS</button>
+  <button class="button tampa"(click)="onSearchChange('2b')">2B</button>
+  <button class="button tercera_B"(click)="onSearchChange('3b')">3B</button>
+  <button class="button rf"(click)="onSearchChange('rf')">RF</button>
+  <button class="button cf"(click)="onSearchChange('cf')">CF</button>
+  <button class="button lf"(click)="onSearchChange('lf')">LF</button>
+  <div class="espacio_inferior"></div>
+</div> -->
+<div class="container-position-results" *ngIf='!buscando'>
+<ng-container *ngIf="!(pager.allItems === 0)">
+
+  <div class="container-actives_cards ">
+    <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
+      <div class="card card1 img_picture_box" style="width: 95%;" *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
+          <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/Jugadores Spring T 2019/Bateadores/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
+        <div class="card-body">
+          <h5 class="card-title">{{player.fullName}}</h5>
+        </div>
+        <!-- <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong> Equipo: </strong> {{player.stats[0].splits[0].team.name}}</li>
+          <li class="list-group-item"><strong>L. Nac.: </strong> {{player.birthCity}}</li>
+          <li class="list-group-item"><strong>F. Nac.: </strong> {{player.birthDate}} </li>
+          <li class="list-group-item"><strong> Edad: </strong> {{player.currentAge}}</li>
+          <li class="list-group-item"><strong>Mote: </strong> {{player.nickName}}</li>
+          <li class="list-group-item"><strong>F. Debut: </strong> {{player.mlbDebutDate}}</li>
+          <li class="list-group-item"><strong>Numero: </strong> {{player.primaryNumber}}</li>
+          <li class="list-group-item"><strong>Posición: </strong> {{player.primaryPosition.name}}</li>
+        </ul> -->
+      </div>
+    </ng-container>
+    <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
+      <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
+          <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top" src="../../../../assets/Jugadores Spring T 2019/Bateadores/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
+        <div class="card-body">
+          <h5 class="card-title">{{player.fullName}} </h5>
+        </div>
+        <!-- <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong> Equipo: </strong> {{player.stats[0].splits[0].team.name}}</li>
+          <li class="list-group-item"><strong>L. Nac.: </strong> {{player.birthCity}}</li>
+          <li class="list-group-item"><strong>F. Nac.: </strong> {{player.birthDate}}</li>
+          <li class="list-group-item"><strong> Edad: </strong> {{player.currentAge}}</li>
+          <li class="list-group-item"><strong>Mote: </strong> {{player.nickName}}</li>
+          <li class="list-group-item"><strong>F. Debut: </strong> {{player.mlbDebutDate}}</li>
+          <li class="list-group-item"><strong>Numero: </strong> {{player.primaryNumber}}</li>
+          <li class="list-group-item"><strong>Posición: </strong> {{player.primaryPosition.name}}</li>
+        </ul> -->
+        <!-- <div class="card-body">
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div> -->
+      </div>
+    </ng-container>
+  </div>
+  <div class="container paginator">
+    <div class="text-center">
+      <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
+        <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+          <a (click)="setPage(1)" class="page-link paginator_text">First</a>
+        </li>
+        <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+          <a (click)="setPage(pager.currentPage - 1)" class="page-link paginator_text">Previous</a>
+        </li>
+        <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
+          <a (click)="setPage(page)" class="page-link">{{page}}</a>
+        </li>
+        <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+          <a (click)="setPage(pager.currentPage + 1)" class="page-link paginator_text">Next</a>
+        </li>
+        <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+          <a (click)="setPage(pager.totalPages)" class="page-link paginator_text">Last</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</ng-container></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- VIEJO BYTEAM-->
+
+<!-- <div class="container-team">
+  <h1 class="team-title">Bateadores por Equipo</h1>
+</div>
+
+<div class="title-position"> Busque su Equipo</div> -->
+
+<!-- LOADER -->
+<!-- <div *ngIf="!allItems">
+  <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
+  <p class="spiner_load">CARGANDO</p>
+</div>
+
+<div *ngIf="allItems">
+  <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Nombre del Equipo..." class="advancedSearchTextbox">
+  <div *ngIf="!allItems[0]" class="error_search d-flex justify-content-center">
+    <h1 class="error_search"><strong>'{{searchText}}'</strong> Su dato no existe, ingrese solo Equipos y Jugadores...</h1>
+  </div> -->
+
+
+
+
+  <!-- <ng-container *ngIf="!isLoading">
   <div class="player_stats">
     <table class="table table-hover text-center">
       <thead class="table-header">
         <tr>
-          <!-- <th style="width: 5%;" scope="col">Id</th> -->
           <th class="th1" style="width: 15%;" scope="col">Nombre</th>
           <th class="th2" style="width: 15%;" scope="col">Equipo</th>
           <th class="th3" style="width: 5%;" scope="col">Vb</th>
@@ -37,16 +184,15 @@
           <th class="th10" style="width: 5%;" scope="col">Hr</th>
           <th class="th11" style="width: 5%;" scope="col">Br</th>
         </tr>
-      </thead>
+      </thead> -->
       <!-- </table> -->
 
-      <ng-container *ngIf="!(pager.allItems === 0)">
+      <!-- <ng-container *ngIf="!(pager.allItems === 0)"> -->
 
         <!-- <table class="table table-hover " > -->
-        <tbody class="table-header2">
+        <!-- <tbody class="table-header2">
           <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
             <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
-              <!-- <td class="th" style="width: 5%;">{{i +1}}</td> -->
               <a routerLink="/playerinfo/{{player.id}}" ><td class="link_player th1" style="width: 15%;">{{player.fullName}}</td></a>
               <td class="th2" style="width: 15%;">{{player.stats[0].splits[0].team.name}}</td>
               <td class="th3" style="width: 5%;">{{player.stats[0].splits[0].stat.atBats}}</td>
@@ -60,10 +206,9 @@
               <td class="th11" style="width: 5%;">{{player.stats[0].splits[0].stat.stolenBases}}</td>
             </tr>
           </ng-container>
-
-          <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
+ -->
+          <!-- <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
             <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
-              <!-- <td class="th" style="width: 5%;">{{i +1}}</td> -->
               <a routerLink="/playerinfo/{{player.id}}" ><td class="link_player th1" style="width: 15%;">{{player.fullName}}</td></a>
               <td class="th2" style="width: 15%;">{{player.stats[0].splits[0].team.name}}</td>
               <td class="th3" style="width: 5%;">{{player.stats[0].splits[0].stat.atBats}}</td>
@@ -76,25 +221,25 @@
               <td class="th10" style="width: 5%;">{{player.stats[0].splits[0].stat.homeRuns}}</td>
               <td class="th11" style="width: 5%;">{{player.stats[0].splits[0].stat.stolenBases}}</td>
             </tr>
-          </ng-container>
+          </ng-container> -->
           <!-- <span *ngIf="!allItems[0]" class="d-flex justify-content-center">
     <h1> Error: '{{ busqueda.value }}' no existe</h1>
   </span> -->
-        </tbody>
+        <!-- </tbody>
       </ng-container>
 
     </table>
-  </div>
+  </div> -->
     <!-- PAGINATION-->
 
-    <div>
+    <!-- <div>
       <div class="container paginator">
-        <div class="text-center">
+        <div class="text-center"> -->
           <!-- items being paged -->
           <!-- <div *ngFor="let item of pagedItems">{{item.name}}</div> -->
 
           <!-- pager -->
-          <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
+          <!-- <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
             <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
               <a (click)="setPage(1)" class="page-link paginator_text">First</a>
             </li>
@@ -116,4 +261,4 @@
       <hr />
     </div>
   </ng-container>
-</div>
+</div> -->
