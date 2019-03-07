@@ -1,6 +1,9 @@
 <div class="container-byPosition">
-  <h1 class="byPosition-title">Jugadores por Posición</h1>
+  <h1 class="byPosition-title"> {{ positionTitle }} </h1>
   <h3 class="byPosition-season-title">Spring Training</h3>
+  <!-- <h3 class="byPosition-season-title" *ngIf="position">{{position}}</h3> -->
+
+
 
 </div>
 
@@ -11,23 +14,23 @@
 </div>
 
 
-<div class="container-position" *ngIf='buscando'>
+<div class="container-position" *ngIf='!position'>
     <!-- <img class="bbalfield" src="../../../../assets/bbalF.png" alt=""> -->
     <!-- <div class="button catcher"> <button >C</button> </div> -->
     <div class="espacio_superior"></div>
     <div class="espacio_superior2"></div>
-    <button class="button catcher" (click)="onSearchChange('catcher')">C</button>
-    <button class="button pitcher"(click)="onSearchChange('pitcher')">P</button>
-    <button class="button prim_B"(click)="onSearchChange('1b')">1B</button>
-    <button class="button ss"(click)="onSearchChange('ss')">SS</button>
-    <button class="button segunda_B"(click)="onSearchChange('2b')">2B</button>
-    <button class="button tercera_B"(click)="onSearchChange('3b')">3B</button>
-    <button class="button rf"(click)="onSearchChange('rf')">RF</button>
-    <button class="button cf"(click)="onSearchChange('cf')">CF</button>
-    <button class="button lf"(click)="onSearchChange('lf')">LF</button>
+    <button class="button1 catcher" (click)="onSearchChange('catcher')">C</button>
+    <!-- <button class="button1 pitcher"(click)="onSearchChange('pitcher')">P</button> -->
+    <button class="button1 prim_B"(click)="onSearchChange('1b')">1B</button>
+    <button class="button1 ss"(click)="onSearchChange('ss')">SS</button>
+    <button class="button1 segunda_B"(click)="onSearchChange('2b')">2B</button>
+    <button class="button1 tercera_B"(click)="onSearchChange('3b')">3B</button>
+    <button class="button1 rf"(click)="onSearchChange('rf')">RF</button>
+    <button class="button1 cf"(click)="onSearchChange('cf')">CF</button>
+    <button class="button1 lf"(click)="onSearchChange('lf')">LF</button>
     <div class="espacio_inferior"></div>
 </div>
-<div class="container-position-results" *ngIf='!buscando'>
+<div class="container-position-results" *ngIf="position">
   <ng-container *ngIf="!(pager.allItems === 0)">
 
     <div class="container-actives_cards ">
@@ -36,6 +39,7 @@
             <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/Jugadores Spring T 2019/Bateadores/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
           <div class="card-body">
             <h5 class="card-title">{{player.fullName}}</h5>
+
           </div>
           <!-- <ul class="list-group list-group-flush">
             <li class="list-group-item"><strong> Equipo: </strong> {{player.stats[0].splits[0].team.name}}</li>
@@ -53,7 +57,6 @@
         <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
             <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top" src="../../../../assets/Jugadores Spring T 2019/Bateadores/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
           <div class="card-body">
-            <h5 class="card-title">{{player.fullName}} </h5>
           </div>
           <!-- <ul class="list-group list-group-flush">
             <li class="list-group-item"><strong> Equipo: </strong> {{player.stats[0].splits[0].team.name}}</li>
@@ -93,7 +96,13 @@
         </ul>
       </div>
     </div>
+    <div class="boton">
+        <a (click)="back_one_page()"><button class="button btn-primary">Volver a la página anterior</button></a>
+        <div class="bottom_space"></div>
+      </div>
+
   </ng-container></div>
+
 
 
 

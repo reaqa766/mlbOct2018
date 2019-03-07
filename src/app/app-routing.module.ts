@@ -72,7 +72,7 @@ const routes: Routes = [
   { path: 'position2019',
   component: Byposition2019Component},
   { path: 'team',
-  component: ByteamComponent},
+  component: ByteamComponent, pathMatch: 'full'},
   { path: 'team2019',
   component: Byteam2019Component},
   { path: 'daily',

@@ -30,7 +30,7 @@
     margin: 5rem 25%;
 
 } */
-.button {
+.button1 {
 
     background-color: rgb(255, 255, 255);
     border-radius: 50%;
@@ -48,6 +48,9 @@
     width: 3rem;
     height: 3rem;
 
+  }
+  .boton {
+    margin: 0 45%;
   }
 
   .container-position{

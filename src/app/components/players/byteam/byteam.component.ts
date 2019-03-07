@@ -12,12 +12,13 @@ import { PagerService } from '../../../../services/index';
   styleUrls: ['./byteam.component.css']
 })
 export class ByteamComponent implements OnInit {
+  buscando = true;
   public players = [];
   groups: any;
   selectedGroup: any;
   elarray: any;
   datesN = 10;
-  searchText: string;
+  // searchText: string;
   playerAuxList = [];
   counter: number;
   n: number;
@@ -36,64 +37,65 @@ export class ByteamComponent implements OnInit {
 
   // text_11 = true;
   // text_22 = true;s
-  answerDef = ' ' ;
-  answer: Array<string> =  [];
+  answerDef = ' ';
+  answer: Array<string> = [];
   // answer = ' ';
   respuesta_def: Array<boolean> = [];
   respuesta_dada: Array<boolean> = [];
   form_container = true;
-  opcion = '0' ;
-  selection = ' ' ;
+  opcion = '0';
+  selection = ' ';
   teamsAmE = [
-  {code: 147, equipo: 'Yankees', liga: 'Americana', division: 'este'},
-  {code: 111, equipo: 'Boston', liga: 'Americana', division: 'este'},
-  {code: 139, equipo: 'Tampa', liga: 'Americana', division: 'este'},
-  {code: 110, equipo: 'Baltimore', liga: 'Americana', division: 'este'},
-  {code: 141, equipo: 'Toronto', liga: 'Americana', division: 'este'}
-];
+    { code: 147, name: 'Yankees', liga: 'Americana', division: 'este' },
+    { code: 111, name: 'Boston', liga: 'Americana', division: 'este' },
+    { code: 139, name: 'Tampa', liga: 'Americana', division: 'este' },
+    { code: 110, name: 'Baltimore', liga: 'Americana', division: 'este' },
+    { code: 141, name: 'Toronto', liga: 'Americana', division: 'este' }
+  ];
 
-teamsAmC = [
+  teamsAmC = [
 
-  {code: 116, equipo: 'Detroit', liga: 'Americana', division: 'central'},
-  {code: 114, equipo: 'Cleveland', liga: 'Americana', division: 'central'},
-  {code: 142, equipo: 'Minnesota', liga: 'Americana', division: 'central'},
-  {code: 118, equipo: 'Kansas', liga: 'Americana', division: 'central'},
-  {code: 145, equipo: 'ChicagoW', liga: 'Americana', division: 'central'}
-];
+    { code: 116, name: 'Detroit', liga: 'Americana', division: 'central' },
+    { code: 114, name: 'Indians', liga: 'Americana', division: 'central' },
+    { code: 142, name: 'Minnesota', liga: 'Americana', division: 'central' },
+    { code: 118, name: 'Kansas', liga: 'Americana', division: 'central' },
+    { code: 145, name: 'White Sox', liga: 'Americana', division: 'central' }
+  ];
 
-teamsAmO = [
-  {code: 117, equipo: 'Houston', liga: 'Americana', division: 'oeste'},
-  {code: 133, equipo: 'Oakland', liga: 'Americana', division: 'oeste'},
-  {code: 108, equipo: 'Angels', liga: 'Americana', division: 'oeste'},
-  {code: 136, equipo: 'Seattle', liga: 'Americana', division: 'oeste'},
-  {code: 140, equipo: 'Texas', liga: 'Americana', division: 'oeste'}
-];
+  teamsAmO = [
+    { code: 117, name: 'Astros', liga: 'Americana', division: 'oeste' },
+    { code: 133, name: 'Oakland', liga: 'Americana', division: 'oeste' },
+    { code: 108, name: 'Angels', liga: 'Americana', division: 'oeste' },
+    { code: 136, name: 'Seattle', liga: 'Americana', division: 'oeste' },
+    { code: 140, name: 'Texas', liga: 'Americana', division: 'oeste' }
+  ];
 
-teamsNacE = [
-  {code: 144, equipo: 'Atlanta', liga: 'Nacional', division: 'este'},
-  {code: 143, equipo: 'Philadelphia', liga: 'Nacional', division: 'este'},
-  {code: 120, equipo: 'Washington', liga: 'Nacional', division: 'este'},
-  {code: 121, equipo: 'Mets', liga: 'Nacional', division: 'este'},
-  {code: 146, equipo: 'Miami', liga: 'Nacional', division: 'este'}
-];
+  teamsNacE = [
+    { code: 144, name: 'Atlanta', liga: 'Nacional', division: 'este' },
+    { code: 143, name: 'Philadelphia', liga: 'Nacional', division: 'este' },
+    { code: 120, name: 'Washington', liga: 'Nacional', division: 'este' },
+    { code: 121, name: 'Mets', liga: 'Nacional', division: 'este' },
+    { code: 146, name: 'Miami', liga: 'Nacional', division: 'este' }
+  ];
 
-teamsNacC = [
-  {code: 112, equipo: 'ChicagoC', liga: 'Nacional', division: 'central'},
-  {code: 158, equipo: 'Milwakee', liga: 'Nacional', division: 'central'},
-  {code: 138, equipo: 'SaintL', liga: 'Nacional', division: 'central'},
-  {code: 134, equipo: 'Pittsburgh', liga: 'Nacional', division: 'central'},
-  {code: 113, equipo: 'Cincinati', liga: 'Nacional', division: 'central'}
-];
+  teamsNacC = [
+    { code: 112, name: 'Cubs', liga: 'Nacional', division: 'central' },
+    { code: 158, name: 'Milwaukee', liga: 'Nacional', division: 'central' },
+    { code: 138, name: 'Saint', liga: 'Nacional', division: 'central' },
+    { code: 134, name: 'Pittsburgh', liga: 'Nacional', division: 'central' },
+    { code: 113, name: 'Cincinati', liga: 'Nacional', division: 'central' }
+  ];
 
-teamsNacO = [
-  {code: 119, equipo: 'Dodgers', liga: 'Nacional', division: 'oeste'},
-  {code: 115, equipo: 'Colorado', liga: 'Nacional', division: 'oeste'},
-  {code: 109, equipo: 'Arizona', liga: 'Nacional', division: 'oeste'},
-  {code: 137, equipo: 'SanFrancisco', liga: 'Nacional', division: 'oeste'},
-  {code: 135, equipo: 'SanDiego', liga: 'Nacional', division: 'oeste'}
-];
+  teamsNacO = [
+    { code: 119, name: 'Dodgers', liga: 'Nacional', division: 'oeste' },
+    { code: 115, name: 'Colorado', liga: 'Nacional', division: 'oeste' },
+    { code: 109, name: 'Arizona', liga: 'Nacional', division: 'oeste' },
+    { code: 137, name: 'San Francisco', liga: 'Nacional', division: 'oeste' },
+    { code: 135, name: 'San Diego', liga: 'Nacional', division: 'oeste' }
+  ];
 
   isLoading: boolean;
+  position: any;
 
 
 
@@ -105,8 +107,6 @@ teamsNacO = [
 
 
   ngOnInit() {
-
-    console.log('AllItems', this.allItems );
 
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
@@ -125,14 +125,20 @@ teamsNacO = [
         this.players.push(res);
 
         if ((InfoObsPlayer.length - 1) === index) {
+          // debugger
           this.players = this.players.map(player => {
             const newPlayer: Players = {};
             Object.assign(newPlayer, player.people[0]);
             return newPlayer;
-          })
+          });
+          // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
+          this.players = this.players.filter(player =>
+            player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0)
+            // se ordenan por nombre
             .sort((a, b) => {
-              a = a.stats[0].splits[0].team.name;
-              b = b.stats[0].splits[0].team.name;
+              a = a.fullName;
+              // debugger
+              b = b.fullName;
               if (a > b) {
                 return 1;
               } else if (a < b) {
@@ -141,8 +147,8 @@ teamsNacO = [
                 return 0;
               }
             });
-            this.allItems = this.players;
-            this.setPage(1);
+          this.allItems = this.players;
+          this.setPage(1);
           this.isLoading = false;
           // console.log(JSON.stringify(this.players[0]));
         }
@@ -153,25 +159,31 @@ teamsNacO = [
   }
 
 
-  onSearchChange() {
-    if (this.searchText) {
+  onSearchChange(team) {
+    this.buscando = false;
+    if (team) {
       this.allItems = this.players.filter(player =>
-        player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
-        player.fullName.toLowerCase().includes(this.searchText));
-        this.setPage(this.pager.currentPage);
-      } else {
-          this.allItems = this.players;
-          this.setPage(this.pager.currentPage);
-        }
-        return this.allItems;
-      }
+        player.stats[0].splits[0].team.name.toLowerCase().includes(team.toLowerCase()) ||
+        player.fullName.toLowerCase().includes(team.toLowerCase()));
+      this.setPage(this.pager.currentPage);
+    } else {
+      this.allItems = this.players;
+      this.setPage(this.pager.currentPage);
+    }
+    return this.allItems;
+  }
 
-      setPage(page: number) {
-        // get pager object from service
-        this.pager = this.pagerService.getPager(this.allItems.length, page);
+  setPage(page: number) {
+    // get pager object from service
+    this.pager = this.pagerService.getPager(this.allItems.length, page);
 
-        // get current page of items
-        this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
-      }
+    // get current page of items
+    this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
+  }
+
+  back_one_page() {
+    this.buscando = true;
+  }
+
 }
 

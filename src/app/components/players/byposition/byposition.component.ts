@@ -63,6 +63,7 @@ export class BypositionComponent implements OnInit {
   // ];
 
   isLoading: boolean;
+  position: any;
 
   constructor(private playerService: PlayersService, private pagerService: PagerService) { }
 
@@ -112,8 +113,8 @@ export class BypositionComponent implements OnInit {
     }
 
   }
-  onSearchChange(position) {
-    this.buscando = false;
+  onSearchChange(position: string) {
+    this.position = position.toUpperCase();
     if (position) {
       this.allItems = this.players.filter(player =>
         // player.stats[0].splits[0].team.name.toLowerCase().includes(position) ||
@@ -134,6 +135,14 @@ export class BypositionComponent implements OnInit {
 
     // get current page of items
     this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
+  }
+
+  back_one_page() {
+    this.position = null;
+  }
+
+  get positionTitle {
+    return this.position ? ` ${this.position}` : 'Jugadores por Posición';
   }
 
 
