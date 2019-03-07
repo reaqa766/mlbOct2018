@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PlayersService } from '../../../../services/players.service';
+import { AllplayersService } from '../../../services/allplayers.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../../interfaces/players';
 
@@ -65,7 +65,7 @@ export class BypositionComponent implements OnInit {
   isLoading: boolean;
   position: any;
 
-  constructor(private playerService: PlayersService, private pagerService: PagerService) { }
+  constructor(private playerService: AllplayersService, private pagerService: PagerService) { }
 
   ngOnInit() {
     this.isLoading = true;
@@ -141,7 +141,7 @@ export class BypositionComponent implements OnInit {
     this.position = null;
   }
 
-  get positionTitle {
+  get positionTitle() {
     return this.position ? ` ${this.position}` : 'Jugadores por Posición';
   }
 

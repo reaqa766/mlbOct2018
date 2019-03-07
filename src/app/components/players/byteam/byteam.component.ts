@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PlayersService } from '../../../../services/players.service';
+import { AllplayersService } from '../../../services/allplayers.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../../interfaces/players';
 
@@ -56,7 +56,7 @@ export class ByteamComponent implements OnInit {
   teamsAmC = [
 
     { code: 116, name: 'Detroit', liga: 'Americana', division: 'central' },
-    { code: 114, name: 'Indians', liga: 'Americana', division: 'central' },
+    { code: 114, name: 'Cleveland', liga: 'Americana', division: 'central' },
     { code: 142, name: 'Minnesota', liga: 'Americana', division: 'central' },
     { code: 118, name: 'Kansas', liga: 'Americana', division: 'central' },
     { code: 145, name: 'White Sox', liga: 'Americana', division: 'central' }
@@ -81,9 +81,9 @@ export class ByteamComponent implements OnInit {
   teamsNacC = [
     { code: 112, name: 'Cubs', liga: 'Nacional', division: 'central' },
     { code: 158, name: 'Milwaukee', liga: 'Nacional', division: 'central' },
-    { code: 138, name: 'Saint', liga: 'Nacional', division: 'central' },
+    { code: 138, name: 'Louis', liga: 'Nacional', division: 'central' },
     { code: 134, name: 'Pittsburgh', liga: 'Nacional', division: 'central' },
-    { code: 113, name: 'Cincinati', liga: 'Nacional', division: 'central' }
+    { code: 113, name: 'Cincinnati', liga: 'Nacional', division: 'central' }
   ];
 
   teamsNacO = [
@@ -103,7 +103,7 @@ export class ByteamComponent implements OnInit {
   // public searchText : string;
   // public playerData : any;
 
-  constructor(private playerService: PlayersService, private pagerService: PagerService) { }
+  constructor(private playerService: AllplayersService, private pagerService: PagerService) { }
 
 
   ngOnInit() {
