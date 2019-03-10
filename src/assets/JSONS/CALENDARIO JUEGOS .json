@@ -1,0 +1,582 @@
+{
+    "copyright" : "Copyright 2019 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt",
+    "totalItems" : 8,
+    "totalEvents" : 0,
+    "totalGames" : 8,
+    "totalGamesInProgress" : 0,
+    "dates" : [ {
+      "date" : "2018-09-27",
+      "totalItems" : 8,
+      "totalEvents" : 0,
+      "totalGames" : 8,
+      "totalGamesInProgress" : 0,
+      "games" : [ {
+        "gamePk" : 531789,
+        "link" : "/api/v1/game/531789/feed/live",
+        "gameType" : "R",
+        "season" : "2018",
+        "gameDate" : "2018-09-27T17:10:00Z",
+        "status" : {
+          "abstractGameState" : "Final",
+          "codedGameState" : "F",
+          "detailedState" : "Final",
+          "statusCode" : "F",
+          "abstractGameCode" : "F"
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 98,
+              "losses" : 61,
+              "pct" : ".616"
+            },
+            "score" : 12,
+            "team" : {
+              "id" : 147,
+              "name" : "New York Yankees",
+              "link" : "/api/v1/teams/147"
+            },
+            "isWinner" : true,
+            "splitSquad" : false,
+            "seriesNumber" : 54
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 88,
+              "losses" : 71,
+              "pct" : ".553"
+            },
+            "score" : 1,
+            "team" : {
+              "id" : 139,
+              "name" : "Tampa Bay Rays",
+              "link" : "/api/v1/teams/139"
+            },
+            "isWinner" : false,
+            "splitSquad" : false,
+            "seriesNumber" : 51
+          }
+        },
+        "venue" : {
+          "id" : 12,
+          "name" : "Tropicana Field",
+          "link" : "/api/v1/venues/12"
+        },
+        "content" : {
+          "link" : "/api/v1/game/531789/content"
+        },
+        "isTie" : false,
+        "gameNumber" : 1,
+        "publicFacing" : true,
+        "doubleHeader" : "N",
+        "gamedayType" : "P",
+        "tiebreaker" : "N",
+        "calendarEventID" : "14-531789-2018-09-27",
+        "seasonDisplay" : "2018",
+        "dayNight" : "day",
+        "scheduledInnings" : 9,
+        "gamesInSeries" : 4,
+        "seriesGameNumber" : 4,
+        "seriesDescription" : "Regular Season",
+        "recordSource" : "S",
+        "ifNecessary" : "N",
+        "ifNecessaryDescription" : "Normal Game"
+      }, {
+        "gamePk" : 531790,
+        "link" : "/api/v1/game/531790/feed/live",
+        "gameType" : "R",
+        "season" : "2018",
+        "gameDate" : "2018-09-27T19:10:00Z",
+        "status" : {
+          "abstractGameState" : "Final",
+          "codedGameState" : "F",
+          "detailedState" : "Final",
+          "statusCode" : "F",
+          "abstractGameCode" : "F"
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 78,
+              "losses" : 81,
+              "pct" : ".491"
+            },
+            "score" : 3,
+            "team" : {
+              "id" : 143,
+              "name" : "Philadelphia Phillies",
+              "link" : "/api/v1/teams/143"
+            },
+            "isWinner" : false,
+            "splitSquad" : false,
+            "seriesNumber" : 52
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 89,
+              "losses" : 70,
+              "pct" : ".560"
+            },
+            "score" : 5,
+            "team" : {
+              "id" : 115,
+              "name" : "Colorado Rockies",
+              "link" : "/api/v1/teams/115"
+            },
+            "isWinner" : true,
+            "splitSquad" : false,
+            "seriesNumber" : 51
+          }
+        },
+        "venue" : {
+          "id" : 19,
+          "name" : "Coors Field",
+          "link" : "/api/v1/venues/19"
+        },
+        "content" : {
+          "link" : "/api/v1/game/531790/content"
+        },
+        "isTie" : false,
+        "gameNumber" : 1,
+        "publicFacing" : true,
+        "doubleHeader" : "N",
+        "gamedayType" : "P",
+        "tiebreaker" : "N",
+        "calendarEventID" : "14-531790-2018-09-27",
+        "seasonDisplay" : "2018",
+        "dayNight" : "day",
+        "scheduledInnings" : 9,
+        "gamesInSeries" : 4,
+        "seriesGameNumber" : 4,
+        "seriesDescription" : "Regular Season",
+        "recordSource" : "S",
+        "ifNecessary" : "N",
+        "ifNecessaryDescription" : "Normal Game"
+      }, {
+        "gamePk" : 531788,
+        "link" : "/api/v1/game/531788/feed/live",
+        "gameType" : "R",
+        "season" : "2018",
+        "gameDate" : "2018-09-27T23:05:00Z",
+        "rescheduleDate" : "2018-09-29T03:33:00Z",
+        "status" : {
+          "abstractGameState" : "Final",
+          "codedGameState" : "D",
+          "detailedState" : "Postponed",
+          "statusCode" : "DR",
+          "reason" : "Rain",
+          "abstractGameCode" : "F"
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 100,
+              "losses" : 58,
+              "pct" : ".633"
+            },
+            "team" : {
+              "id" : 117,
+              "name" : "Houston Astros",
+              "link" : "/api/v1/teams/117"
+            },
+            "splitSquad" : false,
+            "seriesNumber" : 52
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 46,
+              "losses" : 112,
+              "pct" : ".291"
+            },
+            "team" : {
+              "id" : 110,
+              "name" : "Baltimore Orioles",
+              "link" : "/api/v1/teams/110"
+            },
+            "splitSquad" : false,
+            "seriesNumber" : 53
+          }
+        },
+        "venue" : {
+          "id" : 2,
+          "name" : "Oriole Park at Camden Yards",
+          "link" : "/api/v1/venues/2"
+        },
+        "content" : {
+          "link" : "/api/v1/game/531788/content"
+        },
+        "gameNumber" : 1,
+        "publicFacing" : true,
+        "doubleHeader" : "N",
+        "gamedayType" : "P",
+        "tiebreaker" : "N",
+        "calendarEventID" : "14-531788-2018-09-27",
+        "seasonDisplay" : "2018",
+        "dayNight" : "night",
+        "description" : "Makeup on 9/29",
+        "scheduledInnings" : 9,
+        "gamesInSeries" : 4,
+        "seriesGameNumber" : 1,
+        "seriesDescription" : "Regular Season",
+        "recordSource" : "H",
+        "ifNecessary" : "N",
+        "ifNecessaryDescription" : "Normal Game"
+      }, {
+        "gamePk" : 531785,
+        "link" : "/api/v1/game/531785/feed/live",
+        "gameType" : "R",
+        "season" : "2018",
+        "gameDate" : "2018-09-27T23:10:00Z",
+        "status" : {
+          "abstractGameState" : "Final",
+          "codedGameState" : "F",
+          "detailedState" : "Final",
+          "statusCode" : "F",
+          "abstractGameCode" : "F"
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 89,
+              "losses" : 70,
+              "pct" : ".560"
+            },
+            "score" : 1,
+            "team" : {
+              "id" : 144,
+              "name" : "Atlanta Braves",
+              "link" : "/api/v1/teams/144"
+            },
+            "isWinner" : false,
+            "splitSquad" : false,
+            "seriesNumber" : 52
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 75,
+              "losses" : 84,
+              "pct" : ".472"
+            },
+            "score" : 4,
+            "team" : {
+              "id" : 121,
+              "name" : "New York Mets",
+              "link" : "/api/v1/teams/121"
+            },
+            "isWinner" : true,
+            "splitSquad" : false,
+            "seriesNumber" : 52
+          }
+        },
+        "venue" : {
+          "id" : 3289,
+          "name" : "Citi Field",
+          "link" : "/api/v1/venues/3289"
+        },
+        "content" : {
+          "link" : "/api/v1/game/531785/content"
+        },
+        "isTie" : false,
+        "gameNumber" : 1,
+        "publicFacing" : true,
+        "doubleHeader" : "N",
+        "gamedayType" : "P",
+        "tiebreaker" : "N",
+        "calendarEventID" : "14-531785-2018-09-27",
+        "seasonDisplay" : "2018",
+        "dayNight" : "night",
+        "scheduledInnings" : 9,
+        "gamesInSeries" : 3,
+        "seriesGameNumber" : 3,
+        "seriesDescription" : "Regular Season",
+        "recordSource" : "S",
+        "ifNecessary" : "N",
+        "ifNecessaryDescription" : "Normal Game"
+      }, {
+        "gamePk" : 531791,
+        "link" : "/api/v1/game/531791/feed/live",
+        "gameType" : "R",
+        "season" : "2018",
+        "gameDate" : "2018-09-28T00:05:00Z",
+        "status" : {
+          "abstractGameState" : "Final",
+          "codedGameState" : "F",
+          "detailedState" : "Final",
+          "statusCode" : "F",
+          "abstractGameCode" : "F"
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 80,
+              "losses" : 78,
+              "pct" : ".506"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 134,
+              "name" : "Pittsburgh Pirates",
+              "link" : "/api/v1/teams/134"
+            },
+            "isWinner" : false,
+            "splitSquad" : false,
+            "seriesNumber" : 51
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 93,
+              "losses" : 66,
+              "pct" : ".585"
+            },
+            "score" : 3,
+            "team" : {
+              "id" : 112,
+              "name" : "Chicago Cubs",
+              "link" : "/api/v1/teams/112"
+            },
+            "isWinner" : true,
+            "splitSquad" : false,
+            "seriesNumber" : 53
+          }
+        },
+        "venue" : {
+          "id" : 17,
+          "name" : "Wrigley Field",
+          "link" : "/api/v1/venues/17"
+        },
+        "content" : {
+          "link" : "/api/v1/game/531791/content"
+        },
+        "isTie" : false,
+        "gameNumber" : 1,
+        "publicFacing" : true,
+        "doubleHeader" : "N",
+        "gamedayType" : "P",
+        "tiebreaker" : "N",
+        "calendarEventID" : "14-531791-2018-09-27",
+        "seasonDisplay" : "2018",
+        "dayNight" : "night",
+        "scheduledInnings" : 9,
+        "gamesInSeries" : 4,
+        "seriesGameNumber" : 4,
+        "seriesDescription" : "Regular Season",
+        "recordSource" : "S",
+        "ifNecessary" : "N",
+        "ifNecessaryDescription" : "Normal Game"
+      }, {
+        "gamePk" : 531787,
+        "link" : "/api/v1/game/531787/feed/live",
+        "gameType" : "R",
+        "season" : "2018",
+        "gameDate" : "2018-09-28T00:10:00Z",
+        "status" : {
+          "abstractGameState" : "Final",
+          "codedGameState" : "F",
+          "detailedState" : "Final",
+          "statusCode" : "F",
+          "abstractGameCode" : "F"
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 64,
+              "losses" : 95,
+              "pct" : ".403"
+            },
+            "score" : 3,
+            "team" : {
+              "id" : 116,
+              "name" : "Detroit Tigers",
+              "link" : "/api/v1/teams/116"
+            },
+            "isWinner" : false,
+            "splitSquad" : false,
+            "seriesNumber" : 52
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 74,
+              "losses" : 84,
+              "pct" : ".468"
+            },
+            "score" : 9,
+            "team" : {
+              "id" : 142,
+              "name" : "Minnesota Twins",
+              "link" : "/api/v1/teams/142"
+            },
+            "isWinner" : true,
+            "splitSquad" : false,
+            "seriesNumber" : 52
+          }
+        },
+        "venue" : {
+          "id" : 3312,
+          "name" : "Target Field",
+          "link" : "/api/v1/venues/3312"
+        },
+        "content" : {
+          "link" : "/api/v1/game/531787/content"
+        },
+        "isTie" : false,
+        "gameNumber" : 1,
+        "publicFacing" : true,
+        "doubleHeader" : "N",
+        "gamedayType" : "P",
+        "tiebreaker" : "N",
+        "calendarEventID" : "14-531787-2018-09-27",
+        "seasonDisplay" : "2018",
+        "dayNight" : "night",
+        "scheduledInnings" : 9,
+        "gamesInSeries" : 3,
+        "seriesGameNumber" : 3,
+        "seriesDescription" : "Regular Season",
+        "recordSource" : "S",
+        "ifNecessary" : "N",
+        "ifNecessaryDescription" : "Normal Game"
+      }, {
+        "gamePk" : 531786,
+        "link" : "/api/v1/game/531786/feed/live",
+        "gameType" : "R",
+        "season" : "2018",
+        "gameDate" : "2018-09-28T00:15:00Z",
+        "status" : {
+          "abstractGameState" : "Final",
+          "codedGameState" : "F",
+          "detailedState" : "Final",
+          "statusCode" : "F",
+          "abstractGameCode" : "F"
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 89,
+              "losses" : 70,
+              "pct" : ".560"
+            },
+            "score" : 1,
+            "team" : {
+              "id" : 114,
+              "name" : "Cleveland Indians",
+              "link" : "/api/v1/teams/114"
+            },
+            "isWinner" : false,
+            "splitSquad" : false,
+            "seriesNumber" : 53
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 57,
+              "losses" : 102,
+              "pct" : ".358"
+            },
+            "score" : 2,
+            "team" : {
+              "id" : 118,
+              "name" : "Kansas City Royals",
+              "link" : "/api/v1/teams/118"
+            },
+            "isWinner" : true,
+            "splitSquad" : false,
+            "seriesNumber" : 53
+          }
+        },
+        "venue" : {
+          "id" : 7,
+          "name" : "Kauffman Stadium",
+          "link" : "/api/v1/venues/7"
+        },
+        "content" : {
+          "link" : "/api/v1/game/531786/content"
+        },
+        "isTie" : false,
+        "gameNumber" : 1,
+        "publicFacing" : true,
+        "doubleHeader" : "N",
+        "gamedayType" : "P",
+        "tiebreaker" : "N",
+        "calendarEventID" : "14-531786-2018-09-27",
+        "seasonDisplay" : "2018",
+        "dayNight" : "night",
+        "scheduledInnings" : 9,
+        "gamesInSeries" : 4,
+        "seriesGameNumber" : 1,
+        "seriesDescription" : "Regular Season",
+        "recordSource" : "S",
+        "ifNecessary" : "N",
+        "ifNecessaryDescription" : "Normal Game"
+      }, {
+        "gamePk" : 531792,
+        "link" : "/api/v1/game/531792/feed/live",
+        "gameType" : "R",
+        "season" : "2018",
+        "gameDate" : "2018-09-28T02:10:00Z",
+        "status" : {
+          "abstractGameState" : "Final",
+          "codedGameState" : "F",
+          "detailedState" : "Final",
+          "statusCode" : "F",
+          "abstractGameCode" : "F"
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 67,
+              "losses" : 92,
+              "pct" : ".421"
+            },
+            "score" : 2,
+            "team" : {
+              "id" : 140,
+              "name" : "Texas Rangers",
+              "link" : "/api/v1/teams/140"
+            },
+            "isWinner" : true,
+            "splitSquad" : false,
+            "seriesNumber" : 52
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 86,
+              "losses" : 73,
+              "pct" : ".541"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 136,
+              "name" : "Seattle Mariners",
+              "link" : "/api/v1/teams/136"
+            },
+            "isWinner" : false,
+            "splitSquad" : false,
+            "seriesNumber" : 53
+          }
+        },
+        "venue" : {
+          "id" : 680,
+          "name" : "Safeco Field",
+          "link" : "/api/v1/venues/680"
+        },
+        "content" : {
+          "link" : "/api/v1/game/531792/content"
+        },
+        "isTie" : false,
+        "gameNumber" : 1,
+        "publicFacing" : true,
+        "doubleHeader" : "N",
+        "gamedayType" : "P",
+        "tiebreaker" : "N",
+        "calendarEventID" : "14-531792-2018-09-27",
+        "seasonDisplay" : "2018",
+        "dayNight" : "night",
+        "scheduledInnings" : 9,
+        "gamesInSeries" : 4,
+        "seriesGameNumber" : 1,
+        "seriesDescription" : "Regular Season",
+        "recordSource" : "S",
+        "ifNecessary" : "N",
+        "ifNecessaryDescription" : "Normal Game"
+      } ],
+      "events" : [ ]
+    } ]
+  }

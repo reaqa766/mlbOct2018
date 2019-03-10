@@ -1,0 +1,33 @@
+{
+    "copyright" : "Copyright 2019 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt",
+    "leagues" : [ {
+      "id" : 104,
+      "name" : "National League",
+      "link" : "/api/v1/league/104",
+      "abbreviation" : "NL",
+      "nameShort" : "National",
+      "seasonState" : "spring training",
+      "hasWildCard" : true,
+      "hasSplitSeason" : false,
+      "numGames" : 162,
+      "hasPlayoffPoints" : false,
+      "numTeams" : 15,
+      "numWildcardTeams" : 2,
+      "seasonDateInfo" : {
+        "regularSeasonStartDate" : "2019-03-28",
+        "regularSeasonEndDate" : "2019-09-29",
+        "preSeasonStartDate" : "2019-02-23",
+        "preSeasonEndDate" : "2019-03-26",
+        "lastDate1stHalf" : "2019-07-07",
+        "firstDate2ndHalf" : "2019-07-11",
+        "allStarDate" : "2019-07-09"
+      },
+      "orgCode" : "NL",
+      "conferencesInUse" : false,
+      "divisionsInUse" : true,
+      "sport" : {
+        "id" : 1,
+        "link" : "/api/v1/sports/1"
+      }
+    } ]
+  }

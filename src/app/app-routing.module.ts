@@ -40,6 +40,9 @@ import { PlayerWeekComponent } from './components/player-week/player-week.compon
 import { PitcherrWeekComponent } from './components/pitcherr-week/pitcherr-week.component';
 import { PlayerOfTheWeekComponent } from './components/player-of-the-week/player-of-the-week.component';
 
+
+import { PruebajsonsComponent } from './components/prueba/pruebajsons/pruebajsons.component';
+
 // import { SharedModule } from '../shared/shared.module'
 
 import { PostDashboardComponent } from '../app/components/posts/post-dashboard/post-dashboard.component';
@@ -135,6 +138,9 @@ const routes: Routes = [
   component: PlayerWeekComponent},
   { path: 'pitcherWeek',
   component: PitcherrWeekComponent},
+  { path: 'pruebajson',
+  component: PruebajsonsComponent},
+
   { path: '**',
   component: NotFoundPageComponent}
 ];

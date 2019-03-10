@@ -37,6 +37,7 @@ export class ActivesComponent implements OnInit {
 
     // paged items
     pagedItems: any[];
+    jugadores: any[];
 
 
 
@@ -68,6 +69,7 @@ export class ActivesComponent implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
+
   }
 
   // Convertir el Array de Observables a un Array de Objetos.
@@ -97,6 +99,10 @@ export class ActivesComponent implements OnInit {
               }
             });
           this.allItems = this.players;
+          this.jugadores = this.players;
+          console.log('jugadores', this.jugadores);
+
+
 
     // console.log(JSON.stringify(this.players), 'pbajson');
           this.setPage(1);

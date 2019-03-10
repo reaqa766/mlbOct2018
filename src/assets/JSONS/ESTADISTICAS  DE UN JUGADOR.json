@@ -1,0 +1,85 @@
+{
+    "copyright" : "Copyright 2019 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt",
+    "people" : [ {
+      "id" : 514888,
+      "fullName" : "Jose Altuve",
+      "link" : "/api/v1/people/514888",
+      "firstName" : "Jose",
+      "lastName" : "Altuve",
+      "primaryNumber" : "27",
+      "birthDate" : "1990-05-06",
+      "currentAge" : 28,
+      "birthCity" : "Maracay",
+      "birthCountry" : "Venezuela",
+      "height" : "5' 6",
+      "weight" : 165,
+      "active" : true,
+      "primaryPosition" : {
+        "code" : "4",
+        "name" : "Second Base",
+        "type" : "Infielder",
+        "abbreviation" : "2B"
+      },
+      "useName" : "Jose",
+      "middleName" : "Carlos",
+      "boxscoreName" : "Altuve",
+      "nickName" : "Tuve",
+      "pronunciation" : "al-TOO-vay",
+      "stats" : [ {
+        "type" : {
+          "displayName" : "pecota"
+        },
+        "group" : {
+          "displayName" : "hitting"
+        },
+        "splits" : [ {
+          "stat" : {
+            "gamesPlayed" : 286,
+            "runs" : 173,
+            "doubles" : 64,
+            "triples" : 5,
+            "homeRuns" : 30,
+            "strikeOuts" : 164,
+            "baseOnBalls" : 111,
+            "intentionalWalks" : 9,
+            "hits" : 346,
+            "hitByPitch" : 14,
+            "avg" : ".309",
+            "atBats" : 1119,
+            "obp" : ".377",
+            "slg" : ".456",
+            "ops" : ".833",
+            "caughtStealing" : 10,
+            "stolenBases" : 35,
+            "stolenBasePercentage" : ".778",
+            "groundIntoDoublePlay" : 17,
+            "plateAppearances" : 1255,
+            "totalBases" : 511,
+            "rbi" : 144,
+            "sacBunts" : 5,
+            "sacFlies" : 6
+          },
+          "gameType" : "R"
+        } ]
+      } ],
+      "mlbDebutDate" : "2011-07-20",
+      "batSide" : {
+        "code" : "R",
+        "description" : "Right"
+      },
+      "pitchHand" : {
+        "code" : "R",
+        "description" : "Right"
+      },
+      "nameFirstLast" : "Jose Altuve",
+      "nameSlug" : "jose-altuve-514888",
+      "firstLastName" : "José Altuve",
+      "lastFirstName" : "Altuve, José",
+      "lastInitName" : "Altuve, J",
+      "initLastName" : "J Altuve",
+      "fullFMLName" : "José Carlos Altuve",
+      "fullLFMName" : "Altuve, José Carlos",
+      "strikeZoneTop" : 3.104,
+      "strikeZoneBottom" : 1.448
+    } ]
+  }

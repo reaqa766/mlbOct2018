@@ -80,6 +80,7 @@ import { InfogShowComponent } from './components/infographics/infog-show/infog-s
 import { PlayerWeekComponent } from './components/player-week/player-week.component';
 import { PitcherrWeekComponent } from './components/pitcherr-week/pitcherr-week.component';
 import { PositionComponent } from './components/players/byposition/position/position.component';
+import { PruebajsonsComponent } from './components/prueba/pruebajsons/pruebajsons.component';
 
 @NgModule({
   declarations: [
@@ -132,7 +133,8 @@ import { PositionComponent } from './components/players/byposition/position/posi
     InfogShowComponent,
     PlayerWeekComponent,
     PitcherrWeekComponent,
-    PositionComponent
+    PositionComponent,
+    PruebajsonsComponent
 
   ],
   imports: [
