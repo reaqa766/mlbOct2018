@@ -50,24 +50,26 @@
 
   }
   .boton {
-    margin: 0 45%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem; 
   }
 
   .container-position{
     display: grid;
-    grid-template-columns: repeat (9, 20px);
-    grid-template-rows: repeat (6, 20px);
+    grid-auto-columns: repeat (9, 20px);
+    grid-auto-rows: repeat (6, 20px);
     grid-column-gap: 1px;
     grid-row-gap: 1px;
 
-    background-image: url(../../../../assets/bbalF.png);
-      background-size: cover;
-      border-radius: 8px;
-      width: 1200px;
-      padding: 2rem;
-      border-radius: 6px;
-      height: 696px;
-      margin: 3rem auto;
+    background-image: url(../../../../assets/bbalF1.png);
+    background-size: cover;
+    border-radius: 8px;
+    width: 1200px;
+    padding: 2rem;
+    border-radius: 6px;
+    height: 696px;
+    margin: 3rem auto;
 
 
   }
@@ -178,12 +180,12 @@
     transition: .4s;
   }
 
-  .img_picture_box:hover .img_picture_element{
+  /* .img_picture_box:hover .img_picture_element{
     transform: scale(1.075);
     opacity: .98;
-  }
+  } */
 .card-body{
-    max-height: 1rem;
+    max-height: 4rem;
     margin: 0 auto 1rem;
 }
 
@@ -216,8 +218,8 @@
     margin-left: 2%;
     margin-right: 2%; */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
     grid-column-gap: 2px;
     justify-items: center;
     width: 80%;
@@ -307,8 +309,8 @@ font-weight: 400;
     .container-actives_cards {
         margin: 1% auto 0;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-auto-columns: 1fr 1fr;
+        grid-auto-rows: 1fr 1fr 1fr;
         grid-column-gap: 2px;
         justify-items: center;
         width: 80%;
@@ -323,6 +325,32 @@ font-weight: 400;
 .title-position {
         font-size: .75rem;
     }
+
+.container-position{
+       width: 340px;
+       height: 198px;
+       margin: 3rem .1rem;
+      }
+
+      .byPosition-title {
+        font-size: 1.25rem;
+        width: 12em;
+    }
+    .byPosition-season-title {
+        font-size: 1.25rem;
+        width: 8em;
+        height: 1.5em;
+    } 
+    
+    .button1 {
+
+        font-size: 1em;
+        cursor: pointer;
+        width: 2rem;
+        height: 2rem;
+    
+      }
+    
 
 .advancedSearchTextbox {
         font-size: .75rem;
@@ -379,8 +407,8 @@ font-weight: 400;
     .container-actives_cards {
         margin: 1% auto 0;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
+        grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-auto-rows: 1fr;
         grid-column-gap: 2px;
         justify-items: center;
         width: 80%;
@@ -392,6 +420,13 @@ font-weight: 400;
         padding: 0.4rem 0 0;
         width: 22rem;
     }
+
+    .container-position{
+        width: 700px;
+        height: 406px;
+        margin: 3rem .1rem;
+       }
+ 
 
     .card-title {
         font-size: 1em;
@@ -467,7 +502,12 @@ font-weight: 400;
         display: table-cell;
     }
     }
- @media only screen and (min-width:1024px ) and (max-width: 2220px)  {
+ @media only screen and (min-width:1024px ) and (max-width: 1439px)  {
+    .container-position{
+        width: 1000px;
+        height: 581px;
+        margin: 3rem .1rem;
+       }
 
     .paginator {
         margin: auto;
@@ -477,12 +517,13 @@ font-weight: 400;
         display: table-cell;
     }
     }
- @media only screen and (min-width:2221px ) and (max-width: 3200px)  {
+ @media only screen and (min-width:1440px ) and (max-width: 3200px)  {
 
     .paginator {
         margin: auto;
         font-size: 1.75rem
     }
+    
     }
 
 
