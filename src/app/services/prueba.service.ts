@@ -146,8 +146,7 @@ export class PruebaService {
     // tslint:disable-next-line:prefer-const
     for (let code of this.playersCode) {
       this._url = this._url.replace(this.playerCode.toString(), code.toString());
-      // tslint:disable-next-line:prefer-const
-      let dataP = this.getPlayeActive();
+      const dataP = this.getPlayeActive();
       dataAllPlayers.push(dataP);
       this.playerCode = code;
     }

@@ -1,22 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-
-import { PruebaService } from '../../../services/prueba.service';
+import { PlayersService } from '../../../services/players.service';
+// import { PruebaService } from '../../services/prueba.service';
 import { take } from 'rxjs/operators';
-import { Players } from '../../../../interfaces/players';
-import LIDERES from '../../../../assets/JSONS/ESTADISTICAS_DE_LIDERES';
-import VenezolanosActivos from '../../../../assets/JSONS/VenezolanosActivos';
+import { Players } from '../../../interfaces/players';
+// import LIDERES from '../../../assets/JSONS/ESTADISTICAS_DE_LIDERES';
+import VenezolanosActivos from '../../../assets/JSONS/VenezolanosActivos';
 
-import { PagerService } from '../../../../services/index';
+import { PagerService } from '../../../services/index';
 import { HttpClient } from '@angular/common/http';
 
-
-
 @Component({
-  selector: 'app-pruebajsons',
-  templateUrl: './pruebajsons.component.html',
-  styleUrls: ['./pruebajsons.component.css']
+  selector: 'app-lideres',
+  templateUrl: './lideres.component.html',
+  styleUrls: ['./lideres.component.css']
 })
-export class PruebajsonsComponent implements OnInit {
+export class LideresComponent implements OnInit {
   data: any;
   lider_avg: any;
   row: any;
@@ -45,35 +43,17 @@ export class PruebajsonsComponent implements OnInit {
   // paged items
   pagedItems: any[];
   jugadores: any;
-
-
-
-
-  // playersList = [
-  //   {name:"Jose Altuve",
-  //   position : "segunda base"},
-
-  //   {name : "Gleyber Torres",
-  //   position : "segunda base"},
-
-  //   {name : "Ronald Acuña Jr.",
-  //   position : "Leftfield"},
-
-  //   {name : "Ender Inciarte",
-  //   position : "Centerfield"}
-
-  // ]
   isLoading: boolean;
   avg: any = [];
   filtrado: any;
   venezolanosActivos: any;
 
-  constructor(private playerService: PruebaService, private pagerService: PagerService, private http: HttpClient) { }
+  constructor(private playerService: PlayersService, private pagerService: PagerService, private http: HttpClient) { }
 
 
   async ngOnInit() {
     // this.isLoading = true;
-    this.data = LIDERES.row;
+    // this.data = LIDERES.row;
     this.jugadores = VenezolanosActivos;
 
     // this.jugadores = await this.http.get('../../../../assets/JSONS/VenezolanosActivos.json').toPromise();
@@ -85,10 +65,8 @@ export class PruebajsonsComponent implements OnInit {
   // Convertir el Array de Observables a un Array de Objetos.
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
-    // tslint:disable-next-line:prefer-const
     let InfoObsPlayer = this.playerService.getAllPlayersActives();
     let index = 0;
-    // tslint:disable-next-line:prefer-const
     for (let obs of InfoObsPlayer) {
       obs.pipe(take(1)).subscribe(res => {
         this.players.push(res);
@@ -98,7 +76,11 @@ export class PruebajsonsComponent implements OnInit {
             const newPlayer: Players = {};
             Object.assign(newPlayer, player.people[0]);
             return newPlayer;
-          })
+          });
+          // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
+          this.players = this.players.filter(player =>
+          player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0)
+            // se ordenan por nombre
             .sort(({ fullName: a }, { fullName: b }) => {
               if (a > b) {
                 return 1;

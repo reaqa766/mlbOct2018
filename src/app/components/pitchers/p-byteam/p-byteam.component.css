@@ -1,615 +1,145 @@
-.container-team {
-  margin-top: 2%;
+.container-byPosition {
+  margin-top: 1%;
+
 }
 
-.team-title {
-    color: antiquewhite;
-    font-size: 1rem;
-    text-align: center;
-    margin: 2% auto 0.5rem;
-    padding: .5rem 0;
-    background-color: rgba(3, 2, 2, 0.5);
-    width: 13em;
-    height: 2em;
-    border-radius: 7px;
-}
-
-
-.link_player {
-  text-decoration:none;
+.byPosition-title {
   color: antiquewhite;
-}
-
-.advancedSearchTextbox{
-    color: rgb(2, 1, 0);
-    font-size: 0.75rem;
-    font-weight: bold;
-    margin-left: 2%;
-    margin-bottom: 1%;
-    width: 15em;
-
-}
-
-.fa-baseball-ball {
-  font-size: 10rem;
-  margin: 5% 43% 0 !important;
-  color: rgba(80, 57, 43, 0.40);
-}
-.spiner_load {
-  font-size: 5rem;
-  margin: 0 38% !important;
-  color: rgba(80, 57, 43, 0.95);
-}
-
-
-.title-position{
-    color: antiquewhite;
-    font-size: 1rem;
-    font-weight: 400;
-    margin-left: 2%;
-    margin-bottom: 0;
-}
-.player_stats {
-    width: 100%;
-    display: table;
-}
-
-
-/* .table {
-    width: 80%;
-    margin: 0.2em auto;
-} */
-
-.th5, .th7, .th8, .th9, .th10, .th11 {
-    display: none;
-}
-.table-header {
-    background-color: rgba(12, 10, 9, 0.9);
-    color: antiquewhite;
-    font-size: 0.75rem;
-    font-weight: 100;
-}
-.table-header2 {
-    background-color: rgba(12, 10, 9, 0.75);
-    color: antiquewhite;
-    font-size: 0.75rem;
-
-}
-.title-rows {
-    background-color: antiquewhite;
-    color: rgb(12, 10, 9);
-
-}
-
-.player-name {
-    color: black;
-}
-.player-name:hover {
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    font-size: 1.15rem;
-    text-decoration: none;
-}
-
-.row-color {
-    background-color: rgb(245, 223, 195);
-
-}
-.row-color:hover {
-    background-color: rgb(255, 255, 255);
-
-}
-.row-color1:hover {
-    background-color: rgb(255, 255, 255);
-
-}
-
-.title-rows_header {
-    text-align: center;
-}
-.error_search {
-    width: 80%;
-    margin-left: 10%;
-    text-align: center;
-    color: antiquewhite;
-    background-color: rgba(12, 10, 9, 0.75);
-    font-size: 1rem;
-
-}
-.paginator {
-    margin: auto;
-}
-.paginator_text {
-    display: none;
-}
-@media only screen and (min-width:300px ) and (max-width: 325px) {
-    .container-team {
-        margin-top: 2%;
-      }
-    .team-title {
-        color: antiquewhite;
-        font-size: 1rem;
-        text-align: center;
-        margin: .15rem auto 1.25rem 3rem;
-        padding: .5rem 0;
-        background-color: rgba(3, 2, 2, 0.5);
-        width: 13em;
-        height: 2em;
-        border-radius: 7px;
-    }
-    .table-header {
-        font-size: 0.68rem;
-    }
-    .table-header2 {
-        font-size: 0.68rem;
-
-    }
-
-
-}
-@media only screen and (orientation: landscape) and (min-width:500px ) and (max-width: 600px) {
-    .container-team {
-        margin-top: 5% !important;
-      }
-
-
-    .team-title {
-        font-size: 1.25rem;
-        text-align: center;
-        margin: .25rem auto 0.5rem !important;
-        padding: .5rem 0;
-        background-color: rgba(3, 2, 2, 0.5);
-        width: 13em;
-        height: 2em;
-        border-radius: 7px;
-    }
-    .table-header {
-        background-color: rgba(12, 10, 9, 0.9);
-        color: antiquewhite;
-        font-size: 0.75rem !important;
-        font-weight: 100;
-    }
-    .table-header2 {
-        background-color: rgba(12, 10, 9, 0.75);
-        color: antiquewhite;
-        font-size: 0.75rem !important;
-    }
-
-    .th3, .th5, .th7, .th8, .th9 {
-        display: table-cell;
-    }
-    .th11 {
-        display: none;
-    }
-    .paginator_text {
-        display: table-cell;
-    }
-}
-@media only screen and (min-width:500px ) and (max-width: 1020px) {
-    .container-team {
-        margin-top: 2%;
-      }
-      .team-title {
-        font-size: 1.5rem;
-        margin: 0.15rem auto 0.5rem;
-        padding: .5rem 0;
-    }
-
-    .table-header {
-        background-color: rgba(12, 10, 9, 0.9);
-        color: antiquewhite;
-        font-size: 1rem;
-        font-weight: 100;
-    }
-    .table-header2 {
-        background-color: rgba(12, 10, 9, 0.75);
-        color: antiquewhite;
-        font-size: 1rem;
-
-    }
-
-
-    .th3, .th5, .th7, .th8, .th9, .th10, .th11 {
-        display: table-cell;
-    }
-    .paginator_text {
-        display: table-cell;
-    }
-
-
-
-}
-@media only screen and (min-width:1021px ) and (max-width: 1439px) {
-    .container-team {
-        margin-top: 2% !important;
-      }
-      .team-title {
-        font-size: 1.75rem;
-        margin: 0.15rem auto 0.5rem !important;
-        padding: .5rem 0;
-    }
-
-    .table-header {
-        background-color: rgba(12, 10, 9, 0.9);
-        color: antiquewhite;
-        font-size: 1rem;
-        font-weight: 100;
-    }
-    .table-header2 {
-        background-color: rgba(12, 10, 9, 0.75);
-        color: antiquewhite;
-        font-size: 1rem;
-
-    }
-
-    .th3, .th5, .th7, .th8, .th9, .th10, .th11 {
-        display: table-cell;
-    }
-    .paginator {
-        font-size: 1.25rem    }
-
-    .paginator_text {
-        display: table-cell;
-    }
-
-
-
-}
-@media only screen and (min-width:1440px ) and (max-width: 3500px) {
-    .container-team {
-        margin-top: 0 !important;
-      }
-      .team-title {
-        font-size: 2.75rem !important;
-        margin: 0 auto !important;
-        padding: 1.25rem 0;
-    }
-
-    .advancedSearchTextbox{
-        font-size: 1.25rem;
-
-    }
-
-    .title-position{
-        font-size: 1.25rem;
-        margin-left: 2%;
-        margin-bottom: 0;
-    }
-
-
-    .table-header {
-        font-size: 1.25rem;
-    }
-    .table-header2 {
-        font-size: 1.25rem;
-
-    }
-
-    .th3, .th5, .th7, .th8, .th9, .th10, .th11 {
-        display: table-cell;
-    }
-    .paginator {
-        font-size: 1.25rem    }
-
-    .paginator_text {
-        display: table-cell;
-    }
-
-
-
-}
-@media only screen and (orientation: landscape) and (min-width:601px ) and (max-width: 668px) {
-    .container-team {
-        margin-top: 1%;
-      }
-      .team-title {
-        font-size: 1.25rem;
-        margin: 0.15rem auto;
-        padding: .5rem 0;
-    }
-    .table-header {
-        background-color: rgba(12, 10, 9, 0.9);
-        color: antiquewhite;
-        font-size: 0.7rem;
-        font-weight: 100;
-    }
-    .table-header2 {
-        background-color: rgba(12, 10, 9, 0.75);
-        color: antiquewhite;
-        font-size: 0.7rem;
-
-    }
-}
-@media only screen and (orientation: landscape) and (min-width:668px ) and (max-width: 730px) {
-    .container-team {
-        margin-top: 1%;
-      }
-      .team-title {
-        font-size: 1.5rem;
-        margin: 0.15rem auto 0.5rem 16.5rem;
-        padding: .5rem 0;
-    }
-
-
-    .table-header {
-        background-color: rgba(12, 10, 9, 0.9);
-        color: antiquewhite;
-        font-size: 0.68rem;
-        font-weight: 100;
-    }
-    .table-header2 {
-        background-color: rgba(12, 10, 9, 0.75);
-        color: antiquewhite;
-        font-size: 0.68rem;
-
-    }
-
-
-    .th3, .th5, .th7, .th8, .th9, .th10, .th11 {
-        display: table-cell;
-    }
-    .paginator_text {
-        display: table-cell;
-    }
-
-
-
-}
-@media only screen and (orientation: landscape) and (min-width:731px ) and (max-width: 1020px) {
-    .container-team {
-        margin-top: 1%;
-      }
-      .team-title {
-        font-size: 1.5rem;
-        margin: 0.15rem auto;
-        padding: .5rem 0;
-    }
-
-
-    .table-header {
-        background-color: rgba(12, 10, 9, 0.9);
-        color: antiquewhite;
-        font-size: 0.68rem;
-        font-weight: 100;
-    }
-    .table-header2 {
-        background-color: rgba(12, 10, 9, 0.75);
-        color: antiquewhite;
-        font-size: 0.68rem;
-
-    }
-
-
-    .th3, .th5, .th7, .th8, .th9, .th10, .th11 {
-        display: table-cell;
-    }
-    .paginator_text {
-        display: table-cell;
-    }
-
-
-
-}
-@media only screen and (orientation: landscape) and (min-width:1021px ) and (max-width: 1300px) {
-    .container-team {
-        margin-top: 1%;
-      }
-      .team-title {
-        font-size: 1.75rem;
-        margin: 0.15rem auto !important;
-        padding: .5rem 0;
-    }
-
-
-    .table-header {
-        background-color: rgba(12, 10, 9, 0.9);
-        color: antiquewhite;
-        font-size: 1rem;
-        font-weight: 100;
-    }
-    .table-header2 {
-        background-color: rgba(12, 10, 9, 0.75);
-        color: antiquewhite;
-        font-size: 1rem;
-
-    }
-
-
-    .th3, .th5, .th7, .th8, .th9, .th10, .th11 {
-        display: table-cell;
-    }
-    .paginator_text {
-        display: table-cell;
-    }
-
-
-
-}
-@media only screen and (orientation: landscape) and (min-width:1301px ) and (max-width: 1500px) {
-    .container-team {
-        margin-top: 1%;
-      }
-      .team-title {
-        font-size: 1.75rem;
-        margin: 0.15rem auto !important;
-        padding: .5rem 0;
-    }
-
-    .advancedSearchTextbox{
-        font-size: 1rem;
-
-    }
-
-    .title-position{
-        font-size: 1.5rem;
-        margin-left: 2%;
-        margin-bottom: 0;
-    }
-
-
-    .table-header {
-        background-color: rgba(12, 10, 9, 0.9);
-        color: antiquewhite;
-        font-size: 1.25rem;
-        font-weight: 100;
-    }
-    .table-header2 {
-        background-color: rgba(12, 10, 9, 0.75);
-        color: antiquewhite;
-        font-size: 1.25rem;
-
-    }
-
-
-    .th3, .th5, .th7, .th8, .th9, .th10, .th11 {
-        display: table-cell;
-    }
-    .paginator_text {
-        display: table-cell;
-    }
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .container-team {
-  margin-top: 1rem;
-}
-
-
-.team-title {
-  color: antiquewhite;
-  font-size: 2rem;
+  font-size: 2.25rem;
   text-align: center;
-  margin: 1.5rem auto 0;
-  padding: .5rem 0;
+  margin: 0.1rem auto 1rem;
+  padding: .25rem 0;
   background-color: rgba(3, 2, 2, 0.5);
-  width: 13em;
+  width: 12em;
   height: 1.75em;
   border-radius: 7px;
 }
-.link_player {
-  text-decoration:none;
+.byPosition-season-title {
   color: antiquewhite;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0.1rem auto 1rem;
+  padding: .25rem 0;
+  background-color: rgba(3, 2, 2, 0.5);
+  width: 8em;
+  height: 1.5em;
+  border-radius: 7px;
+}
+.titulo_liga {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  text-decoration: underline rgb(214, 214, 214);
+}
+.liga_americana {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 5px;
+  background-color: rgba(0, 0, 0, 0.596);
+
+
+}
+.team_logo{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 1px;
+  border-radius: 6px;
+}
+
+
+.img_picture_box {
+  text-align: center;
+}
+.img_picture_element{
+  margin: 1rem 0;
+  width: 45%;
+  transition: .4s;
+}
+
+.img_picture_box:hover .img_picture_element{
+  transform: scale(1.075);
+  opacity: .98;
+}
+.container_border{
+  padding: 2rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.787);
+}
+
+.container_americana_este, .container_americana_central, .container_americana_oeste {
+  background-color: rgba(40, 138, 218, 0.465);
+}
+.container_nacional_este, .container_nacional_central, .container_nacional_oeste {
+  background-color: rgba(253, 69, 100, 0.465);
+}
+
+.boton {
+  margin: 0 40%;
 }
 
 
 
-.advancedSearchTextbox{
+
+
+
+
+
+
+
+
+ /* SEGUNDA PARTE DE BYPOSITION */
+
+ .bioActives-title {
+  color: antiquewhite;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1rem 0 0;
+  background-color: rgba(3, 2, 2, 0.5);
+  width: 18em;
+  height: 2em;
+  border-radius: 7px;
+}
+.title-position {
+  color: antiquewhite;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 0  0 10.35%;
+}
+
+.advancedSearchTextbox {
   color: rgb(2, 1, 0);
   font-size: 1rem;
   font-weight: bold;
-  margin-left: 10%;
-  margin-bottom: 0;
-  width: 15em;
+  margin: 0 0  0 10.35%;
+
+}
+
+.img_picture_element{
+  transition: .4s;
+}
+
+.img_picture_box:hover .img_picture_element{
+  transform: scale(1.075);
+  opacity: .98;
+}
+.card-body{
+  max-height: 1rem;
+  margin: 0 auto 1rem;
 }
 
 .fa-baseball-ball {
   font-size: 10rem;
-  margin: 5% 42% 0 !important;
+  margin: 5% 40% 0 !important;
   color: rgba(80, 57, 43, 0.40);
 }
 .spiner_load {
   font-size: 5rem;
-  margin: 0 37% !important;
+  margin: 0 35% !important;
   color: rgba(80, 57, 43, 0.95);
-}
-
-.title-position{
-  color: antiquewhite;
-  font-size: 3rem;
-  font-weight: bold;
-  margin-left: 10%;
-  margin-bottom: 0;
-}
-
-.table {
-  width: 80%;
-  margin: 0.2em auto;
-}
-
-
-.table-header {
-  background-color: rgba(12, 10, 9, 0.9);
-  color: antiquewhite;
-}
-.table-header2 {
-  background-color: rgba(12, 10, 9, 0.75);
-  color: antiquewhite;
-}
-.title-rows {
-  background-color: antiquewhite;
-  color: rgb(12, 10, 9);
-
-}
-
-.player-name {
-  color: black;
-}
-.player-name:hover {
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-  font-size: 1.15rem;
-  text-decoration: none;
-}
-
-.row-color {
-  background-color: rgb(245, 223, 195);
-
-}
-.row-color:hover {
-  background-color: rgb(255, 255, 255);
-
-}
-.row-color1:hover {
-  background-color: rgb(255, 255, 255);
-
-}
-
-.title-rows_header {
-  text-align: center;
 }
 .error_search {
   width: 80%;
@@ -619,9 +149,282 @@
   background-color: rgba(12, 10, 9, 0.75);
 
 }
+
 .error_message {
   padding-top: 10px;
 
-} */
+}
+.container-actives_cards {
+  margin: 1% auto 0;
+  /* margin-top: 1%;
+  margin-left: 2%;
+  margin-right: 2%; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 2px;
+  justify-items: center;
+  width: 80%;
+
+}
+
+.card-title {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+.card {
+  max-width: 99%;
+  margin: 0 auto;
+}
+
+.container-actives_cards .card:nth-child(1) {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-bottom: 20px;
+}
+.container-actives_cards .card:nth-child(2) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-bottom: 20px;
+}
+.container-actives_cards .card:nth-child(3) {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  margin-bottom: 20px;
+}
+.container-actives_cards .card:nth-child(4) {
+  grid-column: 4/5;
+  grid-row: 1/2;
+  margin-bottom: 20px;
+}
+.container-actives_cards .card:nth-child(5) {
+  grid-column: 5/6;
+  grid-row: 1/2;
+  margin-bottom: 20px;
+}
+.container-actives_cards .card:nth-child(6) {
+  grid-column: 6/7;
+  grid-row: 1/2;
+  margin-bottom: 20px;
+}
+.container-actives_cards .card:nth-child(7) {
+  grid-column: 7/8;
+  grid-row: 1/2;
+  margin-bottom: 20px;
+}
+.container-actives_cards .card:nth-child(8) {
+  grid-column: 8/9;
+  grid-row: 1/2;
+  margin-bottom: 20px;
+}
+
+.card-img-top {
+  max-height: 580px;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.list-group-item {
+  padding: 0.2rem 1.25rem;
+  font-size: 0.85rem;
+}
 
 
+.page-link {
+background-color: rgba(250, 235, 215,0.8)!important;
+border:solid 2px #7e7b7b;
+color: rgb(0, 0, 0)!important;
+font-weight: 400;
+}
+.paginator {
+  margin: auto;
+  font-size: 0.65rem
+}
+.paginator_text {
+  display: none;
+}
+
+@media only screen and (min-width:300px ) and (max-width: 766px)  {
+  .container-actives_cards {
+      margin: 1% auto 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-column-gap: 2px;
+      justify-items: center;
+      width: 80%;
+
+  }
+.bioActives-title {
+      font-size: 0.75rem;
+      margin-bottom: 1rem;
+      padding: 0.4rem 0 0;
+      width: 15rem;
+  }
+.title-position {
+      font-size: .75rem;
+  }
+
+.advancedSearchTextbox {
+      font-size: .75rem;
+
+  }
+.container-actives_cards .card:nth-child(1) {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      margin-bottom: 20px;
+  }
+  .container-actives_cards .card:nth-child(2) {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      margin-bottom: 20px;
+  }
+  .container-actives_cards .card:nth-child(3) {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      margin-bottom: 20px;
+  }
+   .container-actives_cards .card:nth-child(4) {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      margin-bottom: 20px;
+  }
+  .container-actives_cards .card:nth-child(5) {
+      grid-column: 1/2;
+      grid-row: 3/4;
+      margin-bottom: 20px;
+  }
+  .container-actives_cards .card:nth-child(6) {
+      grid-column: 2/3;
+      grid-row: 3/4;
+      margin-bottom: 20px;
+  }
+  .container-actives_cards .card:nth-child(7) {
+      display: none;
+  }
+  .container-actives_cards .card:nth-child(8) {
+      display: none;
+
+  }
+
+  .paginator {
+      margin: auto;
+      font-size: .75rem
+  }
+
+  .paginator_text {
+      display: none;
+  }
+}
+@media only screen and (min-width:767px ) and (max-width: 1023px)  {
+  .container-actives_cards {
+      margin: 1% auto 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-column-gap: 2px;
+      justify-items: center;
+      width: 80%;
+
+  }
+  .bioActives-title {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      padding: 0.4rem 0 0;
+      width: 22rem;
+  }
+
+  .card-title {
+      font-size: 1em;
+      font-weight: bold;
+      text-align: center;
+  }
+  .card {
+      max-width: 99%;
+      margin: 0 auto;
+  }
+
+  .container-actives_cards .card:nth-child(1) {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      margin-bottom: 20px;
+  }
+  .container-actives_cards .card:nth-child(2) {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      margin-bottom: 20px;
+  }
+  .container-actives_cards .card:nth-child(3) {
+      grid-column: 3/4;
+      grid-row: 1/2;
+      margin-bottom: 20px;
+  }
+   .container-actives_cards .card:nth-child(4) {
+      grid-column: 4/5;
+      grid-row: 1/2;
+      margin-bottom: 20px;
+  }
+  .container-actives_cards .card:nth-child(5) {
+      grid-column: 5/6;
+      grid-row: 1/2;
+      margin-bottom: 20px;
+  }
+  .container-actives_cards .card:nth-child(6) {
+      grid-column: 6/7;
+      grid-row: 1/2;
+      margin-bottom: 20px;
+  }
+  .container-actives_cards .card:nth-child(7) {
+          display: none;    }
+  .container-actives_cards .card:nth-child(8) {
+      display: none;
+  }
+
+   .card-img-top {
+      max-height: 580px;
+  }
+
+  .container {
+      margin-top: 20px;
+  }
+
+  .list-group-item {
+      padding: 0.2rem 1.25rem;
+      font-size: 0.85rem;
+  }
+
+
+  .page-link {
+  background-color: rgba(250, 235, 215,0.8)!important;
+  border:solid 2px #7e7b7b;
+  color: rgb(0, 0, 0)!important;
+  font-weight: 400;
+  }
+  .paginator {
+      margin: auto;
+      font-size: 0.65rem
+  }
+  .paginator_text {
+      display: table-cell;
+  }
+  }
+@media only screen and (min-width:1024px ) and (max-width: 2220px)  {
+
+  .paginator {
+      margin: auto;
+      font-size: 1rem
+  }
+  .paginator_text {
+      display: table-cell;
+  }
+  }
+@media only screen and (min-width:2221px ) and (max-width: 3200px)  {
+
+  .paginator {
+      margin: auto;
+      font-size: 1.75rem
+  }
+  }

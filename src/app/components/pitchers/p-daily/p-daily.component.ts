@@ -37,32 +37,15 @@ export class PDailyComponent implements OnInit {
   // paged items
   pagedItems: any[];
 
-
-//   playersList = [
-//     {name: 'Jose Altuve',
-//     position : 'segunda base'},
-
-//     {name : 'Gleyber Torres',
-//     position : 'segunda base'},
-
-//     {name : 'Ronald Acuña Jr.',
-//     position : 'Leftfield'},
-
-//     {name : 'Ender Inciarte',
-//     position : 'Centerfield'}
-//  ];
-
   isLoading: boolean;
+  playersFiltrado: {}[];
 
   constructor(private playerService: DataPitchersService, private pagerService: PagerService) { }
 
   ngOnInit() {
-    // console.log(this.dia);
     this.isLoading = true;
-    // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    console.log('allItems', this.allItems);
-    console.log('players', this.players);
+    console.log('players', this.allItems);
   }
 
 
@@ -72,7 +55,6 @@ export class PDailyComponent implements OnInit {
 getPlayersMap() {
   const InfoObsPlayer = this.playerService.getAllPlayersDaily2();
   let index = 0;
-  // tslint:disable-next-line:prefer-const
   for (let obs of InfoObsPlayer) {
     obs.pipe(take(1)).subscribe(res => {
       this.players.push(res);
@@ -82,7 +64,11 @@ getPlayersMap() {
           const newPlayer: Players = {};
           Object.assign(newPlayer, player.people[0]);
           return newPlayer;
-        })
+        });
+        // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
+        this.players = this.players.filter(player =>
+        player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0)
+        // se ordenan por nombre
         .sort(({fullName: a}, {fullName: b}) => {
           if (a > b) {
             return 1;
@@ -93,11 +79,15 @@ getPlayersMap() {
           }
         });
         // .filter(player =>  player.stats[0].splits[player.stats[0].splits.length-1].date === '2018-09-30') ;
+        // this.playersFiltrado = this.players.filter(
+        //   players => this.players.stats && this.players.stats[0].splits
+        // );
+        // this.playersFiltrado = this.players.filter(player => player.stats && player.stats[0].splits
+        // );
+
         this.allItems = this.players;
         this.setPage(1);
         this.isLoading = false;
-        // console.log(JSON.stringify(this.players[0]));
-          //  console.log('playersDaily', this.players);
         }
         index++;
       });
@@ -105,22 +95,19 @@ getPlayersMap() {
 
   }
 
-  onSearchChange() {
-    if (this.searchText) {
-      this.allItems = this.players.filter(player =>
-        // player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
-        player.fullName && player.fullName.toLowerCase().includes(this.searchText));
-        // (player.nickName && player.nickName.toLowerCase().includes(this.searchText))  ||
-        // player.mlbDebutDate.includes(this.searchText));
-        this.setPage(this.pager.currentPage);
-      } else {
-          this.allItems = this.players;
-          this.setPage(this.pager.currentPage);
+  // onSearchChange() {
+  //   if (this.searchText) {
+  //     this.allItems = this.players.filter(player =>
+  //       player.fullName && player.fullName.toLowerCase().includes(this.searchText));
+  //       this.setPage(this.pager.currentPage);
+  //     } else {
+  //         this.allItems = this.players;
+  //         this.setPage(this.pager.currentPage);
 
-        }
-        return this.allItems;
+  //       }
+  //       return this.allItems;
 
-      }
+  //     }
 
   setPage(page: number) {
     // console.log('Changing to page '+page);

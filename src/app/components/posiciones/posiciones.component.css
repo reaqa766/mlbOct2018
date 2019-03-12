@@ -4,7 +4,7 @@
 
 .actives-title {
   color: antiquewhite;
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   text-align: center;
   margin: 0.15rem auto 0;
   padding: .5rem 0;
@@ -25,37 +25,14 @@
   display: grid;
   grid-auto-columns: fr fr;
   column-gap: 10px;
-  grid-auto-rows: repeat (6, fr);
+  grid-auto-rows: fr;
 }
 
-.tableAVG {
+.tableGL {
   grid-column: 1/2;
-  grid-row: 2/3;
 }
-.tableHR {
+.tableCL {
   grid-column: 2/3;
-  grid-row: 2/3;
-
-}
-.tableDOBLES {
-  grid-column: 1/2;
-  grid-row: 4/5;
-
-}
-.tableTRIPLES {
-  grid-column: 2/3;
-  grid-row: 4/5;
-
-}
-.tableBR {
-  grid-column: 1/2;
-  grid-row: 6/7;
-
-}
-.tableHITS {
-  grid-column: 2/3;
-  grid-row: 6/7;
-
 }
 
 .table {
@@ -126,68 +103,13 @@ color: antiquewhite;
   width: 5rem;
 }
 .tb2, .tb3 {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 .tbA {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: bold;
 }
-.subtitulo_lideres1 {
-  grid-column: 1/2;
-  grid-row: 1/2;
-
-
-  }
-.subtitulo_lideres2 {
-  grid-column: 2/3;
-  grid-row: 1/2;
-
-
-  }
-.subtitulo_lideres3 {
-  grid-column: 1/2;
-  grid-row: 3/4;
-
-
-  }
-.subtitulo_lideres4 {
-  grid-column: 2/3;
-  grid-row: 3/4;
-
-
-  }
-.subtitulo_lideres5 {
-  grid-column: 1/2;
-  grid-row: 5/6;
-
-
-  }
-.subtitulo_lideres6 {
-  grid-column: 2/3;
-  grid-row: 5/6;
-
-  }
-
-  .sub_lideres {
-    font-size: 2rem;
-    font-weight: bold;
-    height: 1rem;
-    text-align: center;
-
-  }
-  .tbA1, .tb2A {
-    color: black;
-    background-color: #fff;
-    font-size: 1.5rem;
-    font-weight: bold;
-    height: 1rem;
-    text-align: center;
-
-  }
-  .espacioInferior {
-    height: 100px;
-  }
 
 
 @media only screen and (min-width:300px ) and (max-width: 320px) {
@@ -371,50 +293,6 @@ color: antiquewhite;
           width: 45%;
           margin: auto;
       }
-
-      .container_grid {
-        display: grid;
-        grid-auto-columns: fr;
-        column-gap: 10px;
-        grid-auto-rows: repeat (12, fr);
-      }
-
-      .subtitulo_lideres1 {
-        grid-column: 1/2;
-        grid-row: 1/2;
-
-
-        }
-      .subtitulo_lideres2 {
-        grid-column: 2/3;
-        grid-row: 1/2;
-
-
-        }
-      .subtitulo_lideres3 {
-        grid-column: 1/2;
-        grid-row: 3/4;
-
-
-        }
-      .subtitulo_lideres4 {
-        grid-column: 2/3;
-        grid-row: 3/4;
-
-
-        }
-      .subtitulo_lideres5 {
-        grid-column: 1/2;
-        grid-row: 5/6;
-
-
-        }
-      .subtitulo_lideres6 {
-        grid-column: 2/3;
-        grid-row: 5/6;
-
-        }
-
       }
   @media only screen and (min-width:356px ) and (max-width: 365px) {
 

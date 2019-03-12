@@ -19,7 +19,7 @@
 
     <thead class="table-header">
       <tr>
-        <th class="tbA" style="width: 10%;" scope="col">JUGADOR</th>
+        <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
         <th class="tbA" style="width: 3%;" scope="col">VB</th>
         <th class="tbA" style="width: 3%;" scope="col">HITS</th>
         <th class="tbA" style="width: 3%;" scope="col">HR</th>
@@ -29,7 +29,7 @@
     <!-- <table class="table table-hover "> -->
       <tbody class="table-header2">
           <tr *ngFor="let jugador of filtroTopCinco('avg')">
-            <td class="tb1" style="width: 5%;">{{jugador.firstLastName}}</td>
+            <td class="tb11" style="width: 5%;">{{jugador.firstLastName}}</td>
             <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
             <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.hits}}</td>
             <td class="tb3" style="width: 2%;">{{jugador.stats[0].splits[0].stat.homeRuns}}</td>
@@ -44,7 +44,7 @@
   <table class="table table-hover  text-center tableHR">
       <thead class="table-header">
       <tr>
-        <th class="tbA" style="width: 5%;" scope="col">JUGADOR</th>
+        <th class="tbAA" style="width: 5%;" scope="col">JUGADOR</th>
         <th class="tbA" style="width: 2%;" scope="col">VB</th>
         <th class="tbA" style="width: 2%;" scope="col">AVG</th>
         <th class="tbA1" style="width: 2%;" scope="col">HR</th>
@@ -54,7 +54,7 @@
     <!-- <table class="table table-hover "> -->
       <tbody class="table-header2">
         <tr *ngFor="let jugador of filtroTopCinco('homeRuns')">
-          <td class="tb1" style="width: 5%;">{{jugador.firstLastName}}</td>
+          <td class="tb11" style="width: 5%;">{{jugador.firstLastName}}</td>
           <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
           <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
            <td class="tb2A" style="width: 2%;">{{jugador.stats[0].splits[0].stat.homeRuns}}</td>
@@ -65,7 +65,7 @@
   <table class="table table-hover  text-center tableDOBLES">
       <thead class="table-header">
       <tr>
-        <th class="tbA" style="width: 5%;" scope="col">JUGADOR</th>
+        <th class="tbAA" style="width: 5%;" scope="col">JUGADOR</th>
         <th class="tbA" style="width: 2%;" scope="col">VB</th>
         <th class="tbA" style="width: 2%;" scope="col">AVG</th>
         <th class="tbA1" style="width: 2%;" scope="col">Dobles</th>
@@ -75,7 +75,7 @@
     <!-- <table class="table table-hover "> -->
       <tbody class="table-header2">
         <tr *ngFor="let jugador of filtroTopCinco('doubles')">
-          <td class="tb1" style="width: 5%;">{{jugador.firstLastName}}</td>
+          <td class="tb11" style="width: 5%;">{{jugador.firstLastName}}</td>
           <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
           <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
            <td class="tb2A" style="width: 2%;">{{jugador.stats[0].splits[0].stat.doubles}}</td>
@@ -86,7 +86,7 @@
   <table class="table table-hover  text-center tableTRIPLES">
       <thead class="table-header">
       <tr>
-        <th class="tbA" style="width: 5%;" scope="col">JUGADOR</th>
+        <th class="tbAA" style="width: 5%;" scope="col">JUGADOR</th>
         <th class="tbA" style="width: 2%;" scope="col">VB</th>
         <th class="tbA" style="width: 2%;" scope="col">AVG</th>
         <th class="tbA1" style="width: 2%;" scope="col">TRIPLES</th>
@@ -96,7 +96,7 @@
     <!-- <table class="table table-hover "> -->
       <tbody class="table-header2">
         <tr *ngFor="let jugador of filtroTopCinco('triples')">
-          <td class="tb1" style="width: 5%;">{{jugador.firstLastName}}</td>
+          <td class="tb11" style="width: 5%;">{{jugador.firstLastName}}</td>
           <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
           <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
            <td class="tb2A" style="width: 2%;">{{jugador.stats[0].splits[0].stat.triples}}</td>
@@ -107,7 +107,7 @@
   <table class="table table-hover  text-center tableBR">
       <thead class="table-header">
       <tr>
-        <th class="tbA" style="width: 5%;" scope="col">JUGADOR</th>
+        <th class="tbAA" style="width: 5%;" scope="col">JUGADOR</th>
         <th class="tbA" style="width: 2%;" scope="col">VB</th>
         <th class="tbA" style="width: 2%;" scope="col">AVG</th>
         <th class="tbA1" style="width: 2%;" scope="col">BR</th>
@@ -117,7 +117,7 @@
     <!-- <table class="table table-hover "> -->
       <tbody class="table-header2 ">
         <tr *ngFor="let jugador of filtroTopCinco('stolenBases')">
-          <td class="tb1" style="width: 5%;">{{jugador.firstLastName}}</td>
+          <td class="tb11" style="width: 5%;">{{jugador.firstLastName}}</td>
           <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
           <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
           <td class="tb2A" style="width: 2%;">{{jugador.stats[0].splits[0].stat.stolenBases}}</td>
@@ -128,7 +128,7 @@
   <table class="table table-hover  text-center tableHITS">
       <thead class="table-header">
       <tr>
-        <th class="tbA" style="width: 5%;" scope="col">JUGADOR</th>
+        <th class="tbAA" style="width: 5%;" scope="col">JUGADOR</th>
         <th class="tbA" style="width: 2%;" scope="col">VB</th>
         <th class="tbA" style="width: 2%;" scope="col">AVG</th>
         <th class="tbA1" style="width: 2%;" scope="col">HITS</th>
@@ -138,7 +138,7 @@
     <!-- <table class="table table-hover "> -->
       <tbody class="table-header2">
         <tr *ngFor="let jugador of filtroTopCinco('hits')">
-          <td class="tb1" style="width: 5%;">{{jugador.firstLastName}}</td>
+          <td class="tb11" style="width: 5%;">{{jugador.firstLastName}}</td>
           <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
           <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
            <td class="tb2A" style="width: 2%;">{{jugador.stats[0].splits[0].stat.hits}}</td>
@@ -147,4 +147,6 @@
   </table>
   <div class="espacioInferior"></div>
 </div>
+
+
 

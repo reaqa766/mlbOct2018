@@ -36,31 +36,15 @@ export class DailyComponent implements OnInit {
   pagedItems: any[];
 
 
-//   playersList = [
-//     {name: 'Jose Altuve',
-//     position : 'segunda base'},
-
-//     {name : 'Gleyber Torres',
-//     position : 'segunda base'},
-
-//     {name : 'Ronald Acuña Jr.',
-//     position : 'Leftfield'},
-
-//     {name : 'Ender Inciarte',
-//     position : 'Centerfield'}
-//  ];
-
   isLoading: boolean;
 
   constructor(private playerService: DataPlayersService, private pagerService: PagerService) { }
 
   ngOnInit() {
-    console.log(this.dia);
+    console.log(this.players);
 
     this.isLoading = true;
-    // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    // console.log('players', this.players);
   }
 
 
@@ -70,7 +54,6 @@ export class DailyComponent implements OnInit {
 getPlayersMap() {
   const InfoObsPlayer = this.playerService.getAllPlayersDaily2();
   let index = 0;
-  // tslint:disable-next-line:prefer-const
   for (let obs of InfoObsPlayer) {
     obs.pipe(take(1)).subscribe(res => {
       this.players.push(res);
@@ -90,12 +73,9 @@ getPlayersMap() {
             return 0;
           }
         });
-        // .filter(player =>  player.stats[0].splits[player.stats[0].splits.length-1].date === '2018-09-30') ;
         this.allItems = this.players;
         this.setPage(1);
         this.isLoading = false;
-        // console.log(JSON.stringify(this.players[0]));
-          //  console.log('playersDaily', this.players);
         }
         index++;
     });

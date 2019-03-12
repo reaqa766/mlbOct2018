@@ -1,5 +1,7 @@
 <div class="container-team">
-  <h1 class="team-title">PITCHERS POR EQUIPO</h1>
+  <h1 class="byPosition-title">Pitchers por Equipo</h1>
+  <h3 class="byPosition-season-title">Spring Training</h3>
+
 </div>
 
 <div class="title-position"> EQUIPO</div>
@@ -11,6 +13,178 @@
 </div>
 
 <div *ngIf="allItems">
+  <div class="container-position" *ngIf='buscando'>
+    <main class="liga_americana">
+      <div class="container_americana_este container_border">
+        <h3 class="titulo_liga">Americana Este</h3>
+        <div class="team_logo">
+
+          <div *ngFor="let team of teamsAmE; let i=index">
+            <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
+              <a>
+                <!-- <a routerLink="/playerinfo/{{team.name}}"> -->
+
+                <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
+                  [src]="'../../../assets/'  + team.code + '.png'" alt="Team Logo" data-hover="tooltip" data-placement="top"
+                  title="Pincha para ver Jugadores"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container_americana_central container_border">
+        <h3 class="titulo_liga">Americana Central</h3>
+        <div class="team_logo">
+
+          <div *ngFor="let team of teamsAmC; let i=index">
+            <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
+              <a>
+
+                <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
+                  [src]="'../../../assets/'  + team.code + '.png'" alt="Team Logo" data-hover="tooltip" data-placement="top"
+                  title="Pincha para ver Jugadores"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container_americana_oeste container_border">
+        <h3 class="titulo_liga">Americana Oeste</h3>
+        <div class="team_logo">
+
+          <div *ngFor="let team of teamsAmO; let i=index">
+            <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
+              <a>
+
+                <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
+                  [src]="'../../../assets/'  + team.code + '.png'" alt="Team Logo" data-hover="tooltip" data-placement="top"
+                  title="Pincha para ver Jugadores"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container_nacional_este container_border">
+        <h3 class="titulo_liga">Nacional Este</h3>
+        <div class="team_logo">
+
+          <div *ngFor="let team of teamsNacE; let i=index">
+            <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
+              <a>
+
+                <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
+                  [src]="'../../../assets/'  + team.code + '.png'" alt="Team Logo" data-hover="tooltip" data-placement="top"
+                  title="Pincha para ver Jugadores"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container_nacional_central container_border">
+        <h3 class="titulo_liga">Nacional Central</h3>
+        <div class="team_logo">
+
+          <div *ngFor="let team of teamsNacC; let i=index">
+            <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
+              <a>
+
+                <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
+                  [src]="'../../../assets/'  + team.code + '.png'" alt="Team Logo" data-hover="tooltip" data-placement="top"
+                  title="Pincha para ver Jugadores"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container_nacional_oeste container_border">
+        <h3 class="titulo_liga">Nacional Oeste</h3>
+        <div class="team_logo">
+
+          <div *ngFor="let team of teamsNacO; let i=index">
+            <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
+              <a>
+
+                <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
+                  [src]="'../../../assets/'  + team.code + '.png'" alt="Team Logo" data-hover="tooltip" data-placement="top"
+                  title="Pincha para ver Jugadores"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+
+  <div class="container-position-results" *ngIf='!buscando'>
+    <ng-container *ngIf="!(pager.allItems === 0)">
+
+      <div class="container-actives_cards ">
+        <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
+          <div class="card card1 img_picture_box" style="width: 95%;" *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
+            <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/Jugadores Spring T 2019/Todos/{{player.id}}.jpg"
+                alt="Jugador de Grandes Ligas"></a>
+            <div class="card-body">
+              <h5 class="card-title">{{player.fullName}}</h5>
+            </div>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
+          <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
+            <a routerLink="/{{player.primaryPosition.name === 'Pitcher' ? 'pitcherinfo' : 'playerinfo'}}/{{ player.id }} "><img
+                class="card-img-top" src="../../../../assets/Jugadores Spring T 2019/Todos/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
+            <!-- <a routerLink="/pitcherinfo/{{player.id}}"><img class="card-img-top" src="../../../../assets/Jugadores Spring T 2019/Todos/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a> -->
+            <div class="card-body">
+              <h5 class="card-title">{{player.fullName}} </h5>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+      <div class="container paginator">
+        <div class="text-center">
+          <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
+            <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+              <a (click)="setPage(1)" class="page-link paginator_text">First</a>
+            </li>
+            <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+              <a (click)="setPage(pager.currentPage - 1)" class="page-link paginator_text">Previous</a>
+            </li>
+            <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
+              <a (click)="setPage(page)" class="page-link">{{page}}</a>
+            </li>
+            <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+              <a (click)="setPage(pager.currentPage + 1)" class="page-link paginator_text">Next</a>
+            </li>
+            <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+              <a (click)="setPage(pager.totalPages)" class="page-link paginator_text">Last</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="boton">
+        <a (click)="back_one_page()"><button class="button btn-primary">Volver a la página anterior</button></a>
+        <div class="bottom_space"></div>
+      </div>
+
+    </ng-container>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- VIEJO ARCHIVO -->
+<!-- <div *ngIf="allItems">
   <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Nombre del Equipo..." class="advancedSearchTextbox">
   <div *ngIf="!allItems[0]" class="error_search d-flex justify-content-center">
     <h4 class="error_message"> '{{ searchText }}' Su dato no existe, ingrese solo Equipos y Jugadores...</h4>
@@ -71,15 +245,15 @@
           </ng-container>
         </tbody>
 
-      </table>
+      </table>-->
       <!-- PAGINATION-->
 
-      <div>
+      <!-- <div>
         <div class="container paginator">
-          <div class="text-center">
+          <div class="text-center"> -->
 
             <!-- pager -->
-            <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
+           <!-- <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
               <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
                 <a (click)="setPage(1)" class="page-link paginator_text">First</a>
               </li>
@@ -102,4 +276,4 @@
       </div>
     </ng-container>
   </ng-container>
-</div>
+</div> -->

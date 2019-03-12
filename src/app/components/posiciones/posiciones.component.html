@@ -1,0 +1,59 @@
+<div class="container_players_actives"></div>
+<div class="container-actives">
+  <h1 class="actives-title">Posiciones de los Equipos</h1>
+  <h4 class="actives-title">Spring Training 2019</h4>
+</div>
+
+<!-- <p class="title-position"> SPRING T. 2019 </p> -->
+<!-- <p class="title-position"> TEMP. 2019 </p> -->
+
+<!-- LOADER -->
+<!-- <div *ngIf="!allItems">
+  <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
+  <p class="spiner_load">CARGANDO</p>
+</div> -->
+
+<div class="container_grid">
+  <table class="table table-hover  text-center tableGL">
+    <thead class="table-header">
+      <tr>
+        <th class="tbA" style="width: 5%;" scope="col">EQUIPO</th>
+        <th class="tbA" style="width: 2;" scope="col">G</th>
+        <th class="tbA" style="width: 2;" scope="col">P</th>
+        <th class="tbA" style="width: 2;" scope="col">.pct</th>
+      </tr>
+    </thead>
+
+    <!-- <table class="table table-hover "> -->
+      <tbody class="table-header2">
+          <tr *ngFor="let position of GlLeague ">
+            <td class="tb1" style="width: 5%;"><img class="tb1" src="{{'../../../../assets/'+position.team.id +'.png'}}" alt=""></td>
+             <td class="tb2" style="width: 2%;">{{position.leagueRecord.wins}}</td>
+             <td class="tb2" style="width: 2%;">{{position.leagueRecord.losses}}</td>
+             <td class="tb3" style="width: 2%;">{{position.leagueRecord.pct}}</td>
+      </tbody>
+
+  </table>
+
+  <table class="table table-hover  text-center tableCL">
+    <thead class="table-header">
+      <tr>
+        <th class="tbA" style="width: 5%;" scope="col">EQUIPO</th>
+        <th class="tbA" style="width: 2%;" scope="col">G</th>
+        <th class="tbA" style="width: 2%;" scope="col">P</th>
+        <th class="tbA" style="width: 2%;" scope="col">.pct</th>
+      </tr>
+    </thead>
+
+    <!-- <table class="table table-hover "> -->
+      <tbody class="table-header2">
+          <tr *ngFor="let position of ClLeague ">
+            <td class="tb1" style="width: 5%;"><img class="tb1" src="{{'../../../../assets/'+position.team.id +'.png'}}" alt=""></td>
+             <td class="tb2" style="width: 2%;">{{position.leagueRecord.wins}}</td>
+             <td class="tb2" style="width: 2%;">{{position.leagueRecord.losses}}</td>
+             <td class="tb3" style="width: 2%;">{{position.leagueRecord.pct}}</td>
+      </tbody>
+
+  </table>
+</div>
+

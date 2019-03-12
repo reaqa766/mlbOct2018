@@ -17,7 +17,7 @@ export class PlayerinfoComponent implements OnInit {
   public players = [];
   public playersSort = [];
   // Cambiar  a false cuando este en linea
-  isOffline = true;
+  isOffline = false;
   groups: any;
   selectedGroup: any;
   elarray: any;
@@ -89,10 +89,8 @@ export class PlayerinfoComponent implements OnInit {
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
     if (!this.isOffline) {
-      // tslint:disable-next-line:prefer-const
       let InfoObsPlayer = this.playerService.getAllPlayersActives();
       let index = 0;
-      // tslint:disable-next-line:prefer-const
       for (let obs of InfoObsPlayer) {
         obs.pipe(take(1)).subscribe(res => {
           this.players.push(res);
@@ -102,10 +100,8 @@ export class PlayerinfoComponent implements OnInit {
               Object.assign(newPlayer, player.people[0]);
               return newPlayer;
             });
-            // tslint:disable-next-line:prefer-const
             for (let jugador of this.players) {
               // console.log('Comparando: '+jugador.id+' con '+this.idplayer);
-              // tslint:disable-next-line:triple-equals
               if (jugador.id == this.idplayer) {
                 // console.log('items4', jugador.fullName);
                 this.player = jugador;
