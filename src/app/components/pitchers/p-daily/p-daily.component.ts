@@ -38,19 +38,6 @@ export class PDailyComponent implements OnInit {
   pagedItems: any[];
 
 
-//   playersList = [
-//     {name: 'Jose Altuve',
-//     position : 'segunda base'},
-
-//     {name : 'Gleyber Torres',
-//     position : 'segunda base'},
-
-//     {name : 'Ronald Acuña Jr.',
-//     position : 'Leftfield'},
-
-//     {name : 'Ender Inciarte',
-//     position : 'Centerfield'}
-//  ];
 
   isLoading: boolean;
 
@@ -82,7 +69,11 @@ getPlayersMap() {
           const newPlayer: Players = {};
           Object.assign(newPlayer, player.people[0]);
           return newPlayer;
-        })
+        });
+        // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
+        this.players = this.players.filter(player =>
+           player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0)
+         // se ordenan por nombre
         .sort(({fullName: a}, {fullName: b}) => {
           if (a > b) {
             return 1;
@@ -105,22 +96,19 @@ getPlayersMap() {
 
   }
 
-  onSearchChange() {
-    if (this.searchText) {
-      this.allItems = this.players.filter(player =>
-        // player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
-        player.fullName && player.fullName.toLowerCase().includes(this.searchText));
-        // (player.nickName && player.nickName.toLowerCase().includes(this.searchText))  ||
-        // player.mlbDebutDate.includes(this.searchText));
-        this.setPage(this.pager.currentPage);
-      } else {
-          this.allItems = this.players;
-          this.setPage(this.pager.currentPage);
+  // onSearchChange() {
+  //   if (this.searchText) {
+  //     this.allItems = this.players.filter(player =>
+  //       player.fullName && player.fullName.toLowerCase().includes(this.searchText));
+  //       this.setPage(this.pager.currentPage);
+  //     } else {
+  //         this.allItems = this.players;
+  //         this.setPage(this.pager.currentPage);
 
-        }
-        return this.allItems;
+  //       }
+  //       return this.allItems;
 
-      }
+  //     }
 
   setPage(page: number) {
     // console.log('Changing to page '+page);

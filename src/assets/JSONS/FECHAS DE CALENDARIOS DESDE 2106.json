@@ -1,0 +1,57 @@
+{
+    "copyright" : "Copyright 2019 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt",
+    "seasons" : [ {
+      "seasonId" : "2015",
+      "hasWildcard" : true,
+      "regularSeasonStartDate" : "2015-04-05",
+      "regularSeasonEndDate" : "2015-10-04",
+      "preSeasonStartDate" : "2015-03-01",
+      "preSeasonEndDate" : "2015-04-04",
+      "postSeasonStartDate" : "2015-10-06",
+      "postSeasonEndDate" : "2015-11-01",
+      "seasonStartDate" : "2015-03-01",
+      "seasonEndDate" : "2015-11-01"
+    }, {
+      "seasonId" : "2016",
+      "hasWildcard" : true,
+      "regularSeasonStartDate" : "2016-04-03",
+      "regularSeasonEndDate" : "2016-10-02",
+      "preSeasonStartDate" : "2016-02-28",
+      "preSeasonEndDate" : "2016-04-03",
+      "postSeasonStartDate" : "2016-10-04",
+      "postSeasonEndDate" : "2016-11-02",
+      "seasonStartDate" : "2016-02-28",
+      "seasonEndDate" : "2016-11-02"
+    }, {
+      "seasonId" : "2017",
+      "hasWildcard" : true,
+      "regularSeasonStartDate" : "2017-04-02",
+      "regularSeasonEndDate" : "2017-10-01",
+      "preSeasonStartDate" : "2017-02-22",
+      "preSeasonEndDate" : "2017-04-01",
+      "postSeasonStartDate" : "2017-10-03",
+      "postSeasonEndDate" : "2017-11-01",
+      "seasonStartDate" : "2017-02-22",
+      "seasonEndDate" : "2017-11-01"
+    }, {
+      "seasonId" : "2018",
+      "hasWildcard" : true,
+      "regularSeasonStartDate" : "2018-03-29",
+      "regularSeasonEndDate" : "2018-10-01",
+      "preSeasonStartDate" : "2018-02-21",
+      "preSeasonEndDate" : "2018-03-27",
+      "postSeasonStartDate" : "2018-10-02",
+      "postSeasonEndDate" : "2018-10-28",
+      "seasonStartDate" : "2018-02-21",
+      "seasonEndDate" : "2018-10-28"
+    }, {
+      "seasonId" : "2019",
+      "hasWildcard" : true,
+      "regularSeasonStartDate" : "2019-03-20",
+      "regularSeasonEndDate" : "2019-09-29",
+      "preSeasonStartDate" : "2019-02-21",
+      "preSeasonEndDate" : "2019-03-26",
+      "seasonStartDate" : "2019-02-21",
+      "seasonEndDate" : "2019-09-29"
+    } ]
+  }

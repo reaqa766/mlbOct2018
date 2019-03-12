@@ -1,0 +1,151 @@
+<div class="container_players_actives"></div>
+<div class="container-actives">
+  <h1 class="actives-title">LIDERES</h1>
+</div>
+
+<!-- <p class="title-position"> SPRING T. 2019 </p> -->
+<!-- <p class="title-position"> TEMP. 2019 </p> -->
+
+<!-- LOADER -->
+<!-- <div *ngIf="!allItems">
+  <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
+  <p class="spiner_load">CARGANDO</p>
+</div> -->
+
+    <!-- LIDERES AVERAGE -->
+<div class="container_grid" *ngIf="!isLoading">
+    <h4 class="subtitulo_lideres1 sub_lideres">AVERAGE</h4>
+  <table class="table table-hover  text-center tableAVG">
+
+    <thead class="table-header">
+      <tr>
+        <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
+        <th class="tbA" style="width: 3%;" scope="col">VB</th>
+        <th class="tbA" style="width: 3%;" scope="col">HITS</th>
+        <th class="tbA" style="width: 3%;" scope="col">HR</th>
+        <th class="tbA1" style="width: 3%;" scope="col">AVG</th>
+      </tr>
+    </thead>
+    <!-- <table class="table table-hover "> -->
+      <tbody class="table-header2">
+          <tr *ngFor="let jugador of filtroTopCinco('avg')">
+            <td class="tb11" style="width: 5%;">{{jugador.firstLastName}}</td>
+            <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+            <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.hits}}</td>
+            <td class="tb3" style="width: 2%;">{{jugador.stats[0].splits[0].stat.homeRuns}}</td>
+            <td class="tb2A" style="width: 2%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+      </tbody>
+
+  </table>
+
+      <!-- LIDERES HRs -->
+
+      <h4 class="subtitulo_lideres2 sub_lideres">JONRONES</h4>
+  <table class="table table-hover  text-center tableHR">
+      <thead class="table-header">
+      <tr>
+        <th class="tbAA" style="width: 5%;" scope="col">JUGADOR</th>
+        <th class="tbA" style="width: 2%;" scope="col">VB</th>
+        <th class="tbA" style="width: 2%;" scope="col">AVG</th>
+        <th class="tbA1" style="width: 2%;" scope="col">HR</th>
+      </tr>
+    </thead>
+
+    <!-- <table class="table table-hover "> -->
+      <tbody class="table-header2">
+        <tr *ngFor="let jugador of filtroTopCinco('homeRuns')">
+          <td class="tb11" style="width: 5%;">{{jugador.firstLastName}}</td>
+          <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+          <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+           <td class="tb2A" style="width: 2%;">{{jugador.stats[0].splits[0].stat.homeRuns}}</td>
+      </tbody>
+
+  </table>
+  <h4 class="subtitulo_lideres3 sub_lideres">DOBLES</h4>
+  <table class="table table-hover  text-center tableDOBLES">
+      <thead class="table-header">
+      <tr>
+        <th class="tbAA" style="width: 5%;" scope="col">JUGADOR</th>
+        <th class="tbA" style="width: 2%;" scope="col">VB</th>
+        <th class="tbA" style="width: 2%;" scope="col">AVG</th>
+        <th class="tbA1" style="width: 2%;" scope="col">Dobles</th>
+      </tr>
+    </thead>
+
+    <!-- <table class="table table-hover "> -->
+      <tbody class="table-header2">
+        <tr *ngFor="let jugador of filtroTopCinco('doubles')">
+          <td class="tb11" style="width: 5%;">{{jugador.firstLastName}}</td>
+          <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+          <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+           <td class="tb2A" style="width: 2%;">{{jugador.stats[0].splits[0].stat.doubles}}</td>
+      </tbody>
+
+  </table>
+  <h4 class="subtitulo_lideres4 sub_lideres">TRIPLES</h4>
+  <table class="table table-hover  text-center tableTRIPLES">
+      <thead class="table-header">
+      <tr>
+        <th class="tbAA" style="width: 5%;" scope="col">JUGADOR</th>
+        <th class="tbA" style="width: 2%;" scope="col">VB</th>
+        <th class="tbA" style="width: 2%;" scope="col">AVG</th>
+        <th class="tbA1" style="width: 2%;" scope="col">TRIPLES</th>
+      </tr>
+    </thead>
+
+    <!-- <table class="table table-hover "> -->
+      <tbody class="table-header2">
+        <tr *ngFor="let jugador of filtroTopCinco('triples')">
+          <td class="tb11" style="width: 5%;">{{jugador.firstLastName}}</td>
+          <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+          <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+           <td class="tb2A" style="width: 2%;">{{jugador.stats[0].splits[0].stat.triples}}</td>
+      </tbody>
+
+  </table>
+  <h4 class="subtitulo_lideres5 sub_lideres">B. ROBADAS</h4>
+  <table class="table table-hover  text-center tableBR">
+      <thead class="table-header">
+      <tr>
+        <th class="tbAA" style="width: 5%;" scope="col">JUGADOR</th>
+        <th class="tbA" style="width: 2%;" scope="col">VB</th>
+        <th class="tbA" style="width: 2%;" scope="col">AVG</th>
+        <th class="tbA1" style="width: 2%;" scope="col">BR</th>
+      </tr>
+    </thead>
+
+    <!-- <table class="table table-hover "> -->
+      <tbody class="table-header2 ">
+        <tr *ngFor="let jugador of filtroTopCinco('stolenBases')">
+          <td class="tb11" style="width: 5%;">{{jugador.firstLastName}}</td>
+          <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+          <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+          <td class="tb2A" style="width: 2%;">{{jugador.stats[0].splits[0].stat.stolenBases}}</td>
+      </tbody>
+
+  </table>
+  <h4 class="subtitulo_lideres6 sub_lideres">HITS</h4>
+  <table class="table table-hover  text-center tableHITS">
+      <thead class="table-header">
+      <tr>
+        <th class="tbAA" style="width: 5%;" scope="col">JUGADOR</th>
+        <th class="tbA" style="width: 2%;" scope="col">VB</th>
+        <th class="tbA" style="width: 2%;" scope="col">AVG</th>
+        <th class="tbA1" style="width: 2%;" scope="col">HITS</th>
+      </tr>
+    </thead>
+
+    <!-- <table class="table table-hover "> -->
+      <tbody class="table-header2">
+        <tr *ngFor="let jugador of filtroTopCinco('hits')">
+          <td class="tb11" style="width: 5%;">{{jugador.firstLastName}}</td>
+          <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+          <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+           <td class="tb2A" style="width: 2%;">{{jugador.stats[0].splits[0].stat.hits}}</td>
+      </tbody>
+
+  </table>
+  <div class="espacioInferior"></div>
+</div>
+
+

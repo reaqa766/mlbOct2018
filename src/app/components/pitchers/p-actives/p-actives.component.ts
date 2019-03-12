@@ -87,7 +87,11 @@ export class PActivesComponent implements OnInit {
             const newPlayer: Players = {};
             Object.assign(newPlayer, player.people[0]);
             return newPlayer;
-          })
+          });
+         // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
+         this.players = this.players.filter(player =>
+         player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0)
+         // se ordenan por nombre
             .sort(({ fullName: a }, { fullName: b }) => {
               if (a > b) {
                 return 1;

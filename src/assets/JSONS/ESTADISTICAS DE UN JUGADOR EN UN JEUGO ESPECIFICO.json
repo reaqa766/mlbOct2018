@@ -1,0 +1,538 @@
+{
+    "copyright" : "Copyright 2019 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt",
+    "stats" : [ {
+      "splits" : [ {
+        "stat" : {
+          "assists" : 2,
+          "putOuts" : 2,
+          "errors" : 0,
+          "chances" : 4,
+          "fielding" : ".000",
+          "caughtStealing" : 0,
+          "passedBall" : 0,
+          "stolenBases" : 0,
+          "stolenBasePercentage" : ".---",
+          "pickoffs" : 0
+        },
+        "type" : "gameLog",
+        "group" : "fielding"
+      }, {
+        "stat" : { },
+        "type" : "gameLog",
+        "group" : "pitching"
+      }, {
+        "stat" : {
+          "gamesPlayed" : 1,
+          "flyOuts" : 0,
+          "groundOuts" : 0,
+          "runs" : 1,
+          "doubles" : 0,
+          "triples" : 0,
+          "homeRuns" : 1,
+          "strikeOuts" : 0,
+          "baseOnBalls" : 0,
+          "intentionalWalks" : 0,
+          "hits" : 2,
+          "hitByPitch" : 0,
+          "atBats" : 5,
+          "caughtStealing" : 0,
+          "stolenBases" : 0,
+          "groundIntoDoublePlay" : 0,
+          "groundIntoTriplePlay" : 0,
+          "totalBases" : 5,
+          "rbi" : 1,
+          "leftOnBase" : 2,
+          "sacBunts" : 0,
+          "sacFlies" : 0,
+          "catchersInterference" : 0,
+          "pickoffs" : 0
+        },
+        "type" : "gameLog",
+        "group" : "hitting"
+      } ]
+    }, {
+      "type" : {
+        "displayName" : "vsPlayer5Y"
+      },
+      "group" : {
+        "displayName" : "hitting"
+      },
+      "splits" : [ {
+        "stat" : {
+          "groundOuts" : 1,
+          "runs" : 1,
+          "doubles" : 0,
+          "triples" : 0,
+          "homeRuns" : 0,
+          "strikeOuts" : 2,
+          "baseOnBalls" : 1,
+          "intentionalWalks" : 1,
+          "hits" : 1,
+          "hitByPitch" : 0,
+          "avg" : ".250",
+          "atBats" : 4,
+          "obp" : ".400",
+          "slg" : ".250",
+          "ops" : ".650",
+          "caughtStealing" : 0,
+          "stolenBases" : 1,
+          "stolenBasePercentage" : "1.000",
+          "groundIntoDoublePlay" : 0,
+          "numberOfPitches" : 14,
+          "plateAppearances" : 5,
+          "totalBases" : 1,
+          "rbi" : 0,
+          "sacBunts" : 0,
+          "sacFlies" : 0
+        },
+        "gameType" : "R",
+        "pitcher" : {
+          "id" : 532077,
+          "fullName" : "Roberto Osuna",
+          "link" : "/api/v1/people/532077"
+        },
+        "batter" : {
+          "id" : 514888,
+          "fullName" : "José Altuve",
+          "link" : "/api/v1/people/514888"
+        }
+      } ]
+    }, {
+      "type" : {
+        "displayName" : "vsPlayer5Y"
+      },
+      "group" : {
+        "displayName" : "pitching"
+      },
+      "splits" : [ ]
+    }, {
+      "type" : {
+        "displayName" : "playLog"
+      },
+      "group" : {
+        "displayName" : "hitting"
+      },
+      "splits" : [ {
+        "stat" : {
+          "play" : {
+            "details" : {
+              "call" : {
+                "code" : "X",
+                "description" : "Hit Into Play - Out(s)"
+              },
+              "description" : "In play, runs(s)",
+              "code" : "E",
+              "ballColor" : "rgba(26, 86, 190, 1.0)",
+              "trailColor" : "rgba(188, 0, 33, 1.0)",
+              "isInPlay" : true,
+              "isStrike" : false,
+              "isBall" : false,
+              "type" : {
+                "code" : "FF",
+                "description" : "Four-Seam Fastball"
+              },
+              "awayScore" : 1,
+              "homeScore" : 0,
+              "hasReview" : false
+            },
+            "count" : {
+              "balls" : 0,
+              "strikes" : 0,
+              "outs" : 0,
+              "inning" : 1
+            },
+            "pitchData" : {
+              "startSpeed" : 91.2,
+              "endSpeed" : 82.9,
+              "nastyFactor" : 31.96,
+              "strikeZoneTop" : 3.0,
+              "strikeZoneBottom" : 1.47,
+              "coordinates" : {
+                "aY" : 30.11,
+                "aZ" : -12.33,
+                "pfxX" : 0.38,
+                "pfxZ" : -1.19,
+                "pX" : 0.06,
+                "pZ" : 2.23,
+                "vX0" : 6.38,
+                "vY0" : -132.48,
+                "vZ0" : -6.82,
+                "x" : 114.85,
+                "y" : 178.59,
+                "x0" : -1.96,
+                "y0" : 50.0,
+                "z0" : 5.75,
+                "aX" : -5.85
+              },
+              "breaks" : {
+                "breakAngle" : 18.0,
+                "breakLength" : 3.6,
+                "breakY" : 24.0,
+                "spinRate" : 2242,
+                "spinDirection" : 193
+              },
+              "zone" : 5,
+              "typeConfidence" : 2.0
+            },
+            "hitData" : {
+              "launchSpeed" : 98.61,
+              "launchAngle" : 35.59,
+              "totalDistance" : 363.86,
+              "trajectory" : "fly_ball",
+              "hardness" : "medium",
+              "location" : "7",
+              "coordinates" : {
+                "coordX" : 21.99,
+                "coordY" : 84.06
+              }
+            },
+            "index" : 0,
+            "pfxId" : "180911_224140",
+            "playId" : "6ca0e877-1db6-448a-b767-eaa92c0dbc16",
+            "pitchNumber" : 1,
+            "startTime" : "2018-09-11T22:41:26.000Z",
+            "endTime" : "2018-09-11T22:41:47.000Z",
+            "isPitch" : true,
+            "type" : "pitch"
+          }
+        }
+      }, {
+        "stat" : {
+          "play" : {
+            "details" : {
+              "call" : {
+                "code" : "X",
+                "description" : "Hit Into Play - Out(s)"
+              },
+              "description" : "In play, out(s)",
+              "code" : "X",
+              "ballColor" : "rgba(26, 86, 190, 1.0)",
+              "trailColor" : "rgba(188, 0, 33, 1.0)",
+              "isInPlay" : true,
+              "isStrike" : false,
+              "isBall" : false,
+              "type" : {
+                "code" : "FF",
+                "description" : "Four-Seam Fastball"
+              },
+              "awayScore" : 3,
+              "homeScore" : 0,
+              "hasReview" : false
+            },
+            "count" : {
+              "balls" : 2,
+              "strikes" : 1,
+              "outs" : 3,
+              "inning" : 2
+            },
+            "pitchData" : {
+              "startSpeed" : 92.3,
+              "endSpeed" : 84.5,
+              "nastyFactor" : 34.22,
+              "strikeZoneTop" : 3.09,
+              "strikeZoneBottom" : 1.47,
+              "coordinates" : {
+                "aY" : 28.4,
+                "aZ" : -13.97,
+                "pfxX" : 0.65,
+                "pfxZ" : -1.25,
+                "pX" : 0.53,
+                "pZ" : 2.5,
+                "vX0" : 8.2,
+                "vY0" : -134.12,
+                "vZ0" : -5.94,
+                "x" : 96.9,
+                "y" : 171.36,
+                "x0" : -1.88,
+                "y0" : 50.0,
+                "z0" : 5.73,
+                "aX" : -9.61
+              },
+              "breaks" : {
+                "breakAngle" : 27.6,
+                "breakLength" : 3.6,
+                "breakY" : 24.0,
+                "spinRate" : 2413,
+                "spinDirection" : 204
+              },
+              "zone" : 6,
+              "typeConfidence" : 2.0
+            },
+            "hitData" : {
+              "launchSpeed" : 104.61,
+              "launchAngle" : 18.69,
+              "totalDistance" : 348.23,
+              "trajectory" : "line_drive",
+              "hardness" : "hard",
+              "location" : "8",
+              "coordinates" : {
+                "coordX" : 119.46,
+                "coordY" : 52.34
+              }
+            },
+            "index" : 3,
+            "pfxId" : "180911_231642",
+            "playId" : "60fd0ebe-cadf-40ad-8aed-acc2078e390f",
+            "pitchNumber" : 4,
+            "startTime" : "2018-09-11T23:16:32.000Z",
+            "endTime" : "2018-09-11T23:16:45.000Z",
+            "isPitch" : true,
+            "type" : "pitch"
+          }
+        }
+      }, {
+        "stat" : {
+          "play" : {
+            "details" : {
+              "call" : {
+                "code" : "X",
+                "description" : "Hit Into Play - Out(s)"
+              },
+              "description" : "In play, no out",
+              "code" : "D",
+              "ballColor" : "rgba(26, 86, 190, 1.0)",
+              "trailColor" : "rgba(188, 0, 33, 1.0)",
+              "isInPlay" : true,
+              "isStrike" : false,
+              "isBall" : false,
+              "type" : {
+                "code" : "FF",
+                "description" : "Four-Seam Fastball"
+              },
+              "awayScore" : 5,
+              "homeScore" : 0,
+              "hasReview" : false,
+              "runnerGoing" : true
+            },
+            "count" : {
+              "balls" : 0,
+              "strikes" : 2,
+              "outs" : 2,
+              "inning" : 4
+            },
+            "pitchData" : {
+              "startSpeed" : 90.6,
+              "endSpeed" : 83.2,
+              "nastyFactor" : 33.65,
+              "strikeZoneTop" : 3.09,
+              "strikeZoneBottom" : 1.47,
+              "coordinates" : {
+                "aY" : 26.71,
+                "aZ" : -16.26,
+                "pfxX" : 0.68,
+                "pfxZ" : -1.48,
+                "pX" : 0.31,
+                "pZ" : 2.83,
+                "vX0" : 7.63,
+                "vY0" : -131.67,
+                "vZ0" : -4.53,
+                "x" : 105.07,
+                "y" : 162.14,
+                "x0" : -1.93,
+                "y0" : 50.0,
+                "z0" : 5.77,
+                "aX" : -9.4
+              },
+              "breaks" : {
+                "breakAngle" : 25.2,
+                "breakLength" : 4.8,
+                "breakY" : 24.0,
+                "spinRate" : 2337,
+                "spinDirection" : 207
+              },
+              "zone" : 3,
+              "typeConfidence" : 2.0
+            },
+            "hitData" : {
+              "launchSpeed" : 103.25,
+              "launchAngle" : 4.96,
+              "totalDistance" : 241.82,
+              "trajectory" : "ground_ball",
+              "hardness" : "medium",
+              "location" : "8",
+              "coordinates" : {
+                "coordX" : 122.52,
+                "coordY" : 79.07
+              }
+            },
+            "index" : 4,
+            "pfxId" : "180911_235415",
+            "playId" : "4048d7c1-5d8e-42fd-97f9-a8fac4fa7d13",
+            "pitchNumber" : 3,
+            "startTime" : "2018-09-11T23:54:03.000Z",
+            "endTime" : "2018-09-11T23:54:32.000Z",
+            "isPitch" : true,
+            "type" : "pitch"
+          }
+        }
+      }, {
+        "stat" : {
+          "play" : {
+            "details" : {
+              "call" : {
+                "code" : "X",
+                "description" : "Hit Into Play - Out(s)"
+              },
+              "description" : "In play, out(s)",
+              "code" : "X",
+              "ballColor" : "rgba(26, 86, 190, 1.0)",
+              "trailColor" : "rgba(0, 0, 254, 1.0)",
+              "isInPlay" : true,
+              "isStrike" : false,
+              "isBall" : false,
+              "type" : {
+                "code" : "SL",
+                "description" : "Slider"
+              },
+              "awayScore" : 5,
+              "homeScore" : 4,
+              "hasReview" : false
+            },
+            "count" : {
+              "balls" : 0,
+              "strikes" : 1,
+              "outs" : 3,
+              "inning" : 6
+            },
+            "pitchData" : {
+              "startSpeed" : 81.9,
+              "endSpeed" : 75.1,
+              "nastyFactor" : 45.24,
+              "strikeZoneTop" : 3.12,
+              "strikeZoneBottom" : 1.45,
+              "coordinates" : {
+                "aY" : 23.91,
+                "aZ" : -32.99,
+                "pfxX" : -0.44,
+                "pfxZ" : -3.53,
+                "pX" : 1.07,
+                "pZ" : 1.82,
+                "vX0" : 9.25,
+                "vY0" : -118.93,
+                "vZ0" : -0.41,
+                "x" : 76.35,
+                "y" : 189.72,
+                "x0" : -3.09,
+                "y0" : 50.0,
+                "z0" : 5.0,
+                "aX" : 2.31
+              },
+              "breaks" : {
+                "breakAngle" : 7.2,
+                "breakLength" : 9.6,
+                "breakY" : 24.0,
+                "spinRate" : 2443,
+                "spinDirection" : 81
+              },
+              "zone" : 14,
+              "typeConfidence" : 2.0
+            },
+            "hitData" : {
+              "launchSpeed" : 67.15,
+              "launchAngle" : 16.22,
+              "totalDistance" : 135.85,
+              "trajectory" : "line_drive",
+              "hardness" : "medium",
+              "location" : "6",
+              "coordinates" : {
+                "coordX" : 110.83,
+                "coordY" : 145.62
+              }
+            },
+            "index" : 3,
+            "pfxId" : "180912_005547",
+            "playId" : "fe4ce8ff-7f80-43ce-b6f6-d661c7b62d29",
+            "pitchNumber" : 2,
+            "startTime" : "2018-09-12T00:55:40.000Z",
+            "endTime" : "2018-09-12T00:56:00.000Z",
+            "isPitch" : true,
+            "type" : "pitch"
+          }
+        }
+      }, {
+        "stat" : {
+          "play" : {
+            "details" : {
+              "call" : {
+                "code" : "X",
+                "description" : "Hit Into Play - Out(s)"
+              },
+              "description" : "In play, out(s)",
+              "code" : "X",
+              "ballColor" : "rgba(26, 86, 190, 1.0)",
+              "trailColor" : "rgba(0, 0, 254, 1.0)",
+              "isInPlay" : true,
+              "isStrike" : false,
+              "isBall" : false,
+              "type" : {
+                "code" : "SL",
+                "description" : "Slider"
+              },
+              "awayScore" : 5,
+              "homeScore" : 4,
+              "hasReview" : false
+            },
+            "count" : {
+              "balls" : 0,
+              "strikes" : 0,
+              "outs" : 3,
+              "inning" : 8
+            },
+            "pitchData" : {
+              "startSpeed" : 88.7,
+              "endSpeed" : 81.8,
+              "nastyFactor" : 72.25,
+              "strikeZoneTop" : 3.1,
+              "strikeZoneBottom" : 1.47,
+              "coordinates" : {
+                "aY" : 24.99,
+                "aZ" : -22.43,
+                "pfxX" : 0.66,
+                "pfxZ" : -2.21,
+                "pX" : 0.38,
+                "pZ" : 1.27,
+                "vX0" : 7.47,
+                "vY0" : -128.71,
+                "vZ0" : -6.91,
+                "x" : 102.34,
+                "y" : 204.54,
+                "x0" : -1.89,
+                "y0" : 50.0,
+                "z0" : 5.71,
+                "aX" : -8.55
+              },
+              "breaks" : {
+                "breakAngle" : 16.8,
+                "breakLength" : 6.0,
+                "breakY" : 24.0,
+                "spinRate" : 2005,
+                "spinDirection" : 219
+              },
+              "zone" : 14,
+              "typeConfidence" : 2.0
+            },
+            "hitData" : {
+              "launchSpeed" : 79.19,
+              "launchAngle" : 14.15,
+              "totalDistance" : 140.22,
+              "trajectory" : "line_drive",
+              "hardness" : "medium",
+              "location" : "6",
+              "coordinates" : {
+                "coordX" : 103.86,
+                "coordY" : 147.31
+              }
+            },
+            "index" : 0,
+            "pfxId" : "180912_014704",
+            "playId" : "d46abc50-a9db-4509-b4ae-1e5eb97e47f4",
+            "pitchNumber" : 1,
+            "startTime" : "2018-09-12T01:47:03.000Z",
+            "endTime" : "2018-09-12T01:47:16.000Z",
+            "isPitch" : true,
+            "type" : "pitch"
+          }
+        }
+      } ]
+    } ]
+  }

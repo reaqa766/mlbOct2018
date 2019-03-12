@@ -80,6 +80,10 @@ import { InfogShowComponent } from './components/infographics/infog-show/infog-s
 import { PlayerWeekComponent } from './components/player-week/player-week.component';
 import { PitcherrWeekComponent } from './components/pitcherr-week/pitcherr-week.component';
 import { PositionComponent } from './components/players/byposition/position/position.component';
+import { PruebajsonsComponent } from './components/prueba/pruebajsons/pruebajsons.component';
+import { LideresComponent } from './components/lideres/lideres.component';
+import { LideresPitchersComponent } from './components/lideres/lideres-pitchers/lideres-pitchers.component';
+import { PosicionesComponent } from './components/posiciones/posiciones.component';
 
 @NgModule({
   declarations: [
@@ -132,7 +136,11 @@ import { PositionComponent } from './components/players/byposition/position/posi
     InfogShowComponent,
     PlayerWeekComponent,
     PitcherrWeekComponent,
-    PositionComponent
+    PositionComponent,
+    PruebajsonsComponent,
+    LideresComponent,
+    LideresPitchersComponent,
+    PosicionesComponent
 
   ],
   imports: [
