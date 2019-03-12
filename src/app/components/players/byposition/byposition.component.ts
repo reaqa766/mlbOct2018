@@ -31,6 +31,7 @@ export class BypositionComponent implements OnInit {
   n10: number = 5;
 
   public allItems: any[];
+  public allItemsFiltered: any[];
   // pager object
   pager: any = {};
 
@@ -66,8 +67,13 @@ export class BypositionComponent implements OnInit {
             Object.assign(newPlayer, player.people[0]);
             return newPlayer;
           });
+<<<<<<< HEAD
           // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
           this.players = this.players.filter(player =>
+=======
+         // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
+         this.players = this.players.filter(player =>
+>>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
             player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0)
             // se ordenan por nombre
             .sort(({ fullName: a }, { fullName: b }) => {
@@ -99,6 +105,7 @@ export class BypositionComponent implements OnInit {
         // player.fullName.toLowerCase().includes(position) ||
         player.primaryPosition.name.toLowerCase().includes(position));
         this.setPage(this.pager.currentPage);
+        
       } else {
           this.allItems = this.players;
           this.setPage(this.pager.currentPage);
@@ -109,6 +116,8 @@ export class BypositionComponent implements OnInit {
   setPage(page: number) {
     // get pager object from service
     this.pager = this.pagerService.getPager(this.allItems.length, page);
+    console.log('pager', this.pager);
+    
 
     // get current page of items
     this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);

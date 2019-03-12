@@ -40,9 +40,9 @@ import { PlayerWeekComponent } from './components/player-week/player-week.compon
 import { PitcherrWeekComponent } from './components/pitcherr-week/pitcherr-week.component';
 import { PlayerOfTheWeekComponent } from './components/player-of-the-week/player-of-the-week.component';
 
-
 import { PruebajsonsComponent } from './components/prueba/pruebajsons/pruebajsons.component';
 import { PosicionesComponent } from './components/posiciones/posiciones.component';
+// import { PosicionesComponent } from './components/posiciones/posiciones.component';
 import { LideresComponent } from './components/lideres/lideres.component';
 
 // import { SharedModule } from '../shared/shared.module'

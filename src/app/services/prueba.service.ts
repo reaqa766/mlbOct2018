@@ -165,4 +165,8 @@ export class PruebaService {
     return dataAllPlayers;
   }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324

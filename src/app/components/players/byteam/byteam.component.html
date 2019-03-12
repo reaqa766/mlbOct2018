@@ -10,6 +10,7 @@
   <p class="spiner_load">CARGANDO</p>
 </div>
 
+<<<<<<< HEAD
 <div *ngIf="allItems">
   <div class="container-position" *ngIf='buscando'>
     <main class="liga_americana">
@@ -26,6 +27,11 @@
                   [src]="'../../../assets/'  + team.code + '.png'" alt="Team Logo" data-hover="tooltip" data-placement="top"
                   title="Pincha para ver Jugadores"></a>
             </div>
+=======
+              <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
+                [src]="'../../../assets/'  + team.code + '.svg'" alt="Team Logo" data-hover="tooltip" data-placement="top"
+                title="Pincha para ver Jugadores"></a>
+>>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
           </div>
         </div>
       </div>
@@ -38,10 +44,15 @@
             <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
               <a>
 
+<<<<<<< HEAD
                 <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
                   [src]="'../../../assets/'  + team.code + '.png'" alt="Team Logo" data-hover="tooltip" data-placement="top"
                   title="Pincha para ver Jugadores"></a>
             </div>
+=======
+              <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" [src]="'../../../assets/'  + team.code + '.svg'"
+                alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
+>>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
           </div>
         </div>
       </div>
@@ -54,10 +65,15 @@
             <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
               <a>
 
+<<<<<<< HEAD
                 <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
                   [src]="'../../../assets/'  + team.code + '.png'" alt="Team Logo" data-hover="tooltip" data-placement="top"
                   title="Pincha para ver Jugadores"></a>
             </div>
+=======
+              <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" [src]="'../../../assets/'  + team.code + '.svg'"
+                alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
+>>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
           </div>
         </div>
       </div>
@@ -69,10 +85,15 @@
             <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
               <a>
 
+<<<<<<< HEAD
                 <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
                   [src]="'../../../assets/'  + team.code + '.png'" alt="Team Logo" data-hover="tooltip" data-placement="top"
                   title="Pincha para ver Jugadores"></a>
             </div>
+=======
+              <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" [src]="'../../../assets/'  + team.code + '.svg'"
+                alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
+>>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
           </div>
         </div>
       </div>
@@ -85,10 +106,15 @@
             <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
               <a>
 
+<<<<<<< HEAD
                 <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
                   [src]="'../../../assets/'  + team.code + '.png'" alt="Team Logo" data-hover="tooltip" data-placement="top"
                   title="Pincha para ver Jugadores"></a>
             </div>
+=======
+              <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" [src]="'../../../assets/'  + team.code + '.svg'"
+                alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
+>>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
           </div>
         </div>
       </div>
@@ -101,10 +127,15 @@
             <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
               <a>
 
+<<<<<<< HEAD
                 <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
                   [src]="'../../../assets/'  + team.code + '.png'" alt="Team Logo" data-hover="tooltip" data-placement="top"
                   title="Pincha para ver Jugadores"></a>
             </div>
+=======
+              <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" [src]="'../../../assets/'  + team.code + '.svg'"
+                alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
+>>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
           </div>
         </div>
       </div>
@@ -119,20 +150,32 @@
       <div class="container-actives_cards ">
         <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
           <div class="card card1 img_picture_box" style="width: 95%;" *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
+<<<<<<< HEAD
             <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/Jugadores Spring T 2019/Todos/{{player.id}}.jpg"
                 alt="Jugador de Grandes Ligas"></a>
+=======
+              <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top " src="../../../../assets/Jugadores Spring T 2019/Todos/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
+>>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
             <div class="card-body">
               <h5 class="card-title">{{player.fullName}}</h5>
+              <h5 class="card-title2">{{player.primaryPosition.name}}</h5>
             </div>
           </div>
         </ng-container>
         <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
+<<<<<<< HEAD
           <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
             <a routerLink="/{{player.primaryPosition.name === 'Pitcher' ? 'pitcherinfo' : 'playerinfo'}}/{{ player.id }} "><img
                 class="card-img-top" src="../../../../assets/Jugadores Spring T 2019/Todos/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
             <!-- <a routerLink="/pitcherinfo/{{player.id}}"><img class="card-img-top" src="../../../../assets/Jugadores Spring T 2019/Todos/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a> -->
+=======
+          <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*7)">
+              <a routerLink="/{{player.primaryPosition.name === 'Pitcher' ? 'pitcherinfo' : 'playerinfo'}}/{{ player.id }} "><img class="card-img-top" src="../../../../assets/Jugadores Spring T 2019/Todos/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
+              <!-- <a routerLink="/pitcherinfo/{{player.id}}"><img class="card-img-top" src="../../../../assets/Jugadores Spring T 2019/Todos/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a> -->
+>>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
             <div class="card-body">
               <h5 class="card-title">{{player.fullName}} </h5>
+              <h5 class="card-title2">{{player.primaryPosition.name}}</h5>
             </div>
           </div>
         </ng-container>
@@ -140,19 +183,19 @@
       <div class="container paginator">
         <div class="text-center">
           <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
-            <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+            <li *ngIf = "pager.currentPage !== 1" [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
               <a (click)="setPage(1)" class="page-link paginator_text">First</a>
             </li>
-            <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+            <li *ngIf = "pager.currentPage !== 1" [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
               <a (click)="setPage(pager.currentPage - 1)" class="page-link paginator_text">Previous</a>
             </li>
             <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
               <a (click)="setPage(page)" class="page-link">{{page}}</a>
             </li>
-            <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+            <li *ngIf = "pager.currentPage !== pager.totalPages" [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
               <a (click)="setPage(pager.currentPage + 1)" class="page-link paginator_text">Next</a>
             </li>
-            <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+            <li *ngIf = "pager.currentPage !== pager.totalPages" [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
               <a (click)="setPage(pager.totalPages)" class="page-link paginator_text">Last</a>
             </li>
           </ul>

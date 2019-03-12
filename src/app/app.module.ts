@@ -81,9 +81,9 @@ import { PlayerWeekComponent } from './components/player-week/player-week.compon
 import { PitcherrWeekComponent } from './components/pitcherr-week/pitcherr-week.component';
 import { PositionComponent } from './components/players/byposition/position/position.component';
 import { PruebajsonsComponent } from './components/prueba/pruebajsons/pruebajsons.component';
-import { PosicionesComponent } from './components/posiciones/posiciones.component';
 import { LideresComponent } from './components/lideres/lideres.component';
 import { LideresPitchersComponent } from './components/lideres/lideres-pitchers/lideres-pitchers.component';
+import { PosicionesComponent } from './components/posiciones/posiciones.component';
 
 @NgModule({
   declarations: [
@@ -138,9 +138,9 @@ import { LideresPitchersComponent } from './components/lideres/lideres-pitchers/
     PitcherrWeekComponent,
     PositionComponent,
     PruebajsonsComponent,
-    PosicionesComponent,
     LideresComponent,
-    LideresPitchersComponent
+    LideresPitchersComponent,
+    PosicionesComponent
 
   ],
   imports: [
