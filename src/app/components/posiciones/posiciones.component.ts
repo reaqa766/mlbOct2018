@@ -24,8 +24,8 @@ export class PosicionesComponent implements OnInit {
 
 
   async ngOnInit() {
-    // this.data = CALEND1.dates[0].games;
-    this.data = (await this.posicionesService.getTeamPositions()).dates[0].games;
+    this.data = CALEND1.dates[0].games;
+    // this.data = (await this.posicionesService.getTeamPositions()).dates[0].games;
     this.ClLeague = [];
     this.GlLeague = [];
     for (const game of this.data) {
