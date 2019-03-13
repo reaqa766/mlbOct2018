@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-=======
-
->>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
 import { PlayersService } from '../../../services/players.service';
 // import { PruebaService } from '../../services/prueba.service';
 import { take } from 'rxjs/operators';
