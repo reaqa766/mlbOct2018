@@ -9,139 +9,82 @@
   <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
   <p class="spiner_load">CARGANDO</p>
 </div>
-
-<<<<<<< HEAD
-<div *ngIf="allItems">
-  <div class="container-position" *ngIf='buscando'>
-    <main class="liga_americana">
-      <div class="container_americana_este container_border">
-        <h3 class="titulo_liga">Americana Este</h3>
-        <div class="team_logo">
-
-          <div *ngFor="let team of teamsAmE; let i=index">
-            <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
-              <a>
-                <!-- <a routerLink="/playerinfo/{{team.name}}"> -->
-
-                <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
-                  [src]="'../../../assets/'  + team.code + '.png'" alt="Team Logo" data-hover="tooltip" data-placement="top"
-                  title="Pincha para ver Jugadores"></a>
-            </div>
-=======
-              <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
-                [src]="'../../../assets/'  + team.code + '.svg'" alt="Team Logo" data-hover="tooltip" data-placement="top"
-                title="Pincha para ver Jugadores"></a>
->>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
-          </div>
-        </div>
+<main>
+  <div>
+    <div>
+      <div>
+        <a><img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" [src]="'../../../assets/'  + team.code + '.svg'"
+            alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
       </div>
-
-      <div class="container_americana_central container_border">
-        <h3 class="titulo_liga">Americana Central</h3>
-        <div class="team_logo">
-
-          <div *ngFor="let team of teamsAmC; let i=index">
-            <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
-              <a>
-
-<<<<<<< HEAD
-                <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
-                  [src]="'../../../assets/'  + team.code + '.png'" alt="Team Logo" data-hover="tooltip" data-placement="top"
-                  title="Pincha para ver Jugadores"></a>
-            </div>
-=======
-              <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" [src]="'../../../assets/'  + team.code + '.svg'"
-                alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
->>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
-          </div>
-        </div>
-      </div>
-
-      <div class="container_americana_oeste container_border">
-        <h3 class="titulo_liga">Americana Oeste</h3>
-        <div class="team_logo">
-
-          <div *ngFor="let team of teamsAmO; let i=index">
-            <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
-              <a>
-
-<<<<<<< HEAD
-                <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
-                  [src]="'../../../assets/'  + team.code + '.png'" alt="Team Logo" data-hover="tooltip" data-placement="top"
-                  title="Pincha para ver Jugadores"></a>
-            </div>
-=======
-              <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" [src]="'../../../assets/'  + team.code + '.svg'"
-                alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
->>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
-          </div>
-        </div>
-      </div>
-      <div class="container_nacional_este container_border">
-        <h3 class="titulo_liga">Nacional Este</h3>
-        <div class="team_logo">
-
-          <div *ngFor="let team of teamsNacE; let i=index">
-            <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
-              <a>
-
-<<<<<<< HEAD
-                <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
-                  [src]="'../../../assets/'  + team.code + '.png'" alt="Team Logo" data-hover="tooltip" data-placement="top"
-                  title="Pincha para ver Jugadores"></a>
-            </div>
-=======
-              <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" [src]="'../../../assets/'  + team.code + '.svg'"
-                alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
->>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
-          </div>
-        </div>
-      </div>
-
-      <div class="container_nacional_central container_border">
-        <h3 class="titulo_liga">Nacional Central</h3>
-        <div class="team_logo">
-
-          <div *ngFor="let team of teamsNacC; let i=index">
-            <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
-              <a>
-
-<<<<<<< HEAD
-                <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
-                  [src]="'../../../assets/'  + team.code + '.png'" alt="Team Logo" data-hover="tooltip" data-placement="top"
-                  title="Pincha para ver Jugadores"></a>
-            </div>
-=======
-              <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" [src]="'../../../assets/'  + team.code + '.svg'"
-                alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
->>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
-          </div>
-        </div>
-      </div>
-
-      <div class="container_nacional_oeste container_border">
-        <h3 class="titulo_liga">Nacional Oeste</h3>
-        <div class="team_logo">
-
-          <div *ngFor="let team of teamsNacO; let i=index">
-            <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
-              <a>
-
-<<<<<<< HEAD
-                <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
-                  [src]="'../../../assets/'  + team.code + '.png'" alt="Team Logo" data-hover="tooltip" data-placement="top"
-                  title="Pincha para ver Jugadores"></a>
-            </div>
-=======
-              <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" [src]="'../../../assets/'  + team.code + '.svg'"
-                alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
->>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
-          </div>
-        </div>
-      </div>
-
-    </main>
+    </div>
   </div>
+
+  <div class="container_americana_central container_border">
+    <h3 class="titulo_liga">Americana Central</h3>
+    <div class="team_logo">
+
+      <div *ngFor="let team of teamsAmC; let i=index">
+        <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
+          <a><img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" [src]="'../../../assets/'  + team.code + '.png'"
+              alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container_americana_oeste container_border">
+    <h3 class="titulo_liga">Americana Oeste</h3>
+    <div class="team_logo">
+
+      <div *ngFor="let team of teamsAmO; let i=index">
+        <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
+          <a><img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" [src]="'../../../assets/'  + team.code + '.png'"
+              alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container_nacional_este container_border">
+    <h3 class="titulo_liga">Nacional Este</h3>
+    <div class="team_logo">
+
+      <div *ngFor="let team of teamsNacE; let i=index">
+        <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
+          <a> <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" [src]="'../../../assets/'  + team.code + '.png'"
+              alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container_nacional_central container_border">
+    <h3 class="titulo_liga">Nacional Central</h3>
+    <div class="team_logo">
+
+      <div *ngFor="let team of teamsNacC; let i=index">
+        <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
+          <a><img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" [src]="'../../../assets/'  + team.code + '.png'"
+              alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container_nacional_oeste container_border">
+    <h3 class="titulo_liga">Nacional Oeste</h3>
+    <div class="team_logo">
+
+      <div *ngFor="let team of teamsNacO; let i=index">
+        <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
+          <a><img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" [src]="'../../../assets/'  + team.code + '.png'"
+              alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+<!-- </div> -->
 
 
   <div class="container-position-results" *ngIf='!buscando'>
@@ -150,12 +93,8 @@
       <div class="container-actives_cards ">
         <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
           <div class="card card1 img_picture_box" style="width: 95%;" *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
-<<<<<<< HEAD
             <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/Jugadores Spring T 2019/Todos/{{player.id}}.jpg"
                 alt="Jugador de Grandes Ligas"></a>
-=======
-              <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top " src="../../../../assets/Jugadores Spring T 2019/Todos/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
->>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
             <div class="card-body">
               <h5 class="card-title">{{player.fullName}}</h5>
               <h5 class="card-title2">{{player.primaryPosition.name}}</h5>
@@ -163,16 +102,10 @@
           </div>
         </ng-container>
         <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
-<<<<<<< HEAD
           <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
             <a routerLink="/{{player.primaryPosition.name === 'Pitcher' ? 'pitcherinfo' : 'playerinfo'}}/{{ player.id }} "><img
                 class="card-img-top" src="../../../../assets/Jugadores Spring T 2019/Todos/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
             <!-- <a routerLink="/pitcherinfo/{{player.id}}"><img class="card-img-top" src="../../../../assets/Jugadores Spring T 2019/Todos/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a> -->
-=======
-          <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*7)">
-              <a routerLink="/{{player.primaryPosition.name === 'Pitcher' ? 'pitcherinfo' : 'playerinfo'}}/{{ player.id }} "><img class="card-img-top" src="../../../../assets/Jugadores Spring T 2019/Todos/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
-              <!-- <a routerLink="/pitcherinfo/{{player.id}}"><img class="card-img-top" src="../../../../assets/Jugadores Spring T 2019/Todos/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a> -->
->>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
             <div class="card-body">
               <h5 class="card-title">{{player.fullName}} </h5>
               <h5 class="card-title2">{{player.primaryPosition.name}}</h5>
@@ -208,4 +141,4 @@
 
     </ng-container>
   </div>
-</div>
+<!-- </div> -->

@@ -63,17 +63,10 @@ export class PActivesComponent implements OnInit {
             Object.assign(newPlayer, player.people[0]);
             return newPlayer;
           });
-<<<<<<< HEAD
-          // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
-          this.players = this.players.filter(player =>
-          player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0)
-            // se ordenan por nombre
-=======
          // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
          this.players = this.players.filter(player =>
          player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0)
          // se ordenan por nombre
->>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
             .sort(({ fullName: a }, { fullName: b }) => {
               if (a > b) {
                 return 1;

@@ -1,21 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
-<<<<<<< HEAD
-
-=======
->>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
 import { PruebaService } from '../../services/prueba.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../interfaces/players';
 import CALEND1 from '../../../assets/JSONS/CALENDARIO_DIA_ESPECIFICO_JUEGOS';
 
 import { PagerService } from '../../../services/index';
-<<<<<<< HEAD
-
-
-=======
 import { PosicionesService } from 'src/app/services/posiciones.service';
->>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
 
 @Component({
   selector: 'app-posiciones',
@@ -29,20 +20,12 @@ export class PosicionesComponent implements OnInit {
 
 
 
-<<<<<<< HEAD
-  constructor(private playerService: PruebaService, private pagerService: PagerService) { }
-
-
-  ngOnInit() {
-    this.data = CALEND1.dates[0].games;
-=======
   constructor(private playerService: PruebaService, private pagerService: PagerService, private posicionesService: PosicionesService) { }
 
 
   async ngOnInit() {
-    // this.data = CALEND1.dates[0].games;
-    this.data = (await this.posicionesService.getTeamPositions()).dates[0].games;
->>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
+    this.data = CALEND1.dates[0].games;
+    // this.data = (await this.posicionesService.getTeamPositions()).dates[0].games;
     this.ClLeague = [];
     this.GlLeague = [];
     for (const game of this.data) {

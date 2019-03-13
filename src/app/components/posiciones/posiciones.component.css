@@ -3,553 +3,6 @@
 } */
 
 .actives-title {
-<<<<<<< HEAD
-  color: antiquewhite;
-  font-size: 1.75rem;
-  text-align: center;
-  margin: 0.15rem auto 0;
-  padding: .5rem 0;
-  background-color: rgba(3, 2, 2, 0.5);
-  width: 27rem;
-  height: 1.75em;
-  border-radius: 7px;
-}
-.title-position{
-  color: antiquewhite;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-left: 10%;
-  margin-bottom: 0;
-}
-
-.container_grid {
-  display: grid;
-  grid-auto-columns: fr fr;
-  column-gap: 10px;
-  grid-auto-rows: fr;
-}
-
-.tableGL {
-  grid-column: 1/2;
-}
-.tableCL {
-  grid-column: 2/3;
-}
-
-.table {
-  width: 80%;
-  margin: 0.2em auto;
-  display: table;
-
-}
-
-.table-header {
-  background-color: rgba(12, 10, 9, 0.9);
-  color: antiquewhite;
-  text-align: center;
-  width: 100%;
-
-}
-.table-header2 {
-  background-color: rgba(12, 10, 9, 0.75);
-  color: antiquewhite;
-  text-align: center;
-
-}
-.title-rows {
-  background-color: antiquewhite;
-  color: rgb(12, 10, 9);
-  text-align: center;
-
-
-}
-.advancedSearchTextbox{
-  color: rgb(2, 1, 0);
-  font-size: 1rem;
-  font-weight: bold;
-  margin-left: 10%;
-  margin-bottom: 0;
-
-}
-
-
-.error_search {
-  width: 80%;
-  margin-left: 10%;
-  text-align: center;
-  color: antiquewhite;
-  background-color: rgba(12, 10, 9, 0.75);
-
-}
-.fa-baseball-ball {
-  font-size: 10rem;
-  margin: 5% 40% 0 !important;
-  color: rgba(80, 57, 43, 0.40);
-}
-.spiner_load {
-  font-size: 5rem;
-  margin: 0 35% !important;
-  color: rgba(80, 57, 43, 0.95);
-}
-.link_player {
-text-decoration:none;
-color: antiquewhite;
-}
-.paginator {
-  font-size: 0.75rem;
-  width: 20%;
-  margin: auto;
-}
-.tb1 {
-  width: 5rem;
-}
-.tb2, .tb3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.tbA {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-
-@media only screen and (min-width:300px ) and (max-width: 320px) {
-
-.container_players_actives {
-  margin-top:1% !important;
-}
-
-.actives-title {
-  font-size: 1.25rem;
-  width: 12rem;
-  margin: 1rem auto;
-  padding-bottom: 2rem !important;
-}
-.title-position{
-  color: antiquewhite;
-  font-size: 0.75rem;
-  margin-left: 2%;
-}
-
-.table {
-  width: 100%;
-  margin: 0.2em 0;
-}
-
-.table-header {
-  font-size: 1rem;
-  width: 1rem;
-
-}
-.table-header2 {
-  font-size: 1rem;
-  width: 1rem;
-
-}
-.title-rows {
-  background-color: antiquewhite;
-}
-.advancedSearchTextbox{
-  font-size: 0.85rem;
-  margin-left: 2%;
-}
-.error_search {
-  width: 80%;
-  margin-left: 10%;
-  text-align: center;
-  color: antiquewhite;
-  background-color: rgba(12, 10, 9, 0.75);
-
-}
-.tb1, .tb4, .tb6, .tb7, .tb9, .tb10 {
-  display: none;
-}
-.paginator_item {
-  display: none;
-
-}
-.paginator {
-  font-size: 0.75rem;
-  width: 20%;
-  margin: auto;
-}
-}
-@media only screen and (orientation : landscape) and (min-width:500px ) and (max-width: 600px) {
-
-  .container_players_actives {
-      margin-top: 1% !important;
-  }
-
-  .actives-title {
-      font-size: 1.5rem;
-      width: 40%;
-  }
-  .title-position{
-      font-size: 1rem;
-      margin-top: 1em !important;
-      margin-left: 2%;
-  }
-
-
-  .table {
-      width: 100%;
-      margin: 0.2em 0;
-  }
-
-  .table-header {
-      font-size: 0.85rem;
-      width: 1rem;
-
-  }
-  .table-header2 {
-      font-size: 0.85rem;
-      width: 1rem;
-
-  }
-  .title-rows {
-      background-color: antiquewhite;
-  }
-  .advancedSearchTextbox{
-      font-size: 0.85rem;
-      margin-left: 2%;
-  }
-  h1 {
-      font-size: 1em;
-
-  }
-  .error_search {
-      width: 40%;
-      margin-left: 2%;
-      margin-top: 2%;
-
-  }
-  .tb1, .tb6, .tb7, .tb10 {
-      display: none;
-  }
-  .paginator {
-      font-size: 0.75rem;
-      width: 90%;
-      margin-left: 1em;
-      margin-top: 1em;
-  }
-  }
-  @media only screen and (min-width:321px ) and (max-width: 355px) {
-
-      /* .container_players_actives {
-          margin-top:85% !important;
-      } */
-
-      .actives-title {
-          font-size: 1.5rem;
-          width: 90%;
-      }
-      .title-position{
-          color: antiquewhite;
-          font-size: 1rem;
-          margin-left: 2%;
-
-      }
-
-
-      .table {
-          width: 100%;
-          margin: 0.2em 0;
-      }
-
-      .table-header {
-          font-size: 0.65rem;
-          width: 1rem;
-
-      }
-      .table-header2 {
-          font-size: 0.65rem;
-          width: 1rem;
-
-      }
-      .title-rows {
-          background-color: antiquewhite;
-      }
-      .advancedSearchTextbox{
-          font-size: 0.85rem;
-          margin-left: 2%;
-      }
-      .error_search {
-          width: 80%;
-          margin-left: 10%;
-          text-align: center;
-          color: antiquewhite;
-          background-color: rgba(12, 10, 9, 0.75);
-
-      }
-      .tb1, .tb4, .tb6, .tb7, .tb9, .tb10 {
-          display: none;
-      }
-      .paginator_item {
-          display: none;
-
-      }
-
-      .paginator {
-          font-size: 0.50rem;
-          width: 45%;
-          margin: auto;
-      }
-      }
-  @media only screen and (min-width:356px ) and (max-width: 365px) {
-
-      .container_players_actives {
-          margin-top:1% !important;
-      }
-
-      .actives-title {
-          font-size: 1rem;
-          width: 60%;
-          padding-bottom: 7%;
-          margin-bottom: 5%;
-      }
-      .title-position{
-          color: antiquewhite;
-          font-size: 0.75em;
-          margin-left: 2%;
-
-      }
-
-
-      .table {
-          width: 100%;
-          margin: 0.2em 0;
-      }
-
-      .table-header {
-          font-size: 0.65rem;
-          width: 1rem;
-
-      }
-      .table-header2 {
-          font-size: 0.65rem;
-          width: 1rem;
-
-      }
-      .title-rows {
-          background-color: antiquewhite;
-      }
-      .advancedSearchTextbox{
-          font-size: 0.75rem;
-          margin-left: 2%;
-      }
-      .error_search {
-          width: 80%;
-          margin-left: 10%;
-          text-align: center;
-          color: antiquewhite;
-          background-color: rgba(12, 10, 9, 0.75);
-
-      }
-      .tb1, .tb4, .tb6, .tb7, .tb9, .tb10 {
-          display: none;
-      }
-      .paginator_item {
-          display: none;
-
-      }
-
-      .paginator {
-          font-size: 0.75rem;
-          width: 45%;
-          margin: auto;
-      }
-      }
-  @media only screen and (min-width:366px ) and (max-width: 408px) {
-
-      /* .container_players_actives {
-          margin-top:55% !important;
-      } */
-
-      .actives-title {
-          font-size: 1.5rem;
-          width: 90%;
-      }
-      .title-position{
-          color: antiquewhite;
-          font-size: 1rem;
-          margin-left: 2%;
-
-      }
-
-
-      .table {
-          width: 100%;
-          margin: 0.2em 0;
-      }
-
-      .table-header {
-          font-size: 0.65rem;
-          width: 1rem;
-
-      }
-      .table-header2 {
-          font-size: 0.65rem;
-          width: 1rem;
-
-      }
-      .title-rows {
-          background-color: antiquewhite;
-      }
-      .advancedSearchTextbox{
-          font-size: 0.85rem;
-          margin-left: 2%;
-      }
-      .error_search {
-          width: 80%;
-          margin-left: 10%;
-          text-align: center;
-          color: antiquewhite;
-          background-color: rgba(12, 10, 9, 0.75);
-
-      }
-      .tb1, .tb4, .tb6, .tb7, .tb9, .tb10 {
-          display: none;
-      }
-      .paginator_item {
-          display: none;
-
-      }
-
-      .paginator {
-          text-align: center;
-          font-size: 0.50rem;
-          width: 45%;
-      }
-      }
-
-  @media only screen and (min-width:409px ) and (max-width: 425px) {
-
-      /* .container_players_actives {
-          margin-top:55% !important;
-      } */
-
-      .actives-title {
-          font-size: 1rem;
-          width: 50%;
-          padding-bottom: 7%;
-      }
-      .title-position{
-          color: antiquewhite;
-          font-size: 1rem;
-          margin-left: 2%;
-
-      }
-
-
-      .table {
-          width: 100%;
-          margin: 0.2em 0;
-      }
-
-      .table-header {
-          font-size: 0.65rem;
-          width: 1rem;
-
-      }
-      .table-header2 {
-          font-size: 0.65rem;
-          width: 1rem;
-
-      }
-      .title-rows {
-          background-color: antiquewhite;
-      }
-      .advancedSearchTextbox{
-          font-size: 0.85rem;
-          margin-left: 2%;
-      }
-      .error_search {
-          width: 80%;
-          margin-left: 10%;
-          text-align: center;
-          color: antiquewhite;
-          background-color: rgba(12, 10, 9, 0.75);
-
-      }
-      .tb1, .tb4, .tb6, .tb7, .tb9, .tb10 {
-          display: none;
-      }
-      .paginator_item {
-          display: none;
-
-      }
-
-      .paginator {
-          font-size: 0.50rem;
-          width: 45%;
-      }
-      }
-
-      @media only screen and (orientation : landscape) and (min-width:601px ) and (max-width: 815px) {
-          /* .container_players_actives {
-              margin-top: 20% !important;
-          } */
-
-          .actives-title {
-              font-size: 1.5rem;
-              width: 50%;
-          }
-          .title-position{
-              font-size: 1rem;
-              margin-top: 1em !important;
-              margin-left: 2%;
-          }
-
-
-          .table {
-              width: 100%;
-              margin: 0.2em 0;
-          }
-
-          .table-header {
-              font-size: 0.85rem;
-              width: 1rem;
-
-          }
-          .table-header2 {
-              font-size: 0.85rem;
-              width: 1rem;
-
-          }
-          .title-rows {
-              background-color: antiquewhite;
-          }
-          .advancedSearchTextbox{
-              font-size: 0.85rem;
-              margin-left: 2%;
-          }
-          h1 {
-              font-size: 1em;
-
-          }
-          .error_search {
-              width: 40%;
-              margin-left: 2%;
-              margin-top: 2%;
-
-          }
-          .tb1, .tb6, .tb7, .tb10 {
-              display: none;
-          }
-          .paginator {
-              font-size: 0.75rem;
-              width: 90%;
-              margin-left: 1em;
-          }
-      }
-      @media only screen and (min-width:1920px ) and (max-width: 3000px) {
-
-          /* .container_players_actives {
-              margin-top: 25%;
-            } */
-
-          }
-=======
     color: antiquewhite;
     font-size: 1.75rem;
     text-align: center;
@@ -567,47 +20,47 @@ color: antiquewhite;
     margin-left: 10%;
     margin-bottom: 0;
   }
-  
+
   .container_grid {
     display: grid;
     grid-auto-columns: fr fr;
     column-gap: 10px;
     grid-auto-rows: fr;
   }
-  
+
   .tableGL {
     grid-column: 1/2;
   }
   .tableCL {
     grid-column: 2/3;
   }
-  
+
   .table {
     width: 80%;
     margin: 0.2em auto;
     display: table;
-  
+
   }
-  
+
   .table-header {
     background-color: rgba(12, 10, 9, 0.9);
     color: antiquewhite;
     text-align: center;
     width: 100%;
-  
+
   }
   .table-header2 {
     background-color: rgba(12, 10, 9, 0.75);
     color: antiquewhite;
     text-align: center;
-  
+
   }
   .title-rows {
     background-color: antiquewhite;
     color: rgb(12, 10, 9);
     text-align: center;
-  
-  
+
+
   }
   .advancedSearchTextbox{
     color: rgb(2, 1, 0);
@@ -615,17 +68,17 @@ color: antiquewhite;
     font-weight: bold;
     margin-left: 10%;
     margin-bottom: 0;
-  
+
   }
-  
-  
+
+
   .error_search {
     width: 80%;
     margin-left: 10%;
     text-align: center;
     color: antiquewhite;
     background-color: rgba(12, 10, 9, 0.75);
-  
+
   }
   .fa-baseball-ball {
     font-size: 10rem;
@@ -657,14 +110,14 @@ color: antiquewhite;
     font-size: 2rem;
     font-weight: bold;
   }
-  
-  
+
+
   @media only screen and (min-width:300px ) and (max-width: 320px) {
-  
+
   .container_players_actives {
     margin-top:1% !important;
   }
-  
+
   .actives-title {
     font-size: 1.25rem;
     width: 12rem;
@@ -676,21 +129,21 @@ color: antiquewhite;
     font-size: 0.75rem;
     margin-left: 2%;
   }
-  
+
   .table {
     width: 100%;
     margin: 0.2em 0;
   }
-  
+
   .table-header {
     font-size: 1rem;
     width: 1rem;
-  
+
   }
   .table-header2 {
     font-size: 1rem;
     width: 1rem;
-  
+
   }
   .title-rows {
     background-color: antiquewhite;
@@ -705,14 +158,14 @@ color: antiquewhite;
     text-align: center;
     color: antiquewhite;
     background-color: rgba(12, 10, 9, 0.75);
-  
+
   }
   .tb1, .tb4, .tb6, .tb7, .tb9, .tb10 {
     display: none;
   }
   .paginator_item {
     display: none;
-  
+
   }
   .paginator {
     font-size: 0.75rem;
@@ -721,11 +174,11 @@ color: antiquewhite;
   }
   }
   @media only screen and (orientation : landscape) and (min-width:500px ) and (max-width: 600px) {
-  
+
     .container_players_actives {
         margin-top: 1% !important;
     }
-  
+
     .actives-title {
         font-size: 1.5rem;
         width: 40%;
@@ -735,22 +188,22 @@ color: antiquewhite;
         margin-top: 1em !important;
         margin-left: 2%;
     }
-  
-  
+
+
     .table {
         width: 100%;
         margin: 0.2em 0;
     }
-  
+
     .table-header {
         font-size: 0.85rem;
         width: 1rem;
-  
+
     }
     .table-header2 {
         font-size: 0.85rem;
         width: 1rem;
-  
+
     }
     .title-rows {
         background-color: antiquewhite;
@@ -761,13 +214,13 @@ color: antiquewhite;
     }
     h1 {
         font-size: 1em;
-  
+
     }
     .error_search {
         width: 40%;
         margin-left: 2%;
         margin-top: 2%;
-  
+
     }
     .tb1, .tb6, .tb7, .tb10 {
         display: none;
@@ -780,11 +233,11 @@ color: antiquewhite;
     }
     }
     @media only screen and (min-width:321px ) and (max-width: 355px) {
-  
+
         /* .container_players_actives {
             margin-top:85% !important;
         } */
-  
+
         .actives-title {
             font-size: 1.5rem;
             width: 90%;
@@ -793,24 +246,24 @@ color: antiquewhite;
             color: antiquewhite;
             font-size: 1rem;
             margin-left: 2%;
-  
+
         }
-  
-  
+
+
         .table {
             width: 100%;
             margin: 0.2em 0;
         }
-  
+
         .table-header {
             font-size: 0.65rem;
             width: 1rem;
-  
+
         }
         .table-header2 {
             font-size: 0.65rem;
             width: 1rem;
-  
+
         }
         .title-rows {
             background-color: antiquewhite;
@@ -825,16 +278,16 @@ color: antiquewhite;
             text-align: center;
             color: antiquewhite;
             background-color: rgba(12, 10, 9, 0.75);
-  
+
         }
         .tb1, .tb4, .tb6, .tb7, .tb9, .tb10 {
             display: none;
         }
         .paginator_item {
             display: none;
-  
+
         }
-  
+
         .paginator {
             font-size: 0.50rem;
             width: 45%;
@@ -842,11 +295,11 @@ color: antiquewhite;
         }
         }
     @media only screen and (min-width:356px ) and (max-width: 365px) {
-  
+
         .container_players_actives {
             margin-top:1% !important;
         }
-  
+
         .actives-title {
             font-size: 1rem;
             width: 60%;
@@ -857,24 +310,24 @@ color: antiquewhite;
             color: antiquewhite;
             font-size: 0.75em;
             margin-left: 2%;
-  
+
         }
-  
-  
+
+
         .table {
             width: 100%;
             margin: 0.2em 0;
         }
-  
+
         .table-header {
             font-size: 0.65rem;
             width: 1rem;
-  
+
         }
         .table-header2 {
             font-size: 0.65rem;
             width: 1rem;
-  
+
         }
         .title-rows {
             background-color: antiquewhite;
@@ -889,16 +342,16 @@ color: antiquewhite;
             text-align: center;
             color: antiquewhite;
             background-color: rgba(12, 10, 9, 0.75);
-  
+
         }
         .tb1, .tb4, .tb6, .tb7, .tb9, .tb10 {
             display: none;
         }
         .paginator_item {
             display: none;
-  
+
         }
-  
+
         .paginator {
             font-size: 0.75rem;
             width: 45%;
@@ -906,11 +359,11 @@ color: antiquewhite;
         }
         }
     @media only screen and (min-width:366px ) and (max-width: 408px) {
-  
+
         /* .container_players_actives {
             margin-top:55% !important;
         } */
-  
+
         .actives-title {
             font-size: 1.5rem;
             width: 90%;
@@ -919,24 +372,24 @@ color: antiquewhite;
             color: antiquewhite;
             font-size: 1rem;
             margin-left: 2%;
-  
+
         }
-  
-  
+
+
         .table {
             width: 100%;
             margin: 0.2em 0;
         }
-  
+
         .table-header {
             font-size: 0.65rem;
             width: 1rem;
-  
+
         }
         .table-header2 {
             font-size: 0.65rem;
             width: 1rem;
-  
+
         }
         .title-rows {
             background-color: antiquewhite;
@@ -951,29 +404,29 @@ color: antiquewhite;
             text-align: center;
             color: antiquewhite;
             background-color: rgba(12, 10, 9, 0.75);
-  
+
         }
         .tb1, .tb4, .tb6, .tb7, .tb9, .tb10 {
             display: none;
         }
         .paginator_item {
             display: none;
-  
+
         }
-  
+
         .paginator {
             text-align: center;
             font-size: 0.50rem;
             width: 45%;
         }
         }
-  
+
     @media only screen and (min-width:409px ) and (max-width: 425px) {
-  
+
         /* .container_players_actives {
             margin-top:55% !important;
         } */
-  
+
         .actives-title {
             font-size: 1rem;
             width: 50%;
@@ -983,24 +436,24 @@ color: antiquewhite;
             color: antiquewhite;
             font-size: 1rem;
             margin-left: 2%;
-  
+
         }
-  
-  
+
+
         .table {
             width: 100%;
             margin: 0.2em 0;
         }
-  
+
         .table-header {
             font-size: 0.65rem;
             width: 1rem;
-  
+
         }
         .table-header2 {
             font-size: 0.65rem;
             width: 1rem;
-  
+
         }
         .title-rows {
             background-color: antiquewhite;
@@ -1015,27 +468,27 @@ color: antiquewhite;
             text-align: center;
             color: antiquewhite;
             background-color: rgba(12, 10, 9, 0.75);
-  
+
         }
         .tb1, .tb4, .tb6, .tb7, .tb9, .tb10 {
             display: none;
         }
         .paginator_item {
             display: none;
-  
+
         }
-  
+
         .paginator {
             font-size: 0.50rem;
             width: 45%;
         }
         }
-  
+
         @media only screen and (orientation : landscape) and (min-width:601px ) and (max-width: 815px) {
             /* .container_players_actives {
                 margin-top: 20% !important;
             } */
-  
+
             .actives-title {
                 font-size: 1.5rem;
                 width: 50%;
@@ -1045,22 +498,22 @@ color: antiquewhite;
                 margin-top: 1em !important;
                 margin-left: 2%;
             }
-  
-  
+
+
             .table {
                 width: 100%;
                 margin: 0.2em 0;
             }
-  
+
             .table-header {
                 font-size: 0.85rem;
                 width: 1rem;
-  
+
             }
             .table-header2 {
                 font-size: 0.85rem;
                 width: 1rem;
-  
+
             }
             .title-rows {
                 background-color: antiquewhite;
@@ -1071,13 +524,13 @@ color: antiquewhite;
             }
             h1 {
                 font-size: 1em;
-  
+
             }
             .error_search {
                 width: 40%;
                 margin-left: 2%;
                 margin-top: 2%;
-  
+
             }
             .tb1, .tb6, .tb7, .tb10 {
                 display: none;
@@ -1089,11 +542,10 @@ color: antiquewhite;
             }
         }
         @media only screen and (min-width:1920px ) and (max-width: 3000px) {
-  
+
             /* .container_players_actives {
                 margin-top: 25%;
               } */
-  
+
             }
-  
->>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
+

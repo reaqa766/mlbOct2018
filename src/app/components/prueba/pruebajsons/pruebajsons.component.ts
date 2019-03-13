@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-
-=======
->>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
 import { PruebaService } from '../../../services/prueba.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../../interfaces/players';
@@ -12,11 +8,6 @@ import VenezolanosActivos from '../../../../assets/JSONS/VenezolanosActivos';
 import { PagerService } from '../../../../services/index';
 import { HttpClient } from '@angular/common/http';
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> c5796caf1334eed0a9b55d42cb32502a8aef9324
 @Component({
   selector: 'app-pruebajsons',
   templateUrl: './pruebajsons.component.html',
