@@ -16,8 +16,10 @@
     margin-left: 10%;
     margin-bottom: 0;
   }
-  
+ 
   .container_grid {
+    margin: 0 auto;
+    width: 100%;
     display: grid;
     grid-auto-columns: fr fr;
     column-gap: 10px;
@@ -170,6 +172,7 @@
       font-weight: bold;
       height: 1rem;
       text-align: center;
+      margin: 2rem 0;
   
     }
     .tbA1, .tb2A {
