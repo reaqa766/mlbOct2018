@@ -52,9 +52,12 @@ export class LideresComponent implements OnInit {
 
 
   async ngOnInit() {
-    // this.isLoading = true;
+    this.getPlayersMap();
+    this.isLoading = true;
     // this.data = LIDERES.row;
-    this.jugadores = VenezolanosActivos;
+    // this.jugadores = VenezolanosActivos;
+    console.log('jugadores', this.allItems);
+    
 
     // this.jugadores = await this.http.get('../../../../assets/JSONS/VenezolanosActivos.json').toPromise();
     // this.isLoading = false;
@@ -91,9 +94,9 @@ export class LideresComponent implements OnInit {
               }
             });
           this.allItems = this.players;
-          // this.jugadores = this.players;
-          // this.setPage(1);
-          // this.isLoading = false;
+          this.jugadores = this.players;
+          this.setPage(1);
+          this.isLoading = false;
         }
         index++;
       });
@@ -125,6 +128,14 @@ export class LideresComponent implements OnInit {
 
     return filtrado;
 
+  }
+
+  setPage(page: number) {
+    // get pager object from service
+    this.pager = this.pagerService.getPager(this.allItems.length, page);
+
+    // get current page of items
+    this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
   }
 
 

@@ -18,8 +18,8 @@ export class PosicionesService { playerCode = 596115;
 
   private fecha = moment().format('YYYY-MM-DD').toString();
 
-  // private _url ='http://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=' + this.fecha + '&endDate=' + this.fecha + '&hydrate=team,linescore,flags,liveLookin,person,stats,probablePitcher,game(content(summary,media(epg)),tickets)&language=en'
-  private _url ='https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2019&standingsTypes=regularSeason,springTraining,firstHalf,secondHalf&hydrate=division,conference,sport,league,team(nextSchedule(team,gameType=[R,F,D,L,W,C],inclusive=false),previousSchedule(team,gameType=[R,F,D,L,W,C],inclusive=true))'
+  private _url ='http://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=' + this.fecha + '&endDate=' + this.fecha + '&hydrate=team,linescore,flags,liveLookin,person,stats,probablePitcher,game(content(summary,media(epg)),tickets)&language=en'
+  // private _url ='https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2019&standingsTypes=regularSeason,springTraining,firstHalf,secondHalf&hydrate=division,conference,sport,league,team(nextSchedule(team,gameType=[R,F,D,L,W,C],inclusive=false),previousSchedule(team,gameType=[R,F,D,L,W,C],inclusive=true))'
 
 
 
@@ -58,4 +58,8 @@ export class PosicionesService { playerCode = 596115;
   //   return dataAllPlayers;
   // }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 4318393d14e50e7943ff4e90d78c3e054186b498
