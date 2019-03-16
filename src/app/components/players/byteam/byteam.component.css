@@ -65,14 +65,14 @@
   width: 5rem;
   transition: .4s;
 }
-.img_picture_element2{
+/* .img_picture_element2{
   transition: .4s;
-}
+} */
 
-.img_picture_box:hover .img_picture_element{
+/* .img_picture_box:hover .img_picture_element{
   transform: scale(1.075);
   opacity: .98;
-}
+} */
 .container_border{
   padding: 2rem 0;
   border: 1px solid rgba(0, 0, 0, 0.246);
@@ -293,7 +293,7 @@ font-weight: 400;
   .byPosition-season-title {
     font-size: 1.25rem;
   }
-  
+
   .liga_americana {
     width: 90%;
     margin: 0 auto;
@@ -301,8 +301,8 @@ font-weight: 400;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 5px;
     background-color: rgba(0, 0, 0, 0.596);
-  
-  
+
+
   }
 
 
