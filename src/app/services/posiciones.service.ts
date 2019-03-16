@@ -58,8 +58,4 @@ export class PosicionesService { playerCode = 596115;
   //   return dataAllPlayers;
   // }
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 4318393d14e50e7943ff4e90d78c3e054186b498
