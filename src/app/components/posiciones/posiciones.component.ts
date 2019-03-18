@@ -24,64 +24,145 @@ export class PosicionesComponent implements OnInit {
 
 
   async ngOnInit() {
-    this.data = CALEND1.dates[0].games;
-    // this.data = (await this.posicionesService.getTeamPositions()).dates[0].games;
-    this.ClLeague = [];
-    this.GlLeague = [];
-    for (const game of this.data) {
-      if (game.teams.away.springLeague.id === 115) {
-        if (!this.GlLeague.some((a) => {
-          return a.team.name === game.teams.away.team.name;
-        })) {
-          this.GlLeague.push(game.teams.away);
+
+    console.log('CALEND1', CALEND1);
+    // console.log('CALEND1', CALEND1.records[0].teamRecords[0].leagueRecord.wins);
+    const teamsPosition1 = CALEND1.records[0].teamRecords;
+    const teamsPosition2 = CALEND1.records[1].teamRecords;
+    const teamsPosition3 = CALEND1.records[2].teamRecords;
+    const teamsPosition4 = CALEND1.records[3].teamRecords;
+    const teamsPosition5 = CALEND1.records[4].teamRecords;
+    const teamsPosition6 = CALEND1.records[5].teamRecords;
+
+    this.ClLeague= [];
+    this.GlLeague= [];
+  
+
+    for (let team of teamsPosition1) {
+     if (team.team.springLeague.id === 115) {
+
+      this.ClLeague.push(team.team.name, team.leagueRecord.wins,team.leagueRecord.losses, team.leagueRecord.pct, team.team.springLeague.id  )  
+
+          } else {
+            this.GlLeague.push(team.team.name, team.leagueRecord.wins,team.leagueRecord.losses, team.leagueRecord.pct, team.team.springLeague.id  )  
+
+          }
         }
-        if (!this.GlLeague.some((a) => {
-          return a.team.name === game.teams.home.team.name;
-        })) {
-        this.GlLeague.push(game.teams.home);
-        }
+        console.log('ClLeague', this.ClLeague);
+        console.log('GlLeague', this.GlLeague);
 
-      } else {
-        if (!this.ClLeague.some((a) => {
-          return a.team.name === game.teams.away.team.name;
-        })) {
-          this.ClLeague.push(game.teams.away);
-        }
-        if (!this.ClLeague.some((a) => {
-          return a.team.name === game.teams.home.team.name;
-        })) {
-          this.ClLeague.push(game.teams.home);
-        }
+    for (let team of teamsPosition2) {
+      if (team.team.springLeague.id === 115) {
 
-      }
-    }
-    this.positionTeams();
+        this.ClLeague.push(team.team.name, team.leagueRecord.wins,team.leagueRecord.losses, team.leagueRecord.pct, team.team.springLeague.id  )  
+  
+            } else {
+              this.GlLeague.push(team.team.name, team.leagueRecord.wins,team.leagueRecord.losses, team.leagueRecord.pct, team.team.springLeague.id  )  
+  
+            }
+            }
+    for (let team of teamsPosition3) {
+      if (team.team.springLeague.id === 115) {
 
-    }
+        this.ClLeague.push(team.team.name, team.leagueRecord.wins,team.leagueRecord.losses, team.leagueRecord.pct, team.team.springLeague.id  )  
+  
+            } else {
+              this.GlLeague.push(team.team.name, team.leagueRecord.wins,team.leagueRecord.losses, team.leagueRecord.pct, team.team.springLeague.id  )  
+  
+            }
+            }
+    for (let team of teamsPosition4) {
+      if (team.team.springLeague.id === 115) {
 
-positionTeams() {
-  this.GlLeague.sort((a, b) => {
-    if (a.leagueRecord.pct > b.leagueRecord.pct) {
-      return -1;
+        this.ClLeague.push(team.team.name, team.leagueRecord.wins,team.leagueRecord.losses, team.leagueRecord.pct, team.team.springLeague.id  )  
+  
+            } else {
+              this.GlLeague.push(team.team.name, team.leagueRecord.wins,team.leagueRecord.losses, team.leagueRecord.pct, team.team.springLeague.id  )  
+  
+            }
+            }
+    for (let team of teamsPosition5) {
+      if (team.team.springLeague.id === 115) {
 
-    } else  if (a.leagueRecord.pct < b.leagueRecord.pct) {
-      return 1;
-    } else  {
-      return 0;
-    }
-  });
-  this.ClLeague.sort((a, b) => {
-    if (a.leagueRecord.pct > b.leagueRecord.pct) {
-      return -1;
+        this.ClLeague.push(team.team.name, team.leagueRecord.wins,team.leagueRecord.losses, team.leagueRecord.pct, team.team.springLeague.id  )  
+  
+            } else {
+              this.GlLeague.push(team.team.name, team.leagueRecord.wins,team.leagueRecord.losses, team.leagueRecord.pct, team.team.springLeague.id  )  
+  
+            }
+            }
+    for (let team of teamsPosition6) {
+      if (team.team.springLeague.id === 115) {
 
-    } else  if (a.leagueRecord.pct < b.leagueRecord.pct) {
-      return 1;
-    } else  {
-      return 0;
-    }
-  });
+        this.ClLeague.push(team.team.name, team.leagueRecord.wins,team.leagueRecord.losses, team.leagueRecord.pct, team.team.springLeague.id  )  
+  
+            } else {
+              this.GlLeague.push(team.team.name, team.leagueRecord.wins,team.leagueRecord.losses, team.leagueRecord.pct, team.team.springLeague.id  )  
+  
+            }
+            }
+            console.log('ClLeague', this.ClLeague);
+            console.log('GlLeague', this.GlLeague);
+    
+//     this.data = CALEND1.records.teamRecords.leagueRecords;
+//     // this.data = CALEND1.dates[0].games;
+//     // this.data = (await this.posicionesService.getTeamPositions()).dates[0].games;
+//     this.ClLeague = [];
+//     this.GlLeague = [];
+//     for (const game of this.data) {
+//       if (teamRecords.teams.springLeague.id === 115) {
+//         if (!this.GlLeague.some((a) => {
+//           return a.team.name === game.teams.away.team.name;
+//         })) {
+//           this.GlLeague.push(game.teams.away);
+//         }
+//         if (!this.GlLeague.some((a) => {
+//           return a.team.name === game.teams.home.team.name;
+//         })) {
+//         this.GlLeague.push(game.teams.home);
+//         }
 
-}
+//       } else {
+//         if (!this.ClLeague.some((a) => {
+//           return a.team.name === game.teams.away.team.name;
+//         })) {
+//           this.ClLeague.push(game.teams.away);
+//         }
+//         if (!this.ClLeague.some((a) => {
+//           return a.team.name === game.teams.home.team.name;
+//         })) {
+//           this.ClLeague.push(game.teams.home);
+//         }
+
+//       }
+//     }
+//     this.positionTeams();
+
+//     }
+
+// positionTeams() {
+//   this.GlLeague.sort((a, b) => {
+//     if (a.leagueRecord.pct > b.leagueRecord.pct) {
+//       return -1;
+
+//     } else  if (a.leagueRecord.pct < b.leagueRecord.pct) {
+//       return 1;
+//     } else  {
+//       return 0;
+//     }
+//   });
+//   this.ClLeague.sort((a, b) => {
+//     if (a.leagueRecord.pct > b.leagueRecord.pct) {
+//       return -1;
+
+//     } else  if (a.leagueRecord.pct < b.leagueRecord.pct) {
+//       return 1;
+//     } else  {
+//       return 0;
+//     }
+//   });
+
+// }
 
 
-}
+}}
