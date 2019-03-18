@@ -14,27 +14,10 @@ import { StatsDayliPlayer } from '../interfaces/stats-dayli-player';
 })
 export class DataPitchersService {
   playerCode = 596115;
-  // gameCode = 563385;
-
-
-  // playersList = [
-  //   {name:"Jose Altuve",
-  //   position : "segunda base"},
-
-  //   {name : "Gleyber Torres",
-  //   position : "segunda base"},
-
-  //   {name : "Ronald Acuña Jr.",
-  //   position : "Leftfield"},
-
-  //   {name : "Ender Inciarte",
-  //   position : "Centerfield"}
-
-  // ]
 
 
 
-  // Array de Codigo de Jugadores
+  // Array de Codigo de Pitchers
   private playersCode = [
     433587, 433589, 434671, 444468, 448855,
     468504, 471911, 491646, 501593,
@@ -42,12 +25,24 @@ export class DataPitchersService {
     591693, 593163, 593958, 606208, 608566,
     611093, 612792, 621237, 621592, 622382,
     622608, 622694, 622786, 622795, 624133,
-    630023, 640470, 641154, 642511, 650347,
+    630023, , 641154, 642511, 650347,
     650382, 650671, 656001, 658530, 658648,
     659262, 660761, 666200
   ];
+  // private playersCode = [
+  //   433589, 434671,
+  //   471911,
+  //   521655, 527048,
+  //    593163,  606208,
+  //   611093,
+  //   622608,  622795, 624133,
+  //   630023, , 641154, 642511, 650347,
+  //   656001,  658648,
+  //   659262,
+  // ];
 
   // PITCHERS 2018
+  // 2019?  640470
     // 501593, 621237,
     // 501593,
     // 593993,
@@ -96,15 +91,11 @@ export class DataPitchersService {
 
   private gameCode = [
     531368,
-    // 531824,
-    // 531829,
-    // 531825,
-    // 531833,
-    // 531835,
   ]
 
 
-  private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(group=pitching,type=season,season=2019,gameType=S)';
+  // private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(group=pitching,type=season,season=2019,gameType=S)';
+  private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2019&hydrate=stats(type=gameLog,gameType=S)';
   // private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +
   //  '&season=2018&hydrate=stats(type=gameLog)';
   // private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +

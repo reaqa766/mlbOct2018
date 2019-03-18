@@ -37,6 +37,7 @@ export class ActivesComponent implements OnInit {
 
     // paged items
     pagedItems: any[];
+    jugadores: any[];
 
   isLoading: boolean;
 
@@ -51,6 +52,9 @@ export class ActivesComponent implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
+    console.log('data', JSON.stringify(this.allItems));
+
+
   }
 
   // Convertir el Array de Observables a un Array de Objetos.
@@ -71,7 +75,7 @@ export class ActivesComponent implements OnInit {
           // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
           this.players = this.players.filter(player =>
           player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0)
-            // se ordenan por nombre
+             // se ordenan por nombre
             .sort(({ fullName: a }, { fullName: b }) => {
               if (a > b) {
                 return 1;
@@ -82,6 +86,10 @@ export class ActivesComponent implements OnInit {
               }
             });
           this.allItems = this.players;
+          this.jugadores = this.players;
+          console.log('jugadores', JSON.stringify(this.jugadores));
+
+
 
     // console.log(JSON.stringify(this.players), 'pbajson');
           this.setPage(1);

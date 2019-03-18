@@ -27,7 +27,6 @@
     <table class="table  text-center">
       <thead class="table-header1">
         <tr>
-          <!-- <th style="width: 5%;" scope="col">Id</th> -->
           <th class="td1" style="width: 10%;" scope="col">Nombre</th>
           <th class="td2" style="width: 10%;" scope="col">Equipo</th>
           <th class="td3" style="width: 5%;" scope="col">Vb</th>
@@ -42,7 +41,6 @@
         </tr>
       </thead>
       <ng-container *ngIf="!(pager.allItems === 0)">
-
         <tbody class="table-header">
           <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
             <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">

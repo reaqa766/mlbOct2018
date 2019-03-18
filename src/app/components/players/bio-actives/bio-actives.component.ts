@@ -39,6 +39,7 @@ export class BioActivesComponent implements OnInit {
 
 
   isLoading: boolean;
+  jsonPlayers: string;
 
   constructor(private playerService: PlayersService, private pagerService: PagerService) { }
 
@@ -58,16 +59,13 @@ export class BioActivesComponent implements OnInit {
   // Convertir el Array de Observables a un Array de Objetos.
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
-    // tslint:disable-next-line:prefer-const
     let InfoObsPlayer = this.playerService.getAllPlayersActives();
     // let InfoObsPlayer = this.playerService.getAllPlayersActives();
     let index = 0;
-    // tslint:disable-next-line:prefer-const
     for (let obs of InfoObsPlayer) {
       obs.pipe(take(1)).subscribe(res => {
         this.players.push(res);
-
-
+        // console.log('players', this.players);
         if ((InfoObsPlayer.length - 1) === index) {
           this.players = this.players.map(player => {
             const newPlayer: Players = {};
@@ -90,7 +88,6 @@ export class BioActivesComponent implements OnInit {
             this.allItems = this.players;
             this.setPage(1);
           this.isLoading = false;
-          // console.log(JSON.stringify(this.players[0]));
         }
         index++;
       });
@@ -101,7 +98,10 @@ export class BioActivesComponent implements OnInit {
     // initialize to page 1
     // this.setPage(1);
 
-  }
+    console.log('players', this.players);
+    const playerstxt1 = this.players
+
+      }
 
 
   onSearchChange() {

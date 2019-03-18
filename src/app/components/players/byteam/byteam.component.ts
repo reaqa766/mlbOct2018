@@ -119,7 +119,6 @@ export class ByteamComponent implements OnInit {
   getPlayersMap() {
     const InfoObsPlayer = this.playerService.getAllPlayersActives();
     let index = 0;
-    // tslint:disable-next-line:prefer-const
     for (let obs of InfoObsPlayer) {
       obs.pipe(take(1)).subscribe(res => {
         this.players.push(res);

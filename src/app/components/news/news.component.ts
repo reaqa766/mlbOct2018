@@ -57,7 +57,7 @@ export class NewsComponent implements OnInit {
     window.open('https://www.12up.com/es/posts/6256619-los-5-mejores-prospectos-venezolanos-de-las-grandes-ligas-en-2019', '_blank');
   } else if (this.num === 'news6') {
     // tslint:disable-next-line:max-line-length
-    window.open('https://www.mlb.com/news/d-backs-agree-to-terms-with-wilmer-flores-on-a-1-year-contract/c-302952200', '_blank');
+    window.open('https://www.mlb.com/news/jose-altuve-back-in-astros-lineup', '_blank');
   } else if (this.num === 'news7') {
     // tslint:disable-next-line:max-line-length
     window.open('https://beisbolplay.americadigital.com/2019/01/22/asdrubal-cabrera-firmo-con-rangers/', '_blank');

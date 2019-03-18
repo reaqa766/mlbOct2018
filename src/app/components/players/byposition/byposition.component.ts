@@ -52,14 +52,11 @@ export class BypositionComponent implements OnInit {
   }
 
 
-  // tslint:disable-next-line:max-line-length
   // Convertir el Array de Observables a un Array de Objetos.
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
-    // tslint:disable-next-line:prefer-const
     let InfoObsPlayer = this.playerService.getAllPlayersActives();
     let index = 0;
-    // tslint:disable-next-line:prefer-const
     for (let obs of InfoObsPlayer) {
       obs.pipe(take(1)).subscribe(res => {
         this.players.push(res);
@@ -103,7 +100,7 @@ export class BypositionComponent implements OnInit {
         // player.fullName.toLowerCase().includes(position) ||
         player.primaryPosition.name.toLowerCase().includes(position));
         this.setPage(this.pager.currentPage);
-        
+
       } else {
           this.allItems = this.players;
           this.setPage(this.pager.currentPage);
@@ -115,7 +112,7 @@ export class BypositionComponent implements OnInit {
     // get pager object from service
     this.pager = this.pagerService.getPager(this.allItems.length, page);
     console.log('pager', this.pager);
-    
+
 
     // get current page of items
     this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);

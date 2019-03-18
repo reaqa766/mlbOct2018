@@ -444,11 +444,11 @@
     font-weight: bold;
     font-size: 1rem;
     padding: 0 .5rem;
-} */
+}
 
 
 
-/* .cuadro_container_inferior_derecho2 {
+.cuadro_container_inferior_derecho2 {
     grid-column: 1/2;
     grid-row: 2/3;
     justify-items: center;
@@ -497,9 +497,9 @@
     font-weight: bold;
     font-size: 1rem;
     padding: 0 .5rem;
-} */
+}
 
-/* .line_white {
+.line_white {
     display: block;
     height: 1px;
     border: 0;
@@ -659,7 +659,7 @@
 
 
 /* VIEJO DISEÑO */
-a {
+ a {
     text-decoration:none;
     color: rgb(64, 142, 214);;
     cursor: pointer;

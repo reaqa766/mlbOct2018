@@ -14,23 +14,7 @@ import { StatsDayliPlayer } from '../interfaces/stats-dayli-player';
 })
 export class DataPlayersService {
   playerCode = 596115;
-  // gameCode = 563385;
 
-
-  // playersList = [
-  //   {name:"Jose Altuve",
-  //   position : "segunda base"},
-
-  //   {name : "Gleyber Torres",
-  //   position : "segunda base"},
-
-  //   {name : "Ronald Acuña Jr.",
-  //   position : "Leftfield"},
-
-  //   {name : "Ender Inciarte",
-  //   position : "Centerfield"}
-
-  // ]
 
 
 
@@ -110,11 +94,6 @@ export class DataPlayersService {
 
   private gameCode = [
     531368,
-    // 531824,
-    // 531829,
-    // 531825,
-    // 531833,
-    // 531835,
   ]
 
   // private _url6 ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2019&hydrate=stats(group=hitting,type=season,season=2019,gameType=S)'

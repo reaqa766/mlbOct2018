@@ -36,32 +36,9 @@ export class PActivesComponent implements OnInit {
 
     // paged items
     pagedItems: any[];
-
-
-
-
-  // playersList = [
-  //   {name:"Jose Altuve",
-  //   position : "segunda base"},
-
-  //   {name : "Gleyber Torres",
-  //   position : "segunda base"},
-
-  //   {name : "Ronald Acuña Jr.",
-  //   position : "Leftfield"},
-
-  //   {name : "Ender Inciarte",
-  //   position : "Centerfield"}
-
-  // ]
   isLoading: boolean;
 
-
-
-
-
   constructor(private playerService: PitchersService, private pagerService: PagerService) { }
-
 
   ngOnInit() {
     this.isLoading = true;
@@ -74,10 +51,8 @@ export class PActivesComponent implements OnInit {
   // Convertir el Array de Observables a un Array de Objetos.
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
-    // tslint:disable-next-line:prefer-const
     let InfoObsPlayer = this.playerService.getAllPlayersActives();
     let index = 0;
-    // tslint:disable-next-line:prefer-const
     for (let obs of InfoObsPlayer) {
       obs.pipe(take(1)).subscribe(res => {
         this.players.push(res);

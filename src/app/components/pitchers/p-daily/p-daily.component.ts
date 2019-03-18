@@ -40,16 +40,14 @@ export class PDailyComponent implements OnInit {
 
 
   isLoading: boolean;
+  playersFiltrado: {}[];
 
   constructor(private playerService: DataPitchersService, private pagerService: PagerService) { }
 
   ngOnInit() {
-    // console.log(this.dia);
     this.isLoading = true;
-    // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    console.log('allItems', this.allItems);
-    console.log('players', this.players);
+    console.log('players', this.allItems);
   }
 
 
@@ -59,7 +57,6 @@ export class PDailyComponent implements OnInit {
 getPlayersMap() {
   const InfoObsPlayer = this.playerService.getAllPlayersDaily2();
   let index = 0;
-  // tslint:disable-next-line:prefer-const
   for (let obs of InfoObsPlayer) {
     obs.pipe(take(1)).subscribe(res => {
       this.players.push(res);
@@ -84,11 +81,15 @@ getPlayersMap() {
           }
         });
         // .filter(player =>  player.stats[0].splits[player.stats[0].splits.length-1].date === '2018-09-30') ;
+        // this.playersFiltrado = this.players.filter(
+        //   players => this.players.stats && this.players.stats[0].splits
+        // );
+        // this.playersFiltrado = this.players.filter(player => player.stats && player.stats[0].splits
+        // );
+
         this.allItems = this.players;
         this.setPage(1);
         this.isLoading = false;
-        // console.log(JSON.stringify(this.players[0]));
-          //  console.log('playersDaily', this.players);
         }
         index++;
       });
