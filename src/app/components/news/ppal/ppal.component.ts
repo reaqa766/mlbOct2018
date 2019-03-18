@@ -34,7 +34,7 @@ export class PpalComponent implements OnInit {
     if (this.num === 'news1') {
           window.open('https://www.directvsports.com/beisbol/mlb/noticias/cuando-comienza-temporada-2019-mlb', '_blank');
   } else if (this.num === 'news2') {
-    window.open('https://www.mlb.com/news/d-backs-agree-to-terms-with-wilmer-flores-on-a-1-year-contract/c-302952200', '_blank');
+    window.open('https://www.mlb.com/news/jose-altuve-back-in-astros-lineup', '_blank');
   } else if (this.num === 'news3') {
     window.open('https://beisbolplay.americadigital.com/2019/01/22/asdrubal-cabrera-firmo-con-rangers/', '_blank');
   } else if (this.num === 'news4') {
