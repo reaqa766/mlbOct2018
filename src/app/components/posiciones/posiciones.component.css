@@ -13,6 +13,17 @@
     height: 1.75em;
     border-radius: 7px;
   }
+.actives-title1 {
+    color: antiquewhite;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.15rem auto 1rem;
+    padding: .5rem 0;
+    background-color: rgba(3, 2, 2, 0.5);
+    width: 22rem;
+    height: 1.75em;
+    border-radius: 7px;
+  }
   .title-position{
     color: antiquewhite;
     font-size: 1.5rem;
@@ -26,6 +37,8 @@
     grid-auto-columns: fr fr;
     column-gap: 10px;
     grid-auto-rows: fr;
+    margin-bottom: 3rem;
+
   }
 
   .tableGL {
