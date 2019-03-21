@@ -21,6 +21,8 @@ export class PosicionesComponent implements OnInit {
   ClLeague: any[];
   GlLeague: any[];
   AllLeague: Boolean;
+  CALEND2: {};
+  _url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2019&standingsTypes=springTraining';
 
 
   constructor(private playerService: PruebaService, 
@@ -28,14 +30,15 @@ export class PosicionesComponent implements OnInit {
     private posicionesService: PosicionesService,
     private http: HttpClient) { }
 
-  ngOnInit() {
+  async ngOnInit() {
        
     this.ClLeague= [];
     this.GlLeague= [];
     this.AllLeague = true;
 
+    this.CALEND2 = await this.http.get(this._url).toPromise();
 
-    for (let tpos of CALEND1.records) {
+    for (let tpos of this.CALEND2.records) {
       for(let team of tpos.teamRecords){
         if(team.team.springLeague.id === 115){
           this.ClLeague.push({
@@ -62,6 +65,7 @@ export class PosicionesComponent implements OnInit {
 
             console.log('ClLeague', this.ClLeague);
             console.log('GlLeague', this.GlLeague);
+            console.log('CALEND2', this.CALEND2);
     
 
     }
