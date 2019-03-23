@@ -21,17 +21,17 @@ export class PosicionesComponent implements OnInit {
   ClLeague: any[];
   GlLeague: any[];
   AllLeague: Boolean;
-  CALEND2: {};
+  CALEND2: any;
   _url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2019&standingsTypes=springTraining';
 
 
-  constructor(private playerService: PruebaService, 
-    private pagerService: PagerService, 
+  constructor(private playerService: PruebaService,
+    private pagerService: PagerService,
     private posicionesService: PosicionesService,
     private http: HttpClient) { }
 
   async ngOnInit() {
-       
+
     this.ClLeague= [];
     this.GlLeague= [];
     this.AllLeague = true;
@@ -42,23 +42,23 @@ export class PosicionesComponent implements OnInit {
       for(let team of tpos.teamRecords){
         if(team.team.springLeague.id === 115){
           this.ClLeague.push({
-            name: team.team.name, 
+            name: team.team.name,
             wins: team.leagueRecord.wins,
-            losses: team.leagueRecord.losses, 
-            pct: team.leagueRecord.pct, 
-            teamId: team.team.id, 
+            losses: team.leagueRecord.losses,
+            pct: team.leagueRecord.pct,
+            teamId: team.team.id,
           });
         } else{
           this.GlLeague.push({
-            name: team.team.name, 
+            name: team.team.name,
             wins: team.leagueRecord.wins,
-            losses: team.leagueRecord.losses, 
-            pct: team.leagueRecord.pct, 
-            teamId: team.team.id, 
+            losses: team.leagueRecord.losses,
+            pct: team.leagueRecord.pct,
+            teamId: team.team.id,
           });
         }
       }
-   
+
     }
     this.positionTeams();
 
@@ -66,7 +66,7 @@ export class PosicionesComponent implements OnInit {
             console.log('ClLeague', this.ClLeague);
             console.log('GlLeague', this.GlLeague);
             console.log('CALEND2', this.CALEND2);
-    
+
 
     }
 
