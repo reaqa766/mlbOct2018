@@ -25,6 +25,7 @@
   width: 80%;
   margin: 0.2em auto;
   display: table;
+  border-collapse: separate;
 
 }
 
@@ -107,6 +108,7 @@ color: antiquewhite;
 .table {
   width: 100%;
   margin: 0.2em 0;
+  border-collapse: separate;
 }
 
 .table-header {
@@ -167,6 +169,7 @@ color: antiquewhite;
   .table {
       width: 100%;
       margin: 0.2em 0;
+      border-collapse: separate;
   }
 
   .table-header {
@@ -227,6 +230,7 @@ color: antiquewhite;
       .table {
           width: 100%;
           margin: 0.2em 0;
+          border-collapse: separate;
       }
 
       .table-header {
@@ -291,6 +295,7 @@ color: antiquewhite;
       .table {
           width: 100%;
           margin: 0.2em 0;
+          border-collapse: separate;
       }
 
       .table-header {
@@ -353,6 +358,7 @@ color: antiquewhite;
       .table {
           width: 100%;
           margin: 0.2em 0;
+          border-collapse: separate;
       }
 
       .table-header {
@@ -417,6 +423,7 @@ color: antiquewhite;
       .table {
           width: 100%;
           margin: 0.2em 0;
+          border-collapse: separate;
       }
 
       .table-header {
@@ -477,6 +484,7 @@ color: antiquewhite;
           .table {
               width: 100%;
               margin: 0.2em 0;
+              border-collapse: separate;
           }
 
           .table-header {

@@ -25,6 +25,7 @@
     width: 80%;
     margin: 0.2em auto;
     display: table;
+    border-collapse: separate;
 
 }
 
@@ -96,7 +97,7 @@
     font-size: 1.25rem;
     width: 12rem;
     margin: 1rem auto;
-    padding-bottom: 2rem !important; 
+    padding-bottom: 2rem !important;
 }
 .title-position{
     color: antiquewhite;
@@ -107,6 +108,7 @@
 .table {
     width: 100%;
     margin: 0.2em 0;
+    border-collapse: separate;
 }
 
 .table-header {
@@ -152,7 +154,7 @@
     .container_players_actives {
         margin-top: 1% !important;
     }
-    
+
     .actives-title {
         font-size: 1.5rem;
         width: 40%;
@@ -162,17 +164,18 @@
         margin-top: 1em !important;
         margin-left: 2%;
     }
-    
-    
+
+
     .table {
         width: 100%;
         margin: 0.2em 0;
+        border-collapse: separate;
     }
-    
+
     .table-header {
         font-size: 0.85rem;
         width: 1rem;
-    
+
     }
     .table-header2 {
         font-size: 0.85rem;
@@ -211,7 +214,7 @@
         /* .container_players_actives {
             margin-top:85% !important;
         } */
-        
+
         .actives-title {
             font-size: 1.5rem;
             width: 90%;
@@ -222,22 +225,23 @@
             margin-left: 2%;
 
         }
-        
-        
+
+
         .table {
             width: 100%;
             margin: 0.2em 0;
+            border-collapse: separate;
         }
-        
+
         .table-header {
             font-size: 0.65rem;
             width: 1rem;
-        
+
         }
         .table-header2 {
             font-size: 0.65rem;
             width: 1rem;
-        
+
         }
         .title-rows {
             background-color: antiquewhite;
@@ -252,16 +256,16 @@
             text-align: center;
             color: antiquewhite;
             background-color: rgba(12, 10, 9, 0.75);
-        
+
         }
         .th1, .th4, .th6, .th7, .th9, .th10 {
             display: none;
         }
         .paginator_item {
             display: none;
-        
+
         }
-        
+
         .paginator {
             font-size: 0.50rem;
             width: 45%;
@@ -273,12 +277,12 @@
         .container_players_actives {
             margin-top:1% !important;
         }
-        
+
         .actives-title {
             font-size: 1rem;
             width: 60%;
             padding-bottom: 7%;
-            margin-bottom: 5%; 
+            margin-bottom: 5%;
         }
         .title-position{
             color: antiquewhite;
@@ -286,22 +290,23 @@
             margin-left: 2%;
 
         }
-        
-        
+
+
         .table {
             width: 100%;
             margin: 0.2em 0;
+            border-collapse: separate;
         }
-        
+
         .table-header {
             font-size: 0.65rem;
             width: 1rem;
-        
+
         }
         .table-header2 {
             font-size: 0.65rem;
             width: 1rem;
-        
+
         }
         .title-rows {
             background-color: antiquewhite;
@@ -316,16 +321,16 @@
             text-align: center;
             color: antiquewhite;
             background-color: rgba(12, 10, 9, 0.75);
-        
+
         }
         .th1, .th4, .th6, .th7, .th9, .th10 {
             display: none;
         }
         .paginator_item {
             display: none;
-        
+
         }
-        
+
         .paginator {
             font-size: 0.75rem;
             width: 45%;
@@ -337,7 +342,7 @@
         /* .container_players_actives {
             margin-top:55% !important;
         } */
-        
+
         .actives-title {
             font-size: 1.5rem;
             width: 90%;
@@ -348,22 +353,23 @@
             margin-left: 2%;
 
         }
-        
-        
+
+
         .table {
             width: 100%;
             margin: 0.2em 0;
+            border-collapse: separate;
         }
-        
+
         .table-header {
             font-size: 0.65rem;
             width: 1rem;
-        
+
         }
         .table-header2 {
             font-size: 0.65rem;
             width: 1rem;
-        
+
         }
         .title-rows {
             background-color: antiquewhite;
@@ -378,29 +384,29 @@
             text-align: center;
             color: antiquewhite;
             background-color: rgba(12, 10, 9, 0.75);
-        
+
         }
         .th1, .th4, .th6, .th7, .th9, .th10 {
             display: none;
         }
         .paginator_item {
             display: none;
-        
+
         }
-        
+
         .paginator {
             text-align: center;
             font-size: 0.50rem;
             width: 45%;
         }
         }
-        
+
     @media only screen and (min-width:409px ) and (max-width: 425px) {
 
         /* .container_players_actives {
             margin-top:55% !important;
         } */
-        
+
         .actives-title {
             font-size: 1rem;
             width: 50%;
@@ -412,22 +418,23 @@
             margin-left: 2%;
 
         }
-        
-        
+
+
         .table {
             width: 100%;
             margin: 0.2em 0;
+            border-collapse: separate;
         }
-        
+
         .table-header {
             font-size: 0.65rem;
             width: 1rem;
-        
+
         }
         .table-header2 {
             font-size: 0.65rem;
             width: 1rem;
-        
+
         }
         .title-rows {
             background-color: antiquewhite;
@@ -442,27 +449,27 @@
             text-align: center;
             color: antiquewhite;
             background-color: rgba(12, 10, 9, 0.75);
-        
+
         }
         .th1, .th4, .th6, .th7, .th9, .th10 {
             display: none;
         }
         .paginator_item {
             display: none;
-        
+
         }
-        
+
         .paginator {
             font-size: 0.50rem;
             width: 45%;
         }
         }
-        
+
         @media only screen and (orientation : landscape) and (min-width:601px ) and (max-width: 815px) {
             /* .container_players_actives {
                 margin-top: 20% !important;
             } */
-            
+
             .actives-title {
                 font-size: 1.5rem;
                 width: 50%;
@@ -472,22 +479,23 @@
                 margin-top: 1em !important;
                 margin-left: 2%;
             }
-            
-            
+
+
             .table {
                 width: 100%;
                 margin: 0.2em 0;
+                border-collapse: separate;
             }
-            
+
             .table-header {
                 font-size: 0.85rem;
                 width: 1rem;
-            
+
             }
             .table-header2 {
                 font-size: 0.85rem;
                 width: 1rem;
-        
+
             }
             .title-rows {
                 background-color: antiquewhite;
@@ -498,13 +506,13 @@
             }
             h1 {
                 font-size: 1em;
-        
+
             }
             .error_search {
                 width: 40%;
                 margin-left: 2%;
                 margin-top: 2%;
-        
+
             }
             .th1, .th6, .th7, .th10 {
                 display: none;
@@ -520,5 +528,5 @@
             /* .container_players_actives {
                 margin-top: 25%;
               } */
-              
+
             }
