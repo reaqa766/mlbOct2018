@@ -1,6 +1,7 @@
 <div class="container_players_actives"></div>
 <div class="container-actives">
   <h1 class="actives-title">LIDERES</h1>
+  <h3 class="actives-title1">SPRING TRAINING 2019</h3>
 </div>
 
 <!-- <p class="title-position"> SPRING T. 2019 </p> -->
@@ -13,138 +14,168 @@
 </div>
 
     <!-- LIDERES AVERAGE -->
-<div class="container_grid" *ngIf="!isLoading">
-    <h4 class="subtitulo_lideres1 sub_lideres">AVERAGE</h4>
-  <table class="table   text-center tableAVG">
-
+    <div class="container_buttons">
+    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(0)">AVERAGE</button>
+    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(1)">HITS</button>
+    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(2)">JONRONES </button>
+    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(3)">TRIPLES </button>
+    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(4)">DOBLES </button>
+    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(5)">BASES R </button>
+  </div>
+<div class="container_grid_nvo_no" *ngIf="!isLoading">
+<div class="container_grid_nvo" *ngIf="estadistica[0]">
+  <!-- <div class="average_container" *ngIf=1 > -->
+  <table class="table   text-center tableAVG_nvo">
     <thead class="table-header">
       <tr>
         <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
-        <th class="tbA" style="width: 3%;" scope="col">VB</th>
-        <th class="tbA" style="width: 3%;" scope="col">HITS</th>
+        <th class="tbA" style="width: 5%;" scope="col">VB</th>
+        <th class="tbA" style="width: 5%;" scope="col">HITS</th>
         <!-- <th class="tbA" style="width: 3%;" scope="col">HR</th> -->
-        <th class="tbA1" style="width: 3%;" scope="col">AVG</th>
+        <th class="tbA1" style="width: 5%;" scope="col">AVG</th>
       </tr>
     </thead>
     <!-- <table class="table  "> -->
       <tbody class="table-header2">
           <tr *ngFor="let jugador of filtroTopCinco('avg')">
-            <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 5%;">{{jugador.firstLastName}}</td></a>
-            <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-            <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.hits}}</td>
+            <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
+            <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+            <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.hits}}</td>
             <!-- <td class="tb3" style="width: 2%;">{{jugador.stats[0].splits[0].stat.homeRuns}}</td> -->
-            <td class="tb2A" style="width: 2%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+            <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
       </tbody>
 
-  </table>
 
+    </table>
+    <img class="img_average" src="../../../assets/ALTUVE BATEANDO.png" alt="">
+    </div>
+  <!-- </div> -->
       <!-- LIDERES HRs -->
-
+      <div class="container_grid_nvo" *ngIf="estadistica[2]">
       <h4 class="subtitulo_lideres2 sub_lideres">JONRONES</h4>
-  <table class="table   text-center tableHR">
+  <table class="table   text-center tableAVG_nvo">
       <thead class="table-header">
       <tr>
-        <th class="tbAA" style="width: 5%;" scope="col">JUGADOR</th>
-        <th class="tbA" style="width: 2%;" scope="col">VB</th>
-        <th class="tbA" style="width: 2%;" scope="col">AVG</th>
-        <th class="tbA1" style="width: 2%;" scope="col">HR</th>
+        <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
+        <th class="tbA" style="width: 5%;" scope="col">VB</th>
+        <th class="tbA" style="width: 5%;" scope="col">AVG</th>
+        <th class="tbA1" style="width: 5%;" scope="col">HR</th>
       </tr>
     </thead>
 
     <!-- <table class="table  "> -->
       <tbody class="table-header2">
         <tr *ngFor="let jugador of filtroTopCinco('homeRuns')">
-          <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 5%;">{{jugador.firstLastName}}</td></a>
-          <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-          <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
-           <td class="tb2A" style="width: 2%;">{{jugador.stats[0].splits[0].stat.homeRuns}}</td>
+          <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
+          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+           <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.homeRuns}}</td>
       </tbody>
 
   </table>
+  <img class="img_average" src="../../../assets/CABRE.png" alt="">
+
+  </div>
   <h4 class="subtitulo_lideres3 sub_lideres">DOBLES</h4>
-  <table class="table   text-center tableDOBLES">
+  <div class="container_grid_nvo" *ngIf="estadistica[4]">
+  <table class="table   text-center tableAVG_nvo">
       <thead class="table-header">
       <tr>
-        <th class="tbAA" style="width: 5%;" scope="col">JUGADOR</th>
-        <th class="tbA" style="width: 2%;" scope="col">VB</th>
-        <th class="tbA" style="width: 2%;" scope="col">AVG</th>
-        <th class="tbA1" style="width: 2%;" scope="col">Dobles</th>
+        <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
+        <th class="tbA" style="width: 5%;" scope="col">VB</th>
+        <th class="tbA" style="width: 5%;" scope="col">AVG</th>
+        <th class="tbA1" style="width: 5%;" scope="col">Dobles</th>
       </tr>
     </thead>
 
     <!-- <table class="table  "> -->
-      <tbody class="table-header2">
+       <tbody class="table-header2">
         <tr *ngFor="let jugador of filtroTopCinco('doubles')">
-          <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 5%;">{{jugador.firstLastName}}</td></a>
-          <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-          <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
-           <td class="tb2A" style="width: 2%;">{{jugador.stats[0].splits[0].stat.doubles}}</td>
+          <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
+          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+           <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.doubles}}</td>
       </tbody>
 
   </table>
-  <h4 class="subtitulo_lideres4 sub_lideres">TRIPLES</h4>
-  <table class="table   text-center tableTRIPLES">
+  <img class="img_average" src="../../../assets/Eduardo.png" alt="">
+</div>
+
+
+   <h4 class="subtitulo_lideres4 sub_lideres">TRIPLES</h4>
+   <div class="container_grid_nvo" *ngIf="estadistica[3]">
+  <table class="table   text-center tableAVG_nvo">
       <thead class="table-header">
       <tr>
-        <th class="tbAA" style="width: 5%;" scope="col">JUGADOR</th>
-        <th class="tbA" style="width: 2%;" scope="col">VB</th>
-        <th class="tbA" style="width: 2%;" scope="col">AVG</th>
-        <th class="tbA1" style="width: 2%;" scope="col">TRIPLES</th>
+        <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
+        <th class="tbA" style="width: 5%;" scope="col">VB</th>
+        <th class="tbA" style="width: 5%;" scope="col">AVG</th>
+        <th class="tbA1" style="width: 5%;" scope="col">TRIPLES</th>
       </tr>
     </thead>
 
     <!-- <table class="table  "> -->
       <tbody class="table-header2">
         <tr *ngFor="let jugador of filtroTopCinco('triples')">
-          <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 5%;">{{jugador.firstLastName}}</td></a>
-          <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-          <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
-           <td class="tb2A" style="width: 2%;">{{jugador.stats[0].splits[0].stat.triples}}</td>
+          <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
+          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+           <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.triples}}</td>
       </tbody>
 
   </table>
+  <img class="img_average" src="../../../assets/YOLMER S.png" alt="">
+</div>
   <h4 class="subtitulo_lideres5 sub_lideres">B. ROBADAS</h4>
-  <table class="table   text-center tableBR">
+  <div class="container_grid_nvo" *ngIf="estadistica[5]">
+  <table class="table   text-center tableAVG_nvo">
       <thead class="table-header">
       <tr>
-        <th class="tbAA" style="width: 5%;" scope="col">JUGADOR</th>
-        <th class="tbA" style="width: 2%;" scope="col">VB</th>
-        <th class="tbA" style="width: 2%;" scope="col">AVG</th>
-        <th class="tbA1" style="width: 2%;" scope="col">BR</th>
+        <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
+        <th class="tbA" style="width: 5%;" scope="col">VB</th>
+        <th class="tbA" style="width: 5%;" scope="col">AVG</th>
+        <th class="tbA1" style="width: 5%;" scope="col">BR</th>
       </tr>
     </thead>
 
     <!-- <table class="table  "> -->
       <tbody class="table-header2 ">
         <tr *ngFor="let jugador of filtroTopCinco('stolenBases')">
-          <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 5%;">{{jugador.firstLastName}}</td></a>
-          <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-          <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
-          <td class="tb2A" style="width: 2%;">{{jugador.stats[0].splits[0].stat.stolenBases}}</td>
+          <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
+          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+          <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.stolenBases}}</td>
       </tbody>
+    </table>
+    <img class="img_average" src="../../../assets/ACUNARUN.png" alt="">
 
-  </table>
+</div>
+
+  <div class="container_grid_nvo" *ngIf="estadistica[1]">
   <h4 class="subtitulo_lideres6 sub_lideres">HITS</h4>
-  <table class="table   text-center tableHITS">
+  <table class="table   text-center tableAVG_nvo">
       <thead class="table-header">
       <tr>
-        <th class="tbAA" style="width: 5%;" scope="col">JUGADOR</th>
-        <th class="tbA" style="width: 2%;" scope="col">VB</th>
-        <th class="tbA" style="width: 2%;" scope="col">AVG</th>
-        <th class="tbA1" style="width: 2%;" scope="col">HITS</th>
+        <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
+        <th class="tbA" style="width: 5%;" scope="col">VB</th>
+        <th class="tbA" style="width: 5%;" scope="col">AVG</th>
+        <th class="tbA1" style="width: 5%;" scope="col">HITS</th>
       </tr>
     </thead>
 
     <!-- <table class="table  "> -->
       <tbody class="table-header2">
         <tr *ngFor="let jugador of filtroTopCinco('hits')">
-          <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 5%;">{{jugador.firstLastName}}</td></a>
-          <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-          <td class="tb2" style="width: 2%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
-           <td class="tb2A" style="width: 2%;">{{jugador.stats[0].splits[0].stat.hits}}</td>
+          <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
+          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+           <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.hits}}</td>
       </tbody>
 
   </table>
+  <img class="img_average" src="../../../assets/Ender-Inciarte HITS.png" alt="">
+
+  </div>
   <div class="espacioInferior"></div>
 </div>
 
