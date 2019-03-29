@@ -23,8 +23,8 @@
             <thead class="table-header">
               <tr>
                 <th style="width: 5%;" scope="col">POS</th>
-                <th style="width: 5%;" scope="col">VB</th>
                 <th style="width: 5%;" scope="col">AVG</th>
+                <th style="width: 5%;" scope="col">VB</th>
                 <th style="width: 5%;" scope="col">CA</th>
                 <th style="width: 5%;" scope="col">H</th>
                 <th style="width: 5%;" scope="col">PCHES</th>
@@ -38,8 +38,8 @@
             <tbody class="table-header2">
               <tr *ngIf="player && player.primaryPosition && player.stats">
                 <td style="width: 5%;">{{player.primaryPosition.abbreviation}}</td>
-                <td style="width: 5%;">{{player.stats[0].splits[0].stat.atBats}}</td>
                 <td style="width: 5%;">{{player.stats[0].splits[0].stat.avg}}</td>
+                <td style="width: 5%;">{{player.stats[0].splits[0].stat.atBats}}</td>
                 <td style="width: 5%;">{{player.stats[0].splits[0].stat.runs}}</td>
                 <td style="width: 5%;">{{player.stats[0].splits[0].stat.hits}}</td>
                 <td style="width: 5%;">{{player.stats[0].splits[0].stat.strikeOuts}}</td>
