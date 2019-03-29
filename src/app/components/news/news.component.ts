@@ -45,19 +45,19 @@ export class NewsComponent implements OnInit {
           // tslint:disable-next-line:max-line-length
           window.open('https://www.mlb.com/es/news/que-se-puede-esperar-del-venezolano-gleyber-torres-en-grandes-ligas/c-273383100', '_blank');
   } else if (this.num === 'news2') {
-    window.open('https://www.directvsports.com/beisbol/mlb/noticias/cuando-comienza-temporada-2019-mlb', '_blank');
+    window.open('http://www.el-nacional.com/noticias/beisbol/antonio-senzatela-elias-diaz-jose-osuna-empiezan-lista-lesionados_276774', '_blank');
   } else if (this.num === 'news3') {
     // tslint:disable-next-line:max-line-length
-    window.open('https://www.mlb.com/es/news/keibert-ruiz-tiene-los-bonos-bien-altos-en-los-dodgers-como-receptor-del-futuro/c-302632976', '_blank');
+    window.open('https://www.eldiariodeguayana.com.ve/venezolanos-van-por-la-gloria-en-una-nueva-temporada-en-las-grandes-ligas/', '_blank');
   } else if (this.num === 'news4') {
     // tslint:disable-next-line:max-line-length
-    window.open('http://www.espn.com.ve/beisbol/nota/_/id/5077318/tigres-miguel-cabrera-dividira-labores-en-1b-y-como-bateador-designado', '_blank');
+    window.open('https://www.mlb.com/news/jhoulys-chacin-homer-opening-day', '_blank');
   } else if (this.num === 'news5') {
     // tslint:disable-next-line:max-line-length
     window.open('https://www.12up.com/es/posts/6256619-los-5-mejores-prospectos-venezolanos-de-las-grandes-ligas-en-2019', '_blank');
   } else if (this.num === 'news6') {
     // tslint:disable-next-line:max-line-length
-    window.open('https://www.mlb.com/news/jose-altuve-back-in-astros-lineup', '_blank');
+    window.open('https://www.sportsvenezuela.com/jose-altuve-brillo-como-un-astro-en-el-dia-inaugural-video/', '_blank');
   } else if (this.num === 'news7') {
     // tslint:disable-next-line:max-line-length
     window.open('https://beisbolplay.americadigital.com/2019/01/22/asdrubal-cabrera-firmo-con-rangers/', '_blank');

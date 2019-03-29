@@ -29,13 +29,13 @@ export class VideosComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video1') {
-          window.open('https://www.mlb.com/es/video/acuna-jrs-first-mlb-hit/c-1975744283', '_blank');
+          window.open('https://www.mlb.com/video/miles-mikolas-in-play-runs-s-to-jhoulys-chacin', '_blank');
   } else if (this.num === 'video2') {
-    window.open('https://www.mlb.com/es/braves/video/inciarte-le-roba-hr-a-kingery/c-1951398783', '_blank');
+    window.open('https://www.mlb.com/es/video/acuna-jr-s-rbi-single', '_blank');
   } else if (this.num === 'video3') {
-    window.open('https://www.mlb.com/es/video/altuve-le-roba-a-didi/c-1863165983', '_blank');
+    window.open('https://www.mlb.com/es/video/jose-altuve-homers-1-on-a-fly-ball-to-left-center-field', '_blank');
   } else if (this.num === 'video4') {
-    window.open('https://www.mlb.com/indians/news/carlos-carrasco-strikes-out-11-in-indians-win/c-292349332', '_blank');
+    window.open('https://www.mlb.com/es/video/peraza-s-game-tying-single-c2523781383', '_blank');
   }
   }
 

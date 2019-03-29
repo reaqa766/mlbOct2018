@@ -29,13 +29,13 @@
   }
 
   .container_grid_nvo {
-    margin: 0 10%;
-    width: 90%;
+    /* margin: 0 10%; */
+    width: 100%;
     align-self: center;
     display: grid;
-    grid-auto-columns: 4fr fr;
+    grid-auto-columns: fr fr;
     /* column-gap: 10px; */
-    grid-auto-rows: fr;
+    grid-auto-rows: auto;
   }
 
   .container_buttons {
@@ -58,7 +58,7 @@
   .tableAVG_nvo {
     grid-column: 1/2;
     grid-row: 1/2;
-    padding-top: 15%;
+    /* padding-top: 15%; */
 
   }
 .img_average {
@@ -67,8 +67,11 @@
   /* width: 65%; */
   /* justify-self: start; */
   align-self: center;
-  max-width: 65%;
+  max-width: 100%;
   height: auto;
+  justify-self: center;
+
+
 }
 .img_average1 {
   width: 65%;
@@ -130,7 +133,8 @@
     margin: 0.2em auto;
     display: table;
     border-collapse: separate;
-    padding: 50px;
+    /* padding: 50px; */
+    align-self: center
   }
 
   .table-header {
@@ -245,7 +249,7 @@
       height: 100px;
     }
     .tbAA, .tb11, .tbA1, .tb2A {
-      font-size: 1.5rem;
+      font-size: 1rem;
       font-weight: 600;
     }
     .sub_lideres {
