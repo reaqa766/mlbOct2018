@@ -10,7 +10,7 @@
     margin: 0.1rem auto 1rem;
     padding: .25rem 0;
     background-color: rgba(3, 2, 2, 0.5);
-    width: 12em;
+    width: fit-content;
     height: 1.75em;
     border-radius: 7px;
 }
@@ -21,7 +21,7 @@
     margin: 0.1rem auto 1rem;
     padding: .25rem 0;
     background-color: rgba(3, 2, 2, 0.5);
-    width: 8em;
+    width: 12em;
     height: 1.5em;
     border-radius: 7px;
 }
@@ -334,7 +334,7 @@ font-weight: 400;
 
       .byPosition-title {
         font-size: 1.25rem;
-        width: 12em;
+        width:  fit-content;;
     }
     .byPosition-season-title {
         font-size: 1.25rem;
