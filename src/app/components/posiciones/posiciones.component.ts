@@ -66,6 +66,7 @@ export class PosicionesComponent implements OnInit {
             losses: team.leagueRecord.losses,
             pct: team.leagueRecord.pct,
             teamId: team.team.id,
+            gamesBack: team.gamesBack,
           });}}
          if(tpos.division.id === 201) {
           for(let team of tpos.teamRecords){
@@ -75,6 +76,8 @@ export class PosicionesComponent implements OnInit {
             losses: team.leagueRecord.losses,
             pct: team.leagueRecord.pct,
             teamId: team.team.id,
+            gamesBack: team.gamesBack,
+
           });} }
 
           if(tpos.division.id=== 202) {
@@ -85,6 +88,8 @@ export class PosicionesComponent implements OnInit {
             losses: team.leagueRecord.losses,
             pct: team.leagueRecord.pct,
             teamId: team.team.id,
+            gamesBack: team.gamesBack,
+
           });}}
           if(tpos.division.id=== 203) {
             for(let team of tpos.teamRecords){
@@ -94,6 +99,8 @@ export class PosicionesComponent implements OnInit {
             losses: team.leagueRecord.losses,
             pct: team.leagueRecord.pct,
             teamId: team.team.id,
+            gamesBack: team.gamesBack,
+
           });}}
           if(tpos.division.id=== 204) {
             for(let team of tpos.teamRecords){
@@ -103,6 +110,7 @@ export class PosicionesComponent implements OnInit {
             losses: team.leagueRecord.losses,
             pct: team.leagueRecord.pct,
             teamId: team.team.id,
+            gamesBack: team.gamesBack,
           });}}
         if(tpos.division.id === 205) {
           for(let team of tpos.teamRecords){
@@ -112,6 +120,7 @@ export class PosicionesComponent implements OnInit {
             losses: team.leagueRecord.losses,
             pct: team.leagueRecord.pct,
             teamId: team.team.id,
+            gamesBack: team.gamesBack,
           });}}
 
 

@@ -12,6 +12,7 @@ import { ContactUsComponent} from '../app/components//contact-us/contact-us.comp
 import { HomeComponent} from '../app/components/home/home.component';
 import { BypositionComponent} from '../app/components/players/byposition/byposition.component';
 import { ByteamComponent} from '../app/components/players/byteam/byteam.component';
+import { PlayersComponent} from '../app/components/players/players.component';
 import { DailyComponent} from '../app/components/players/daily/daily.component';
 import { ActivesComponent} from '../app/components/players/actives/actives.component';
 import { BioActivesComponent} from '../app/components/players/bio-actives/bio-actives.component';
@@ -98,6 +99,8 @@ const routes: Routes = [
   component: PBioActivesComponent},
   { path: 'p_actives',
   component: PActivesComponent},
+  { path: 'p_dayB',
+  component: PlayersComponent},
   { path: 'p_actives19',
   component: PActives2019Component},
   { path: 'login',

@@ -54,7 +54,7 @@
 }
 
 .division1 {
-  width: 6rem;
+  width: 7rem;
   font-size: 1.40rem;
 
 }
@@ -81,8 +81,12 @@
 
 }
 
-.tableNl1 {
-
+.table td {
+  padding: .25rem;
+  vertical-align: middle;
+  /* border-top: 1px solid #dee2e6; */
+  background-color: #fff;
+  color: black;
 }
 
 
@@ -154,8 +158,8 @@
     margin: auto;
   }
   .tb1 {
-    width: 3rem;
-    background-color: rgba(255, 255, 255, 0.5);
+    width: 4rem;
+    background-color: rgb(255, 255, 255);
   }
   .tb2, .tb3 {
     font-size: 1.25rem;
