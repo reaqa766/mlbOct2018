@@ -18,12 +18,19 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PosicionesComponent implements OnInit {
   data: any;
-  ClLeague: any[];
-  GlLeague: any[];
+  // ClLeague: any[];
+  // GlLeague: any[];
+  nlEast: any[];
+  nlCentral: any[];
+  nlWest: any[];
+  alEast: any[];
+  alCentral: any[];
+  alWest: any[];
+
   AllLeague: Boolean;
   CALEND2: any;
-  _url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2019&standingsTypes=springTraining';
-
+  _url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2019&standingsTypes=regularSeason';
+  // _url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2019&standingsTypes=springTraining';
 
   constructor(private playerService: PruebaService,
     private pagerService: PagerService,
@@ -32,46 +39,96 @@ export class PosicionesComponent implements OnInit {
 
   async ngOnInit() {
 
-    this.ClLeague= [];
-    this.GlLeague= [];
-    this.AllLeague = true;
+    // this.ClLeague= [];
+    // this.GlLeague= [];
+    // this.AllLeague = true;
+    this.nlEast=[];
+    this.nlCentral=[];
+    this.nlWest=[];
+    this.alEast=[];
+    this.alCentral=[];
+    this.alWest=[];
+
+
+
+
 
     this.CALEND2 = await this.http.get(this._url).toPromise();
 
-    for (let tpos of this.CALEND2.records) {
-      for(let team of tpos.teamRecords){
-        if(team.team.springLeague.id === 115){
-          this.ClLeague.push({
-            name: team.team.name,
-            wins: team.leagueRecord.wins,
-            losses: team.leagueRecord.losses,
-            pct: team.leagueRecord.pct,
-            teamId: team.team.id,
-          });
-        } else{
-          this.GlLeague.push({
-            name: team.team.name,
-            wins: team.leagueRecord.wins,
-            losses: team.leagueRecord.losses,
-            pct: team.leagueRecord.pct,
-            teamId: team.team.id,
-          });
-        }
-      }
+    console.log('CALEND2', this.CALEND2);
 
-    }
+    for (let tpos of this.CALEND2.records) {
+      if(tpos.division.id === 200){
+      for(let team of tpos.teamRecords){
+          this.alWest.push({
+            name: team.team.name,
+            wins: team.leagueRecord.wins,
+            losses: team.leagueRecord.losses,
+            pct: team.leagueRecord.pct,
+            teamId: team.team.id,
+          });}}
+         if(tpos.division.id === 201) {
+          for(let team of tpos.teamRecords){
+          this.alEast.push({
+            name: team.team.name,
+            wins: team.leagueRecord.wins,
+            losses: team.leagueRecord.losses,
+            pct: team.leagueRecord.pct,
+            teamId: team.team.id,
+          });} }
+
+          if(tpos.division.id=== 202) {
+            for(let team of tpos.teamRecords){
+          this.alCentral.push({
+            name: team.team.name,
+            wins: team.leagueRecord.wins,
+            losses: team.leagueRecord.losses,
+            pct: team.leagueRecord.pct,
+            teamId: team.team.id,
+          });}}
+          if(tpos.division.id=== 203) {
+            for(let team of tpos.teamRecords){
+          this.nlWest.push({
+            name: team.team.name,
+            wins: team.leagueRecord.wins,
+            losses: team.leagueRecord.losses,
+            pct: team.leagueRecord.pct,
+            teamId: team.team.id,
+          });}}
+          if(tpos.division.id=== 204) {
+            for(let team of tpos.teamRecords){
+          this.nlEast.push({
+            name: team.team.name,
+            wins: team.leagueRecord.wins,
+            losses: team.leagueRecord.losses,
+            pct: team.leagueRecord.pct,
+            teamId: team.team.id,
+          });}}
+        if(tpos.division.id === 205) {
+          for(let team of tpos.teamRecords){
+          this.nlCentral.push({
+            name: team.team.name,
+            wins: team.leagueRecord.wins,
+            losses: team.leagueRecord.losses,
+            pct: team.leagueRecord.pct,
+            teamId: team.team.id,
+          });}}
+
+
+
+
     this.positionTeams();
 
 
-            console.log('ClLeague', this.ClLeague);
-            console.log('GlLeague', this.GlLeague);
+            // console.log('ClLeague', this.ClLeague);
+            // console.log('GlLeague', this.GlLeague);
             console.log('CALEND2', this.CALEND2);
 
 
-    }
+    }}
 
 positionTeams() {
-  this.GlLeague.sort((a, b) => {
+  this.nlEast.sort((a, b) => {
     if (a.pct > b.pct) {
       return -1;
 
@@ -81,7 +138,47 @@ positionTeams() {
       return 0;
     }
   });
-  this.ClLeague.sort((a, b) => {
+  this.nlWest.sort((a, b) => {
+    if (a.pct > b.pct) {
+      return -1;
+
+    } else  if (a.pct < b.pct) {
+      return 1;
+    } else  {
+      return 0;
+    }
+  });
+  this.nlCentral.sort((a, b) => {
+    if (a.pct > b.pct) {
+      return -1;
+
+    } else  if (a.pct < b.pct) {
+      return 1;
+    } else  {
+      return 0;
+    }
+  });
+  this.alWest.sort((a, b) => {
+    if (a.pct > b.pct) {
+      return -1;
+
+    } else  if (a.pct < b.pct) {
+      return 1;
+    } else  {
+      return 0;
+    }
+  });
+  this.alEast.sort((a, b) => {
+    if (a.pct > b.pct) {
+      return -1;
+
+    } else  if (a.pct < b.pct) {
+      return 1;
+    } else  {
+      return 0;
+    }
+  });
+  this.alCentral.sort((a, b) => {
     if (a.pct > b.pct) {
       return -1;
 

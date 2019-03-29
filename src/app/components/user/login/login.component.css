@@ -7,6 +7,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   /* margin: 0 auto; */
   border-radius: 10px;
+  /* width: 80%; */
 
 }
 label {
@@ -16,4 +17,13 @@ label {
 
 .input {
   background-color: rgba(255, 255, 255, 0.2);
+}
+.btn {
+  padding-bottom: 2.5rem;
+  color: antiquewhite;
+  font-size: 1.50rem;
+  text-align: center;
+  background-color: rgba(3, 2, 2, 0.5);
+  height: 1.75em;
+  border-radius: 7px;
 }

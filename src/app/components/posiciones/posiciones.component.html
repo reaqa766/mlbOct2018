@@ -1,45 +1,26 @@
 <div class="container_players_actives"></div>
 <div class="container-actives">
   <h1 class="actives-title">Posiciones de los Equipos</h1>
-  <h4 class="actives-title1">Spring Training 2019</h4>
+  <h4 class="actives-title1">Temporada Regular 2019</h4>
 </div>
 
 <!-- LOADER -->
-<div *ngIf="!AllLeague">
+<!-- <div *ngIf="!AllLeague">
   <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
   <p class="spiner_load">CARGANDO</p>
-</div>
+</div> -->
 
 
-<div *ngIf="AllLeague">
+<!-- <div *ngIf="AllLeague"> -->
 
 <div class="container_grid">
-  <table class="table  text-center tableGL">
+<div class="container_nacional">
+  <h3 class="league league1">LIGA NACIONAL</h3>
+  <h5 class="league division1">ESTE</h5>
+  <table class="table  text-center tableNl1">
     <thead class="table-header">
       <tr>
-        <th class="tbA" style="width: 5%;" scope="col">EQUIPO</th>
-        <th class="tbA" style="width: 2;" scope="col">G</th>
-        <th class="tbA" style="width: 2;" scope="col">P</th>
-        <th class="tbA" style="width: 2;" scope="col">.pct</th>
-      </tr>
-    </thead>
-
-    <!-- <table class="table "> -->
-      <tbody class="table-header2">
-          <tr *ngFor="let position of GlLeague; index as i ">
-            <td class="tb1" style="width: 5%;"><img class="tb1" src="{{'../../../../assets/'+ position.teamId +'.png'}}" alt=""></td>
-             <!-- <td class="tb2" style="width: 2%;">{{position.name}}</td> -->
-             <td class="tb2" style="width: 2%;">{{position.wins}}</td>
-             <td class="tb3" style="width: 2%;">{{position.losses}}</td>
-             <td class="tb3" style="width: 2%;">{{position.pct}}</td>
-      </tbody>
-
-  </table>
-
-  <table class="table  text-center tableCL">
-    <thead class="table-header">
-      <tr>
-        <th class="tbA" style="width: 5%;" scope="col">EQUIPO</th>
+        <th class="tbA" style="width: 3%;" scope="col">EQUIPO</th>
         <th class="tbA" style="width: 2%;" scope="col">G</th>
         <th class="tbA" style="width: 2%;" scope="col">P</th>
         <th class="tbA" style="width: 2%;" scope="col">.pct</th>
@@ -48,8 +29,123 @@
 
     <!-- <table class="table "> -->
       <tbody class="table-header2">
-          <tr *ngFor="let position of ClLeague ">
-            <td class="tb1" style="width: 5%;"><img class="tb1" src="{{'../../../../assets/'+ position.teamId +'.png'}}" alt=""></td>
+          <tr *ngFor="let position of nlEast; index as i ">
+            <td class="tb1" style="width: 3%;"><img class="tb1" src="{{'../../../../assets/'+ position.teamId +'.png'}}" alt=""></td>
+            <!-- <td class="tb2" style="width: 2%;">{{position.name}}</td> -->
+            <td class="tb2" style="width: 2%;">{{position.wins}}</td>
+            <td class="tb3" style="width: 2%;">{{position.losses}}</td>
+            <td class="tb3" style="width: 2%;">{{position.pct}}</td>
+      </tbody>
+
+  </table>
+  <h5 class="league division1">CENTRAL</h5>
+  <table class="table  text-center tableNl2">
+    <thead class="table-header">
+      <tr>
+        <th class="tbA" style="width: 3%;" scope="col">EQUIPO</th>
+        <th class="tbA" style="width: 2%;" scope="col">G</th>
+        <th class="tbA" style="width: 2%;" scope="col">P</th>
+        <th class="tbA" style="width: 2%;" scope="col">.pct</th>
+      </tr>
+    </thead>
+
+    <!-- <table class="table "> -->
+      <tbody class="table-header2">
+          <tr *ngFor="let position of nlCentral; index as i ">
+            <td class="tb1" style="width: 3%;"><img class="tb1" src="{{'../../../../assets/'+ position.teamId +'.png'}}" alt=""></td>
+            <!-- <td class="tb2" style="width: 2%;">{{position.name}}</td> -->
+            <td class="tb2" style="width: 2%;">{{position.wins}}</td>
+            <td class="tb3" style="width: 2%;">{{position.losses}}</td>
+            <td class="tb3" style="width: 2%;">{{position.pct}}</td>
+      </tbody>
+
+  </table>
+  <h5 class="league division1">OESTE</h5>
+  <table class="table  text-center tableNl3">
+    <thead class="table-header">
+      <tr>
+        <th class="tbA" style="width: 3%;" scope="col">EQUIPO</th>
+        <!-- <th class="tbA" style="width: 2;" scope="col">NOMBRE</th> -->
+        <th class="tbA" style="width: 2%;" scope="col">G</th>
+        <th class="tbA" style="width: 2%;" scope="col">P</th>
+        <th class="tbA" style="width: 2%;" scope="col">.pct</th>
+      </tr>
+    </thead>
+
+    <!-- <table class="table "> -->
+    <tbody class="table-header2">
+          <tr *ngFor="let position of nlWest; index as i ">
+            <td class="tb1" style="width: 3%;"><img class="tb1" src="{{'../../../../assets/'+ position.teamId +'.png'}}" alt=""></td>
+    <!-- <td class="tb2" style="width: 2%;">{{position.name}}</td> -->
+    <td class="tb2" style="width: 2%;">{{position.wins}}</td>
+        <td class="tb3" style="width: 2%;">{{position.losses}}</td>
+        <td class="tb3" style="width: 2%;">{{position.pct}}</td>
+      </tbody>
+
+  </table>
+</div>
+
+<div class="container_americana">
+  <h3 class="league league2">LIGA AMERICANA</h3>
+  <h5 class="league division1">ESTE</h5>
+  <table class="table  text-center tableAl1">
+    <thead class="table-header">
+      <tr>
+        <th class="tbA" style="width: 3%;" scope="col">EQUIPO</th>
+        <th class="tbA" style="width: 2%;" scope="col">G</th>
+        <th class="tbA" style="width: 2%;" scope="col">P</th>
+        <th class="tbA" style="width: 2%;" scope="col">.pct</th>
+      </tr>
+    </thead>
+
+    <!-- <table class="table "> -->
+      <tbody class="table-header2">
+          <tr *ngFor="let position of alEast ">
+            <td class="tb1" style="width: 3%;"><img class="tb1" src="{{'../../../../assets/'+ position.teamId +'.png'}}" alt=""></td>
+            <!-- <td class="tb2" style="width: 2%;">{{position.name}}</td> -->
+            <td class="tb2" style="width: 2%;">{{position.wins}}</td>
+             <td class="tb2" style="width: 2%;">{{position.losses}}</td>
+             <td class="tb3" style="width: 2%;">{{position.pct}}</td>
+      </tbody>
+
+  </table>
+  <h5 class="league division1">CENTRAL</h5>
+  <table class="table  text-center tableAl2">
+    <thead class="table-header">
+      <tr>
+        <th class="tbA" style="width: 3%;" scope="col">EQUIPO</th>
+        <th class="tbA" style="width: 2%;" scope="col">G</th>
+        <th class="tbA" style="width: 2%;" scope="col">P</th>
+        <th class="tbA" style="width: 2%;" scope="col">.pct</th>
+      </tr>
+    </thead>
+
+    <!-- <table class="table "> -->
+      <tbody class="table-header2">
+          <tr *ngFor="let position of alCentral ">
+            <td class="tb1" style="width: 3%;"><img class="tb1" src="{{'../../../../assets/'+ position.teamId +'.png'}}" alt=""></td>
+            <!-- <td class="tb2" style="width: 2%;">{{position.name}}</td> -->
+            <td class="tb2" style="width: 2%;">{{position.wins}}</td>
+            <td class="tb2" style="width: 2%;">{{position.losses}}</td>
+            <td class="tb3" style="width: 2%;">{{position.pct}}</td>
+      </tbody>
+
+  </table>
+  <h5 class="league division1">OESTE</h5>
+  <table class="table  text-center tableAl3">
+    <thead class="table-header">
+      <tr>
+        <th class="tbA" style="width: 3%;" scope="col">EQUIPO</th>
+        <th class="tbA" style="width: 2%;" scope="col">G</th>
+        <th class="tbA" style="width: 2%;" scope="col">P</th>
+        <th class="tbA" style="width: 2%;" scope="col">.pct</th>
+      </tr>
+    </thead>
+
+    <!-- <table class="table "> --> -->
+      <tbody class="table-header2">
+          <tr *ngFor="let position of alWest ">
+            <td class="tb1" style="width: 3%;"><img class="tb1" src="{{'../../../../assets/'+ position.teamId +'.png'}}" alt=""></td>
             <!-- <td class="tb2" style="width: 2%;">{{position.name}}</td> -->
             <td class="tb2" style="width: 2%;">{{position.wins}}</td>
              <td class="tb2" style="width: 2%;">{{position.losses}}</td>
@@ -59,4 +155,5 @@
   </table>
 </div>
 </div>
+<!-- </div> -->
 

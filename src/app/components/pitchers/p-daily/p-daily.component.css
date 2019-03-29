@@ -704,6 +704,19 @@ th {
       height: 1.75em;
       border-radius: 7px;
   }
+  .daily-title1 {
+    font-size: 1.5rem !important;
+    width: 10em;
+    color: antiquewhite;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0.25em;
+    background-color: rgba(19, 12, 12, 0.5);
+    height: 1.75em;
+    border-radius: 7px;
+
+
+  }
 
   .advancedSearchTextbox{
       color: rgb(2, 1, 0);

@@ -34,25 +34,65 @@
 
   .container_grid {
     display: grid;
-    grid-auto-columns: fr fr;
+    grid-auto-columns: fr fr ;
     column-gap: 10px;
-    grid-auto-rows: fr;
+    /* grid-auto-rows: fr fr; */
     margin-bottom: 3rem;
 
   }
+  .league {
+    color: antiquewhite;
+    font-size: 1.75rem;
+    text-align: center;
+    margin: 0.15rem auto 0;
+    padding: .5rem 0;
+    background-color: rgba(3, 2, 2, 0.5);
+    width: 18rem;
+    height: 1.75em;
+    border-radius: 7px;
 
-  .tableGL {
+}
+
+.division1 {
+  width: 6rem;
+  font-size: 1.40rem;
+
+}
+  .container_nacional {
     grid-column: 1/2;
+    grid-row: 1/2;
+
+    display: grid;
+    grid-auto-columns: fr ;
+    grid-auto-rows: fr fr fr;
+    row-gap: 10px;
+    margin-bottom: 2rem;
+
+
   }
-  .tableCL {
-    grid-column: 2/3;
-  }
+ .container_americana {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: grid;
+  grid-auto-columns: fr;
+  grid-auto-rows: fr fr fr;
+  row-gap: 10px;
+  margin-bottom: 2rem;
+
+}
+
+.tableNl1 {
+
+}
+
+
 
   .table {
     width: 80%;
     margin: 0.2em auto;
-    display: table;
+    /* display: table; */
     border-collapse: separate;
+    vertical-align: middle !important;
 
   }
 
@@ -114,20 +154,93 @@
     margin: auto;
   }
   .tb1 {
-    width: 5rem;
+    width: 3rem;
+    background-color: rgba(255, 255, 255, 0.5);
   }
   .tb2, .tb3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
+    /* padding-top: 2.5rem; */
   }
   .tbA {
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: bold;
+    /* padding-top: 3rem; */
+
   }
 
 
-  @media only screen and (min-width:300px ) and (max-width: 320px) {
 
+
+ @media only screen and (min-width:300px ) and (max-width: 767px) {
+
+  .actives-title {
+    font-size: 1.5rem;
+    width: 20rem;
+  }
+  .actives-title1 {
+    font-size: 1.3rem;
+    width: 15rem;
+
+  }
+  .container_grid {
+    display: grid;
+    grid-template-columns: fr;
+    grid-template-rows: fr fr fr fr;
+
+  }
+
+  .table {
+    width: 80%;
+    margin-bottom: 1.25rem;
+    border-collapse: separate;
+    vertical-align: middle !important;
+
+
+  }
+  .tableGL {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .tableCL {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .tbA, .tb2, .tb3 {
+    font-size: 1rem;
+    /* padding-top: 8%; */
+  }
+  .tb1 {
+    width: 4rem;
+
+  }
+  .league {
+    color: antiquewhite;
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 0 auto 0;
+    padding: .5rem 0;
+    background-color: rgba(3, 2, 2, 0.5);
+    width: 14rem;
+    height: 1.75em;
+    border-radius: 7px;
+  }
+  .league1 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+
+  }
+  .league2 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+  }
+  }
+
+
+
+
+  /* @media only screen and (min-width:300px ) and (max-width: 320px) {
   .container_players_actives {
     margin-top:1% !important;
   }
@@ -250,9 +363,6 @@
     }
     @media only screen and (min-width:321px ) and (max-width: 355px) {
 
-        /* .container_players_actives {
-            margin-top:85% !important;
-        } */
 
         .actives-title {
             font-size: 1.5rem;
@@ -378,9 +488,6 @@
         }
     @media only screen and (min-width:366px ) and (max-width: 408px) {
 
-        /* .container_players_actives {
-            margin-top:55% !important;
-        } */
 
         .actives-title {
             font-size: 1.5rem;
@@ -442,10 +549,6 @@
 
     @media only screen and (min-width:409px ) and (max-width: 425px) {
 
-        /* .container_players_actives {
-            margin-top:55% !important;
-        } */
-
         .actives-title {
             font-size: 1rem;
             width: 50%;
@@ -505,9 +608,6 @@
         }
 
         @media only screen and (orientation : landscape) and (min-width:601px ) and (max-width: 815px) {
-            /* .container_players_actives {
-                margin-top: 20% !important;
-            } */
 
             .actives-title {
                 font-size: 1.5rem;
@@ -564,9 +664,6 @@
         }
         @media only screen and (min-width:1920px ) and (max-width: 3000px) {
 
-            /* .container_players_actives {
-                margin-top: 25%;
-              } */
 
-            }
+            } */
 
