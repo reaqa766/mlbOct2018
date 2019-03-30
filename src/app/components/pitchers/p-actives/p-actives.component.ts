@@ -40,6 +40,8 @@ export class PActivesComponent implements OnInit {
     // paged items
     pagedItems: any[];
   isLoading: boolean;
+  jugadores: any[];
+
 
   constructor(private playerService: PitchersService, private pagerService: PagerService) { }
 
@@ -67,9 +69,9 @@ export class PActivesComponent implements OnInit {
             return newPlayer;
           });
          // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
-         this.players = this.players.filter(player =>
-         player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0
-         && player.stats[0].splits[player.stats[0].splits.length-1].date === this.dia)
+          this.players = this.players.filter(player =>
+          player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0)
+        //  && player.stats[0].splits[player.stats[0].splits.length-1].date === this.dia)
          // se ordenan por nombre
             .sort(({ fullName: a }, { fullName: b }) => {
               if (a > b) {
@@ -81,7 +83,8 @@ export class PActivesComponent implements OnInit {
               }
             });
 
-          this.allItems = this.players;
+            this.allItems = this.players;
+            this.jugadores = this.players;
               // console.log(JSON.stringify(this.players), 'pbajson');
 
           this.setPage(1);
@@ -96,27 +99,24 @@ export class PActivesComponent implements OnInit {
 
   onSearchChange() {
     if (this.searchText) {
-      this.allItems = this.players.filter(player =>
+      this.players = this.players.filter(player =>
         player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
-        (player.stats[0].splits[0].team.name.toUpperCase().includes(this.searchText)) ||
-        (player.fullName.includes(this.searchText)) ||
-        (player.fullName.toLowerCase().includes(this.searchText)) ||
-        (player.fullName.toUpperCase().includes(this.searchText)));
+        (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
+        (player.nickName && player.nickName.toLowerCase().includes(this.searchText))  ||
+        player.mlbDebutDate.includes(this.searchText));
         this.setPage(this.pager.currentPage);
+
       } else {
           this.allItems = this.players;
           this.setPage(this.pager.currentPage);
         }
         return this.allItems;
       }
-
   setPage(page: number) {
     // get pager object from service
-    this.pager = this.pagerService.getPager(this.allItems.length, page);
+    this.pager = this.pagerService.getPager2(this.allItems.length, page);
 
     // get current page of items
     this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
   }
-
-
 }

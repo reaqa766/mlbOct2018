@@ -7,18 +7,18 @@
 <!-- <p class="title-position"> TEMP. 2019 </p> -->
 
 <!-- LOADER -->
-<div *ngIf="!allItems">
+<div *ngIf="!players">
   <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
   <p class="spiner_load">CARGANDO</p>
 </div>
 
-<div *ngIf="allItems">
+<div *ngIf="players">
   <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Pitcher..." class="advancedSearchTextbox">
-  <!-- <div *ngIf="!allItems[0]" class="error_search d-flex justify-content-center">
+  <div *ngIf="!players[0]" class="error_search d-flex justify-content-center">
     <h4 class="error_message" > <strong>'{{searchText}}'</strong> Ese Jugador no existe, ingrese solo Jugadores o Equipos...</h4>
-  </div> -->
+  </div>
+</div>
 
-  <ng-container *ngIf="!(pager.allItems === 0)">
 
     <ng-container *ngIf="!isLoading">
       <table class="table  text-center">
@@ -38,9 +38,11 @@
             <th class="th13" style="width: 5%;" scope="col">CS</th>
           </tr>
         </thead>
+
+        <ng-container *ngIf="!(pager.players === 0)">
         <tbody class="table-header2">
-          <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
-            <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
+          <ng-container *ngIf="!(pager.players-1 === pager.endIndex)">
+            <tr *ngFor="let player of players | pagination:pager.startIndex:pager.pageSize">
               <a routerLink="/pitcherinfo/{{player.id}}" class="link_player"><td class="link_player" class="th1" style="width: 10%;">{{player.fullName}}</td></a>
               <td class="th2" style="width: 10%;">{{player.stats[0].splits[0].team.name}}</td>
               <td class="th3" style="width: 5%;">{{player.stats[0].splits[0].stat.gamesPitched}}</td>
@@ -56,8 +58,8 @@
             </tr>
 
           </ng-container>
-          <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
-            <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
+          <ng-container *ngIf="pager.players-1 === pager.endIndex">
+            <tr *ngFor="let player of players | pagination:pager.startIndex:pager.players-((pager.totalPages-1)*7)">
               <a routerLink="/pitcherinfo/{{player.id}}" class="link_player"><td class="link_player" class="th1" style="width: 10%;">{{player.fullName}}</td></a>
               <td class="th2" style="width: 10%;">{{player.stats[0].splits[0].team.name}}</td>
               <td class="th3" style="width: 5%;">{{player.stats[0].splits[0].stat.gamesPitched}}</td>
@@ -73,13 +75,14 @@
             </tr>
           </ng-container>
         </tbody>
+      </ng-container>
 
       </table>
       <!-- PAGINATION-->
 
       <div>
-        <div class="container paginator">
-          <div class="text-center">
+        <div class="container ">
+          <div class="text-center paginator">
 
             <!-- pager -->
             <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
@@ -104,5 +107,4 @@
         <hr />
       </div>
     </ng-container>
-  </ng-container>
-</div>
+

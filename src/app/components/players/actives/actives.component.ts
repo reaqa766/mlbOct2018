@@ -52,7 +52,10 @@ export class ActivesComponent implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    console.log('data', JSON.stringify(this.allItems));
+    console.log('allItems', this.allItems);
+    console.log('players', this.players);
+
+    // console.log('data', JSON.stringify(this.allItems));
 
 
   }
@@ -87,7 +90,7 @@ export class ActivesComponent implements OnInit {
             });
           this.allItems = this.players;
           this.jugadores = this.players;
-          console.log('jugadores', JSON.stringify(this.jugadores));
+          // console.log('jugadores', JSON.stringify(this.jugadores));
 
 
 
