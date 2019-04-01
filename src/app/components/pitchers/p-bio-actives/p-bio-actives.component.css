@@ -156,7 +156,7 @@ font-weight: 400;
   display: table-cell;
 }
 
-@media only screen and (min-width:300px ) and (max-width: 766px)  {
+@media only screen and (min-width:300px ) and (max-width: 768px)  {
   .container-actives_cards {
       margin: 1% auto 0;
       display: grid;
@@ -227,8 +227,16 @@ font-weight: 400;
   .paginator_text {
       display: none;
   }
+  .img_picture_box:hover .img_picture_element{
+    transform: none;
+    opacity: 1;
 }
-@media only screen and (min-width:767px ) and (max-width: 1023px)  {
+.card {
+  width: 95%;
+}
+
+}
+@media only screen and (min-width:769px ) and (max-width: 1023px)  {
   .container-actives_cards {
       margin: 1% auto 0;
       display: grid;
