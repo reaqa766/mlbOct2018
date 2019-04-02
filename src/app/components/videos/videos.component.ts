@@ -31,7 +31,7 @@ export class VideosComponent implements OnInit {
     if (this.num === 'video1') {
           window.open('https://www.mlb.com/video/miles-mikolas-in-play-runs-s-to-jhoulys-chacin', '_blank');
   } else if (this.num === 'video2') {
-    window.open('https://www.mlb.com/es/video/acuna-jr-s-rbi-single', '_blank');
+    window.open('https://www.mlb.com/news/ronald-acuna-jr-hits-first-homer-of-2019', '_blank');
   } else if (this.num === 'video3') {
     window.open('https://www.mlb.com/es/video/jose-altuve-homers-1-on-a-fly-ball-to-left-center-field', '_blank');
   } else if (this.num === 'video4') {

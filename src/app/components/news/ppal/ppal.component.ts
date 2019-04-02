@@ -32,7 +32,7 @@ export class PpalComponent implements OnInit {
 //  }
   urladdress(): void {
     if (this.num === 'news1') {
-          window.open('https://www.directvsports.com/beisbol/mlb/noticias/cuando-comienza-temporada-2019-mlb', '_blank');
+          window.open('https://www.mlb.com/es/news/informes-acuna-firmara-extension-de-us-100-millones', '_blank');
   } else if (this.num === 'news2') {
     window.open('https://www.mlb.com/news/jose-altuve-back-in-astros-lineup', '_blank');
   } else if (this.num === 'news3') {

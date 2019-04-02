@@ -52,8 +52,8 @@ export class ActivesComponent implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    console.log('allItems', this.allItems);
-    console.log('players', this.players);
+    // console.log('allItems', this.allItems);
+    // console.log('players', this.players);
 
     // console.log('data', JSON.stringify(this.allItems));
 

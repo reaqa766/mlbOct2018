@@ -62,7 +62,7 @@
           </ng-container>
 
           <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
-            <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
+            <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*7)">
               <!-- <td class="th" style="width: 5%;">{{i +1}}</td> -->
               <a routerLink="/playerinfo2019/{{player.id}}" ><td class="link_player th1" style="width: 15%;">{{player.fullName}}</td></a>
               <td class="th2" style="width: 15%;">{{player.stats[0].splits[0].team.name}}</td>

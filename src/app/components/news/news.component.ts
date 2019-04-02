@@ -43,7 +43,7 @@ export class NewsComponent implements OnInit {
   urladdress(): void {
     if (this.num === 'news1') {
           // tslint:disable-next-line:max-line-length
-          window.open('https://www.mlb.com/es/news/que-se-puede-esperar-del-venezolano-gleyber-torres-en-grandes-ligas/c-273383100', '_blank');
+          window.open('http://elsumario.com/miguel-cabrera-obtiene-segundo-lugar-con-mayores-hits-en-las-grandes-ligas/', '_blank');
   } else if (this.num === 'news2') {
     window.open('http://www.el-nacional.com/noticias/beisbol/antonio-senzatela-elias-diaz-jose-osuna-empiezan-lista-lesionados_276774', '_blank');
   } else if (this.num === 'news3') {
