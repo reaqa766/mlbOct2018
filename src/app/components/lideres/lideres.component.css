@@ -260,7 +260,7 @@
     @media only screen and (min-width:300px ) and (max-width: 769px) {
       .container_grid_nvo {
         /* padding: 0 10%; */
-        width: 90%;
+        /* width: 90%; */
         display: block;
       }
 
@@ -279,7 +279,7 @@
 
         .actives-title1 {
             font-size: 1rem;
-            width: 90%;
+            width: 12rem;
         }
         .actives-title {
             font-size: 1.5rem;
@@ -293,7 +293,7 @@
         }
 
         .table {
-            width: 80%;
+            /* width: 80%; */
             margin: 0.2em 0;
             border-collapse: separate;
             padding: 0;
