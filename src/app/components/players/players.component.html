@@ -78,7 +78,7 @@
     </table>
   </div>
 
-    <div class="container paginator" *ngIf="allItems.length > 10">
+    <div class="container paginator" *ngIf="allItems.length > 7">
       <div class="text-center">
         <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
           <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">

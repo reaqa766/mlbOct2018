@@ -45,7 +45,7 @@
       </ng-container>
       <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
         <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*7)">
-            <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top" src="../../../../assets/Jugadores Spring T 2019/Todos/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
+            <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
           <div class="card-body">
               <h5 class="card-title">{{player.fullName}}</h5>
 
