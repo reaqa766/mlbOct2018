@@ -1,6 +1,6 @@
 <div class="container_players_actives"></div>
 <div class="container-daily">
-  <h1 class="daily-title">Actuación Diaria de Pitchers </h1>
+  <h1 class="daily-title">Actuación del {{diaAnterior}} </h1>
   <br>
   <h3 class="daily-title1">Temporada Regular 2019</h3>
 
@@ -18,6 +18,11 @@
 <div *ngIf="!allItems[0] && searchText" class="error_search d-flex justify-content-center">
   <h1> '{{ searchText }}' no existe, colocar solo nombres o apellidos</h1>
 </div>
+
+<div *ngIf="allItems[] === 0" class="title-position ">
+    <h1> No han jugado aún hoy </h1>
+  </div>
+
 
 <!-- <ng-container *ngIf="!(pager.allItems === 0)"> -->
   <ng-container *ngIf="!isLoading">

@@ -40,6 +40,7 @@ import { InfogShowComponent } from './components/infographics/infog-show/infog-s
 import { PlayerWeekComponent } from './components/player-week/player-week.component';
 import { PitcherrWeekComponent } from './components/pitcherr-week/pitcherr-week.component';
 import { PlayerOfTheWeekComponent } from './components/player-of-the-week/player-of-the-week.component';
+import { PitchersDayAntComponent } from './components/pitchers/pitchers-day-ant/pitchers-day-ant.component';
 
 import { PruebajsonsComponent } from './components/prueba/pruebajsons/pruebajsons.component';
 import { PosicionesComponent } from './components/posiciones/posiciones.component';
@@ -99,6 +100,8 @@ const routes: Routes = [
   component: PBioActivesComponent},
   { path: 'p_actives',
   component: PActivesComponent},
+  { path: 'p_dayAnt',
+  component: PitchersDayAntComponent},
   { path: 'p_dayB',
   component: PlayersComponent},
   { path: 'p_actives19',

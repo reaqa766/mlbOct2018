@@ -29,7 +29,10 @@ export class PDailyComponent implements OnInit {
   n1 = 12;
   n10 = 5;
   dia = moment().format('YYYY-MM-DD');
+  diaAnt = moment().format('YYYY-MM-DD');
+  diaAnte = moment(this.diaAnt).subtract(1, 'day').format('YYYY-MM-DD')
   public allItems: any[];
+  noGameToday : any[];
 
   // pager object
   pager: any = {};
@@ -47,7 +50,11 @@ export class PDailyComponent implements OnInit {
   ngOnInit() {
     this.isLoading = true;
     this.getPlayersMap();
-    console.log('players', this.allItems);
+    console.log('players', this.players);
+    console.log('diaAnterior', this.diaAnt);
+    console.log('playersNoPlay', this.noGameToday);
+
+
   }
 
 
@@ -67,10 +74,13 @@ getPlayersMap() {
           Object.assign(newPlayer, player.people[0]);
           return newPlayer;
         });
+        this.noGameToday = this.players.filter(player =>
+          player.stats[0].splits[player.stats[0].splits.length-2].date);
+
         // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
         this.players = this.players.filter(player =>
            player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0
-           && player.stats[0].splits[player.stats[0].splits.length-1].date === this.dia)
+           && player.stats[0].splits[player.stats[0].splits.length-1].date == this.dia)
          // se ordenan por nombre
         .sort(({fullName: a}, {fullName: b}) => {
           if (a > b) {
