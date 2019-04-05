@@ -18,10 +18,10 @@
     <h4 class="error_message"> '{{ busqueda.value }}' No se encuentra el Jugador</h4>
   </div>
 
-  <div *ngIf="allItems.length == 0 " class="title-position ">
-    <h1> No han jugado aún hoy </h1>
+  <div *ngIf="allItems.length == 0 " class="espacioInferior">
+    <h1 class="title-position"> No han jugado aún hoy </h1>
   </div>
-
+  
 
   <ng-container *ngIf="!isLoading">
 <div class="player_stats">

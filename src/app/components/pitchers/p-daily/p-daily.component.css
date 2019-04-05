@@ -10,7 +10,7 @@
   border-radius: 7px;
 }
 .daily-title1 {
-  font-size: 0.85rem !important;
+  font-size: 1.25rem !important;
   width: 12em;
   color: antiquewhite;
   text-align: center;
@@ -21,6 +21,9 @@
   border-radius: 7px;
 
 
+}
+.espacioInferior {
+  margin-bottom: 1rem;
 }
 
 
@@ -817,6 +820,14 @@ th {
       height: 1.75em;
       border-radius: 7px;
   }
+  .daily-title1 {
+    font-size: 2.5rem !important;
+    width: 12em;
+  }
+  .espacioInferior {
+    margin-bottom: 1rem;
+  }
+  
 
   .advancedSearchTextbox{
       color: rgb(2, 1, 0);

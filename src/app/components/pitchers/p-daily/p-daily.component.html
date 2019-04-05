@@ -18,6 +18,9 @@
 <div *ngIf="!allItems[0] && searchText" class="error_search d-flex justify-content-center">
   <h1> '{{ searchText }}' no existe, colocar solo nombres o apellidos</h1>
 </div>
+<div *ngIf="allItems.length == 0 " class="espacioInferior">
+  <h1 class="title-position"> No han jugado aún hoy </h1>
+</div>
 
 <!-- <ng-container *ngIf="!(pager.allItems === 0)"> -->
   <ng-container *ngIf="!isLoading">

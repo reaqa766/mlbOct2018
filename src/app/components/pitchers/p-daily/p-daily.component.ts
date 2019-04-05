@@ -74,8 +74,8 @@ getPlayersMap() {
           Object.assign(newPlayer, player.people[0]);
           return newPlayer;
         });
-        this.noGameToday = this.players.filter(player =>
-          player.stats[0].splits[player.stats[0].splits.length-2].date);
+        // this.noGameToday = this.players.filter(player =>
+        //   player.stats[0].splits[player.stats[0].splits.length-2].date);
 
         // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
         this.players = this.players.filter(player =>
