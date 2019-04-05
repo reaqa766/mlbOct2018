@@ -9,10 +9,13 @@ export class PpalComponent implements OnInit {
 
   location: string;
   num: string;
+  screenSize: Boolean = false;
 
   constructor() { }
 
+
   ngOnInit() {
+    console.log('scrre', this.screenSize);
   }
   news1() {
     this.num = 'news1';
@@ -36,10 +39,15 @@ export class PpalComponent implements OnInit {
   } else if (this.num === 'news2') {
     window.open('https://www.mlb.com/es/news/informes-acuna-firmara-extension-de-us-100-millones', '_blank');
   } else if (this.num === 'news3') {
-    window.open('http://www.liderendeportes.com/noticias/baseball/el-rey-consiguio-su-primera-victoria-de-la-campana/', '_blank');
+    window.open('https://www.cbssports.com/mlb/players/playerpage/2122215/elias-diaz', '_blank');
   } else if (this.num === 'news4') {
     // tslint:disable-next-line:max-line-length
-    window.open('https://www.mlb.com/es/news/keibert-ruiz-tiene-los-bonos-bien-altos-en-los-dodgers-como-receptor-del-futuro/c-302632976', '_blank');
+    window.open('https://www.mlb.com/yankees/news/gleyber-torres-homers-twice-vs-orioles', '_blank');
   }
   }
+screenTest(): void {
+  if (screen.width < 767) {
+   this.screenSize = true;
+}
+}
 }

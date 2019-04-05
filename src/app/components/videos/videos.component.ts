@@ -35,7 +35,7 @@ export class VideosComponent implements OnInit {
   } else if (this.num === 'video3') {
     window.open('https://www.mlb.com/es/video/jose-altuve-homers-1-on-a-fly-ball-to-left-center-field', '_blank');
   } else if (this.num === 'video4') {
-    window.open('https://www.mlb.com/es/video/peraza-s-game-tying-single-c2523781383', '_blank');
+    window.open('https://www.mlb.com/yankees/news/gleyber-torres-homers-twice-vs-orioles', '_blank');
   }
   }
 

@@ -11,6 +11,9 @@
   margin: 0 35% 2%;
   border-radius: 10px;
 }
+.giraPantalla {
+  display: none;
+}
 
 .container_ppal {
   width: 100%;
@@ -219,6 +222,12 @@ img {
     height: 100%;
     padding-bottom: 1rem;
   }
+
+ .giraPantalla {
+   font-size: 1em;
+   display: block;
+   color: white;
+  }
   .title_page {
     font-size: .65rem;
     background-color: rgba(255, 255, 255, 0.8);
@@ -286,7 +295,7 @@ img {
   }
 
 }
-@media only screen and (orientation: landscape) and (min-width: 500px) and (max-width: 830px) {
+@media only screen and (orientation: landscape) and (min-width: 500px) and (max-width: 767px) {
   .title_page {
     font-size: .75rem;
     width: 70%;
@@ -294,6 +303,11 @@ img {
     margin: 0 15% 2%;
     border-radius: 10px;
   }
+  .giraPantalla {
+    display: none;
+ 
+   }
+ 
 
   .container_ppal {
     width: 100%;
@@ -486,7 +500,7 @@ img {
     text-align : justify;
   }
 }
-@media only screen and (orientation: landscape) and (min-width: 831px) and (max-width: 1366px) {
+@media only screen and (orientation: landscape) and (min-width: 768px) and (max-width: 1366px) {
   .title_page {
     width: 50%;
     margin: 0 25% 2%;
