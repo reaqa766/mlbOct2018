@@ -1,7 +1,7 @@
 <div class="container_players_actives"></div>
 <div class="container-actives">
   <h1 class="actives-title">Posiciones de los Equipos</h1>
-  <h4 class="actives-title1">Temporada Regular 2019</h4>
+  <h4 class="actives-title1">Temp. 2019</h4>
 </div>
 
 <!-- LOADER -->
@@ -31,7 +31,7 @@
     <!-- <table class="table "> -->
       <tbody class="table-header2">
           <tr *ngFor="let position of nlEast; index as i ">
-            <td class="tb1" style="width: 3%;"><img class="tb1" src="{{'../../../../assets/'+ position.teamId +'.png'}}" alt=""></td>
+            <td class="tb1" style="width: 3%;"><img class="tb1" src="{{'../../../../assets/'+ position.teamId +'.png'}}" alt="" (click)="onSearchChange(team.name)"></td>
             <!-- <td class="tb2" style="width: 2%;">{{position.name}}</td> -->
             <td class="tb2" style="width: 2%;">{{position.wins}}</td>
             <td class="tb3" style="width: 2%;">{{position.losses}}</td>

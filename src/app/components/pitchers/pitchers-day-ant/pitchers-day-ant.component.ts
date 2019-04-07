@@ -1,27 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 
 import * as moment from 'moment';
-import { DataPlayersService } from '../../../services/data-players.service';
+import { DataPitchersService } from '../../../../services/data-pitchers.service';
 import { take } from 'rxjs/operators';
-import { Players } from '../../../interfaces/players';
+import { Players } from '../../../../interfaces/players';
 
 // tslint:disable-next-line:semicolon
-import { PagerService } from '../../../services/index'
-
+import { PagerService } from '../../../../services/index'
 
 
 @Component({
-  selector: 'app-players',
-  templateUrl: './players.component.html',
-  styleUrls: ['./players.component.css']
+  selector: 'app-pitchers-day-ant',
+  templateUrl: './pitchers-day-ant.component.html',
+  styleUrls: ['./pitchers-day-ant.component.css']
 })
-export class PlayersComponent implements OnInit {
-  public players = [];
+export class PitchersDayAntComponent implements OnInit {public players = [];
+  public playersSort = [];
   groups: any;
   selectedGroup: any;
   elarray: any;
   datesN = 10;
-  searchText: string;
+  searchText: any = '';
   playerAuxList = [];
   counter: number;
   n: number;
@@ -32,7 +31,7 @@ export class PlayersComponent implements OnInit {
   diaAnt = moment().format('YYYY-MM-DD');
   diaAnte = moment(this.diaAnt).subtract(1, 'day').format('YYYY-MM-DD')
   diaAnterior = moment(this.diaAnt).subtract(1, 'day').format('DD-MM-YYYY')
-
+  noGameToday : any[];
   public allItems: any[];
 
   // pager object
@@ -42,17 +41,18 @@ export class PlayersComponent implements OnInit {
   pagedItems: any[];
 
 
-  isLoading: boolean;
 
-  constructor(private playerService: DataPlayersService, private pagerService: PagerService) { }
+  isLoading: boolean;
+  playersFiltrado: {}[];
+
+  constructor(private playerService: DataPitchersService, private pagerService: PagerService) { }
 
   ngOnInit() {
-    console.log('Jugadores', this.players);
-    console.log('dia', this.dia);
-
-
     this.isLoading = true;
     this.getPlayersMap();
+    console.log('diaAnterior', this.diaAnt);
+    console.log('Pitchers', this.players);
+
   }
 
 
@@ -74,9 +74,11 @@ getPlayersMap() {
         });
         // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
         this.players = this.players.filter(player =>
-           player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0
+           player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0 
+          //  && player.stats[0].splits[player.stats[0].splits.length] >= 1 
            && player.stats[0].splits[player.stats[0].splits.length-1].date == this.diaAnte)
-           // se ordenan por nombre
+          //  || player.stats[0].splits[player.stats[0].splits.length-2].date == this.diaAnte)  )
+         // se ordenan por nombre
         .sort(({fullName: a}, {fullName: b}) => {
           if (a > b) {
             return 1;
@@ -86,33 +88,39 @@ getPlayersMap() {
             return 0;
           }
         });
+        // .filter(player =>  player.stats[0].splits[player.stats[0].splits.length-1].date === '2018-09-30') ;
+        // this.playersFiltrado = this.players.filter(
+        //   players => this.players.stats && this.players.stats[0].splits
+        // );
+        // this.playersFiltrado = this.players.filter(player => player.stats && player.stats[0].splits
+        // );
+
         this.allItems = this.players;
         this.setPage(1);
         this.isLoading = false;
         }
         index++;
-    });
-  }
+      });
+    }
 
   }
 
-  onSearchChange() {
-    if (this.searchText) {
-      this.allItems = this.players.filter(player =>
-        player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
-        (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
-        (player.nickName && player.nickName.toLowerCase().includes(this.searchText))  ||
-        player.mlbDebutDate.includes(this.searchText));
-        this.setPage(this.pager.currentPage);
-      } else {
-          this.allItems = this.players;
-          this.setPage(this.pager.currentPage);
+  // onSearchChange() {
+  //   if (this.searchText) {
+  //     this.allItems = this.players.filter(player =>
+  //       player.fullName && player.fullName.toLowerCase().includes(this.searchText));
+  //       this.setPage(this.pager.currentPage);
+  //     } else {
+  //         this.allItems = this.players;
+  //         this.setPage(this.pager.currentPage);
 
-        }
-        return this.allItems;
+  //       }
+  //       return this.allItems;
 
-      }
+  //     }
+
   setPage(page: number) {
+    // console.log('Changing to page '+page);
 
     // get pager object from service
     this.pager = this.pagerService.getPager(this.allItems.length, page);

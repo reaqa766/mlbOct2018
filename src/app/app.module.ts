@@ -84,6 +84,7 @@ import { PruebajsonsComponent } from './components/prueba/pruebajsons/pruebajson
 import { LideresComponent } from './components/lideres/lideres.component';
 import { LideresPitchersComponent } from './components/lideres/lideres-pitchers/lideres-pitchers.component';
 import { PosicionesComponent } from './components/posiciones/posiciones.component';
+import { PitchersDayAntComponent } from './components/pitchers/pitchers-day-ant/pitchers-day-ant.component';
 
 @NgModule({
   declarations: [
@@ -140,7 +141,8 @@ import { PosicionesComponent } from './components/posiciones/posiciones.componen
     PruebajsonsComponent,
     LideresComponent,
     LideresPitchersComponent,
-    PosicionesComponent
+    PosicionesComponent,
+    PitchersDayAntComponent
 
   ],
   imports: [

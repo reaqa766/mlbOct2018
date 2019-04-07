@@ -28,6 +28,7 @@ export class DailyComponent implements OnInit {
   n10 = 5;
   dia = moment().format('YYYY-MM-DD');
   public allItems: any[];
+  gamePlays: string;
 
   // pager object
   pager: any = {};
@@ -79,12 +80,16 @@ getPlayersMap() {
           } else if (a === b) {
             return 0;
           }
+
         });
+       
         this.allItems = this.players;
         this.setPage(1);
         this.isLoading = false;
         }
         index++;
+        console.log('gamePlays', this.gamePlays);
+        
     });
   }
 

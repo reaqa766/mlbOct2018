@@ -164,12 +164,15 @@ export class ByteamComponent implements OnInit {
       this.allItems = this.players.filter(player =>
         player.stats[0].splits[0].team.name.toLowerCase().includes(team.toLowerCase()) ||
         player.fullName.toLowerCase().includes(team.toLowerCase()));
-      this.setPage(this.pager.currentPage);
+        this.setPage(this.pager.currentPage);
+        
     } else {
       this.allItems = this.players;
       this.setPage(this.pager.currentPage);
     }
     return this.allItems;
+    
+    
   }
 
   setPage(page: number) {
