@@ -35,7 +35,7 @@ export class PpalComponent implements OnInit {
 //  }
   urladdress(): void {
     if (this.num === 'news1') {
-          window.open('http://www.el-nacional.com/noticias/deportes/venezolanos-empezaron-mlb-tras-los-cortes-finales_276781', '_blank');
+          window.open('http://www.liderendeportes.com/noticias/baseball/miguel-cabrera-en-pos-de-las-1-700-remolcadas/', '_blank');
   } else if (this.num === 'news2') {
     window.open('https://www.mlb.com/es/news/informes-acuna-firmara-extension-de-us-100-millones', '_blank');
   } else if (this.num === 'news3') {

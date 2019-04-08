@@ -31,9 +31,9 @@ export class VideosComponent implements OnInit {
     if (this.num === 'video1') {
           window.open('https://www.mlb.com/video/miles-mikolas-in-play-runs-s-to-jhoulys-chacin', '_blank');
   } else if (this.num === 'video2') {
-    window.open('https://www.mlb.com/news/ronald-acuna-jr-hits-first-homer-of-2019', '_blank');
+    window.open('https://www.mlb.com/news/astros-top-a-s-on-walk-off-walk', '_blank');
   } else if (this.num === 'video3') {
-    window.open('https://www.mlb.com/es/video/jose-altuve-homers-1-on-a-fly-ball-to-left-center-field', '_blank');
+    window.open('http://www.liderendeportes.com/noticias/baseball/miguel-cabrera-en-pos-de-las-1-700-remolcadas/', '_blank');
   } else if (this.num === 'video4') {
     window.open('https://www.mlb.com/yankees/news/gleyber-torres-homers-twice-vs-orioles', '_blank');
   }
