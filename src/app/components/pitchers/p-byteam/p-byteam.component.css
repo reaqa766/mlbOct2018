@@ -88,6 +88,25 @@
   display: none;
 }
 
+.noHayJugadores{
+text-align: center;
+}
+
+.noJugadoresInterno{
+  margin: 2rem auto;
+  background-color: rgb(0, 0, 0);
+  width: fit-content;
+  padding: 0.1rem .5rem 0.2rem;
+  border-radius: 7px;
+
+
+}
+.noJugadores {
+  /* text-align: center; */
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+}
+
 
 
 
