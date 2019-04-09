@@ -108,19 +108,19 @@ getPlayersMap() {
 
   }
 
-  // onSearchChange() {
-  //   if (this.searchText) {
-  //     this.allItems = this.players.filter(player =>
-  //       player.fullName && player.fullName.toLowerCase().includes(this.searchText));
-  //       this.setPage(this.pager.currentPage);
-  //     } else {
-  //         this.allItems = this.players;
-  //         this.setPage(this.pager.currentPage);
+  onSearchChange() {
+    if (this.searchText) {
+      this.allItems = this.players.filter(player =>
+        player.fullName && player.fullName.toLowerCase().includes(this.searchText));
+        this.setPage(this.pager.currentPage);
+      } else {
+          this.allItems = this.players;
+          this.setPage(this.pager.currentPage);
 
-  //       }
-  //       return this.allItems;
+        }
+        return this.allItems;
 
-  //     }
+      }
 
   setPage(page: number) {
     // console.log('Changing to page '+page);
