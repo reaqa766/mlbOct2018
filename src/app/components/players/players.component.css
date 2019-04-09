@@ -3,9 +3,9 @@
   font-size: 1rem;
   text-align: center;
   margin: 0 auto;
-  padding: 0.15em;
+  padding: 0 0.5em 0.4em;
   background-color: rgba(19, 12, 12, 0.5);
-  width: 17em;
+  width: fit-content;
   height: 1.75em;
   border-radius: 7px;
 }
@@ -137,9 +137,9 @@ th {
   font-size: 1rem;
   text-align: center;
   margin: 0 auto;
-  padding: 0.15em;
+  padding: 0 0.5em 0.4em;
   background-color: rgba(19, 12, 12, 0.5);
-  width: 17em;
+  width: fit-content;
   height: 1.75em;
   border-radius: 7px;
 }
@@ -251,9 +251,9 @@ th {
   font-size: 1.5rem;
   text-align: center;
   margin: 0 auto;
-  padding: 0.15em;
+  padding: 0 0.5em 0.4;
   background-color: rgba(19, 12, 12, 0.5);
-  width: 17em;
+  width: fit-content;
   height: 1.75em;
   border-radius: 7px;
 }
@@ -374,9 +374,9 @@ th {
       font-size: 1.5rem;
       text-align: center;
       margin: 0 auto;
-      padding: 0.15em;
-          background-color: rgba(19, 12, 12, 0.5);
-      width: 17em;
+      padding: 0 0.5em 0.4em;
+      background-color: rgba(19, 12, 12, 0.5);
+      width: fit-content;
       height: 1.75em;
       border-radius: 7px;
   }
@@ -499,9 +499,9 @@ th {
           font-size: 2.5rem;
           text-align: center;
           margin: 0 auto;
-          padding: 0.15em;
+          padding: 0 0.5em 0.4em;
           background-color: rgba(19, 12, 12, 0.5);
-          width: 17em;
+          width: fit-content;
           height: 1.75em;
           border-radius: 7px;
       }
@@ -586,9 +586,9 @@ th {
   font-size: 1.5rem;
   text-align: center;
   margin: 0 auto;
-  padding: 0.15em;
+  padding: 0 0.5em 0.4em;
   background-color: rgba(19, 12, 12, 0.5);
-  width: 17em;
+  width: fit-content;
   height: 1.75em;
   border-radius: 7px;
 }
@@ -709,9 +709,9 @@ th {
       font-size: 2rem !important;
       text-align: center;
       margin: 0 auto;
-      padding: 0.15em;
+      padding: 0 0.5em 0.4em;
       background-color: rgba(19, 12, 12, 0.5);
-      width: 17em;
+      width: fit-content;
       height: 1.75em;
       border-radius: 7px;
   }
@@ -795,9 +795,9 @@ th {
       font-size: 3.25rem;
       text-align: center;
       margin: 0 auto;
-      padding: 0.15em;
+      padding: 0 0.5em 0.4em;
       background-color: rgba(19, 12, 12, 0.5);
-      width: 17em;
+      width: fit-content;
       height: 1.75em;
       border-radius: 7px;
   }
