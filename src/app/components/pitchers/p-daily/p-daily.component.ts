@@ -50,9 +50,9 @@ export class PDailyComponent implements OnInit {
   ngOnInit() {
     this.isLoading = true;
     this.getPlayersMap();
-    console.log('players', this.players);
-    console.log('diaAnterior', this.diaAnt);
-    console.log('playersNoPlay', this.noGameToday);
+    // console.log('players', this.players);
+    // console.log('diaAnterior', this.diaAnt);
+    // console.log('playersNoPlay', this.noGameToday);
 
 
   }
