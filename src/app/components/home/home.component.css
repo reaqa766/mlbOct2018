@@ -4,7 +4,7 @@
 .container_elements_home{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-row-gap: 1rem;
     width: 80%;
     margin: 1% auto 1.5rem;
@@ -17,6 +17,8 @@
     border-radius: 4px;
     box-shadow: 3px 3px 18px rgb(37, 27, 27);
     background-color: rgba(0, 0, 0, .5);
+    border: 2px solid white;
+   
 
 }
 
@@ -26,6 +28,8 @@
     border-radius: 4px;
     box-shadow: 3px 3px 18px rgb(37, 27, 27);
     background-color: rgba(0, 0, 0, .5);
+    border: 2px solid white;
+
 }
 .box_home-element3 {
     grid-column: 1/2;
@@ -33,6 +37,8 @@
     border-radius: 4px;
     box-shadow: 3px 3px 18px rgb(37, 27, 27);
     background-color: rgba(0, 0, 0, .5);
+    border: 2px solid white;
+
 }
 .box_home-element4 {
     grid-column: 1/2;
@@ -40,6 +46,8 @@
     border-radius: 4px;
     box-shadow: 3px 3px 18px rgb(37, 27, 27);
     background-color: rgba(0, 0, 0, .5);
+    border: 2px solid white;
+
 }
 .box_home-element5 {
     grid-column: 1/2;
@@ -47,6 +55,8 @@
     border-radius: 4px;
     box-shadow: 3px 3px 18px rgb(37, 27, 27);
     background-color: rgba(0, 0, 0, .5);
+    border: 2px solid white;
+
 }
 .box_home-element6 {
     grid-column: 1/2;
@@ -54,6 +64,22 @@
     border-radius: 4px;
     box-shadow: 3px 3px 18px rgb(37, 27, 27);
     background-color: rgba(0, 0, 0, .5);
+    border: 2px solid white;
+
+}
+.box_home-element7 {
+    border-radius: 4px;
+    box-shadow: 3px 3px 18px rgb(37, 27, 27);
+    background-color: rgba(0, 0, 0, .5);
+    border: 2px solid white;
+
+}
+.box_home-element8 {
+    border-radius: 4px;
+    box-shadow: 3px 3px 18px rgb(37, 27, 27);
+    background-color: rgba(0, 0, 0, .5);
+    border: 2px solid white;
+
 }
 .text-box {
     color: antiquewhite;

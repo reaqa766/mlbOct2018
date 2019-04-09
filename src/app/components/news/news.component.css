@@ -87,7 +87,7 @@
         color: antiquewhite;
         text-shadow: 2px 2px 8px black;
         text-align: center;
-        margin: 0 auto;
+        margin: .5rem auto 0;
         width: 85%;
         border-radius: 6px;
     
@@ -108,6 +108,11 @@
         color: antiquewhite;
     }
     
+    .link_out {
+        color: rgb(233, 200, 53);
+        font-weight: 100;
+      }
+      
       @media only screen and (max-width : 1024px) {
     .title_video {
         font-size: 1.25em;
