@@ -38,7 +38,7 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://noticiaaldia.com/2019/04/jose-altuve-pego-soberbio-jonron-en-victoria-de-astros-sobre-yankees/', '_blank');
+          window.open('https://www.sportsvenezuela.com/eugenio-suarez-y-jose-altuve-se-unieron-al-club-de-los-100-jonronesvideos/', '_blank');
   } else if (this.num === 'video3') {
     window.open('http://www.liderendeportes.com/noticias/baseball/chirinos-y-alvarado-articulados-con-tampa/', '_blank');
   } else if (this.num === 'video4') {
