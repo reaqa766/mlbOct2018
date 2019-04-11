@@ -78,6 +78,7 @@ text-align: center;
   }
   .img_photo_pow {
     width: 75%;
+    border: solid white 2px;
 
   }
 
