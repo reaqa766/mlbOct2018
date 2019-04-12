@@ -2,8 +2,9 @@
     color: antiquewhite;
     font-size: 2rem;
     text-align: center;
-    margin-top: 24rem;
-    margin-left: 74rem;
+    margin: 0.15rem auto 0;
+    /* margin-top: 24rem;
+    margin-left: 74rem; */
     padding: .2rem 0;
     background-color: rgba(3, 2, 2, 0.5);
     width: 8em;
@@ -12,11 +13,14 @@
 }
 
 .img_ppal {
-  margin-left: 45%;
-  margin-top: 1.5%;
+  margin: 0.15rem auto 0;
+  text-align: center;
+
+  /* margin-left: 45%;
+  margin-top: 1.5%; */
   }
   .img_ppal1{
-    width: 50rem;
+    width: 10rem;
     border-radius: 10px;
     box-shadow: 5px 5px 34px rgba(255, 255, 255, 0.3);
     /* z-index: -2; */
@@ -30,7 +34,7 @@
     font-size: 6rem;
     font-weight: 300; */
     z-index: 300;
-    width: 25%;
+    width: 15%;
     margin: 1rem;
 
   }
@@ -42,7 +46,7 @@
     font-size: 6rem;
     font-weight: 300; */
     z-index: 299;
-    width: 25%;
+    width: 15%;
     margin: 1rem;
 
 
@@ -57,7 +61,7 @@
     font-size: 6rem;
     font-weight: 300; */
     z-index: 198;
-    width: 25%;
+    width: 15%;
     margin: 1rem;
 
 

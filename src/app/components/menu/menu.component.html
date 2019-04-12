@@ -36,11 +36,12 @@
           <a class="dropdown-item" routerLink="p_daily">Act. Diaria</a>
           <a class="dropdown-item" routerLink="p_byteam">Por equipo</a>
           <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="p_bio">Biografía </a>
           <a class="dropdown-item" routerLink="p_actives">Temporada 2019 </a>
         </div>
       </li>
       <li class="nav-item mr-4">
-        <a class="nav-link" routerLink="playeroftheweek">Jugador de la Semana </a>
+        <a class="nav-link cerrarClick" routerLink="playeroftheweek">Jugador de la Semana </a>
       </li>
       <li class="nav-item mr-4">
         <a class="nav-link" routerLink="lideres">Líderes </a>
@@ -65,8 +66,8 @@
         </a>
         <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" routerLink="videos">Videos</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="trivia">Trivia </a>
+          <!-- <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="trivia">Trivia </a> -->
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" routerLink="infog_Show">Infografías </a>
           <!-- <a class="dropdown-item" routerLink="pruebajson">PRUEBAS </a> -->
@@ -74,6 +75,9 @@
         </div>
       </li>
 
+      <li class="nav-item mr-4">
+        <a class="nav-link" routerLink="contactUs">Contáctenos</a>
+      </li>
       <li class="nav-item mr-4">
         <a class="nav-link" routerLink="aboutUs">Nosotros</a>
       </li>
@@ -89,3 +93,19 @@
     </ul>
   </div>
 </nav>
+
+<script>
+  /* para cerrar el menu colapsable al hacer click */
+
+  $('.nav a').click(function(){
+    $('.nav-collapse').collapse('hide');
+});
+
+
+  $('.cerrarClick').on('click', function(){
+    alert('click');
+    console.log("CLICK");
+    
+      $('.navbar-collapse').collapse('hide');
+  });
+  </script>

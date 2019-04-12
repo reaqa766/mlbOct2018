@@ -38,9 +38,9 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://www.sportsvenezuela.com/eugenio-suarez-y-jose-altuve-se-unieron-al-club-de-los-100-jonronesvideos/', '_blank');
+          window.open('https://www.primicias24.com/deportes/216418/pedro-avila-fue-llamado-a-las-grandes-ligas-por-los-padres-de-san-diego', '_blank');
   } else if (this.num === 'video3') {
-    window.open('http://www.liderendeportes.com/noticias/baseball/chirinos-y-alvarado-articulados-con-tampa/', '_blank');
+    window.open('https://beisbol.estrending.com/2019/04/10/altuve-lleva-cuatro-jonrones-en-tres-dias/', '_blank');
   } else if (this.num === 'video4') {
     window.open('http://www.meridiano.com.ve/beisbol/beisbol-grandes-ligas/191972/-el-torito--impulso-a-los-filis-ante-anibal-sanchez---video-.html', '_blank');
   } else if (this.num === 'video5') {
