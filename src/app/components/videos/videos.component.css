@@ -3,7 +3,8 @@ margin: 0 auto;
 text-align: center;
 text-shadow: 2px 2px 8px black;
 background-color: rgba(0, 0, 0, .5);
-width: 28rem;
+width:fit-content;
+padding: 0 1rem;
 border-radius: 6px;
 }
 
@@ -99,3 +100,35 @@ border-radius: 6px;
 .close {
     color: antiquewhite;
 }
+
+  @media only screen and (max-width : 1024px) {
+.title_video {
+    font-size: 1.25em;
+}
+.title_video_ppal {
+    font-size: 1em;
+}
+.container_video {
+    width: 90%;
+}
+.title_video_secondary1{
+      font-size: 1em;
+  
+}
+
+.container_videos {
+    display: block;
+    /* width: 95%; */
+    padding: 1% 2%;
+    justify-items: center;
+} 
+.videoa, .videob, .videoc {
+    width: 100%;
+    margin: 1rem 0 0;
+
+  }
+
+  .line_break {
+      display: none;
+  }
+  }

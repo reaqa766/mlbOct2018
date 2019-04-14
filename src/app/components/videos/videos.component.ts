@@ -25,17 +25,32 @@ export class VideosComponent implements OnInit {
   video4() {
     this.num = 'video4';
   }
+  video5() {
+    this.num = 'video5';
+  }
+  video6() {
+    this.num = 'video6';
+  }
+  video7() {
+    this.num = 'video7';
+  }
 
 
   urladdress(): void {
     if (this.num === 'video1') {
-          window.open('https://www.mlb.com/video/miles-mikolas-in-play-runs-s-to-jhoulys-chacin', '_blank');
+          window.open('https://www.mlb.com/es/video/bambinazo-de-altuve', '_blank');
   } else if (this.num === 'video2') {
-    window.open('https://www.mlb.com/news/ronald-acuna-jr-hits-first-homer-of-2019', '_blank');
+    window.open('https://www.mlb.com/news/astros-top-a-s-on-walk-off-walk', '_blank');
   } else if (this.num === 'video3') {
-    window.open('https://www.mlb.com/es/video/jose-altuve-homers-1-on-a-fly-ball-to-left-center-field', '_blank');
+    window.open('https://www.mlb.com/es/video/andrelton-simmons-lines-out-to-third-baseman-asdrubal-cabrera', '_blank');
   } else if (this.num === 'video4') {
     window.open('https://www.mlb.com/yankees/news/gleyber-torres-homers-twice-vs-orioles', '_blank');
+  } else if (this.num === 'video5') {
+    window.open('https://www.mlb.com/es/video/ramos-nabs-eaton?t=most-popular', '_blank');
+  } else if (this.num === 'video6') {
+    window.open('https://www.mlb.com/es/video/willians-astudillo-homers-1-on-a-fly-ball-to-left-field', '_blank');
+  } else if (this.num === 'video7') {
+    window.open('https://www.mlb.com/es/video/sandoval-pega-doble-impulsador', '_blank');
   }
   }
 

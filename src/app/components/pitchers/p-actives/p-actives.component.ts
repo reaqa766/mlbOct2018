@@ -49,8 +49,8 @@ export class PActivesComponent implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    // console.log('allItems', this.allItems);
-    // console.log('players', this.players);
+    console.log('allItems', this.allItems);
+    console.log('players', this.players);
   }
 
   // Convertir el Array de Observables a un Array de Objetos.
@@ -85,6 +85,9 @@ export class PActivesComponent implements OnInit {
 
             this.allItems = this.players;
             this.jugadores = this.players;
+            console.log('allItems', this.allItems);
+            console.log('players', this.players);
+        
               // console.log(JSON.stringify(this.players), 'pbajson');
 
           this.setPage(1);
@@ -99,13 +102,9 @@ export class PActivesComponent implements OnInit {
 
   onSearchChange() {
     if (this.searchText) {
-      this.players = this.players.filter(player =>
-        player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
-        (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
-        (player.nickName && player.nickName.toLowerCase().includes(this.searchText))  ||
-        player.mlbDebutDate.includes(this.searchText));
+      this.allItems = this.players.filter(player =>
+       player.fullName && player.fullName.toLowerCase().includes(this.searchText));
         this.setPage(this.pager.currentPage);
-
       } else {
           this.allItems = this.players;
           this.setPage(this.pager.currentPage);
