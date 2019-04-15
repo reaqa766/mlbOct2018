@@ -9,7 +9,7 @@ export class NewsComponent implements OnInit {
 
   location: string;
   num: string;
-  
+
   constructor() { }
 
   ngOnInit() {
@@ -26,6 +26,15 @@ export class NewsComponent implements OnInit {
   video5() {
     this.num = 'video5';
   }
+  video31() {
+    this.num = 'video31';
+  }
+  video41() {
+    this.num = 'video41';
+  }
+  video51() {
+    this.num = 'video51';
+  }
   video6() {
     this.num = 'video6';
   }
@@ -38,12 +47,18 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://www.primicias24.com/deportes/216418/pedro-avila-fue-llamado-a-las-grandes-ligas-por-los-padres-de-san-diego', '_blank');
+          window.open('https://www.mlb.com/news/jose-altuve-homers-for-fifth-straight-game', '_blank');
   } else if (this.num === 'video3') {
-    window.open('https://beisbol.estrending.com/2019/04/10/altuve-lleva-cuatro-jonrones-en-tres-dias/', '_blank');
+    window.open('https://www.mlb.com/indians/news/carlos-gonzalez-joins-indians-in-kansas-city', '_blank');
   } else if (this.num === 'video4') {
-    window.open('http://www.meridiano.com.ve/beisbol/beisbol-grandes-ligas/191972/-el-torito--impulso-a-los-filis-ante-anibal-sanchez---video-.html', '_blank');
+    window.open('http://www.liderendeportes.com/noticias/baseball/anibal-se-lucio-pero-no-tuvo-suerte/', '_blank');
   } else if (this.num === 'video5') {
+    window.open('http://www.eluniversal.com/deportes/37426/pedro-avila-se-estreno-en-las-mayores-con-solida-apertura', '_blank');
+  } else if (this.num === 'video31') {
+    window.open('https://beisbol.estrending.com/2019/04/10/altuve-lleva-cuatro-jonrones-en-tres-dias/', '_blank');
+  } else if (this.num === 'video41') {
+    window.open('http://www.meridiano.com.ve/beisbol/beisbol-grandes-ligas/191972/-el-torito--impulso-a-los-filis-ante-anibal-sanchez---video-.html', '_blank');
+  } else if (this.num === 'video51') {
     window.open('http://www.elsoldemargarita.com.ve/posts/post/id:218125/Acu%C3%B1a-jonronea-y-Bravos-salen-airosos-en-Denver', '_blank');
   } else if (this.num === 'video6') {
     window.open('http://www.meridiano.com.ve/beisbol/beisbol-grandes-ligas/191959/rondon-saco-su-primer-bambinazo-de-la-zafra---video-.html', '_blank');
@@ -55,7 +70,7 @@ export class NewsComponent implements OnInit {
   }
 
 }
- 
+
 
 
 
