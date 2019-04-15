@@ -4,7 +4,8 @@
   text-align: center;
   margin: 0.15rem auto 0;
   padding: .5rem 0;
-  background-color: rgba(3, 2, 2, 0.5);
+  /* background-color: rgba(3, 2, 2, 0.5); */
+  text-shadow: 2px 2px 8px #111;
   width: 38rem;
   height: 1.25em;
   border-radius: 7px;
@@ -15,7 +16,8 @@
   text-align: center;
   margin: 0.15rem auto 0;
   padding: .5rem 0 0;
-  background-color: rgba(3, 2, 2, 0.5);
+  /* background-color: rgba(3, 2, 2, 0.5); */
+  text-shadow: 2px 2px 8px #111;
   width: 15rem;
   height: 1.5em;
   border-radius: 7px;

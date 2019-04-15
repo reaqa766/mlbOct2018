@@ -8,7 +8,8 @@
       text-align: center;
       margin: 2% auto 0.5rem;
       padding: .5rem 0;
-      background-color: rgba(3, 2, 2, 0.5);
+      /* background-color: rgba(3, 2, 2, 0.5); */
+      text-shadow: 2px 2px 8px #111;
       width: 13em;
       height: 2em;
       border-radius: 7px;
@@ -128,7 +129,8 @@
           text-align: center;
           margin: .15rem auto 1.25rem 3rem;
           padding: .5rem 0;
-          background-color: rgba(3, 2, 2, 0.5);
+          /* background-color: rgba(3, 2, 2, 0.5); */
+          text-shadow: 2px 2px 8px #111;
           width: 13em;
           height: 2em;
           border-radius: 7px;
@@ -154,7 +156,8 @@
           text-align: center;
           margin: .25rem auto 0.5rem !important;
           padding: .5rem 0;
-          background-color: rgba(3, 2, 2, 0.5);
+          /* background-color: rgba(3, 2, 2, 0.5); */
+          text-shadow: 2px 2px 8px #111;
           width: 13em;
           height: 2em;
           border-radius: 7px;

@@ -6,7 +6,8 @@
     text-align: center;
     margin: 0.15rem auto 0;
     padding: .3rem 0;
-    background-color: rgba(3, 2, 2, 0.5);
+    /* background-color: rgba(3, 2, 2, 0.5); */
+    text-shadow: 2px 2px 8px #111;
     width: 14rem;
     height: 1.5em;
     border-radius: 7px;
@@ -17,7 +18,8 @@
     text-align: center;
     margin: 0.15rem auto 0;
     padding: .3rem 0;
-    background-color: rgba(3, 2, 2, 0.5);
+    /* background-color: rgba(3, 2, 2, 0.5); */
+    text-shadow: 2px 2px 8px #111;
     width: 27rem;
     height: 1.5em;
     border-radius: 7px;
@@ -52,6 +54,7 @@
     font-size: 1.50rem;
     text-align: center;
     background-color: rgba(3, 2, 2, 0.5);
+    /* text-shadow: 2px 2px 8px #111; */
     width: 10rem;
     height: 1.75em;
     border-radius: 7px;

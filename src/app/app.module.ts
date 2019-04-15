@@ -85,6 +85,8 @@ import { LideresComponent } from './components/lideres/lideres.component';
 import { LideresPitchersComponent } from './components/lideres/lideres-pitchers/lideres-pitchers.component';
 import { PosicionesComponent } from './components/posiciones/posiciones.component';
 import { PitchersDayAntComponent } from './components/pitchers/pitchers-day-ant/pitchers-day-ant.component';
+import { ResultadosTeamsComponent } from './components/resultados-teams/resultados-teams.component';
+import { ResultadosTeamsAyerComponent } from './components/resultados-teams-ayer/resultados-teams-ayer.component';
 
 @NgModule({
   declarations: [
@@ -142,7 +144,9 @@ import { PitchersDayAntComponent } from './components/pitchers/pitchers-day-ant/
     LideresComponent,
     LideresPitchersComponent,
     PosicionesComponent,
-    PitchersDayAntComponent
+    PitchersDayAntComponent,
+    ResultadosTeamsComponent,
+    ResultadosTeamsAyerComponent
 
   ],
   imports: [

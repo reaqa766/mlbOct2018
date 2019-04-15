@@ -2,7 +2,8 @@
     margin: 0 auto;
     text-align: center;
     text-shadow: 2px 2px 8px black;
-    background-color: rgba(0, 0, 0, .5);
+    /* background-color: rgba(0, 0, 0, .5); */
+    text-shadow: 2px 2px 8px #111;
     width: fit-content;
     padding: 0 .5rem .3rem;
     border-radius: 6px;
