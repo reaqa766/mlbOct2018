@@ -4,7 +4,8 @@
   text-align: center;
   margin: 0 auto;
   padding: 0.15em;
-  background-color: rgba(19, 12, 12, 0.5);
+  /* background-color: rgba(19, 12, 12, 0.5); */
+  text-shadow: 2px 2px 8px #111;
   width: 15em;
   height: 1.75em;
   border-radius: 7px;
@@ -16,7 +17,8 @@
   text-align: center;
   margin: 0 auto;
   padding: 0.25em;
-  background-color: rgba(19, 12, 12, 0.5);
+  /* background-color: rgba(19, 12, 12, 0.5); */
+  text-shadow: 2px 2px 8px #111;
   height: 1.75em;
   border-radius: 7px;
 
@@ -144,7 +146,8 @@ th {
   text-align: center;
   margin: 0 auto;
   padding: 0.15em;
-  background-color: rgba(19, 12, 12, 0.5);
+  /* background-color: rgba(19, 12, 12, 0.5); */
+  text-shadow: 2px 2px 8px #111;
   width: 15em;
   height: 1.75em;
   border-radius: 7px;
@@ -258,7 +261,8 @@ th {
   text-align: center;
   margin: 0 auto;
   padding: 0.15em;
-  background-color: rgba(19, 12, 12, 0.5);
+  /* background-color: rgba(19, 12, 12, 0.5); */
+  text-shadow: 2px 2px 8px #111;
   width: 15em;
   height: 1.75em;
   border-radius: 7px;
@@ -381,7 +385,8 @@ th {
       text-align: center;
       margin: 0 auto;
       padding: 0.15em;
-          background-color: rgba(19, 12, 12, 0.5);
+      /* background-color: rgba(19, 12, 12, 0.5); */
+      text-shadow: 2px 2px 8px #111;
       width: 15em;
       height: 1.75em;
       border-radius: 7px;
@@ -506,7 +511,8 @@ th {
           text-align: center;
           margin: 0 auto;
           padding: 0.15em;
-          background-color: rgba(19, 12, 12, 0.5);
+          /* background-color: rgba(19, 12, 12, 0.5); */
+          text-shadow: 2px 2px 8px #111;
           width: 15em;
           height: 1.75em;
           border-radius: 7px;
@@ -593,7 +599,8 @@ th {
   text-align: center;
   margin: 0 auto;
   padding: 0.15em;
-  background-color: rgba(19, 12, 12, 0.5);
+  /* background-color: rgba(19, 12, 12, 0.5); */
+  text-shadow: 2px 2px 8px #111;
   width: 15em;
   height: 1.75em;
   border-radius: 7px;
@@ -716,7 +723,8 @@ th {
       text-align: center;
       margin: 0 auto;
       padding: 0.15em;
-      background-color: rgba(19, 12, 12, 0.5);
+      /* background-color: rgba(19, 12, 12, 0.5); */
+      text-shadow: 2px 2px 8px #111;
       width: 15em;
       height: 1.75em;
       border-radius: 7px;
@@ -728,7 +736,8 @@ th {
     text-align: center;
     margin: 0 auto;
     padding: 0.25em;
-    background-color: rgba(19, 12, 12, 0.5);
+    /* background-color: rgba(19, 12, 12, 0.5); */
+    text-shadow: 2px 2px 8px #111;
     height: 1.75em;
     border-radius: 7px;
 
@@ -815,7 +824,8 @@ th {
       text-align: center;
       margin: 0 auto;
       padding: 0.15em;
-      background-color: rgba(19, 12, 12, 0.5);
+      /* background-color: rgba(19, 12, 12, 0.5); */
+      text-shadow: 2px 2px 8px #111;
       width: 15em;
       height: 1.75em;
       border-radius: 7px;

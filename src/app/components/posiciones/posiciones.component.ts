@@ -29,8 +29,10 @@ export class PosicionesComponent implements OnInit {
 
   AllLeague: Boolean;
   CALEND2: any;
+  CALEND3: any;
   _url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2019&standingsTypes=regularSeason';
   // _url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2019&standingsTypes=springTraining';
+  _url1 = 'https://statsapi.mlb.com/api/v1/schedule?sportId=1,51&date=2019-04-14&gameTypes=E,S,R,A,F,D,L,W&hydrate=team(linescore(matchup,runners))&useLatestGames=false&language=en&leagueId=103,104,420';
 
   constructor(private playerService: PruebaService,
     private pagerService: PagerService,
@@ -49,13 +51,15 @@ export class PosicionesComponent implements OnInit {
     this.alCentral=[];
     this.alWest=[];
 
+    this.CALEND3 = await this.http.get(this._url1).toPromise();
+    console.log('CALEND3', this.CALEND3);
 
 
 
 
     this.CALEND2 = await this.http.get(this._url).toPromise();
 
-    console.log('CALEND2', this.CALEND2);
+    // console.log('CALEND2', this.CALEND2);
 
     for (let tpos of this.CALEND2.records) {
       if(tpos.division.id === 200){

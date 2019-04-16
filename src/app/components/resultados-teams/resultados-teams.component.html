@@ -1,0 +1,31 @@
+<div class="container_players_actives"></div>
+<div class="container-actives">
+  <h1 class="actives-title">RESULTADOS DE HOY</h1>
+  <h4 class="actives-title1">Temp. 2019</h4>
+</div>
+
+<!-- LOADER -->
+<div *ngIf="!AllResult">
+  <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
+  <p class="spiner_load">CARGANDO</p>
+</div>
+
+
+<div class="row">
+<ng-container class="row1"  *ngFor="let result of AllResult; index as i ">
+    <!-- <div class="col-sm-4"> -->
+      <div class="card cardA " *ngIf="result.score1"  >
+                <img class="tbImg1" src="{{'../../../../assets/'+ result.Id1 +'.png'}}" alt="Logo Equipo MLB" >
+                <p class="tb1" >{{result.name1}}</p>
+                <p class="tb2" >{{result.score1}}</p>
+                <p class="tb3 align-middle" >{{result.record1Wins}} -  {{result.record1Losses}}</p>
+                <img class="tbImg2" src="{{'../../../../assets/'+ result.Id2 +'.png'}}" alt="Logo Equipo MLB" >
+                <p class="tb5" >{{result.name2}}</p>
+                <p class="tb6" >{{result.score2}}</p>
+                <p class="tb7 align-middle" >{{result.record2Wins}} - {{result.record2Losses}}</p>
+      </div>
+    </ng-container>
+  </div>
+  
+  
+ 

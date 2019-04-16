@@ -6,7 +6,8 @@
     /* margin-top: 24rem;
     margin-left: 74rem; */
     padding: .2rem 0;
-    background-color: rgba(3, 2, 2, 0.5);
+    /* background-color: rgba(3, 2, 2, 0.5); */
+    text-shadow: 2px 2px 8px #111;
     width: 8em;
     height: 1.5em;
     border-radius: 7px;

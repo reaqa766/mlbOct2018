@@ -47,7 +47,7 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://www.mlb.com/news/jose-altuve-homers-for-fifth-straight-game', '_blank');
+          window.open('https://www.panorama.com.ve/beisbol/German-Marquez-blanquea-en-su-primer-juego-completo-solo-permitio-1-hit-20190414-0028.html', '_blank');
   } else if (this.num === 'video3') {
     window.open('https://www.mlb.com/indians/news/carlos-gonzalez-joins-indians-in-kansas-city', '_blank');
   } else if (this.num === 'video4') {

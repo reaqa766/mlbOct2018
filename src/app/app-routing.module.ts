@@ -46,6 +46,8 @@ import { PruebajsonsComponent } from './components/prueba/pruebajsons/pruebajson
 import { PosicionesComponent } from './components/posiciones/posiciones.component';
 // import { PosicionesComponent } from './components/posiciones/posiciones.component';
 import { LideresComponent } from './components/lideres/lideres.component';
+import { ResultadosTeamsComponent } from './components/resultados-teams/resultados-teams.component';
+import { ResultadosTeamsAyerComponent  } from './components/resultados-teams-ayer/resultados-teams-ayer.component';
 
 // import { SharedModule } from '../shared/shared.module'
 
@@ -152,6 +154,10 @@ const routes: Routes = [
   component: PosicionesComponent},
   { path: 'lideres',
   component: LideresComponent},
+  { path: 'resultados',
+  component: ResultadosTeamsComponent},
+  { path: 'resultadosAyer',
+  component: ResultadosTeamsAyerComponent },
 
   { path: '**',
   component: NotFoundPageComponent}
