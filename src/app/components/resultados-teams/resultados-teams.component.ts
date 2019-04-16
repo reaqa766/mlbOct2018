@@ -57,6 +57,7 @@ export class ResultadosTeamsComponent implements OnInit {
             record2Losses: result.teams.home.leagueRecord.losses,
             record2Wins: result.teams.home.leagueRecord.wins,
             record2Pct: result.teams.home.leagueRecord.pct,
+            status: result.status.statusCode
           });}
 
 
