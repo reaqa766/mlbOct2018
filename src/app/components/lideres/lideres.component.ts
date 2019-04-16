@@ -18,7 +18,7 @@ export class LideresComponent implements OnInit {
   data: any;
   lider_avg: any;
   row: any;
-  estadistica = [true, false, false, false, false, false];
+  estadistica = [true, false, false, false, false, false, false];
   public players = [];
   public playersSort = [];
   groups: any;
@@ -56,7 +56,7 @@ export class LideresComponent implements OnInit {
     this.isLoading = true;
     // this.data = LIDERES.row;
     // this.jugadores = VenezolanosActivos;
-    console.log('jugadores', this.allItems);
+    console.log('jugadores', this.players);
 
 
     // this.jugadores = await this.http.get('../../../../assets/JSONS/VenezolanosActivos.json').toPromise();
@@ -139,16 +139,16 @@ export class LideresComponent implements OnInit {
   }
 
 avgClick(x) {
-  console.log('estadistica', this.estadistica);
+  // console.log('estadistica', this.estadistica);
 
   for (let i=0; i<this.estadistica.length; i++) {
     if (x === i) {
       this.estadistica[i] = true;
-      console.log('estadistica x', this.estadistica[i]);
+      // console.log('estadistica x', this.estadistica[i]);
 
     } else {
       this.estadistica[i] = false;
-      console.log('estadistica y', this.estadistica[i]);
+      // console.log('estadistica y', this.estadistica[i]);
 
 
     }
