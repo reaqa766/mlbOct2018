@@ -21,6 +21,7 @@
     <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(3)">TRIPLES </button>
     <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(4)">DOBLES </button>
     <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(5)">BASES R </button>
+    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(6)">EMPUJADAS</button>
   </div>
 <div class="container  container_grid_nvo_no" *ngIf="!isLoading">
 <div class="container_grid_nvo" *ngIf="estadistica[0]">
@@ -176,6 +177,32 @@
   <img class="img_average" src="../../../assets/Ender-Inciarte HITS.png" alt="">
 
   </div>
+  <div class="container_grid_nvo" *ngIf="estadistica[6]">
+  <h4 class="subtitulo_lideres6 sub_lideres">EMPUJADAS</h4>
+  <table class="table   text-center tableAVG_nvo">
+      <thead class="table-header">
+      <tr>
+        <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
+        <th class="tbA" style="width: 5%;" scope="col">VB</th>
+        <th class="tbA" style="width: 5%;" scope="col">AVG</th>
+        <th class="tbA1" style="width: 5%;" scope="col">CE</th>
+      </tr>
+    </thead>
+
+    <!-- <table class="table  "> -->
+      <tbody class="table-header2">
+        <tr *ngFor="let jugador of filtroTopCinco('rbi')">
+          <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
+          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+           <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.rbi}}</td>
+      </tbody>
+
+  </table>
+  <img class="img_average" src="../../../assets/aguilarLider.png" alt="">
+
+  </div>
+  
   <div class="espacioInferior"></div>
 </div>
 

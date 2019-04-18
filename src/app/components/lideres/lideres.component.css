@@ -277,7 +277,7 @@
             display: none;
         }
         .subtitulo_lideres1 {
-            width: 35%;
+            width: fit-content;
             font-size: .90em;
         }
 
