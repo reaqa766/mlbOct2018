@@ -47,17 +47,17 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://www.panorama.com.ve/beisbol/German-Marquez-blanquea-en-su-primer-juego-completo-solo-permitio-1-hit-20190414-0028.html', '_blank');
+          window.open('http://www.liderendeportes.com/noticias/baseball/vazquez-no-come-cuento-para-colocar-el-candado/', '_blank');
   } else if (this.num === 'video3') {
-    window.open('https://www.mlb.com/indians/news/carlos-gonzalez-joins-indians-in-kansas-city', '_blank');
+    window.open('https://beisbol.estrending.com/2019/04/12/con-los-ganchos-hasta-cuando-llamaremos-cafecito-a-jose-martinez/', '_blank');
   } else if (this.num === 'video4') {
-    window.open('http://www.liderendeportes.com/noticias/baseball/anibal-se-lucio-pero-no-tuvo-suerte/', '_blank');
+    window.open('http://www.meridiano.com.ve/beisbol/beisbol-grandes-ligas/192484/altuve-sigue-encendido-y-saco-el-octavo-de-la-temporada---video-.html', '_blank');
   } else if (this.num === 'video5') {
-    window.open('http://www.eluniversal.com/deportes/37426/pedro-avila-se-estreno-en-las-mayores-con-solida-apertura', '_blank');
+    window.open('https://www.sportsvenezuela.com/acuna-salio-de-las-sombras-del-ponche-a-la-luz-del-triunfovideo/', '_blank');
   } else if (this.num === 'video31') {
     window.open('https://beisbol.estrending.com/2019/04/10/altuve-lleva-cuatro-jonrones-en-tres-dias/', '_blank');
   } else if (this.num === 'video41') {
-    window.open('http://www.meridiano.com.ve/beisbol/beisbol-grandes-ligas/191972/-el-torito--impulso-a-los-filis-ante-anibal-sanchez---video-.html', '_blank');
+    window.open('http://www.eluniversal.com/deportes/37426/pedro-avila-se-estreno-en-las-mayores-con-solida-apertura', '_blank');
   } else if (this.num === 'video51') {
     window.open('http://www.elsoldemargarita.com.ve/posts/post/id:218125/Acu%C3%B1a-jonronea-y-Bravos-salen-airosos-en-Denver', '_blank');
   } else if (this.num === 'video6') {

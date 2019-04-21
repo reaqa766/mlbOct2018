@@ -11,23 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class PlayersService {
   playerCode = 596115;
-  // gameCode = 563385;
 
-
-  // playersList = [
-  //   {name:"Jose Altuve",
-  //   position : "segunda base"},
-
-  //   {name : "Gleyber Torres",
-  //   position : "segunda base"},
-
-  //   {name : "Ronald Acuña Jr.",
-  //   position : "Leftfield"},
-
-  //   {name : "Ender Inciarte",
-  //   position : "Centerfield"}
-
-  // ]
 
 
 
@@ -52,7 +36,7 @@ export class PlayersService {
   // ];
 
     private playersCode = [
-      491696, 600524, 602922, 570560, 408234,
+      491696, 471865, 600524, 602922, 570560, 408234,
       455139, 514888, 553902, 501303, 503556,
       650402, 553882, 541645, 462101, 452678,
       596059, 520471, 500874, 467827, 467055,
@@ -60,7 +44,7 @@ export class PlayersService {
       444489, 542583, 606115, 541650, 445988,
       500743, 606299, 553993, 575929, 660670,
       542255, 444482, 500871, 527038, 545121,
-      506702,602074
+      506702, 602074
 
     ];
 
@@ -100,7 +84,7 @@ export class PlayersService {
   // 408234, 605612, 465041,
   // 455139, 575929,
   // 553869, 444876, 500871, 527038,
-  // 520471, 541645, 554054, 471865,
+  // 520471, 541645, 554054,
   // 492802, 514917,
   // 491676, 546318, 506702,
   // 446653, 553988, 500874,

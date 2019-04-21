@@ -124,7 +124,6 @@ export class ByteamComponent implements OnInit {
         this.players.push(res);
 
         if ((InfoObsPlayer.length - 1) === index) {
-          // debugger
           this.players = this.players.map(player => {
             const newPlayer: Players = {};
             Object.assign(newPlayer, player.people[0]);
@@ -132,13 +131,14 @@ export class ByteamComponent implements OnInit {
           });
           // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
           this.players = this.players.filter(player =>
-            player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0)
+             player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0)
             // se ordenan por nombre
             .sort((a, b) => {
               a = a.fullName;
               // debugger
               b = b.fullName;
               if (a > b) {
+
                 return 1;
               } else if (a < b) {
                 return -1;
@@ -146,6 +146,9 @@ export class ByteamComponent implements OnInit {
                 return 0;
               }
             });
+            // console.log(this.players, this.players.find(player => player.id === 471865));
+
+
           this.allItems = this.players;
           this.setPage(1);
           this.isLoading = false;
@@ -165,14 +168,14 @@ export class ByteamComponent implements OnInit {
         player.stats[0].splits[0].team.name.toLowerCase().includes(team.toLowerCase()) ||
         player.fullName.toLowerCase().includes(team.toLowerCase()));
         this.setPage(this.pager.currentPage);
-        
+
     } else {
       this.allItems = this.players;
       this.setPage(this.pager.currentPage);
     }
     return this.allItems;
-    
-    
+
+
   }
 
   setPage(page: number) {

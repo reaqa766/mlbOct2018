@@ -54,7 +54,7 @@
   .boton {
     display: flex;
     justify-content: center;
-    margin-bottom: 4rem; 
+    margin-bottom: 4rem;
   }
 
   .container-position{
@@ -145,6 +145,12 @@
     grid-column: 2/3;
     grid-row: 2/3;
     justify-self: end;
+    align-self: end;
+  }
+  .of {
+    grid-column: 5/6;
+    grid-row: 1/2;
+    justify-self: center;
     align-self: end;
   }
 
@@ -345,17 +351,17 @@ font-weight: 400;
         width: fit-content;
         padding: 0 .5rem;
         height: 1.5em;
-    } 
-    
+    }
+
     .button1 {
 
         font-size: 1em;
         cursor: pointer;
         width: 2rem;
         height: 2rem;
-    
+
       }
-    
+
 
 .advancedSearchTextbox {
         font-size: .75rem;
@@ -431,7 +437,7 @@ font-weight: 400;
         height: 406px;
         margin: 3rem .1rem;
        }
- 
+
 
     .card-title {
         font-size: 1em;
@@ -528,7 +534,7 @@ font-weight: 400;
         margin: auto;
         font-size: 1.75rem
     }
-    
+
     }
 
 

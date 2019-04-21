@@ -35,7 +35,7 @@ export class AllplayersService {
 
   // Array de Codigo de Jugadores y Pitchers 2019 SP TRaining
   private playersCode = [
-    491696, 600524, 602922, 570560, 408234,
+    491696, 471865, 600524, 602922, 570560, 408234,
     455139, 514888, 553902, 501303, 503556,
     650402, 553882, 541645, 462101, 452678,
     596059, 520471, 500874, 467827, 467055,
@@ -47,7 +47,7 @@ export class AllplayersService {
     621237, 630023, 521655, 491646, 434671,
     553878, 501625, 591693, 501593, 468504,
     448855, 641154, 608566, 545121, 602074,
-    622608
+    622608,
   ];
 
   // menores 2019 545121,658648,
@@ -85,7 +85,7 @@ export class AllplayersService {
   // 408234, 605612, 465041,
   // 455139, 575929,
   // 553869, 444876, 500871, 527038,
-  // 520471, 541645, 554054, 471865,
+  // 520471, 541645, 554054,
   // 492802, 514917,
   // 491676, 546318, 506702,
   // 446653, 553988, 500874,
@@ -141,7 +141,7 @@ export class AllplayersService {
   // private _url4 = 'https://statsapi.mlb.com/api/v1/teams/109/roster?hydrate=person(stats(type=season,season=2018),education)&rosterType=Active';
   // // tslint:disable-next-line:max-line-length
   // tslint:disable-next-line:max-line-length
-  private _url ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2019&hydrate=stats(type=season,season=2019,gameType=S)'
+  private _url ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2019&hydrate=stats(type=season,season=2019,gameType=R)'
 
 
   // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(type=season=2018),%20team(currentteam)';
