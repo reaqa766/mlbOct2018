@@ -38,9 +38,9 @@ export class VideosComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video1') {
-          window.open('https://www.mlb.com/es/video/bambinazo-de-altuve', '_blank');
+          window.open('https://www.mlb.com/news/freddy-galvis-makes-barehand-catch', '_blank');
   } else if (this.num === 'video2') {
-    window.open('https://www.mlb.com/news/astros-top-a-s-on-walk-off-walk', '_blank');
+    window.open('https://www.mlb.com/es/video/bambinazo-de-altuve', '_blank');
   } else if (this.num === 'video3') {
     window.open('https://www.mlb.com/es/video/andrelton-simmons-lines-out-to-third-baseman-asdrubal-cabrera', '_blank');
   } else if (this.num === 'video4') {

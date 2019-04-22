@@ -87,6 +87,7 @@ import { PosicionesComponent } from './components/posiciones/posiciones.componen
 import { PitchersDayAntComponent } from './components/pitchers/pitchers-day-ant/pitchers-day-ant.component';
 import { ResultadosTeamsComponent } from './components/resultados-teams/resultados-teams.component';
 import { ResultadosTeamsAyerComponent } from './components/resultados-teams-ayer/resultados-teams-ayer.component';
+import { LetrasComponent } from './components/letras/letras.component';
 
 @NgModule({
   declarations: [
@@ -146,7 +147,8 @@ import { ResultadosTeamsAyerComponent } from './components/resultados-teams-ayer
     PosicionesComponent,
     PitchersDayAntComponent,
     ResultadosTeamsComponent,
-    ResultadosTeamsAyerComponent
+    ResultadosTeamsAyerComponent,
+    LetrasComponent
 
   ],
   imports: [

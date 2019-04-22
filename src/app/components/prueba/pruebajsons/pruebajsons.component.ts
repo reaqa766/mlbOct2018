@@ -1,15 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { PruebaService } from '../../../services/prueba.service';
+import { AllplayersService } from '../../../services/allplayers.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../../interfaces/players';
-import LIDERES from '../../../../assets/JSONS/ESTADISTICAS_DE_LIDERES';
-import VenezolanosActivos from '../../../../assets/JSONS/VenezolanosActivos';
 
-import { PagerService } from '../../../../services/index';
-import { HttpClient } from '@angular/common/http';
-import { PosicionesService } from 'src/app/services/posiciones.service';
-
-import * as moment from 'moment';
+import { PagerService } from '../../../../services/index';;
 
 
 
@@ -20,212 +14,118 @@ import * as moment from 'moment';
 })
 export class PruebajsonsComponent implements OnInit {
 
-  dia = moment().format('YYYY-MM-DD');
-  diaAnt = moment().format('YYYY-MM-DD');
-  diaAnte = moment(this.diaAnt).subtract(1, 'day').format('YYYY-MM-DD')
-  diaAnterior = moment(this.diaAnt).subtract(1, 'day').format('YYYY-MM-DD')
+  buscando = true;
+  public players = [];
+  groups: any;
+  selectedGroup: any;
+  elarray: any;
+  // tslint:disable-next-line:no-inferrable-types
+  datesN: number = 10;
+  searchText: string;
+  playerAuxList = [];
+  counter: number;
+  n: number;
+  m: number;
+  // tslint:disable-next-line:no-inferrable-types
+  n1: number = 12;
+  // tslint:disable-next-line:no-inferrable-types
+  n10: number = 5;
 
-  data: any;
-  // ClLeague: any[];
-  // GlLeague: any[];
-  nlEast: any[];
-  nlCentral: any[];
-  nlWest: any[];
-  alEast: any[];
-  alCentral: any[];
-  alWest: any[];
-  AllResult: any[];
+  public allItems: any[];
+  public allItemsFiltered: any[];
+  // pager object
+  pager: any = {};
 
-  AllLeague: Boolean;
-  CALEND2: any;
-  CALEND3: any;
-  _url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2019&standingsTypes=regularSeason';
-  // _url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2019&standingsTypes=springTraining';
-  _url1 = 'https://statsapi.mlb.com/api/v1/schedule?sportId=1,51&date=' + this.diaAnterior + '&gameTypes=E,S,R,A,F,D,L,W&hydrate=team(linescore(matchup,runners))&useLatestGames=false&language=en&leagueId=103,104,420';
-
-  constructor(private playerService: PruebaService,
-    private pagerService: PagerService,
-    private posicionesService: PosicionesService,
-    private http: HttpClient) { }
-
-  async ngOnInit() {
-
-    // this.ClLeague= [];
-    // this.GlLeague= [];
-    // this.AllLeague = true;
-    this.nlEast=[];
-    this.nlCentral=[];
-    this.nlWest=[];
-    this.alEast=[];
-    this.alCentral=[];
-    this.alWest=[];
-    this.AllResult=[];
+  // paged items
+  pagedItems: any[];
 
 
-    this.CALEND3 = await this.http.get(this._url1).toPromise();
-    console.log('CALEND3', this.CALEND3);
-    for (let result of this.CALEND3.dates[0].games) {
-      // if(tpos.division.id === 200){
-      // for(let team of tpos.teamRecords){
-          this.AllResult.push({
-            name1: result.teams.away.team.name,
-            name2: result.teams.home.team.name,
-            score1: result.teams.away.score,
-            score2: result.teams.home.score,
-            record1Losses: result.teams.away.leagueRecord.losses,
-            record1Wins: result.teams.away.leagueRecord.wins,
-            record1Pct: result.teams.away.leagueRecord.pct,
-            record2Losses: result.teams.home.leagueRecord.losses,
-            record2Wins: result.teams.home.leagueRecord.wins,
-            record2Pct: result.teams.home.leagueRecord.pct,
-          });}
+  isLoading: boolean;
+  position: any;
+
+  constructor(private playerService: AllplayersService, private pagerService: PagerService) { }
+
+  ngOnInit() {
+    this.isLoading = true;
+    // this.playerService.getPlayerDaily();
+    this.getPlayersMap();
+    // console.log('players', this.players);
+  }
 
 
+  // Convertir el Array de Observables a un Array de Objetos.
+  // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
+  getPlayersMap() {
+    let InfoObsPlayer = this.playerService.getAllPlayersActives();
+    let index = 0;
+    for (let obs of InfoObsPlayer) {
+      obs.pipe(take(1)).subscribe(res => {
+        this.players.push(res);
 
-    this.CALEND2 = await this.http.get(this._url).toPromise();
+        if ((InfoObsPlayer.length - 1) === index) {
+          this.players = this.players.map(player => {
+            const newPlayer: Players = {};
+            Object.assign(newPlayer, player.people[0]);
+            return newPlayer;
+          });
+         // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
+         this.players = this.players.filter(player =>
+            player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0)
+            // se ordenan por nombre
+            .sort(({ fullName: a }, { fullName: b }) => {
+              if (a > b) {
+                return 1;
+              } else if (a < b) {
+                return -1;
+              } else if (a === b) {
+                return 0;
+              }
+            });
+            this.allItems = this.players;
+            this.setPage(1);
 
-    // console.log('CALEND2', this.CALEND2);
-
-    for (let tpos of this.CALEND2.records) {
-      if(tpos.division.id === 200){
-      for(let team of tpos.teamRecords){
-          this.alWest.push({
-            name: team.team.name,
-            wins: team.leagueRecord.wins,
-            losses: team.leagueRecord.losses,
-            pct: team.leagueRecord.pct,
-            teamId: team.team.id,
-            gamesBack: team.gamesBack,
-          });}}
-         if(tpos.division.id === 201) {
-          for(let team of tpos.teamRecords){
-          this.alEast.push({
-            name: team.team.name,
-            wins: team.leagueRecord.wins,
-            losses: team.leagueRecord.losses,
-            pct: team.leagueRecord.pct,
-            teamId: team.team.id,
-            gamesBack: team.gamesBack,
-
-          });} }
-
-          if(tpos.division.id=== 202) {
-            for(let team of tpos.teamRecords){
-          this.alCentral.push({
-            name: team.team.name,
-            wins: team.leagueRecord.wins,
-            losses: team.leagueRecord.losses,
-            pct: team.leagueRecord.pct,
-            teamId: team.team.id,
-            gamesBack: team.gamesBack,
-
-          });}}
-          if(tpos.division.id=== 203) {
-            for(let team of tpos.teamRecords){
-          this.nlWest.push({
-            name: team.team.name,
-            wins: team.leagueRecord.wins,
-            losses: team.leagueRecord.losses,
-            pct: team.leagueRecord.pct,
-            teamId: team.team.id,
-            gamesBack: team.gamesBack,
-
-          });}}
-          if(tpos.division.id=== 204) {
-            for(let team of tpos.teamRecords){
-          this.nlEast.push({
-            name: team.team.name,
-            wins: team.leagueRecord.wins,
-            losses: team.leagueRecord.losses,
-            pct: team.leagueRecord.pct,
-            teamId: team.team.id,
-            gamesBack: team.gamesBack,
-          });}}
-        if(tpos.division.id === 205) {
-          for(let team of tpos.teamRecords){
-          this.nlCentral.push({
-            name: team.team.name,
-            wins: team.leagueRecord.wins,
-            losses: team.leagueRecord.losses,
-            pct: team.leagueRecord.pct,
-            teamId: team.team.id,
-            gamesBack: team.gamesBack,
-          });}}
-
-
-
-
-    this.positionTeams();
-
-
-            // console.log('ClLeague', this.ClLeague);
-            // console.log('GlLeague', this.GlLeague);
-            console.log('CALEND2', this.CALEND2);
-
-
-    }}
-
-positionTeams() {
-  this.nlEast.sort((a, b) => {
-    if (a.pct > b.pct) {
-      return -1;
-
-    } else  if (a.pct < b.pct) {
-      return 1;
-    } else  {
-      return 0;
+          this.isLoading = false;
+          // console.log(JSON.stringify(this.players[0]));
+        }
+        index++;
+      });
     }
-  });
-  this.nlWest.sort((a, b) => {
-    if (a.pct > b.pct) {
-      return -1;
 
-    } else  if (a.pct < b.pct) {
-      return 1;
-    } else  {
-      return 0;
-    }
-  });
-  this.nlCentral.sort((a, b) => {
-    if (a.pct > b.pct) {
-      return -1;
+  }
+  onSearchChange(position: string) {
+    this.position = position.toUpperCase();
+    if (position) {
+      this.allItems = this.players.filter(player =>
+        // player.stats[0].splits[0].team.name.toLowerCase().includes(position) ||
+        player.primaryPosition.abbreviation.toLowerCase().includes(position) ||
+        // player.fullName.toLowerCase().includes(position) ||
+        player.primaryPosition.name.toLowerCase().includes(position));
+        this.setPage(this.pager.currentPage);
 
-    } else  if (a.pct < b.pct) {
-      return 1;
-    } else  {
-      return 0;
-    }
-  });
-  this.alWest.sort((a, b) => {
-    if (a.pct > b.pct) {
-      return -1;
+      } else {
+          this.allItems = this.players;
+          this.setPage(this.pager.currentPage);
+        }
+        return this.allItems;
+      }
 
-    } else  if (a.pct < b.pct) {
-      return 1;
-    } else  {
-      return 0;
-    }
-  });
-  this.alEast.sort((a, b) => {
-    if (a.pct > b.pct) {
-      return -1;
+  setPage(page: number) {
+    // get pager object from service
+    this.pager = this.pagerService.getPager(this.allItems.length, page);
+    console.log('pager', this.pager);
 
-    } else  if (a.pct < b.pct) {
-      return 1;
-    } else  {
-      return 0;
-    }
-  });
-  this.alCentral.sort((a, b) => {
-    if (a.pct > b.pct) {
-      return -1;
 
-    } else  if (a.pct < b.pct) {
-      return 1;
-    } else  {
-      return 0;
-    }
-  });
-}
+    // get current page of items
+    this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
+  }
+
+  back_one_page() {
+    this.position = null;
+  }
+
+  get positionTitle() {
+    return this.position ? ` ${this.position}` : 'Jugadores por Posición';
+  }
+
 
 }

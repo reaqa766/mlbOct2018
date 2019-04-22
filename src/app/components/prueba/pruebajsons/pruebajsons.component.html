@@ -1,53 +1,83 @@
-<div class="container_players_actives"></div>
-<div class="container-actives">
-  <h1 class="actives-title">PRUEBAS RESULTADOS</h1>
-  <h4 class="actives-title1">Temp. 2019</h4>
+<div class="container-byPosition">
+  <h1 class="byPosition-title"> {{ positionTitle }} </h1>
+  <h3 class="byPosition-season-title">Temp. 2019</h3>
+  <!-- <h3 class="byPosition-season-title" *ngIf="position">{{position}}</h3> -->
+
+
+
 </div>
 
 <!-- LOADER -->
-<!-- <div *ngIf="!AllLeague">
+<div *ngIf="!allItems">
   <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
   <p class="spiner_load">CARGANDO</p>
-</div> -->
-
-
-<!-- <div *ngIf="AllLeague"> -->
-
-<div class="container_grid">
-<div class="container_nacional">
-  <h3 class="league league1">PRUEBAS RESULTADOS</h3>
-  <!-- <h5 class="league division1">ESTE</h5> -->
-  <table class="table  text-center tableNl1">
-    <thead class="table-header">
-      <tr>
-        <th class="tbA" style="width: 3%;" scope="col">Away</th>
-        <th class="tbA" style="width: 2%;" scope="col">score</th>
-        <th class="tbA" style="width: 2%;" scope="col">W</th>
-        <th class="tbA" style="width: 2%;" scope="col">L</th>
-        <th class="tbA" style="width: 2%;" scope="col">pct</th>
-        <th class="tbA" style="width: 2%;" scope="col">Home</th>
-        <th class="tbA" style="width: 2%;" scope="col">score</th>
-        <th class="tbA" style="width: 2%;" scope="col">pct</th>
-      </tr>
-    </thead>
-
-    <!-- <table class="table "> -->
-      <tbody class="table-header2">
-          <tr *ngFor="let result of AllResult; index as i ">
-            <!-- <td class="tb1" style="width: 3%;"><img class="tb1" src="{{'../../../../assets/'+ position.teamId +'.png'}}" alt="" (click)="onSearchChange(team.name)"></td> -->
-            <!-- <td class="tb2" style="width: 2%;">{{position.name}}</td> -->
-            <td class="tb2" style="width: 2%;">{{result.name1}}</td>
-            <td class="tb3" style="width: 2%;">{{result.score1}}</td>
-            <td class="tb3" style="width: 2%;">{{result.record1Wins}}</td>
-            <td class="tb3" style="width: 2%;">{{result.record1Losses}}</td>
-            <td class="tb3" style="width: 2%;">{{result.record1Pct}}</td>
-            <td class="tb3" style="width: 2%;">{{result.name2}}</td>
-            <td class="tb2" style="width: 2%;">{{result.score2}}</td>
-            <td class="tb2" style="width: 2%;">{{result.record2Pct}}</td>
-      </tbody>
-
-  </table>
-</div>
 </div>
 
-x
+
+<div class="container-position" *ngIf='!position'>
+    <!-- <img class="bbalfield" src="../../../../assets/bbalF.png" alt=""> -->
+    <!-- <div class="button catcher"> <button >C</button> </div> -->
+    <div class="espacio_superior"></div>
+    <div class="espacio_superior2"></div>
+    <button class="button1 catcher" (click)="onSearchChange('catcher')">C</button>
+    <!-- <button class="button1 pitcher"(click)="onSearchChange('pitcher')">P</button> -->
+    <button class="button1 prim_B"(click)="onSearchChange('1b')">1B</button>
+    <button class="button1 ss"(click)="onSearchChange('ss')">SS</button>
+    <button class="button1 segunda_B"(click)="onSearchChange('2b')">2B</button>
+    <button class="button1 tercera_B"(click)="onSearchChange('3b')">3B</button>
+    <button class="button1 rf"(click)="onSearchChange('rf')">RF</button>
+    <button class="button1 cf"(click)="onSearchChange('cf')">CF</button>
+    <button class="button1 lf"(click)="onSearchChange('lf')">LF</button>
+    <button class="button1 of"(click)="onSearchChange('of')">OF</button>
+    <div class="espacio_inferior"></div>
+</div>
+<div class="container-position-results" *ngIf="position">
+  <ng-container *ngIf="!(pager.allItems === 0)">
+
+    <div class="container-actives_cards ">
+      <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
+        <div class="card card1 img_picture_box" style="width: 95%;" *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
+            <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
+          <div class="card-body">
+            <h5 class="card-title">{{player.fullName}}</h5>
+
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
+        <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*7)">
+            <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
+          <div class="card-body">
+              <h5 class="card-title">{{player.fullName}}</h5>
+
+          </div>
+               </div>
+      </ng-container>
+    </div>
+    <div class="container paginator">
+      <div class="text-center">
+        <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
+          <li *ngIf = "pager.currentPage !== 1"  [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+            <a (click)="setPage(1)" class="page-link paginator_text">First</a>
+          </li>
+          <li *ngIf = "pager.currentPage !== 1" [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+            <a (click)="setPage(pager.currentPage - 1)" class="page-link paginator_text">Previous</a>
+          </li>
+          <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
+            <a (click)="setPage(page)" class="page-link">{{page}}</a>
+          </li>
+          <li  *ngIf = "pager.currentPage !== pager.totalPages" [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+            <a (click)="setPage(pager.currentPage + 1)" class="page-link paginator_text">Next</a>
+          </li>
+          <li *ngIf = "pager.currentPage !== pager.totalPages" [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+            <a (click)="setPage(pager.totalPages)" class="page-link paginator_text">Last</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="boton">
+        <a (click)="back_one_page()"><button class="button btn-primary">Volver a la página anterior</button></a>
+        <div class="bottom_space"></div>
+      </div>
+
+  </ng-container></div>

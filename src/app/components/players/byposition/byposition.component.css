@@ -57,7 +57,7 @@
     margin-bottom: 4rem;
   }
 
-  .container-position{
+  .container-position {
     display: grid;
     grid-auto-columns: repeat (9, 20px);
     grid-auto-rows: repeat (6, 20px);

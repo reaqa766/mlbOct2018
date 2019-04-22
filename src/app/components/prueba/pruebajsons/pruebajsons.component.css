@@ -1,674 +1,710 @@
-/* .container_players_actives {
-  margin-top: 1%;
-} */
+.container-byPosition {
+    margin-top: 1%;
 
-.actives-title {
+}
+
+.byPosition-title {
+    color: antiquewhite;
+    font-size: 2.25rem;
+    text-align: center;
+    margin: 0.1rem auto 1rem;
+    padding: .15rem .75rem;
+    /* background-color: rgba(3, 2, 2, 0.5); */
+    text-shadow: 2px 2px 8px #111;
+    width: fit-content;
+    height: 1.75em;
+    border-radius: 7px;
+}
+.byPosition-season-title {
+    color: antiquewhite;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0.1rem auto 1rem;
+    padding: .15rem .75rem;
+    /* background-color: rgba(3, 2, 2, 0.5); */
+    text-shadow: 2px 2px 8px #111;
+    width: fit-content;
+    height: 1.5em;
+    border-radius: 7px;
+}
+/* .baseball_field {
+    width: 50%;
+    margin: 5rem 25%;
+
+} */
+.button1 {
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px black;
+    color: rgb(0, 0, 0);
+    /* padding: 15px 32px; */
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 1.25em;
+    font-weight: bold;
+    text-justify: auto;
+    /* margin: 4px 2px; */
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+
+  }
+  .boton {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+  }
+
+  .container-position {
+    display: grid;
+    grid-auto-columns: repeat (9, 20px);
+    grid-auto-rows: repeat (6, 20px);
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+
+    background-image: url(../../../../assets/mapVzla.png);
+    background-size: cover;
+    border-radius: 8px;
+    width: 1200px;
+    padding: 2rem;
+    border-radius: 6px;
+    height: 900px;
+    margin: 3rem auto;
+
+
+  }
+
+  .espacio_superior {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: end;
+  }
+  .espacio_superior2 {
+    grid-column: 9/10;
+    grid-row: 1/2;
+    justify-self: center;
+  }
+
+
+  .catcher {
+      grid-column: 5/6;
+      grid-row: 5/6;
+      justify-self: center;
+      align-self: center;
+
+  }
+  .pitcher{
+    grid-column: 5/6;
+    grid-row: 4/5;
+    justify-self: center;
+    align-self: center;
+
+  }
+  .prim_B {
+    grid-column: 7/8;
+    grid-row: 4/5;
+    justify-self: left;
+    align-self: center;
+
+  }
+  .segunda_B {
+    grid-column: 6/7;
+    grid-row: 3/4;
+    justify-self: center;
+    align-self: end;
+
+  }
+  .ss {
+    grid-column: 4/5;
+    grid-row: 3/4;
+    justify-self: center;
+    align-self: end;
+  }
+  .tercera_B {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    justify-self: end;
+    align-self: center;
+
+  }
+  .rf {
+    grid-column: 8/9;
+    grid-row: 2/3;
+    justify-self: center;
+    align-self: end;
+  }
+  .cf {
+    grid-column: 5/6;
+    grid-row: 2/3;
+    justify-self: center;
+    align-self: end;
+  }
+  .lf {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: end;
+    align-self: end;
+  }
+  .of {
+    grid-column: 5/6;
+    grid-row: 1/2;
+    justify-self: center;
+    align-self: end;
+  }
+
+
+
+  /* SEGUNDA PARTE DE BYPOSITION */
+
+  .bioActives-title {
     color: antiquewhite;
     font-size: 2.5rem;
     text-align: center;
-    margin: 0.15rem auto 0;
-    padding: .5rem 0;
+    margin: 0 auto;
+    padding: 1rem 0 0;
     /* background-color: rgba(3, 2, 2, 0.5); */
     text-shadow: 2px 2px 8px #111;
-    width: 27rem;
-    height: 1.75em;
+    width: 18em;
+    height: 2em;
     border-radius: 7px;
-  }
-  .title-position{
+}
+.title-position {
     color: antiquewhite;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
-    margin-left: 10%;
-    margin-bottom: 0;
-  }
+    margin: 0 0  0 10.35%;
+}
 
-  .container_grid {
-    display: grid;
-    grid-auto-columns: fr fr;
-    column-gap: 10px;
-    grid-auto-rows: repeat (6, fr);
-  }
-
-  .tableAVG {
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-  .tableHR {
-    grid-column: 2/3;
-    grid-row: 2/3;
-
-  }
-  .tableDOBLES {
-    grid-column: 1/2;
-    grid-row: 4/5;
-
-  }
-  .tableTRIPLES {
-    grid-column: 2/3;
-    grid-row: 4/5;
-
-  }
-  .tableBR {
-    grid-column: 1/2;
-    grid-row: 6/7;
-
-  }
-  .tableHITS {
-    grid-column: 2/3;
-    grid-row: 6/7;
-
-  }
-
-  .table {
-    width: 80%;
-    margin: 0.2em auto;
-    display: table;
-
-  }
-
-  .table-header {
-    background-color: rgba(12, 10, 9, 0.9);
-    color: antiquewhite;
-    text-align: center;
-    width: 100%;
-
-  }
-  .table-header2 {
-    background-color: rgba(12, 10, 9, 0.75);
-    color: antiquewhite;
-    text-align: center;
-
-  }
-  .title-rows {
-    background-color: antiquewhite;
-    color: rgb(12, 10, 9);
-    text-align: center;
-
-
-  }
-  .advancedSearchTextbox{
+.advancedSearchTextbox {
     color: rgb(2, 1, 0);
     font-size: 1rem;
     font-weight: bold;
-    margin-left: 10%;
-    margin-bottom: 0;
+    margin: 0 0  0 10.35%;
 
+}
+
+.img_picture_element{
+    transition: .4s;
   }
 
+  /* .img_picture_box:hover .img_picture_element{
+    transform: scale(1.075);
+    opacity: .98;
+  } */
+.card-body{
+    max-height: 4rem;
+    margin: 0 auto 1rem;
+}
 
-  .error_search {
-    width: 80%;
-    margin-left: 10%;
-    text-align: center;
-    color: antiquewhite;
-    background-color: rgba(12, 10, 9, 0.75);
-
-  }
-  .fa-baseball-ball {
+.fa-baseball-ball {
     font-size: 10rem;
     margin: 5% 40% 0 !important;
     color: rgba(80, 57, 43, 0.40);
-  }
-  .spiner_load {
+}
+.spiner_load {
     font-size: 5rem;
     margin: 0 35% !important;
     color: rgba(80, 57, 43, 0.95);
-  }
-  .link_player {
-  text-decoration:none;
-  color: antiquewhite;
-  }
-  .paginator {
-    font-size: 0.75rem;
-    width: 20%;
-    margin: auto;
-  }
-  .tb1 {
-    width: 5rem;
-  }
-  .tb2, .tb3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-  }
-  .tbA {
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-  .subtitulo_lideres1 {
-    grid-column: 1/2;
-    grid-row: 1/2;
-
-
-    }
-  .subtitulo_lideres2 {
-    grid-column: 2/3;
-    grid-row: 1/2;
-
-
-    }
-  .subtitulo_lideres3 {
-    grid-column: 1/2;
-    grid-row: 3/4;
-
-
-    }
-  .subtitulo_lideres4 {
-    grid-column: 2/3;
-    grid-row: 3/4;
-
-
-    }
-  .subtitulo_lideres5 {
-    grid-column: 1/2;
-    grid-row: 5/6;
-
-
-    }
-  .subtitulo_lideres6 {
-    grid-column: 2/3;
-    grid-row: 5/6;
-
-    }
-
-    .sub_lideres {
-      font-size: 2rem;
-      font-weight: bold;
-      height: 1rem;
-      text-align: center;
-
-    }
-    .tbA1, .tb2A {
-      color: black;
-      background-color: #fff;
-      font-size: 1.5rem;
-      font-weight: bold;
-      height: 1rem;
-      text-align: center;
-
-    }
-    .espacioInferior {
-      height: 100px;
-    }
-
-
-  @media only screen and (min-width:300px ) and (max-width: 320px) {
-
-  .container_players_actives {
-    margin-top:1% !important;
-  }
-
-  .actives-title {
-    font-size: 1.25rem;
-    width: 12rem;
-    margin: 1rem auto;
-    padding-bottom: 2rem !important;
-  }
-  .title-position{
-    color: antiquewhite;
-    font-size: 0.75rem;
-    margin-left: 2%;
-  }
-
-  .table {
-    width: 100%;
-    margin: 0.2em 0;
-  }
-
-  .table-header {
-    font-size: 1rem;
-    width: 1rem;
-
-  }
-  .table-header2 {
-    font-size: 1rem;
-    width: 1rem;
-
-  }
-  .title-rows {
-    background-color: antiquewhite;
-  }
-  .advancedSearchTextbox{
-    font-size: 0.85rem;
-    margin-left: 2%;
-  }
-  .error_search {
+}
+.error_search {
     width: 80%;
     margin-left: 10%;
     text-align: center;
     color: antiquewhite;
     background-color: rgba(12, 10, 9, 0.75);
 
-  }
-  .tb1, .tb4, .tb6, .tb7, .tb9, .tb10 {
-    display: none;
-  }
-  .paginator_item {
-    display: none;
+}
 
-  }
-  .paginator {
-    font-size: 0.75rem;
-    width: 20%;
+.error_message {
+    padding-top: 10px;
+
+}
+.container-actives_cards {
+    margin: 1% auto 0;
+    /* margin-top: 1%;
+    margin-left: 2%;
+    margin-right: 2%; */
+    display: grid;
+    grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    grid-column-gap: 2px;
+    justify-items: center;
+    width: 80%;
+
+}
+
+.card-title {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+.card {
+    max-width: 99%;
+    margin: 0 auto;
+}
+
+.container-actives_cards .card:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-bottom: 20px;
+}
+.container-actives_cards .card:nth-child(2) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-bottom: 20px;
+}
+.container-actives_cards .card:nth-child(3) {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    margin-bottom: 20px;
+}
+ .container-actives_cards .card:nth-child(4) {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    margin-bottom: 20px;
+}
+.container-actives_cards .card:nth-child(5) {
+    grid-column: 5/6;
+    grid-row: 1/2;
+    margin-bottom: 20px;
+}
+.container-actives_cards .card:nth-child(6) {
+    grid-column: 6/7;
+    grid-row: 1/2;
+    margin-bottom: 20px;
+}
+.container-actives_cards .card:nth-child(7) {
+    grid-column: 7/8;
+    grid-row: 1/2;
+    margin-bottom: 20px;
+}
+.container-actives_cards .card:nth-child(8) {
+    grid-column: 8/9;
+    grid-row: 1/2;
+    margin-bottom: 20px;
+}
+
+ .card-img-top {
+    max-height: 580px;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.list-group-item {
+    padding: 0.2rem 1.25rem;
+    font-size: 0.85rem;
+}
+
+
+.page-link {
+background-color: rgba(250, 235, 215,0.8)!important;
+border:solid 2px #7e7b7b;
+color: rgb(0, 0, 0)!important;
+font-weight: 400;
+}
+.paginator {
     margin: auto;
-  }
-  }
-  @media only screen and (orientation : landscape) and (min-width:500px ) and (max-width: 600px) {
+    font-size: 0.65rem
+}
+.paginator_text {
+    display: none;
+}
 
-    .container_players_actives {
-        margin-top: 1% !important;
-    }
-
-    .actives-title {
-        font-size: 1.5rem;
-        width: 40%;
-    }
-    .title-position{
-        font-size: 1rem;
-        margin-top: 1em !important;
-        margin-left: 2%;
-    }
-
-
-    .table {
-        width: 100%;
-        margin: 0.2em 0;
-    }
-
-    .table-header {
-        font-size: 0.85rem;
-        width: 1rem;
+ @media only screen and (min-width:300px ) and (max-width: 766px)  {
+    .container-actives_cards {
+        margin: 1% auto 0;
+        display: grid;
+        grid-auto-columns: 1fr 1fr;
+        grid-auto-rows: 1fr 1fr 1fr;
+        grid-column-gap: 2px;
+        justify-items: center;
+        width: 80%;
 
     }
-    .table-header2 {
-        font-size: 0.85rem;
-        width: 1rem;
+.bioActives-title {
+        font-size: 0.75rem;
+        margin-bottom: 1rem;
+        padding: 0.4rem 0 0;
+        width: 15rem;
+    }
+.title-position {
+        font-size: .75rem;
+    }
 
+.container-position{
+       width: 340px;
+       height: 198px;
+       margin: 3rem .1rem;
+      }
+
+      .byPosition-title {
+        font-size: 1.25rem;
+        width:  fit-content;
+        padding: 0 .5rem;
     }
-    .title-rows {
-        background-color: antiquewhite;
+    .byPosition-season-title {
+        font-size: 1.25rem;
+        width: fit-content;
+        padding: 0 .5rem;
+        height: 1.5em;
     }
-    .advancedSearchTextbox{
-        font-size: 0.85rem;
-        margin-left: 2%;
-    }
-    h1 {
+
+    .button1 {
+
         font-size: 1em;
+        cursor: pointer;
+        width: 2rem;
+        height: 2rem;
+
+      }
+
+
+.advancedSearchTextbox {
+        font-size: .75rem;
 
     }
-    .error_search {
-        width: 40%;
-        margin-left: 2%;
-        margin-top: 2%;
-
+.container-actives_cards .card:nth-child(1) {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-bottom: 20px;
     }
-    .tb1, .tb6, .tb7, .tb10 {
+    .container-actives_cards .card:nth-child(2) {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        margin-bottom: 20px;
+    }
+    .container-actives_cards .card:nth-child(3) {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        margin-bottom: 20px;
+    }
+     .container-actives_cards .card:nth-child(4) {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        margin-bottom: 20px;
+    }
+    .container-actives_cards .card:nth-child(5) {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        margin-bottom: 20px;
+    }
+    .container-actives_cards .card:nth-child(6) {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        margin-bottom: 20px;
+    }
+    .container-actives_cards .card:nth-child(7) {
         display: none;
     }
+    .container-actives_cards .card:nth-child(8) {
+        display: none;
+
+    }
+
     .paginator {
-        font-size: 0.75rem;
-        width: 90%;
-        margin-left: 1em;
-        margin-top: 1em;
+        margin: auto;
+        font-size: .75rem
+    }
+
+    .paginator_text {
+        display: none;
+    }
+ }
+ @media only screen and (min-width:767px ) and (max-width: 1023px)  {
+    .container-actives_cards {
+        margin: 1% auto 0;
+        display: grid;
+        grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-auto-rows: 1fr;
+        grid-column-gap: 2px;
+        justify-items: center;
+        width: 80%;
+
+    }
+    .bioActives-title {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        padding: 0.4rem 0 0;
+        width: 22rem;
+    }
+
+    .container-position{
+        width: 700px;
+        height: 406px;
+        margin: 3rem .1rem;
+       }
+
+
+    .card-title {
+        font-size: 1em;
+        font-weight: bold;
+        text-align: center;
+    }
+    .card {
+        max-width: 99%;
+        margin: 0 auto;
+    }
+
+    .container-actives_cards .card:nth-child(1) {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-bottom: 20px;
+    }
+    .container-actives_cards .card:nth-child(2) {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        margin-bottom: 20px;
+    }
+    .container-actives_cards .card:nth-child(3) {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        margin-bottom: 20px;
+    }
+     .container-actives_cards .card:nth-child(4) {
+        grid-column: 4/5;
+        grid-row: 1/2;
+        margin-bottom: 20px;
+    }
+    .container-actives_cards .card:nth-child(5) {
+        grid-column: 5/6;
+        grid-row: 1/2;
+        margin-bottom: 20px;
+    }
+    .container-actives_cards .card:nth-child(6) {
+        grid-column: 6/7;
+        grid-row: 1/2;
+        margin-bottom: 20px;
+    }
+    .container-actives_cards .card:nth-child(7) {
+            display: none;    }
+    .container-actives_cards .card:nth-child(8) {
+        display: none;
+    }
+
+     .card-img-top {
+        max-height: 580px;
+    }
+
+    .container {
+        margin-top: 20px;
+    }
+
+    .list-group-item {
+        padding: 0.2rem 1.25rem;
+        font-size: 0.85rem;
+    }
+
+
+    .page-link {
+    background-color: rgba(250, 235, 215,0.8)!important;
+    border:solid 2px #7e7b7b;
+    color: rgb(0, 0, 0)!important;
+    font-weight: 400;
+    }
+    .paginator {
+        margin: auto;
+        font-size: 0.65rem
+    }
+    .paginator_text {
+        display: table-cell;
     }
     }
-    @media only screen and (min-width:321px ) and (max-width: 355px) {
-
-        /* .container_players_actives {
-            margin-top:85% !important;
-        } */
-
-        .actives-title {
-            font-size: 1.5rem;
-            width: 90%;
-        }
-        .title-position{
-            color: antiquewhite;
-            font-size: 1rem;
-            margin-left: 2%;
-
-        }
-
-
-        .table {
-            width: 100%;
-            margin: 0.2em 0;
-        }
-
-        .table-header {
-            font-size: 0.65rem;
-            width: 1rem;
-
-        }
-        .table-header2 {
-            font-size: 0.65rem;
-            width: 1rem;
-
-        }
-        .title-rows {
-            background-color: antiquewhite;
-        }
-        .advancedSearchTextbox{
-            font-size: 0.85rem;
-            margin-left: 2%;
-        }
-        .error_search {
-            width: 80%;
-            margin-left: 10%;
-            text-align: center;
-            color: antiquewhite;
-            background-color: rgba(12, 10, 9, 0.75);
-
-        }
-        .tb1, .tb4, .tb6, .tb7, .tb9, .tb10 {
-            display: none;
-        }
-        .paginator_item {
-            display: none;
-
-        }
-
-        .paginator {
-            font-size: 0.50rem;
-            width: 45%;
-            margin: auto;
-        }
-
-        .container_grid {
-          display: grid;
-          grid-auto-columns: fr;
-          column-gap: 10px;
-          grid-auto-rows: repeat (12, fr);
-        }
-
-        .subtitulo_lideres1 {
-          grid-column: 1/2;
-          grid-row: 1/2;
-
-
-          }
-        .subtitulo_lideres2 {
-          grid-column: 2/3;
-          grid-row: 1/2;
-
-
-          }
-        .subtitulo_lideres3 {
-          grid-column: 1/2;
-          grid-row: 3/4;
-
-
-          }
-        .subtitulo_lideres4 {
-          grid-column: 2/3;
-          grid-row: 3/4;
-
-
-          }
-        .subtitulo_lideres5 {
-          grid-column: 1/2;
-          grid-row: 5/6;
-
-
-          }
-        .subtitulo_lideres6 {
-          grid-column: 2/3;
-          grid-row: 5/6;
-
-          }
-
-        }
-    @media only screen and (min-width:356px ) and (max-width: 365px) {
-
-        .container_players_actives {
-            margin-top:1% !important;
-        }
-
-        .actives-title {
-            font-size: 1rem;
-            width: 60%;
-            padding-bottom: 7%;
-            margin-bottom: 5%;
-        }
-        .title-position{
-            color: antiquewhite;
-            font-size: 0.75em;
-            margin-left: 2%;
-
-        }
-
-
-        .table {
-            width: 100%;
-            margin: 0.2em 0;
-        }
-
-        .table-header {
-            font-size: 0.65rem;
-            width: 1rem;
-
-        }
-        .table-header2 {
-            font-size: 0.65rem;
-            width: 1rem;
-
-        }
-        .title-rows {
-            background-color: antiquewhite;
-        }
-        .advancedSearchTextbox{
-            font-size: 0.75rem;
-            margin-left: 2%;
-        }
-        .error_search {
-            width: 80%;
-            margin-left: 10%;
-            text-align: center;
-            color: antiquewhite;
-            background-color: rgba(12, 10, 9, 0.75);
-
-        }
-        .tb1, .tb4, .tb6, .tb7, .tb9, .tb10 {
-            display: none;
-        }
-        .paginator_item {
-            display: none;
-
-        }
-
-        .paginator {
-            font-size: 0.75rem;
-            width: 45%;
-            margin: auto;
-        }
-        }
-    @media only screen and (min-width:366px ) and (max-width: 408px) {
-
-        /* .container_players_actives {
-            margin-top:55% !important;
-        } */
-
-        .actives-title {
-            font-size: 1.5rem;
-            width: 90%;
-        }
-        .title-position{
-            color: antiquewhite;
-            font-size: 1rem;
-            margin-left: 2%;
-
-        }
-
-
-        .table {
-            width: 100%;
-            margin: 0.2em 0;
-        }
-
-        .table-header {
-            font-size: 0.65rem;
-            width: 1rem;
-
-        }
-        .table-header2 {
-            font-size: 0.65rem;
-            width: 1rem;
-
-        }
-        .title-rows {
-            background-color: antiquewhite;
-        }
-        .advancedSearchTextbox{
-            font-size: 0.85rem;
-            margin-left: 2%;
-        }
-        .error_search {
-            width: 80%;
-            margin-left: 10%;
-            text-align: center;
-            color: antiquewhite;
-            background-color: rgba(12, 10, 9, 0.75);
-
-        }
-        .tb1, .tb4, .tb6, .tb7, .tb9, .tb10 {
-            display: none;
-        }
-        .paginator_item {
-            display: none;
-
-        }
-
-        .paginator {
-            text-align: center;
-            font-size: 0.50rem;
-            width: 45%;
-        }
-        }
-
-    @media only screen and (min-width:409px ) and (max-width: 425px) {
-
-        /* .container_players_actives {
-            margin-top:55% !important;
-        } */
-
-        .actives-title {
-            font-size: 1rem;
-            width: 50%;
-            padding-bottom: 7%;
-        }
-        .title-position{
-            color: antiquewhite;
-            font-size: 1rem;
-            margin-left: 2%;
-
-        }
-
-
-        .table {
-            width: 100%;
-            margin: 0.2em 0;
-        }
-
-        .table-header {
-            font-size: 0.65rem;
-            width: 1rem;
-
-        }
-        .table-header2 {
-            font-size: 0.65rem;
-            width: 1rem;
-
-        }
-        .title-rows {
-            background-color: antiquewhite;
-        }
-        .advancedSearchTextbox{
-            font-size: 0.85rem;
-            margin-left: 2%;
-        }
-        .error_search {
-            width: 80%;
-            margin-left: 10%;
-            text-align: center;
-            color: antiquewhite;
-            background-color: rgba(12, 10, 9, 0.75);
-
-        }
-        .tb1, .tb4, .tb6, .tb7, .tb9, .tb10 {
-            display: none;
-        }
-        .paginator_item {
-            display: none;
-
-        }
-
-        .paginator {
-            font-size: 0.50rem;
-            width: 45%;
-        }
-        }
-
-        @media only screen and (orientation : landscape) and (min-width:601px ) and (max-width: 815px) {
-            /* .container_players_actives {
-                margin-top: 20% !important;
-            } */
-
-            .actives-title {
-                font-size: 1.5rem;
-                width: 50%;
-            }
-            .title-position{
-                font-size: 1rem;
-                margin-top: 1em !important;
-                margin-left: 2%;
-            }
-
-
-            .table {
-                width: 100%;
-                margin: 0.2em 0;
-            }
-
-            .table-header {
-                font-size: 0.85rem;
-                width: 1rem;
-
-            }
-            .table-header2 {
-                font-size: 0.85rem;
-                width: 1rem;
-
-            }
-            .title-rows {
-                background-color: antiquewhite;
-            }
-            .advancedSearchTextbox{
-                font-size: 0.85rem;
-                margin-left: 2%;
-            }
-            h1 {
-                font-size: 1em;
-
-            }
-            .error_search {
-                width: 40%;
-                margin-left: 2%;
-                margin-top: 2%;
-
-            }
-            .tb1, .tb6, .tb7, .tb10 {
-                display: none;
-            }
-            .paginator {
-                font-size: 0.75rem;
-                width: 90%;
-                margin-left: 1em;
-            }
-        }
-        @media only screen and (min-width:1920px ) and (max-width: 3000px) {
-
-            /* .container_players_actives {
-                margin-top: 25%;
-              } */
-
-            }
+ @media only screen and (min-width:1024px ) and (max-width: 1439px)  {
+    .container-position{
+        width: 1000px;
+        height: 581px;
+        margin: 3rem .1rem;
+       }
 
+    .paginator {
+        margin: auto;
+        font-size: 1rem
+    }
+    .paginator_text {
+        display: table-cell;
+    }
+    }
+ @media only screen and (min-width:1440px ) and (max-width: 3200px)  {
+
+    .paginator {
+        margin: auto;
+        font-size: 1.75rem
+    }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* VIEJO DISEÑO */
+
+/*
+.advancedSearchTextbox{
+    color: rgb(2, 1, 0);
+    font-size: 0.75rem;
+    font-weight: 100;
+    margin-left: 1%;
+    margin-bottom: 0;
+
+}
+
+.fa-baseball-ball {
+  font-size: 10rem;
+  margin: 5% 40% 0 !important;
+  color: rgba(80, 57, 43, 0.40);
+}
+.spiner_load {
+  font-size: 5rem;
+  margin: 0 35% !important;
+  color: rgba(80, 57, 43, 0.95);
+}
+
+
+
+.error_search {
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    color: antiquewhite;
+    background-color: rgba(12, 10, 9, 0.75);
+
+}
+.link_player {
+  text-decoration:none;
+  color: antiquewhite;
+}
+
+.title-position{
+    color: antiquewhite;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-left: 1%;
+    margin-bottom: 0;
+}
+
+.table {
+    width: 100%;
+    margin: 0.7em auto;
+    font-size: 0.75rem;
+}
+.table-header {
+    background-color: rgba(12, 10, 9, 0.9);
+    color: antiquewhite;
+}
+.table-header2 {
+    background-color: rgba(12, 10, 9, 0.75);
+    color: antiquewhite;
+}
+
+.title-rows {
+    background-color: antiquewhite;
+    color: rgb(12, 10, 9);
+
+}
+
+.player-name {
+    color: black;
+}
+.player-name:hover {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 1.15rem;
+    text-decoration: none;
+}
+
+.row-color {
+    background-color: rgb(245, 223, 195);
+
+}
+.row-color:hover {
+    background-color: rgb(255, 255, 255);
+
+}
+.row-color1:hover {
+    background-color: rgb(255, 255, 255);
+
+}
+
+.title-rows_header {
+    text-align: center;
+}
+ .th2, .th4, .th7, .th8, .th9 {
+    display: none;
+}
+.paginator  {
+    margin: 0 auto;
+}
+.paginator_text {
+    display: none;
+}
+@media only screen  and (min-width:767px ) and (max-width: 1025px) {
+    .byPosition-title {
+        color: antiquewhite;
+        font-size: 1.75rem;
+        text-align: center;
+        margin: 0.1rem auto 1rem;
+        padding: .25rem 0;
+        background-color: rgba(3, 2, 2, 0.5);
+        width: 12em;
+        height: 1.75em;
+        border-radius: 7px;
+    }
+    .th2, .th4, .th7, .th8, .th9 {
+        display: table-cell !important;
+    }
+    .paginator_text {
+        display: table-cell !important;
+
+    }
+
+}
+@media only screen  and (min-width:1026px ) and (max-width: 3500px) {
+    .byPosition-title {
+        color: antiquewhite;
+        font-size: 2rem;
+        text-align: center;
+        margin: 0.1rem auto 1rem;
+        padding: .25rem 0;
+        background-color: rgba(3, 2, 2, 0.5);
+        width: 15em;
+        height: 1.75em;
+        border-radius: 7px;
+    }
+    .advancedSearchTextbox{
+        font-size: 1rem;
+        margin-left: 1%;
+        margin-bottom: 2%;
+    }
+
+    .title-position{
+        font-size: 1.25rem;
+        margin-left: 1%;
+        margin-bottom: 0;
+    }
+    .th2, .th4, .th7, .th8, .th9 {
+        display: table-cell !important;
+    }
+    .paginator_text {
+        display: table-cell !important;
+
+    }
+    .table {
+        width: 100%;
+        margin: 1% auto;
+        font-size: 1rem;
+    }
+
+} */

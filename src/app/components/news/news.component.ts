@@ -51,9 +51,9 @@ export class NewsComponent implements OnInit {
   } else if (this.num === 'video3') {
     window.open('https://beisbol.estrending.com/2019/04/12/con-los-ganchos-hasta-cuando-llamaremos-cafecito-a-jose-martinez/', '_blank');
   } else if (this.num === 'video4') {
-    window.open('http://www.meridiano.com.ve/beisbol/beisbol-grandes-ligas/192484/altuve-sigue-encendido-y-saco-el-octavo-de-la-temporada---video-.html', '_blank');
-  } else if (this.num === 'video5') {
     window.open('https://www.sportsvenezuela.com/acuna-salio-de-las-sombras-del-ponche-a-la-luz-del-triunfovideo/', '_blank');
+  } else if (this.num === 'video5') {
+    window.open('https://www.mlb.com/news/jose-martinez-filling-void-in-cardinals-lineup', '_blank');
   } else if (this.num === 'video31') {
     window.open('https://beisbol.estrending.com/2019/04/10/altuve-lleva-cuatro-jonrones-en-tres-dias/', '_blank');
   } else if (this.num === 'video41') {

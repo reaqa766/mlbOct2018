@@ -107,6 +107,10 @@
   .close {
       color: antiquewhite;
   }
+  .link_out {
+    color: rgb(233, 200, 53);
+    font-weight: 100;
+  }
   
     @media only screen and (max-width : 1024px) {
   .title_video {
@@ -321,8 +325,8 @@
 }
 
 .link_out {
-  color: rgb(64, 142, 214);
-  font-weight: 100;
+    color: rgb(233, 200, 53);
+    font-weight: 100;
   }
 
   .modal-title {
