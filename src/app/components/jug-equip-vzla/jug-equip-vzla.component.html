@@ -1,0 +1,39 @@
+<div class="container_title_infographics">
+  <h1 class="title_infographics">Jugadores por Equipos (LVBP)</h1>
+</div>
+<div class="container_infographics">
+
+  <div *ngFor="let jugador of jugadores; let i = index" class="container_equipos">
+    <div class="img1" data-toggle="modal" data-target="#exampleModal">
+      <div class="{{jugador.codigo}}">
+        <a data-toggle="modal" data-target="#exampleModal"> <img (click)="showMyImage(i)" class=" image_click " src="{{jugador.url}}" alt="Player Face"></a>
+  
+      </div>
+    </div>
+  </div>
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Jugador</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div >
+          <img class="img-modal-body" src="{{selectedImg}}" alt="">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" >Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

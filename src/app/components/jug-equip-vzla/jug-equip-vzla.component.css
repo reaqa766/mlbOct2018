@@ -1,0 +1,224 @@
+.container_title_infographics {
+    margin: 0 auto;
+    text-align: center;
+    text-shadow: 2px 2px 8px black;
+    /* background-color: rgba(0, 0, 0, .5); */
+    text-shadow: 2px 2px 8px #111;
+    width: fit-content;
+    padding: 0 .5rem .3rem;
+    border-radius: 6px;
+    font-size: 2em;
+
+}
+
+.title_infographics {
+    color: antiquewhite;
+    width: fit-content;
+    font-size: .75em;
+    text-align: center;
+    /* padding: 0 .5rem; */
+}
+
+/* .title_infographics {
+    color: antiquewhite;
+} */
+
+.container_infographics {
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: repeat(8 1fr) ;
+grid-row-gap: 1rem;
+width: 75%;
+margin: 0 auto;
+/* text-align: center; */
+justify-items: center
+}
+
+/* .container_equipos {
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+} */
+
+.jugador1 {
+grid-column: 1/2;
+grid-row: 1/2;
+}
+.jugador2 {
+grid-column: 1/2;
+grid-row: 2/3;
+}
+.jugador3 {
+grid-column: 1/2;
+grid-row: 3/4;
+}
+.jugador4 {
+grid-column: 1/2;
+grid-row: 4/5;
+}
+.jugador5 {
+grid-column: 1/2;
+grid-row: 5/6;
+}
+.jugador6 {
+grid-column: 1/2;
+grid-row: 6/7;
+}
+.jugador7 {
+grid-column: 1/2;
+grid-row: 7/8;
+}
+.jugador8 {
+grid-column: 1/2;
+grid-row: 8/9;
+}
+/* .jugador9 {
+grid-column: 1/2;
+grid-row: 9/10;
+}
+.jugador10 {
+grid-column: 1/2;
+grid-row: 10/11;
+}
+.jugador11 {
+grid-column: 1/2;
+grid-row: 11/12;
+}
+.jugador12 {
+grid-column: 1/2;
+grid-row: 12/13;
+}
+.jugador13 {
+grid-column: 1/2;
+grid-row: 13/14;
+}
+.jugador14 {
+grid-column: 1/2;
+grid-row: 14/15;
+} */
+
+.image_click {
+width: 75%;
+padding: 1rem 0;
+margin: 0;
+}
+.img-modal-body {
+width: 90%;
+}
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.63);
+}
+.close {
+    color: white;
+}
+
+.image_click, .jugador1, .jugador2, .jugador3, .jugador4, .jugador5, .jugador6, .jugador7, .jugador8, .jugador9, .jugador10 {
+    cursor: pointer;
+}
+
+.infograf2 {
+  margin-top: 1.5rem;
+
+}
+
+.jugador4 {
+padding: 0 0;
+
+}
+
+
+
+@media only screen and (min-width:1023px )  {
+
+    .container_title_infographics {
+        margin: 0 auto 2rem;
+        width: fit-content;
+        padding: 0 .5rem .3rem;
+        border-radius: 6px;
+        font-size: 2em;
+        }
+
+.title_infographics {
+    color: antiquewhite;
+    margin: 0 auto;
+    font-size: 1.25em;
+    padding: 0 .5rem;
+    width: fit-content ;
+
+}
+.container_infographics {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    width: 75%;
+    margin: 0 auto;
+
+    }
+
+    .jugador1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    }
+    .jugador2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    }
+    .jugador3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    }
+    .jugador4 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    }
+    .jugador5 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    }
+    .jugador6 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    }
+    .jugador7 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    }
+    .jugador8 {
+    grid-column: 4/5;
+    grid-row: 4/5;
+    }
+
+
+    /* .jugador9 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    }
+    .jugador10 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    }
+    .jugador11 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    }
+    .jugador12 {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    }
+    .jugador13 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    }
+    .jugador14 {
+    grid-column: 2/3;
+    grid-row: 5/6;
+    } */
+
+    .image_click {
+        width: 75%;
+        padding: 1rem 0;
+        margin: 0;
+        }
+        
+}

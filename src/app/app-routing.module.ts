@@ -49,6 +49,7 @@ import { LideresComponent } from './components/lideres/lideres.component';
 import { ResultadosTeamsComponent } from './components/resultados-teams/resultados-teams.component';
 import { ResultadosTeamsAyerComponent  } from './components/resultados-teams-ayer/resultados-teams-ayer.component';
 import { LetrasComponent  } from './components/letras/letras.component';
+import { JugEquipVzlaComponent  } from './components/jug-equip-vzla/jug-equip-vzla.component';
 
 // import { SharedModule } from '../shared/shared.module'
 
@@ -161,6 +162,8 @@ const routes: Routes = [
   component: ResultadosTeamsAyerComponent },
   { path: 'letrasybeisbol',
   component: LetrasComponent },
+  { path: 'equipoVzla',
+  component: JugEquipVzlaComponent },
 
   { path: '**',
   component: NotFoundPageComponent}
