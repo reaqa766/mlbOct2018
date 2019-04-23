@@ -2,6 +2,11 @@
   box-sizing: border-box;
 
 }
+
+.dropdown-item, .nav-link {
+  font-size: .80rem;
+
+}
 /* .nav-link, .dropdown-item  {
 font-size: 2em !important;
 
