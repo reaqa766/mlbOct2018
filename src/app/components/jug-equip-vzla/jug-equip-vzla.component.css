@@ -39,59 +39,59 @@ justify-items: center
     border-radius: 50%;
 } */
 
-.jugador1 {
+.equipos1 {
 grid-column: 1/2;
 grid-row: 1/2;
 }
-.jugador2 {
+.equipos2 {
 grid-column: 1/2;
 grid-row: 2/3;
 }
-.jugador3 {
+.equipos3 {
 grid-column: 1/2;
 grid-row: 3/4;
 }
-.jugador4 {
+.equipos4 {
 grid-column: 1/2;
 grid-row: 4/5;
 }
-.jugador5 {
+.equipos5 {
 grid-column: 1/2;
 grid-row: 5/6;
 }
-.jugador6 {
+.equipos6 {
 grid-column: 1/2;
 grid-row: 6/7;
 }
-.jugador7 {
+.equipos7 {
 grid-column: 1/2;
 grid-row: 7/8;
 }
-.jugador8 {
+.equipos8 {
 grid-column: 1/2;
 grid-row: 8/9;
 }
-/* .jugador9 {
+/* .equipos9 {
 grid-column: 1/2;
 grid-row: 9/10;
 }
-.jugador10 {
+.equipos10 {
 grid-column: 1/2;
 grid-row: 10/11;
 }
-.jugador11 {
+.equipos11 {
 grid-column: 1/2;
 grid-row: 11/12;
 }
-.jugador12 {
+.equipos12 {
 grid-column: 1/2;
 grid-row: 12/13;
 }
-.jugador13 {
+.equipos13 {
 grid-column: 1/2;
 grid-row: 13/14;
 }
-.jugador14 {
+.equipos14 {
 grid-column: 1/2;
 grid-row: 14/15;
 } */
@@ -102,7 +102,7 @@ padding: 1rem 0;
 margin: 0;
 }
 .img-modal-body {
-width: 90%;
+width: 10%;
 }
 .modal-content {
     background-color: rgba(0, 0, 0, 0.63);
@@ -111,7 +111,7 @@ width: 90%;
     color: white;
 }
 
-.image_click, .jugador1, .jugador2, .jugador3, .jugador4, .jugador5, .jugador6, .jugador7, .jugador8, .jugador9, .jugador10 {
+.image_click, .equipos1, .equipos2, .equipos3, .equipos4, .equipos5, .equipos6, .equipos7, .equipos8, .equipos9, .equipos10 {
     cursor: pointer;
 }
 
@@ -120,8 +120,24 @@ width: 90%;
 
 }
 
-.jugador4 {
+.equipos4 {
 padding: 0 0;
+
+}
+
+
+
+.cartaJugador {
+    color: white;
+    display: flex;
+    max-height: 50px;
+    align-items: center;
+    max-width: 248px;
+}
+
+.img-modal-body {
+    width: 200px;
+    margin-left: 2rem;
 
 }
 
@@ -156,61 +172,61 @@ padding: 0 0;
 
     }
 
-    .jugador1 {
+    .equipos1 {
     grid-column: 1/2;
     grid-row: 1/2;
     }
-    .jugador2 {
+    .equipos2 {
     grid-column: 2/3;
     grid-row: 1/2;
     }
-    .jugador3 {
+    .equipos3 {
     grid-column: 3/4;
     grid-row: 1/2;
     }
-    .jugador4 {
+    .equipos4 {
     grid-column: 4/5;
     grid-row: 1/2;
     }
-    .jugador5 {
+    .equipos5 {
     grid-column: 1/2;
     grid-row: 2/3;
     }
-    .jugador6 {
+    .equipos6 {
     grid-column: 2/3;
     grid-row: 2/3;
     }
-    .jugador7 {
+    .equipos7 {
     grid-column: 3/4;
     grid-row: 3/4;
     }
-    .jugador8 {
+    .equipos8 {
     grid-column: 4/5;
     grid-row: 4/5;
     }
 
 
-    /* .jugador9 {
+    /* .equipos9 {
     grid-column: 1/2;
     grid-row: 5/6;
     }
-    .jugador10 {
+    .equipos10 {
     grid-column: 1/2;
     grid-row: 4/5;
     }
-    .jugador11 {
+    .equipos11 {
     grid-column: 2/3;
     grid-row: 4/5;
     }
-    .jugador12 {
+    .equipos12 {
     grid-column: 3/4;
     grid-row: 4/5;
     }
-    .jugador13 {
+    .equipos13 {
     grid-column: 1/2;
     grid-row: 5/6;
     }
-    .jugador14 {
+    .equipos14 {
     grid-column: 2/3;
     grid-row: 5/6;
     } */
@@ -220,5 +236,4 @@ padding: 0 0;
         padding: 1rem 0;
         margin: 0;
         }
-        
 }
