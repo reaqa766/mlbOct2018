@@ -9,14 +9,14 @@ export class JugEquipVzlaComponent implements OnInit {
 
   equipoSelecc= [];
   selectedImg;
-  equipos = [ {codigo: 1, url: '../../../../assets/LEONES2.png', equipolvbp: 1},
-    {codigo: 2, url: '../../../../assets/AGUILAS.png', equipolvbp: 2},
-    {codigo: 3, url: '../../../../assets/ARAGUA.png', equipolvbp: 3},
-    {codigo: 4, url: '../../../../assets/bravos_.png', equipolvbp: 4},
-    {codigo: 5, url: '../../../../assets/cardenales.png', equipolvbp: 5},
-    {codigo: 6, url: '../../../../assets/magallanes_.png', equipolvbp: 6},
-    {codigo: 7, url: '../../../../assets/tiburones.png', equipolvbp: 7},
-    {codigo: 8, url: '../../../../assets/CARIBES.png', equipolvbp: 8},
+  equipos = [ {codigo: 1, url: '../../../../assets/LEONES2.png', equipolvbp: 1, equipo: 'Leones del Caracas'},
+    {codigo: 2, url: '../../../../assets/AGUILAS.png', equipolvbp: 2, equipo: 'Aguilas del Zulia'},
+    {codigo: 3, url: '../../../../assets/ARAGUA.png', equipolvbp: 3, equipo: 'Tigres de Aragua'},
+    {codigo: 4, url: '../../../../assets/bravos_.png', equipolvbp: 4, equipo: 'Bravos de Margarita'},
+    {codigo: 5, url: '../../../../assets/cardenales.png', equipolvbp: 5, equipo: 'Cardenales de Lara'},
+    {codigo: 6, url: '../../../../assets/magallanes_.png', equipolvbp: 6, equipo: 'Navegantes del Magallanes'},
+    {codigo: 7, url: '../../../../assets/tiburones.png', equipolvbp: 7, equipo: 'Tiburones de La Guaira'},
+    {codigo: 8, url: '../../../../assets/CARIBES.png', equipolvbp: 8, equipo: 'Caribes de Anzoátegui'},
   ];
 
 
@@ -86,12 +86,15 @@ export class JugEquipVzlaComponent implements OnInit {
                 {codigo:630023, nombre: 'Yonny Chirinos', url: '../../../../assets/630023.jpg', equipolvbp: 4},
                 {codigo:433589, nombre: 'Yusmeiro Petit', url: '../../../../assets/433589.jpg', equipolvbp: 6},
                 {codigo:444468, nombre: 'Hector Rondon', url: '../../../../assets/444468.jpg', equipolvbp: 1},
+                {codigo:650382, nombre: 'Darwinzon Hernandez', url: '../../../../assets/650382.jpg', equipolvbp: 5},
 
 
 
 
 ];
   jugadoresFiltrados: { codigo: number; nombre: string; url: string; equipolvbp: number; }[];
+  tituloEquipo: string;
+  logoEquipo: string;
 
 
 
@@ -103,7 +106,15 @@ export class JugEquipVzlaComponent implements OnInit {
 
   showMyImage(index) {
     this.jugadoresFiltrados = [];
-    this.jugadoresFiltrados =  this.jugadores.filter(jugador => index === jugador.equipolvbp)
-  
+    this.jugadoresFiltrados =  this.jugadores.filter(jugador => index === jugador.equipolvbp).sort(({ nombre: a }, { nombre: b }) => {
+      if (a > b) {
+        return 1;
+      } else if (a < b) {
+        return -1;
+      } else if (a === b) {
+        return 0;
+      }});
+    this.tituloEquipo = this.equipos[index-1].equipo;
+    this.logoEquipo = this.equipos[index-1].url;
 }
 }
