@@ -48,7 +48,7 @@ export class BioActivesComponent implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    console.log('allItems', this.allItems);
+    // console.log('allItems', this.allItems);
     // console.log('FilterPlayers', this.filterPlayers);
 
 
@@ -100,14 +100,14 @@ export class BioActivesComponent implements OnInit {
     // initialize to page 1
     // this.setPage(1);
 
-    console.log('players', this.players);
+    // console.log('players', this.players);
     const playerstxt1 = this.players
 
       }
 
 
   onSearchChange() {
-    console.log('search', this.searchText);
+    // console.log('search', this.searchText);
 
     if (this.searchText) {
       this.allItems = this.players.filter(player =>

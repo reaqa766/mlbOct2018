@@ -21,7 +21,6 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <!-- <h5 class="modal-title" id="exampleModalLabel">{{tituloEquipo}}</h5>  -->
           <img class="img-modal-title" src="{{logoEquipo}}" alt="">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -30,8 +29,10 @@
         <div class="modal-body">
           <div class="d-flex flex-wrap" >
             <div *ngFor="let jugador of jugadoresFiltrados; let i = index" class="cartaJugador">
-              <img class="img-modal-body" src="{{jugador.url}}" alt="">
-              <div class="nombreJugador">{{jugador.nombre}}</div>
+                <div *ngIf="jugador.tipoJugador === 1" > <a  routerLink="/playerinfo/{{jugador.codigo}}" data-dismiss="modal"><img class="img-modal-body" src="{{jugador.url}}" alt=""></a></div>
+                <div *ngIf="jugador.tipoJugador === 1" ><a  routerLink="/playerinfo/{{jugador.codigo}}" data-dismiss="modal"><div class="nombreJugador">{{jugador.nombre}}</div></a></div>
+                <div *ngIf="jugador.tipoJugador === 2"><a  routerLink="/pitcherinfo/{{jugador.codigo}}" data-dismiss="modal"><img class="img-modal-body" src="{{jugador.url}}" alt=""></a></div>
+                <div *ngIf="jugador.tipoJugador === 2"><a  routerLink="/pitcherinfo/{{jugador.codigo}}" data-dismiss="modal"><div class="nombreJugador">{{jugador.nombre}}</div></a></div>
             </div>
           </div>
         </div>
