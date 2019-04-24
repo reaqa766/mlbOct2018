@@ -1,13 +1,15 @@
 <div class="container_title_infographics">
   <h1 class="title_infographics">Jugadores por Equipos (LVBP)</h1>
 </div>
+
+
 <div class="container_infographics">
 
   <div *ngFor="let equipo of equipos; let i = index" class="container_equipos">
     <div class="img1" data-toggle="modal" data-target="#exampleModal">
       <div class="{{equipo.codigo}}">
         <a data-toggle="modal" data-target="#exampleModal"> <img (click)="showMyImage(i+1)" class=" image_click " src="{{equipo.url}}"
-            alt="Player Face"></a>
+            alt="LVBP Team Logo"></a>
 
       </div>
     </div>
@@ -29,8 +31,12 @@
         <div class="modal-body">
           <div class="d-flex flex-wrap" >
             <div *ngFor="let jugador of jugadoresFiltrados; let i = index" class="cartaJugador">
+                <div *ngIf="!jugador.url">
+                    <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
+                    <p class="spiner_load">CARGANDO</p>
+                  </div>
                 <div *ngIf="jugador.tipoJugador === 1" > <a  routerLink="/playerinfo/{{jugador.codigo}}" data-dismiss="modal"><img class="img-modal-body" src="{{jugador.url}}" alt=""></a></div>
-                <div *ngIf="jugador.tipoJugador === 1" ><a  routerLink="/playerinfo/{{jugador.codigo}}" data-dismiss="modal"><div class="nombreJugador">{{jugador.nombre}}</div></a></div>
+                <div *ngIf="jugador.tipoJugador === 1" ><a  routerLink="/playerinfo/{{jugador.codigo}}" data-dismiss="modal"><div class="nombreJugador">{{jugador.nombre}} </div></a></div>
                 <div *ngIf="jugador.tipoJugador === 2"><a  routerLink="/pitcherinfo/{{jugador.codigo}}" data-dismiss="modal"><img class="img-modal-body" src="{{jugador.url}}" alt=""></a></div>
                 <div *ngIf="jugador.tipoJugador === 2"><a  routerLink="/pitcherinfo/{{jugador.codigo}}" data-dismiss="modal"><div class="nombreJugador">{{jugador.nombre}}</div></a></div>
             </div>
@@ -43,3 +49,44 @@
     </div>
   </div>
 </div>
+
+<!-- <div class="container_infographics2">
+ <div>
+      <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchTextbox">
+      <div *ngIf="!allItems[1]" class="error_search d-flex justify-content-center">
+        <h4 class="error_message"> <strong>'{{searchText}}'</strong> El Jugador no existe. Solo busque por nombre, sobrenombre y
+          equipo</h4>
+      </div> 
+   </div>  
+
+ <div data-backdrop="static" data-keyboard="false" class="modal fade" id="exampleModalDirect" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img class="img-modal-title" src="{{logoEquipo}}" alt="">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex flex-wrap" >
+            <div *ngFor="let jugador of jugadoresFiltrados; let i = index" class="cartaJugador">
+                <div *ngIf="!jugador.url">
+                    <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
+                    <p class="spiner_load">CARGANDO</p>
+                  </div>
+                <div *ngIf="jugador.tipoJugador === 1" > <a  routerLink="/playerinfo/{{jugador.codigo}}" data-dismiss="modal"><img class="img-modal-body" src="{{jugador.url}}" alt=""></a></div>
+                <div *ngIf="jugador.tipoJugador === 1" ><a  routerLink="/playerinfo/{{jugador.codigo}}" data-dismiss="modal"><div class="nombreJugador">{{jugador.nombre}} </div></a></div>
+                <div *ngIf="jugador.tipoJugador === 2"><a  routerLink="/pitcherinfo/{{jugador.codigo}}" data-dismiss="modal"><img class="img-modal-body" src="{{jugador.url}}" alt=""></a></div>
+                <div *ngIf="jugador.tipoJugador === 2"><a  routerLink="/pitcherinfo/{{jugador.codigo}}" data-dismiss="modal"><div class="nombreJugador">{{jugador.nombre}}</div></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

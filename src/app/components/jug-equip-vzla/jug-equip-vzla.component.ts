@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JugEquipVzlaComponent implements OnInit {
 
+  searchText: string;
   equipoSelecc= [];
   selectedImg;
   equipos = [ {codigo: 1, url: '../../../../assets/LEONES2.png', equipolvbp: 1, equipo: 'Leones del Caracas'},
@@ -95,6 +96,7 @@ export class JugEquipVzlaComponent implements OnInit {
   jugadoresFiltrados: { codigo: number; nombre: string; url: string; equipolvbp: number; }[];
   tituloEquipo: string;
   logoEquipo: string;
+  allItems: { codigo: number; nombre: string; url: string; equipolvbp: number; tipoJugador: number; }[];
 
 
 
@@ -117,4 +119,16 @@ export class JugEquipVzlaComponent implements OnInit {
     this.tituloEquipo = this.equipos[index-1].equipo;
     this.logoEquipo = this.equipos[index-1].url;
 }
+
+// onSearchChange() {
+//   this.allItems = [];
+// if (this.searchText) {
+//   this.allItems = this.jugadores.filter(jugador =>
+//     jugador.nombre && jugador.nombre.toLowerCase().includes(this.searchText));
+//     } else {
+//       this.allItems = this.jugadores;
+//     }
+//     return this.allItems;
+//   }
+
 }

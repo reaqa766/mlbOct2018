@@ -10,7 +10,7 @@
   <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
   <p class="spiner_load">CARGANDO</p>
 </div>
-
+           
 <div *ngIf="allItems">
   <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchTextbox">
   <div *ngIf="!allItems[0]" class="error_search d-flex justify-content-center">
