@@ -10,10 +10,12 @@
   </div>
 
   <div *ngIf="allItems">
+  <div *ngIf="allItems > 1">
     <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchTextbox">
     <div *ngIf="!allItems[0]" class="error_search d-flex justify-content-center">
       <h4 class="error_message"> <strong>'{{searchText}}'</strong> El Jugador no existe. Solo busque por nombre, sobrenombre y
         equipo</h4>
+    </div>
     </div>
 
     <ng-container *ngIf="!(pager.allItems === 0)">
@@ -42,19 +44,19 @@
       <div class="container paginator">
         <div class="text-center">
           <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
-            <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+            <li *ngIf="pager.currentPage !== 1" [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
               <a (click)="setPage(1)" class="page-link paginator_text">First</a>
             </li>
-            <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+            <li *ngIf="pager.currentPage !== 1" [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
               <a (click)="setPage(pager.currentPage - 1)" class="page-link paginator_text">Previous</a>
             </li>
             <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
               <a (click)="setPage(page)" class="page-link">{{page}}</a>
             </li>
-            <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+            <li *ngIf="pager.currentPage !== 1" [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
               <a (click)="setPage(pager.currentPage + 1)" class="page-link paginator_text">Next</a>
             </li>
-            <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+            <li *ngIf="pager.currentPage !== 1" [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
               <a (click)="setPage(pager.totalPages)" class="page-link paginator_text">Last</a>
             </li>
           </ul>
