@@ -106,7 +106,7 @@ width: 50%;
 border-radius: 18px;
 }
 .modal-content {
-    background-color: rgba(0, 0, 0, 0.63);
+    background-color: rgba(0, 0, 0, 0.85);
     text-align: center;
 }
 .close {
@@ -217,7 +217,7 @@ padding: 1rem 4rem;
     .img-modal-title {
         width: 20%;
         margin-left: 40%;
-    
+
     }
 
 
