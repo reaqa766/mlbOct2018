@@ -89,11 +89,8 @@ import { ResultadosTeamsComponent } from './components/resultados-teams/resultad
 import { ResultadosTeamsAyerComponent } from './components/resultados-teams-ayer/resultados-teams-ayer.component';
 import { LetrasComponent } from './components/letras/letras.component';
 import { JugEquipVzlaComponent } from './components/jug-equip-vzla/jug-equip-vzla.component';
-<<<<<<< HEAD
 import { EstadoVzlaComponent } from './components/estado-vzla/estado-vzla.component';
-=======
 import { NovatosComponent } from './components/players/novatos/novatos.component';
->>>>>>> c3bfe9882f2e355cb630f08389f38f2971693478
 
 @NgModule({
   declarations: [
@@ -156,11 +153,8 @@ import { NovatosComponent } from './components/players/novatos/novatos.component
     ResultadosTeamsAyerComponent,
     LetrasComponent,
     JugEquipVzlaComponent,
-<<<<<<< HEAD
-    EstadoVzlaComponent
-=======
+    EstadoVzlaComponent,
     NovatosComponent
->>>>>>> c3bfe9882f2e355cb630f08389f38f2971693478
 
   ],
   imports: [
