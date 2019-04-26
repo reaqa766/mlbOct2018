@@ -11,7 +11,7 @@ export class EstadoVzlaComponent implements OnInit {searchText: string;
   estados = [ {codigo: 1, url: '../../../../assets/ANZOATEGUI.png', equipolvbp: 1, estado: 'Anzoategui'},
     {codigo: 2, url: '../../../../assets/AMAZONAS.png', equipolvbp: 2, estado: 'Amazonas'},
     {codigo: 3, url: '../../../../assets/Apure.png', equipolvbp: 3, estado: 'Apure'},
-    {codigo: 4, url: '../../../../assets/ARAGUA1.png', equipolvbp: 4, estado: 'Aragua'},
+    {codigo: 4, url: '../../../../assets/ARAGUA.png', equipolvbp: 4, estado: 'Aragua'},
     {codigo: 5, url: '../../../../assets/Barinas.png', equipolvbp: 5, estado: 'Barinas'},
     {codigo: 6, url: '../../../../assets/BOLIVAR.png', equipolvbp: 6, estado: 'Bolívar'},
     {codigo: 7, url: '../../../../assets/CARABOBO.png', equipolvbp: 7, estado: 'Carabobo'},
@@ -102,6 +102,7 @@ export class EstadoVzlaComponent implements OnInit {searchText: string;
                 {codigo:433589, nombre: 'Yusmeiro Petit', url: '../../../../assets/433589.jpg', equipolvbp: 6, tipoJugador: 2},
                 {codigo:444468, nombre: 'Hector Rondon', url: '../../../../assets/444468.jpg', equipolvbp: 1, tipoJugador: 2},
                 {codigo:650382, nombre: 'Darwinzon Hernandez', url: '../../../../assets/650382.jpg', equipolvbp: 5, tipoJugador: 2},
+                {codigo:650859, nombre: 'Luis Rengifo', url: '../../../../assets/650859.jpg', equipolvbp: 7, tipoJugador: 2},
 
 
 
@@ -109,8 +110,9 @@ export class EstadoVzlaComponent implements OnInit {searchText: string;
 ];
   jugadoresFiltrados: { codigo: number; nombre: string; url: string; equipolvbp: number; }[];
   tituloEquipo: string;
-  logoEquipo: string;
+  estado: string;
   allItems: { codigo: number; nombre: string; url: string; equipolvbp: number; tipoJugador: number; }[];
+  estadoNombre: string;
 
 
 
@@ -131,7 +133,8 @@ export class EstadoVzlaComponent implements OnInit {searchText: string;
         return 0;
       }});
     this.tituloEquipo = this.estados[index-1].estado;
-    this.logoEquipo = this.estados[index-1].url;
+    this.estado = this.estados[index-1].url;
+    this.estadoNombre = this.estados[index-1].estado;
 }
 
 // onSearchChange() {
