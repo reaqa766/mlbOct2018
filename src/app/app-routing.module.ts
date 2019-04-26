@@ -50,6 +50,7 @@ import { ResultadosTeamsComponent } from './components/resultados-teams/resultad
 import { ResultadosTeamsAyerComponent  } from './components/resultados-teams-ayer/resultados-teams-ayer.component';
 import { LetrasComponent  } from './components/letras/letras.component';
 import { JugEquipVzlaComponent  } from './components/jug-equip-vzla/jug-equip-vzla.component';
+import { EstadoVzlaComponent  } from './components/estado-vzla/estado-vzla.component';
 
 // import { SharedModule } from '../shared/shared.module'
 
@@ -164,6 +165,8 @@ const routes: Routes = [
   component: LetrasComponent },
   { path: 'equipoVzla',
   component: JugEquipVzlaComponent },
+  { path: 'estadoVzla',
+  component: EstadoVzlaComponent },
 
   { path: '**',
   component: NotFoundPageComponent}

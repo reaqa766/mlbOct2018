@@ -89,6 +89,7 @@ import { ResultadosTeamsComponent } from './components/resultados-teams/resultad
 import { ResultadosTeamsAyerComponent } from './components/resultados-teams-ayer/resultados-teams-ayer.component';
 import { LetrasComponent } from './components/letras/letras.component';
 import { JugEquipVzlaComponent } from './components/jug-equip-vzla/jug-equip-vzla.component';
+import { EstadoVzlaComponent } from './components/estado-vzla/estado-vzla.component';
 
 @NgModule({
   declarations: [
@@ -150,7 +151,8 @@ import { JugEquipVzlaComponent } from './components/jug-equip-vzla/jug-equip-vzl
     ResultadosTeamsComponent,
     ResultadosTeamsAyerComponent,
     LetrasComponent,
-    JugEquipVzlaComponent
+    JugEquipVzlaComponent,
+    EstadoVzlaComponent
 
   ],
   imports: [
