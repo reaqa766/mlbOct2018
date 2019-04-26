@@ -47,25 +47,25 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('http://www.liderendeportes.com/noticias/baseball/vazquez-no-come-cuento-para-colocar-el-candado/', '_blank');
+          window.open('http://www.el-nacional.com/noticias/beisbol/zurdo-jose-quijada-nuevo-grandeliga-venezuela_280192', '_blank');
   } else if (this.num === 'video3') {
-    window.open('https://beisbol.estrending.com/2019/04/12/con-los-ganchos-hasta-cuando-llamaremos-cafecito-a-jose-martinez/', '_blank');
+    window.open('https://beisbol.estrending.com/2019/04/24/en-toronto-estan-preocupados-por-la-salud-de-freddy-galvis/', '_blank');
   } else if (this.num === 'video4') {
-    window.open('https://www.sportsvenezuela.com/acuna-salio-de-las-sombras-del-ponche-a-la-luz-del-triunfovideo/', '_blank');
+    window.open('https://www.sportsvenezuela.com/cuatro-venezolanos-guiaron-paliza-de-arizona-sobre-los-piratas-pittsburgh/', '_blank');
   } else if (this.num === 'video5') {
-    window.open('https://www.mlb.com/news/jose-martinez-filling-void-in-cardinals-lineup', '_blank');
+    window.open('http://www.el-nacional.com/noticias/beisbol/boston-sube-las-mayores-prospecto-guayanes-darwinzon-hernandez_280193', '_blank');
   } else if (this.num === 'video31') {
     window.open('https://beisbol.estrending.com/2019/04/10/altuve-lleva-cuatro-jonrones-en-tres-dias/', '_blank');
   } else if (this.num === 'video41') {
-    window.open('http://www.eluniversal.com/deportes/37426/pedro-avila-se-estreno-en-las-mayores-con-solida-apertura', '_blank');
+    window.open('https://beisbol.estrending.com/2019/04/12/con-los-ganchos-hasta-cuando-llamaremos-cafecito-a-jose-martinez/', '_blank');
   } else if (this.num === 'video51') {
-    window.open('http://www.elsoldemargarita.com.ve/posts/post/id:218125/Acu%C3%B1a-jonronea-y-Bravos-salen-airosos-en-Denver', '_blank');
+    window.open('https://www.sportsvenezuela.com/acuna-salio-de-las-sombras-del-ponche-a-la-luz-del-triunfovideo/', '_blank');
   } else if (this.num === 'video6') {
-    window.open('http://www.meridiano.com.ve/beisbol/beisbol-grandes-ligas/191959/rondon-saco-su-primer-bambinazo-de-la-zafra---video-.html', '_blank');
+    window.open('https://www.mlb.com/news/jose-martinez-filling-void-in-cardinals-lineup', '_blank');
   } else if (this.num === 'video7') {
-    window.open('https://www.albat.com/lasmayores/Gleyber-Torres-empata-marca-del-legendario-Yankee-Joe-DiMaggio--20190404-0023.html', '_blank');
+    window.open('http://www.elsoldemargarita.com.ve/posts/post/id:218125/Acu%C3%B1a-jonronea-y-Bravos-salen-airosos-en-Denver', '_blank');
   } else if (this.num === 'video8') {
-    window.open('http://www.el-nacional.com/noticias/beisbol/antonio-senzatela-elias-diaz-jose-osuna-empiezan-lista-lesionados_276774', '_blank');
+    window.open('https://www.albat.com/lasmayores/Gleyber-Torres-empata-marca-del-legendario-Yankee-Joe-DiMaggio--20190404-0023.html', '_blank');
   }
   }
 

@@ -1,118 +1,8 @@
-.container-byPosition {
-  margin: 1%;
-
-}
-
-.byPosition-title {
-  color: antiquewhite;
-  font-size: 2.25rem;
-  text-align: center;
-  margin: 0.1rem auto 1rem;
-  padding: .15rem .75rem;
-  /* background-color: rgba(3, 2, 2, 0.5); */
-  text-shadow: 2px 2px 8px #111;
-  width: fit-content;
-  height: 1.75em;
-  border-radius: 7px;
-}
-.byPosition-season-title {
-  color: antiquewhite;
-  font-size: 2rem;
-  text-align: center;
-  margin: 0.1rem auto 1rem;
-  padding: .15rem .75rem;
-  /* background-color: rgba(3, 2, 2, 0.5); */
-  text-shadow: 2px 2px 8px #111;
-  width: fit-content;
-  height: 1.5em;
-  border-radius: 7px;
-}
-
-.container-position{
-    margin-bottom: 3rem;
-}
-.titulo_liga {
-  font-size: 1.2rem;
-  text-align: center;
-  font-weight: 400;
-  color: rgb(255, 255, 255);
-  text-decoration: underline rgb(214, 214, 214);
-}
-.liga_americana {
-  width: 90%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-column-gap: 5px;
-  /* background-color: rgba(0, 0, 0, 0.596); */
-
-
-}
-.team_logo{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 1px;
-  border-radius: 6px;
-}
-
-.marco {
-  background-color: rgba(2, 2, 2, 0.5);
-  width: fit-content;
-  padding: auto 1rem;
-}
-
-
-.img_picture_box {
-  text-align: center;
-}
-.img_picture_element{
-  margin: 2rem 0;
-  /* width: 45%; */
-  height: 5rem;
-  width: 5rem;
-  transition: .4s;
-  cursor: pointer;
-}
-/* .img_picture_element2{
-  transition: .4s;
+/* .container-actives {
+    margin-top: 5%;
 } */
 
-/* .img_picture_box:hover .img_picture_element{
-  transform: scale(1.075);
-  opacity: .98;
-} */
-.container_border{
-  padding: 2rem 0;
-  border: 1px solid rgba(0, 0, 0, 0.246);
-}
-
-.container_americana_este, .container_americana_central, .container_americana_oeste {
-  background-color: rgba(107, 174, 250, 0.465);
-}
-.container_nacional_este, .container_nacional_central, .container_nacional_oeste {
-  background-color: rgba(211, 211, 211, 0.465);
-}
-
-.boton {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 4rem;
-}
-
-
-
-
-
-
-
-
-
-
-
- /* SEGUNDA PARTE DE BYPOSITION */
-
- .bioActives-title {
+.bioActives-title {
   color: antiquewhite;
   font-size: 2.5rem;
   text-align: center;
@@ -148,9 +38,10 @@
   opacity: .98;
 }
 .card-body{
-  max-height: 5rem;
+  max-height: 1rem;
   margin: 0 auto 1rem;
 }
+
 
 .fa-baseball-ball {
   font-size: 10rem;
@@ -167,7 +58,7 @@
   margin-left: 10%;
   text-align: center;
   color: antiquewhite;
-  /* background-color: rgba(12, 10, 9, 0.75); */
+  background-color: rgba(12, 10, 9, 0.75);
 
 }
 
@@ -194,14 +85,6 @@
   font-weight: bold;
   text-align: center;
 }
-.card-title2 {
-  font-size: 1em;
-  font-weight: bold;
-  text-align: center;
-  color: rgb(60, 128, 206);
-}
-
-
 .card {
   max-width: 99%;
   margin: 0 auto;
@@ -276,7 +159,7 @@ font-weight: 400;
   display: none;
 }
 
-@media only screen and (min-width:300px ) and (max-width: 766px)  {
+@media only screen and (min-width:300px ) and (max-width: 768px)  {
   .container-actives_cards {
       margin: 1% auto 0;
       display: grid;
@@ -296,34 +179,6 @@ font-weight: 400;
 .title-position {
       font-size: .75rem;
   }
-  .byPosition-title {
-    font-size: 1.25rem;
-    width: fit-content;
-    padding: 0.15rem .5rem;
-  }
-
-  .byPosition-season-title {
-    font-size: 1.25rem;
-    width: fit-content;
-    padding: 0.15rem .5rem;
-  }
-
-  .liga_americana {
-    width: 90%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 5px;
-    background-color: rgba(0, 0, 0, 0.596);
-
-
-  }
-
-
-
-
-
-
 
 .advancedSearchTextbox {
       font-size: .75rem;
@@ -375,8 +230,15 @@ font-weight: 400;
   .paginator_text {
       display: none;
   }
+  .img_picture_box:hover .img_picture_element{
+    transform: none;
+    opacity: 1;
 }
-@media only screen and (min-width:767px ) and (max-width: 1023px)  {
+.card {
+  width: 95%;
+}
+}
+@media only screen and (min-width:769px ) and (max-width: 1023px)  {
   .container-actives_cards {
       margin: 1% auto 0;
       display: grid;

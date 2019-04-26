@@ -97,6 +97,15 @@
 
 
   <div class="container-position-results" *ngIf='!buscando'>
+
+    <ng-container *ngIf="pager.allItems === 0">
+      <h3 class="byPosition-season-title marco" > No hay jugadores en este Equipo.</h3>
+      <div class="boton">
+          <a (click)="back_one_page()"><button class="button btn-primary">Volver a la página anterior</button></a>
+          <div class="bottom_space"></div>
+        </div>
+
+    </ng-container>
     <ng-container *ngIf="!(pager.allItems === 0)">
 
       <div class="container-actives_cards ">
@@ -122,6 +131,8 @@
           </div>
         </ng-container>
       </div>
+
+
       <div class="container paginator">
         <div class="text-center">
           <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">

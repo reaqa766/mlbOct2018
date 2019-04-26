@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PlayersService } from '../../../../services/players.service';
+import { AllplayersService } from '../../../services/allplayers.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../../interfaces/players';
 
 import { PagerService } from '../../../../services/index'
 
+
 @Component({
-  selector: 'app-bio-actives',
-  templateUrl: './bio-actives.component.html',
-  styleUrls: ['./bio-actives.component.css']
+  selector: 'app-novatos',
+  templateUrl: './novatos.component.html',
+  styleUrls: ['./novatos.component.css']
 })
-export class BioActivesComponent implements OnInit {
+export class NovatosComponent implements OnInit {
 
   public players = [];
   groups: any;
@@ -30,24 +31,32 @@ export class BioActivesComponent implements OnInit {
   n10: number = 10;
   public allItems: any[];
 
+  public fecha = new Date();
+  public añoEnCurso = this.fecha.getFullYear();
   // pager object
   pager: any = {};
 
   // paged items
   pagedItems: any[];
 
+  date = new  Date ("2019-03-25");
+
 
   isLoading: boolean;
   jsonPlayers: string;
 
-  constructor(private playerService: PlayersService, private pagerService: PagerService) { }
+  constructor(private playerService: AllplayersService, private pagerService: PagerService) { }
 
 
   ngOnInit() {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    // console.log('allItems', this.allItems);
+    console.log('players', this.players);
+    console.log('allItems', this.allItems);
+    console.log('año', this.añoEnCurso);
+    console.log(this.date);
+
     // console.log('FilterPlayers', this.filterPlayers);
 
 
@@ -74,7 +83,7 @@ export class BioActivesComponent implements OnInit {
          // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
 
          this.players = this.players.filter(player =>
-          player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0)
+          (new Date(player.mlbDebutDate)) > this.date)
 
             // se ordenan por nombre
             .sort(({ fullName: a }, { fullName: b }) => {
