@@ -47,7 +47,7 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('http://www.el-nacional.com/noticias/beisbol/zurdo-jose-quijada-nuevo-grandeliga-venezuela_280192', '_blank');
+          window.open('https://beisbol.estrending.com/2019/04/27/cabrera-bateo-hasta-el-hartazgo-en-el-fin-de-su-dieta-sin-jonrones/', '_blank');
   } else if (this.num === 'video3') {
     window.open('https://beisbol.estrending.com/2019/04/24/en-toronto-estan-preocupados-por-la-salud-de-freddy-galvis/', '_blank');
   } else if (this.num === 'video4') {

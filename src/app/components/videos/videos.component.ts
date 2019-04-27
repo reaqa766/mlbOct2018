@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class VideosComponent implements OnInit {
   location: string;
   num: string;
-  
+
   constructor() { }
 
   ngOnInit() {
@@ -40,13 +40,13 @@ export class VideosComponent implements OnInit {
     if (this.num === 'video1') {
           window.open('https://www.mlb.com/news/freddy-galvis-makes-barehand-catch', '_blank');
   } else if (this.num === 'video2') {
-    window.open('https://www.mlb.com/es/video/bambinazo-de-altuve', '_blank');
+    window.open('https://www.mlb.com/indians/video/carlos-gonzalez-homers-1-on-a-fly-ball-to-right-center-field?t=t114-default-vtp', '_blank');
   } else if (this.num === 'video3') {
     window.open('https://www.mlb.com/es/video/andrelton-simmons-lines-out-to-third-baseman-asdrubal-cabrera', '_blank');
   } else if (this.num === 'video4') {
     window.open('https://www.mlb.com/yankees/news/gleyber-torres-homers-twice-vs-orioles', '_blank');
   } else if (this.num === 'video5') {
-    window.open('https://www.mlb.com/es/video/ramos-nabs-eaton?t=most-popular', '_blank');
+    window.open('https://www.mlb.com/es/video/bambinazo-de-altuve', '_blank');
   } else if (this.num === 'video6') {
     window.open('https://www.mlb.com/es/video/willians-astudillo-homers-1-on-a-fly-ball-to-left-field', '_blank');
   } else if (this.num === 'video7') {

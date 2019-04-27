@@ -134,7 +134,7 @@ export class EstadoVzlaComponent implements OnInit {searchText: string;
       } else if (a === b) {
         return 0;
       }});
-    
+
     this.sumatoria = this.jugadoresFiltrados.length;
     this.tituloEquipo = this.estados[index-1].estado;
     this.estado = this.estados[index-1].url;
