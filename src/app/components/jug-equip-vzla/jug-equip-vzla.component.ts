@@ -12,7 +12,7 @@ export class JugEquipVzlaComponent implements OnInit {
   selectedImg;
   equipos = [ {codigo: 1, url: '../../../../assets/LEONES2.png', equipolvbp: 1, equipo: 'Leones del Caracas'},
     {codigo: 2, url: '../../../../assets/AGUILAS.png', equipolvbp: 2, equipo: 'Aguilas del Zulia'},
-    {codigo: 3, url: '../../../../assets/ARAGUA.png', equipolvbp: 3, equipo: 'Tigres de Aragua'},
+    {codigo: 3, url: '../../../../assets/LOGO ARAGUA.png', equipolvbp: 3, equipo: 'Tigres de Aragua'},
     {codigo: 4, url: '../../../../assets/bravos_.png', equipolvbp: 4, equipo: 'Bravos de Margarita'},
     {codigo: 5, url: '../../../../assets/cardenales.png', equipolvbp: 5, equipo: 'Cardenales de Lara'},
     {codigo: 6, url: '../../../../assets/magallanes_.png', equipolvbp: 6, equipo: 'Navegantes del Magallanes'},
