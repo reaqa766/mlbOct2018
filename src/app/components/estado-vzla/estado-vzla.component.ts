@@ -58,7 +58,7 @@ export class EstadoVzlaComponent implements OnInit {searchText: string;
                 {codigo:602922, nombre: 'Jose Rondon', url: '../../../../assets/602922.jpg', estadoNac: 15, tipoJugador: 1},
                 {codigo:462101, nombre: 'Elvis Andrus', url: '../../../../assets/462101.jpg', estadoNac: 4, tipoJugador: 1},
                 {codigo:465041, nombre: 'Francisco Cervelli', url: '../../../../assets/465041.jpg', estadoNac: 7, tipoJugador: 1},
-                {codigo:491696, nombre: 'Jesus Sucre', url: '../../../../assets/491696.jpg', estadoNac: 19, tipoJugador: 1},
+                // {codigo:491696, nombre: 'Jesus Sucre', url: '../../../../assets/491696.jpg', estadoNac: 19, tipoJugador: 1},
                 {codigo:514888, nombre: 'Jose Altuve', url: '../../../../assets/514888.jpg', estadoNac: 4, tipoJugador: 1},
                 {codigo:606299, nombre: 'Jose Peraza', url: '../../../../assets/606299.jpg', estadoNac: 5, tipoJugador: 1},
                 {codigo:467055, nombre: 'Pablo Sandoval', url: '../../../../assets/467055.jpg', estadoNac: 7, tipoJugador: 1},
