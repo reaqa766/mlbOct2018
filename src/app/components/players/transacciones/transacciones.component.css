@@ -55,6 +55,10 @@ background-color: #343a40;
     box-shadow:         2px 2px 2px  #ccc;
 }
 
+.card-text {
+    text-align: justify;
+}
+
 @media only screen and (max-width : 1024px) {
 
 .container-flex {
