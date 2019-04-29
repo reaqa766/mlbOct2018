@@ -52,6 +52,7 @@ import { LetrasComponent  } from './components/letras/letras.component';
 import { JugEquipVzlaComponent  } from './components/jug-equip-vzla/jug-equip-vzla.component';
 import { EstadoVzlaComponent  } from './components/estado-vzla/estado-vzla.component';
 import { NovatosComponent  } from './components/players/novatos/novatos.component';
+import { QuepasohoyComponent  } from './components/players/quepasohoy/quepasohoy.component';
 
 // import { SharedModule } from '../shared/shared.module'
 
@@ -170,6 +171,8 @@ const routes: Routes = [
   component: EstadoVzlaComponent },
   { path: 'novatos',
   component: NovatosComponent },
+  { path: 'qpasohoy',
+  component: QuepasohoyComponent },
 
   { path: '**',
   component: NotFoundPageComponent}
