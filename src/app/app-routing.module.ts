@@ -53,6 +53,7 @@ import { JugEquipVzlaComponent  } from './components/jug-equip-vzla/jug-equip-vz
 import { EstadoVzlaComponent  } from './components/estado-vzla/estado-vzla.component';
 import { NovatosComponent  } from './components/players/novatos/novatos.component';
 import { QuepasohoyComponent  } from './components/players/quepasohoy/quepasohoy.component';
+import { TransaccionesComponent  } from './components/players/transacciones/transacciones.component';
 
 // import { SharedModule } from '../shared/shared.module'
 
@@ -173,6 +174,8 @@ const routes: Routes = [
   component: NovatosComponent },
   { path: 'qpasohoy',
   component: QuepasohoyComponent },
+  { path: 'transacciones',
+  component: TransaccionesComponent },
 
   { path: '**',
   component: NotFoundPageComponent}
