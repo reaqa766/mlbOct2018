@@ -29,6 +29,15 @@ export class NewsComponent implements OnInit {
   video3() {
     this.num = 'video3';
   }
+  video35() {
+    this.num = 'video35';
+  }
+  video36() {
+    this.num = 'video36';
+  }
+  video37() {
+    this.num = 'video37';
+  }
   video4() {
     this.num = 'video4';
   }
@@ -56,8 +65,14 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://www.sportsvenezuela.com/la-fuerza-de-jesus-aguilar-volvio-a-aparecer-y-jhoulys-chacin-gano-el-tercero-videos/', '_blank');
+          window.open('https://beisbol.estrending.com/2019/05/01/reporte-medico-odubel-astudillo-y-cervelli/', '_blank');
   } else if (this.num === 'video3') {
+    window.open('https://www.mlb.com/es/news/perez-domina-para-guiar-a-twins-sobre-astros/', '_blank');
+  } else if (this.num === 'video35') {
+    window.open('http://www.liderendeportes.com/noticias/baseball/sandy-leon-le-cambio-la-cara-al-pitcheo-de-boston/', '_blank');
+  } else if (this.num === 'video36') {
+    window.open('https://www.sportsvenezuela.com/la-fuerza-de-jesus-aguilar-volvio-a-aparecer-y-jhoulys-chacin-gano-el-tercero-videos/', '_blank');
+  } else if (this.num === 'video37') {
     window.open('https://www.sportsvenezuela.com/felipe-vazquez-se-apunto-su-septimo-rescate-de-la-campana-con-pittsburgh/', '_blank');
   } else if (this.num === 'video30') {
     window.open('https://beisbol.estrending.com/2019/04/29/eduardo-escobar-es-el-jugador-de-la-semana-de-la-liga-nacional/', '_blank');
