@@ -47,6 +47,13 @@ export class LideresComponent implements OnInit {
   avg: any = [];
   filtrado: any;
   venezolanosActivos: any;
+  CALEND2: any;
+  CALEND3: any;
+  teamPlays: any;
+
+  _url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2019&standingsTypes=regularSeason';
+  _url1 = 'https://statsapi.mlb.com/api/v1/schedule?sportId=1,51&date=2019-04-14&gameTypes=E,S,R,A,F,D,L,W&hydrate=team(linescore(matchup,runners))&useLatestGames=false&language=en&leagueId=103,104,420';
+
 
   constructor(private playerService: PlayersService, private pagerService: PagerService, private http: HttpClient) { }
 
@@ -58,11 +65,14 @@ export class LideresComponent implements OnInit {
     // this.jugadores = VenezolanosActivos;
     console.log('jugadores', this.players);
 
+    // this.CALEND3 = await this.http.get(this._url1).toPromise();
+    // this.CALEND2 = await this.http.get(this._url).toPromise();
 
-    // this.jugadores = await this.http.get('../../../../assets/JSONS/VenezolanosActivos.json').toPromise();
-    // this.isLoading = false;
-    // console.log('data', this.data);
-    // console.log('jugador', this.jugadores);
+    // for (let tpos of this.CALEND2.records) {
+    //   // for(let team of tpos.teamRecords){
+    //       this.teamPlays.push({
+    //         record: tpos.gamesPlayed          
+    //       });}
   }
 
   // Convertir el Array de Observables a un Array de Objetos.
@@ -129,6 +139,34 @@ export class LideresComponent implements OnInit {
     return filtrado;
 
   }
+
+  filtroTopCincoAvg(estadistica: string) {
+    let filtrado = [];
+
+    filtrado = this.jugadores.filter(
+      jugador => jugador.stats && jugador.stats[0].splits &&  jugador.stats[0].splits[0].stat.atBats >= (30*3.1)
+      // jugador => jugador.stats && jugador.stats[0].splits &&  jugador.stats[0].splits[0].stat.atBats >= (this.teamPlays.record * 3.1) 
+    ).
+    sort((jugadorA, jugadorB) => {
+
+      const a = Number(jugadorA.stats[0].splits[0].stat[estadistica]);
+      const b = Number(jugadorB.stats[0].splits[0].stat[estadistica]);
+      if (a < b) {
+        return 1;
+      } else if (a > b) {
+        return -1;
+      } else if (a === b) {
+        return 0;
+      }
+    })
+    // Se acaba el sort por la estadistica deseada => se retorna un array
+    .slice(0, 5);
+    // console.log('filtrado', filtrado);
+
+    return filtrado;
+
+  }
+
 
   setPage(page: number) {
     // get pager object from service

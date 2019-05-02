@@ -38,7 +38,7 @@
     </thead>
     <!-- <table class="table  "> -->
       <tbody class="table-header2">
-          <tr *ngFor="let jugador of filtroTopCinco('avg')">
+          <tr *ngFor="let jugador of filtroTopCincoAvg('avg')">
             <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
             <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
             <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.hits}}</td>
