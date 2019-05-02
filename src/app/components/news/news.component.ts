@@ -17,6 +17,15 @@ export class NewsComponent implements OnInit {
   video2() {
     this.num = 'video2';
   }
+  video30() {
+    this.num = 'video30';
+  }
+  video32() {
+    this.num = 'video32';
+  }
+  video33() {
+    this.num = 'video32';
+  }
   video3() {
     this.num = 'video3';
   }
@@ -47,9 +56,15 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://beisbol.estrending.com/2019/04/29/chirinos-y-carrasco-libraron-una-guerra-fratricida/', '_blank');
+          window.open('https://www.sportsvenezuela.com/la-fuerza-de-jesus-aguilar-volvio-a-aparecer-y-jhoulys-chacin-gano-el-tercero-videos/', '_blank');
   } else if (this.num === 'video3') {
-    window.open('https://beisbol.estrending.com/2019/04/24/en-toronto-estan-preocupados-por-la-salud-de-freddy-galvis/', '_blank');
+    window.open('https://www.sportsvenezuela.com/felipe-vazquez-se-apunto-su-septimo-rescate-de-la-campana-con-pittsburgh/', '_blank');
+  } else if (this.num === 'video30') {
+    window.open('https://beisbol.estrending.com/2019/04/29/eduardo-escobar-es-el-jugador-de-la-semana-de-la-liga-nacional/', '_blank');
+  } else if (this.num === 'video32') {
+    window.open('https://noticiassin.com/el-venezolano-aguilar-brilla-en-ausencia-de-yelich-y-ganan-cerveceros/', '_blank');
+  } else if (this.num === 'video33') {
+    window.open('https://beisbol.estrending.com/2019/04/29/chirinos-y-carrasco-libraron-una-guerra-fratricida/', '_blank');
   } else if (this.num === 'video4') {
     window.open('https://www.sportsvenezuela.com/cuatro-venezolanos-guiaron-paliza-de-arizona-sobre-los-piratas-pittsburgh/', '_blank');
   } else if (this.num === 'video5') {
