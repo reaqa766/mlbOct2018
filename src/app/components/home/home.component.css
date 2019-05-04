@@ -144,17 +144,35 @@
 
 }
 .text-box {
-    color: antiquewhite;
+    color: rgb(0, 0, 0);
     font-size: .75rem;
-    font-weight: 400;
+    font-weight: 800;
     text-align: justify;
     padding: 0 0.5rem;
+    margin-bottom: 0;
 
 }
 
 .ver-mas {
-    color: rgb(255, 255, 255);
-    font-size: .9rem;
+  color: darkred;
+  font-size: .9rem;
+  font-weight: 800;
+
+}
+.box {
+  height: fit-content;
+  background-color: #fff !important;
+}
+.badge {
+  width: fit-content;
+  padding: .5em .71em;
+  font-size: .85em;
+  margin-left: 1%;
+}
+
+.RLink {
+  color: black !important;
+  cursor: pointer;
 
 }
 
@@ -238,9 +256,15 @@
 }
 
 .ver-mas {
-    color: rgb(255, 255, 255);
-    font-size: 1.2rem;
+  color: darkred;
+  font-size: 1.2rem;
+
 }
+.badge {
+  font-size: 1.25em;
+}
+
+
 }
   /* @media only screen and (max-width: 2520px) and (min-width: 1441px)  {
 
