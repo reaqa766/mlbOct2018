@@ -25,6 +25,15 @@ export class VideosComponent implements OnInit {
   video4() {
     this.num = 'video4';
   }
+  video21() {
+    this.num = 'video21';
+  }
+  video31() {
+    this.num = 'video31';
+  }
+  video41() {
+    this.num = 'video41';
+  }
   video5() {
     this.num = 'video5';
   }
@@ -38,7 +47,13 @@ export class VideosComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video1') {
-          window.open('https://www.mlb.com/video/gleyber-torres-homers-5-on-a-fly-ball-to-left-center-field-gary-sanchez-scores', '_blank');
+          window.open('https://www.mlb.com/es/news/odor-cabrera-lideran-paliza-de-texas-vs-toronto', '_blank');
+  } else if (this.num === 'video2') {
+    window.open('https://www.mlb.com/video/cabrera-s-stellar-game-vs-jays', '_blank');
+  } else if (this.num === 'video3') {
+    window.open('https://www.mlb.com/video/prado-s-backhanded-stop', '_blank');
+  } else if (this.num === 'video4') {
+    window.open('https://www.mlb.com/video/zack-greinke-in-play-run-s-to-german-marquez', '_blank');
   } else if (this.num === 'video2') {
     window.open('https://www.mlb.com/news/freddy-galvis-makes-barehand-catch', '_blank');
   } else if (this.num === 'video3') {
