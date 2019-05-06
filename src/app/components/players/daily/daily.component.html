@@ -4,13 +4,16 @@
 <br>
   <h3 class="daily-title">Temporada Regular 2019</h3>
 </div>
-<p class="title-position">{{dia | date }} </p>
+<!-- <p class="title-position">{{dia | date }} </p> -->
 
 <!-- LOADER -->
 <div class="spiner"  *ngIf="!allItems">
   <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
   <p class="spiner_load">CARGANDO</p>
 </div>
+
+<!-- <div *ngIf="allItems">
+  <input #date_Picker [(ngModel)]="searchDate" type="date" (input)="onSearchDate()" placeholder="Escoja la fecha.."  value="" class="advancedSearchDatetbox"> -->
 
 <div *ngIf="allItems">
   <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchTextbox">
