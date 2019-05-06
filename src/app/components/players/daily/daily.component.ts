@@ -19,7 +19,7 @@ export class DailyComponent implements OnInit {
   selectedGroup: any;
   elarray: any;
   datesN = 10;
-  searchDate: Date;
+  searchText: string;
   playerAuxList = [];
   counter: number;
   n: number;
@@ -95,14 +95,13 @@ getPlayersMap() {
 
   }
 
-  onSearchDate() {
-    if (this.searchDate) {
+  onSearchChange() {
+    if (this.searchText) {
       this.allItems = this.players.filter(player =>
-        player.stats[0].splits[player.stats[0].splits.length].date.includes(this.searchDate));
-        // player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchDate) ||
-        // (player.fullName && player.fullName.toLowerCase().includes(this.searchDate)) ||
-        // (player.nickName && player.nickName.toLowerCase().includes(this.searchDate))  ||
-        // player.mlbDebutDate.includes(this.searchDate));
+        player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
+        (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
+        (player.nickName && player.nickName.toLowerCase().includes(this.searchText))  ||
+        player.mlbDebutDate.includes(this.searchText));
         this.setPage(this.pager.currentPage);
       } else {
           this.allItems = this.players;
