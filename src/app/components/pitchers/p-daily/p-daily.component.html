@@ -14,6 +14,11 @@
 </div>
 
 <div *ngIf="allItems">
+  <input #date_Picker type="date" (input)="onSearchDate($event)" placeholder="Escoja la fecha.."  value="" class="advancedSearchDatetbox">
+</div>
+
+
+<div *ngIf="allItems">
 <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Pitcher..." class="advancedSearchTextbox">
 <div *ngIf="!allItems[0] && searchText" class="error_search d-flex justify-content-center">
   <h1> '{{ searchText }}' no existe, colocar solo nombres o apellidos</h1>
@@ -50,38 +55,38 @@
           <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
             <a routerLink="/pitcherinfo/{{player.id}}" class="link_player"><td class="link_player" class="td1" style="width: 10%;">{{player.fullName}}</td></a>
             <!-- <td class="td2" style="width: 3%;">{{player.id}}</td> -->
-            <!-- <td class="td2" style="width:12%;">{{player.stats[0].splits[player.stats[0].splits.length-1].team.name }}</td> -->
-            <!-- <td class="td3" style="width:12%;">{{player.stats[0].splits[player.stats[0].splits.length-1].opponent.name}}</td> -->
-            <td class="td4" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.wins}}</td>
-            <td class="td5" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.losses}}</td>
-            <td class="td6" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.saves}}</td>
-            <td class="td7" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.era}}</td>
-            <td class="td7A" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.inningsPitched}}</td>
-            <td class="td8" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.earnedRuns}}</td>
-            <td class="td9" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.runs}}</td>
-            <td class="td11" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.hits}}</td>
-            <td class="td10" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.strikeOuts}}</td>
-            <td class="td11" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.baseOnBalls}}</td>
-            <td class="td12" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.homeRuns}}</td>
+            <!-- <td class="td2" style="width:12%;">{{player.stats[0].splits[player.indexStatDate].team.name }}</td> -->
+            <!-- <td class="td3" style="width:12%;">{{player.stats[0].splits[player.indexStatDate].opponent.name}}</td> -->
+            <td class="td4" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.wins}}</td>
+            <td class="td5" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.losses}}</td>
+            <td class="td6" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.saves}}</td>
+            <td class="td7" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.era}}</td>
+            <td class="td7A" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.inningsPitched}}</td>
+            <td class="td8" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.earnedRuns}}</td>
+            <td class="td9" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.runs}}</td>
+            <td class="td11" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.hits}}</td>
+            <td class="td10" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.strikeOuts}}</td>
+            <td class="td11" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.baseOnBalls}}</td>
+            <td class="td12" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.homeRuns}}</td>
           </tr>
         </ng-container>
         <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
           <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*7)">
             <a routerLink="/pitcherinfo/{{player.id}}" class="link_player"><td class="link_player" class="td1" style="width: 10%;">{{player.fullName}}</td></a>
             <!-- <td class="td2" style="width: 3%;">{{player.id}}</td> -->
-            <!-- <td class="td2" style="width:12%;">{{player.stats[0].splits[player.stats[0].splits.length-1].team.name }}</td> -->
-            <!-- <td class="td3" style="width:12%;">{{player.stats[0].splits[player.stats[0].splits.length-1].opponent.name}}</td> -->
-            <td class="td4" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.wins}}</td>
-            <td class="td5" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.losses}}</td>
-            <td class="td6" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.saves}}</td>
-            <td class="td7" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.era}}</td>
-            <td class="td7A" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.inningsPitched}}</td>
-            <td class="td8" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.earnedRuns}}</td>
-            <td class="td9" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.runs}}</td>
-            <td class="td11" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.hits}}</td>
-            <td class="td10" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.strikeOuts}}</td>
-            <td class="td11" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.baseOnBalls}}</td>
-            <td class="td12" style="width: 3%;">{{player.stats[0].splits[player.stats[0].splits.length-1].stat.homeRuns}}</td>
+            <!-- <td class="td2" style="width:12%;">{{player.stats[0].splits[player.indexStatDate].team.name }}</td> -->
+            <!-- <td class="td3" style="width:12%;">{{player.stats[0].splits[player.indexStatDate].opponent.name}}</td> -->
+            <td class="td4" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.wins}}</td>
+            <td class="td5" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.losses}}</td>
+            <td class="td6" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.saves}}</td>
+            <td class="td7" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.era}}</td>
+            <td class="td7A" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.inningsPitched}}</td>
+            <td class="td8" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.earnedRuns}}</td>
+            <td class="td9" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.runs}}</td>
+            <td class="td11" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.hits}}</td>
+            <td class="td10" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.strikeOuts}}</td>
+            <td class="td11" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.baseOnBalls}}</td>
+            <td class="td12" style="width: 3%;">{{player.stats[0].splits[player.indexStatDate].stat.homeRuns}}</td>
 
           </tr>
         </ng-container>
