@@ -14,15 +14,22 @@
 .espacioInferior {
     margin-bottom: 1rem;
   }
+  .page-link {
+color: black !important;
+  }
 
-
+  .seleccion {
+    color: antiquewhite;
+    padding: 0 0.5em .4em;
+    text-shadow: 2px 2px 8px #111;
+  }
 
 
 .advancedSearchDatetbox{
     color: rgb(2, 1, 0);
     font-size: 0.75rem;
     /* font-weight: bold; */
-    margin: 1% 0 2% 1%;
+    /* margin: 1% 0 2% 1%; */
     width: fit-content;
     border-radius: 6px;
     }
@@ -52,13 +59,21 @@
     text-decoration:none;
     color: antiquewhite;
 }
+.title-positionA {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: .5rem 0 .5rem .5rem;
+
+}
 
 .title-position{
-    color: antiquewhite;
-    font-size: 0.85rem;
+  color: white;
+  font-size: 1rem;
     font-weight: bold;
-    margin: 5% 0  0 8%;
-    }
+    margin: .5rem 0 .5rem .5rem;
+      }
+
 .player_stats {
     width: 100%;
     display: table;
@@ -157,7 +172,7 @@ th {
     color: rgb(2, 1, 0);
     font-size: 0.75rem;
     /* font-weight: bold; */
-    margin: 2% 0 2% 2%;
+    /* margin: 2% 0 2% 2%; */
     }
 
 .error_search {
@@ -182,11 +197,11 @@ th {
 }
 
 .title-position{
-    color: antiquewhite;
-    font-size: 1rem;
+  color: white;
+  font-size: 1rem;
     font-weight: bold;
-    margin: 5% 0  0 2%;
-    }
+    margin: .5rem 0 .5rem .5rem;
+      }
 .player_stats {
     width: 100%;
     display: table;
@@ -272,7 +287,7 @@ th {
     color: rgb(2, 1, 0);
     font-size: 0.75rem;
     /* font-weight: bold; */
-    margin: 2% 0 2% 2%;
+    /* margin: 2% 0 2% 2%; */
     }
 
 .error_search {
@@ -297,11 +312,11 @@ th {
 }
 
 .title-position{
-    color: antiquewhite;
+    color: white;
     font-size: 1rem;
     font-weight: bold;
-    margin: 2% 0  0 2%;
-    }
+    margin: .5rem 0 .5rem .5rem;
+      }
 .player_stats {
     width: 100%;
     display: table;
@@ -396,7 +411,7 @@ th {
         color: rgb(2, 1, 0);
         font-size: 0.75rem;
         /* font-weight: bold; */
-        margin: 2% 0 2% 2%;
+        /* margin: 2% 0 2% 2%; */
         }
 
     .error_search {
@@ -421,11 +436,11 @@ th {
     }
 
     .title-position{
-        color: antiquewhite;
-        font-size: 1rem;
+      color: white;
+      font-size: 1rem;
         font-weight: bold;
-        margin: 2% 0  0 2%;
-        }
+        margin: .5rem 0 .5rem .5rem;
+            }
     .player_stats {
         width: 100%;
         display: table;
@@ -522,7 +537,7 @@ th {
             color: rgb(2, 1, 0);
             font-size: 1em;
             /* font-weight: bold; */
-            margin: 0 0 1% 2%;
+            /* margin: 0 0 1% 2%; */
             }
 
         .error_search {
@@ -547,11 +562,11 @@ th {
         }
 
         .title-position{
-            color: antiquewhite;
-            font-size: 1.5rem;
+          color: white;
+          font-size: 1rem;
             font-weight: bold;
-            margin: 0 0  0 2%;
-            }
+            margin: .5rem 0 .5rem .5rem;
+                    }
         .player_stats {
             width: 100%;
             display: table;
@@ -610,7 +625,7 @@ th {
     color: rgb(2, 1, 0);
     font-size: 0.75rem;
     /* font-weight: bold; */
-    margin: 2% 0 2% 2%;
+    /* margin: 2% 0 2% 2%; */
     }
 
 .error_search {
@@ -635,11 +650,11 @@ th {
 }
 
 .title-position{
-    color: antiquewhite;
-    font-size: 1rem;
+  color: white;
+  font-size: 1rem;
     font-weight: bold;
-    margin: 2% 0  0 2%;
-    }
+    margin: .5rem 0 .5rem .5rem;
+      }
 .player_stats {
     width: 100%;
     display: table;
@@ -734,7 +749,7 @@ th {
         color: rgb(2, 1, 0);
         font-size: 1em;
         /* font-weight: bold; */
-        margin: 1% 0 1% 2%;
+        /* margin: 1% 0 1% 2%; */
         }
 
     .error_search {
@@ -769,11 +784,11 @@ th {
     }
 
     .title-position{
-        color: antiquewhite;
-        font-size: 1.85rem;
+      color: white;
+      font-size: 1rem;
         font-weight: bold;
-        margin: 2% 0  0 2%;
-        }
+        margin: .5rem 0 .5rem .5rem;
+            }
     .player_stats {
         width: 100%;
         display: table;
@@ -821,7 +836,7 @@ th {
         color: rgb(2, 1, 0);
         font-size: 1em;
         /* font-weight: bold; */
-        margin: 1% 0 1% 2%;
+        /* margin: 1% 0 1% 2%; */
         }
 
     .error_search {
@@ -846,11 +861,11 @@ th {
     }
 
     .title-position{
-        color: antiquewhite;
-        font-size: 3rem;
+      color: white;
+      font-size: 1rem;
         font-weight: bold;
-        margin: 2% 0  0 2%;
-        }
+        margin: .5rem 0 .5rem .5rem;
+            }
     .player_stats {
         width: 100%;
         display: table;

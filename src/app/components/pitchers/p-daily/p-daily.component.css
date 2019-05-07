@@ -27,6 +27,14 @@
 .espacioInferior {
   margin-bottom: 1rem;
 }
+.title-positionA {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: .5rem 0 .5rem .5rem;
+
+}
+
 
 
 .advancedSearchTextbox{
@@ -56,13 +64,27 @@
   text-decoration:none;
   color: antiquewhite;
 }
+.seleccion {
+  color: antiquewhite;
+  padding: 0 0.5em .4em;
+  text-shadow: 2px 2px 8px #111;
+}
+.advancedSearchDatetbox{
+  color: rgb(2, 1, 0);
+  font-size: 0.75rem;
+  /* font-weight: bold; */
+  /* margin: 1% 0 2% 1%; */
+  width: fit-content;
+  border-radius: 6px;
+  }
+
 
 .title-position{
-  color: antiquewhite;
-  font-size: 0.85rem;
-  font-weight: bold;
-  margin: 5% 0  0 8%;
-  }
+  color: white;
+  font-size: 1rem;
+    font-weight: bold;
+    margin: .5rem 0 .5rem .5rem;
+      }
 .player_stats {
   width: 100%;
   display: table;
@@ -182,11 +204,11 @@ th {
 }
 
 .title-position{
-  color: antiquewhite;
+  color: white;
   font-size: 1rem;
-  font-weight: bold;
-  margin: 5% 0  0 2%;
-  }
+    font-weight: bold;
+    margin: .5rem 0 .5rem .5rem;
+      }
 .player_stats {
   width: 100%;
   display: table;
@@ -297,11 +319,11 @@ th {
 }
 
 .title-position{
-  color: antiquewhite;
+  color: white;
   font-size: 1rem;
-  font-weight: bold;
-  margin: 2% 0  0 2%;
-  }
+    font-weight: bold;
+    margin: .5rem 0 .5rem .5rem;
+      }
 .player_stats {
   width: 100%;
   display: table;
@@ -421,12 +443,12 @@ th {
   }
 
   .title-position{
-      color: antiquewhite;
-      font-size: 1rem;
+    color: white;
+    font-size: 1rem;
       font-weight: bold;
-      margin: 2% 0  0 2%;
-      }
-  .player_stats {
+      margin: .5rem 0 .5rem .5rem;
+        }
+    .player_stats {
       width: 100%;
       display: table;
   }
@@ -547,12 +569,12 @@ th {
       }
 
       .title-position{
-          color: antiquewhite;
-          font-size: 1.5rem;
+        color: white;
+        font-size: 1rem;
           font-weight: bold;
-          margin: 0 0  0 2%;
-          }
-      .player_stats {
+          margin: .5rem 0 .5rem .5rem;
+            }
+            .player_stats {
           width: 100%;
           display: table;
       }
@@ -635,11 +657,11 @@ th {
 }
 
 .title-position{
-  color: antiquewhite;
+  color: white;
   font-size: 1rem;
-  font-weight: bold;
-  margin: 2% 0  0 2%;
-  }
+    font-weight: bold;
+    margin: .5rem 0 .5rem .5rem;
+      }
 .player_stats {
   width: 100%;
   display: table;
@@ -783,12 +805,12 @@ th {
   }
 
   .title-position{
-      color: antiquewhite;
-      font-size: 1.85rem;
+    color: white;
+    font-size: 1rem;
       font-weight: bold;
-      margin: 2% 0  0 2%;
-      }
-  .player_stats {
+      margin: .5rem 0 .5rem .5rem;
+        }
+    .player_stats {
       width: 100%;
       display: table;
   }
@@ -837,7 +859,7 @@ th {
   .espacioInferior {
     margin-bottom: 1rem;
   }
-  
+
 
   .advancedSearchTextbox{
       color: rgb(2, 1, 0);
@@ -868,12 +890,12 @@ th {
   }
 
   .title-position{
-      color: antiquewhite;
-      font-size: 3rem;
+    color: white;
+    font-size: 1rem;
       font-weight: bold;
-      margin: 2% 0  0 2%;
-      }
-  .player_stats {
+      margin: .5rem 0 .5rem .5rem;
+        }
+    .player_stats {
       width: 100%;
       display: table;
   }

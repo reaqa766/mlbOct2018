@@ -115,7 +115,7 @@ getPlayersMap() {
   }
 
   onSearchDate(fecha) {
-    console.log(fecha.srcElement.value);
+    // console.log(fecha.srcElement.value);
     this.dia = fecha.srcElement.value;
     this.getPlayersMap();
 }
