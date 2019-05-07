@@ -120,11 +120,6 @@ getPlayersMap() {
     this.getPlayersMap();
 }
 
-
-
-
-
-
   onSearchChange() {
     if (this.searchText) {
       this.allItems = this.players.filter(player =>
