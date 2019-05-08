@@ -74,43 +74,43 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://www.mlb.com/es/news/aficion-venezolana-se-hace-sentir-en-el-palacio-sultan', '_blank');
+          window.open('http://www.eluniversal.com/deportes/39419/jose-altuve-dono-500000-dolares-a-iniciativas-de-impacto-social-de-empresas-polar', '_blank');
   } else if (this.num === 'video3') {
-    window.open('https://www.mlb.com/es/news/nino-llora-al-conocer-a-jose-altuve', '_blank');
+    window.open('https://www.mlb.com/es/news/aficion-venezolana-se-hace-sentir-en-el-palacio-sultan', '_blank');
   } else if (this.num === 'video35') {
-    window.open('https://beisbol.estrending.com/2019/05/05/ronald-acuna-fuera-del-lineup-por-problemas-fisicos/', '_blank');
+    window.open('https://www.mlb.com/es/news/que-pasa-con-el-poder-de-miguel-cabrera', '_blank');
   } else if (this.num === 'video36') {
-    window.open('https://www.sportsvenezuela.com/ender-inciarte-dio-el-batazo-decisivo-en-el-triunfo-de-atlantavideo/', '_blank');
+    window.open('https://beisbol.estrending.com/2019/05/07/otro-militante-menos-en-california-yangervis-solarte-fue-puesto-en-asignacion-por-los-gigantes/', '_blank');
   } else if (this.num === 'video311') {
-    window.open('https://www.mlb.com/es/news/perez-domina-para-guiar-a-twins-sobre-astros/', '_blank');
+    window.open('https://www.mlb.com/es/news/nino-llora-al-conocer-a-jose-altuve', '_blank');
   } else if (this.num === 'video351') {
-    window.open('http://www.liderendeportes.com/noticias/baseball/sandy-leon-le-cambio-la-cara-al-pitcheo-de-boston/', '_blank');
+    window.open('https://beisbol.estrending.com/2019/05/05/ronald-acuna-fuera-del-lineup-por-problemas-fisicos/', '_blank');
   } else if (this.num === 'video361') {
-    window.open('https://www.sportsvenezuela.com/la-fuerza-de-jesus-aguilar-volvio-a-aparecer-y-jhoulys-chacin-gano-el-tercero-videos/', '_blank');
+    window.open('https://www.sportsvenezuela.com/ender-inciarte-dio-el-batazo-decisivo-en-el-triunfo-de-atlantavideo/', '_blank');
   } else if (this.num === 'video37') {
-    window.open('https://www.sportsvenezuela.com/felipe-vazquez-se-apunto-su-septimo-rescate-de-la-campana-con-pittsburgh/', '_blank');
+    window.open('https://www.mlb.com/es/news/perez-domina-para-guiar-a-twins-sobre-astros/', '_blank');
   } else if (this.num === 'video30') {
-    window.open('https://beisbol.estrending.com/2019/04/29/eduardo-escobar-es-el-jugador-de-la-semana-de-la-liga-nacional/', '_blank');
+    window.open('http://www.liderendeportes.com/noticias/baseball/sandy-leon-le-cambio-la-cara-al-pitcheo-de-boston/', '_blank');
   } else if (this.num === 'video32') {
-    window.open('https://noticiassin.com/el-venezolano-aguilar-brilla-en-ausencia-de-yelich-y-ganan-cerveceros/', '_blank');
+    window.open('https://www.sportsvenezuela.com/la-fuerza-de-jesus-aguilar-volvio-a-aparecer-y-jhoulys-chacin-gano-el-tercero-videos/', '_blank');
   } else if (this.num === 'video33') {
-    window.open('https://beisbol.estrending.com/2019/04/29/chirinos-y-carrasco-libraron-una-guerra-fratricida/', '_blank');
+    window.open('https://www.sportsvenezuela.com/felipe-vazquez-se-apunto-su-septimo-rescate-de-la-campana-con-pittsburgh/', '_blank');
   } else if (this.num === 'video4') {
-    window.open('https://www.sportsvenezuela.com/cuatro-venezolanos-guiaron-paliza-de-arizona-sobre-los-piratas-pittsburgh/', '_blank');
+    window.open('https://beisbol.estrending.com/2019/04/29/eduardo-escobar-es-el-jugador-de-la-semana-de-la-liga-nacional/', '_blank');
   } else if (this.num === 'video5') {
-    window.open('http://www.el-nacional.com/noticias/beisbol/boston-sube-las-mayores-prospecto-guayanes-darwinzon-hernandez_280193', '_blank');
+    window.open('https://noticiassin.com/el-venezolano-aguilar-brilla-en-ausencia-de-yelich-y-ganan-cerveceros/', '_blank');
   } else if (this.num === 'video31') {
-    window.open('https://beisbol.estrending.com/2019/04/10/altuve-lleva-cuatro-jonrones-en-tres-dias/', '_blank');
+    window.open('https://beisbol.estrending.com/2019/04/29/chirinos-y-carrasco-libraron-una-guerra-fratricida/', '_blank');
   } else if (this.num === 'video41') {
-    window.open('https://beisbol.estrending.com/2019/04/12/con-los-ganchos-hasta-cuando-llamaremos-cafecito-a-jose-martinez/', '_blank');
+    window.open('https://www.sportsvenezuela.com/cuatro-venezolanos-guiaron-paliza-de-arizona-sobre-los-piratas-pittsburgh/', '_blank');
   } else if (this.num === 'video51') {
-    window.open('https://www.sportsvenezuela.com/acuna-salio-de-las-sombras-del-ponche-a-la-luz-del-triunfovideo/', '_blank');
+    window.open('http://www.el-nacional.com/noticias/beisbol/boston-sube-las-mayores-prospecto-guayanes-darwinzon-hernandez_280193', '_blank');
   } else if (this.num === 'video6') {
-    window.open('https://www.mlb.com/news/jose-martinez-filling-void-in-cardinals-lineup', '_blank');
+    window.open('https://beisbol.estrending.com/2019/04/10/altuve-lleva-cuatro-jonrones-en-tres-dias/', '_blank');
   } else if (this.num === 'video7') {
-    window.open('http://www.elsoldemargarita.com.ve/posts/post/id:218125/Acu%C3%B1a-jonronea-y-Bravos-salen-airosos-en-Denver', '_blank');
+    window.open('https://beisbol.estrending.com/2019/04/12/con-los-ganchos-hasta-cuando-llamaremos-cafecito-a-jose-martinez/', '_blank');
   } else if (this.num === 'video8') {
-    window.open('https://www.albat.com/lasmayores/Gleyber-Torres-empata-marca-del-legendario-Yankee-Joe-DiMaggio--20190404-0023.html', '_blank');
+    window.open('https://www.sportsvenezuela.com/acuna-salio-de-las-sombras-del-ponche-a-la-luz-del-triunfovideo/', '_blank');
   }
   }
 

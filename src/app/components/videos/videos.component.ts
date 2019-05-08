@@ -47,7 +47,7 @@ export class VideosComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video1') {
-          window.open('https://www.mlb.com/es/news/odor-cabrera-lideran-paliza-de-texas-vs-toronto', '_blank');
+          window.open('https://www.mlb.com/video/joey-gallo-strikes-out-swinging?t=got-your-back', '_blank');
   } else if (this.num === 'video2') {
     window.open('https://www.mlb.com/video/cabrera-s-stellar-game-vs-jays', '_blank');
   } else if (this.num === 'video3') {
