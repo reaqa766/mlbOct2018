@@ -15,6 +15,7 @@ import { PagerService } from '../../../../services/index'
 })
 export class DailyComponent implements OnInit {
   public players = [];
+  public playersSort = [];
   groups: any;
   selectedGroup: any;
   elarray: any;
@@ -35,6 +36,7 @@ export class DailyComponent implements OnInit {
 
   // paged items
   pagedItems: any[];
+  fechaHoy: Date;
 
 
   isLoading: boolean;
@@ -55,6 +57,9 @@ export class DailyComponent implements OnInit {
 // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json)
 // y colocarlos en un nuevo Array
 getPlayersMap() {
+  this.players = [];
+  this.allItems = [];
+  this.setPage(1);
   const InfoObsPlayer = this.playerService.getAllPlayersDaily2();
   let index = 0;
   for (let obs of InfoObsPlayer) {
@@ -62,15 +67,26 @@ getPlayersMap() {
       this.players.push(res);
 
       if ((InfoObsPlayer.length - 1) === index) {
+
         this.players = this.players.map(player => {
           const newPlayer: Players = {};
           Object.assign(newPlayer, player.people[0]);
           return newPlayer;
         });
+        console.log('Original players: ', this.players);
         // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
-        this.players = this.players.filter(player =>
-           player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0
-         && player.stats[0].splits[player.stats[0].splits.length-1].date === this.dia)
+        this.players = this.players.filter(player =>{
+
+          if(player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0){
+            for(let i = 0; i < player.stats[0].splits.length; i++){
+              if(player.stats[0].splits[i].date === this.dia){
+                player.indexStatDate = i;
+                return true;
+              }
+            }
+            return false;
+          }
+        })
         // se ordenan por nombre
         .sort(({fullName: a}, {fullName: b}) => {
           if (a > b) {
@@ -82,18 +98,27 @@ getPlayersMap() {
           }
 
         });
-       
+        // console.log('This players final: ', this.players);
+
+
+
         this.allItems = this.players;
         this.setPage(1);
         this.isLoading = false;
+        // console.log('players', this.players);
         }
         index++;
-        console.log('gamePlays', this.gamePlays);
-        
+
     });
   }
 
   }
+
+  onSearchDate(fecha) {
+    // console.log(fecha.srcElement.value);
+    this.dia = fecha.srcElement.value;
+    this.getPlayersMap();
+}
 
   onSearchChange() {
     if (this.searchText) {

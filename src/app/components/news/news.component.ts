@@ -35,6 +35,15 @@ export class NewsComponent implements OnInit {
   video36() {
     this.num = 'video36';
   }
+  video311() {
+    this.num = 'video311';
+  }
+  video351() {
+    this.num = 'video351';
+  }
+  video361() {
+    this.num = 'video361';
+  }
   video37() {
     this.num = 'video37';
   }
@@ -65,12 +74,18 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://beisbol.estrending.com/2019/05/01/reporte-medico-odubel-astudillo-y-cervelli/', '_blank');
+          window.open('https://www.mlb.com/es/news/aficion-venezolana-se-hace-sentir-en-el-palacio-sultan', '_blank');
   } else if (this.num === 'video3') {
-    window.open('https://www.mlb.com/es/news/perez-domina-para-guiar-a-twins-sobre-astros/', '_blank');
+    window.open('https://www.mlb.com/es/news/nino-llora-al-conocer-a-jose-altuve', '_blank');
   } else if (this.num === 'video35') {
-    window.open('http://www.liderendeportes.com/noticias/baseball/sandy-leon-le-cambio-la-cara-al-pitcheo-de-boston/', '_blank');
+    window.open('https://beisbol.estrending.com/2019/05/05/ronald-acuna-fuera-del-lineup-por-problemas-fisicos/', '_blank');
   } else if (this.num === 'video36') {
+    window.open('https://www.sportsvenezuela.com/ender-inciarte-dio-el-batazo-decisivo-en-el-triunfo-de-atlantavideo/', '_blank');
+  } else if (this.num === 'video311') {
+    window.open('https://www.mlb.com/es/news/perez-domina-para-guiar-a-twins-sobre-astros/', '_blank');
+  } else if (this.num === 'video351') {
+    window.open('http://www.liderendeportes.com/noticias/baseball/sandy-leon-le-cambio-la-cara-al-pitcheo-de-boston/', '_blank');
+  } else if (this.num === 'video361') {
     window.open('https://www.sportsvenezuela.com/la-fuerza-de-jesus-aguilar-volvio-a-aparecer-y-jhoulys-chacin-gano-el-tercero-videos/', '_blank');
   } else if (this.num === 'video37') {
     window.open('https://www.sportsvenezuela.com/felipe-vazquez-se-apunto-su-septimo-rescate-de-la-campana-con-pittsburgh/', '_blank');

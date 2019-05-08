@@ -71,7 +71,7 @@ export class LideresComponent implements OnInit {
     // for (let tpos of this.CALEND2.records) {
     //   // for(let team of tpos.teamRecords){
     //       this.teamPlays.push({
-    //         record: tpos.gamesPlayed          
+    //         record: tpos.gamesPlayed
     //       });}
   }
 
@@ -144,8 +144,8 @@ export class LideresComponent implements OnInit {
     let filtrado = [];
 
     filtrado = this.jugadores.filter(
-      jugador => jugador.stats && jugador.stats[0].splits &&  jugador.stats[0].splits[0].stat.atBats >= (30*3.1)
-      // jugador => jugador.stats && jugador.stats[0].splits &&  jugador.stats[0].splits[0].stat.atBats >= (this.teamPlays.record * 3.1) 
+      jugador => jugador.stats && jugador.stats[0].splits &&  jugador.stats[0].splits[0].stat.atBats >= (33*3.1)
+      // jugador => jugador.stats && jugador.stats[0].splits &&  jugador.stats[0].splits[0].stat.atBats >= (this.teamPlays.record * 3.1)
     ).
     sort((jugadorA, jugadorB) => {
 
