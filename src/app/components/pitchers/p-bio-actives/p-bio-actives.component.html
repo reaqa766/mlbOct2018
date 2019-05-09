@@ -3,7 +3,6 @@
 </div>
 
 <p class="title-position"> Temporada Regular 2019 </p>
-<!-- <p class="title-position"> TEMP. 2019 </p> -->
 
 <!--LOADER -->
 <div *ngIf="!allItems">
@@ -28,19 +27,6 @@
           <div class="card-body">
             <h5 class="card-title">{{player.fullName}}</h5>
           </div>
-          <!-- <ul class="list-group list-group-flush">
-            <li class="list-group-item"><strong> Equipo:</strong> {{player.stats[0].splits[0].team.name}}</li>
-            <li class="list-group-item"><strong>L. Nac.:</strong> {{player.birthCity}}</li>
-            <li class="list-group-item"><strong>F. Nac.:</strong> {{player.birthDate}} </li>
-            <li class="list-group-item"><strong> Edad:</strong> {{player.currentAge}}</li>
-            <li class="list-group-item"><strong>Mote:</strong> {{player.nickName}}</li>
-            <li class="list-group-item"><strong>F. Debut:</strong> {{player.mlbDebutDate}}</li>
-            <li class="list-group-item"><strong>Numero:</strong> {{player.primaryNumber}}</li>
-            <li class="list-group-item"><strong>Posición</strong> {{player.primaryPosition.name}}</li>
-          </ul> -->
-          <!-- <div class="card-body">
-            <a routerLink="/pitcherinfo/{{player.id}}" class="card-link">Ver Biografía</a>
-          </div> -->
         </div>
       </ng-container>
 
@@ -50,16 +36,6 @@
           <div class="card-body">
             <h5 class="card-title">{{player.fullName}} </h5>
           </div>
-          <!-- <ul class="list-group list-group-flush">
-            <li class="list-group-item"><strong> Equipo:</strong> {{player.stats[0].splits[0].team.name}}</li>
-            <li class="list-group-item"><strong>L. Nac.:</strong> {{player.birthCity}}</li>
-            <li class="list-group-item"><strong>F. Nac.:</strong> {{player.birthDate}}</li>
-            <li class="list-group-item"><strong> Edad:</strong> {{player.currentAge}}</li>
-            <li class="list-group-item"><strong>Mote:</strong> {{player.nickName}}</li>
-            <li class="list-group-item"><strong>F. Debut:</strong> {{player.mlbDebutDate}}</li>
-            <li class="list-group-item"><strong>Numero:</strong> {{player.primaryNumber}}</li>
-            <li class="list-group-item"><strong>Posición</strong> {{player.primaryPosition.name}}</li>
-          </ul> -->
         </div>
       </ng-container>
     </div>

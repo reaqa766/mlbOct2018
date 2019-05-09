@@ -39,27 +39,14 @@ export class PitcherinfoComponent implements OnInit {
 
     // paged items
     pagedItems: any[];
-    player = {};
+    player;
     jugadores = {};
 
 
 
 
 
-  // playersList = [
-  //   {name:"Jose Altuve",
-  //   position : "segunda base"},
-
-  //   {name : "Gleyber Torres",
-  //   position : "segunda base"},
-
-  //   {name : "Ronald Acuña Jr.",
-  //   position : "Leftfield"},
-
-  //   {name : "Ender Inciarte",
-  //   position : "Centerfield"}
-
-  // ]
+  
   isLoading: boolean;
 
 
@@ -73,11 +60,10 @@ export class PitcherinfoComponent implements OnInit {
     this.route.params.subscribe( params => {
       if (this.idplayer !== params.id) {
         this.idplayer = params.id;
-        console.log(this.players);
+        // console.log(this.players);
         this.getPlayersMap();
       }
     });
-    console.log('items6', this.players );
 
   }
 
@@ -110,6 +96,7 @@ export class PitcherinfoComponent implements OnInit {
                       // console.log('items5', 1);
                       // console.log('items7', this.idplayer);
                     }
+                    console.log('items6', this.player);
         }
         index++;
       });
@@ -117,29 +104,6 @@ export class PitcherinfoComponent implements OnInit {
 
   }
 
-  // onSearchChange() {
-  //   if (this.searchText) {
-  //     this.allItems = this.players.filter(player =>
-  //       player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
-  //       (player.stats[0].splits[0].team.name.toUpperCase().includes(this.searchText)) ||
-  //       (player.fullName.includes(this.searchText)) ||
-  //       (player.fullName.toLowerCase().includes(this.searchText)) ||
-  //       (player.fullName.toUpperCase().includes(this.searchText)));
-  //       this.setPage(this.pager.currentPage);
-  //     } else {
-  //         this.allItems = this.players;
-  //         this.setPage(this.pager.currentPage);
-  //       }
-  //       return this.allItems;
-  //     }
-
-  // setPage(page: number) {
-  //   // get pager object from service
-  //   this.pager = this.pagerService.getPager(this.allItems.length, page);
-
-  //   // get current page of items
-  //   this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
-  // }
 
 
 }

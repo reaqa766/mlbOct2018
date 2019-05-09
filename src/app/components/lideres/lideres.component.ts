@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayersService } from '../../../services/players.service';
-// import { PruebaService } from '../../services/prueba.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../interfaces/players';
-// import LIDERES from '../../../assets/JSONS/ESTADISTICAS_DE_LIDERES';
 import VenezolanosActivos from '../../../assets/JSONS/VenezolanosActivos';
 
 import { PagerService } from '../../../services/index';
@@ -24,23 +22,18 @@ export class LideresComponent implements OnInit {
   groups: any;
   selectedGroup: any;
   elarray: any;
-  // tslint:disable-next-line:no-inferrable-types
   datesN: number = 10;
   searchText: string;
   playerAuxList = [];
   counter: number;
   n: number;
   m: number;
-  // tslint:disable-next-line:no-inferrable-types
   n1: number = 12;
-  // tslint:disable-next-line:no-inferrable-types
   n10: number = 5;
 
   public allItems: any[];
-  // pager object
   pager: any = {};
 
-  // paged items
   pagedItems: any[];
   jugadores: any;
   isLoading: boolean;
@@ -61,18 +54,6 @@ export class LideresComponent implements OnInit {
   async ngOnInit() {
     this.getPlayersMap();
     this.isLoading = true;
-    // this.data = LIDERES.row;
-    // this.jugadores = VenezolanosActivos;
-    console.log('jugadores', this.players);
-
-    // this.CALEND3 = await this.http.get(this._url1).toPromise();
-    // this.CALEND2 = await this.http.get(this._url).toPromise();
-
-    // for (let tpos of this.CALEND2.records) {
-    //   // for(let team of tpos.teamRecords){
-    //       this.teamPlays.push({
-    //         record: tpos.gamesPlayed
-    //       });}
   }
 
   // Convertir el Array de Observables a un Array de Objetos.
@@ -177,16 +158,13 @@ export class LideresComponent implements OnInit {
   }
 
 avgClick(x) {
-  // console.log('estadistica', this.estadistica);
 
   for (let i=0; i<this.estadistica.length; i++) {
     if (x === i) {
       this.estadistica[i] = true;
-      // console.log('estadistica x', this.estadistica[i]);
 
     } else {
       this.estadistica[i] = false;
-      // console.log('estadistica y', this.estadistica[i]);
 
 
     }

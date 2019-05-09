@@ -71,14 +71,6 @@ constructor(private playerService: PlayersService, private pagerService: PagerSe
    // this.jugadores = VenezolanosActivos;
    console.log('jugadores', this.players);
 
-   // this.CALEND3 = await this.http.get(this._url1).toPromise();
-   // this.CALEND2 = await this.http.get(this._url).toPromise();
-
-   // for (let tpos of this.CALEND2.records) {
-   //   // for(let team of tpos.teamRecords){
-   //       this.teamPlays.push({
-   //         record: tpos.gamesPlayed
-   //       });}
  }
 
 textChange(i) {
@@ -212,44 +204,3 @@ avgClick(x) {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//   players = [
-//   {code: 444482, pregunta: '¿Qué posición juega?', respuesta: 'Left Field', activo: true},
-//   {code: 446653, pregunta: '¿Cuál es su nombre?', respuesta: 'Jose Lobaton', activo: true},
-//   {code: 444876, pregunta: '¿Cuál es su apodo?', respuesta: 'Magic', activo: true},
-//   {code: 467092, pregunta: '¿Equipo para el 2019?', respuesta: 'NY Mets', activo: true},
-//   {code: 514888, pregunta: '¿Fecha de  su lesión?', respuesta: '29 de julio de 2018', activo: true},
-//   {code: 506702, pregunta: '¿Cuantos Hits bateó?', respuesta: '47', activo: true},
-//   {code: 650402, pregunta: '¿Cuántos jonrones bateó?', respuesta: '24', activo: true},
-//   {code: 660670, pregunta: '¿Premio en MLB 2018?', respuesta: 'Novato del Año...', activo: true}
-//   ];
-//   constructor() { }
-
-//   ngOnInit() {
-//     console.log('code', this.players);
-
-//   }
-
-// textChange(i) {
-//   this.players[i].activo = !this.players[i].activo;
-// }
-
-
-// }

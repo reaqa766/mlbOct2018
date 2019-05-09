@@ -49,8 +49,8 @@ export class PActivesComponent implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    console.log('allItems', this.allItems);
-    console.log('players', this.players);
+    // console.log('allItems', this.allItems);
+    // console.log('players', this.players);
   }
 
   // Convertir el Array de Observables a un Array de Objetos.

@@ -4,8 +4,6 @@
   <h3 class="actives-title1">TEMP. REGULAR 2019</h3>
 </div>
 
-<!-- <p class="title-position"> SPRING T. 2019 </p> -->
-<!-- <p class="title-position"> TEMP. 2019 </p> -->
 
 <!-- LOADER -->
 <div *ngIf="!allItems">
@@ -25,24 +23,20 @@
   </div>
 <div class="container  container_grid_nvo_no" *ngIf="!isLoading">
 <div class="container_grid_nvo" *ngIf="estadistica[0]">
-  <!-- <div class="average_container" *ngIf=1 > -->
   <table class="table   text-center tableAVG_nvo">
     <thead class="table-header">
       <tr>
         <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
         <th class="tbA" style="width: 5%;" scope="col">VB</th>
         <th class="tbA" style="width: 5%;" scope="col">HITS</th>
-        <!-- <th class="tbA" style="width: 3%;" scope="col">HR</th> -->
         <th class="tbA1" style="width: 5%;" scope="col">AVG</th>
       </tr>
     </thead>
-    <!-- <table class="table  "> -->
       <tbody class="table-header2">
           <tr *ngFor="let jugador of filtroTopCincoAvg('avg')">
             <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
             <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
             <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.hits}}</td>
-            <!-- <td class="tb3" style="width: 2%;">{{jugador.stats[0].splits[0].stat.homeRuns}}</td> -->
             <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
       </tbody>
 
@@ -50,7 +44,6 @@
     </table>
     <img class="img_average" src="../../../assets/ALTUVE BATEANDO.png" alt="">
     </div>
-  <!-- </div> -->
       <!-- LIDERES HRs -->
       <div class="container_grid_nvo" *ngIf="estadistica[2]">
       <h4 class="subtitulo_lideres2 sub_lideres">JONRONES</h4>
@@ -64,7 +57,6 @@
       </tr>
     </thead>
 
-    <!-- <table class="table  "> -->
       <tbody class="table-header2">
         <tr *ngFor="let jugador of filtroTopCinco('homeRuns')">
           <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
@@ -89,7 +81,6 @@
       </tr>
     </thead>
 
-    <!-- <table class="table  "> -->
        <tbody class="table-header2">
         <tr *ngFor="let jugador of filtroTopCinco('doubles')">
           <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
@@ -115,7 +106,6 @@
       </tr>
     </thead>
 
-    <!-- <table class="table  "> -->
       <tbody class="table-header2">
         <tr *ngFor="let jugador of filtroTopCinco('triples')">
           <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
@@ -139,7 +129,6 @@
       </tr>
     </thead>
 
-    <!-- <table class="table  "> -->
       <tbody class="table-header2 ">
         <tr *ngFor="let jugador of filtroTopCinco('stolenBases')">
           <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
@@ -164,7 +153,6 @@
       </tr>
     </thead>
 
-    <!-- <table class="table  "> -->
       <tbody class="table-header2">
         <tr *ngFor="let jugador of filtroTopCinco('hits')">
           <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
@@ -189,7 +177,6 @@
       </tr>
     </thead>
 
-    <!-- <table class="table  "> -->
       <tbody class="table-header2">
         <tr *ngFor="let jugador of filtroTopCinco('rbi')">
           <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>

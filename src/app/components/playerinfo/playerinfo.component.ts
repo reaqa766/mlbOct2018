@@ -41,8 +41,9 @@ export class PlayerinfoComponent implements OnInit {
     data = '';
     // paged items
     pagedItems: any[];
+    player;
 
-    player = {};
+    // player = {};
     jugadores = {};
 
 

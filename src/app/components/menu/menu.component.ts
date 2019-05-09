@@ -24,12 +24,11 @@ export class MenuComponent implements OnInit {
         this.isLogin = true;
         this.nombreUsuario = auth.displayName;
         this.emailUsuario = auth.email;
-        // this.fotoUsuario = auth.photoURL;
       } else {
         this.isLogin = false;
       }
     });
-    console.log(this.isLogin);
+    // console.log(this.isLogin);
     
   }
 

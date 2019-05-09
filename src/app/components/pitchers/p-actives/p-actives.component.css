@@ -1,6 +1,3 @@
-/* .container_players_actives {
-  margin-top: 1%;
-} */
 
 .actives-title {
     color: antiquewhite;
@@ -8,7 +5,6 @@
     text-align: center;
     margin: 0.15rem auto 0;
     padding: .5rem 0;
-    /* background-color: rgba(3, 2, 2, 0.5); */
     text-shadow: 2px 2px 8px #111;
     width: 27rem;
     height: 1.75em;
@@ -213,9 +209,6 @@
     }
     @media only screen and (min-width:321px ) and (max-width: 355px) {
 
-        /* .container_players_actives {
-            margin-top:85% !important;
-        } */
 
         .actives-title {
             font-size: 1.5rem;
@@ -341,10 +334,6 @@
         }
     @media only screen and (min-width:366px ) and (max-width: 408px) {
 
-        /* .container_players_actives {
-            margin-top:55% !important;
-        } */
-
         .actives-title {
             font-size: 1.5rem;
             width: 90%;
@@ -405,10 +394,6 @@
 
     @media only screen and (min-width:409px ) and (max-width: 425px) {
 
-        /* .container_players_actives {
-            margin-top:55% !important;
-        } */
-
         .actives-title {
             font-size: 1rem;
             width: 50%;
@@ -468,9 +453,6 @@
         }
 
         @media only screen and (orientation : landscape) and (min-width:601px ) and (max-width: 815px) {
-            /* .container_players_actives {
-                margin-top: 20% !important;
-            } */
 
             .actives-title {
                 font-size: 1.5rem;
@@ -525,10 +507,3 @@
                 margin-left: 1em;
             }
         }
-        @media only screen and (min-width:1920px ) and (max-width: 3000px) {
-
-            /* .container_players_actives {
-                margin-top: 25%;
-              } */
-
-            }
