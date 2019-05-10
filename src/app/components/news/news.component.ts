@@ -17,6 +17,15 @@ export class NewsComponent implements OnInit {
   video2() {
     this.num = 'video2';
   }
+  video3A() {
+    this.num = 'video3A';
+  }
+  video4A() {
+    this.num = 'video4A';
+  }
+  video5A() {
+    this.num = 'video5A';
+  }
   video30() {
     this.num = 'video30';
   }
@@ -74,13 +83,19 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('http://www.eluniversal.com/deportes/39419/jose-altuve-dono-500000-dolares-a-iniciativas-de-impacto-social-de-empresas-polar', '_blank');
+          window.open('https://www.mlb.com/es/news/nacionales-firman-a-gerardo-parra ', '_blank');
+  } else if (this.num === 'video3A') {
+    window.open('https://www.sportsvenezuela.com/carlos-carrasco-pitcheo-un-blanqueo-de-cinco-entradas/', '_blank');
+  } else if (this.num === 'video4A') {
+    window.open('http://www.liderendeportes.com/noticias/baseball/cargo-despliega-su-calidad-en-los-jardines-de-cleveland/', '_blank');
+  } else if (this.num === 'video5A') {
+    window.open('http://www.eluniversal.com/deportes/39419/jose-altuve-dono-500000-dolares-a-iniciativas-de-impacto-social-de-empresas-polar', '_blank');
   } else if (this.num === 'video3') {
     window.open('https://www.mlb.com/es/news/aficion-venezolana-se-hace-sentir-en-el-palacio-sultan', '_blank');
   } else if (this.num === 'video35') {
     window.open('https://www.mlb.com/es/news/que-pasa-con-el-poder-de-miguel-cabrera', '_blank');
   } else if (this.num === 'video36') {
-    window.open('https://beisbol.estrending.com/2019/05/07/otro-militante-menos-en-california-yangervis-solarte-fue-puesto-en-asignacion-por-los-gigantes/', '_blank');
+    window.open('http://www.eluniversal.com/deportes/39419/jose-altuve-dono-500000-dolares-a-iniciativas-de-impacto-social-de-empresas-polar', '_blank');
   } else if (this.num === 'video311') {
     window.open('https://www.mlb.com/es/news/nino-llora-al-conocer-a-jose-altuve', '_blank');
   } else if (this.num === 'video351') {
