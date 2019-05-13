@@ -17,6 +17,15 @@ export class NewsComponent implements OnInit {
   video2() {
     this.num = 'video2';
   }
+  video3B() {
+    this.num = 'video3B';
+  }
+  video4B() {
+    this.num = 'video4B';
+  }
+  video5B() {
+    this.num = 'video5B';
+  }
   video3A() {
     this.num = 'video3A';
   }
@@ -83,7 +92,13 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://www.mlb.com/es/news/nacionales-firman-a-gerardo-parra ', '_blank');
+          window.open('http://www.enlaraya.com/baseball/dia-de-las-madres-grandes-ligas-venezuela/ ', '_blank');
+  } else if (this.num === 'video3B') {
+    window.open('https://beisbol.estrending.com/2019/05/12/la-historia-de-gerardo-parra-y-los-nacionales-tuvo-un-estreno-de-pelicula/', '_blank');
+  } else if (this.num === 'video4B') {
+    window.open('https://www.mlb.com/news/yankees-claim-breyvic-valera-from-giants', '_blank');
+  } else if (this.num === 'video5B') {
+    window.open('https://www.mlb.com/es/news/nacionales-firman-a-gerardo-parra ', '_blank');
   } else if (this.num === 'video3A') {
     window.open('https://www.sportsvenezuela.com/carlos-carrasco-pitcheo-un-blanqueo-de-cinco-entradas/', '_blank');
   } else if (this.num === 'video4A') {

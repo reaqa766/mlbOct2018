@@ -16,6 +16,15 @@ export class VideosComponent implements OnInit {
   video1() {
     this.num = 'video1';
   }
+  video2A() {
+    this.num = 'video2A';
+  }
+  video3A() {
+    this.num = 'video3A';
+  }
+  video4A() {
+    this.num = 'video4A';
+  }
   video2() {
     this.num = 'video2';
   }
@@ -47,18 +56,24 @@ export class VideosComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video1') {
-          window.open('https://www.mlb.com/news/ronald-acuna-jr-hits-game-winning-home-run', '_blank');
-  } else if (this.num === 'video2') {
+          window.open('https://www.mlb.com/video/dylan-floro-in-play-run-s-to-gerardo-parra', '_blank');
+  } else if (this.num === 'video2A') {
     window.open('https://www.mlb.com/video/cabrera-s-stellar-game-vs-jays', '_blank');
-  } else if (this.num === 'video3') {
+  } else if (this.num === 'video3A') {
     window.open('https://www.mlb.com/video/prado-s-backhanded-stop', '_blank');
-  } else if (this.num === 'video4') {
-    window.open('https://www.mlb.com/video/zack-greinke-in-play-run-s-to-german-marquez', '_blank');
+  } else if (this.num === 'video4A') {
+    window.open('https://www.mlb.com/news/ronald-acuna-jr-hits-game-winning-home-run', '_blank');
   } else if (this.num === 'video2') {
     window.open('https://www.mlb.com/news/freddy-galvis-makes-barehand-catch', '_blank');
   } else if (this.num === 'video3') {
     window.open('https://www.mlb.com/es/video/andrelton-simmons-lines-out-to-third-baseman-asdrubal-cabrera', '_blank');
   } else if (this.num === 'video4') {
+    window.open('https://www.mlb.com/yankees/news/gleyber-torres-homers-twice-vs-orioles', '_blank');
+  } else if (this.num === 'video21') {
+    window.open('https://www.mlb.com/news/freddy-galvis-makes-barehand-catch', '_blank');
+  } else if (this.num === 'video31') {
+    window.open('https://www.mlb.com/es/video/andrelton-simmons-lines-out-to-third-baseman-asdrubal-cabrera', '_blank');
+  } else if (this.num === 'video41') {
     window.open('https://www.mlb.com/yankees/news/gleyber-torres-homers-twice-vs-orioles', '_blank');
   } else if (this.num === 'video5') {
     window.open('https://www.mlb.com/es/video/bambinazo-de-altuve', '_blank');
