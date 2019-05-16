@@ -92,11 +92,11 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('http://www.enlaraya.com/baseball/dia-de-las-madres-grandes-ligas-venezuela/ ', '_blank');
+          window.open('http://www.liderendeportes.com/noticias/baseball/palazos-kilometricos-en-mlb-tienen-tinte-tricolor/ ', '_blank');
   } else if (this.num === 'video3B') {
-    window.open('https://beisbol.estrending.com/2019/05/12/la-historia-de-gerardo-parra-y-los-nacionales-tuvo-un-estreno-de-pelicula/', '_blank');
+    window.open('http://www.enlaraya.com/baseball/dia-de-las-madres-grandes-ligas-venezuela/', '_blank');
   } else if (this.num === 'video4B') {
-    window.open('https://www.mlb.com/news/yankees-claim-breyvic-valera-from-giants', '_blank');
+    window.open('https://beisbol.estrending.com/2019/05/12/la-historia-de-gerardo-parra-y-los-nacionales-tuvo-un-estreno-de-pelicula/', '_blank');
   } else if (this.num === 'video5B') {
     window.open('https://www.mlb.com/es/news/nacionales-firman-a-gerardo-parra ', '_blank');
   } else if (this.num === 'video3A') {

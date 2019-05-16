@@ -56,9 +56,9 @@ export class VideosComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video1') {
-          window.open('https://www.mlb.com/video/dylan-floro-in-play-run-s-to-gerardo-parra', '_blank');
+          window.open('https://www.mlb.com/es/news/hr-de-torres-ayuda-a-ny-a-barrer-doble-jornada', '_blank');
   } else if (this.num === 'video2A') {
-    window.open('https://www.mlb.com/video/cabrera-s-stellar-game-vs-jays', '_blank');
+    window.open('https://www.mlb.com/video/dylan-floro-in-play-run-s-to-gerardo-parra', '_blank');
   } else if (this.num === 'video3A') {
     window.open('https://www.mlb.com/video/prado-s-backhanded-stop', '_blank');
   } else if (this.num === 'video4A') {
