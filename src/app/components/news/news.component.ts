@@ -17,6 +17,15 @@ export class NewsComponent implements OnInit {
   video2() {
     this.num = 'video2';
   }
+  video3D() {
+    this.num = 'video3D';
+  }
+  video4D() {
+    this.num = 'video4D';
+  }
+  video5D() {
+    this.num = 'video5D';
+  }
   video3B() {
     this.num = 'video3B';
   }
@@ -92,7 +101,13 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('http://www.liderendeportes.com/noticias/baseball/palazos-kilometricos-en-mlb-tienen-tinte-tricolor/ ', '_blank');
+          window.open('http://www.enlaraya.com/baseball/mlb/contreras-esta-viviendo/ ', '_blank');
+  } else if (this.num === 'video3D') {
+    window.open('http://www.enlaraya.com/baseball/mlb/arraez-mellizos-ligas/', '_blank');
+  } else if (this.num === 'video4D') {
+    window.open('http://www.liderendeportes.com/noticias/baseball/eugenio-se-agarro-mayo-para-florecer/', '_blank');
+  } else if (this.num === 'video5D') {
+    window.open('http://www.liderendeportes.com/noticias/baseball/palazos-kilometricos-en-mlb-tienen-tinte-tricolor/ ', '_blank');
   } else if (this.num === 'video3B') {
     window.open('http://www.enlaraya.com/baseball/dia-de-las-madres-grandes-ligas-venezuela/', '_blank');
   } else if (this.num === 'video4B') {

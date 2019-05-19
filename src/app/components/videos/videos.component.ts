@@ -16,6 +16,15 @@ export class VideosComponent implements OnInit {
   video1() {
     this.num = 'video1';
   }
+  video2D() {
+    this.num = 'video2D';
+  }
+  video3D() {
+    this.num = 'video3D';
+  }
+  video4D() {
+    this.num = 'video4D';
+  }
   video2A() {
     this.num = 'video2A';
   }
@@ -56,13 +65,19 @@ export class VideosComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video1') {
-          window.open('https://www.mlb.com/es/news/hr-de-torres-ayuda-a-ny-a-barrer-doble-jornada', '_blank');
+          window.open('https://www.mlb.com/video/tim-anderson-grounds-out-sharply-shortstop-freddy-galvis-to-first-baseman-rowdy-', '_blank');
+  } else if (this.num === 'video2D') {
+    window.open('https://www.mlb.com/video/eduardo-escobar-homers-10-on-a-fly-ball-to-left-field', '_blank');
+  } else if (this.num === 'video3D') {
+    window.open('https://www.mlb.com/twins/video/perez-k-s-7-and-gives-up-1-run', '_blank');
+  } else if (this.num === 'video4D') {
+    window.open('https://www.mlb.com/es/news/hr-de-torres-ayuda-a-ny-a-barrer-doble-jornada', '_blank');
   } else if (this.num === 'video2A') {
-    window.open('https://www.mlb.com/video/dylan-floro-in-play-run-s-to-gerardo-parra', '_blank');
+    window.open('https://www.mlb.com/es/nationals/video/grand-slam-de-parra-en-la-8va', '_blank');
   } else if (this.num === 'video3A') {
     window.open('https://www.mlb.com/video/prado-s-backhanded-stop', '_blank');
   } else if (this.num === 'video4A') {
-    window.open('https://www.mlb.com/news/ronald-acuna-jr-hits-game-winning-home-run', '_blank');
+    window.open('https://www.mlb.com/es/rockies/video/marquez-does-it-on-each-side', '_blank');
   } else if (this.num === 'video2') {
     window.open('https://www.mlb.com/news/freddy-galvis-makes-barehand-catch', '_blank');
   } else if (this.num === 'video3') {
