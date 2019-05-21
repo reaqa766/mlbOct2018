@@ -65,9 +65,9 @@ export class VideosComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video1') {
-          window.open('https://www.mlb.com/video/tim-anderson-grounds-out-sharply-shortstop-freddy-galvis-to-first-baseman-rowdy-', '_blank');
+          window.open('https://www.mlb.com/es/news/ronald-acuna-prende-los-motores-como-primer-bate', '_blank');
   } else if (this.num === 'video2D') {
-    window.open('https://www.mlb.com/video/eduardo-escobar-homers-10-on-a-fly-ball-to-left-field', '_blank');
+    window.open('https://www.mlb.com/video/tim-anderson-grounds-out-sharply-shortstop-freddy-galvis-to-first-baseman-rowdy-', '_blank');
   } else if (this.num === 'video3D') {
     window.open('https://www.mlb.com/twins/video/perez-k-s-7-and-gives-up-1-run', '_blank');
   } else if (this.num === 'video4D') {
