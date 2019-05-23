@@ -1,4 +1,4 @@
-.container_title_video {
+.container_title_podCast {
     margin: 0 auto;
     text-align: center;
     text-shadow: 2px 2px 8px black;
@@ -10,11 +10,13 @@
     }
     
     
-    .title_video {
+    .title_podCast {
         color: antiquewhite;
         font-size: 3em;
     }
     .embed-responsive-item {
-        width: 100%;
+        border-radius: 30px;
+        margin: 0 2%;
+        width: 95%;
         height: 21%;
     }
