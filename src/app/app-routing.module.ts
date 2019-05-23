@@ -41,6 +41,7 @@ import { PlayerWeekComponent } from './components/player-week/player-week.compon
 import { PitcherrWeekComponent } from './components/pitcherr-week/pitcherr-week.component';
 import { PlayerOfTheWeekComponent } from './components/player-of-the-week/player-of-the-week.component';
 import { PitchersDayAntComponent } from './components/pitchers/pitchers-day-ant/pitchers-day-ant.component';
+import { PodcastsComponent } from './components/podcasts/podcasts.component';
 
 import { PruebajsonsComponent } from './components/prueba/pruebajsons/pruebajsons.component';
 import { PosicionesComponent } from './components/posiciones/posiciones.component';
@@ -176,6 +177,8 @@ const routes: Routes = [
   component: QuepasohoyComponent },
   { path: 'transacciones',
   component: TransaccionesComponent },
+  { path: 'podCasts',
+  component: PodcastsComponent },
 
   { path: '**',
   component: NotFoundPageComponent}
