@@ -20,6 +20,8 @@
         background-color: #fff;
         width: 50%;
         margin: 1rem auto;
+        border: solid black 8px;
+        box-shadow: 10px 10px 8px rgba(29, 28, 28, 0.589);
     }
     .container_logo {
         grid-column: 1/2;
@@ -43,7 +45,7 @@
 
 
     .container_photo1 {
-        grid-column: 2/3;
+        grid-column: 3/4;
 
         display: grid;
         grid-auto-columns: 1fr;
@@ -60,8 +62,8 @@
     } 
 
     .embed-responsive-item-photo1 {
-        margin: 0 35%;
-        width: 5vw
+        margin: 0 40%;
+        width: 4vw
 
     }
     /* .container_podCast_base1 {
@@ -77,8 +79,8 @@
         justify-self: center;
     } 
     .embed-responsive-item-photo2 {
-        margin: 0 35%;
-        width: 5vw
+        margin: 0 40%;
+        width: 4vw
 
     }
 
@@ -103,4 +105,9 @@
         font-size: 1vw;
         text-align: justify;
     }
-    
+
+    .vl {
+        grid-column: 2/3;
+        border-left: 6px solid green;
+        height: 500px;
+      }
