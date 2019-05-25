@@ -101,9 +101,9 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('http://www.enlaraya.com/baseball/mlb/contreras-esta-viviendo/ ', '_blank');
+          window.open('https://www.sportsvenezuela.com/luis-arraez-tenia-el-feeling-de-que-me-iban-a-brindar-la-oportunidad/ ', '_blank');
   } else if (this.num === 'video3D') {
-    window.open('http://www.enlaraya.com/baseball/mlb/arraez-mellizos-ligas/', '_blank');
+    window.open('http://www.enlaraya.com/baseball/mlb/contreras-esta-viviendo/', '_blank');
   } else if (this.num === 'video4D') {
     window.open('http://www.liderendeportes.com/noticias/baseball/eugenio-se-agarro-mayo-para-florecer/', '_blank');
   } else if (this.num === 'video5D') {

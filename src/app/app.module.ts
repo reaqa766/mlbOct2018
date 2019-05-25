@@ -93,6 +93,7 @@ import { EstadoVzlaComponent } from './components/estado-vzla/estado-vzla.compon
 import { NovatosComponent } from './components/players/novatos/novatos.component';
 import { QuepasohoyComponent } from './components/players/quepasohoy/quepasohoy.component';
 import { TransaccionesComponent } from './components/players/transacciones/transacciones.component';
+import { PodcastsComponent } from './components/podcasts/podcasts.component';
 
 @NgModule({
   declarations: [
@@ -158,7 +159,8 @@ import { TransaccionesComponent } from './components/players/transacciones/trans
     EstadoVzlaComponent,
     NovatosComponent,
     QuepasohoyComponent,
-    TransaccionesComponent
+    TransaccionesComponent,
+    PodcastsComponent
 
   ],
   imports: [

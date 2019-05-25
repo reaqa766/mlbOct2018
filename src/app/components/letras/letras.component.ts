@@ -47,11 +47,11 @@ export class LetrasComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://prodavinci.com/miguel-cabrera-todavia-queda-juego/', '_blank');
+          window.open('https://prodavinci.com/pablo-como-el-apostol-de-los-gentiles/', '_blank');
   } else if (this.num === 'video3') {
-    window.open('https://prodavinci.com/andres-galarraga-beisbol-puro-beisbol/', '_blank');
+    window.open('https://prodavinci.com/miguel-cabrera-todavia-queda-juego/', '_blank');
   } else if (this.num === 'video4') {
-    window.open('https://prodavinci.com/lezama-cumple-100-anos/', '_blank');
+    window.open('https://prodavinci.com/andres-galarraga-beisbol-puro-beisbol/', '_blank');
   } else if (this.num === 'video5') {
     window.open('https://prodavinci.com/el-guti-el-que-no-se-rinde/', '_blank');
   } else if (this.num === 'video31') {

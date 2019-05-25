@@ -91,6 +91,7 @@ export class JugEquipVzlaComponent implements OnInit {
                 {codigo:621592, nombre: 'Eduardo Jimenez', url: '../../../../assets/621592.jpg', equipolvbp: 7, tipoJugador: 2},
                 {codigo:650859, nombre: 'Luis Rengifo', url: '../../../../assets/650859.jpg', equipolvbp: 6, tipoJugador: 1},
                 {codigo:650333, nombre: 'Luis Arraez', url: '../../../../assets/650333.jpg', equipolvbp: 6, tipoJugador: 1},
+                {codigo:545064, nombre: 'Jairo Díaz', url: '../../../../assets/545064.jpg', equipolvbp: 8, tipoJugador: 2},
 
 
 
