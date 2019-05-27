@@ -178,7 +178,10 @@ const routes: Routes = [
   { path: 'transacciones',
   component: TransaccionesComponent },
   { path: 'podCasts',
-  component: PodcastsComponent },
+  component: PodcastsComponent, children:[{
+    path: 'TalkBeisbol', 
+    component: PodcastsComponent,
+  }] },
 
   { path: '**',
   component: NotFoundPageComponent}
