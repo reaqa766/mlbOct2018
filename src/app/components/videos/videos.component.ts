@@ -16,6 +16,15 @@ export class VideosComponent implements OnInit {
   video1() {
     this.num = 'video1';
   }
+  video2E() {
+    this.num = 'video2E';
+  }
+  video3E() {
+    this.num = 'video3E';
+  }
+  video4E() {
+    this.num = 'video4E';
+  }
   video2D() {
     this.num = 'video2D';
   }
@@ -65,7 +74,13 @@ export class VideosComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video1') {
-          window.open('https://www.mlb.com/es/news/yankees-triunfan-detras-de-dos-jonrones-de-torres', '_blank');
+          window.open('https://www.mlb.com/twins/video/arraez-s-run-scoring-single', '_blank');
+  } else if (this.num === 'video2E') {
+    window.open('https://www.mlb.com/es/news/leon-medias-rojas-explotaron-contra-los-indios', '_blank');
+  } else if (this.num === 'video3E') {
+    window.open('https://www.mlb.com/es/news/hr-arcia-corona-remontada-milwaukee', '_blank');
+  } else if (this.num === 'video4E') {
+    window.open('https://www.mlb.com/es/news/yankees-triunfan-detras-de-dos-jonrones-de-torres', '_blank');
   } else if (this.num === 'video2D') {
     window.open('https://www.mlb.com/es/news/ronald-acuna-prende-los-motores-como-primer-bate', '_blank');
   } else if (this.num === 'video3D') {
