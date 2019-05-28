@@ -17,6 +17,15 @@ export class NewsComponent implements OnInit {
   video2() {
     this.num = 'video2';
   }
+  video3E() {
+    this.num = 'video3E';
+  }
+  video4E() {
+    this.num = 'video4E';
+  }
+  video5E() {
+    this.num = 'video5E';
+  }
   video3D() {
     this.num = 'video3D';
   }
@@ -101,7 +110,13 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://www.sportsvenezuela.com/luis-arraez-tenia-el-feeling-de-que-me-iban-a-brindar-la-oportunidad/ ', '_blank');
+          window.open('https://beisbol.americadigital.com/2019/05/27/la-elite-del-poder-en-venezuela-tiene-un-nuevo-nombre-renato-nunez/', '_blank');
+  } else if (this.num === 'video3E') {
+    window.open('https://www.sportsvenezuela.com/jose-osuna-consiguio-su-primer-remolque-del-ano-en-caida-bucanera/', '_blank');
+  } else if (this.num === 'video4E') {
+    window.open('https://www.sportsvenezuela.com/yonny-chirinos-pitcheo-como-los-dioses-en-triunfo-de-los-rays/', '_blank');
+  } else if (this.num === 'video5E') {
+    window.open('https://www.mlb.com/es/news/tiene-carlos-gonzalez-futuro-en-grandes-ligas', '_blank');
   } else if (this.num === 'video3D') {
     window.open('http://www.enlaraya.com/baseball/mlb/contreras-esta-viviendo/', '_blank');
   } else if (this.num === 'video4D') {
