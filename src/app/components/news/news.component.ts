@@ -17,6 +17,15 @@ export class NewsComponent implements OnInit {
   video2() {
     this.num = 'video2';
   }
+  video3F() {
+    this.num = 'video3F';
+  }
+  video4F() {
+    this.num = 'video4F';
+  }
+  video5F() {
+    this.num = 'video5F';
+  }
   video3E() {
     this.num = 'video3E';
   }
@@ -110,7 +119,13 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://beisbol.americadigital.com/2019/05/27/la-elite-del-poder-en-venezuela-tiene-un-nuevo-nombre-renato-nunez/', '_blank');
+          window.open('https://beisbol.americadigital.com/2019/05/28/la-rodilla-operada-sigue-dandole-guerra-a-altuve/', '_blank');
+  } else if (this.num === 'video3F') {
+    window.open('  https://beisbol.americadigital.com/2019/05/27/la-elite-del-poder-en-venezuela-tiene-un-nuevo-nombre-renato-nunez/', '_blank');
+  } else if (this.num === 'video4F') {
+    window.open('https://beisbol.americadigital.com/2019/05/28/avisail-garcia-le-echo-piernas-para-llegar-a-diez-jonrones/', '_blank');
+  } else if (this.num === 'video5F') {
+    window.open('http://www.enlaraya.com/baseball/mlb/hernandez-esta-casi-listo/', '_blank');
   } else if (this.num === 'video3E') {
     window.open('https://www.sportsvenezuela.com/jose-osuna-consiguio-su-primer-remolque-del-ano-en-caida-bucanera/', '_blank');
   } else if (this.num === 'video4E') {
