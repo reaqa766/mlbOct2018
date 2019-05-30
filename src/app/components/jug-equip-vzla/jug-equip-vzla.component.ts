@@ -41,7 +41,7 @@ export class JugEquipVzlaComponent implements OnInit {
                 {codigo:553993, nombre: 'Eugenio Suarez', url: '../../../../assets/553993.jpg', equipolvbp: 1, tipoJugador: 1},
                 // {codigo:467827, nombre: 'Gerardo Parra', url: '../../../../assets/467827.jpg', equipolvbp: 1, tipoJugador: 1},
                 {codigo:650402, nombre: 'Gleyber Torres', url: '../../../../assets/650402.jpg', equipolvbp: 1, tipoJugador: 1},
-                {codigo:602922, nombre: 'Jose Rondon', url: '../../../../assets/602922.jpg', equipolvbp: 1, tipoJugador: 1},
+                {codigo:602922, nombre: 'Jose Rondon ', url: '../../../../assets/602922.jpg', equipolvbp: 1, tipoJugador: 1},
                 {codigo:462101, nombre: 'Elvis Andrus', url: '../../../../assets/462101.jpg', equipolvbp: 6, tipoJugador: 1},
                 {codigo:465041, nombre: 'Francisco Cervelli', url: '../../../../assets/465041.jpg', equipolvbp: 6, tipoJugador: 1},
                 // {codigo:491696, nombre: 'Jesus Sucre', url: '../../../../assets/491696.jpg', equipolvbp: 6, tipoJugador: 1},
