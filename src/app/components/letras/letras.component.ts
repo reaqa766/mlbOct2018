@@ -17,6 +17,15 @@ export class LetrasComponent implements OnInit {
   video2() {
     this.num = 'video2';
   }
+  video3E() {
+    this.num = 'video3E';
+  }
+  video4E() {
+    this.num = 'video4E';
+  }
+  video5E() {
+    this.num = 'video5E';
+  }
   video3() {
     this.num = 'video3';
   }
@@ -47,7 +56,13 @@ export class LetrasComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://prodavinci.com/pablo-como-el-apostol-de-los-gentiles/', '_blank');
+          window.open('https://prodavinci.com/alfonso-carrasquel-el-cuentacuentos-del-campo-corto/', '_blank');
+  } else if (this.num === 'video3E') {
+    window.open('https://prodavinci.com/paciencia-la-virtud-de-bob-abreu/', '_blank');
+  } else if (this.num === 'video4E') {
+    window.open('https://prodavinci.com/ichiro-se-parece-a-vitico/', '_blank');
+  } else if (this.num === 'video5E') {
+    window.open('https://prodavinci.com/pablo-como-el-apostol-de-los-gentiles/', '_blank');
   } else if (this.num === 'video3') {
     window.open('https://prodavinci.com/miguel-cabrera-todavia-queda-juego/', '_blank');
   } else if (this.num === 'video4') {
