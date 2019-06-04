@@ -146,7 +146,7 @@ export class ByteamComponent implements OnInit {
                 return 0;
               }
             });
-            // console.log(this.players, this.players.find(player => player.id === 471865));
+            // console.log("CARLOS", this.players.find(player => player.id === 471865));
 
 
           this.allItems = this.players;
