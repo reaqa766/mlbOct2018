@@ -1,6 +1,177 @@
 <div class="container_total">
+  <div class="container_superior">
+
+    <div class="columna1">
+      <div class="lideres1 lideresAll ">
+        <!-- <a routerLink="lideres">
+          <h4 class="subtitulo_Lideres1">LÍDERES</h4>
+        </a>-->
+        <a class="subtitulo_Lideres_a" routerLink="lideres">
+          <h4 class="subtitulo_Lideres">AVERAGE</h4>
+        </a> 
+        <table class="table   text-center tableAVG_nvo">
+
+          <thead class="table-header">
+            <tr class="encabezado">
+              <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
+              <th class="tbA" style="width: 5%;" scope="col">VB</th>
+              <th class="tbA1" style="width: 5%;" scope="col">AVG</th>
+            </tr>
+          </thead>
+          <tbody class="table-header2">
+            <tr *ngFor="let jugador of filtroTopCincoAvg('avg')">
+              <a routerLink="playerinfo/{{jugador.id}}" class="link_player">
+                <td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td>
+              </a>
+              <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+              <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="lideres2 lideresAll ">
+        <h4 class="subtitulo_Lideres">JONRONES</h4>
+        <table class="table   text-center tableAVG_nvo">
+          <thead class="table-header">
+            <tr class="encabezado">
+              <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
+              <th class="tbA" style="width: 5%;" scope="col">VB</th>
+              <th class="tbA1" style="width: 5%;" scope="col">HR</th>
+            </tr>
+          </thead>
+
+          <tbody class="table-header2">
+            <tr *ngFor="let jugador of filtroTopCinco('homeRuns')">
+              <a routerLink="playerinfo/{{jugador.id}}" class="link_player">
+                <td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td>
+              </a>
+              <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+              <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.homeRuns}}</td>
+          </tbody>
+
+        </table>
+      </div>
+      <div class="lideres3 lideresAll ">
+
+        <h4 class="subtitulo_Lideres">CARRERAS EMPUJADAS</h4>
+
+        <table class="table   text-center tableAVG_nvo">
+          <thead class="table-header">
+            <tr class="encabezado">
+              <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
+              <th class="tbA" style="width: 5%;" scope="col">VB</th>
+              <th class="tbA1" style="width: 5%;" scope="col">CE</th>
+            </tr>
+          </thead>
+
+          <tbody class="table-header2">
+            <tr *ngFor="let jugador of filtroTopCinco('rbi')">
+              <a routerLink="playerinfo/{{jugador.id}}" class="link_player">
+                <td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td>
+              </a>
+              <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+              <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.rbi}}</td>
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+      <div class="columna2">
+        <div class="container1_Colummna2">
+            <div class="box_home-element box1">
+                <a routerLink="videos"><img class="card-img-top"   src="../../../assets/CarGoCatch.JPG" alt="Carlos Gonzalez Cubs"></a>
+            </div>
+            <div class=" box2">
+              
+                <p class="text-box-columna">Increíble la atrapada de cabeza de Carlos González. <a routerLink="videos" class="ver-mas"> Ver más
+                  </a><a routerLink="videos" class="badge badge-warning badge-size RLink">Videos</a></p>
+            </div>
+            </div>
+        <div class="container2_Colummna2">
+            <div class="box_home-element box13">
+                <a routerLink="videos"><img class="card-img-top"   src="../../../assets/ESCOBARMERIDIANO.jpg" alt="Eduaro Escobar"></a>
+            </div>
+            <div class=" box22">
+
+                <p class="text-box-columna">Eduardo Escobar la sigue viendo clarita en la campaña. <a routerLink="news" class="ver-mas"> Ver más
+                  </a>
+                  <a routerLink="videos" class="badge badge-warning badge-size RLink">Noticias</a></p>
+            </div>
+            </div>
+        <div class="container3_Colummna2">
+            <div class="box_home-element box33">
+                <a routerLink="videos"><img class="card-img-top"   src="../../../assets/CarGoCatch.JPG" alt="Carlos Gonzalez Cubs"></a>
+            </div>
+            <div class=" box1">
+                
+              
+                <p class="text-box-columna">Increíble la atrapada de cabeza de Carlos González. <a routerLink="videos" class="ver-mas"> Ver más
+                  </a><a routerLink="videos" class="badge badge-warning badge-size RLink">Videos</a></p>
+                  <!-- </a><span class="badge badge-warning badge-size"><a routerLink="videos" class="RLink">Videos</a></span></p> -->
+                    
+            </div>
+            </div>
+        <div class="container4_Colummna2">
+            <div class="box_home-element box14">
+                <a routerLink="videos"><img class="card-img-top"   src="../../../assets/ESCOBARMERIDIANO.jpg" alt="Eduaro Escobar"></a>
+            </div>
+            <div class="box44">
+
+                <p class="text-box-columna">Eduardo Escobar la sigue viendo clarita en la campaña. <a routerLink="news" class="ver-mas"> Ver más
+                  </a><a routerLink="videos" class="badge badge-warning badge-size RLink">Noticias</a></p>
+            </div>
+            </div>
+      </div>
+
+      <div class="columna3">
+
+      </div>
+
+
+    
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container_total">
     <div class="container_superior">
-      <!-- <div class="lideres"> -->
         <div class="lideres1">
             <a routerLink="lideres"><h4 class="subtitulo_Lideres1">LÍDERES</h4></a>
             <a class="subtitulo_Lideres_a"  routerLink="lideres"><h4 class="subtitulo_Lideres">AVERAGE</h4></a>
@@ -10,20 +181,15 @@
               <tr class="encabezado">
                 <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
                 <th class="tbA" style="width: 5%;" scope="col">VB</th>
-                <!-- <th class="tbA" style="width: 5%;" scope="col">HITS</th> -->
-                <!-- <th class="tbA" style="width: 3%;" scope="col">HR</th> -->
                 <th class="tbA1" style="width: 5%;" scope="col">AVG</th>
               </tr>
             </thead>
-            <!-- <table class="table  "> -->
             <tbody class="table-header2">
               <tr *ngFor="let jugador of filtroTopCincoAvg('avg')">
                 <a routerLink="playerinfo/{{jugador.id}}" class="link_player">
                   <td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td>
                 </a>
                 <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-                <!-- <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.hits}}</td> -->
-                <!-- <td class="tb3" style="width: 2%;">{{jugador.stats[0].splits[0].stat.homeRuns}}</td> -->
                 <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
             </tbody>
           </table>
@@ -36,19 +202,16 @@
                 <tr class="encabezado">
                   <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
                   <th class="tbA" style="width: 5%;" scope="col">VB</th>
-                  <!-- <th class="tbA" style="width: 5%;" scope="col">AVG</th> -->
                   <th class="tbA1" style="width: 5%;" scope="col">HR</th>
                 </tr>
               </thead>
 
-              <!-- <table class="table  "> -->
               <tbody class="table-header2">
                 <tr *ngFor="let jugador of filtroTopCinco('homeRuns')">
                   <a routerLink="playerinfo/{{jugador.id}}" class="link_player">
                     <td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td>
                   </a>
                   <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-                  <!-- <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td> -->
                   <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.homeRuns}}</td>
               </tbody>
 
@@ -64,24 +227,19 @@
                 <tr class="encabezado">
                   <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
                   <th class="tbA" style="width: 5%;" scope="col">VB</th>
-                  <!-- <th class="tbA" style="width: 5%;" scope="col">AVG</th> -->
                   <th class="tbA1" style="width: 5%;" scope="col">CE</th>
                 </tr>
               </thead>
 
-              <!-- <table class="table  "> -->
                 <tbody class="table-header2">
                   <tr *ngFor="let jugador of filtroTopCinco('rbi')">
                     <a routerLink="playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
                     <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-                    <!-- <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td> -->
                      <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.rbi}}</td>
                 </tbody>
 
             </table>
           </div>
-      <!-- </div> -->
-        <!-- <div class="foto_Central"> -->
           <div class="box_home-element box1">
               <a routerLink="videos"><img class="card-img-top"   src="../../../assets/CarGoCatch.JPG" alt="Carlos Gonzalez Cubs"></a>
               <p class="text-box">Increíble la atrapada de cabeza de Carlos González. Así se debuta en un equipo. <a routerLink="videos" class="ver-mas"> Ver más
@@ -89,13 +247,6 @@
               <p class="badge badge-warning"><a routerLink="videos" class="RLink">VIDEOS</a></p>
           </div>
 
-          <!-- <div class="box_home-element box1">
-            <a routerLink="news"><img class="card-img-top"   src="../../../assets/RENATO.jpg" alt="Renato Nuñez"></a>
-            <p class="text-box">La élite del poder en Venezuela tiene un nuevo nombre: Renato Núñez. <a routerLink="news" class="ver-mas"> Ver más
-              </a>
-             <p class="badge badge-warning"> <a routerLink="news" class="RLink">NOTICIAS</a></p>
-          </div>
- -->
           <div class="box_home-element box2">
               <a routerLink="transacciones"><img class="card-img-top"   src="../../../assets/TRANSACCIONESHOME.jpg" alt="Modulo transacciones"></a>
               <p class="text-box">Puedes verificar diariamente que ocurre con tus ídolos y las Transacciones de MLB.<a routerLink="transacciones" class="ver-mas"> Ver más
@@ -126,7 +277,6 @@
             <p class="noticias_p noti1">○ ¿Tiene Carlos González futuro en Grandes Ligas?.</p>
             <p class="noticias_p noti1">○ Willson Contreras lleva varios días desatado con el madero.</p>
             <p class="noticias_p noti1">○ Palazos kilométricos en MLB tienen tinte tricolor.</p>
-            <!-- <p class="noticias_p noti4">○ Ronald Acuña fuera del lineup por problemas físicos.</p>--> </a>
           </div>
         </div>
       </div>
@@ -166,4 +316,4 @@
               <p class="badge badge-warning"><a routerLink="playeroftheweek" class="RLink">JUGADOR DE LA SEMANA</a></p>
 
 
-          </div>
+          </div> -->
