@@ -275,6 +275,11 @@ text-shadow: none !important;
   margin-left: 1rem;
 }
 
+.badge-size, .badge-size1 {
+  font-size: .85vw !important; 
+}
+
+
 .columna3 {
   grid-column: 3/4;
   grid-row: 1/2;
