@@ -321,6 +321,15 @@ ul {
 }
 
 
+/* @media screen and (max-width: 1442px) and (min-width: 1222px) {
+  .li11 .li12 .li13 .li14 {
+    display: none;
+  }
+
+} */
+/* @media only screen and (min-width:300px ) and (max-width: 769px) {
+
+} */
 
 
 
