@@ -3,9 +3,6 @@
 
     <div class="columna1">
       <div class="lideres1 lideresAll ">
-        <!-- <a routerLink="lideres">
-          <h4 class="subtitulo_Lideres1">LÍDERES</h4>
-        </a>-->
         <a class="subtitulo_Lideres_a" routerLink="lideres">
           <h4 class="subtitulo_Lideres">AVERAGE</h4>
         </a>
@@ -79,7 +76,8 @@
     <div class="columna2">
       <div class="container1_Colummna2">
         <div class="box_home-element boxA1">
-          <a routerLink="news"><img class="card-img-top" src="../../../assets/Miguel_Grand_Slam.JPG" alt="Miguel Cabrera"></a>
+          <a routerLink="news"><img class="card-img-top img_Desktop" src="../../../assets/Miguel_Grand_Slam.JPG" alt="Miguel Cabrera"></a>
+          <a routerLink="news"><img class="card-img-top img_Mobile" src="../../../assets/Miguel_Grand_SlamNews.jpg" alt="Miguel Cabrera"></a>
         </div>
         <div class=" boxA2">
 
@@ -87,16 +85,36 @@
             una racha de 10 derrotas consecutivas como locales.<a routerLink="news" class="badge badge-warning badge-size RLink">Noticias</a></p>
         </div>
       </div>
-      <!-- <div class="container2_Colummna2">
-            <div class="box_home-element box13">
-                <a routerLink="videos"><img class="card-img-top"   src="../../../assets/ESCOBARMERIDIANO.jpg" alt="Eduaro Escobar"></a>
-            </div>
-            <div class=" box22">
 
-                <p class="text-box-columna">Eduardo Escobar la sigue viendo clarita en la campaña, y  despachó el cuadrangular número 15 de la temporada. 
-                  <a routerLink="videos" class="badge badge-warning badge-size RLink">Noticias</a></p>
-            </div>
-            </div> -->
+      <div class="lideres1 lideresAll lideres_Columna2 ">
+          <a class="subtitulo_Lideres_a" routerLink="lideres">
+            <h4 class="subtitulo_Lideres">AVERAGE</h4>
+          </a>
+          <table class="table   text-center tableAVG_nvo">
+  
+            <thead class="table-header">
+              <tr class="encabezado">
+                <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
+                <th class="tbA" style="width: 5%;" scope="col">VB</th>
+                <th class="tbA1" style="width: 5%;" scope="col">AVG</th>
+              </tr>
+            </thead>
+            <tbody class="table-header2">
+              <tr *ngFor="let jugador of filtroTopCincoAvg('avg')">
+                <a routerLink="playerinfo/{{jugador.id}}" class="link_player">
+                  <td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td>
+                </a>
+                <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+                <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+            </tbody>
+          </table>
+        </div>
+
+
+
+
+
+
       <div class="container2_Colummna2">
         <div class="box_home-element box22">
             <a routerLink="news"><img class="card-img-top" src="../../../assets/ESCOBARMERIDIANO.jpg" alt="Eduaro Escobar"></a>
@@ -152,19 +170,19 @@
       <hr>
         <div class="noticias_lateral_P"><a routerLink="news" class="columna3_alink">
           <ul>
-            <li>Miguel Cabrera fuera de acción por molestias en una rodilla.</li><hr>
-            <li>Jhoulys Chacín a lista de lesionados de Milwaukee.</li><hr>
-            <li>Avisaíl García le echó piernas para llegar a diez jonrones.</li><hr>
-            <li>La rodilla operada sigue dándole guerra a Altuve.</li><hr>
-            <li>La élite del poder en Venezuela tiene un nuevo nombre: Renato Núñez.</li><hr>
-            <li>¡El rey está casi listo! Félix Hernández podría volver pronto a la lomita!.</li><hr>
-            <li>José Osuna consiguió su primer remolque del año en caída bucanera.</li><hr>
-            <li>Yonny Chirinos pitcheó como los dioses en triunfo de los Rays.</li><hr>
-            <li class="li10">¿Tiene Carlos González futuro en Grandes Ligas?.</li><hr>
-            <li class="li11">Willson Contreras lleva varios días desatado con el madero.</li><hr>
-            <li class="li12">Palazos kilométricos en MLB tienen tinte tricolor.</li><hr>
-            <li class="li13">Así se vacilaron el Día de las Madres los venezolanos en Grandes Ligas.</li><hr>
-            <li class="li14">La historia de Gerardo Parra y los Nacionales tuvo un estreno de película.</li><hr>
+            <li class="li02">Miguel Cabrera fuera de acción por molestias en una rodilla.</li><hr class="li02">
+            <li class="li03">Jhoulys Chacín a lista de lesionados de Milwaukee.</li><hr class="li03">
+            <li class="li04">Avisaíl García le echó piernas para llegar a diez jonrones.</li><hr class="li04">
+            <li class="li05">La rodilla operada sigue dándole guerra a Altuve.</li><hr class="li05">
+            <li class="li06">La élite del poder en Venezuela tiene un nuevo nombre: Renato Núñez.</li><hr class="li06">
+            <li class="li07">¡El rey está casi listo! Félix Hernández podría volver pronto a la lomita!.</li><hr class="li07">
+            <li class="li08">José Osuna consiguió su primer remolque del año en caída bucanera.</li><hr class="li08">
+            <li class="li09">Yonny Chirinos pitcheó como los dioses en triunfo de los Rays.</li><hr class="li09">
+            <li class="li10">¿Tiene Carlos González futuro en Grandes Ligas?.</li><hr class="li10">
+            <li class="li11">Willson Contreras lleva varios días desatado con el madero.</li><hr class="li11">
+            <li class="li12">Palazos kilométricos en MLB tienen tinte tricolor.</li><hr class="li12">
+            <li class="li13">Así se vacilaron el Día de las Madres los venezolanos en Grandes Ligas.</li><hr class="li13">
+            <li class="li14">La historia de Gerardo Parra y los Nacionales tuvo un estreno de película.</li><hr class="li14">
             <!-- <li>Nacionales firman por un año a Gerardo Parra.</li><hr>
             <li>José Altuve donó 500.000 dólares a iniciativas de impacto social de Empresas Polar.</li> -->
           </ul>
