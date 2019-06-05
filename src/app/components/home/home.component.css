@@ -272,6 +272,11 @@ text-shadow: none !important;
   cursor: pointer;
   margin-left: 1rem;
 }
+.badge-size1 {
+  font-size: 1vw !important; 
+  box-shadow: 2px 2px 18px black;
+  margin-left: 1rem;
+}
 
 .columna3 {
   grid-column: 3/4;

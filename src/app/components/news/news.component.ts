@@ -128,9 +128,9 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('http://www.meridiano.com.ve/beisbol/beisbol-grandes-ligas/194386/escobar-la-sigue-viendo-clarita-en-la-campana---video-.html' , '_blank');
+          window.open('https://www.mlb.com/es/news/grand-slam-de-miguel-y-tigres-rompen-mala-racha' , '_blank');
   } else if (this.num === 'video3G') {
-    window.open(' https://beisbol.americadigital.com/2019/06/01/miguel-cabrera-fuera-de-accion-por-molestias-en-una-rodilla/', '_blank');
+    window.open(' http://www.meridiano.com.ve/beisbol/beisbol-grandes-ligas/194386/escobar-la-sigue-viendo-clarita-en-la-campana---video-.html', '_blank');
   } else if (this.num === 'video4G') {
     window.open('https://www.mlb.com/es/news/jhoulys-chacin-a-lista-de-lesionados-de-cerveceros', '_blank');
   } else if (this.num === 'video5G') {
