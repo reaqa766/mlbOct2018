@@ -52,10 +52,10 @@ export class NovatosComponent implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    console.log('players', this.players);
-    console.log('allItems', this.allItems);
-    console.log('año', this.añoEnCurso);
-    console.log(this.date);
+    // console.log('players', this.players);
+    // console.log('allItems', this.allItems);
+    // console.log('año', this.añoEnCurso);
+    // console.log(this.date);
 
     // console.log('FilterPlayers', this.filterPlayers);
 
@@ -67,7 +67,7 @@ export class NovatosComponent implements OnInit {
   // Convertir el Array de Observables a un Array de Objetos.
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
-    let InfoObsPlayer = this.playerService.getAllPlayersActives();
+    let InfoObsPlayer = this.playerService. getAllRookiesActives();
     // let InfoObsPlayer = this.playerService.getAllPlayersActives();
     let index = 0;
     for (let obs of InfoObsPlayer) {

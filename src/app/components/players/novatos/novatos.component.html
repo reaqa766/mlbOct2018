@@ -1,7 +1,8 @@
 <div class="container-actives">
-    <h1 class="bioActives-title">NOVATOS ACTIVOS</h1>
-  <p class="title-position"> Temporada Regular 2019 </p>
-  <h6 class="title-aclaratoria"> * Los Novatos que no están en Grandes Ligas no aparecen en este listado. </h6>
+    <h1 class="bioActives-title">CLASE 2019</h1>
+    <!-- <h1 class="bioActives-title">NOVATOS ACTIVOS</h1> -->
+  <p class="bioActives-title"> Temporada Regular 2019 </p>
+  <!-- <h6 class="title-aclaratoria"> * Los Novatos que no están en Grandes Ligas no aparecen en este listado. </h6> -->
 
 
   <!--LOADER -->
@@ -19,30 +20,35 @@
     </div>
     </div>
 
-    <ng-container *ngIf="!(pager.allItems === 0)">
+    <!-- <ng-container *ngIf="!(pager.allItems === 0)"> -->
 
       <div class="container-actives_cards ">
-        <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
-          <div class="card card1 img_picture_box" style="width: 95%;" *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
-              <div *ngIf="player.primaryPosition.code !== '1'" ><a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a></div>
-              <div *ngIf="player.primaryPosition.code === '1'" > <a routerLink="/pitcherinfo/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a></div>
+        <!-- <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)"> -->
+          <div class="card card1 img_picture_box" style="width: 95%;" *ngFor="let player of allItems ">
+          <!-- <div class="card card1 img_picture_box" style="width: 95%;" *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize"> -->
+              <div *ngIf="player.primaryPosition.code !== '1'" ><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
+              <div *ngIf="player.primaryPosition.code === '1'" > <img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
+              <!-- <div *ngIf="player.primaryPosition.code !== '1'" ><a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a></div>
+              <div *ngIf="player.primaryPosition.code === '1'" > <a routerLink="/pitcherinfo/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a></div> -->
 
               <div class="card-body">
               <h5 class="card-title">{{player.fullName}}</h5>
             </div>
           </div>
-        </ng-container>
-        <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
+        <!-- </ng-container> -->
+        <!-- <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
           <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*7)">
-              <div *ngIf="player.primaryPosition.code !== '1'" ><a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a></div>
-              <div *ngIf="player.primaryPosition.code === '1'" > <a routerLink="/pitcherinfo/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a></div>
-            <div class="card-body">
+              <div *ngIf="player.primaryPosition.code !== '1'" ><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
+              <div *ngIf="player.primaryPosition.code === '1'" > <img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></div> -->
+              <!-- <div *ngIf="player.primaryPosition.code !== '1'" ><a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a></div>
+              <div *ngIf="player.primaryPosition.code === '1'" > <a routerLink="/pitcherinfo/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a></div> -->
+            <!-- <div class="card-body">
               <h5 class="card-title">{{player.fullName}} </h5>
             </div>
           </div>
-        </ng-container>
+        </ng-container> -->
       </div>
-      <div class="container paginator">
+      <!-- <div class="container paginator">
         <div class="text-center">
           <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
             <li *ngIf="pager.currentPage !== 1" [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
@@ -62,8 +68,8 @@
             </li>
           </ul>
         </div>
-      </div>
-    </ng-container>
+      </div> -->
+    <!-- </ng-container> -->
   </div>
   </div>
 

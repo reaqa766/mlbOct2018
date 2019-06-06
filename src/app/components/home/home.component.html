@@ -1,6 +1,242 @@
 <div class="container_total">
+  <div class="container_superior">
+
+    <div class="columna1">
+      <div class="lideres1 lideresAll ">
+        <a class="subtitulo_Lideres_a" routerLink="lideres">
+          <h4 class="subtitulo_Lideres">AVERAGE</h4>
+        </a>
+        <table class="table   text-center tableAVG_nvo">
+
+          <thead class="table-header">
+            <tr class="encabezado">
+              <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
+              <th class="tbA" style="width: 5%;" scope="col">VB</th>
+              <th class="tbA1" style="width: 5%;" scope="col">AVG</th>
+            </tr>
+          </thead>
+          <tbody class="table-header2">
+            <tr *ngFor="let jugador of filtroTopCincoAvg('avg')">
+              <a routerLink="playerinfo/{{jugador.id}}" class="link_player">
+                <td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td>
+              </a>
+              <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+              <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="lideres2 lideresAll ">
+        <h4 class="subtitulo_Lideres">JONRONES</h4>
+        <table class="table   text-center tableAVG_nvo">
+          <thead class="table-header">
+            <tr class="encabezado">
+              <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
+              <th class="tbA" style="width: 5%;" scope="col">VB</th>
+              <th class="tbA1" style="width: 5%;" scope="col">HR</th>
+            </tr>
+          </thead>
+
+          <tbody class="table-header2">
+            <tr *ngFor="let jugador of filtroTopCinco('homeRuns')">
+              <a routerLink="playerinfo/{{jugador.id}}" class="link_player">
+                <td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td>
+              </a>
+              <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+              <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.homeRuns}}</td>
+          </tbody>
+
+        </table>
+      </div>
+      <div class="lideres3 lideresAll ">
+
+        <h4 class="subtitulo_Lideres">CARRERAS EMPUJADAS</h4>
+
+        <table class="table   text-center tableAVG_nvo">
+          <thead class="table-header">
+            <tr class="encabezado">
+              <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
+              <th class="tbA" style="width: 5%;" scope="col">VB</th>
+              <th class="tbA1" style="width: 5%;" scope="col">CE</th>
+            </tr>
+          </thead>
+
+          <tbody class="table-header2">
+            <tr *ngFor="let jugador of filtroTopCinco('rbi')">
+              <a routerLink="playerinfo/{{jugador.id}}" class="link_player">
+                <td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td>
+              </a>
+              <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+              <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.rbi}}</td>
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+    <div class="columna2">
+      <div class="container1_Colummna2">
+        <div class="box_home-element boxA1">
+          <a routerLink="news"><img class="card-img-top img_Desktop" src="../../../assets/Miguel_Grand_Slam.JPG" alt="Miguel Cabrera"></a>
+          <a routerLink="news"><img class="card-img-top img_Mobile" src="../../../assets/Miguel_Grand_SlamNews.jpg" alt="Miguel Cabrera"></a>
+        </div>
+        <div class=" boxA2">
+
+          <p class="text-box-columna">Grand slam de Miguel y Tigres rompen mala racha. Cabrera conectó un grand slam entre sus 3 hits para que los de Detroit rompieran 
+            una racha de 10 derrotas consecutivas como locales.<a routerLink="news" class="badge badge-warning badge-size RLink">Noticias</a></p>
+        </div>
+      </div>
+
+      <div class="lideres1 lideresAll lideres_Columna2 ">
+          <a class="subtitulo_Lideres_a" routerLink="lideres">
+            <h4 class="subtitulo_Lideres">AVERAGE</h4>
+          </a>
+          <table class="table   text-center tableAVG_nvo">
+  
+            <thead class="table-header">
+              <tr class="encabezado">
+                <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
+                <th class="tbA" style="width: 5%;" scope="col">VB</th>
+                <th class="tbA1" style="width: 5%;" scope="col">AVG</th>
+              </tr>
+            </thead>
+            <tbody class="table-header2">
+              <tr *ngFor="let jugador of filtroTopCincoAvg('avg')">
+                <a routerLink="playerinfo/{{jugador.id}}" class="link_player">
+                  <td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td>
+                </a>
+                <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+                <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+            </tbody>
+          </table>
+        </div>
+
+
+
+
+
+
+      <div class="container2_Colummna2">
+        <div class="box_home-element box22">
+            <a routerLink="news"><img class="card-img-top" src="../../../assets/ESCOBARMERIDIANO.jpg" alt="Eduaro Escobar"></a>
+          </div>
+        <div class="box222">
+            <p class="text-box-columna">Eduardo Escobar la sigue viendo clarita en la campaña, y despachó el cuadrangular
+                número 15 de la temporada.<a routerLink="news" class="badge badge-warning badge-size RLink">Noticias</a></p>
+                <!-- </a><span class="badge badge-warning badge-size"><a routerLink="videos" class="RLink">Videos</a></span></p> -->
+
+        </div>
+      </div>
+      <div class="container3_Colummna2">
+        <div class="box_home-element box33">
+            <a routerLink="videos"><img class="card-img-top" src="../../../assets/CarGoCatch.JPG" alt="Carlos Gonzalez Cubs"></a>
+
+
+        </div>
+        <div class="box333">
+            <p class="text-box-columna">Increíble la atrapada de cabeza de Carlos González. Esa es la forma en que
+                realiza el debut en un nuevo equipo.<a routerLink="videos" class="badge badge-warning badge-size RLink">Videos</a></p>
+    
+        </div>
+      </div>
+      <div class="container4_Colummna2">
+        <div class="box_home-element box44">
+            <a><img class="card-img-top" src="../../../assets/LETRASYPODCASTS.jpg" alt="Carlos Gonzalez Cubs"></a>
+        </div>
+        <div class=" box444">
+            <p class="text-box-columna">Se te gusta leer o escuchar excelente contenido sobre béisbol aquí los puedes
+                encontrar. <a routerLink="letrasybeisbol" class="ver-mas"> Letras y Béisbol
+                </a> <a routerLink="podCasts/TalkBeisbol" class="ver-mas"> -- Talk Béisbol</a><span class="badge badge-warning badge-size1 ">Especiales</span>
+
+          
+        </div>
+      </div>
+      <div class="container5_Colummna2">
+        <div class="box_home-element box55">
+          <a routerLink="novatos"><img class="card-img-top" src="../../../assets/NOVATOS.JPG" alt="Novatos 2019"></a>
+        </div>
+        <div class=" box555">
+
+          <p class="text-box-columna">Si quieres saber quienes on los nuevos integrantes de los Arepa Players en la MLB, en esta sección los puedes ubicar.
+            <a routerLink="novatos" class="badge badge-warning badge-size RLink">Novatos 2019</a></p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="columna3">
+      <div class="noticias_lateral">
+        <p class="noticias_lateral_titulo">Noticias</p>
+      <hr>
+        <div class="noticias_lateral_P"><a routerLink="news" class="columna3_alink">
+          <ul>
+            <li class="li02">Miguel Cabrera fuera de acción por molestias en una rodilla.</li><hr class="li02">
+            <li class="li03">Jhoulys Chacín a lista de lesionados de Milwaukee.</li><hr class="li03">
+            <li class="li04">Avisaíl García le echó piernas para llegar a diez jonrones.</li><hr class="li04">
+            <li class="li05">La rodilla operada sigue dándole guerra a Altuve.</li><hr class="li05">
+            <li class="li06">La élite del poder en Venezuela tiene un nuevo nombre: Renato Núñez.</li><hr class="li06">
+            <li class="li07">¡El rey está casi listo! Félix Hernández podría volver pronto a la lomita!.</li><hr class="li07">
+            <li class="li08">José Osuna consiguió su primer remolque del año en caída bucanera.</li><hr class="li08">
+            <li class="li09">Yonny Chirinos pitcheó como los dioses en triunfo de los Rays.</li><hr class="li09">
+            <li class="li10">¿Tiene Carlos González futuro en Grandes Ligas?.</li><hr class="li10">
+            <li class="li11">Willson Contreras lleva varios días desatado con el madero.</li><hr class="li11">
+            <li class="li12">Palazos kilométricos en MLB tienen tinte tricolor.</li><hr class="li12">
+            <li class="li13">Así se vacilaron el Día de las Madres los venezolanos en Grandes Ligas.</li><hr class="li13">
+            <li class="li14">La historia de Gerardo Parra y los Nacionales tuvo un estreno de película.</li><hr class="li14">
+            <!-- <li>Nacionales firman por un año a Gerardo Parra.</li><hr>
+            <li>José Altuve donó 500.000 dólares a iniciativas de impacto social de Empresas Polar.</li> -->
+          </ul>
+          </a>
+          </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container_total">
     <div class="container_superior">
-      <!-- <div class="lideres"> -->
         <div class="lideres1">
             <a routerLink="lideres"><h4 class="subtitulo_Lideres1">LÍDERES</h4></a>
             <a class="subtitulo_Lideres_a"  routerLink="lideres"><h4 class="subtitulo_Lideres">AVERAGE</h4></a>
@@ -10,20 +246,15 @@
               <tr class="encabezado">
                 <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
                 <th class="tbA" style="width: 5%;" scope="col">VB</th>
-                <!-- <th class="tbA" style="width: 5%;" scope="col">HITS</th> -->
-                <!-- <th class="tbA" style="width: 3%;" scope="col">HR</th> -->
                 <th class="tbA1" style="width: 5%;" scope="col">AVG</th>
               </tr>
             </thead>
-            <!-- <table class="table  "> -->
             <tbody class="table-header2">
               <tr *ngFor="let jugador of filtroTopCincoAvg('avg')">
                 <a routerLink="playerinfo/{{jugador.id}}" class="link_player">
                   <td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td>
                 </a>
                 <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-                <!-- <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.hits}}</td> -->
-                <!-- <td class="tb3" style="width: 2%;">{{jugador.stats[0].splits[0].stat.homeRuns}}</td> -->
                 <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
             </tbody>
           </table>
@@ -36,19 +267,16 @@
                 <tr class="encabezado">
                   <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
                   <th class="tbA" style="width: 5%;" scope="col">VB</th>
-                  <!-- <th class="tbA" style="width: 5%;" scope="col">AVG</th> -->
                   <th class="tbA1" style="width: 5%;" scope="col">HR</th>
                 </tr>
               </thead>
 
-              <!-- <table class="table  "> -->
               <tbody class="table-header2">
                 <tr *ngFor="let jugador of filtroTopCinco('homeRuns')">
                   <a routerLink="playerinfo/{{jugador.id}}" class="link_player">
                     <td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td>
                   </a>
                   <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-                  <!-- <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td> -->
                   <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.homeRuns}}</td>
               </tbody>
 
@@ -64,39 +292,26 @@
                 <tr class="encabezado">
                   <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
                   <th class="tbA" style="width: 5%;" scope="col">VB</th>
-                  <!-- <th class="tbA" style="width: 5%;" scope="col">AVG</th> -->
                   <th class="tbA1" style="width: 5%;" scope="col">CE</th>
                 </tr>
               </thead>
 
-              <!-- <table class="table  "> -->
                 <tbody class="table-header2">
                   <tr *ngFor="let jugador of filtroTopCinco('rbi')">
                     <a routerLink="playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
                     <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-                    <!-- <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td> -->
                      <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.rbi}}</td>
                 </tbody>
 
             </table>
           </div>
-      <!-- </div> -->
-        <!-- <div class="foto_Central"> -->
           <div class="box_home-element box1">
-            <img class="card-img-top"   src="../../../assets/LETRASYPODCASTS.jpg" alt="Mari Montes TalkBeisbol">
-            <p class="text-box">Se te gusta leer o escuchar excelente contenido sobre béisbol en esas secciones los puedes encontrar. <a routerLink="letrasybeisbol" class="ver-mas"> Letras y Béisbol
-              </a> <a routerLink="podCasts/TalkBeisbol" class="ver-mas2"> -- Talk Béisbol</a>
-              
-             <p class="badge badge-warning"> <a routerLink="news" class="RLink">ESPECIALES</a></p>
+              <a routerLink="videos"><img class="card-img-top"   src="../../../assets/CarGoCatch.JPG" alt="Carlos Gonzalez Cubs"></a>
+              <p class="text-box">Increíble la atrapada de cabeza de Carlos González. Así se debuta en un equipo. <a routerLink="videos" class="ver-mas"> Ver más
+              </a>
+              <p class="badge badge-warning"><a routerLink="videos" class="RLink">VIDEOS</a></p>
           </div>
 
-          <!-- <div class="box_home-element box1">
-            <a routerLink="news"><img class="card-img-top"   src="../../../assets/RENATO.jpg" alt="Renato Nuñez"></a>
-            <p class="text-box">La élite del poder en Venezuela tiene un nuevo nombre: Renato Núñez. <a routerLink="news" class="ver-mas"> Ver más
-              </a>
-             <p class="badge badge-warning"> <a routerLink="news" class="RLink">NOTICIAS</a></p>
-          </div>
- -->
           <div class="box_home-element box2">
               <a routerLink="transacciones"><img class="card-img-top"   src="../../../assets/TRANSACCIONESHOME.jpg" alt="Modulo transacciones"></a>
               <p class="text-box">Puedes verificar diariamente que ocurre con tus ídolos y las Transacciones de MLB.<a routerLink="transacciones" class="ver-mas"> Ver más
@@ -105,17 +320,19 @@
 
           </div>
           <div class="box_home-element box3">
-              <a routerLink="videos"><img class="card-img-top"   src="../../../assets/AvisailPiernasVideo.JPG"  alt="Avisail García"></a>
-              <p class="text-box">García impulsó a Rays con HR dentro del parque.<a routerLink="videos" class="ver-mas"> Ver más
+              <a routerLink="news"> <img class="card-img-top"   src="../../../assets/ESCOBARMERIDIANO.jpg" alt="Eduaro Escobar">   </a>
+              <p class="text-box">Eduardo Escobar la sigue viendo clarita en la campaña. <a routerLink="news" class="ver-mas"> Ver más
                 </a>
-                <p class="badge badge-warning"><a routerLink="videos" class="RLink">VIDEOS</a></p>
-
+               <p class="badge badge-warning"> <a routerLink="news" class="RLink">NOTICIAS</a></p>
           </div>
 
         <div class="noticias_lateral">
           <p class="noticias_lateral_titulo">Noticias</p>
           <hr>
           <div class="noticias_lateral_P"><a routerLink="news">
+            <p class="noticias_p noti1">○ Miguel Cabrera fuera de acción por molestias en una rodilla .</p>
+            <p class="noticias_p noti1">○ Jhoulys Chacín a lista de lesionados de Milwaukee.</p>
+            <p class="noticias_p noti1">○ Avisaíl García le echó piernas para llegar a diez jonrones.</p>
             <p class="noticias_p noti1">○ La rodilla operada sigue dándole guerra a Altuve .</p>
             <p class="noticias_p noti1">○ La élite del poder en Venezuela tiene un nuevo nombre: Renato Núñez.</p>
             <p class="noticias_p noti1">○ Avisaíl García le echó piernas para llegar a diez jonrones.</p>
@@ -125,10 +342,6 @@
             <p class="noticias_p noti1">○ ¿Tiene Carlos González futuro en Grandes Ligas?.</p>
             <p class="noticias_p noti1">○ Willson Contreras lleva varios días desatado con el madero.</p>
             <p class="noticias_p noti1">○ Palazos kilométricos en MLB tienen tinte tricolor.</p>
-            <p class="noticias_p noti1">○ La historia de Gerardo Parra y los Nacionales tuvo un estreno de película.</p>
-            <p class="noticias_p noti1">○ Eugenio se agarró mayo para florecer.</p>
-            <p class="noticias_p noti1">○ Nacionales firman por un año a Gerardo Parra.</p>
-            <!-- <p class="noticias_p noti4">○ Ronald Acuña fuera del lineup por problemas físicos.</p>--> </a>
           </div>
         </div>
       </div>
@@ -146,11 +359,9 @@
           </div>
 
           <div class="box_home-element2 box">
-              <a routerLink="playeroftheweek"><img class="card-img-top"   src="../../../assets/JUGADORESDELASEMANA4HOME.jpg" alt="Venezuelans in MLB 2018"></a>
-              <p class="text-box">Cada semana se presenta el que  de acuerdo
-                a determinados parámetros logró destacarse.<a routerLink="playeroftheweek" class="ver-mas"> Ver más
-                </a>
-                <p class="badge badge-warning"><a routerLink="playeroftheweek" class="RLink">JUGADOR DE LA SEMANA</a></p>
+              <a routerLink="playeroftheweek"><img class="card-img-top"   src="../../../assets/LETRASYPODCASTSABAJO.jpg" alt="Mari Montes TalkBeisbol"></a>
+              <p class="text-box">Se te gusta leer o escuchar excelente contenido sobre béisbol en esas secciones los puedes encontrar. <a routerLink="letrasybeisbol" class="ver-mas"> Letras y Béisbol
+              </a> <a routerLink="podCasts/TalkBeisbol" class="ver-mas2"> -- Talk Béisbol</a>
 
           </div>
           <div class="box_home-element13 box">
@@ -163,10 +374,11 @@
           </div>
 
           <div class="box_home-element23 box">
-              <a routerLink="infog_Show"><img class="card-img-top"  src="../../../assets/VZLA EN MLB PORTADACORTADO22.jpg" alt="infographics page link"></a>
-              <p class="text-box">Infografías, disfruta de los datos relevantes de la MLB y los Vinotintos de una forma
-                práctica.<a routerLink="infog_Show" class="ver-mas">
-                  Ver más </a> </p>
-                  <p class="badge badge-warning"><a routerLink="infog_Show" class="RLink">INFOGRAFÍAS</a></p>
+            <a routerLink="playeroftheweek"><img class="card-img-top"   src="../../../assets/JUGADORESDELASEMANA4HOME.jpg" alt="Venezuelans in MLB 2018"></a>
+            <p class="text-box">Cada semana se presenta el que  de acuerdo
+              a determinados parámetros logró destacarse.<a routerLink="playeroftheweek" class="ver-mas"> Ver más
+              </a>
+              <p class="badge badge-warning"><a routerLink="playeroftheweek" class="RLink">JUGADOR DE LA SEMANA</a></p>
 
-          </div>
+
+          </div> -->
