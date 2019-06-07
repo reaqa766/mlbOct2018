@@ -16,7 +16,8 @@ export class PodcastsComponent implements OnInit {
   {number: 2, url: '../../../../assets/EPISODIO2TalkBeisbol2daTemp2019.jpg'},
     {number: 3, url: '../../../../assets/EPISODIO3TalkBeisbol2daTemp2019.jpg'},
     {number: 4,url: '../../../../assets/EPISODIO4TalkBeisbol2daTemp2019pqno.jpg'},
-    {number: 4,url: '../../../../assets/EPISODIO 5 Talk Beisbol 2da Temp. 2019.jpg'},
+    {number: 5,url: '../../../../assets/EPISODIO 5 Talk Beisbol 2da Temp. 2019.jpg'},
+    {number: 6,url: '../../../../assets/EP6TB2daT. 2019.jpg'},
   ];
 
 
@@ -42,8 +43,13 @@ export class PodcastsComponent implements OnInit {
   {
     this.num = 'PodCast4D';
   }
+  else if (i === 5) 
   {
     this.num = 'PodCast5D';
+  }
+  else if (i === 6) 
+  {
+    this.num = 'PodCast6D';
   }
 }
 
@@ -64,31 +70,9 @@ export class PodcastsComponent implements OnInit {
     window.open('https://talkbeisbol.podbean.com/e/episodio-4-segunda-temporada-1558659319/', '_blank');
   } else if (this.num === 'PodCast5D') {
     window.open('https://talkbeisbol.podbean.com/e/episodio-5-segunda-temporada-1559233360/', '_blank');
+  } else if (this.num === 'PodCast6D') {
+    window.open('https://talkbeisbol.podbean.com/e/episodio-6-2da-temporada/', '_blank');
 
-  // } else if (this.num === 'PodCast2A') {
-  //   window.open('https://www.mlb.com/es/nationals/PodCast/grand-slam-de-parra-en-la-8va', '_blank');
-  // } else if (this.num === 'PodCast3A') {
-  //   window.open('https://www.mlb.com/PodCast/prado-s-backhanded-stop', '_blank');
-  // } else if (this.num === 'PodCast4A') {
-  //   window.open('https://www.mlb.com/es/rockies/PodCast/marquez-does-it-on-each-side', '_blank');
-  // } else if (this.num === 'PodCast2') {
-  //   window.open('https://www.mlb.com/news/freddy-galvis-makes-barehand-catch', '_blank');
-  // } else if (this.num === 'PodCast3') {
-  //   window.open('https://www.mlb.com/es/PodCast/andrelton-simmons-lines-out-to-third-baseman-asdrubal-cabrera', '_blank');
-  // } else if (this.num === 'PodCast4') {
-  //   window.open('https://www.mlb.com/yankees/news/gleyber-torres-homers-twice-vs-orioles', '_blank');
-  // } else if (this.num === 'PodCast21') {
-  //   window.open('https://www.mlb.com/news/freddy-galvis-makes-barehand-catch', '_blank');
-  // } else if (this.num === 'PodCast31') {
-  //   window.open('https://www.mlb.com/es/PodCast/andrelton-simmons-lines-out-to-third-baseman-asdrubal-cabrera', '_blank');
-  // } else if (this.num === 'PodCast41') {
-  //   window.open('https://www.mlb.com/yankees/news/gleyber-torres-homers-twice-vs-orioles', '_blank');
-  // } else if (this.num === 'PodCast5') {
-  //   window.open('https://www.mlb.com/es/PodCast/bambinazo-de-altuve', '_blank');
-  // } else if (this.num === 'PodCast6') {
-  //   window.open('https://www.mlb.com/es/PodCast/willians-astudillo-homers-1-on-a-fly-ball-to-left-field', '_blank');
-  // } else if (this.num === 'PodCast7') {
-  //   window.open('https://www.mlb.com/es/PodCast/sandoval-pega-doble-impulsador', '_blank');
   }
   }
 
