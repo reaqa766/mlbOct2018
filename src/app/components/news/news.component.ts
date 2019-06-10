@@ -128,7 +128,7 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://www.mlb.com/es/news/grand-slam-de-miguel-y-tigres-rompen-mala-racha' , '_blank');
+          window.open('http://www.meridiano.com.ve/beisbol/beisbol-grandes-ligas/194703/altuve-sigue-evolucionando-aun-sin-fecha-de-regreso.html' , '_blank');
   } else if (this.num === 'video3G') {
     window.open(' http://www.meridiano.com.ve/beisbol/beisbol-grandes-ligas/194386/escobar-la-sigue-viendo-clarita-en-la-campana---video-.html', '_blank');
   } else if (this.num === 'video4G') {

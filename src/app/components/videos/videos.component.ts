@@ -74,13 +74,13 @@ export class VideosComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video1') {
-          window.open('https://www.mlb.com/video/cargo-s-nice-sliding-catch', '_blank');
+          window.open('http://www.meridiano.com.ve/beisbol/beisbol-grandes-ligas/194711/acuna-destapo-su-14to-bombazo-en-victoria-de-bravos-sobre-marlins---video-.html', '_blank');
   } else if (this.num === 'video2E') {
-    window.open('https://www.mlb.com/es/news/garcia-impulso-a-rays-con-hr-dentro-del-parque', '_blank');
+    window.open('https://www.mlb.com/video/cargo-s-nice-sliding-catch', '_blank');
   } else if (this.num === 'video3E') {
-    window.open('https://www.mlb.com/es/news/hr-arcia-corona-remontada-milwaukee', '_blank');
+    window.open('https://www.mlb.com/es/news/garcia-impulso-a-rays-con-hr-dentro-del-parque', '_blank');
   } else if (this.num === 'video4E') {
-    window.open('https://www.mlb.com/es/news/yankees-triunfan-detras-de-dos-jonrones-de-torres', '_blank');
+    window.open('https://www.mlb.com/es/news/hr-arcia-corona-remontada-milwaukee', '_blank');
   } else if (this.num === 'video2D') {
     window.open('https://www.mlb.com/es/news/ronald-acuna-prende-los-motores-como-primer-bate', '_blank');
   } else if (this.num === 'video3D') {
