@@ -5,10 +5,10 @@ header div  h1 {
   text-shadow: 2px 2px 8px #111;
 }
 
-input[type="date"]:not(.has-value):before {
+/* input[type="date"]:not(.has-value):before {
   color: #6c757d;
   content: attr(placeholder);
-}
+} */
 
 .title_page {
   color: antiquewhite;

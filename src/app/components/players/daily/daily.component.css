@@ -11,6 +11,16 @@
     border-radius: 7px;
 }
 
+/* input[type="date"]:before {
+    content: attr(placeholder) !important;
+    color: #aaa;
+    margin-right: 0.5em;
+  }
+  input[type="date"]:focus:before,
+  input[type="date"]:valid:before {
+    content: "";
+  } */
+
 .espacioInferior {
     margin-bottom: 1rem;
   }

@@ -2,7 +2,7 @@
   <a class="navbar-brand nav-link" routerLink="/">
     <img class="nav-img" src="../../../assets/Logo VinotintosMLB.png" width="40" height="40" alt="">
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+  <button id="btnMenu" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -15,36 +15,36 @@
         </a>
         <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
           <a class="dropdown-item sub_Menu_Titulo" >BATEO</a>
-          <a class="dropdown-item" routerLink="daily">Actuación Diaria</a>
-          <a class="dropdown-item" routerLink="qpasohoy">Jonroneros de Ayer</a>
-          <a class="dropdown-item" routerLink="actives">Temporada 2019 </a>
-          <a class="dropdown-item" routerLink="bioActives">Biografía </a>
+          <a class="dropdown-item" (click)="closeMenu()" (click)="closeMenu()" routerLink="daily">Actuación Diaria</a>
+          <a class="dropdown-item" (click)="closeMenu()" routerLink="qpasohoy">Jonroneros de Ayer</a>
+          <a class="dropdown-item" (click)="closeMenu()" routerLink="actives">Temporada 2019 </a>
+          <a class="dropdown-item" (click)="closeMenu()" routerLink="bioActives">Biografía </a>
 
 
           <div class="dropdown-divider"></div>
           <a class="dropdown-item sub_Menu_Titulo">PITCHEO</a>
-          <a class="dropdown-item" routerLink="p_daily">Actuación Diaria</a>
-          <a class="dropdown-item" routerLink="p_byteam">Por equipo</a>
-          <a class="dropdown-item" routerLink="p_actives">Temporada 2019 </a>
-          <a class="dropdown-item" routerLink="p_bio">Biografía </a>
+          <a class="dropdown-item" (click)="closeMenu()" routerLink="p_daily">Actuación Diaria</a>
+          <a class="dropdown-item" (click)="closeMenu()" routerLink="p_byteam">Por equipo</a>
+          <a class="dropdown-item" (click)="closeMenu()" routerLink="p_actives">Temporada 2019 </a>
+          <a class="dropdown-item" (click)="closeMenu()" routerLink="p_bio">Biografía </a>
 
           <div class="dropdown-divider"></div>
           <a class="dropdown-item sub_Menu_Titulo">ORGANIZADOS POR</a>
-          <a class="dropdown-item" routerLink="team">Equipo MLB</a>
-          <a class="dropdown-item" routerLink="position">Posición Defensiva</a>
-          <a class="dropdown-item" routerLink="equipoVzla">Equipo en Venezuela </a>
-          <a class="dropdown-item" routerLink="estadoVzla">Estado de Origen en Venezuela </a>
+          <a class="dropdown-item" (click)="closeMenu()" routerLink="team">Equipo MLB</a>
+          <a class="dropdown-item" (click)="closeMenu()" routerLink="position">Posición Defensiva</a>
+          <a class="dropdown-item" (click)="closeMenu()" routerLink="equipoVzla">Equipo en Venezuela </a>
+          <a class="dropdown-item" (click)="closeMenu()" routerLink="estadoVzla">Estado de Origen en Venezuela </a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="transacciones">Transacciones </a>
+          <a class="dropdown-item" (click)="closeMenu()" routerLink="transacciones">Transacciones </a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="novatos">Novatos 2019 </a>
+          <a class="dropdown-item" (click)="closeMenu()" routerLink="novatos">Novatos 2019 </a>
         </div>
     </li>
       <li class="nav-item mr-4">
-        <a class="nav-link cerrarClick" routerLink="playeroftheweek">Jugador de la Semana </a>
+        <a class="nav-link cerrarClick"(click)="closeMenu()"  routerLink="playeroftheweek">Jugador de la Semana </a>
       </li>
       <li class="nav-item mr-4">
-        <a class="nav-link" routerLink="lideres">Líderes </a>
+        <a class="nav-link" (click)="closeMenu()" routerLink="lideres">Líderes </a>
       </li>
 
       <li class="nav-item mr-2 dropdown">
@@ -53,16 +53,16 @@
           Equipos
         </a>
         <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" routerLink="posiciones"> Posiciones </a>
-          <a class="dropdown-item" routerLink="resultados"> Resultados de Hoy </a>
-          <a class="dropdown-item" routerLink="resultadosAyer"> Resultados de Ayer </a>
+          <a class="dropdown-item" (click)="closeMenu()" routerLink="posiciones"> Posiciones </a>
+          <a class="dropdown-item" (click)="closeMenu()" routerLink="resultados"> Resultados de Hoy </a>
+          <a class="dropdown-item" (click)="closeMenu()" routerLink="resultadosAyer"> Resultados de Ayer </a>
         </div>
       </li>
       <li class="nav-item mr-4">
-        <a class="nav-link" routerLink="news">Noticias</a>
+        <a class="nav-link" (click)="closeMenu()" routerLink="news">Noticias</a>
       </li>
       <li class="nav-item mr-4">
-        <a class="nav-link" routerLink="letrasybeisbol">Letras y Béisbol</a>
+        <a class="nav-link" (click)="closeMenu()" routerLink="letrasybeisbol">Letras y Béisbol</a>
       </li>
       <li class="nav-item mr-4 dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -70,20 +70,21 @@
           Multimedia
         </a>
         <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" routerLink="videos">Videos</a>
+          <a class="dropdown-item" (click)="closeMenu()" routerLink="videos">Videos</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="infog_Show">Infografías </a>
+          <a class="dropdown-item" (click)="closeMenu()" routerLink="infog_Show">Infografías </a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="podCasts">PodCasts</a>
+          <a class="dropdown-item" (click)="closeMenu()" routerLink="podCasts">PodCasts</a>
         </div>
       </li>
       <li class="nav-item mr-4">
-        <a class="nav-link" routerLink="contactUs">Contáctenos</a>
+        <a class="nav-link" (click)="closeMenu()" routerLink="contactUs">Contáctenos</a>
       </li>
       <li class="nav-item mr-4">
-        <a class="nav-link" routerLink="aboutUs">Nosotros</a>
+        <a class="nav-link" (click)="closeMenu()" routerLink="aboutUs">Nosotros</a>
       </li>
     </ul>
   </div>
+  
 </nav>
 

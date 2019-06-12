@@ -32,6 +32,12 @@ export class MenuComponent implements OnInit {
     
   }
 
+  closeMenu(){
+    if( window.innerWidth < 1024 ){
+      document.getElementById('btnMenu').click();
+    }
+  }
+
   onClickLogOut() {
     this.authService.logout();
     this.isLogin = false;
