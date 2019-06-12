@@ -37,7 +37,7 @@ export class AllplayersService {
   // Array de Codigo de Jugadores y Pitchers 2019 SP TRaining
   private playersCode = [
     600524, 602922, 570560, 408234,  622682,
-    455139, 553902, 501303, 503556,
+    455139, 553902, 501303, 503556, 623993,
     650402, 553882, 541645, 462101, 452678,
     596059, 520471, 500874, 467055, 467827,
     465041, 514917, 546318, 467092,
@@ -53,9 +53,9 @@ export class AllplayersService {
   ];
 
   private rookiesCode = [
-    650671, 642731, 621592, 602074, 650859, 
-    650333, 650382, 622786, 660761, 658648, 
-    
+    650671, 642731, 621592, 602074, 650859,
+    650333, 650382, 622786, 660761, 658648,
+
   ];
 
   private _url ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2019&hydrate=stats(type=season,season=2019,gameType=R)'
