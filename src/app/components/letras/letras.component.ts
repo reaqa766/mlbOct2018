@@ -56,7 +56,7 @@ export class LetrasComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://prodavinci.com/alfonso-carrasquel-el-cuentacuentos-del-campo-corto/', '_blank');
+          window.open('https://prodavinci.com/mm/', '_blank');
   } else if (this.num === 'video3E') {
     window.open('https://prodavinci.com/paciencia-la-virtud-de-bob-abreu/', '_blank');
   } else if (this.num === 'video4E') {
