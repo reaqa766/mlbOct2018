@@ -108,6 +108,7 @@ export class EstadoVzlaComponent implements OnInit {searchText: string;
                 {codigo:545064, nombre: 'Jairo Díaz', url: '../../../../assets/545064.jpg', estadoNac: 1, tipoJugador: 2},
                 {codigo:622682, nombre: 'Victor Reyes', url: '../../../../assets/622682.jpg', estadoNac: 1, tipoJugador: 1},
                 {codigo:623993, nombre: 'Anthony Santander', url: '../../../../assets/623993.jpg', estadoNac: 17, tipoJugador: 1},
+                {codigo:541600, nombre: 'Wilfredo Tovar', url: '../../../../assets/541600.jpg', estadoNac: 15, tipoJugador: 1},
                 // {codigo:660761, nombre: 'José Suarez', url: '../../../../assets/660761.jpg', estadoNac: 7, tipoJugador: 2},
                 // {codigo:622786, nombre: 'Jesús Tinoco', url: '../../../../assets/622786.jpg', estadoNac: 16, tipoJugador: 2},
 

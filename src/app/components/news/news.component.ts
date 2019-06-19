@@ -17,6 +17,15 @@ export class NewsComponent implements OnInit {
   video2() {
     this.num = 'video2';
   }
+  video3H() {
+    this.num = 'video3H';
+  }
+  video4H() {
+    this.num = 'video4H';
+  }
+  video5H() {
+    this.num = 'video5H';
+  }
   video3G() {
     this.num = 'video3G';
   }
@@ -128,7 +137,13 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://www.sportsvenezuela.com/felipe-vazquez-volvio-vestirse-de-salvador/' , '_blank');
+          window.open('http://www.liderendeportes.com/noticias/baseball/acuna-jr-lleva-un-ritmo-de-record/' , '_blank');
+  } else if (this.num === 'video3H') {
+    window.open(' http://www.liderendeportes.com/noticias/baseball/elias-diaz-le-saca-provecho-a-su-titularidad-en-pittsburgh/', '_blank');
+  } else if (this.num === 'video4H') {
+    window.open('https://www.sportsvenezuela.com/senzatela-rockies-cascabeles/', '_blank');
+  } else if (this.num === 'video5H') {
+    window.open('https://www.sportsvenezuela.com/felipe-vazquez-volvio-vestirse-de-salvador/ ', '_blank');
   } else if (this.num === 'video3G') {
     window.open(' http://www.meridiano.com.ve/beisbol/beisbol-grandes-ligas/194386/escobar-la-sigue-viendo-clarita-en-la-campana---video-.html', '_blank');
   } else if (this.num === 'video4G') {
