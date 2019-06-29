@@ -74,7 +74,7 @@ export class VideosComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video1') {
-          window.open('http://www.meridiano.com.ve/beisbol/beisbol-grandes-ligas/194859/gonzalez-descargo-el-octavo-para-la-calle---video-.html', '_blank');
+          window.open('http://www.meridiano.com.ve/beisbol/beisbol-grandes-ligas/195017/acuna-se-dio-un-festin-ante-filis---video-.html', '_blank');
   } else if (this.num === 'video2E') {
     window.open('https://www.mlb.com/video/cargo-s-nice-sliding-catch', '_blank');
   } else if (this.num === 'video3E') {

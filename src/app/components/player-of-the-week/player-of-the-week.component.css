@@ -36,7 +36,7 @@
   .containerGrid1 {
     grid-column: 1/2;
     grid-row: 1/2;
-    margin: 0 auto;
+    margin: 0 auto 2rem;
   }
   .containerGrid2 {
     grid-column: 2/3;
@@ -85,6 +85,11 @@
   }
   .containerGrid11 {
     grid-column: 2/3;
+    grid-row: 4/5;
+    margin: 0 auto 2rem;
+  }
+  .containerGrid12 {
+    grid-column: 3/4;
     grid-row: 4/5;
     margin: 0 auto 2rem;
   }
@@ -181,6 +186,12 @@
       width: 90%;
       grid-column: 1/2;
       grid-row: 11/12;
+      text-align: center;
+        }
+    .containerGrid12 {
+      width: 90%;
+      grid-column: 1/2;
+      grid-row: 12/13;
       text-align: center;
         }
 

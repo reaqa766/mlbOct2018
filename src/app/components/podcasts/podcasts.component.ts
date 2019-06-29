@@ -18,6 +18,7 @@ export class PodcastsComponent implements OnInit {
     {number: 4,url: '../../../../assets/EPISODIO4TalkBeisbol2daTemp2019pqno.jpg'},
     {number: 5,url: '../../../../assets/EPISODIO 5 Talk Beisbol 2da Temp. 2019.jpg'},
     {number: 6,url: '../../../../assets/EP6TB2daT. 2019.jpg'},
+    {number: 7,url: '../../../../assets/EPISODIO 7 Talk Beisbol 2da Temp. 2019.jpg'},
   ];
 
 
@@ -51,6 +52,10 @@ export class PodcastsComponent implements OnInit {
   {
     this.num = 'PodCast6D';
   }
+  else if (i === 7) 
+  {
+    this.num = 'PodCast7D';
+  }
 }
 
 
@@ -72,6 +77,8 @@ export class PodcastsComponent implements OnInit {
     window.open('https://talkbeisbol.podbean.com/e/episodio-5-segunda-temporada-1559233360/', '_blank');
   } else if (this.num === 'PodCast6D') {
     window.open('https://talkbeisbol.podbean.com/e/episodio-6-2da-temporada/', '_blank');
+  } else if (this.num === 'PodCast7D') {
+    window.open('https://talkbeisbol.podbean.com/e/episodio-7-segunda-temporada-1560305309/', '_blank');
 
   }
   }
