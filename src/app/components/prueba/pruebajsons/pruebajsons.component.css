@@ -21,9 +21,9 @@
 
 
 .tarjeta_encabezado {
-  width: 80%;
+  width: 85%;
   margin: 0.2em auto;
-  background-color: red;
+  background-color: rgb(20, 149, 167);
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -33,7 +33,6 @@
   border: solid black 2px;
 }
 .tarjeta_izquierda {
-  background-color: blue;
   grid-column: 1/2;
   grid-row: 1/2;
   color: white;
@@ -42,7 +41,7 @@
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 100px);
 }
 
 .items_estadisticas {
@@ -65,7 +64,7 @@
   grid-column: 1/2;
   grid-row: 4/5;
   color: white;
-  font-size: 1.2em;
+  font-size: 1.05em;
   text-align: center;
   font-weight: 500;
   align-self: center;
