@@ -1,221 +1,107 @@
-<div class="container_total">
-<div class="container_superior">
-  <!-- <div class="lideres"> -->
-    <div class="lideres1">
-        <h4 class="subtitulo_Lideres1">LÍDERES</h4>
-        <h4 class="subtitulo_Lideres">AVERAGE</h4>
-      <table class="table   text-center tableAVG_nvo">
+<div class="container_players_actives"></div>
+<div class="container-actives">
+  <h1 class="actives-title">Bateadores Activos</h1>
+</div>
 
-        <thead class="table-header">
-          <tr class="encabezado">
-            <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
-            <th class="tbA" style="width: 5%;" scope="col">VB</th>
-            <!-- <th class="tbA" style="width: 5%;" scope="col">HITS</th> -->
-            <!-- <th class="tbA" style="width: 3%;" scope="col">HR</th> -->
-            <th class="tbA1" style="width: 5%;" scope="col">AVG</th>
-          </tr>
-        </thead>
-        <!-- <table class="table  "> -->
-        <tbody class="table-header2">
-          <tr *ngFor="let jugador of filtroTopCincoAvg('avg')">
-            <a routerLink="/playerinfo/{{jugador.id}}" class="link_player">
-              <td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td>
-            </a>
-            <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-            <!-- <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.hits}}</td> -->
-            <!-- <td class="tb3" style="width: 2%;">{{jugador.stats[0].splits[0].stat.homeRuns}}</td> -->
-            <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
-        </tbody>
-      </table>
-    </div>
+<p class="title-position"> Temporada Regular 2019 </p>
+<!-- <p class="title-position"> TEMP. 2019 </p> -->
 
-    <div class="lideres2">
-        <h4 class="subtitulo_Lideres">JONRONES</h4>
-        <table class="table   text-center tableAVG_nvo">
-          <thead class="table-header">
-            <tr class="encabezado">
-              <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
-              <th class="tbA" style="width: 5%;" scope="col">VB</th>
-              <!-- <th class="tbA" style="width: 5%;" scope="col">AVG</th> -->
-              <th class="tbA1" style="width: 5%;" scope="col">HR</th>
-            </tr>
-          </thead>
+<!-- LOADER -->
+<div *ngIf="!allItems">
+  <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
+  <p class="spiner_load">CARGANDO</p>
+</div>
 
-          <!-- <table class="table  "> -->
-          <tbody class="table-header2">
-            <tr *ngFor="let jugador of filtroTopCinco('homeRuns')">
-              <a routerLink="/playerinfo/{{jugador.id}}" class="link_player">
-                <td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td>
-              </a>
-              <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-              <!-- <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td> -->
-              <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.homeRuns}}</td>
-          </tbody>
-
-        </table>
-      </div>
-
-        <div class="lideres3">
-
-        <h4 class="subtitulo_Lideres">CARRERAS EMPUJADAS</h4>
-
-        <table class="table   text-center tableAVG_nvo">
-            <thead class="table-header">
-            <tr class="encabezado">
-              <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
-              <th class="tbA" style="width: 5%;" scope="col">VB</th>
-              <!-- <th class="tbA" style="width: 5%;" scope="col">AVG</th> -->
-              <th class="tbA1" style="width: 5%;" scope="col">CE</th>
-            </tr>
-          </thead>
-
-          <!-- <table class="table  "> -->
-            <tbody class="table-header2">
-              <tr *ngFor="let jugador of filtroTopCinco('rbi')">
-                <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
-                <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-                <!-- <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td> -->
-                 <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.rbi}}</td>
-            </tbody>
-
-        </table>
-      </div>
-  <!-- </div> -->
-    <!-- <div class="foto_Central"> -->
-      <div class="box_home-element box1">
-        <a routerLink="news"><img class="card-img-top"   src="../../../assets/WASTUDILLOHOME.jpg" alt="Wuillians Astudillo"></a>
-        <p class="text-box">Reporte médico de los vinotintos o en lista de lesionados: Odúbel, Astudillo, y Cervelli. <a routerLink="news" class="ver-mas"> Ver más
-          </a>
-         <p class="badge badge-warning"> <a routerLink="news" class="RLink">NOTICIAS</a></p>
-      </div>
-
-      <div class="box_home-element box2">
-          <a routerLink="transacciones"><img class="card-img-top"   src="../../../assets/TRANSACCIONESHOME.jpg" alt="Modulo transacciones"></a>
-          <p class="text-box">Puedes verificar diariamente que ocurre con tus ídolos y las Transacciones de MLB.<a routerLink="transacciones" class="ver-mas"> Ver más
-            </a>
-            <p class="badge badge-warning"><a routerLink="transacciones" class="RLink">TRANSACCIONES</a></p>
-
-      </div>
-      <div class="box_home-element box3">
-          <a routerLink="videos"><img class="card-img-top"   src="../../../assets/GLEYBER homerun videoHOME.jpg" alt="Gleyber Homerun"></a>
-          <p class="text-box">Gleyber Torres bateó un Jonrón impulsor de dos carreras en el Juego contra San Francisco.<a routerLink="videos" class="ver-mas"> Ver más
-            </a>
-            <p class="badge badge-warning"><a routerLink="videos" class="RLink">VIDEOS</a></p>
-
-      </div>
-
-      <!-- <div class="box_home-element13 box">
-          <a routerLink="news"><img class="card-img-top"   src="../../../assets/vazquez010519HOME.jpg" alt="Felipe Vázquez"></a>
-          <p class="text-box">Felipe Vázquez se apuntó su séptimo rescate de la campaña con Pittsburgh. <a routerLink="news" class="ver-mas"> Ver más
-            </a>
-            <p class="badge badge-warning"><a routerLink="news" class="RLink">NOTICIAS</a></p>
-
-        </div>
-
-        <div class="box_home-element23 box">
-            <a routerLink="news"><img class="card-img-top"   src="../../../assets/Eduardo-EscobarHOME.jpg" alt="Eduardo Escobar"></a>
-            <p class="text-box">Eduardo Escobar es el Jugador de la Semana de la Liga Nacional.<a routerLink="news" class="ver-mas"> Ver más
-              </a>
-              <p class="badge badge-warning"><a routerLink="news" class="RLink">NOTICIAS</a></p>
-
-        </div> -->
-
-
-    <!-- </div> -->
-    <div class="noticias_lateral">
-      <p class="noticias_lateral_titulo">Noticias</p>
-      <hr>
-      <div class="noticias_lateral_P"><a routerLink="/news">
-        <p class="noticias_p noti1">Reporte médico: Odúbel, Astudillo, y Cervelli.</p>
-        <p class="noticias_p noti2">Pérez domina para guiar a Twins sobre Astros.</p>
-        <p class="noticias_p noti3">Sandy León le cambió la cara al pitcheo de Boston.</p>
-        <p class="noticias_p noti4">La fuerza de Jesús Aguilar volvió a aparecer.</p>
-         <p class="noticias_p noti4">Felipe Vázquez se apuntó su séptimo rescate de la campaña con Pittsburgh.</p>
-        <p class="noticias_p noti4">Eduardo Escobar es el Jugador de la Semana de la Liga Nacional.</p> </a>
-        <!--<p class="noticias_p">Reporte médico: Odúbel, Astudillo, y Cervelli.</p>
-        <p class="noticias_p">Reporte médico: Odúbel, Astudillo, y Cervelli.</p> -->
-      </div>
-    </div>
-    <!-- </div> -->
-  </div>
-
-
-<div class="container-home">
-  <div class="container_elements_home">
-    <!-- <div class="element-box1"> -->
-
-      <div class="box_home-element1 box">
-          <a routerLink="position"><img class="card-img-top card_img_inf_derecha"   src="../../../assets/POSICION1.jpg" alt="Noticias de Grandes Ligas"></a>
-          <p class="text-box">Donde juegan los vinotintosmlb en Grandes Ligas por posición defensiva: Segunda Base, Jardín Izquierdo, Catcher, etc. <a routerLink="position" class="ver-mas">
-              Ver más </a> </p>
-              <p class="badge badge-warning"><a routerLink="position" class="RLink">JUGADORES POR POSICIÓN</a></p>
-
-      </div>
-
-      <div class="box_home-element2 box">
-          <a routerLink="playeroftheweek"><img class="card-img-top"   src="../../../assets/JUGADORESDELASEMANA4HOME.jpg" alt="Venezuelans in MLB 2018"></a>
-          <p class="text-box">Cada semana se presenta el que  de acuerdo
-            a determinados parámetros logró destacarse.<a routerLink="playeroftheweek" class="ver-mas"> Ver más
-            </a>
-            <p class="badge badge-warning"><a routerLink="playeroftheweek" class="RLink">JUGADOR DE LA SEMANA</a></p>
-
-      </div>
-      <div class="box_home-element13 box">
-          <a routerLink="bioActives"><img class="card-img-top"  src="../../../assets/BIOGRAFIA2.jpg" alt="link a Venezolanos en Grandes Ligas "></a>
-          <p class="text-box">Biografía y Datos de los Vinotintos MLB. Puedes conocer más detalles de cada uno de los
-            jugadores venezolanos activos. <a routerLink="bioActives" class="ver-mas">
-              Ver más </a> </p>
-              <p class="badge badge-warning"><a routerLink="bioActives" class="RLink">BIOGRAFÍAS</a></p>
-
-      </div>
-
-      <div class="box_home-element23 box">
-          <a routerLink="infog_Show"><img class="card-img-top"  src="../../../assets/VZLA EN MLB PORTADACORTADO22.jpg" alt="infographics page link"></a>
-          <p class="text-box">Infografías, disfruta de los datos relevantes de la MLB y los Vinotintos de una forma
-            práctica.<a routerLink="infog_Show" class="ver-mas">
-              Ver más </a> </p>
-              <p class="badge badge-warning"><a routerLink="infog_Show" class="RLink">INFOGRAFÍAS</a></p>
-
-      </div>
-      <!-- <div class="box_home-element11 box">
-          <a routerLink="position"><img class="card-img-top card_img_inf_derecha"   src="../../../assets/POSICION1.jpg" alt="Noticias de Grandes Ligas"></a>
-          <p class="text-box">Donde juegan los vinotintosmlb en Grandes Ligas por posición defensiva: Segunda Base, Jardín Izquierdo, Catcher, etc. <a routerLink="position" class="ver-mas">
-              Ver más </a> </p>
-              <p class="badge badge-warning"><a routerLink="position" class="RLink">JUGADORES POR POSICIÓN</a></p>
-
-    </div> -->
-
-      <!-- <div class="box_home-element22 box">
-          <a routerLink="position"><img class="card-img-top card_img_inf_derecha"   src="../../../assets/POSICION1.jpg" alt="Noticias de Grandes Ligas"></a>
-          <p class="text-box">Donde juegan los vinotintosmlb en Grandes Ligas por posición defensiva: Segunda Base, Jardín Izquierdo, Catcher, etc. <a routerLink="position" class="ver-mas">
-              Ver más </a> </p>
-              <p class="badge badge-warning"><a routerLink="position" class="RLink">JUGADORES POR POSICIÓN</a></p>
-
-
-      </div> -->
-      <!-- <div class="box_home-element3 box">
-      </div>
-
-      <div class="box_home-element4 box">
-      </div>
-      <div class="box_home-element5 box">
-      </div>
-
-      <div class="box_home-element6 box">
-      </div>
-
-      <div class="box_home-element7 box">
-      </div>
-
-
-      <div class="box_home-element8 box">
-      </div>
-      <div class="box_home-element9 box">
-      </div>
-      <div class="box_home-element10 box">
-      </div> -->
-
-    <!-- </div> -->
+<div *ngIf="allItems">
+  <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchTextbox">
+  <div *ngIf="!allItems[0]" class="error_search d-flex justify-content-center">
+    <h1> <strong>'{{searchText}}'</strong> no existe</h1>
   </div>
 </div>
 
+
+<ng-container *ngIf="!isLoading">
+  <!-- <div class="tjta-encabezado"> -->
+
+  <ng-container *ngIf="!(pager.allItems === 0)">
+    
+    <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
+      <div class="tarjeta_encabezado">
+        <div *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
+          <div class="tarjeta_izquierda">
+            <div class="foto" style="width: 3%;"><img class="player_pict2" src="../../../assets/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
+            <a routerLink="/playerinfo/{{player.id}}" class="link_player">
+              <div  class="link_player items_estadisticas">{{player.fullName}}</div>
+            </a>
+            <!-- <div class="posicion" style="width: 8%;">{{player.id}}</div> -->
+            <!-- <div class="posicion items_estadisticas" >{{player.primaryPosition.abbreviation}}</div> -->
+            <div class="avg items_estadisticas" >AVG - {{player.stats[0].splits[0].stat.avg}}</div>
+            <div class="atBat items_estadisticas" >VB - {{player.stats[0].splits[0].stat.atBats}}</div>
+            <div class="runs items_estadisticas" >CA - {{player.stats[0].splits[0].stat.runs}}</div>
+            <div class="hits items_estadisticas" >Hits - {{player.stats[0].splits[0].stat.hits}}</div>
+            <div class="strikes items_estadisticas" >StksO - {{player.stats[0].splits[0].stat.strikeOuts}}</div>
+            <div class="bB items_estadisticas" >BB - {{player.stats[0].splits[0].stat.baseOnBalls}}</div>
+            <div class="rbi items_estadisticas" >CI - {{player.stats[0].splits[0].stat.rbi}}</div>
+            <div class="hr items_estadisticas" >HR - {{player.stats[0].splits[0].stat.homeRuns}}</div>
+            <div class="stolenB items_estadisticas">BRob - {{player.stats[0].splits[0].stat.stolenBases}}</div>
+          <br>
+          </div>
+
+          <!-- <div class="tarjeta_derecha">
+            <div class="foto" style="width: 8%;"><img class="player_pict2" src="../../../assets/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
+            <a routerLink="/playerinfo/{{player.id}}" class="link_player">
+              <div style="width: 10%;" class="link_player">{{player.fullName}}</div>
+            </a>
+            <div class="posicion" style="width: 8%;">{{player.id}}</div>
+            <div class="posicion" style="width: 8%;">{{player.primaryPosition.abbreviation}}</div>
+            <div class="avg" style="width: 3%;">{{player.stats[0].splits[0].stat.avg}}</div>
+            <div class="atBat" style="width: 3%;">{{player.stats[0].splits[0].stat.atBats}}</div>
+            <div class="runs" style="width: 3%;">{{player.stats[0].splits[0].stat.runs}}</div>
+            <div class="hits" style="width: 3%;">{{player.stats[0].splits[0].stat.hits}}</div>
+            <div class="strikes" style="width: 3%;">{{player.stats[0].splits[0].stat.strikeOuts}}</div>
+            <div class="bB" style="width: 3%;">{{player.stats[0].splits[0].stat.baseOnBalls}}</div>
+            <div class="rbi" style="width: 3%;">{{player.stats[0].splits[0].stat.rbi}}</div>
+            <div class="hr" style="width: 3%;">{{player.stats[0].splits[0].stat.homeRuns}}</div>
+            <div class="stolenB" style="width: 3%;">{{player.stats[0].splits[0].stat.stolenBases}}</div>
+          </div> -->
+        </div>
+    
+      </div>
+    </ng-container>
+
+    <!-- PAGINATION-->
+
+    <div>
+      <div class="container">
+        <div class="text-center paginator">
+          <!-- items being paged -->
+          <!-- <div *ngFor="let item of pagedItems">{{item.name}}</div> -->
+
+          <!-- pager -->
+          <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
+            <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+              <a (click)="setPage(1)" class="page-link paginator_item">First</a>
+            </li>
+            <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+              <a (click)="setPage(pager.currentPage - 1)" class="page-link paginator_item">Previous</a>
+            </li>
+            <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
+              <a (click)="setPage(page)" class="page-link">{{page}}</a>
+            </li>
+            <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+              <a (click)="setPage(pager.currentPage + 1)" class="page-link paginator_item">Next</a>
+            </li>
+            <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+              <a (click)="setPage(pager.totalPages)" class="page-link paginator_item">Last</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+    </div>
+
+
+  </ng-container>
+
+  <!-- </div> -->
+</ng-container>
