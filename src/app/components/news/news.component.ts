@@ -145,11 +145,11 @@ export class NewsComponent implements OnInit {
   } else if (this.num === 'video5H') {
     window.open('https://www.sportsvenezuela.com/felipe-vazquez-volvio-vestirse-de-salvador/ ', '_blank');
   } else if (this.num === 'video3G') {
-    window.open(' http://www.meridiano.com.ve/beisbol/beisbol-grandes-ligas/194386/escobar-la-sigue-viendo-clarita-en-la-campana---video-.html', '_blank');
+    window.open(' https://www.sportsvenezuela.com/contreras-estrellas-boletin/', '_blank');
   } else if (this.num === 'video4G') {
-    window.open('https://www.mlb.com/es/news/jhoulys-chacin-a-lista-de-lesionados-de-cerveceros', '_blank');
+    window.open(' http://www.meridiano.com.ve/beisbol/beisbol-grandes-ligas/194386/escobar-la-sigue-viendo-clarita-en-la-campana---video-.html', '_blank');
   } else if (this.num === 'video5G') {
-    window.open('https://beisbol.americadigital.com/2019/05/28/la-rodilla-operada-sigue-dandole-guerra-a-altuve/', '_blank');
+    window.open('https://www.mlb.com/es/news/jhoulys-chacin-a-lista-de-lesionados-de-cerveceros', '_blank');
   } else if (this.num === 'video3F') {
     window.open('  https://beisbol.americadigital.com/2019/05/27/la-elite-del-poder-en-venezuela-tiene-un-nuevo-nombre-renato-nunez/', '_blank');
   } else if (this.num === 'video4F') {
