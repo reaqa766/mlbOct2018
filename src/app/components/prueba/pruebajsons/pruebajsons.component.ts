@@ -1,15 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { CodegenComponentFactoryResolver } from '@angular/core/src/linker/component_factory_resolver';
 
 import { PlayersService } from '../../../../services/players.service';
-// import { PruebaService } from '../../services/prueba.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../../interfaces/players';
-// import LIDERES from '../../../assets/JSONS/ESTADISTICAS_DE_LIDERES';
-import VenezolanosActivos from '../../../../assets/JSONS/VenezolanosActivos';
 
 import { PagerService } from '../../../../services/index';
-import { HttpClient } from '@angular/common/http';
+
 
 
 
@@ -19,12 +15,6 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./pruebajsons.component.css']
 })
 export class PruebajsonsComponent implements OnInit {
-
- // MODULO DE LIDERES
-  data: any;
-  lider_avg: any;
-  row: any;
-  estadistica = [true, false, false, false, false, false, false];
   public players = [];
   public playersSort = [];
   groups: any;
@@ -43,54 +33,35 @@ export class PruebajsonsComponent implements OnInit {
   n10: number = 5;
 
   public allItems: any[];
-  // pager object
-  pager: any = {};
+    // pager object
+    pager: any = {};
 
-  // paged items
-  pagedItems: any[];
-  jugadores: any;
+    // paged items
+    pagedItems: any[];
+    jugadores: any[];
+
   isLoading: boolean;
-  avg: any = [];
-  filtrado: any;
-  venezolanosActivos: any;
-  CALEND2: any;
-  CALEND3: any;
-  teamPlays: any;
 
-  _url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2019&standingsTypes=regularSeason';
-  _url1 = 'https://statsapi.mlb.com/api/v1/schedule?sportId=1,51&date=2019-04-14&gameTypes=E,S,R,A,F,D,L,W&hydrate=team(linescore(matchup,runners))&useLatestGames=false&language=en&leagueId=103,104,420';
 
- // FIN DE MODULO DE LIDERES
 
- constructor(private playerService: PlayersService, private pagerService: PagerService, private http: HttpClient) { }
 
-  async ngOnInit() {
-    this.getPlayersMap();
+
+  constructor(private playerService: PlayersService, private pagerService: PagerService) { }
+
+
+  ngOnInit() {
     this.isLoading = true;
-    // this.data = LIDERES.row;
-    // this.jugadores = VenezolanosActivos;
-    console.log('jugadores', this.players);
+    // this.playerService.getPlayerDaily();
+    this.getPlayersMap();
+    // console.log('allItems', this.allItems);
+    // console.log('players', this.players);
 
-    // this.CALEND3 = await this.http.get(this._url1).toPromise();
-    // this.CALEND2 = await this.http.get(this._url).toPromise();
+    // console.log('data', JSON.stringify(this.allItems));
 
-    // for (let tpos of this.CALEND2.records) {
-    //   // for(let team of tpos.teamRecords){
-    //       this.teamPlays.push({
-    //         record: tpos.gamesPlayed
-    //       });}
+
   }
 
-textChange(i) {
-  this.players[i].activo = !this.players[i].activo;
-}
-
-
-
-// INICIO MODULO 2 LIDERES
-
-
-// Convertir el Array de Observables a un Array de Objetos.
+  // Convertir el Array de Observables a un Array de Objetos.
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
     let InfoObsPlayer = this.playerService.getAllPlayersActives();
@@ -108,7 +79,7 @@ textChange(i) {
           // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
           this.players = this.players.filter(player =>
           player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0)
-            // se ordenan por nombre
+             // se ordenan por nombre
             .sort(({ fullName: a }, { fullName: b }) => {
               if (a > b) {
                 return 1;
@@ -120,6 +91,11 @@ textChange(i) {
             });
           this.allItems = this.players;
           this.jugadores = this.players;
+          // console.log('jugadores', JSON.stringify(this.jugadores));
+
+
+
+    // console.log(JSON.stringify(this.players), 'pbajson');
           this.setPage(1);
           this.isLoading = false;
         }
@@ -129,59 +105,20 @@ textChange(i) {
 
   }
 
-  filtroTopCinco(estadistica: string) {
-    let filtrado = [];
-
-    filtrado = this.jugadores.filter(
-      jugador => jugador.stats && jugador.stats[0].splits
-    ).
-    sort((jugadorA, jugadorB) => {
-
-      const a = Number(jugadorA.stats[0].splits[0].stat[estadistica]);
-      const b = Number(jugadorB.stats[0].splits[0].stat[estadistica]);
-      if (a < b) {
-        return 1;
-      } else if (a > b) {
-        return -1;
-      } else if (a === b) {
-        return 0;
+  onSearchChange() {
+    if (this.searchText) {
+      this.allItems = this.players.filter(player =>
+        player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
+        (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
+        (player.nickName && player.nickName.toLowerCase().includes(this.searchText))  ||
+        player.mlbDebutDate.includes(this.searchText));
+        this.setPage(this.pager.currentPage);
+      } else {
+          this.allItems = this.players;
+          this.setPage(this.pager.currentPage);
+        }
+        return this.allItems;
       }
-    })
-    // Se acaba el sort por la estadistica deseada => se retorna un array
-    .slice(0, 5);
-    // console.log('filtrado', filtrado);
-
-    return filtrado;
-
-  }
-
-  filtroTopCincoAvg(estadistica: string) {
-    let filtrado = [];
-
-    filtrado = this.jugadores.filter(
-      jugador => jugador.stats && jugador.stats[0].splits &&  jugador.stats[0].splits[0].stat.atBats >= (30*3.1)
-      // jugador => jugador.stats && jugador.stats[0].splits &&  jugador.stats[0].splits[0].stat.atBats >= (this.teamPlays.record * 3.1)
-    ).
-    sort((jugadorA, jugadorB) => {
-
-      const a = Number(jugadorA.stats[0].splits[0].stat[estadistica]);
-      const b = Number(jugadorB.stats[0].splits[0].stat[estadistica]);
-      if (a < b) {
-        return 1;
-      } else if (a > b) {
-        return -1;
-      } else if (a === b) {
-        return 0;
-      }
-    })
-    // Se acaba el sort por la estadistica deseada => se retorna un array
-    .slice(0, 5);
-    // console.log('filtrado', filtrado);
-
-    return filtrado;
-
-  }
-
 
   setPage(page: number) {
     // get pager object from service
@@ -191,23 +128,5 @@ textChange(i) {
     this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
   }
 
-avgClick(x) {
-  // console.log('estadistica', this.estadistica);
-
-  for (let i=0; i<this.estadistica.length; i++) {
-    if (x === i) {
-      this.estadistica[i] = true;
-      // console.log('estadistica x', this.estadistica[i]);
-
-    } else {
-      this.estadistica[i] = false;
-      // console.log('estadistica y', this.estadistica[i]);
-
-
-    }
-
-  }
-}
-// FIN MODULO 2 LIDERES
 
 }
