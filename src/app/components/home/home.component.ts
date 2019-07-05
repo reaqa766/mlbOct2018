@@ -152,7 +152,7 @@ textChange(i) {
 
    filtrado = this.jugadores.filter(
      jugador => jugador.stats && jugador.stats[0].splits &&  jugador.stats[0].splits[0].stat.atBats >= (52*3.1)
-     // jugador => jugador.stats && jugador.stats[0].splits &&  jugador.stats[0].splits[0].stat.atBats >= (this.teamPlays.record * 3.1)
+     // jugador => jugad or.stats && jugador.stats[0].splits &&  jugador.stats[0].splits[0].stat.atBats >= (this.teamPlays.record * 3.1)
    ).
    sort((jugadorA, jugadorB) => {
 
