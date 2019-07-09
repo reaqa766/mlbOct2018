@@ -1,10 +1,17 @@
 <div class="container_players_actives"></div>
-<div class="container-actives">
+<!-- <div class="container-actives">
   <h1 class="actives-title">Bateadores Activos</h1>
 </div>
 
-<p class="title-position"> Temporada Regular 2019 </p>
+<p class="title-position"> Temporada Regular 2019 </p> -->
 <!-- <p class="title-position"> TEMP. 2019 </p> -->
+
+<!-- <div class="container-daily">
+  <h1 class="daily-title">Actuación Diaria de Bateadores</h1>
+<br>
+  <h3 class="daily-title">Temporada Regular 2019</h3>
+</div>
+<p class="title-positionA">{{dia | date }} </p> -->
 
 <!-- LOADER -->
 <div *ngIf="!allItems">
@@ -12,64 +19,76 @@
   <p class="spiner_load">CARGANDO</p>
 </div>
 
-<div *ngIf="allItems">
-  <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchTextbox">
-  <div *ngIf="!allItems[0]" class="error_search d-flex justify-content-center">
-    <h1> <strong>'{{searchText}}'</strong> no existe</h1>
-  </div>
+<div *ngIf="allItems" class="title-position">
+  <input #date_Picker type="date" (input)="onSearchDate($event)" placeholder="Escoja la fecha..."  value="" class="advancedSearchDatetbox">
+<span class="seleccion">   Seleccione una fecha con el</span><img src="../../../../assets/SELECCION.PNG" alt="">
 </div>
-
+<br>
+<br>
 
 <ng-container *ngIf="!isLoading">
   <!-- <div class="tjta-encabezado"> -->
 
   <ng-container *ngIf="!(pager.allItems === 0)">
-    
+
     <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
       <div class="tarjeta_encabezado">
         <div *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
           <div class="tarjeta_izquierda">
-            <div class="foto" style="width: 3%;"><img class="player_pict2" src="../../../assets/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
+            <div class="foto" ><img class="player_pict2" src="../../../assets/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
             <a routerLink="/playerinfo/{{player.id}}" class="link_player">
-              <div  class="link_player items_estadisticas">{{player.fullName}}</div>
+              <div  class="link_player">{{player.fullName}}</div>
             </a>
             <!-- <div class="posicion" style="width: 8%;">{{player.id}}</div> -->
             <!-- <div class="posicion items_estadisticas" >{{player.primaryPosition.abbreviation}}</div> -->
-            <div class="avg items_estadisticas" >AVG - {{player.stats[0].splits[0].stat.avg}}</div>
-            <div class="atBat items_estadisticas" >VB - {{player.stats[0].splits[0].stat.atBats}}</div>
-            <div class="runs items_estadisticas" >CA - {{player.stats[0].splits[0].stat.runs}}</div>
-            <div class="hits items_estadisticas" >Hits - {{player.stats[0].splits[0].stat.hits}}</div>
-            <div class="strikes items_estadisticas" >StksO - {{player.stats[0].splits[0].stat.strikeOuts}}</div>
-            <div class="bB items_estadisticas" >BB - {{player.stats[0].splits[0].stat.baseOnBalls}}</div>
-            <div class="rbi items_estadisticas" >CI - {{player.stats[0].splits[0].stat.rbi}}</div>
-            <div class="hr items_estadisticas" >HR - {{player.stats[0].splits[0].stat.homeRuns}}</div>
-            <div class="stolenB items_estadisticas">BRob - {{player.stats[0].splits[0].stat.stolenBases}}</div>
-          <br>
+            <div class="avg items_estadisticas" ><div class="avg_span">AVG</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.avg}}</div></div>
+            <div class="atBat items_estadisticas" ><div class="avg_span">VB</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.atBats}}</div></div>
+            <div class="hits items_estadisticas" ><div class="avg_span">Hits</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.hits}}</div></div>
+            <div class="hr items_estadisticas" ><div class="avg_span">HR</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.homeRuns}}</div></div>
+            <div class="rbi items_estadisticas" ><div class="avg_span">CI</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.rbi}}</div></div>
+            <div class="runs items_estadisticas" ><div class="avg_span">CA</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.runs}}</div></div>
+            <div class="strikeO items_estadisticas" ><div class="avg_span">StksO</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.strikeOuts}}</div></div>
+            <div class="bB items_estadisticas" ><div class="avg_span">BB</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.baseOnBalls}}</div></div>
+            <div class="stolenB items_estadisticas"><div class="avg_span">BRob</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.stolenBases}}</div></div>
+            <div class="LNac items_estadisticas"><div class="avg_span">L. Nac</div> <div class="avg_span2">{{player.birthCity}}</div></div>
+            <div class="Edad items_estadisticas"><div class="avg_span">Edad</div> <div class="avg_span2">{{player.currentAge}}</div></div>
           </div>
-
-          <!-- <div    class="tarjeta_derecha">
-            <div class="foto" style="width: 8%;"><img class="player_pict2" src="../../../assets/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
-            <a routerLink="/playerinfo/{{player.id}}" class="link_player">
-              <div style="width: 10%;" class="link_player">{{player.fullName}}</div>
-            </a>
-            <div class="posicion" style="width: 8%;">{{player.id}}</div>
-            <div class="posicion" style="width: 8%;">{{player.primaryPosition.abbreviation}}</div>
-            <div class="avg" style="width: 3%;">{{player.stats[0].splits[0].stat.avg}}</div>
-            <div class="atBat" style="width: 3%;">{{player.stats[0].splits[0].stat.atBats}}</div>
-            <div class="runs" style="width: 3%;">{{player.stats[0].splits[0].stat.runs}}</div>
-            <div class="hits" style="width: 3%;">{{player.stats[0].splits[0].stat.hits}}</div>
-            <div class="strikes" style="width: 3%;">{{player.stats[0].splits[0].stat.strikeOuts}}</div>
-            <div class="bB" style="width: 3%;">{{player.stats[0].splits[0].stat.baseOnBalls}}</div>
-            <div class="rbi" style="width: 3%;">{{player.stats[0].splits[0].stat.rbi}}</div>
-            <div class="hr" style="width: 3%;">{{player.stats[0].splits[0].stat.homeRuns}}</div>
-            <div class="stolenB" style="width: 3%;">{{player.stats[0].splits[0].stat.stolenBases}}</div>
-          </div> -->
         </div>
-    
+
       </div>
     </ng-container>
 
+    <ng-container *ngIf="(pager.allItems-1 === pager.endIndex)">
+      <div class="tarjeta_encabezado">
+        <div *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
+          <div class="tarjeta_izquierda">
+            <div class="foto" ><img class="player_pict2" src="../../../assets/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
+            <a routerLink="/playerinfo/{{player.id}}" class="link_player">
+              <div  class="link_player">{{player.fullName}}</div>
+            </a>
+            <!-- <div class="posicion" style="width: 8%;">{{player.id}}</div> -->
+            <!-- <div class="posicion items_estadisticas" >{{player.primaryPosition.abbreviation}}</div> -->
+            <div class="avg items_estadisticas" ><div class="avg_span">AVG</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.avg}}</div></div>
+            <div class="atBat items_estadisticas" ><div class="avg_span">VB</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.atBats}}</div></div>
+            <div class="hits items_estadisticas" ><div class="avg_span">Hits</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.hits}}</div></div>
+            <div class="hr items_estadisticas" ><div class="avg_span">HR</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.homeRuns}}</div></div>
+            <div class="rbi items_estadisticas" ><div class="avg_span">CI</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.rbi}}</div></div>
+            <div class="runs items_estadisticas" ><div class="avg_span">CA</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.runs}}</div></div>
+            <div class="strikeO items_estadisticas" ><div class="avg_span">StksO</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.strikeOuts}}</div></div>
+            <div class="bB items_estadisticas" ><div class="avg_span">BB</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.baseOnBalls}}</div></div>
+            <div class="stolenB items_estadisticas"><div class="avg_span">BRob</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.stolenBases}}</div></div>
+            <div class="LNac items_estadisticas"><div class="avg_span">L. Nac</div> <div class="avg_span2">{{player.birthCity}}</div></div>
+            <div class="Edad items_estadisticas"><div class="avg_span">Edad</div> <div class="avg_span2">{{player.currentAge}}</div></div>
+          </div>
+        </div>
+
+      </div>
+    </ng-container>
+
+
     <!-- PAGINATION-->
+    <br>
+    <br>
 
     <div>
       <div class="container">
