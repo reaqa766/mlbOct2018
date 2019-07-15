@@ -16,7 +16,38 @@ import { PagerService } from '../../../services/index'
 })
 export class Pruebas2019Component implements OnInit {
   public players = [];
+  public playerWeek: number = 0;
   public playersSort = [];
+  public playerWeekSum : number = 0;
+  public sumArray = 0;
+
+  sumArrayAtBats: number = 0; 
+  arrayPlayersatBats = [];
+  sumArrayHits: number = 0; 
+  arrayPlayersHits = [];
+  sumArrayDoubles: number = 0; 
+  arrayPlayersdoubles = [];
+  sumArrayHomeRuns: number = 0; 
+  arrayPlayershomeRuns = [];
+  sumArrayRbi: number = 0; 
+  arrayPlayersrbi = [];
+
+  playerWeekAtBats: number = 0; 
+  playerWeekHits: number = 0; 
+  playerWeekDoubles: number = 0; 
+  playerWeekHomeRuns: number = 0; 
+  playerWeekRbi: number = 0; 
+
+ arrayPlayersAtBatsFinal= []; 
+ arrayPlayersHitsFinal= []; 
+ arrayPlayersDoublesFinal= []; 
+ arrayPlayersHomeRunsFinal= []; 
+ arrayPlayersRbiFinal= []; 
+
+ arrayPlayersName= [];
+
+
+
   groups: any;
   selectedGroup: any;
   elarray: any;
@@ -60,6 +91,10 @@ export class Pruebas2019Component implements OnInit {
 getPlayersMap() {
   this.players = [];
   this.allItems = [];
+  this.arrayPlayersHits = [];
+  // this.playerWeek = string;
+  // this.playerWeekSum =  Number; 
+
   this.setPage(1);
   const InfoObsPlayer = this.playerService.getAllPlayersDaily2();
   let index = 0;
@@ -82,8 +117,67 @@ getPlayersMap() {
             for(let i = 0; i < player.stats[0].splits.length; i++){
               if(player.stats[0].splits[i].date === this.dia){
                 player.indexStatDate = i;
+                this.arrayPlayersName.push(player.fullName); 
+
+                this.arrayPlayersatBats = [];
+                this.arrayPlayersHits = [];
+                this.arrayPlayersdoubles = [];
+                this.arrayPlayershomeRuns = [];
+                this.arrayPlayersrbi = [];
+                
+              for(let j = 0; j < 7; j++) {
+  
+                  this.playerWeekAtBats = player.stats[0].splits[player.stats[0].splits.length-(j+1)].stat.atBats;
+                  this.arrayPlayersatBats.push(this.playerWeekAtBats); 
+                  // console.log("AtBats", this.playerWeekAtBats, j);
+                  this.playerWeekHits = player.stats[0].splits[player.stats[0].splits.length-(j+1)].stat.hits;
+                  this.arrayPlayersHits.push(this.playerWeekHits); 
+                  // console.log("Hits", this.arrayPlayersHits, j);
+                  this.playerWeekDoubles = player.stats[0].splits[player.stats[0].splits.length-(j+1)].stat.doubles;
+                  this.arrayPlayersdoubles.push(this.playerWeekDoubles); 
+                  // console.log("Doubles", this.playerWeekDoubles, j);
+                  this.playerWeekHomeRuns = player.stats[0].splits[player.stats[0].splits.length-(j+1)].stat.homeRuns;
+                  this.arrayPlayershomeRuns.push(this.playerWeekHomeRuns); 
+                  // console.log("HomeRuns", this.arrayPlayershomeRuns, j);
+                  this.playerWeekRbi = player.stats[0].splits[player.stats[0].splits.length-(j+1)].stat.rbi;
+                  this.arrayPlayersrbi.push(this.playerWeekRbi); 
+                  // console.log("Rbi", this.playerWeekRbi, j);
+                  
+                }
+                this.sumArrayAtBats = 0;
+                this.sumArrayHits = 0;
+                this.sumArrayDoubles = 0;
+                this.sumArrayHomeRuns = 0;
+                this.sumArrayRbi = 0;
+                console.log("array", this.arrayPlayersHits);
+                for(let k = 0; k < 7; k++){
+                this.sumArrayAtBats = this.sumArrayAtBats + this.arrayPlayersatBats[k];
+                this.sumArrayHits = this.sumArrayHits + this.arrayPlayersHits[k];
+                this.sumArrayDoubles = this.sumArrayDoubles + this.arrayPlayersdoubles[k];
+                this.sumArrayHomeRuns = this.sumArrayHomeRuns + this.arrayPlayershomeRuns[k];
+                this.sumArrayRbi = this.sumArrayRbi + this.arrayPlayersrbi[k];
+                }
+                console.log("sumArray", this.sumArray);
+                this.arrayPlayersAtBatsFinal.push(this.sumArrayAtBats); 
+                this.arrayPlayersHitsFinal.push(this.sumArrayHits); 
+                this.arrayPlayersDoublesFinal.push(this.sumArrayDoubles); 
+                this.arrayPlayersHomeRunsFinal.push(this.sumArrayHomeRuns); 
+                this.arrayPlayersRbiFinal.push(this.sumArrayRbi); 
+
+                console.log("this.arrayPlayersName", this.arrayPlayersName);
+                console.log("arrayPlayersAtBatsFinal", this.arrayPlayersAtBatsFinal);
+                console.log("arrayPlayersHitsFinal", this.arrayPlayersHitsFinal);
+                console.log("arrayPlayersDoublesFinal", this.arrayPlayersDoublesFinal);
+                console.log("arrayPlayersHomerunsFinal", this.arrayPlayersHomeRunsFinal);
+                console.log("arrayPlayersRbiFinal", this.arrayPlayersRbiFinal);
+
                 return true;
+                
               }
+              // for(let j = 0; j < 8; j++) {
+              //   this.playerWeek+=player.stats[0].splits[i].stat.hit
+              //   console.log("playerWeek", this.playerWeek);
+              //       }
             }
             return false;
           }

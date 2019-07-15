@@ -1,6 +1,6 @@
 <div class="container_players_actives"></div>
 <div class="container-daily">
-  <h1 class="daily-title">Actuación Diaria de Bateadores</h1>
+  <h1 class="daily-title">Actuación Semanal de los Bateadores</h1>
 <br>
   <h3 class="daily-title">Temporada Regular 2019</h3>
 </div>
@@ -54,8 +54,15 @@
           <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
             <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize; let i = index">
               <a routerLink="/playerinfo/{{player.id}}" class="link_player"><td class="link_player" class="td1" style="width: 10%;">{{player.fullName}}</td></a>
-              <td class="td2" style="width: 10%;">{{player.stats[0].splits[player.indexStatDate].team.name }}</td>
-              <td class="td4" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.avg}}</td>
+              <td class="td2" style="width: 10%;">{{player.stats[0].splits[player.indexStatDate].date}}</td>
+              <td class="td2" style="width: 10%;">{{player.stats[0].splits[player.indexStatDate-1].date}}</td>
+              <td class="td2" style="width: 10%;">{{player.stats[0].splits[player.indexStatDate-2].date}}</td>
+              <td class="td2" style="width: 10%;">{{player.stats[0].splits[player.indexStatDate-3].date}}</td>
+              <td class="td2" style="width: 10%;">{{player.stats[0].splits[player.indexStatDate-4].date}}</td>
+              <td class="td2" style="width: 10%;">{{player.stats[0].splits[player.indexStatDate-5].date}}</td>
+              <td class="td2" style="width: 10%;">{{player.stats[0].splits[player.indexStatDate-6].date}}</td>
+              <td class="td2" style="width: 10%;">{{player.stats[0].splits[player.indexStatDate-7].date}}</td>
+              <!-- <td class="td4" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.avg}}</td>
               <td class="td3" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.atBats}}</td>
               <td class="td5" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.runs}}</td>
               <td class="td6" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.hits}}</td>
@@ -63,15 +70,15 @@
               <td class="td8" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.baseOnBalls}}</td>
               <td class="td9" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.rbi}}</td>
               <td class="td10" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.homeRuns}}</td>
-              <td class="td11" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.stolenBases}}</td>
+              <td class="td11" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.stolenBases}}</td> -->
             </tr>
           </ng-container>
 
           <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
             <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*7); let i = index">
               <a routerLink="/playerinfo/{{player.id}}" class="link_player"><td class="link_player" class="td1" style="width: 10%;">{{player.fullName}}</td></a>
-              <td class="td2" style="width: 10%;">{{player.stats[0].splits[player.indexStatDate].team.name}}</td>
-              <td class="td4" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.avg}}</td>
+              <td class="td2" style="width: 10%;">{{player.stats[0].splits[player.indexStatDate].date}}</td>
+              <!-- <td class="td4" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.avg}}</td>
               <td class="td3" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.atBats}}</td>
               <td class="td5" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.runs}}</td>
               <td class="td6" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.hits}}</td>
@@ -79,7 +86,7 @@
               <td class="td8" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.baseOnBalls}}</td>
               <td class="td9" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.rbi}}</td>
               <td class="td10" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.homeRuns}}</td>
-              <td class="td11" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.stolenBases}}</td>
+              <td class="td11" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.stolenBases}}</td> -->
             </tr>
           </ng-container>
         </tbody>
