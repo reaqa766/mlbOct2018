@@ -10,6 +10,16 @@ header div  h1 {
   content: attr(placeholder);
 } */
 
+
+.preguntas::placeholder { 
+  color: blue; 
+  font-weight: bold; 
+  }
+
+  .questions {
+    text-align: justify;
+  }
+
 .title_page {
   color: antiquewhite;
   font-weight: 700;

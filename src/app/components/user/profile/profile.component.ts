@@ -12,6 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 import {Router } from '@angular/router';
+import { FlashMessagesService } from 'angular2-flash-messages';
 
 
 @Component({
@@ -26,14 +27,20 @@ export class ProfileComponent implements OnInit {
 
   constructor( private profileService: FirebaseService,
                public router: Router,
+               private flashMensaje: FlashMessagesService,
               private toastr: ToastrService, fb: FormBuilder) {
                 this.profileForm = fb.group({
                   'name': [null, Validators.required],
                   'lastname': [null, Validators.required],
+                  'correo': [null, Validators.required],
                   'gender': [null, Validators.required],
                   'birdthDate': [null, Validators.required],
                   'country': [null, Validators.required],
-                  'comments': [null]
+                  'city': [null, Validators.required],
+                  'answer1': [null, Validators.required],
+                  'answer2': [null, Validators.required],
+                  'answer3': [null, Validators.required],
+                  'answer4': [null, Validators.required],
                 });
               }
   ngOnInit() {
@@ -50,8 +57,10 @@ export class ProfileComponent implements OnInit {
     }
 
     this.resetForm(profileForm);
-    this.toastr.success('Datos Guardados', 'Registre Correo y Contraseña');
-    this.router.navigate(['/register']);
+    // this.toastr.success('Datos Guardados', 'Registre Correo y Contraseña');
+    this.flashMensaje.show('Ha completado el concurso exitosamente, estas participando', {cssClass: 'alert-success', timeout: 4000});
+    this.router.navigate(['/']);
+    // this.router.navigate(['/register']);
   }
 
   resetForm(profileForm?: any) {

@@ -65,6 +65,8 @@ export class HomeComponent implements OnInit {
 constructor(private playerService: PlayersService, private pagerService: PagerService, private http: HttpClient) { }
 
  async ngOnInit() {
+   // Se lleva al top de la pagina en inicio
+   window.scrollTo(0,0);
    this.getPlayersMap();
    this.isLoading = true;
    // this.data = LIDERES.row;
