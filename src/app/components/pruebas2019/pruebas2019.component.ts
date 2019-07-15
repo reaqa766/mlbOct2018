@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+
 import * as moment from 'moment';
-import { DataPlayersService } from '../../../../services/data-players.service';
+import { DataPlayersService } from '../../../services/data-players.service';
 import { take } from 'rxjs/operators';
-import { Players } from '../../../../interfaces/players';
+import { Players } from '../../../interfaces/players';
 
 // tslint:disable-next-line:semicolon
-import { PagerService } from '../../../../services/index'
+import { PagerService } from '../../../services/index'
 
 
 @Component({
-  selector: 'app-daily',
-  templateUrl: './daily.component.html',
-  styleUrls: ['./daily.component.css']
+  selector: 'app-pruebas2019',
+  templateUrl: './pruebas2019.component.html',
+  styleUrls: ['./pruebas2019.component.css']
 })
-export class DailyComponent implements OnInit {
+export class Pruebas2019Component implements OnInit {
   public players = [];
   public playersSort = [];
   groups: any;
