@@ -55,6 +55,7 @@ import { EstadoVzlaComponent  } from './components/estado-vzla/estado-vzla.compo
 import { NovatosComponent  } from './components/players/novatos/novatos.component';
 import { QuepasohoyComponent  } from './components/players/quepasohoy/quepasohoy.component';
 import { TransaccionesComponent  } from './components/players/transacciones/transacciones.component';
+import { Pruebas2019Component  } from './components/pruebas2019/pruebas2019.component';
 
 // import { SharedModule } from '../shared/shared.module'
 
@@ -63,12 +64,6 @@ import { PostDetailComponent } from '../app/components/posts/post-detail/post-de
 import { PostListComponent } from '../app/components/posts/post-list/post-list.component';
 import { PostListsComponent } from '../app/components/posts/post-lists/post-lists.component';
 import { PostService } from '../app/components/posts/post.service';
-
-
-
-
-
-
 
 import {AuthGuard} from './guards/auth.guard';
 
@@ -175,6 +170,8 @@ const routes: Routes = [
   component: NovatosComponent },
   { path: 'qpasohoy',
   component: QuepasohoyComponent },
+  { path: 'pruebas2019',
+  component: Pruebas2019Component },
   { path: 'transacciones',
   component: TransaccionesComponent },
   { path: 'podCasts',

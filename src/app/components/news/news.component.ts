@@ -17,6 +17,15 @@ export class NewsComponent implements OnInit {
   video2() {
     this.num = 'video2';
   }
+  video3J() {
+    this.num = 'video3J';
+  }
+  video4J() {
+    this.num = 'video4J';
+  }
+  video5J() {
+    this.num = 'video5J';
+  }
   video3H() {
     this.num = 'video3H';
   }
@@ -137,7 +146,13 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('http://www.liderendeportes.com/noticias/baseball/acuna-jr-lleva-un-ritmo-de-record/' , '_blank');
+          window.open('http://www.meridiano.com.ve/beisbol/beisbol-grandes-ligas/196326/carrasco-se-plantea-retornar-a-finales-de-julio.html' , '_blank');
+  } else if (this.num === 'video3J') {
+    window.open(' https://www.mlb.com/es/news/estara-felipe-vazquez-en-la-mira-de-dodgers', '_blank');
+  } else if (this.num === 'video4J') {
+    window.open('http://www.liderendeportes.com/noticias/baseball/segunda-mitad-de-2019-con-tinte-tricolor/', '_blank');
+  } else if (this.num === 'video5J') {
+    window.open('https://www.sportsvenezuela.com/jose-altuve-comenzaria-su-rehabilitacion-en-las-menores-el-fin-de-semana/', '_blank');
   } else if (this.num === 'video3H') {
     window.open(' http://www.liderendeportes.com/noticias/baseball/elias-diaz-le-saca-provecho-a-su-titularidad-en-pittsburgh/', '_blank');
   } else if (this.num === 'video4H') {

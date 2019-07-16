@@ -94,6 +94,7 @@ import { NovatosComponent } from './components/players/novatos/novatos.component
 import { QuepasohoyComponent } from './components/players/quepasohoy/quepasohoy.component';
 import { TransaccionesComponent } from './components/players/transacciones/transacciones.component';
 import { PodcastsComponent } from './components/podcasts/podcasts.component';
+import { Pruebas2019Component } from './components/pruebas2019/pruebas2019.component';
 
 @NgModule({
   declarations: [
@@ -160,7 +161,8 @@ import { PodcastsComponent } from './components/podcasts/podcasts.component';
     NovatosComponent,
     QuepasohoyComponent,
     TransaccionesComponent,
-    PodcastsComponent
+    PodcastsComponent,
+    Pruebas2019Component
 
   ],
   imports: [

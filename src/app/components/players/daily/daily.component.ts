@@ -45,7 +45,7 @@ export class DailyComponent implements OnInit {
 
   ngOnInit() {
     console.log('Jugadores', this.players);
-    console.log('dia', this.dia);
+    // console.log('dia', this.dia);
 
 
     this.isLoading = true;
@@ -115,7 +115,7 @@ getPlayersMap() {
   }
 
   onSearchDate(fecha) {
-    console.log("FECHA", fecha.srcElement.value);
+    // console.log("FECHA", fecha.srcElement.value);
     this.dia = fecha.srcElement.value;
     this.getPlayersMap();
 }
