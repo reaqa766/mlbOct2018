@@ -87,6 +87,7 @@ color: black !important;
 .player_stats {
     width: 100%;
     display: table;
+    margin: 0 auto;
 }
 
 .td2, .td7, .td8, .td11 {
@@ -213,7 +214,7 @@ th {
     margin: .5rem 0 .5rem .5rem;
       }
 .player_stats {
-    width: 100%;
+    width: 75%;
     display: table;
 }
 
@@ -546,6 +547,7 @@ th {
         .advancedSearchDatetbox{
             color: rgb(2, 1, 0);
             font-size: 1em;
+            margin-left: 13rem;
             /* font-weight: bold; */
             /* margin: 0 0 1% 2%; */
             }
@@ -575,10 +577,13 @@ th {
           color: white;
           font-size: 1rem;
             font-weight: bold;
-            margin: .5rem 0 .5rem .5rem;
+            margin: .5rem 0 1rem 13rem;
                     }
+        .title-positionA {
+            margin-left: 26rem;        }
+
         .player_stats {
-            width: 100%;
+            width: 75%;
             display: table;
         }
         .fa-baseball-ball {
@@ -666,7 +671,7 @@ th {
     margin: .5rem 0 .5rem .5rem;
       }
 .player_stats {
-    width: 100%;
+    width: 90%;
     display: table;
 }
 .td2, .td5, .td7, .td8, .td9, .td11 {
@@ -758,7 +763,7 @@ th {
     .advancedSearchDatetbox{
         color: rgb(2, 1, 0);
         font-size: 1em;
-        /* font-weight: bold; */
+        margin-left: 13rem;        /* font-weight: bold; */
         /* margin: 1% 0 1% 2%; */
         }
 
@@ -796,11 +801,14 @@ th {
     .title-position{
       color: white;
       font-size: 1rem;
-        font-weight: bold;
-        margin: .5rem 0 .5rem .5rem;
+      font-weight: bold;
+      margin: .5rem 0 .5rem 13rem;
             }
+    .title-positionA {
+      margin-left: 26rem;            }
+    
     .player_stats {
-        width: 100%;
+        width: 75%;
         display: table;
     }
     .td2, .td5, .td7, .td8, .td9, .td11 {

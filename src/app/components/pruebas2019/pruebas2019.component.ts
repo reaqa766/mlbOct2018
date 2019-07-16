@@ -74,6 +74,7 @@ export class Pruebas2019Component implements OnInit {
   isLoading: boolean;
   avgFinal: number;
   arrayPlayersAvgFinal: any[];
+  arrayPlayersId: any;
 
   constructor(private playerService: DataPlayersService, private pagerService: PagerService) { }
 
@@ -92,6 +93,7 @@ export class Pruebas2019Component implements OnInit {
 getPlayersMap() {
   this.arrayPlayersAvgFinal= [];
   this.arrayPlayersName= [];
+  this.arrayPlayersId= [];
   this.players = [];
   this.allItems = [];
   this.arrayPlayersHits = [];
@@ -112,7 +114,7 @@ getPlayersMap() {
           Object.assign(newPlayer, player.people[0]);
           return newPlayer;
         });
-        console.log('Original players: ', this.players);
+        // console.log('Original players: ', this.players);
         // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
         this.players = this.players.filter(player =>{
          
@@ -122,6 +124,7 @@ getPlayersMap() {
               if(player.stats[0].splits[i].date === this.dia){
                 player.indexStatDate = i;
                 this.arrayPlayersName.push(player.fullName); 
+                this.arrayPlayersId.push(player.id); 
                 
 
                 this.arrayPlayersatBats = [];
@@ -139,7 +142,7 @@ getPlayersMap() {
                   // console.log("AtBats", this.playerWeekAtBats, j);
                   this.playerWeekHits = player.stats[0].splits[player.stats[0].splits.length-(j+1)].stat.hits;
                   this.arrayPlayersHits.push(this.playerWeekHits); 
-                  console.log("SENCILLOS", this.arrayPlayersHits, j, player.fullName);
+                  // console.log("SENCILLOS", this.arrayPlayersHits, j, player.fullName);
                   this.playerWeekDoubles = player.stats[0].splits[player.stats[0].splits.length-(j+1)].stat.doubles;
                   this.arrayPlayersdoubles.push(this.playerWeekDoubles); 
                   // console.log("Doubles", this.playerWeekDoubles, j);
@@ -160,7 +163,7 @@ getPlayersMap() {
                 for(let k = 0; k < 7; k++){
                 this.sumArrayAtBats = this.sumArrayAtBats + this.arrayPlayersatBats[k];
                 this.sumArrayHits = this.sumArrayHits + this.arrayPlayersHits[k];
-                console.log("Hits", this.sumArrayHits, this.arrayPlayersHits);
+                // console.log("Hits", this.sumArrayHits, this.arrayPlayersHits);
                 
                 this.sumArrayDoubles = this.sumArrayDoubles + this.arrayPlayersdoubles[k];
                 this.sumArrayHomeRuns = this.sumArrayHomeRuns + this.arrayPlayershomeRuns[k];
@@ -174,7 +177,7 @@ getPlayersMap() {
                 this.arrayPlayersHomeRunsFinal.push(this.sumArrayHomeRuns); 
                 this.arrayPlayersRbiFinal.push(this.sumArrayRbi); 
                 this.avgFinal = Math.trunc(this.sumArrayHits*1000/this.sumArrayAtBats);
-                console.log("AVG", this.avgFinal);
+                // console.log("AVG", this.avgFinal);
                 
                 this.arrayPlayersAvgFinal.push(this.avgFinal); 
 
@@ -210,14 +213,14 @@ getPlayersMap() {
           }
 
         });
-        // console.log('This players final: ', this.players);
+        console.log('This players final: ', this.players);
 
 
 
         this.allItems = this.players;
         this.setPage(1);
         this.isLoading = false;
-        // console.log('players', this.players);
+        console.log('players', this.players);
         }
         index++;
 
