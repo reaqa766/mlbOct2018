@@ -1,0 +1,49 @@
+.menu   {
+    background-color: rgb(37, 37, 37);
+    height: 7rem;
+}
+
+.logoVinotintosMLb {
+    height: 5rem;
+    padding-left: 10rem;
+}
+ .resultados {
+     display: grid;
+     grid-template-columns: repeat(5, 1fr);
+     grid-template-rows: 1fr;
+     grid-column-gap: 10px;
+ }
+ .resultado1 {
+     color: white;
+     border: solid rgb(214, 214, 214) 1px;
+
+      display: flex;
+ }
+
+
+
+ 
+ .resultado2 {
+     color: white;
+     border: solid rgb(214, 214, 214) 1px;
+
+      display: flex;
+
+ }
+ .resultado3 {
+     color: white;
+     border: solid rgb(214, 214, 214) 1px;
+
+      display: flex;
+
+ }
+ .resultado4 {
+     color: white;
+     border: solid rgb(214, 214, 214) 1px;
+
+      display: flex;
+
+ }
+
+
+ 
