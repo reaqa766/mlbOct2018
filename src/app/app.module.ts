@@ -95,6 +95,7 @@ import { QuepasohoyComponent } from './components/players/quepasohoy/quepasohoy.
 import { TransaccionesComponent } from './components/players/transacciones/transacciones.component';
 import { PodcastsComponent } from './components/podcasts/podcasts.component';
 import { Pruebas2019Component } from './components/pruebas2019/pruebas2019.component';
+import { LvbpHomeComponent } from './components/lvbp-home/lvbp-home.component';
 
 @NgModule({
   declarations: [
@@ -162,7 +163,8 @@ import { Pruebas2019Component } from './components/pruebas2019/pruebas2019.compo
     QuepasohoyComponent,
     TransaccionesComponent,
     PodcastsComponent,
-    Pruebas2019Component
+    Pruebas2019Component,
+    LvbpHomeComponent
 
   ],
   imports: [

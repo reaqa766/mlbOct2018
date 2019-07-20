@@ -56,6 +56,7 @@ import { NovatosComponent  } from './components/players/novatos/novatos.componen
 import { QuepasohoyComponent  } from './components/players/quepasohoy/quepasohoy.component';
 import { TransaccionesComponent  } from './components/players/transacciones/transacciones.component';
 import { Pruebas2019Component  } from './components/pruebas2019/pruebas2019.component';
+import { LvbpHomeComponent  } from './components/lvbp-home/lvbp-home.component';
 
 // import { SharedModule } from '../shared/shared.module'
 
@@ -172,6 +173,8 @@ const routes: Routes = [
   component: QuepasohoyComponent },
   { path: 'pruebas2019',
   component: Pruebas2019Component },
+  { path: 'lvbpHome',
+  component: LvbpHomeComponent },
   { path: 'transacciones',
   component: TransaccionesComponent },
   { path: 'podCasts',
