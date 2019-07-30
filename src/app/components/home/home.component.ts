@@ -142,7 +142,7 @@ textChange(i) {
      }
    })
    // Se acaba el sort por la estadistica deseada => se retorna un array
-   .slice(0, 15);
+   .slice(0, 6);
    // console.log('filtrado', filtrado);
 
    return filtrado;
