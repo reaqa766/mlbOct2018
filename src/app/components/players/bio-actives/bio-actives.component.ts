@@ -47,7 +47,7 @@ export class BioActivesComponent implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    // console.log('allItems', this.allItems);
+    console.log('Players', this.players);
     // console.log('FilterPlayers', this.filterPlayers);
 
 
@@ -77,7 +77,7 @@ export class BioActivesComponent implements OnInit {
           player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0)
 
             // se ordenan por nombre
-            .sort(({ fullName: a }, { fullName: b }) => {
+            .sort(({ lastName: a }, { lastName: b }) => {
               if (a > b) {
                 return 1;
               } else if (a < b) {

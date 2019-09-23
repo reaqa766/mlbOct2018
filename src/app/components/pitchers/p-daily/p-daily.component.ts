@@ -94,7 +94,7 @@ getPlayersMap() {
           }
         })
         // se ordenan por nombre
-        .sort(({fullName: a}, {fullName: b}) => {
+        .sort(({lastName: a}, {lastName: b}) => {
           if (a > b) {
             return 1;
           } else if (a < b) {
