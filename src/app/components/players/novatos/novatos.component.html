@@ -1,8 +1,6 @@
 <div class="container-actives">
-    <h1 class="bioActives-title">CLASE 2019</h1>
-    <!-- <h1 class="bioActives-title">NOVATOS ACTIVOS</h1> -->
+  <h1 class="bioActives-title">CLASE 2019</h1>
   <p class="bioActives-title"> Temporada Regular 2019 </p>
-  <!-- <h6 class="title-aclaratoria"> * Los Novatos que no están en Grandes Ligas no aparecen en este listado. </h6> -->
 
 
   <!--LOADER -->
@@ -12,64 +10,29 @@
   </div>
 
   <div *ngIf="allItems">
-  <div *ngIf="allItems > 1">
-    <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchTextbox">
-    <div *ngIf="!allItems[0]" class="error_search d-flex justify-content-center">
-      <h4 class="error_message"> <strong>'{{searchText}}'</strong> El Jugador no existe. Solo busque por nombre, sobrenombre y
-        equipo</h4>
-    </div>
-    </div>
-
-    <!-- <ng-container *ngIf="!(pager.allItems === 0)"> -->
-
-      <div class="container-actives_cards ">
-        <!-- <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)"> -->
-          <div class="card card1 img_picture_box" style="width: 95%;" *ngFor="let player of allItems ">
-          <!-- <div class="card card1 img_picture_box" style="width: 95%;" *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize"> -->
-              <div *ngIf="player.primaryPosition.code !== '1'" ><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
-              <div *ngIf="player.primaryPosition.code === '1'" > <img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
-              <!-- <div *ngIf="player.primaryPosition.code !== '1'" ><a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a></div>
-              <div *ngIf="player.primaryPosition.code === '1'" > <a routerLink="/pitcherinfo/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a></div> -->
-
-              <div class="card-body">
-              <h5 class="card-title">{{player.fullName}}</h5>
-            </div>
-          </div>
-        <!-- </ng-container> -->
-        <!-- <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
-          <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*7)">
-              <div *ngIf="player.primaryPosition.code !== '1'" ><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
-              <div *ngIf="player.primaryPosition.code === '1'" > <img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></div> -->
-              <!-- <div *ngIf="player.primaryPosition.code !== '1'" ><a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a></div>
-              <div *ngIf="player.primaryPosition.code === '1'" > <a routerLink="/pitcherinfo/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a></div> -->
-            <!-- <div class="card-body">
-              <h5 class="card-title">{{player.fullName}} </h5>
-            </div>
-          </div>
-        </ng-container> -->
+    <div *ngIf="allItems > 1">
+      <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..."
+        class="advancedSearchTextbox">
+      <div *ngIf="!allItems[0]" class="error_search d-flex justify-content-center">
+        <h4 class="error_message"> <strong>'{{searchText}}'</strong> El Jugador no existe. Solo busque por nombre,
+          sobrenombre y
+          equipo</h4>
       </div>
-      <!-- <div class="container paginator">
-        <div class="text-center">
-          <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
-            <li *ngIf="pager.currentPage !== 1" [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-              <a (click)="setPage(1)" class="page-link paginator_text">First</a>
-            </li>
-            <li *ngIf="pager.currentPage !== 1" [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-              <a (click)="setPage(pager.currentPage - 1)" class="page-link paginator_text">Previous</a>
-            </li>
-            <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
-              <a (click)="setPage(page)" class="page-link">{{page}}</a>
-            </li>
-            <li *ngIf="pager.currentPage !== 1" [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-              <a (click)="setPage(pager.currentPage + 1)" class="page-link paginator_text">Next</a>
-            </li>
-            <li *ngIf="pager.currentPage !== 1" [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-              <a (click)="setPage(pager.totalPages)" class="page-link paginator_text">Last</a>
-            </li>
-          </ul>
+    </div>
+
+
+    <div class="container-actives_cards ">
+      <div class="card card1 img_picture_box" style="width: 95%;" *ngFor="let player of allItems ">
+        <div *ngIf="player.primaryPosition.code !== '1'"><img class="card-img-top img_picture_element"
+            src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
+        <div *ngIf="player.primaryPosition.code === '1'"> <img class="card-img-top img_picture_element"
+            src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
+
+        <div class="card-body">
+          <h5 class="card-title">{{player.fullName}}</h5>
         </div>
-      </div> -->
-    <!-- </ng-container> -->
+      </div>
+    </div>
   </div>
-  </div>
+</div>
 

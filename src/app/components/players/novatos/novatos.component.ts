@@ -85,8 +85,8 @@ export class NovatosComponent implements OnInit {
          this.players = this.players.filter(player =>
           (new Date(player.mlbDebutDate)) > this.date)
 
-            // se ordenan por nombre
-            .sort(({ fullName: a }, { fullName: b }) => {
+            // se ordenan por apellidos
+            .sort(({ lastName: a }, { lastName: b }) => {
               if (a > b) {
                 return 1;
               } else if (a < b) {

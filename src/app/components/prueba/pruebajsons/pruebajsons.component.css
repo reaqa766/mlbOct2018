@@ -121,6 +121,7 @@
 }
 .seleccion {
   display: block;
+
 }
 .seleccion2 {
   display: none;
@@ -301,6 +302,7 @@ color: antiquewhite;
   }
   .seleccion2 {
     display: inline-block;
+
   }
   .LNac {
     grid-column: 2/4;
@@ -480,6 +482,7 @@ color: antiquewhite;
   }
   .seleccion2 {
     display: inline-block;
+
   }
   .LNac {
     grid-column: 2/4;
