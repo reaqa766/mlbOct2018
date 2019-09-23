@@ -36,7 +36,8 @@ export class PruebajsonsComponent implements OnInit {
   m: number;
   n1 = 12;
   n10 = 5;
-  dia = moment().format('YYYY-MM-DD');
+  // dia = moment().format('YYYY-MM-DD');
+  dia = new Date(new Date().getFullYear(),new Date().getMonth(), new Date().getDate() - 1);
   public allItems: any[];
   gamePlays: string;
 
@@ -53,10 +54,8 @@ export class PruebajsonsComponent implements OnInit {
   constructor(private playerService: DataPlayersService, private pagerService: PagerService) { }
 
   ngOnInit() {
-    console.log('Jugadores', this.players);
-    console.log('dia', this.dia);
-
-
+    // console.log('Jugadores', this.players);
+    // console.log('dia', this.dia);
     this.isLoading = true;
     this.getPlayersMap();
   }
@@ -124,8 +123,9 @@ getPlayersMap() {
   }
 
   onSearchDate(fecha) {
-    console.log("FECHA", fecha.srcElement.value);
-    this.dia = fecha.srcElement.value;
+    // console.log("FECHA", fecha.srcElement.value);
+    this.dia= fecha.srcElement.value;
+    // this.dia= fecha.srcElement.value;
     this.getPlayersMap();
 }
 
