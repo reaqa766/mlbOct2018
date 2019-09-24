@@ -32,8 +32,8 @@ export class PagerService {
         // calculate start and end item indexes
         const startIndex = (currentPage - 1) * pageSize;
         const endIndex = Math.min(startIndex + pageSize - 1, allItems - 1);
-        console.log("StarIndex",startIndex);
-        console.log("EndIndex",endIndex);
+        // console.log("StarIndex",startIndex);
+        // console.log("EndIndex",endIndex);
 
         // create an array of pages to ng-repeat in the pager control
         const pages = Array.from(Array((endPage + 1) - startPage).keys()).map(i => startPage + i);

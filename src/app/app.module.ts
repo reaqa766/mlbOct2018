@@ -96,6 +96,7 @@ import { TransaccionesComponent } from './components/players/transacciones/trans
 import { PodcastsComponent } from './components/podcasts/podcasts.component';
 import { Pruebas2019Component } from './components/pruebas2019/pruebas2019.component';
 import { LvbpHomeComponent } from './components/lvbp-home/lvbp-home.component';
+import { HrDiarioComponent } from './components/hr-diario/hr-diario.component';
 
 @NgModule({
   declarations: [
@@ -164,7 +165,8 @@ import { LvbpHomeComponent } from './components/lvbp-home/lvbp-home.component';
     TransaccionesComponent,
     PodcastsComponent,
     Pruebas2019Component,
-    LvbpHomeComponent
+    LvbpHomeComponent,
+    HrDiarioComponent
 
   ],
   imports: [
