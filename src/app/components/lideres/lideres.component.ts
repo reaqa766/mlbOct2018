@@ -16,7 +16,7 @@ export class LideresComponent implements OnInit {
   data: any;
   lider_avg: any;
   row: any;
-  estadistica = [true, false, false, false, false, false, false];
+  estadistica = [true, false, false, false, false, false, false, false];
   public players = [];
   public playersSort = [];
   groups: any;
@@ -125,7 +125,7 @@ export class LideresComponent implements OnInit {
     let filtrado = [];
 
     filtrado = this.jugadores.filter(
-      jugador => jugador.stats && jugador.stats[0].splits &&  jugador.stats[0].splits[0].stat.atBats >= (105*3.1)
+      jugador => jugador.stats && jugador.stats[0].splits &&  jugador.stats[0].splits[0].stat.atBats >= (162*3.1)
       // jugador => jugador.stats && jugador.stats[0].splits &&  jugador.stats[0].splits[0].stat.atBats >= (this.teamPlays.record * 3.1)
     ).
     sort((jugadorA, jugadorB) => {

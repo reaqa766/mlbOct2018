@@ -73,7 +73,7 @@ export class PActivesComponent implements OnInit {
           player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0)
         //  && player.stats[0].splits[player.stats[0].splits.length-1].date === this.dia)
          // se ordenan por nombre
-            .sort(({ fullName: a }, { fullName: b }) => {
+            .sort(({ lastName: a }, { lastName: b }) => {
               if (a > b) {
                 return 1;
               } else if (a < b) {

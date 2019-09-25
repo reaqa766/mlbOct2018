@@ -156,11 +156,11 @@ textChange(i) {
      jugador => jugador.stats && jugador.stats[0].splits &&  jugador.stats[0].splits[0].stat.atBats >= (105*3.1)
      // jugador => jugad or.stats && jugador.stats[0].splits &&  jugador.stats[0].splits[0].stat.atBats >= (this.teamPlays.record * 3.1)
    ).
-   sort((jugadorA, jugadorB) => {
+   sort((jugadorA, jugadorB) =>  {
 
      const a = Number(jugadorA.stats[0].splits[0].stat[estadistica]);
      const b = Number(jugadorB.stats[0].splits[0].stat[estadistica]);
-     if (a < b) {
+     if (a < b) { 
        return 1;
      } else if (a > b) {
        return -1;

@@ -54,6 +54,17 @@
     height: 1.75em;
     border-radius: 7px;
   }
+  .sub_lideres_nvo2 {
+    margin: 1rem 1rem;
+    color: antiquewhite;
+    font-size: 1.50rem;
+    text-align: center;
+    background-color: rgba(3, 2, 2, 0.5);
+    width: auto;
+    height: 1.75em;
+    border-radius: 7px;
+    padding: 0 0.5rem;
+  }
 
   .tableAVG_nvo {
     grid-column: 1/2;

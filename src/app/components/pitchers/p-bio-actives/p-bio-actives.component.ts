@@ -77,7 +77,7 @@ export class PBioActivesComponent implements OnInit {
           this.players = this.players.filter(player =>
             player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0)
               // se ordenan por nombre
-            .sort(({ fullName: a }, { fullName: b }) => {
+            .sort(({ lastName: a }, { lastName: b }) => {
               if (a > b) {
                 return 1;
               } else if (a < b) {
