@@ -8,18 +8,18 @@
     <div *ngIf="players">
       <div class="player_grid">
         <div class="player_pict">
-          <h5 class="card-title">{{player.fullName}}</h5>
+          <h5 class="card-title">{{player?.fullName}}</h5>
           <img class="player_pict2" src="../../../assets/{{player?.id}}.jpg" alt="Foto de Jugador de béisbol">
           <p class="title-position">Temporada 2019</p>
 
         </div>
         <div class="logo_team" *ngIf="player && player.stats[0].splits.length === 1  ">
           <img src="../../../assets/{{player.stats[0].splits[(player.stats[0].splits.length-1)].team.id}}.png" alt="Logo de Equipo de MLB">
-          <p>{{player.stats[0].splits.length}}</p>
+          <!-- <p>{{player.stats[0].splits[1].team.id}}</p> -->
         </div>
         <div class="logo_team" *ngIf="player && player.stats[0].splits.length > 1  ">
           <img src="../../../assets/{{player.stats[0].splits[(player.stats[0].splits.length - 2)].team.id}}.png" alt="Logo de Equipo de MLB">
-          <!-- <p>{{player.stats[0].splits.length}}</p> -->
+          <!-- <p>{{player.stats[0].splits[1].team.id}}</p> -->
         </div>
         <div class="player_stats">
           <table class="table   text-center">
@@ -40,7 +40,7 @@
             </thead>
 
             <tbody class="table-header2">
-              <tr *ngIf="player  && player.stats">
+              <tr *ngIf="player && player.stats && !player.stats[0].splits[1]">
                 <td style="width: 10%;">{{player.stats[0].splits[0].team.name}}</td>
                 <td style="width: 5%;">{{player.stats[0].splits[0].stat.gamesPitched}}</td>
                 <td style="width: 5%;">{{player.stats[0].splits[0].stat.wins}}</td>
@@ -53,13 +53,46 @@
                 <td style="width: 5%;">{{player.stats[0].splits[0].stat.baseOnBalls}}</td>
                 <td style="width: 5%;">{{player.stats[0].splits[0].stat.earnedRuns}}</td>
               </tr>
+              <tr *ngIf="player && player.stats && player.stats[0].splits[1]">
+                <td style="width: 10%;">{{player.stats[0].splits[1].team.name}}</td>
+                <td style="width: 5%;">{{player.stats[0].splits[2].stat.gamesPitched}}</td>
+                <td style="width: 5%;">{{player.stats[0].splits[2].stat.wins}}</td>
+                <td style="width: 5%;">{{player.stats[0].splits[2].stat.losses}}</td>
+                <td style="width: 5%;">{{player.stats[0].splits[2].stat.saves}}</td>
+                <td style="width: 5%;">{{player.stats[0].splits[2].stat.inningsPitched}}</td>
+                <td style="width: 5%;">{{player.stats[0].splits[2].stat.era}}</td>
+                <td style="width: 5%;">{{player.stats[0].splits[2].stat.hits}}</td>
+                <td style="width: 5%;">{{player.stats[0].splits[2].stat.strikeOuts}}</td>
+                <td style="width: 5%;">{{player.stats[0].splits[2].stat.baseOnBalls}}</td>
+                <td style="width: 5%;">{{player.stats[0].splits[2].stat.earnedRuns}}</td>
+              </tr>
             </tbody>
           </table>
         </div>
 
         <div class="player_data">
-          <ul class="list-group list-group-flush" *ngIf="player && player.primaryPosition && player.stats">
+          <ul class="list-group list-group-flush" *ngIf="player && player.stats && !player.stats[0].splits[3]">
             <li class="list-group-item"><strong> Equipo: </strong> {{player.stats[0].splits[0].team.name}}</li>
+            <li class="list-group-item"><strong>Lugar de Nacimiento: </strong> {{player.birthCity}}</li>
+            <li class="list-group-item"><strong>Fecha de Nacimiento: </strong> {{player.birthDate}} </li>
+            <li class="list-group-item"><strong> Edad: </strong> {{player.currentAge}}</li>
+            <li class="list-group-item"><strong>Sobrenombre: </strong> {{player.nickName}}</li>
+            <li class="list-group-item"><strong>Fecha de Debut en MLB: </strong> {{player.mlbDebutDate}}</li>
+            <li class="list-group-item"><strong>Numero de Camiseta: </strong> {{player.primaryNumber}}</li>
+            <li class="list-group-item"><strong>Posición Principal: </strong> {{player.primaryPosition.name}}</li>
+          </ul>
+          <ul class="list-group list-group-flush" *ngIf="player && player.stats && player.stats[0].splits[3]">
+            <li class="list-group-item"><strong> Equipo: </strong> {{player.stats[0].splits[1].team.name}}</li>
+            <li class="list-group-item"><strong>Lugar de Nacimiento: </strong> {{player.birthCity}}</li>
+            <li class="list-group-item"><strong>Fecha de Nacimiento: </strong> {{player.birthDate}} </li>
+            <li class="list-group-item"><strong> Edad: </strong> {{player.currentAge}}</li>
+            <li class="list-group-item"><strong>Sobrenombre: </strong> {{player.nickName}}</li>
+            <li class="list-group-item"><strong>Fecha de Debut en MLB: </strong> {{player.mlbDebutDate}}</li>
+            <li class="list-group-item"><strong>Numero de Camiseta: </strong> {{player.primaryNumber}}</li>
+            <li class="list-group-item"><strong>Posición Principal: </strong> {{player.primaryPosition.name}}</li>
+          </ul>
+          <ul class="list-group list-group-flush" *ngIf="player && player.stats && player.stats[0].splits[2]">
+            <li class="list-group-item"><strong> Equipo: </strong> {{player.stats[0].splits[2].team.name}}</li>
             <li class="list-group-item"><strong>Lugar de Nacimiento: </strong> {{player.birthCity}}</li>
             <li class="list-group-item"><strong>Fecha de Nacimiento: </strong> {{player.birthDate}} </li>
             <li class="list-group-item"><strong> Edad: </strong> {{player.currentAge}}</li>

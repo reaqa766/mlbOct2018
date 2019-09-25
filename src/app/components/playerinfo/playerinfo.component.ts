@@ -109,7 +109,7 @@ export class PlayerinfoComponent implements OnInit {
                 break;
               }
               // console.log('items5', 1);
-              // console.log('items7', this.idplayer);
+              // console.log('Players', this.players);
             }
           }
           index++;
