@@ -142,7 +142,7 @@ textChange(i) {
      }
    })
    // Se acaba el sort por la estadistica deseada => se retorna un a rray
-   .slice(0, 6);
+   .slice(0, 5);
    // console.log('filtrado', filtrado);
 
    return filtrado;
@@ -160,7 +160,7 @@ textChange(i) {
 
      const a = Number(jugadorA.stats[0].splits[0].stat[estadistica]);
      const b = Number(jugadorB.stats[0].splits[0].stat[estadistica]);
-     if (a < b) { 
+     if (a < b) {
        return 1;
      } else if (a > b) {
        return -1;
@@ -169,7 +169,7 @@ textChange(i) {
      }
    })
    // Se acaba el sort por la estadistica deseada => se retorna un array
-   .slice(0, 6);
+   .slice(0, 5);
    // console.log('filtrado', filtrado);
 
    return filtrado;
