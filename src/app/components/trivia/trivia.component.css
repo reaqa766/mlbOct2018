@@ -1,4 +1,68 @@
+/*Nuevo CSS */
+.container_title_video {
+    margin: 0 auto;
+    text-align: center;
+    text-shadow: 2px 2px 8px black;
+    text-shadow: 2px 2px 8px black;
+
+    /*width:33%;*/
+    padding: 0 1rem;
+    border-radius: 6px;
+
+    left: 10%;
+    width: 38%;
+    }
+    
+    
+    .title_video {
+        color: antiquewhite;
+        bottom: 2rem;
+        margin-bottom: 2rem;
+    } 
+
+    .embed-responsive-item {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 15%;
+        width: 30%;
+        height: 80%;
+        border: 0;
+    }
+    .embed-responsive-item2 {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 30%;
+        height: 80%;
+        border: 0;
+    }
+    .embed-responsive-item3 {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 15%;
+        width: 75%;
+        height: 70%;
+        border: 0;
+    }
+    .embed-responsive-item4 {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 25%;
+        width: 50%;
+        height: 100%;
+        border: 0;
+    }
+
+
+
+
+ 
  /* CSS ORIGINAL */
+
 body {
     box-sizing: border-box;
     margin: 0;
@@ -6,8 +70,9 @@ body {
 }
 
 .title_trivia {
-    background-color: rgba(0, 0, 0, .5);
-    width: 12rem;
+ /* background-color: rgba(0, 0, 0, .5);
+    width: 12rem; */
+    width: auto; 
     margin: 0 auto;
     border-radius: 6px;
 
@@ -18,6 +83,15 @@ header div  h1 {
     font-weight: 700;
     text-shadow: 2px 2px 8px #111;
     color: antiquewhite;
+    text-align: center;
+    line-height: 1.25em;
+
+}
+header div  h2 {
+    font-size: 2em;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px #111;
+    color: rgb(185, 138, 75);
     text-align: center;
     line-height: 1.25em;
 
@@ -133,7 +207,9 @@ footer {
 @media only screen and (min-width:631px ) and (max-width: 900px) and (orientation: landscape) {
 
     .title_trivia {
-        width: 12rem;
+       /* width: 12rem;*/
+        width: auto; 
+
     
     }
     
@@ -161,8 +237,9 @@ footer {
 }
 @media only screen and (min-width:500px ) and (max-width: 915px)  {
     .title_trivia {
-        width: 12rem;
-    
+        /*width: 12rem;*/
+        width: auto; 
+
     }
     
     header div  h1 {
@@ -189,7 +266,9 @@ footer {
 
 @media only screen and (min-width:916px ) and (max-width: 1024px)  {
 .title_trivia {
-    width: 16rem;
+    /*width: 16rem;*/
+    width: auto; 
+
     }
 header div  h1 {
     font-size: 2.5em;
@@ -222,7 +301,9 @@ header div  h1 {
 }
 @media only screen and (min-width:1025px ) and (max-width: 1439px)  {
     .title_trivia {
-        width: 16rem;
+        /*width: 16rem;*/
+        width: auto; 
+
         }
    
     header div  h1 {
@@ -252,8 +333,9 @@ main div div div img {
 }
 @media only screen and (min-width:1440px ) and (max-width: 1920px)  {
     .title_trivia {
-        background-color: rgba(0, 0, 0, .5);
-        width: 16rem;
+/*      background-color: rgba(0, 0, 0, .5);
+        width: 16rem;*/
+        width: auto; 
         border-radius: 6px;
         margin: 0 auto;
    }
@@ -307,8 +389,10 @@ main div div div img {
 
 @media only screen and (min-width:1921px ) and (max-width: 3000px)  {
     .title_trivia {
-        background-color: rgba(0, 0, 0, .5);
-        width: 16rem;
+     /* background-color: rgba(0, 0, 0, .5);
+     /* width: 16rem;*/
+        width: auto; 
+
         border-radius: 6px;
         margin: 0 auto;
    }

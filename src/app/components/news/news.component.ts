@@ -146,7 +146,7 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('http://www.meridiano.com.ve/beisbol/beisbol-grandes-ligas/196326/carrasco-se-plantea-retornar-a-finales-de-julio.html' , '_blank');
+          window.open('https://www.mlb.com/es/news/felix-tiene-como-objetivo-la-rotacion-de-bravos' , '_blank');
   } else if (this.num === 'video3J') {
     window.open(' https://www.mlb.com/es/news/estara-felipe-vazquez-en-la-mira-de-dodgers', '_blank');
   } else if (this.num === 'video4J') {
