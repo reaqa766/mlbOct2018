@@ -47,6 +47,16 @@ export class PruebaService {
     542364, 642578, 614179, 465041, 642279,
     614179, 527038, 491676,  660813, 553902,
     620982, 622795, 517369, 620443,
+    517369, 656024, 656196,
+    433217, 471865, 500208, 521692,
+    542513, 578570, 591712, 591720,
+    593993, 600902, 608422, 620443,
+    630034, 640492, 640902, 641319,
+    641645, 645305, 647351, 650658,
+    650660, 650883, 658668, 660614,
+    660688, 661388, 665861, 665926,
+    666023, 686780
+
   ];
 
   // MENORES 545121,  2018
@@ -114,7 +124,7 @@ export class PruebaService {
   // private _url4 = 'https://statsapi.mlb.com/api/v1/teams/109/roster?hydrate=person(stats(type=season,season=2018),education)&rosterType=Active';
   // // tslint:disable-next-line:max-line-length
   // tslint:disable-next-line:max-line-length
-  private _url ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2019&hydrate=stats(group=hitting,type=season,season=2019,gameType=R)'
+  private _url ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2020&hydrate=stats(group=hitting,type=season,season=2020,gameType=S)'
 
 
   // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(type=season=2018),%20team(currentteam)';

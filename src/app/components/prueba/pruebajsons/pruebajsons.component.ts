@@ -55,7 +55,7 @@ export class PruebajsonsComponent implements OnInit {
 
   ngOnInit() {
     // console.log('Jugadores', this.players);
-    // console.log('dia', this.dia);
+    console.log('dia', this.dia);
     this.isLoading = true;
     this.getPlayersMap();
   }

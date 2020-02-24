@@ -4,8 +4,8 @@
     <div class="title_trivia">
       <h1 class="title_h1">Liga de Fantasía 2020</h1>
     </div>
-    <div class="title_trivia">
-        <h2 class="title_h1">- Usuario: yRafael Peraza -</h2>
+    <div class="title_trivia2">
+        <h2 class="title_h2">- Usuario: Rafael Peraza -</h2>
       </div>
   </header>
   <div class="container_title_video">
@@ -13,29 +13,36 @@
       </div>
       <div class="embed-responsive embed-responsive-16by9">
           <a class="tablaRosters" >
-  
+
               <img class="embed-responsive-item" src="../../../assets/RosterAct.jpg" alt="Roster Jugadores Activos" >
+              <img class="mobil_display embed-responsive-item2" src="../../../assets/RosterBACKUP.jpg" alt="Roster Jugadores Activos" >
+
+            </a>
+          </div>
+          <hr class="mobil_display_si" width=50% size=1 color=transparent>
+          <div class="mobil_display_si embed-responsive embed-responsive-16by9">
+          <a class="tablaRosters" >
+
+              <img class="mobil_display embed-responsive-item" src="../../../assets/RosterAct.jpg" alt="Roster Jugadores Activos" >
               <img class="embed-responsive-item2" src="../../../assets/RosterBACKUP.jpg" alt="Roster Jugadores Activos" >
 
             </a>
               </div>
 
-              <!-- <div class="title_trivia">
-                  <h1 class="title_h1"></h1>
-                </div> -->
+
                 <hr width=50% size=20 color=white>
 
                 <div class="container_title_video">
                     <h1 class="title_video">PUNTUACIÓN</h1>
                     </div>
-              
-            
+
+
                 <div class="embed-responsive embed-responsive-16by9">
                     <a class="tablaRosters" >
-            
+
                         <img class="embed-responsive-item3" src="../../../assets/TPTOSDIA.jpg" alt="Tabla Puntos diarios Jugadores Activos" >
                         <!-- <img class="embed-responsive-item2" src="../../../assets/RosterBACKUP.jpg" alt="Roster Jugadores Activos" > -->
-          
+
                       </a>
                     </div>
                 <hr width=50% size=20 color=white>
@@ -43,18 +50,18 @@
                 <div class="container_title_video">
                     <h1 class="title_video">TABLA DE PUNTUACIÓN</h1>
                     </div>
-              
-            
-                <div class="embed-responsive embed-responsive-16by9">
+
+
+                <div class="tabla_Final embed-responsive embed-responsive-16by9">
                     <a class="tablaRosters" >
-            
+
                         <img class="embed-responsive-item4" src="../../../assets/TablaPuntLigaG1.jpg" alt="Tabla Puntos Equipos" >
                         <!-- <img class="embed-responsive-item2" src="../../../assets/RosterBACKUP.jpg" alt="Roster Jugadores Activos" > -->
-          
+
                       </a>
                     </div>
-      
-  
+
+
 
 
 
@@ -93,24 +100,24 @@
           <form >
               <input [(ngModel)]="answer[i]" type="radio" name='answer'  value="{{player.opcion1}}" (click)='respDada(i)'> {{player.opcion1}}<br>
               <input [(ngModel)]="answer[i]" type="radio" name='answer' value="{{player.opcion2}}" (click)='respDada(i)'> {{player.opcion2}}<br>
-              <input [(ngModel)]="answer[i]" type="radio" name='answer' value="{{player.opcion3}}" (click)='respDada(i)'> {{player.opcion3}}<br>  
+              <input [(ngModel)]="answer[i]" type="radio" name='answer' value="{{player.opcion3}}" (click)='respDada(i)'> {{player.opcion3}}<br>
 
             </form> -->
 
           <!-- <p class="text_12" (click)='textChange(i)'>{{player.respuesta}}</p>
         </div>
-      <div *ngIf='!respuesta_def[i]' >  --> 
+      <div *ngIf='!respuesta_def[i]' >  -->
         <!-- <p>Seleccion {{answer[i]}}</p>
         <p>resp Correcta {{player.respuesta}}</p> -->
       <!--<div class="respuesta_dada respuesta" *ngIf='answer[i] == player.respuesta; else other_answer'>
           <p>Respuesta Correcta!.</p><br>
-        </div> 
-        <ng-template #other_answer > 
+        </div>
+        <ng-template #other_answer >
             <p class="respuesta">Respuesta Incorrecta, era: {{player.respuesta}}</p>
         </ng-template>
       </div>
       </div>
     </div>
-  </div> 
+  </div>
 
 </main>-->

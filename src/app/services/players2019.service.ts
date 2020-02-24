@@ -44,7 +44,17 @@ export class Players2019Service {
     506702, 467827, 620439, 642731, 542364,
     553869, 623993, 650333, 465041,
     642279, 527038, 433587, 491676, 553902,
-    517369, 620443,
+    517369, 620443, 517369, 656024,
+            517369, 656196,
+            433217, 471865, 500208, 521692,
+            542513, 578570, 591712, 591720,
+            593993, 600902, 608422, 620443,
+            630034, 640492, 640902, 641319,
+            641645, 645305, 647351, 650658,
+            650660, 650883, 658668, 660614,
+            660688, 661388, 665861, 665926,
+            666023, 686780
+
 
 
   ];
@@ -116,7 +126,7 @@ export class Players2019Service {
   // private _url4 = 'https://statsapi.mlb.com/api/v1/teams/109/roster?hydrate=person(stats(type=season,season=2018),education)&rosterType=Active';
   // // tslint:disable-next-line:max-line-length
   // tslint:disable-next-line:max-line-length
-  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(type=season=2019),%20team(currentteam)';
+  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(type=season=2020),%20team(currentteam)';
   // private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(type=gameLog)';
 
 
