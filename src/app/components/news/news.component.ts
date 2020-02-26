@@ -148,25 +148,25 @@ export class NewsComponent implements OnInit {
     if (this.num === 'video2') {
           window.open('https://www.mlb.com/es/news/felix-tiene-como-objetivo-la-rotacion-de-bravos' , '_blank');
   } else if (this.num === 'video3J') {
-    window.open(' https://www.mlb.com/es/news/estara-felipe-vazquez-en-la-mira-de-dodgers', '_blank');
+    window.open('https://www.mlb.com/es/news/e-rod-pierde-caso-de-arbitraje-con-medias-rojas', '_blank');
   } else if (this.num === 'video4J') {
-    window.open('http://www.liderendeportes.com/noticias/baseball/segunda-mitad-de-2019-con-tinte-tricolor/', '_blank');
+    window.open('https://www.mlb.com/es/news/suarez-pretende-estar-listo-para-el-dia-inaugural');
   } else if (this.num === 'video5J') {
-    window.open('https://www.sportsvenezuela.com/jose-altuve-comenzaria-su-rehabilitacion-en-las-menores-el-fin-de-semana/', '_blank');
+    window.open('https://www.mlb.com/es/news/wilmer-flores-feliz-de-unirse-a-los-gigantes');
   } else if (this.num === 'video3H') {
-    window.open(' http://www.liderendeportes.com/noticias/baseball/elias-diaz-le-saca-provecho-a-su-titularidad-en-pittsburgh/', '_blank');
+    window.open('https://www.beisbolplay.com/2020/02/13/salvador-perez-listo-para-volver-con-los-reales-tras-un-ano-fuera/');
   } else if (this.num === 'video4H') {
-    window.open('https://www.sportsvenezuela.com/senzatela-rockies-cascabeles/', '_blank');
+    window.open('https://www.12up.com/es/posts/francisco-cervelli-marlins-mucha-ayuda-en-la-temporada-01e12sb3h8rg');
   } else if (this.num === 'video5H') {
-    window.open('https://www.sportsvenezuela.com/felipe-vazquez-volvio-vestirse-de-salvador/ ', '_blank');
+    window.open('http://www.liderendeportes.com/noticias/baseball/jhoulys-buscara-ser-parte-de-la-rotacion-de-mellizos/');
   } else if (this.num === 'video3G') {
-    window.open(' https://www.sportsvenezuela.com/contreras-estrellas-boletin/', '_blank');
+    window.open('http://www.liderendeportes.com/noticias/baseball/brusdar-graterol-demora-integracion-a-los-dodgers/');
   } else if (this.num === 'video4G') {
-    window.open(' http://www.meridiano.com.ve/beisbol/beisbol-grandes-ligas/194386/escobar-la-sigue-viendo-clarita-en-la-campana---video-.html', '_blank');
+    window.open('http://www.liderendeportes.com/noticias/baseball/luzardo-con-gran-chance-como-abridor-de-oakland/');
   } else if (this.num === 'video5G') {
-    window.open('https://www.mlb.com/es/news/jhoulys-chacin-a-lista-de-lesionados-de-cerveceros', '_blank');
+    window.open('http://www.liderendeportes.com/noticias/baseball/6-venezolanos-entre-los-mejores-100-jugadores-de-las-mayores/');
   } else if (this.num === 'video3F') {
-    window.open('  https://beisbol.americadigital.com/2019/05/27/la-elite-del-poder-en-venezuela-tiene-un-nuevo-nombre-renato-nunez/', '_blank');
+    window.open('https://elextrabase.com/2020/02/11/carlos-gonzalez-firmo-contrato-menor-con-los-seattle-mariners/');
   } else if (this.num === 'video4F') {
     window.open('https://beisbol.americadigital.com/2019/05/28/avisail-garcia-le-echo-piernas-para-llegar-a-diez-jonrones/', '_blank');
   } else if (this.num === 'video5F') {

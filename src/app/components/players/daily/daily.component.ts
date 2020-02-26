@@ -28,6 +28,11 @@ export class DailyComponent implements OnInit {
   n1 = 12;
   n10 = 5;
   dia = moment().format('YYYY-MM-DD');
+  // dia = moment().format('YYYY-MM-DD');
+  // diaAnt = moment().format('YYYY-MM-DD');
+  // diaAnte = moment(this.diaAnt).subtract(1, 'day').format('YYYY-MM-DD')
+  // diaAnterior = moment(this.diaAnt).subtract(1, 'day').format('DD-MM-YYYY')
+  // noGameToday : any[];
   public allItems: any[];
   gamePlays: string;
 
@@ -105,7 +110,7 @@ getPlayersMap() {
         this.allItems = this.players;
         this.setPage(1);
         this.isLoading = false;
-        console.log('players', this.players);
+        // console.log('players', this.players);
         }
         index++;
 

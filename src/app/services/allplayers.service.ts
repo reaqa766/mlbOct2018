@@ -52,7 +52,22 @@ export class AllplayersService {
     553869, 650382, 650333, 621592, 622786,
     570717, 620454, 542364, 642578, 642279,
     660813, 620982, 650671, 622795, 575070,
-    624133,
+    624133, 665561, 542419,
+            517369, 542208, 656024, 656196,
+            433217, 471865, 500208, 521692,
+            542513, 578570, 591712, 591720,
+            593993, 600902, 608422, 620443,
+            630034, 640492, 640902, 641319,
+            641645, 645305, 647351, 650658,
+            650660, 650883, 658668, 660614,
+            660688, 661388, 665861, 665926,
+            666023, 686780,
+
+            593163, 593993, 600921, 611093, 612792,
+            621593, 622459, 642511, 645307, 650347,
+            656196, 658530, 658648, 659262, 660749,
+            660761, 661099, 661440, 664337, 666200,
+            666674, 667356, 670550, 672578, 500610
   ];
 
   private rookiesCode = [
@@ -63,7 +78,8 @@ export class AllplayersService {
 
   ];
 
-  private _url ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2019&hydrate=stats(type=season,season=2019,gameType=R)'
+  private _url ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2020&hydrate=stats(type=season,season=2020,gameType=S)'
+  // private _url ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2019&hydrate=stats(type=season,season=2019,gameType=R)'
 
 
   // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(type=season=2018),%20team(currentteam)';

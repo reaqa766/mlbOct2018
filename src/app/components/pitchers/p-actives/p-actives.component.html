@@ -3,7 +3,8 @@
   <h1 class="actives-title">Pitchers Activos</h1>
 </div>
 
-<p class="title-position"> Temporada Regular 2019 </p>
+<p class="title-position"> Spring Training 2020 </p>
+<!-- <p class="title-position"> Temporada Regular 2019 </p> -->
 
 <!-- LOADER -->
 <div *ngIf="!allItems">
@@ -56,7 +57,7 @@
               <td class="th12" style="width: 5%;">{{player.stats[0].splits[0].stat.runs}}</td>
             </tr>
           </ng-container>
-          
+
           <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
             <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*8)">
               <a routerLink="/pitcherinfo/{{player.id}}" class="link_player"><td class="link_player" class="th2" style="width: 8%;">{{player.fullName}}</td></a>
