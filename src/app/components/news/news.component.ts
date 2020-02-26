@@ -146,38 +146,38 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://www.mlb.com/es/news/felix-tiene-como-objetivo-la-rotacion-de-bravos' , '_blank');
+          window.open('https://www.mlb.com/es/news/miguel-cabrera-salio-en-respaldo-de-jose-altuve' , '_blank');
   } else if (this.num === 'video3J') {
-    window.open('https://www.mlb.com/es/news/e-rod-pierde-caso-de-arbitraje-con-medias-rojas', '_blank');
+    window.open('https://elextrabase.com/2020/02/23/eduardo-rodriguez-y-carlos-carrasco-mejoran-de-sus-molestias/', '_blank');
   } else if (this.num === 'video4J') {
-    window.open('https://www.mlb.com/es/news/suarez-pretende-estar-listo-para-el-dia-inaugural');
+    window.open('http://www.liderendeportes.com/noticias/slider/jesus-luzardo-cumplio-en-su-primera-apertura/');
   } else if (this.num === 'video5J') {
-    window.open('https://www.mlb.com/es/news/wilmer-flores-feliz-de-unirse-a-los-gigantes');
+    window.open('https://elextrabase.com/2020/02/23/freddy-galvis-debera-recuperarse-para-volver-al-spring-training/');
   } else if (this.num === 'video3H') {
-    window.open('https://www.beisbolplay.com/2020/02/13/salvador-perez-listo-para-volver-con-los-reales-tras-un-ano-fuera/');
+    window.open('https://www.elinformador.com.ve/deportes/el-slugger-venezolano-miguel-cabrera-esta-feliz-porque-rebajo-11-kilos-y-ahora-se-prepara-para-llegar-a-500-jonrones-en-las-grandes-ligas-cifra-de-la-que-esta-a-solo-23/');
   } else if (this.num === 'video4H') {
-    window.open('https://www.12up.com/es/posts/francisco-cervelli-marlins-mucha-ayuda-en-la-temporada-01e12sb3h8rg');
+    window.open('http://www.liderendeportes.com/noticias/baseball/ranger-suarez-lanzo-2-actos-en-blanco-ante-pittsburgh/');
   } else if (this.num === 'video5H') {
-    window.open('http://www.liderendeportes.com/noticias/baseball/jhoulys-buscara-ser-parte-de-la-rotacion-de-mellizos/');
+    window.open('https://www.beisbolplay.com/2020/02/25/miguel-cabrera-se-reconcilia-con-su-poder-primer-jonron-de-juegos-de-exhibicion/');
   } else if (this.num === 'video3G') {
-    window.open('http://www.liderendeportes.com/noticias/baseball/brusdar-graterol-demora-integracion-a-los-dodgers/');
+    window.open('http://www.liderendeportes.com/noticias/baseball/kershaw-elogio-el-talento-de-brusdar-graterol/');
   } else if (this.num === 'video4G') {
-    window.open('http://www.liderendeportes.com/noticias/baseball/luzardo-con-gran-chance-como-abridor-de-oakland/');
-  } else if (this.num === 'video5G') {
-    window.open('http://www.liderendeportes.com/noticias/baseball/6-venezolanos-entre-los-mejores-100-jugadores-de-las-mayores/');
+    window.open('https://www.beisbolplay.com/2020/02/19/las-cifras-extremas-de-los-venezolanos-en-el-spring-training/');
   } else if (this.num === 'video3F') {
-    window.open('https://elextrabase.com/2020/02/11/carlos-gonzalez-firmo-contrato-menor-con-los-seattle-mariners/');
+    window.open('https://www.beisbolplay.com/2020/02/17/gleyber-torres-sobre-jose-altuve-si-hizo-las-cosas-que-dicen-que-hizo-no-es-justo/');
   } else if (this.num === 'video4F') {
-    window.open('https://beisbol.americadigital.com/2019/05/28/avisail-garcia-le-echo-piernas-para-llegar-a-diez-jonrones/', '_blank');
+    window.open('http://www.liderendeportes.com/noticias/baseball/miguel-rojas-sobre-el-robo-de-senas-todos-podemos-aprender-de-esto/');
+  } else if (this.num === 'video3D') {
+    window.open('https://www.mlb.com/es/news/venezuela-con-144-representantes-esta-primavera');
   } else if (this.num === 'video5F') {
-    window.open('http://www.enlaraya.com/baseball/mlb/hernandez-esta-casi-listo/', '_blank');
+    window.open('https://www.mlb.com/es/news/german-marquez-lanzara-frente-a-su-familia');
   } else if (this.num === 'video3E') {
-    window.open('https://www.sportsvenezuela.com/jose-osuna-consiguio-su-primer-remolque-del-ano-en-caida-bucanera/', '_blank');
+    window.open('https://elextrabase.com/2020/02/23/orioles-trabaja-con-renato-nunez-para-mejorar-su-defensa/', '_blank');
   } else if (this.num === 'video4E') {
     window.open('https://www.sportsvenezuela.com/yonny-chirinos-pitcheo-como-los-dioses-en-triunfo-de-los-rays/', '_blank');
   } else if (this.num === 'video5E') {
     window.open('https://www.mlb.com/es/news/tiene-carlos-gonzalez-futuro-en-grandes-ligas', '_blank');
-  } else if (this.num === 'video3D') {
+  } else if (this.num === 'video3x') {
     window.open('http://www.enlaraya.com/baseball/mlb/contreras-esta-viviendo/', '_blank');
   } else if (this.num === 'video4D') {
     window.open('http://www.liderendeportes.com/noticias/baseball/eugenio-se-agarro-mayo-para-florecer/', '_blank');
@@ -210,27 +210,27 @@ export class NewsComponent implements OnInit {
   } else if (this.num === 'video37') {
     window.open('https://www.mlb.com/es/news/perez-domina-para-guiar-a-twins-sobre-astros/', '_blank');
   } else if (this.num === 'video30') {
-    window.open('http://www.liderendeportes.com/noticias/baseball/sandy-leon-le-cambio-la-cara-al-pitcheo-de-boston/', '_blank');
+    window.open('https://www.mlb.com/es/news/e-rod-pierde-caso-de-arbitraje-con-medias-rojas', '_blank');
   } else if (this.num === 'video32') {
-    window.open('https://www.sportsvenezuela.com/la-fuerza-de-jesus-aguilar-volvio-a-aparecer-y-jhoulys-chacin-gano-el-tercero-videos/', '_blank');
+    window.open('https://www.mlb.com/es/news/suarez-pretende-estar-listo-para-el-dia-inaugural');
   } else if (this.num === 'video33') {
-    window.open('https://www.sportsvenezuela.com/felipe-vazquez-se-apunto-su-septimo-rescate-de-la-campana-con-pittsburgh/', '_blank');
+    window.open('https://www.mlb.com/es/news/wilmer-flores-feliz-de-unirse-a-los-gigantes');
   } else if (this.num === 'video4') {
-    window.open('https://beisbol.estrending.com/2019/04/29/eduardo-escobar-es-el-jugador-de-la-semana-de-la-liga-nacional/', '_blank');
+    window.open('https://www.beisbolplay.com/2020/02/13/salvador-perez-listo-para-volver-con-los-reales-tras-un-ano-fuera/');
   } else if (this.num === 'video5') {
-    window.open('https://noticiassin.com/el-venezolano-aguilar-brilla-en-ausencia-de-yelich-y-ganan-cerveceros/', '_blank');
+    window.open('https://www.12up.com/es/posts/francisco-cervelli-marlins-mucha-ayuda-en-la-temporada-01e12sb3h8rg');
   } else if (this.num === 'video31') {
-    window.open('https://beisbol.estrending.com/2019/04/29/chirinos-y-carrasco-libraron-una-guerra-fratricida/', '_blank');
+    window.open('http://www.liderendeportes.com/noticias/baseball/jhoulys-buscara-ser-parte-de-la-rotacion-de-mellizos/');
   } else if (this.num === 'video41') {
-    window.open('https://www.sportsvenezuela.com/cuatro-venezolanos-guiaron-paliza-de-arizona-sobre-los-piratas-pittsburgh/', '_blank');
+    window.open('http://www.liderendeportes.com/noticias/baseball/brusdar-graterol-demora-integracion-a-los-dodgers/');
   } else if (this.num === 'video51') {
-    window.open('http://www.el-nacional.com/noticias/beisbol/boston-sube-las-mayores-prospecto-guayanes-darwinzon-hernandez_280193', '_blank');
+    window.open('http://www.liderendeportes.com/noticias/baseball/luzardo-con-gran-chance-como-abridor-de-oakland/');
   } else if (this.num === 'video6') {
-    window.open('https://beisbol.estrending.com/2019/04/10/altuve-lleva-cuatro-jonrones-en-tres-dias/', '_blank');
+    window.open('http://www.liderendeportes.com/noticias/baseball/6-venezolanos-entre-los-mejores-100-jugadores-de-las-mayores/');
   } else if (this.num === 'video7') {
-    window.open('https://beisbol.estrending.com/2019/04/12/con-los-ganchos-hasta-cuando-llamaremos-cafecito-a-jose-martinez/', '_blank');
+    window.open('https://elextrabase.com/2020/02/11/carlos-gonzalez-firmo-contrato-menor-con-los-seattle-mariners/');
   } else if (this.num === 'video8') {
-    window.open('https://www.sportsvenezuela.com/acuna-salio-de-las-sombras-del-ponche-a-la-luz-del-triunfovideo/', '_blank');
+    window.open('https://beisbol.estrending.com/2019/04/12/con-los-ganchos-hasta-cuando-llamaremos-cafecito-a-jose-martinez/', '_blank');
   }
   }
 
