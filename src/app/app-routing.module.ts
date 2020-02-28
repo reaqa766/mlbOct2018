@@ -36,6 +36,7 @@ import { BioActives2019Component } from './components/temp2019/players2019/bio-a
 import { Byposition2019Component } from './components/temp2019/players2019/byposition2019/byposition2019.component';
 import { Playerinfo2019Component } from './components/temp2019/players2019/playerinfo2019/playerinfo2019.component';
 import { Byteam2019Component } from './components/temp2019/players2019/byteam2019/byteam2019.component';
+import { Pitcherinfo2019Component } from './components/temp2019/pitchers2019/pitcherinfo2019/pitcherinfo2019.component';
 import { InfogShowComponent } from './components/infographics/infog-show/infog-show.component';
 import { PlayerWeekComponent } from './components/player-week/player-week.component';
 import { PitcherrWeekComponent } from './components/pitcherr-week/pitcherr-week.component';
@@ -124,8 +125,12 @@ const routes: Routes = [
   component: VideosComponent},
   { path: 'playerinfo/:code',
   component: PlayerinfoComponent, pathMatch: 'full'},
-  { path: 'playerinfo2019/:code',
-  component: Playerinfo2019Component, pathMatch: 'full'},
+  { path: 'playerinfo2019',
+  component: Playerinfo2019Component},
+  { path: 'pitcherinfo2019',
+  component:Pitcherinfo2019Component},
+  // { path: 'playerinfo2019/:code',
+  // component: Playerinfo2019Component, pathMatch: 'full'},
   { path: 'playeroftheweek',
   component: PlayerOfTheWeekComponent, pathMatch: 'full'},
   { path: 'pitcherinfo/:id',
