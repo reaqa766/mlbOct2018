@@ -34,7 +34,7 @@
   
   .img_picture_box:hover .img_picture_element{
       transform: scale(1.075);
-      opacity: .98;
+      opacity: .97;
   }
   .card-body{
     max-height: 1rem;
