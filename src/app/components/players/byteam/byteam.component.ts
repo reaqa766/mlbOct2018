@@ -111,7 +111,7 @@ export class ByteamComponent implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    console.log('players', this.players);
+    // console.log('players', this.players);
   }
 
   // Convertir el Array de Observables a un Array de Objetos.
