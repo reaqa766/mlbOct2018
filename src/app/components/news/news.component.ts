@@ -146,19 +146,19 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://www.mlb.com/es/news/miguel-cabrera-salio-en-respaldo-de-jose-altuve' , '_blank');
+          window.open('https://www.mlb.com/es/news/eduardo-rodriguez-candidato-a-dia-inaugural-por-medias-rojas');
   } else if (this.num === 'video3J') {
-    window.open('https://elextrabase.com/2020/02/23/eduardo-rodriguez-y-carlos-carrasco-mejoran-de-sus-molestias/', '_blank');
+    window.open('https://www.mlb.com/es/news/graterol-impresiona-en-su-debut-esta-primavera');
   } else if (this.num === 'video4J') {
-    window.open('http://www.liderendeportes.com/noticias/slider/jesus-luzardo-cumplio-en-su-primera-apertura/');
+    window.open('https://www.sportsvenezuela.com/ramos-piloto-mets/');
   } else if (this.num === 'video5J') {
-    window.open('https://elextrabase.com/2020/02/23/freddy-galvis-debera-recuperarse-para-volver-al-spring-training/');
+    window.open('https://www.mlb.com/es/news/eugenio-suarez-progresa-poco-a-poco-tras-cirugia');
   } else if (this.num === 'video3H') {
-    window.open('https://www.elinformador.com.ve/deportes/el-slugger-venezolano-miguel-cabrera-esta-feliz-porque-rebajo-11-kilos-y-ahora-se-prepara-para-llegar-a-500-jonrones-en-las-grandes-ligas-cifra-de-la-que-esta-a-solo-23/');
+    window.open('https://www.mlb.com/es/news/perez-aprovecha-consejos-de-su-idolo-pedro');
   } else if (this.num === 'video4H') {
-    window.open('http://www.liderendeportes.com/noticias/baseball/ranger-suarez-lanzo-2-actos-en-blanco-ante-pittsburgh/');
+    window.open('https://elextrabase.com/2020/02/28/salvador-perez-disputo-su-primer-juego-como-receptor-desde-2018/');
   } else if (this.num === 'video5H') {
-    window.open('https://www.beisbolplay.com/2020/02/25/miguel-cabrera-se-reconcilia-con-su-poder-primer-jonron-de-juegos-de-exhibicion/');
+    window.open('http://www.liderendeportes.com/noticias/baseball/sandoval-y-flores-seran-claves-en-san-francisco/');
   } else if (this.num === 'video3G') {
     window.open('http://www.liderendeportes.com/noticias/baseball/kershaw-elogio-el-talento-de-brusdar-graterol/');
   } else if (this.num === 'video4G') {

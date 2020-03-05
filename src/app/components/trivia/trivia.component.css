@@ -13,7 +13,6 @@
     width: 38%;
     }
 
-
     .title_video {
         color: antiquewhite;
         bottom: 2rem;
@@ -24,9 +23,27 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        left: 15%;
-        width: 30%;
-        height: 80%;
+        left: 21%;
+        width: 27%;
+        height: 42%;
+        border: 0;
+    }
+    .embed-responsive-item_A {
+        position: absolute;
+        top: 45%;
+        bottom: 0;
+        left: 21%;
+        width: 27%;
+        height: 42%;
+        border: 0;
+    }
+    .embed-responsive-item2_A {
+        position: absolute;
+        top: 45%;
+        bottom: 0;
+        left: 50%;
+        width: 27%;
+        height: 42%;
         border: 0;
     }
     .embed-responsive-item2 {
@@ -34,8 +51,44 @@
         top: 0;
         bottom: 0;
         left: 50%;
-        width: 30%;
-        height: 80%;
+        width: 27%;
+        height: 42%;
+        border: 0;
+    }
+    .embed-responsive-item_B {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 21%;
+        width: 27%;
+        height: 42%;
+        border: 0;
+    }
+    .embed-responsive-item_B {
+        position: absolute;
+        top: 45%;
+        bottom: 0;
+        left: 21%;
+        width: 27%;
+        height: 42%;
+        border: 0;
+    }
+    .embed-responsive-item2_B {
+        position: absolute;
+        top: 45%;
+        bottom: 0;
+        left: 50%;
+        width: 27%;
+        height: 42%;
+        border: 0;
+    }
+    .embed-responsive-item2_B {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 27%;
+        height: 42%;
         border: 0;
     }
     .embed-responsive-item3 {
@@ -484,20 +537,38 @@ main div div div img {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 30%;
-    width: 35%;
+    left: 18%;
+    width: 65%;
     height: 100%;
     border: 0;
 }
    .embed-responsive-item2 {
     position: absolute;
-    top: 0;
+    top: 55%;
     bottom: 0;
-    left: 30%;
-    width: 35%;
+    left: 18%;
+    width: 65%;
     height: 100%;
     border: 0;
 }
+   /* .embed-responsive-item_A {
+    position: absolute;
+    top: 55%;
+    bottom: 0;
+    left: 18%;
+    width: 65%;
+    height: 100%;
+    border: 0;
+}
+   .embed-responsive-item2_A {
+    position: absolute;
+    top: 75%;
+    bottom: 0;
+    left: 18%;
+    width: 65%;
+    height: 100%;
+    border: 0;
+} */
 
 
 

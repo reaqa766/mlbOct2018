@@ -8,11 +8,10 @@ import { Observable } from 'rxjs';
 import { StatsDayliPlayer } from '../interfaces/stats-dayli-player';
 
 
-
 @Injectable({
   providedIn: 'root'
 })
-export class DataPlayersService {
+export class PlayerspointService {  
   playerCode = 596115;
 
 
@@ -20,7 +19,7 @@ export class DataPlayersService {
 
   // Array de Codigo de Jugadores
   private playersCode = [
-600524, 602922, 570560, 408234, 591741,
+665742, 600524, 602922, 570560, 408234, 591741,
 455139, 514888, 501303, 503556, 542255,
 650402, 553882, 541645, 462101, 452678,
 596059, 520471, 500874, 467055, 467827,
@@ -135,21 +134,21 @@ export class DataPlayersService {
 
   constructor(private http: HttpClient) { }
 
-  getDataPlayers(): Observable<Players[]> {
+  getDataPlayers3(): Observable<Players[]> {
     return this.http.get<Players[]>(this._url6);
   }
 
     // Obtencion de los datos diarios de un solo jugador
-  getPlayerDaily2(): Observable<StatsDayliPlayer> {
+  getPlayerDaily3(): Observable<StatsDayliPlayer> {
     return this.http.get<StatsDayliPlayer>(this._url6);
   }
 
   // Para colocar todos los Json en un solo array. Genera Obsrvables
-  getAllPlayersDaily2(): Observable<StatsDayliPlayer | undefined>[] {
+  getAllPlayersDaily3(): Observable<StatsDayliPlayer | undefined>[] {
     let dataAllPlayers2: Observable<StatsDayliPlayer | undefined>[] = [];
     for (let code of this.playersCode) {
       this._url6 = this._url6.replace(this.playerCode.toString(), code.toString())
-      let dataP2 = this.getPlayerDaily2();
+      let dataP2 = this.getPlayerDaily3();
       dataAllPlayers2.push(dataP2);
       this.playerCode = code;
     }
@@ -158,9 +157,5 @@ export class DataPlayersService {
 
 
 }
-
-
-
-
 
 
