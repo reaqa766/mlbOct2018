@@ -114,7 +114,7 @@ export class LideresComponent implements OnInit {
       }
     })
     // Se acaba el sort por la estadistica deseada => se retorna un array
-    .slice(0, 5);
+    .slice(0, 10);
     // console.log('filtrado', filtrado);
 
     return filtrado;
@@ -142,7 +142,7 @@ export class LideresComponent implements OnInit {
       }
     })
     // Se acaba el sort por la estadistica deseada => se retorna un array
-    .slice(0, 5);
+    .slice(0, 10);
     // console.log('filtrado', filtrado);
 
     return filtrado;
