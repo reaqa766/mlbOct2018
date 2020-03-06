@@ -111,7 +111,7 @@ export class BypositionComponent implements OnInit {
   setPage(page: number) {
     // get pager object from service
     this.pager = this.pagerService.getPager(this.allItems.length, page);
-    console.log('pager', this.pager);
+    // console.log('pager', this.pager);
 
 
     // get current page of items

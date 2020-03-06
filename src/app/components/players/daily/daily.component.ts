@@ -49,7 +49,7 @@ export class DailyComponent implements OnInit {
   constructor(private playerService: DataPlayersService, private pagerService: PagerService) { }
 
   ngOnInit() {
-    console.log('Jugadores', this.players);
+    // console.log('Jugadores', this.players);
     // console.log('dia', this.dia);
 
 
@@ -78,7 +78,7 @@ getPlayersMap() {
           Object.assign(newPlayer, player.people[0]);
           return newPlayer;
         });
-        console.log('Original players: ', this.players);
+        // console.log('Original players: ', this.players);
         // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
         this.players = this.players.filter(player =>{
 
@@ -110,7 +110,7 @@ getPlayersMap() {
         this.allItems = this.players;
         this.setPage(1);
         this.isLoading = false;
-        // console.log('players', this.players);
+        // console.log('allItems', this.allItems);
         }
         index++;
 

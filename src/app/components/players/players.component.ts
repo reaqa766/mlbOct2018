@@ -47,8 +47,8 @@ export class PlayersComponent implements OnInit {
   constructor(private playerService: DataPlayersService, private pagerService: PagerService) { }
 
   ngOnInit() {
-    console.log('Jugadores', this.players);
-    console.log('dia', this.dia);
+    // console.log('Jugadores', this.players);
+    // console.log('dia', this.dia);
 
 
     this.isLoading = true;

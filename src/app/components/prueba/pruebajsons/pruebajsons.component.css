@@ -23,20 +23,21 @@
 .tarjeta_encabezado {
   width: 85%;
   margin: 0.2em auto;
-  background-color: rgb(20, 149, 167);
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 5px;
   grid-template-rows: 1fr;
   grid-row-gap: 5px;
-  border: solid black 2px;
+  /* border: solid black 2px; */
 }
 .tarjeta_izquierda {
   grid-column: 1/2;
   grid-row: 1/2;
   color: white;
   border: solid white 2px;
+  background-color: rgb(20, 149, 167);
+
 
 
   display: grid;
@@ -207,8 +208,7 @@ color: antiquewhite;
   .tarjeta_encabezado {
     width: 95%;
     margin: 0.2em auto;
-    background-color: rgb(20, 149, 167);
-
+    
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -220,6 +220,7 @@ color: antiquewhite;
     grid-row: 1/2;
     color: white;
     border: solid white 2px;
+    background-color: rgb(20, 149, 167);
 
 
     display: grid;
@@ -387,8 +388,7 @@ color: antiquewhite;
   .tarjeta_encabezado {
     width: 95%;
     margin: 0.2em auto;
-    background-color: rgb(20, 149, 167);
-
+    
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -400,6 +400,7 @@ color: antiquewhite;
     grid-row: 1/2;
     color: white;
     border: solid white 2px;
+    background-color: rgb(20, 149, 167);
 
 
     display: grid;

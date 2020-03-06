@@ -3,7 +3,7 @@
     <h1 class="actives-title">Liga Fantasy VD Este</h1>
     <h3 class="nombre_equipo">EQUIPO: Nombre de Equipo</h3>
     <h5 class="nombre_manager">Manager: Nombre del Manager</h5>
-    <h5 class="nombre_manager">{{sumaTotal}}</h5>
+    <div class="nombre_manager">Total de Puntos:<a class="total_pts" >{{sumaTotal}}</a></div>
 
   <!-- <h1 class="actives-title">Bateadores Activos</h1> -->
 </div>
@@ -22,7 +22,7 @@
 <span class="seleccion"> para la Puntuación</span>
 </div>
 <div class="seleccion2 title-position">Seleccione una fecha</div>
-<div class="seleccion2 title-position">para la Puntuación</div>
+<!-- <div class="seleccion2 title-position">para la Puntuación</div> -->
 <br>
 <br> 
 <!-- <div class="seleccion3 title-position2">Distribución de Puntos</div>
@@ -49,6 +49,18 @@
             </a>
             <!-- <div class="posicion" style="width: 8%;">{{player.id}}</div> -->
             <!-- <div class="posicion items_estadisticas" >{{player.primaryPosition.abbreviation}}</div> -->
+            <!-- <div class="avg items_estadisticas" ><div class="avg_span">VB</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.atBats}}</div></div>
+            <div class="atBat items_estadisticas" ><div class="avg_span">Hits</div> <div class="avg_span2">{{sumaHits}}</div></div>
+            <div class="hits items_estadisticas" ><div class="avg_span">2B</div> <div class="avg_span2">{{sumaDoubles}}</div></div>
+            <div class="hr items_estadisticas" ><div class="avg_span">3B</div> <div class="avg_span2">{{sumaTriples}}</div></div>
+            <div class="rbi items_estadisticas" ><div class="avg_span">HR</div> <div class="avg_span2">{{sumaHr}}</div></div>
+            <div class="runs items_estadisticas" ><div class="avg_span">CI</div> <div class="avg_span2">{{sumaCI}}</div></div>
+            <div class="strikeO items_estadisticas" ><div class="avg_span">CA</div> <div class="avg_span2">{{sumaCA}}</div></div>
+            <div class="bB items_estadisticas" ><div class="avg_span">BB</div> <div class="avg_span2">{{sumaBB}}</div></div>
+            <div class="stolenB items_estadisticas"><div class="avg_span">Ponche</div> <div class="avg_span2">{{sumaPonche}}</div></div>
+            <div class="strikeO items_estadisticas" ><div class="avg_span">BR</div> <div class="avg_span2">{{sumaBR}}</div></div>
+            <div class="bB items_estadisticas" ><div class="avg_span">Capt Rob</div> <div class="avg_span2">{{sumaCaptRob}}</div></div> 
+            <div class="stolenB items_estadisticas"><div class="Total_Pts avg_span">Total Pts</div> <div class="Total_Pts avg_span2">{{sumaTotal2}}</div></div> -->
             <div class="avg items_estadisticas" ><div class="avg_span">VB</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.atBats}}</div></div>
             <div class="atBat items_estadisticas" ><div class="avg_span">Hits</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.hits*1}}</div></div>
             <div class="hits items_estadisticas" ><div class="avg_span">2B</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.doubles*2}}</div></div>
@@ -59,8 +71,9 @@
             <div class="bB items_estadisticas" ><div class="avg_span">BB</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.baseOnBalls*1}}</div></div>
             <div class="stolenB items_estadisticas"><div class="avg_span">Ponche</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.strikeOuts*-2}}</div></div>
             <div class="strikeO items_estadisticas" ><div class="avg_span">BR</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.stolenBases*1}}</div></div>
-            <div class="bB items_estadisticas" ><div class="avg_span">Capt Rob</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.caughtStealing*-2}}</div></div> calcular(player)
-            <div class="stolenB items_estadisticas"><div class="Total_Pts avg_span">Total Pts</div> <div class="Total_Pts avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.hits*1 + player.stats[0].splits[player.indexStatDate].stat.doubles*2 + 
+            <div class="bB items_estadisticas" ><div class="avg_span">Capt Rob</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.caughtStealing*-2}}</div></div> 
+            <!-- <div class="stolenB items_estadisticas"><div class="Total_Pts avg_span">Total Pts</div> <div class="Total_Pts avg_span2">{{sumaTotal2}}</div></div> -->
+             <div class="stolenB items_estadisticas"><div class="Total_Pts avg_span">Total Pts</div> <div class="Total_Pts avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.hits*1 + player.stats[0].splits[player.indexStatDate].stat.doubles*2 + 
                 player.stats[0].splits[player.indexStatDate].stat.triples*3 + player.stats[0].splits[player.indexStatDate].stat.homeRuns*4 + player.stats[0].splits[player.indexStatDate].stat.rbi*2 +
                 player.stats[0].splits[player.indexStatDate].stat.runs*1 + player.stats[0].splits[player.indexStatDate].stat.baseOnBalls*1 + player.stats[0].splits[player.indexStatDate].stat.strikeOuts*-1 +
                 player.stats[0].splits[player.indexStatDate].stat.stolenBases*1 + player.stats[0].splits[player.indexStatDate].stat.caughtStealing*-2 }}</div></div>
@@ -72,8 +85,9 @@
       </div>
     </ng-container>
 
+    <ng-container *ngIf="(allItems.length >0)">
     <ng-container *ngIf="(pager.allItems-1 === pager.endIndex)">
-        <div class="seleccion3 title-position2">Distribución de Puntos</div>
+        <div class="seleccion3 title-position2">Distribución de Puntos </div>
         <div class="seleccion3 title-position2">Hit= 1, 2B= 2, 3B= 3, HR= 4, CI= 2, CA= 1, Ponche= -2, BB= 1, BR= 2, Capt. Rob= -2.   </div>
   
       <div class="tarjeta_encabezado">
@@ -107,13 +121,14 @@
 
       </div>
     </ng-container>
+    </ng-container>
 
 
     <!-- PAGINATION-->
     <br>
     <br>
-
-    <div>
+    <ng-container *ngIf="(allItems.length >0)">
+    <div *ngIf="!(pager.allItems === pager.endIndex)">
       <div class="container">
         <div class="text-center paginator">
           <!-- items being paged -->
@@ -143,6 +158,7 @@
     </div>
 
 
+  </ng-container>
   </ng-container>
 
   <!-- </div> -->

@@ -50,8 +50,8 @@ export class PitchersDayAntComponent implements OnInit {public players = [];
   ngOnInit() {
     this.isLoading = true;
     this.getPlayersMap();
-    console.log('diaAnterior', this.diaAnt);
-    console.log('Pitchers', this.players);
+    // console.log('diaAnterior', this.diaAnt);
+    // console.log('Pitchers', this.players);
 
   }
 

@@ -71,7 +71,7 @@ constructor(private playerService: PlayersService, private pagerService: PagerSe
    this.isLoading = true;
    // this.data = LIDERES.row;
    // this.jugadores = VenezolanosActivos;
-   console.log('jugadores', this.players);
+  //  console.log('jugadores', this.players);
 
  }
 

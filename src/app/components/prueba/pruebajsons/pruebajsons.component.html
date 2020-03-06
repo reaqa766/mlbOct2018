@@ -61,6 +61,7 @@
 
       </div>
     </ng-container>
+    <ng-container *ngIf="(allItems.length >0)">
 
     <ng-container *ngIf="(pager.allItems-1 === pager.endIndex)">
       <div class="tarjeta_encabezado">
@@ -88,13 +89,16 @@
 
       </div>
     </ng-container>
+    </ng-container>
 
 
     <!-- PAGINATION-->
     <br>
     <br>
 
+    <ng-container *ngIf="(allItems.length >0)">
     <div>
+
       <div class="container">
         <div class="text-center paginator">
           <!-- items being paged -->
@@ -124,6 +128,7 @@
     </div>
 
 
+  </ng-container>
   </ng-container>
 
   <!-- </div> -->

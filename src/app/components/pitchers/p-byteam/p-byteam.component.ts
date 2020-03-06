@@ -94,7 +94,7 @@ export class PByteamComponent implements OnInit {
   ngOnInit() {
     this.isLoading = true;
     this.getPlayersMap();
-    console.log('Pitchers', this.players);
+    // console.log('Pitchers', this.players);
   }
 
   // Convertir el Array de Observables a un Array de Objetos.

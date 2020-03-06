@@ -97,7 +97,7 @@ getPlayersMap() {
           } else if (a === b) {
             return 0;
           }
-          console.log('This players final: ', this.players);
+          // console.log('This players final: ', this.players);
 
         });
 

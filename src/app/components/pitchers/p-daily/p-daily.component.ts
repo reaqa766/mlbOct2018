@@ -113,6 +113,8 @@ getPlayersMap() {
         this.allItems = this.players;
         this.setPage(1);
         this.isLoading = false;
+        // console.log('allItems', this.allItems);
+
         }
         index++;
       });
@@ -121,7 +123,7 @@ getPlayersMap() {
   }
 
   onSearchDate(fecha) {
-    console.log(fecha.srcElement.value);
+    // console.log(fecha.srcElement.value);
     this.dia = fecha.srcElement.value;
     this.getPlayersMap();
 }

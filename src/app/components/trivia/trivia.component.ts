@@ -66,10 +66,10 @@ textChange(i) {
 respDada(i) {
   this.respuesta_def[i] = !this.respuesta_def;
   this.respuesta_dada[i] = !this.respuesta_dada;
-  console.log('answer', this.answer);
-  console.log('respuesta_def', this.respuesta_def);
-  console.log('respuesta_dada', this.respuesta_dada);
-  console.log('correcta', this.players[i].respuesta);
+  // console.log('answer', this.answer);
+  // console.log('respuesta_def', this.respuesta_def);
+  // console.log('respuesta_dada', this.respuesta_dada);
+  // console.log('correcta', this.players[i].respuesta);
   
 
   

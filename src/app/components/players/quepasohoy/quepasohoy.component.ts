@@ -47,7 +47,7 @@ export class QuepasohoyComponent implements OnInit {
   constructor(private playerService: DataPlayersService, private pagerService: PagerService) { }
 
   ngOnInit() {
-    console.log('Jugadores', this.players);
+    // console.log('Jugadores', this.players);
     // console.log('dia', this.dia);
 
 

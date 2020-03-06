@@ -96,7 +96,7 @@ export class PitcherinfoComponent implements OnInit {
                       // console.log('items5', 1);
                       // console.log('items7', this.idplayer);
                     }
-                    console.log('items6', this.player);
+                    // console.log('items6', this.player);
         }
         index++;
       });

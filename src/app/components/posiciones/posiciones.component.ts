@@ -52,7 +52,7 @@ export class PosicionesComponent implements OnInit {
     this.alWest=[];
 
     this.CALEND3 = await this.http.get(this._url1).toPromise();
-    console.log('CALEND3', this.CALEND3);
+    // console.log('CALEND3', this.CALEND3);
 
 
 
@@ -135,7 +135,7 @@ export class PosicionesComponent implements OnInit {
 
             // console.log('ClLeague', this.ClLeague);
             // console.log('GlLeague', this.GlLeague);
-            console.log('CALEND2', this.CALEND2);
+            // console.log('CALEND2', this.CALEND2);
 
 
     }}

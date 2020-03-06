@@ -40,7 +40,7 @@ export class ResultadosTeamsComponent implements OnInit {
 
 
     this.CALEND3 = await this.http.get(this._url1).toPromise();
-    console.log('CALEND3', this.CALEND3);
+    // console.log('CALEND3', this.CALEND3);
     for (let result of this.CALEND3.dates[0].games) {
       // if(tpos.division.id === 200){
       // for(let team of tpos.teamRecords){

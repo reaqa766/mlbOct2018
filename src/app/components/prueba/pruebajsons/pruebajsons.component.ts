@@ -113,7 +113,7 @@ getPlayersMap() {
         this.allItems = this.players;
         this.setPage(1);
         this.isLoading = false;
-        // console.log('players', this.players);
+        console.log('ALLITEMS', this.allItems);
         }
         index++;
 
@@ -148,8 +148,8 @@ getPlayersMap() {
   setPage(page: number) {
 
     // get pager object from service
-    this.pager = this.pagerService.getPager(this.allItems.length, page);
-
+    this.pager = this.pagerService.getPager(this.allItems.length+1, page);  
+    // this.pager = this.pagerService.getPager(this.allItems.length, page);
     // get current page of items
     this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
   }
