@@ -149,16 +149,16 @@ getPlayersMap() {
           if(player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0){
              for(let i = 0; i < player.stats[0].splits.length; i++){
                if(player.stats[0].splits[i].date === this.dia){
-                this.sumaHits =this.sumaHits + (player.stats[0].splits[player.indexStatDate].stat.hits)*1; 
-                this.sumaDoubles = this.sumaDoubles + (player.stats[0].splits[player.indexStatDate].stat.doubles)*2;
-                this.sumaTriples= this.sumaTriples + (player.stats[0].splits[player.indexStatDate].stat.triples)*3; 
-                this.sumaHr= this.sumaHr + (player.stats[0].splits[player.indexStatDate].stat.homeRuns)*4; 
-                this.sumaCI= this.sumaCI + (player.stats[0].splits[player.indexStatDate].stat.rbi)*2; 
-                this.sumaCA= this.sumaCA + (player.stats[0].splits[player.indexStatDate].stat.runs)*1;
-                this.sumaBB= this.sumaBB + (player.stats[0].splits[player.indexStatDate].stat.baseOnBalls)*1;
-                this.sumaPonche= this.sumaPonche +(player.stats[0].splits[player.indexStatDate].stat.strikeOuts)*-1;
-                this.sumaBR= this.sumaBR + (player.stats[0].splits[player.indexStatDate].stat.stolenBases)*1;
-                this.sumaCapRob= this.sumaCapRob + (player.stats[0].splits[player.indexStatDate].stat.caughtStealing)*-2;
+                // this.sumaHits =this.sumaHits + (player.stats[0].splits[player.indexStatDate].stat.hits)*1; 
+                // this.sumaDoubles = this.sumaDoubles + (player.stats[0].splits[player.indexStatDate].stat.doubles)*2;
+                // this.sumaTriples= this.sumaTriples + (player.stats[0].splits[player.indexStatDate].stat.triples)*3; 
+                // this.sumaHr= this.sumaHr + (player.stats[0].splits[player.indexStatDate].stat.homeRuns)*4; 
+                // this.sumaCI= this.sumaCI + (player.stats[0].splits[player.indexStatDate].stat.rbi)*2; 
+                // this.sumaCA= this.sumaCA + (player.stats[0].splits[player.indexStatDate].stat.runs)*1;
+                // this.sumaBB= this.sumaBB + (player.stats[0].splits[player.indexStatDate].stat.baseOnBalls)*1;
+                // this.sumaPonche= this.sumaPonche +(player.stats[0].splits[player.indexStatDate].stat.strikeOuts)*-1;
+                // this.sumaBR= this.sumaBR + (player.stats[0].splits[player.indexStatDate].stat.stolenBases)*1;
+                // this.sumaCapRob= this.sumaCapRob + (player.stats[0].splits[player.indexStatDate].stat.caughtStealing)*-2;
                 this.sumaTotal =this.sumaTotal + (player.stats[0].splits[player.indexStatDate].stat.hits)*1 + (player.stats[0].splits[player.indexStatDate].stat.doubles)*2 + 
                   (player.stats[0].splits[player.indexStatDate].stat.triples)*3 + (player.stats[0].splits[player.indexStatDate].stat.homeRuns)*4 + (player.stats[0].splits[player.indexStatDate].stat.rbi)*2 +
                   (player.stats[0].splits[player.indexStatDate].stat.runs)*1 + (player.stats[0].splits[player.indexStatDate].stat.baseOnBalls)*1 + (player.stats[0].splits[player.indexStatDate].stat.strikeOuts)*-1 +
@@ -186,16 +186,9 @@ getPlayersMap() {
   }
 
   onSearchDate(fecha) {
-    // console.log("FECHA", fecha.srcElement.value);
-    // this.dia= fecha.srcElement.value;
     this.dia= fecha.srcElement.value;
     this.getPlayersMap();
 }
-//   sumaParcialDiaria(sumatotal) {
-//     console.log("FECHA", fecha.srcElement.value);
-//     this.dia= fecha.srcElement.value;
-//     this.getPlayersMap();
-// }
 
   onSearchChange() {
     if (this.searchText) {
