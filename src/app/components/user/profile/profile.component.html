@@ -31,7 +31,7 @@
           </div>
           <div class="form-group">
             <input type="text" formControlName="nickName" class="form-control" placeholder="Nombre Usuario Instagram">
-            <div class="alert" *ngIf="!profileForm.controls['correo'].valid && profileForm.controls['correo'].touched">
+            <div class="alert" *ngIf="!profileForm.controls['nickName'].valid && profileForm.controls['nickName'].touched">
               ¿Nombre de Ususario Instagram?</div>
           </div>
           <hr>
@@ -70,16 +70,15 @@
             <div class="alert" *ngIf="!profileForm.controls['equipo'].valid && profileForm.controls['equipo'].touched">
               Indique su Equipo</div>
           </div>
-          <div class="form-group">
-            <!-- <p class="questions">3) Entra en el Menú de JUGADORES, sección BATEO area de BIOGRAFIAS e indica quién aparece de segundo (Texas) (Nombre y Apellido), pincha sobre él y dí cual es su sobrenombre</p> -->
-            <input type="radio" formControlName="fantasiSi" id="male" name="gender" value="male">
+          <!-- <div class="form-group">
+            <input type="radio"  id="male" name="gender" value="male">
             <label for="male">Si</label>
-            <input type="radio" formControlName="fantasiNo" id="female" name="gender" value="female">
-            <label for="female">No</label>
-            <div class="alert"
+            <input type="radio"  id="female" name="gender" value="female">
+            <label for="female">No</label> -->
+            <!-- <div class="alert"
               *ngIf="!profileForm.controls['fantasiSi'].valid && !profileForm.controls['fantasiNo'].valid && profileForm.controls['fantasiSi'].touched && profileForm.controls['fantasiNo'].touched">
-              Indique si ha jugado antes una Liga de fantasía </div>
-          </div>
+              Indique si ha jugado antes una Liga de fantasía </div> -->
+          <!-- </div> -->
           <!--    <div class="form-group">
             <p class="questions">4) Entra en el Menú de JUGADORES, sección ORGANIZADOS POR área de EQUIPO EN VENEZUELA, pincha sobre BRAVOS e indica cuántos jugadores tiene, quién es el último y que edad tiene (pinchar sobre el mismo)</p>
             <input type="text" formControlName="answer4" class="form-control preguntas" placeholder="Respuesta 4">

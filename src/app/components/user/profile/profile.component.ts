@@ -38,9 +38,6 @@ export class ProfileComponent implements OnInit {
                   'country': [null, Validators.required],
                   'city': [null, Validators.required],
                   'equipo': [null, Validators.required],
-                  'answer2': [null, Validators.required],
-                  'answer3': [null, Validators.required],
-                  'answer4': [null, Validators.required],
                 });
               }
   ngOnInit() {
