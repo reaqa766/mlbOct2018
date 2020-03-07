@@ -25,9 +25,6 @@ export class RegisterComponent implements OnInit {
       onSubmitAddUser() {
     this.authService.registerUser(this.email, this.password)
     .then((res) => {
-        this.flashMensaje.show('Primera parte del Concurso completada',
-        // this.flashMensaje.show('Usuario creado correctamente.',
-      {cssClass: 'alert-success', timeout: 4000});
       this.router.navigate(['/profile']);
 
     }).catch( (err) => {

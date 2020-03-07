@@ -1,23 +1,23 @@
 <!-- <p>Logged in as {{ user.displayName }}!</p> -->
 <div class="container-dashboard">
-<h4 class="titulo-post" >Crear un nuevo Post</h4>
-<form class="py-2" #f="ngForm">
-	<div class="form-group">
-		<input class="form-control input-titulo-Post" type="text" name="post-title" [(ngModel)]="postTitle"  #new_post_title="ngModel"  placeholder="Titulo del Post" (keyup.enter)="onEnter()" required>
-		<!-- >(keyup.enter)="onEnter(new_post_title)"-->
-	</div>
-	<button class="btn btn-dark" (click)="onEnter()" [disabled]="new_post_title.invalid">Save</button>
-</form>
- 
-<h3 class="titulo-post t-post">Posts</h3>
-<ul class="list-unstyled">
-	<li class="mb-3 pb-2 post-name" *ngFor="let post of posts | async">
-		   <a class="btn btn-md btn-dark abutton" href="/blog/{{ post.id }}">Editar</a>
-		   <a class="btn btn-md btn-dark abutton" href="/blogL/{{ post.id }}">Leer</a>
-		   <span class="blog-title" >{{ post.data.title }}</span>  
-     	</li>
-</ul>
- 
-<p class="text-right medium "><a class="logout" href="/auth/logout">Logout</a></p>
+  <h4 class="titulo-post">Crear un nuevo Post</h4>
+  <!-- <form class="py-2" #f="ngForm">
+    <div class="form-group">
+      <input class="form-control input-titulo-Post" type="text" name="post-title" [(ngModel)]="postTitle"
+        #new_post_title="ngModel" placeholder="Titulo del Post" (keyup.enter)="onEnter()" required>
+    </div>
+    <button class="btn btn-dark" (click)="onEnter()" [disabled]="new_post_title.invalid">Save</button>
+  </form> -->
+
+  <!-- <h3 class="titulo-post t-post">Posts</h3>
+  <ul class="list-unstyled">
+    <li class="mb-3 pb-2 post-name" *ngFor="let post of posts | async">
+      <a class="btn btn-md btn-dark abutton" href="/blog/{{ post.id }}">Editar</a>
+      <a class="btn btn-md btn-dark abutton" href="/blogL/{{ post.id }}">Leer</a>
+      <span class="blog-title">{{ post.data.title }}</span>
+    </li>
+  </ul> -->
+
+  <h2 class="text-right large "><a class="logout" href="/auth/logout">Logout</a></h2>
 
 </div>

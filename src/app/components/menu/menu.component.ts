@@ -28,8 +28,6 @@ export class MenuComponent implements OnInit {
         this.isLogin = false;
       }
     });
-    // console.log(this.isLogin);
-    
   }
 
   closeMenu(){
@@ -40,8 +38,6 @@ export class MenuComponent implements OnInit {
 
   onClickLogOut() {
     this.authService.logout();
-    this.isLogin = false;
-
-
+    this.closeMenu();
   }
 }

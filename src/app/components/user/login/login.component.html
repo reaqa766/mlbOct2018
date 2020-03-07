@@ -3,7 +3,7 @@
     <div class="card">
       <div class="card-body">
         <h1 class="text-center login" >LOGIN</h1>
-        <h4 class="text-center login" >Liga de Fantasía Vinotintosmlb 2020, haz Login ó <a routerLink="/profile"> Registrate</a></h4>
+        <h4 class="text-center login" >Liga de Fantasía Vinotintosmlb 2020, haz Login o <a routerLink="/profile"> Registrate</a></h4>
 
         <form (submit)="onSubmitLogin()">
           <div class="form-group">
@@ -14,7 +14,7 @@
             <label for="password">Contraseña</label>
             <input type="password" name="password" id="password" [(ngModel)]="password" class="form-control">
           </div>
-          <button type="submit" value="ENVIAR" class="btn  btn-block btn-lg">ENVIAR</button>
+          <button type="submit" value="ENVIAR" class="btn  btn-block btn-lg">INICIAR SESIÓN</button>
           <button value="¿OLVIDÓ CONTRASEÑA?" class="btn  btn-block btn-lg" (click)='resetPassword(email)'>¿OLVIDÓ CONTRASEÑA?</button>
         </form>
       </div>

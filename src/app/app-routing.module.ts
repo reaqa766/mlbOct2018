@@ -76,7 +76,7 @@ const routes: Routes = [
   { path: '',
   component: HomeComponent},
   { path: 'news',
-  component: NewsComponent},
+  component: NewsComponent, canActivate: [AuthGuard]},
   { path: 'aboutUs',
   component: AboutusComponent},
   { path: 'register',
@@ -137,7 +137,8 @@ const routes: Routes = [
   component: PitcherinfoComponent,
   pathMatch: 'full'},
   { path: 'actives2019',
-  component: Actives2019Component},
+  component: Actives2019Component, canActivate: [AuthGuard]
+  },
   { path: 'bio_actives2019',
   component: BioActives2019Component},
   { path: 'infog_Show',
@@ -187,7 +188,7 @@ const routes: Routes = [
   component: TransaccionesComponent },
   { path: 'podCasts',
   component: PodcastsComponent, children:[{
-    path: 'TalkBeisbol', 
+    path: 'TalkBeisbol',
     component: PodcastsComponent,
   }] },
 

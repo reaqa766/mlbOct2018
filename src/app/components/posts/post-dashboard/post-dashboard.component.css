@@ -9,7 +9,7 @@ text-shadow: 2px 2px 8px black;
 }
 
 .t-post {
-padding: .5rem 0 0; 
+padding: .5rem 0 0;
 }
 
 .input-titulo-Post {
@@ -34,7 +34,7 @@ padding: .5rem 0 0;
 ul:empty::after {
     content: "Create a post Luke"
    }
-    
+
    ul li {
     border-bottom: 1px solid #000;
    }
@@ -42,5 +42,5 @@ ul:empty::after {
    .logout {
     color: antiquewhite;
     text-shadow: 2px 2px 8px black;
-      
+
    }

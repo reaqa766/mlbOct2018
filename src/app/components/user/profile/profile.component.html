@@ -1,13 +1,17 @@
 <header>
-  <div class="title">
-    <h1 class="title_h1" >CONCURSO JOHAN SANTANA</h1>
+  <div class="title_page">
+    <p class="title_h1">REGISTRE O ACTUALICE SUS DATOS</p>
     <!-- <h1 class="title_h1" >Temporada 2019</h1> -->
   </div>
 </header>
 
+
+
 <div class="title_page">
   <p>Coloque sus datos</p>
 </div>
+<!-- <div class="row">
+  <div class="col-ms-6 col-md-4 col-lg-6   mx-auto"> -->
 <div class="card">
   <div class="card-body">
     <form [formGroup]='profileForm' (ngSubmit)="onSubmit(profileForm)">
@@ -15,66 +19,72 @@
         <div>
           <div class="form-group">
             <input type="text" formControlName="name" class="form-control" placeholder="Nombre">
-            <div class="alert" *ngIf="!profileForm.controls['name'].valid && profileForm.controls['name'].touched">Colocar su Nombre</div>
+            <div class="alert" *ngIf="!profileForm.controls['name'].valid && profileForm.controls['name'].touched">
+              Colocar su Nombre</div>
           </div>
 
           <div class="form-group">
             <input type="text" formControlName="lastname" class="form-control" placeholder="Apellido">
-            <div class="alert" *ngIf="!profileForm.controls['lastname'].valid && profileForm.controls['lastname'].touched">Colocar su Apellido</div>
+            <div class="alert"
+              *ngIf="!profileForm.controls['lastname'].valid && profileForm.controls['lastname'].touched">Colocar su
+              Apellido</div>
           </div>
           <div class="form-group">
-            <input type="text" formControlName="correo" class="form-control" placeholder="email">
-            <div class="alert" *ngIf="!profileForm.controls['correo'].valid && profileForm.controls['correo'].touched">Verificar su email</div>
+            <input type="text" formControlName="nickName" class="form-control" placeholder="Nombre Usuario Instagram">
+            <div class="alert" *ngIf="!profileForm.controls['correo'].valid && profileForm.controls['correo'].touched">
+              ¿Nombre de Ususario Instagram?</div>
           </div>
-
-          <!-- <div class="form-group">
-            <input type="email" formControlName="email" class="form-control" placeholder="Correo">
-            <div class="alert" *ngIf="!profileForm.controls['email'].valid && profileForm.controls['email'].touched">Colocar un email válido</div>
-          </div> -->
           <hr>
 
           <p>Fecha N.</p>
           <div class="form-group  form-group_select">
-            <input type="date" formControlName="birdthDate" id= "date" class="form-control form_age" placeholder="Fecha de Nacimiento: ">
-            <div class="alert" *ngIf="!profileForm.controls['birdthDate'].valid && profileForm.controls['birdthDate'].touched">Colocar su Fecha de Nacimiento</div>
-            <select class="form_text"  style="height:3rem;" type="text" formControlName="gender">
+            <input type="date" formControlName="birdthDate" id="date" class="form-control form_age"
+              placeholder="Fecha de Nacimiento: ">
+            <div class="alert"
+              *ngIf="!profileForm.controls['birdthDate'].valid && profileForm.controls['birdthDate'].touched">Colocar su
+              Fecha de Nacimiento</div>
+            <select class="form_text" style="height:3rem;" type="text" formControlName="gender">
               <option [disabled]="true" [selected]="true" value="Género">Género</option>
               <option value="Masculino">Masculino</option>
               <option value="Femenino">Femenino</option>
               <option value="Otro">Otro</option>
             </select>
-            <div class="alert" *ngIf="!profileForm.controls['gender'].valid && profileForm.controls['gender'].touched">Colocar su Genero</div>
+            <div class="alert" *ngIf="!profileForm.controls['gender'].valid && profileForm.controls['gender'].touched">
+              Colocar su Genero</div>
           </div>
 
           <div class="form-group">
-            <input type="text" formControlName="country" class="form-control" placeholder="País">
-            <div class="alert" *ngIf="!profileForm.controls['country'].valid && profileForm.controls['country'].touched">Colocar su País</div>
-          </div>
-          <div class="form-group">
-            <input type="text" formControlName="city" class="form-control" placeholder="Ciudad">
-            <div class="alert" *ngIf="!profileForm.controls['city'].valid && profileForm.controls['city'].touched">Colocar su Ciudad</div>
-          </div>
-
-          <div class="form-group">
-            <p class="questions">1) ¿Cuál error t enía el primer post de Johan Santana?</p>
-            <input type="text" formControlName="answer1" class="form-control preguntas" placeholder="Respuesta 1">
-            <div class="alert" *ngIf="!profileForm.controls['answer1'].valid && profileForm.controls['answer1'].touched">Indique su respuesta</div>
-          </div>
-          <div class="form-group">
-            <p class="questions">2) ¿Cuántos jugadores aparecen en la Lista de AVERAGE en la Página Principal, quien es el Primero (Nombre y Apellido) y que Average tiene?"</p>
-            <input type="text" formControlName="answer2" class="form-control preguntas" placeholder="Respuesta 2">
-            <div class="alert" *ngIf="!profileForm.controls['answer2'].valid && profileForm.controls['answer2'].touched">Indique su respuesta</div>
-          </div>
-          <div class="form-group">
-            <p class="questions">3) Entra en el Menú de JUGADORES, sección BATEO area de BIOGRAFIAS e indica quién aparece de segundo (Texas) (Nombre y Apellido), pincha sobre él y dí cual es su sobrenombre</p>
-            <input type="text" formControlName="answer3" class="form-control preguntas" placeholder="Respuesta 3">
-             <div class="alert" *ngIf="!profileForm.controls['answer3'].valid && profileForm.controls['answer3'].touched">Indique su respuesta</div>
+            <input type="text" formControlName="country" class="form-control" placeholder="País donde vive">
+            <div class="alert"
+              *ngIf="!profileForm.controls['country'].valid && profileForm.controls['country'].touched">Colocar su País
             </div>
+          </div>
           <div class="form-group">
+            <input type="text" formControlName="city" class="form-control" placeholder="Ciudad donde vive">
+            <div class="alert" *ngIf="!profileForm.controls['city'].valid && profileForm.controls['city'].touched">
+              Colocar su Ciudad</div>
+          </div>
+          <div class="form-group">
+            <!-- <p class="questions">Nombre de su Equipo</p> -->
+            <input type="text" formControlName="equipo" class="form-control " placeholder="Equipo">
+            <div class="alert" *ngIf="!profileForm.controls['equipo'].valid && profileForm.controls['equipo'].touched">
+              Indique su Equipo</div>
+          </div>
+          <div class="form-group">
+            <!-- <p class="questions">3) Entra en el Menú de JUGADORES, sección BATEO area de BIOGRAFIAS e indica quién aparece de segundo (Texas) (Nombre y Apellido), pincha sobre él y dí cual es su sobrenombre</p> -->
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Si</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">No</label>
+            <div class="alert"
+              *ngIf="!profileForm.controls['FantasiaSiNo'].valid && profileForm.controls['FantasiaSiNo'].touched">
+              Indique si ha jugado antes una Liga de fantasía </div>
+          </div>
+          <!-- <div class="form-group">
             <p class="questions">4) Entra en el Menú de JUGADORES, sección ORGANIZADOS POR área de EQUIPO EN VENEZUELA, pincha sobre BRAVOS e indica cuántos jugadores tiene, quién es el último y que edad tiene (pinchar sobre el mismo)</p>
             <input type="text" formControlName="answer4" class="form-control preguntas" placeholder="Respuesta 4">
             <div class="alert" *ngIf="!profileForm.controls['answer4'].valid && profileForm.controls['answer4'].touched">Indique su respuesta</div>
-          </div>
+          </div> -->
           <div class="form-group">
             <button type="submit" class="btn btn-primary" value="Register" [disabled]="!profileForm.valid">
               <i class="fas fa-plus-circle"></i> Registre sus Datos
@@ -89,3 +99,5 @@
     </form>
   </div>
 </div>
+<!-- </div>
+</div> -->
