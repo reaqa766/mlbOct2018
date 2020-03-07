@@ -72,12 +72,12 @@
           </div>
           <div class="form-group">
             <!-- <p class="questions">3) Entra en el Menú de JUGADORES, sección BATEO area de BIOGRAFIAS e indica quién aparece de segundo (Texas) (Nombre y Apellido), pincha sobre él y dí cual es su sobrenombre</p> -->
-            <input type="radio" id="male" name="gender" value="male">
+            <input type="radio" formControlName="fantasiSi" id="male" name="gender" value="male">
             <label for="male">Si</label>
-            <input type="radio" id="female" name="gender" value="female">
+            <input type="radio" formControlName="fantasiNo" id="female" name="gender" value="female">
             <label for="female">No</label>
             <div class="alert"
-              *ngIf="!profileForm.controls['FantasiaSiNo'].valid && profileForm.controls['FantasiaSiNo'].touched">
+              *ngIf="!profileForm.controls['fantasiSi'].valid && !profileForm.controls['fantasiNo'].valid && profileForm.controls['fantasiSi'].touched && profileForm.controls['fantasiNo'].touched">
               Indique si ha jugado antes una Liga de fantasía </div>
           </div>
           <!--    <div class="form-group">
