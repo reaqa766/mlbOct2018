@@ -12,7 +12,7 @@
 </div>
 <!-- <div class="row">
   <div class="col-ms-6 col-md-4 col-lg-6   mx-auto"> -->
-<div class="card">
+<div class="card" *ngIf="!isLoading">
   <div class="card-body">
     <form [formGroup]='profileForm' (ngSubmit)="onSubmit(profileForm)">
       <div class="form-group">
@@ -30,27 +30,34 @@
               Apellido</div>
           </div>
           <div class="form-group">
-            <input type="text" formControlName="nickName" class="form-control" placeholder="Nombre Usuario Instagram">
-            <div class="alert" *ngIf="!profileForm.controls['nickName'].valid && profileForm.controls['nickName'].touched">
+            <input type="text" formControlName="instagram" class="form-control" placeholder="Nombre Usuario Instagram">
+            <div class="alert"
+              *ngIf="!profileForm.controls['instagram'].valid && profileForm.controls['instagram'].touched">
               ¿Nombre de Ususario Instagram?</div>
           </div>
           <hr>
 
           <p>Fecha N.</p>
           <div class="form-group  form-group_select">
-            <input type="date" formControlName="birdthDate" id="date" class="form-control form_age"
+            <input type="date" formControlName="birthDate" id="date" class="form-control form_age"
               placeholder="Fecha de Nacimiento: ">
-            <div class="alert"
-              *ngIf="!profileForm.controls['birdthDate'].valid && profileForm.controls['birdthDate'].touched">Colocar su
-              Fecha de Nacimiento</div>
             <select class="form_text" style="height:3rem;" type="text" formControlName="gender">
-              <option [disabled]="true" [selected]="true" value="Género">Género</option>
+              <option [disabled]="true" [selected]="true" [value]="null">Género</option>
               <option value="Masculino">Masculino</option>
               <option value="Femenino">Femenino</option>
               <option value="Otro">Otro</option>
             </select>
-            <div class="alert" *ngIf="!profileForm.controls['gender'].valid && profileForm.controls['gender'].touched">
-              Colocar su Genero</div>
+          </div>
+          <div class="alert"
+            *ngIf="(!profileForm.controls['gender'].valid && profileForm.controls['gender'].touched) || (!profileForm.controls['birthDate'].valid && profileForm.controls['birthDate'].touched) ">
+            <div>
+              {{!profileForm.controls['birthDate'].valid && profileForm.controls['birthDate'].touched ? 'Colocar su
+                Fecha de Nacimiento' : '' }}
+            </div>
+            <hr *ngIf="!profileForm.controls['gender'].valid && profileForm.controls['gender'].touched && !profileForm.controls['birthDate'].valid && profileForm.controls['birthDate'].touched">
+            <div>
+              {{ !profileForm.controls['gender'].valid && profileForm.controls['gender'].touched ? 'Colocar su Género' : '' }}
+            </div>
           </div>
 
           <div class="form-group">
@@ -66,16 +73,26 @@
           </div>
           <div class="form-group">
             <!-- <p class="questions">Nombre de su Equipo</p> -->
-            <input type="text" formControlName="equipo" class="form-control " placeholder="Equipo">
-            <div class="alert" *ngIf="!profileForm.controls['equipo'].valid && profileForm.controls['equipo'].touched">
+            <input type="text" formControlName="team" class="form-control " placeholder="Equipo">
+            <div class="alert" *ngIf="!profileForm.controls['team'].valid && profileForm.controls['team'].touched">
               Indique su Equipo</div>
           </div>
+          <div class="form-group full-select">
+            <select class="form_text" style="height:3rem;" type="text" formControlName="isFantasy">
+              <option [disabled]="true" [selected]="true" [value]="null">¿Has jugado Liga de Fantasía antes?</option>
+              <option [value]="true">Si</option>
+              <option [value]="false">No</option>
+            </select>
+          </div>
+
+          <div class="alert" *ngIf="!profileForm.controls['isFantasy'].valid && profileForm.controls['isFantasy'].touched">
+            Indique su respuesta</div>
           <!-- <div class="form-group">
             <input type="radio"  id="male" name="gender" value="male">
             <label for="male">Si</label>
             <input type="radio"  id="female" name="gender" value="female">
             <label for="female">No</label> -->
-            <!-- <div class="alert"
+          <!-- <div class="alert"
               *ngIf="!profileForm.controls['fantasiSi'].valid && !profileForm.controls['fantasiNo'].valid && profileForm.controls['fantasiSi'].touched && profileForm.controls['fantasiNo'].touched">
               Indique si ha jugado antes una Liga de fantasía </div> -->
           <!-- </div> -->
