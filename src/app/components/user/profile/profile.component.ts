@@ -66,7 +66,7 @@ export class ProfileComponent implements OnInit {
 
     this.resetForm(profileForm);
     // this.toastr.success('Datos Guardados', 'Registre Correo y Contraseña');
-    this.flashMensaje.show('Ha completado el concurso exitosamente, estas participando', { cssClass: 'alert-success', timeout: 4000 });
+    this.flashMensaje.show('Ha completado su registro exitosamente', { cssClass: 'alert-success', timeout: 4000 });
     this.router.navigate(['/']);
     // this.router.navigate(['/register']);
   }
