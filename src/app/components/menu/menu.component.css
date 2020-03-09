@@ -6,7 +6,7 @@
 .dropdown-item, .nav-link {
   font-size: .80em;
   line-height: .85rem;
-
+  cursor: pointer;
 }
 
 .sub_Menu_Titulo {
@@ -23,7 +23,7 @@
 }
 
 .responsive.navbar-collapse{
-  display: none; 
+  display: none;
 }
 
 .noResponsive.navbar-collapse{

@@ -33,15 +33,12 @@ insertProfile(profile: Profile) {
   this.profileList.push({
     name: profile.name,
     lastname: profile.lastname,
-    correo: profile.correo,
-    birdthDate: profile.birdthDate,
+    email: profile.email,
+    birthDate: profile.birthDate,
     gender: profile.gender,
     country: profile.country,
     city: profile.city,
-    answer1: profile.answer1,
-    answer2: profile.answer2,
-    answer3: profile.answer3,
-    answer4: profile.answer4,
+    team: profile.team
 });
 }
 
