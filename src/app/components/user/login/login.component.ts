@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
     var FlashMessagesService = this.flashMensaje;
     this.authService.loginEmail(this.email, this.password)
     .then( (res) => {
-      this.flashMensaje.show('Usuario logado correctamente.',
+      this.flashMensaje.show('Usuario logeado correctamente.',
       {cssClass: 'alert-success', timeout: 4000});
       this.router.navigate(['/news_ppal']);
       console.log('login');

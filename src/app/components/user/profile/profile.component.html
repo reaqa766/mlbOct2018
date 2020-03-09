@@ -1,6 +1,6 @@
 <header>
   <div class="title">
-    <h1 class="title_h1" >CONCURSO JOHAN SANTANA</h1>
+    <h1 class="title_h1" >Registro Liga de Fantasia 2020</h1>
     <!-- <h1 class="title_h1" >Temporada 2019</h1> -->
   </div>
 </header>
@@ -56,11 +56,11 @@
           </div>
 
           <div class="form-group">
-            <p class="questions">1) ¿Cuál error t enía el primer post de Johan Santana?</p>
-            <input type="text" formControlName="answer1" class="form-control preguntas" placeholder="Respuesta 1">
-            <div class="alert" *ngIf="!profileForm.controls['answer1'].valid && profileForm.controls['answer1'].touched">Indique su respuesta</div>
+            <p class="questions">Nombre de su Liga</p>
+            <input type="text" formControlName="answer1" class="form-control preguntas" placeholder="Liga">
+            <div class="alert" *ngIf="!profileForm.controls['answer1'].valid && profileForm.controls['answer1'].touched">Indique su Liga</div>
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <p class="questions">2) ¿Cuántos jugadores aparecen en la Lista de AVERAGE en la Página Principal, quien es el Primero (Nombre y Apellido) y que Average tiene?"</p>
             <input type="text" formControlName="answer2" class="form-control preguntas" placeholder="Respuesta 2">
             <div class="alert" *ngIf="!profileForm.controls['answer2'].valid && profileForm.controls['answer2'].touched">Indique su respuesta</div>
@@ -74,7 +74,7 @@
             <p class="questions">4) Entra en el Menú de JUGADORES, sección ORGANIZADOS POR área de EQUIPO EN VENEZUELA, pincha sobre BRAVOS e indica cuántos jugadores tiene, quién es el último y que edad tiene (pinchar sobre el mismo)</p>
             <input type="text" formControlName="answer4" class="form-control preguntas" placeholder="Respuesta 4">
             <div class="alert" *ngIf="!profileForm.controls['answer4'].valid && profileForm.controls['answer4'].touched">Indique su respuesta</div>
-          </div>
+          </div> -->
           <div class="form-group">
             <button type="submit" class="btn btn-primary" value="Register" [disabled]="!profileForm.valid">
               <i class="fas fa-plus-circle"></i> Registre sus Datos
