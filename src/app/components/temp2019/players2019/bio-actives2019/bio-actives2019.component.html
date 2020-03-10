@@ -1,13 +1,13 @@
 <div class="container-actives">
-  <h1 class="bioActives-title">La Temporada 2019 no ha iniciado</h1>
-  <!-- <h1 class="bioActives-title">Biografía de Bateadores Activos</h1> -->
-<p class="title-position"> Temporada 2019 </p>
+  <!-- <h1 class="bioActives-title">La Temporada 2019 no ha iniciado</h1> -->
+  <h1 class="bioActives-title">Biografía de Jugadores Fantasy 2020</h1>
+<p class="title-position"> Spring Training 2020 </p>
 <!-- <p class="title-position"> TEMP. 2019 </p> -->
 
 
 
 <!--LOADER -->
-<!-- <div *ngIf="!allItems">
+<div *ngIf="!allItems">
   <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
   <p class="spiner_load">CARGANDO</p>
 </div>
@@ -24,43 +24,20 @@
     <div class="container-actives_cards ">
       <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
         <div class="card card1 img_picture_box" style="width: 95%;" *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
-            <a routerLink="/playerinfo2019/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
+            <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
           <div class="card-body">
             <h5 class="card-title">{{player.fullName}}</h5>
-          </div> -->
-          <!-- <ul class="list-group list-group-flush">
-            <li class="list-group-item"><strong> Equipo: </strong> {{player.stats[0].splits[0].team.name}}</li>
-            <li class="list-group-item"><strong>L. Nac.: </strong> {{player.birthCity}}</li>
-            <li class="list-group-item"><strong>F. Nac.: </strong> {{player.birthDate}} </li>
-            <li class="list-group-item"><strong> Edad: </strong> {{player.currentAge}}</li>
-            <li class="list-group-item"><strong>Mote: </strong> {{player.nickName}}</li>
-            <li class="list-group-item"><strong>F. Debut: </strong> {{player.mlbDebutDate}}</li>
-            <li class="list-group-item"><strong>Numero: </strong> {{player.primaryNumber}}</li>
-            <li class="list-group-item"><strong>Posición: </strong> {{player.primaryPosition.name}}</li>
-          </ul> -->
-        <!-- </div>
+          </div>
+        </div>
       </ng-container>
       <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
-        <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*10)">
-            <a routerLink="/playerinfo2019/{{player.id}}"><img class="card-img-top" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
+        <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*8)">
+        <!-- <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*7)"> -->
+            <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
           <div class="card-body">
             <h5 class="card-title">{{player.fullName}} </h5>
-          </div> -->
-          <!-- <ul class="list-group list-group-flush">
-            <li class="list-group-item"><strong> Equipo: </strong> {{player.stats[0].splits[0].team.name}}</li>
-            <li class="list-group-item"><strong>L. Nac.: </strong> {{player.birthCity}}</li>
-            <li class="list-group-item"><strong>F. Nac.: </strong> {{player.birthDate}}</li>
-            <li class="list-group-item"><strong> Edad: </strong> {{player.currentAge}}</li>
-            <li class="list-group-item"><strong>Mote: </strong> {{player.nickName}}</li>
-            <li class="list-group-item"><strong>F. Debut: </strong> {{player.mlbDebutDate}}</li>
-            <li class="list-group-item"><strong>Numero: </strong> {{player.primaryNumber}}</li>
-            <li class="list-group-item"><strong>Posición: </strong> {{player.primaryPosition.name}}</li>
-          </ul> -->
-          <!-- <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div> -->
-        <!-- </div>
+          </div>
+        </div>
       </ng-container>
     </div>
     <div class="container paginator">
@@ -86,4 +63,4 @@
     </div>
   </ng-container>
 </div>
-</div> -->
+</div>
