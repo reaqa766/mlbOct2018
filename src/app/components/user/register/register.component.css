@@ -1,3 +1,7 @@
+.contenedor_registro {
+  width: 50%;
+}
+
 .login {
   color: antiquewhite;
   font-weight: bold;
@@ -16,6 +20,8 @@ label {
 
 .input {
   background-color: rgba(255, 255, 255, 0.2);
+
+  
 }
 h1 {
   font-size: 1.2rem;
