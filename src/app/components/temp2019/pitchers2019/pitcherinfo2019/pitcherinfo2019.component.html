@@ -36,7 +36,7 @@
 
 <ng-container *ngIf="!isLoading">
   <!-- <div class="tjta-encabezado"> -->
-      
+
 
   <ng-container *ngIf="!(pager.allItems === 0)">
 
@@ -46,13 +46,13 @@
              </div>
         <div class="seleccion3 title-position2"> Carreras Permitidas: 0= 7, 1= 5, 2= 3, 3+= 0.
              </div>
-        <div class="seleccion3 title-position2"> Hits + BB: 0= 20, 1= 15, 2= 12, 3-6= 5, 7+=0. 
+        <div class="seleccion3 title-position2"> Hits + BB: 0= 20, 1= 15, 2= 12, 3-6= 5, 7+=0.
              </div>
-  
+
       <div class="tarjeta_encabezado">
         <div *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
           <div class="tarjeta_izquierda">
-            <div class="foto" ><img class="player_pict2" src="../../../assets/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
+            <div class="foto" ><img class="player_pict2" appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
             <a routerLink="/pitcherinfo/{{player.id}}" class="link_player">
               <div  class="link_player">{{player.fullName}}</div>
             </a>
@@ -69,7 +69,7 @@
             <div class="stolenB items_estadisticas"><div class="avg_span">0 Carreras</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.strikeOuts*-1}}</div></div>
             <div class="strikeO items_estadisticas" ><div class="avg_span">1 Carreras</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.stolenBases*1}}</div></div>
             <div class="bB items_estadisticas" ><div class="avg_span">Capt Rob</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.caughtStealing*-2}}</div></div>
-            <div class="stolenB items_estadisticas"><div class="Total_Pts avg_span">Total Pts</div> <div class="Total_Pts avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.wins*1 + player.stats[0].splits[player.indexStatDate].stat.losses*-1 + 
+            <div class="stolenB items_estadisticas"><div class="Total_Pts avg_span">Total Pts</div> <div class="Total_Pts avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.wins*1 + player.stats[0].splits[player.indexStatDate].stat.losses*-1 +
                 player.stats[0].splits[player.indexStatDate].stat.saves*1 + player.stats[0].splits[player.indexStatDate].stat.strikeOuts*1 + player.stats[0].splits[player.indexStatDate].stat.baseOnBalls*1 +
                 player.stats[0].splits[player.indexStatDate].stat.runs*1 + player.stats[0].splits[player.indexStatDate].stat.baseOnBalls*1 + player.stats[0].splits[player.indexStatDate].stat.strikeOuts*-1 +
                 player.stats[0].splits[player.indexStatDate].stat.stolenBases*1 + player.stats[0].splits[player.indexStatDate].stat.caughtStealing*-2 }}</div></div>
@@ -87,13 +87,13 @@
           </div>
      <div class="seleccion3 title-position2"> Carreras Permitidas: 0= 7, 1= 5, 2= 3, 3+= 0.
           </div>
-     <div class="seleccion3 title-position2"> Hits + BB: 0= 20, 1= 15, 2= 12, 3-6= 5, 7+=0. 
+     <div class="seleccion3 title-position2"> Hits + BB: 0= 20, 1= 15, 2= 12, 3-6= 5, 7+=0.
           </div>
 
       <div class="tarjeta_encabezado">
         <div *ngFor="let player of allItems | pagination:pager.startIndex:(pager.allItems-1)-pager.startIndex">
           <div class="tarjeta_izquierda">
-            <div class="foto" ><img class="player_pict2" src="../../../assets/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
+            <div class="foto" ><img class="player_pict2" appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
             <a routerLink="/pitcherinfo/{{player.id}}" class="link_player">
               <div  class="link_player">{{player.fullName}}</div>
             </a>
@@ -110,7 +110,7 @@
             <div class="stolenB items_estadisticas"><div class="avg_span">Ponche</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.strikeOuts*-1}}</div></div>
             <div class="strikeO items_estadisticas" ><div class="avg_span">BR</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.stolenBases*1}}</div></div>
             <div class="bB items_estadisticas" ><div class="avg_span">Capt Rob</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.caughtStealing*-2}}</div></div>
-            <div class="stolenB items_estadisticas"><div class="Total_Pts avg_span">Total Pts</div> <div class="Total_Pts avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.hits*1 + player.stats[0].splits[player.indexStatDate].stat.doubles*2 + 
+            <div class="stolenB items_estadisticas"><div class="Total_Pts avg_span">Total Pts</div> <div class="Total_Pts avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.hits*1 + player.stats[0].splits[player.indexStatDate].stat.doubles*2 +
                 player.stats[0].splits[player.indexStatDate].stat.triples*3 + player.stats[0].splits[player.indexStatDate].stat.homeRuns*4 + player.stats[0].splits[player.indexStatDate].stat.rbi*2 +
                 player.stats[0].splits[player.indexStatDate].stat.runs*1 + player.stats[0].splits[player.indexStatDate].stat.baseOnBalls*1 + player.stats[0].splits[player.indexStatDate].stat.strikeOuts*-1 +
                 player.stats[0].splits[player.indexStatDate].stat.stolenBases*1 + player.stats[0].splits[player.indexStatDate].stat.caughtStealing*-2 }}</div></div>

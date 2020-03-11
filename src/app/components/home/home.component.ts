@@ -63,7 +63,7 @@ export class HomeComponent implements OnInit {
 
   // FIN DE MODULO DE LIDERES
 
-  constructor(private playerService: PlayersService, private pagerService: PagerService, private http: HttpClient) { }
+  constructor(public playerService: PlayersService, private pagerService: PagerService, private http: HttpClient) { }
 
   async ngOnInit() {
     // Se lleva al top de la pagina en inicio
@@ -152,7 +152,7 @@ export class HomeComponent implements OnInit {
   filtroTopCincoAvg(estadistica: string) {
     let filtrado = [];
 
-    filtrado = this.jugadores.filter(jugador => jugador.stats && jugador.stats[0].splits && jugador.stats[0].splits[0].stat.atBats >= (1)
+    filtrado = this.jugadores.filter(jugador => jugador.stats && jugador.stats[0].splits && jugador.stats[0].splits[0].stat.atBats >= (25)
       // jugador => jugad or.stats && jugador.stats[0].splits &&  jugador.stats[0].splits[0].stat.atBats >= (this.teamPlays.record * 3.1)
     ).
       sort((jugadorA, jugadorB) => {

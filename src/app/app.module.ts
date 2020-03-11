@@ -97,6 +97,7 @@ import { PodcastsComponent } from './components/podcasts/podcasts.component';
 import { Pruebas2019Component } from './components/pruebas2019/pruebas2019.component';
 import { LvbpHomeComponent } from './components/lvbp-home/lvbp-home.component';
 import { HrDiarioComponent } from './components/hr-diario/hr-diario.component';
+import {ImgFallbackDirective} from './directives/app-img-fallback.directive'
 
 @NgModule({
   declarations: [
@@ -166,7 +167,8 @@ import { HrDiarioComponent } from './components/hr-diario/hr-diario.component';
     PodcastsComponent,
     Pruebas2019Component,
     LvbpHomeComponent,
-    HrDiarioComponent
+    HrDiarioComponent,
+    ImgFallbackDirective
 
   ],
   imports: [

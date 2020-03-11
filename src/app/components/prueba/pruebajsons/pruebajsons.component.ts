@@ -134,8 +134,7 @@ getPlayersMap() {
       this.allItems = this.players.filter(player =>
         player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
         (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
-        (player.nickName && player.nickName.toLowerCase().includes(this.searchText))  ||
-        player.mlbDebutDate.includes(this.searchText));
+        (player.nickName && player.nickName.toLowerCase().includes(this.searchText)));
         this.setPage(this.pager.currentPage);
       } else {
           this.allItems = this.players;
@@ -148,7 +147,7 @@ getPlayersMap() {
   setPage(page: number) {
 
     // get pager object from service
-    this.pager = this.pagerService.getPager(this.allItems.length+1, page);  
+    this.pager = this.pagerService.getPager(this.allItems.length+1, page);
     // this.pager = this.pagerService.getPager(this.allItems.length, page);
     // get current page of items
     this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);

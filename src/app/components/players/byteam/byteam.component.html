@@ -21,7 +21,7 @@
           <!-- <a routerLink="/playerinfo/{{team.name}}"> -->
 
             <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
-              [src]="'../../../assets/'  + team.code + '.svg'" alt="Team Logo" data-hover="tooltip" data-placement="top"
+              src="https://www.mlbstatic.com/team-logos/{{team.code}}.svg" alt="Team Logo" data-hover="tooltip" data-placement="top"
               title="Pincha para ver Jugadores"></a>
         </div>
       </div>
@@ -34,7 +34,7 @@
 
       <div *ngFor="let team of teamsAmC; let i=index">
         <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
-          <a><img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" [src]="'../../../assets/'  + team.code + '.svg'"
+          <a><img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" src="https://www.mlbstatic.com/team-logos/{{team.code}}.svg"
               alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
         </div>
       </div>
@@ -47,7 +47,7 @@
 
       <div *ngFor="let team of teamsAmO; let i=index">
         <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
-          <a><img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" [src]="'../../../assets/'  + team.code + '.svg'"
+          <a><img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" src="https://www.mlbstatic.com/team-logos/{{team.code}}.svg"
               alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
         </div>
       </div>
@@ -59,7 +59,7 @@
 
       <div *ngFor="let team of teamsNacE; let i=index">
         <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
-          <a> <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" [src]="'../../../assets/'  + team.code + '.svg'"
+          <a> <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" src="https://www.mlbstatic.com/team-logos/{{team.code}}.svg"
               alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
         </div>
       </div>
@@ -72,7 +72,8 @@
 
       <div *ngFor="let team of teamsNacC; let i=index">
         <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
-          <a><img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" [src]="'../../../assets/'  + team.code + '.svg'"
+          <a><img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
+            src="https://www.mlbstatic.com/team-logos/{{team.code}}.svg"
               alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
         </div>
       </div>
@@ -85,7 +86,7 @@
 
       <div *ngFor="let team of teamsNacO; let i=index">
         <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
-          <a><img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" [src]="'../../../assets/'  + team.code + '.svg'"
+          <a><img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)" src="https://www.mlbstatic.com/team-logos/{{team.code}}.svg"
               alt="Team Logo" data-hover="tooltip" data-placement="top" title="Pincha para ver Jugadores"></a>
         </div>
       </div>

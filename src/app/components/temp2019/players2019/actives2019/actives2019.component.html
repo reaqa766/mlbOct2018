@@ -36,7 +36,7 @@
       <div class="tarjeta_encabezado">
         <div *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
           <div class="tarjeta_izquierda">
-            <div class="foto" ><img class="player_pict2" src="../../../assets/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
+            <div class="foto" ><img class="player_pict2" appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
             <a routerLink="/playerinfo/{{player.id}}" class="link_player">
               <div  class="link_player">{{player.fullName}}</div>
             </a>
@@ -69,7 +69,7 @@
       <div class="tarjeta_encabezado">
         <div *ngFor="let player of allItems | pagination:pager.startIndex:(pager.allItems-1)-pager.startIndex">
           <div class="tarjeta_izquierda">
-            <div class="foto" ><img class="player_pict2" src="../../../assets/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
+            <div class="foto" ><img class="player_pict2" appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
             <a routerLink="/playerinfo/{{player.id}}" class="link_player">
               <div  class="link_player">{{player.fullName}}</div>
             </a>
