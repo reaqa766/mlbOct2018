@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class Players2019Service {
+export class PlayersfantasyService {
   playerCode = 596115;
   // gameCode = 563385;
 
@@ -46,72 +46,20 @@ export class Players2019Service {
     642279, 527038, 433587, 491676, 553902,
     517369, 620443, 517369, 656024,
     665561, 542419,
-    517369,
-    433217, 471865, 500208, 521692,
-    542513, 578570, 591712, 591720,
-    593993, 600902, 608422, 620443,
-    630034, 640492, 640902, 641319,
-    641645, 645305, 647351, 650658,
-    650660, 650883, 658668, 660614,
-    660688, 661388, 665861, 665926,
-    666023, 686780
+            517369,
+            433217, 471865, 500208, 521692,
+            542513, 578570, 591712, 591720,
+            593993, 600902, 608422, 620443,
+            630034, 640492, 640902, 641319,
+            641645, 645305, 647351, 650658,
+            650660, 650883, 658668, 660614,
+            660688, 661388, 665861, 665926,
+            666023, 686780
   ];
 
 
 
-  // MENORES 2019 545121, 514888,
-  // JUGADORES 2018
-  //   650402, 660670, 542583, 514888, 503556,
-  //   542255, 444489, 501303, 462101,602074
-  //   516472, 606115, 553902, 641319,  471865,
-  //   620439, 453923, 593993, 452678,
-  //   408234,  465041, 500208,
-  //   455139, 575929,  491696,  605612,
-  //   553869, 444876, 500871, 527038,
-  //   520471, 541645, 554054,
-  //   492802, 514917,
-  //   491676, 546318, 506702,
-  //   446653, 553988, 500874,
-  //   400121, 471083,
-  //   553882, 600524, 596059, 542364, 591741,
-  //   467827, 444482, 606299, 542208,
-  //   541650, 521692, 463610,
-  //   517369, 445988, 467092,
-  //   500743,
-  //   602922,  570560,
-  //   467055, 623993, 596143,
-  //   500208, 553993, 491696, 542513,
-  //   624636, 591720, 472528, 591971, 545121,
-  //   622713
-
-  // PITCHERS 2018
-  // private playersCode = [
-  //   621237,
-  //   501593,
-  //   593993,
-  //   471911, 620454,
-  //   468504, 630023, 571035,
-  //   521655,
-  //   491646,
-  //   448855, 622694,
-  //   433587, 500872,
-  //   641154, 608566,
-  //   622795, 591672, 622382,
-  //   622161,
-  //   527048, 433589,
-  //   591693,
-  //   593958, 600965, 541652, 444468,
-  //   614179, 434671,
-  //   622608, 462515,
-  //   624133,
-  //   553878
-
-
-  // ];
-
-
-
-  // Url del Api con los datos de cada juego para un Jugador particular
+    // Url del Api con los datos de cada juego para un Jugador particular
   // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +
   // '&season=2018&hydrate=stats(group=hitting,type=gameLog)';
   // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +
@@ -144,7 +92,7 @@ export class Players2019Service {
   }
 
   // Para colocar todos los Json en un solo array. Genera Observables
-  getAllPlayersActives(): Observable<StatsDayliPlayer | undefined>[] {
+  getAllPlayersActivesFtsy(): Observable<StatsDayliPlayer | undefined>[] {
     // tslint:disable-next-line:prefer-const
     let dataAllPlayers: Observable<StatsDayliPlayer | undefined>[] = [];
     // tslint:disable-next-line:prefer-const

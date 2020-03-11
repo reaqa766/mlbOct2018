@@ -9,17 +9,17 @@
       <div class="player_grid">
         <div class="player_pict">
           <h5 class="card-title">{{player?.fullName}}</h5>
-          <img class="player_pict2" src="../../../assets/{{player?.id}}.jpg" alt="Foto de Jugador de béisbol">
+          <img class="player_pict2" appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg" alt="Foto de Jugador de béisbol" appImgFallback>
           <p class="title-position">SPRING TRAINING 2020</p>
           <!-- <p class="title-position">Temporada 2019</p> -->
 
         </div>
         <div class="logo_team" *ngIf="player && player.stats[0].splits.length === 1  ">
-          <img src="../../../assets/{{player.stats[0].splits[(player.stats[0].splits.length-1)].team.id}}.png" alt="Logo de Equipo de MLB">
+          <img src="https://www.mlbstatic.com/team-logos/{{player.stats[0].splits[(player.stats[0].splits.length-1)].team.id}}.svg" alt="Logo de Equipo de MLB">
           <!-- <p>{{player.stats[0].splits[1].team.id}}</p> -->
         </div>
         <div class="logo_team" *ngIf="player && player.stats[0].splits.length > 1  ">
-          <img src="../../../assets/{{player.stats[0].splits[(player.stats[0].splits.length - 2)].team.id}}.png" alt="Logo de Equipo de MLB">
+          <img src="https://www.mlbstatic.com/team-logos/{{player.stats[0].splits[(player.stats[0].splits.length - 2)].team.id}}.svg" alt="Logo de Equipo de MLB">
           <!-- <p>{{player.stats[0].splits[1].team.id}}</p> -->
         </div>
         <div class="player_stats">

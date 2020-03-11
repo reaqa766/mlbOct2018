@@ -109,8 +109,7 @@ export class ActivesComponent implements OnInit {
       this.allItems = this.players.filter(player =>
         player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
         (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
-        (player.nickName && player.nickName.toLowerCase().includes(this.searchText))  ||
-        player.mlbDebutDate.includes(this.searchText));
+        (player.nickName && player.nickName.toLowerCase().includes(this.searchText)));
         this.setPage(this.pager.currentPage);
       } else {
           this.allItems = this.players;

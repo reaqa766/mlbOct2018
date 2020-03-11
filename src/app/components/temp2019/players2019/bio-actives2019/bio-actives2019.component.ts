@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Players2019Service } from '../../../../services/players2019.service';
+import { PlayersfantasyService  } from '../../../../services/playersfantasy.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../../../interfaces/players';
 
@@ -64,7 +64,7 @@ export class BioActives2019Component implements OnInit {
 
   isLoading: boolean;
 
-  constructor(private playerService: Players2019Service, private pagerService: PagerService) { }
+  constructor(private playerService: PlayersfantasyService, private pagerService: PagerService) { }
 
 
   ngOnInit() {
@@ -83,7 +83,7 @@ export class BioActives2019Component implements OnInit {
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
     // tslint:disable-next-line:prefer-const
-    let InfoObsPlayer = this.playerService.getAllPlayersActives();
+    let InfoObsPlayer = this.playerService.getAllPlayersActivesFtsy();
     // let InfoObsPlayer = this.playerService.getAllPlayersActives();
     let index = 0;
     // tslint:disable-next-line:prefer-const
@@ -129,8 +129,7 @@ export class BioActives2019Component implements OnInit {
       this.allItems = this.players.filter(player =>
         player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
         (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
-        (player.nickName && player.nickName.toLowerCase().includes(this.searchText))  ||
-        player.mlbDebutDate.includes(this.searchText));
+        (player.nickName && player.nickName.toLowerCase().includes(this.searchText)));
         this.setPage(this.pager.currentPage);
       } else {
           this.allItems = this.players;

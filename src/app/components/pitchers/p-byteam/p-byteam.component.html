@@ -101,10 +101,8 @@
 
           <div *ngFor="let team of teamsNacO; let i=index">
             <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
-              <a>
-
-                <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
-                  [src]="'../../../assets/'  + team.code + '.png'" alt="Team Logo" data-hover="tooltip" data-placement="top"
+              <a> <img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
+                [src]="'../../../assets/'  + team.code + '.png'" alt="Team Logo" data-hover="tooltip" data-placement="top"
                   title="Pincha para ver Jugadores"></a>
             </div>
           </div>
@@ -121,7 +119,7 @@
         <div class="container-actives_cards ">
           <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
             <div class="card card1 img_picture_box" style="width: 95%;" *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
-              <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" src="../../../../assets/{{player.id}}.jpg"
+              <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg"
                   alt="Jugador de Grandes Ligas"></a>
               <div class="card-body">
                 <h5 class="card-title">{{player.fullName}}</h5>
@@ -131,7 +129,7 @@
           <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
             <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*7)">
               <a routerLink="/{{player.primaryPosition.name === 'Pitcher' ? 'pitcherinfo' : 'playerinfo'}}/{{ player.id }} "><img
-                  class="card-img-top" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
+                  class="card-img-top" appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
               <!-- <a routerLink="/pitcherinfo/{{player.id}}"><img class="card-img-top" src="../../../../assets/Jugadores Spring T 2019/Todos/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a> -->
               <div class="card-body">
                 <h5 class="card-title">{{player.fullName}} </h5>

@@ -24,9 +24,9 @@
     <div class="container-actives_cards ">
       <div class="card card1 img_picture_box" style="width: 95%;" *ngFor="let player of allItems ">
         <div *ngIf="player.primaryPosition.code !== '1'"><img class="card-img-top img_picture_element"
-            src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
+            appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
         <div *ngIf="player.primaryPosition.code === '1'"> <img class="card-img-top img_picture_element"
-            src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
+            appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
 
         <div class="card-body">
           <h5 class="card-title">{{player.fullName}}</h5>
