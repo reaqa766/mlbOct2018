@@ -74,7 +74,7 @@ export class BioActivesComponent implements OnInit {
          // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
 
          this.players = this.players.filter(player =>
-          player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0)
+          player.stats && player.stats.length !== 0 && player.primaryPosition.name !=='Pitcher' && player.stats[0].splits && player.stats[0].splits.length !== 0)
 
             // se ordenan por nombre
             .sort(({ lastName: a }, { lastName: b }) => {
