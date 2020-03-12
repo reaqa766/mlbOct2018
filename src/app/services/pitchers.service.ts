@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Players } from '../../interfaces/players';
 import { StatsDayliPlayer } from '../../interfaces/stats-dayli-player';
+import _venezuelanPlayersCodes from '../../assets/JSONS/venezuelanPlayersIds'
+import _dominicanPlayersCodes from '../../assets/JSONS/dominicanPlayersIds';
 
 import { Observable } from 'rxjs';
 
@@ -10,96 +12,10 @@ import { Observable } from 'rxjs';
 })
 export class PitchersService {
   playerCode = 596115;
-  // gameCode = 563385;
-
-
-  // playersList = [
-  //   {name:"Jose Altuve",
-  //   position : "segunda base"},
-
-  //   {name : "Gleyber Torres",
-  //   position : "segunda base"},
-
-  //   {name : "Ronald Acuña Jr.",
-  //   position : "Leftfield"},
-
-  //   {name : "Ender Inciarte",
-  //   position : "Centerfield"}
-
-  // ]
-
-
-
-  // Array de Codigo de Jugadores
-  // private playersCode = [
-  //   650402, 660670, 542583, 514888, 503556,
-  //   542255, 444489, 501303, 462101,
-  //   516472, 606115, 553902, 641319,
-  //   620439, 453923, 593993, 452678,
-  //   408234, 605612, 465041,
-  //   455139, 575929,
-  //   553869, 444876, 500871, 527038,
-  //   520471, 541645, 554054,
-  //   492802, 514917,
-  //   491676, 546318, 506702,
-  //   446653, 553988, 500874,
-  //   400121, 471083,
-  //   553882, 600524, 596059, 542364, 591741,
-  //   467827, 444482, 606299, 542208,
-  //   541650, 521692, 463610,
-  //   517369, 445988, 467092, 622682,
-  //   500743,
-  //   602922, 506703, 570560,
-  //   467055, 623993, 596143,
-  //   500208, 553993, 491696, 542513,
-  //   624636, 591720, 472528, 591971, 545121,
-  //   622713
-  // ];
-  // PITCHERS
-  private playersCode = [
-    593958, 471911, 527048, 433589, 622694,
-    621237, 630023, 521655, 491646, 434671,
-    553878, 501625, 468504, 545064, 591693,
-    448855, 641154, 608566, 622608, 640470,
-    444468, 650382, 621592, 622786, 575070,
-    622795, 620454, 642578, 614179,  433587,
-    660813, 620982, 650671, 624133, 500610,
-    593163, 593993, 600921, 611093, 612792,
-    621593, 622459, 642511, 645307, 650347,
-    656196, 658530, 658648, 659262, 660749,
-    660761, 661099, 661440, 664337, 666200,
-    666674, 667356, 670550, 672578,
-
-
-
-  ];
-
-  // PITCHERS 2018
-  // 621237, 658648, 650671
-  // 501593,  591693, 614179,
-  // 593993, 621592,
-  // 471911, 620454,
-
-  // 448855, 622694,
-  // 433587, 500872,
-  // 641154, 608566,
-  // 622795, 591672, 622382,
-  // 622161,
-  // 527048, 433589,
-  // 591693,
-  // 593958, 600965, 541652, 444468,
-  // 614179, 434671,
-  // 622608, 462515,
-  // 624133,
-
-
+  public venezuelanPlayersCodes;
+  public dominicanPlayersCodes;
   private gameCode = [
     531368,
-    // 531824,
-    // 531829,
-    // 531825,
-    // 531833,
-    // 531835
   ];
 
 
@@ -120,7 +36,11 @@ export class PitchersService {
   private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(type=gameLog)';
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.venezuelanPlayersCodes = _venezuelanPlayersCodes;
+    this.dominicanPlayersCodes = _dominicanPlayersCodes;
+
+   }
 
   // Obtencion de los datos de temporada de un solo jugador
   getPlayeActive(): Observable<StatsDayliPlayer> {
@@ -129,12 +49,9 @@ export class PitchersService {
 
   // Para colocar todos los Json en un solo array. Genera Observables
   getAllPlayersActives(): Observable<StatsDayliPlayer | undefined>[] {
-    // tslint:disable-next-line:prefer-const
     let dataAllPlayers: Observable<StatsDayliPlayer | undefined>[] = [];
-    // tslint:disable-next-line:prefer-const
-    for (let code of this.playersCode) {
+    for (let code of this.venezuelanPlayersCodes) {
       this._url = this._url.replace(this.playerCode.toString(), code.toString());
-      // tslint:disable-next-line:prefer-const
       let dataP = this.getPlayeActive();
       dataAllPlayers.push(dataP);
       this.playerCode = code;
