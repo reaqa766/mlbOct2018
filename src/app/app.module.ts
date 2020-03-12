@@ -97,7 +97,8 @@ import { PodcastsComponent } from './components/podcasts/podcasts.component';
 import { Pruebas2019Component } from './components/pruebas2019/pruebas2019.component';
 import { LvbpHomeComponent } from './components/lvbp-home/lvbp-home.component';
 import { HrDiarioComponent } from './components/hr-diario/hr-diario.component';
-import {ImgFallbackDirective} from './directives/app-img-fallback.directive'
+import {ImgFallbackDirective} from './directives/app-img-fallback.directive';
+import { PlayerInfoDominicanComponent } from './components/playerinfo/player-info-dominican/player-info-dominican.component'
 
 @NgModule({
   declarations: [
@@ -168,7 +169,8 @@ import {ImgFallbackDirective} from './directives/app-img-fallback.directive'
     Pruebas2019Component,
     LvbpHomeComponent,
     HrDiarioComponent,
-    ImgFallbackDirective
+    ImgFallbackDirective,
+    PlayerInfoDominicanComponent
 
   ],
   imports: [

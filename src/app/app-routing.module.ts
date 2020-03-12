@@ -34,6 +34,7 @@ import { PActives2019Component } from './components/temp2019/pitchers2019/p-acti
 import { Actives2019Component } from './components/temp2019/players2019/actives2019/actives2019.component';
 import { BioActives2019Component } from './components/temp2019/players2019/bio-actives2019/bio-actives2019.component';
 import { Byposition2019Component } from './components/temp2019/players2019/byposition2019/byposition2019.component';
+import { PlayerInfoDominicanComponent } from './components/playerinfo/player-info-dominican/player-info-dominican.component';
 import { Playerinfo2019Component } from './components/temp2019/players2019/playerinfo2019/playerinfo2019.component';
 import { Byteam2019Component } from './components/temp2019/players2019/byteam2019/byteam2019.component';
 import { Pitcherinfo2019Component } from './components/temp2019/pitchers2019/pitcherinfo2019/pitcherinfo2019.component';
@@ -127,6 +128,8 @@ const routes: Routes = [
   component: PlayerinfoComponent, pathMatch: 'full'},
   { path: 'playerinfo2019',
   component: Playerinfo2019Component},
+  { path: 'playerDominicaninfo2019/:code',
+  component: PlayerInfoDominicanComponent},
   { path: 'pitcherinfo2019',
   component:Pitcherinfo2019Component},
   { path: 'playerinfo2019/:code',

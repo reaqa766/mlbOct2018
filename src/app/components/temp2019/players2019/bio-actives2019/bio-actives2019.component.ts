@@ -4,7 +4,6 @@ import { PlayersfantasyService  } from '../../../../services/playersfantasy.serv
 import { take } from 'rxjs/operators';
 import { Players } from '../../../../../interfaces/players';
 
-// tslint:disable-next-line:semicolon
 import { PagerService } from '../../../../../services/index'
 
 
@@ -46,7 +45,7 @@ export class BioActives2019Component implements OnInit {
   ngOnInit() {
     this.isLoading = true;
     this.getPlayersMap();
-    console.log("Jugadores", this.players) 
+    console.log("Jugadores", this.players)
 
   }
 
