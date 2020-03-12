@@ -69,37 +69,6 @@
           </table>
         </div>
 
-<<<<<<< HEAD
-      </div>
-    </ng-container>
-
-
-    <!-- PAGINATION-->
-    <br>
-    <br>
-
-    <div>
-      <div class="container">
-        <div class="text-center paginator">
-
-          <!-- pager -->
-          <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
-            <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-              <a (click)="setPage(1)" class="page-link paginator_item">First</a>
-            </li>
-            <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-              <a (click)="setPage(pager.currentPage - 1)" class="page-link paginator_item">Prev</a>
-            </li>
-            <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
-              <a (click)="setPage(page)" class="page-link">{{page}}</a>
-            </li>
-            <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-              <a (click)="setPage(pager.currentPage + 1)" class="page-link paginator_item">Next</a>
-            </li>
-            <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-              <a (click)="setPage(pager.totalPages)" class="page-link paginator_item">Last</a>
-            </li>
-=======
         <div class="player_data">
           <ul class="list-group list-group-flush" *ngIf="player && player.primaryPosition && player.stats && !player.stats[0].splits[2]">
             <li class="list-group-item"><strong> Equipo: </strong> {{player.stats[0].splits[0].team.name}}</li>
@@ -110,7 +79,6 @@
             <li class="list-group-item"><strong>Fecha de Debut en MLB: </strong> {{player.mlbDebutDate}}</li>
             <li class="list-group-item"><strong>Numero de Camiseta: </strong> {{player.primaryNumber}}</li>
             <li class="list-group-item"><strong>Posición Principal: </strong> {{player.primaryPosition.name}}</li>
->>>>>>> a34954ec2c309cef85130a3a59ebc15f8564f5f3
           </ul>
 
           <ul class="list-group list-group-flush" *ngIf="player && player.primaryPosition && player.stats && player.stats[0].splits[2]">
