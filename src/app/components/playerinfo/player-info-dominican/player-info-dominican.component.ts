@@ -1,22 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import * as moment from 'moment';
-import { PlayerspointService} from '../../../../playerspoint.service';
-import { take } from 'rxjs/operators';
-import { Players } from '../../../../../interfaces/players';
-import { PlayersService } from '../../../../../services/players.service';
+// import { PlayersService } from '../../../../services/players.service';
+import { DominicanService } from '../../../services/dominican.service';
 
-import { PagerService } from '../../../../../services/index';
+import { take } from 'rxjs/operators';
+import { Players } from '../../../../interfaces/players';
+import { PagerService } from '../../../../services/index';
 import { Route } from '@angular/compiler/src/core';
 import { Router, ActivatedRoute } from '@angular/router';
+// import { url } from 'inspector';
 
-import { ThrowStmt } from '@angular/compiler';
 
 @Component({
-  selector: 'app-playerinfo2019',
-  templateUrl: './playerinfo2019.component.html',
-  styleUrls: ['./playerinfo2019.component.css']
+  selector: 'app-player-info-dominican',
+  templateUrl: './player-info-dominican.component.html',
+  styleUrls: ['./player-info-dominican.component.css']
 })
-export class Playerinfo2019Component implements OnInit {
+export class PlayerInfoDominicanComponent implements OnInit {
   public players = [];
   public playersSort = [];
   // Cambiar  a false cuando este en linea
@@ -72,7 +71,7 @@ export class Playerinfo2019Component implements OnInit {
 
 
 
-  constructor(private playerService: PlayersService, private pagerService: PagerService, private route: ActivatedRoute) { }
+  constructor(private playerService: DominicanService, private pagerService: PagerService, private route: ActivatedRoute) { }
 
 
   ngOnInit() {
@@ -93,7 +92,7 @@ export class Playerinfo2019Component implements OnInit {
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
     if (!this.isOffline) {
-      let InfoObsPlayer = this.playerService.getAllPlayersActives();
+      let InfoObsPlayer = this.playerService.getAllDominicanPlayersActives();
       let index = 0;
       for (let obs of InfoObsPlayer) {
         obs.pipe(take(1)).subscribe(res => {
@@ -135,8 +134,3 @@ export class Playerinfo2019Component implements OnInit {
 
   }
 }
-
-
-
-
-
