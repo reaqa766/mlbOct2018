@@ -109,7 +109,10 @@ export class Byteam2019Component implements OnInit {
       this.allItems = this.players.filter(player =>
         player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
         (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
-        (player.nickName && player.nickName.toLowerCase().includes(this.searchText)));
+        (player.nickName && player.nickName.toLowerCase().includes(this.searchText)) ||
+        (player.primaryPosition.abbreviation && player.primaryPosition.abbreviation.toLowerCase().includes(this.searchText)) ||
+        (player.primaryPosition.name && player.primaryPosition.name.toLowerCase().includes(this.searchText)));
+
         this.setPage(this.pager.currentPage);
       } else {
           this.allItems = this.players;

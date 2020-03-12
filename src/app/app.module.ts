@@ -98,7 +98,9 @@ import { Pruebas2019Component } from './components/pruebas2019/pruebas2019.compo
 import { LvbpHomeComponent } from './components/lvbp-home/lvbp-home.component';
 import { HrDiarioComponent } from './components/hr-diario/hr-diario.component';
 import {ImgFallbackDirective} from './directives/app-img-fallback.directive';
-import { PlayerInfoDominicanComponent } from './components/playerinfo/player-info-dominican/player-info-dominican.component'
+import { PlayerInfoDominicanComponent } from './components/playerinfo/player-info-dominican/player-info-dominican.component';
+import { PitchersVzlaFtsyComponent } from './components/temp2019/pitchers2019/pitchers-vzla-ftsy/pitchers-vzla-ftsy.component'
+import { PitchersFtsyComponent } from './components/temp2019/pitchers2019/pitchers-ftsy/pitchers-ftsy.component'
 
 @NgModule({
   declarations: [
@@ -170,7 +172,9 @@ import { PlayerInfoDominicanComponent } from './components/playerinfo/player-inf
     LvbpHomeComponent,
     HrDiarioComponent,
     ImgFallbackDirective,
-    PlayerInfoDominicanComponent
+    PlayerInfoDominicanComponent,
+    PitchersFtsyComponent,
+    PitchersVzlaFtsyComponent
 
   ],
   imports: [

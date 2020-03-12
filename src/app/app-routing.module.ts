@@ -20,6 +20,8 @@ import { PpalComponent} from '../app/components/news/ppal/ppal.component';
 import { PDailyComponent} from '../app/components/pitchers/p-daily/p-daily.component';
 import { PByteamComponent } from './components/pitchers/p-byteam/p-byteam.component';
 import { PBioActivesComponent } from './components/pitchers/p-bio-actives/p-bio-actives.component';
+import { PitchersFtsyComponent } from '../app/components/temp2019/pitchers2019/pitchers-ftsy/pitchers-ftsy.component';
+import { PitchersVzlaFtsyComponent } from '../app/components/temp2019/pitchers2019/pitchers-vzla-ftsy/pitchers-vzla-ftsy.component';
 import { PActivesComponent } from './components/pitchers/p-actives/p-actives.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
@@ -114,6 +116,10 @@ const routes: Routes = [
   component: PlayersComponent},
   { path: 'p_actives19',
   component: PActives2019Component},
+  { path: 'p_ftsy19',
+  component: PitchersFtsyComponent},
+  { path: 'p_Vzlaftsy19',
+  component: PitchersVzlaFtsyComponent},
   { path: 'login',
   component: LoginComponent},
   { path: 'newsgral',

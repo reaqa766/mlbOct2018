@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PlayersService } from '../../../../../services/players.service';
+import { DominicanService } from '../../../../services/dominican.service';
 import { PlayersfantasyService  } from '../../../../services/playersfantasy.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../../../interfaces/players';
@@ -8,23 +8,27 @@ import { PagerService } from '../../../../../services/index'
 
 
 @Component({
-  selector: 'app-bio-actives2019',
-  templateUrl: './bio-actives2019.component.html',
-  styleUrls: ['./bio-actives2019.component.css']
+  selector: 'app-pitchers-ftsy',
+  templateUrl: './pitchers-ftsy.component.html',
+  styleUrls: ['./pitchers-ftsy.component.css']
 })
-export class BioActives2019Component implements OnInit {
+export class PitchersFtsyComponent implements OnInit {
+
 
   public players = [];
   groups: any;
   selectedGroup: any;
   elarray: any;
+  // tslint:disable-next-line:no-inferrable-types
   datesN: number = 10;
   searchText: string;
   playerAuxList = [];
   counter: number;
   n: number;
   m: number;
+  // tslint:disable-next-line:no-inferrable-types
   n1: number = 12;
+  // tslint:disable-next-line:no-inferrable-types
   n10: number = 10;
   public allItems: any[];
 
@@ -39,7 +43,7 @@ export class BioActives2019Component implements OnInit {
 
   isLoading: boolean;
 
-  constructor(private playerService: PlayersService, private pagerService: PagerService) { }
+  constructor(private playerService: DominicanService, private pagerService: PagerService) { }
 
 
   ngOnInit() {
@@ -53,7 +57,7 @@ export class BioActives2019Component implements OnInit {
   // Convertir el Array de Observables a un Array de Objetos.
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
-    let InfoObsPlayer = this.playerService.getAllPlayersActives();
+    let InfoObsPlayer = this.playerService.getAllDominicanPlayersActives();
     // let InfoObsPlayer = this.playerService.getAllPlayersActives();
     let index = 0;
     for (let obs of InfoObsPlayer) {
@@ -70,7 +74,7 @@ export class BioActives2019Component implements OnInit {
          // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
 
          this.players = this.players.filter(player =>
-          player.stats && player.stats.length !== 0 && player.primaryPosition.name !=='Pitcher' && player.stats[0].splits && player.stats[0].splits.length !== 0)
+          player.stats && player.stats.length !== 0 && player.primaryPosition.name =='Pitcher' && player.stats[0].splits && player.stats[0].splits.length !== 0)
 
             // se ordenan por nombre
             .sort(({ lastName: a }, { lastName: b }) => {
@@ -108,6 +112,7 @@ export class BioActives2019Component implements OnInit {
         (player.nickName && player.nickName.toLowerCase().includes(this.searchText)) ||
         (player.primaryPosition.abbreviation && player.primaryPosition.abbreviation.toLowerCase().includes(this.searchText)) ||
         (player.primaryPosition.name && player.primaryPosition.name.toLowerCase().includes(this.searchText)));
+
         this.setPage(this.pager.currentPage);
       } else {
           this.allItems = this.players;

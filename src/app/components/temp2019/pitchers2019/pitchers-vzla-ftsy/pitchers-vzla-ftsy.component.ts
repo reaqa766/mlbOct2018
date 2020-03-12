@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { PlayersService } from '../../../../../services/players.service';
 import { PlayersfantasyService  } from '../../../../services/playersfantasy.service';
 import { take } from 'rxjs/operators';
@@ -7,12 +8,14 @@ import { Players } from '../../../../../interfaces/players';
 import { PagerService } from '../../../../../services/index'
 
 
+
+
 @Component({
-  selector: 'app-bio-actives2019',
-  templateUrl: './bio-actives2019.component.html',
-  styleUrls: ['./bio-actives2019.component.css']
+  selector: 'app-pitchers-vzla-ftsy',
+  templateUrl: './pitchers-vzla-ftsy.component.html',
+  styleUrls: ['./pitchers-vzla-ftsy.component.css']
 })
-export class BioActives2019Component implements OnInit {
+export class PitchersVzlaFtsyComponent implements OnInit {
 
   public players = [];
   groups: any;
@@ -70,7 +73,7 @@ export class BioActives2019Component implements OnInit {
          // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
 
          this.players = this.players.filter(player =>
-          player.stats && player.stats.length !== 0 && player.primaryPosition.name !=='Pitcher' && player.stats[0].splits && player.stats[0].splits.length !== 0)
+          player.stats && player.stats.length !== 0 && player.primaryPosition.name =='Pitcher' && player.stats[0].splits && player.stats[0].splits.length !== 0)
 
             // se ordenan por nombre
             .sort(({ lastName: a }, { lastName: b }) => {

@@ -55,9 +55,10 @@ export class PruebajsonsComponent implements OnInit {
 
   ngOnInit() {
     // console.log('Jugadores', this.players);
-    console.log('dia', this.dia);
+    // console.log('dia', this.dia);
     this.isLoading = true;
     this.getPlayersMap();
+
   }
 
 
@@ -81,7 +82,7 @@ getPlayersMap() {
           Object.assign(newPlayer, player.people[0]);
           return newPlayer;
         });
-        console.log('Original players: ', this.players);
+        // console.log('Original players: ', this.players);
         // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
         this.players = this.players.filter(player =>{
 

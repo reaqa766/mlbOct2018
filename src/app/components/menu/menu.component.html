@@ -16,7 +16,7 @@
         <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
           <a class="dropdown-item sub_Menu_Titulo">BATEO</a>
           <a class="dropdown-item" (click)="closeMenu()" (click)="closeMenu()" routerLink="daily">Actuación Diaria</a>
-          <a class="dropdown-item" (click)="closeMenu()" routerLink="HrDiario">Jonroneros de Ayer</a>
+          <a class="dropdown-item" (click)="closeMenu()" routerLink="HrDiario">Jonrones del día</a>
           <a class="dropdown-item" (click)="closeMenu()" routerLink="actives">Spring Training 2020 </a>
           <!-- <a class="dropdown-item" (click)="closeMenu()" routerLink="actives">Temporada 2019 </a> -->
           <a class="dropdown-item" (click)="closeMenu()" routerLink="bioActives">Biografía </a>
@@ -101,8 +101,12 @@
             <a class="dropdown-item" (click)="closeMenu()" routerLink="register">Registrarse</a>
           </ng-container>
           <ng-container *ngIf="isLogin">
-            <a class="dropdown-item" (click)="closeMenu()" routerLink="trivia">Equipos</a>
-            <a class="dropdown-item" (click)="closeMenu()" routerLink="actives2019">Tu Equipo</a>
+            <a class="dropdown-item" (click)="closeMenu()" routerLink="trivia">Ligas</a>
+            <a class="dropdown-item" (click)="closeMenu()" routerLink="actives2019">Equipo con Puntos</a>
+            <a class="dropdown-item" (click)="closeMenu()" routerLink="bio_actives2019">Bat Venezolanos</a>
+            <a class="dropdown-item" (click)="closeMenu()" routerLink="team2019">Bat Dominicanos</a>
+            <a class="dropdown-item" (click)="closeMenu()" routerLink="p_Vzlaftsy19">Pitchers Venezolanos</a>
+            <a class="dropdown-item" (click)="closeMenu()" routerLink="p_ftsy19">Pitchers Dominicanos</a>
             <div class="dropdown-divider"></div>
             <span class="dropdown-item" (click)="onClickLogOut()" >Log out</span>
           </ng-container>
