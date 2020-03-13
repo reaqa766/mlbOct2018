@@ -64,5 +64,17 @@ export class DominicanService {
     }
     return dataAllPlayers;
   }
+  getAllDominicanPlayersActivesOffline(): any[] {
+    let dataAllPlayers: any[] = [];
+    for (let code of this.venezuelanPlayersCodes) {
+      let dataP = this.getPlayeActiveOffline(code);
+      dataAllPlayers.push(dataP);
+    }
+    return dataAllPlayers;
+
+  }
+  getPlayeActiveOffline(code: any) {
+    throw new Error("Method not implemented.");
+  }
 
  }
