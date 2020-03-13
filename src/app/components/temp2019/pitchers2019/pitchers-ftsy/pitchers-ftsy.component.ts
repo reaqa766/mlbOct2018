@@ -74,7 +74,7 @@ export class PitchersFtsyComponent implements OnInit {
          // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
 
          this.players = this.players.filter(player =>
-          player.stats && player.stats.length !== 0 && player.primaryPosition.name =='Pitcher' && player.stats[0].splits && player.stats[0].splits.length !== 0)
+          player.primaryPosition.name ==='Pitcher' )
 
             // se ordenan por nombre
             .sort(({ lastName: a }, { lastName: b }) => {

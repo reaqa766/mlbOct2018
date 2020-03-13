@@ -18,66 +18,39 @@ import _dominicanPlayersCodes from '../../assets/JSONS/dominicanPlayersIds';
 })
 export class DominicanService {
   playerCode = 596115;
-  venezuelanPlayersCollection: AngularFirestoreCollection<any>;
-  dominicanPlayersCollection: AngularFirestoreCollection<any>;
-
   public venezuelanPlayersCodes;
   public dominicanPlayersCodes;
+  private gameCode = [
+    531368,
+  ];
 
-  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=hitting,type=season,season=2020,gameType=S)'
+
+  // Url del Api con los datos de cada juego para un Jugador particular
+  // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +
+  // '&season=2018&hydrate=stats(group=hitting,type=gameLog)';
+  // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +
+  // '&season=2018&hydrate=stats(group=[hitting,pitching],type=[career,statSplits],sitCodes=a,sportId=12)';
+  private _url5 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +
+  '&season=2018&hydrate=stats(group=[hitting],type=[pecota],sportId=12)';
+  private _url1 = 'http://statsapi.mlb.com/api/v1/people/' + this.playerCode + '/stats/game/' +
+  this.gameCode;
+  // tslint:disable-next-line:max-line-length
+  private _url4 = 'https://statsapi.mlb.com/api/v1/teams/109/roster?hydrate=person(stats(type=season,season=2018),education)&rosterType=Active';
+  // tslint:disable-next-line:max-line-length
+  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=pitching,type=season,season=2020,gameType=S)';
+  // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(type=season=2018),%20team(currentteam)';
+  private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(type=gameLog)';
 
 
-  constructor(private http: HttpClient, private afs: AngularFirestore) {
-    this.venezuelanPlayersCollection = this.afs.collection('venezuelans');
-    this.dominicanPlayersCollection = this.afs.collection('dominicans');
+  constructor(private http: HttpClient) {
     this.venezuelanPlayersCodes = _venezuelanPlayersCodes;
     this.dominicanPlayersCodes = _dominicanPlayersCodes;
-  }
 
-  // Searchs for Season Training Venezuelan and Dominican Players
-  async getIdsJSON() {
-
-    const getPlayerByCountry = async (country) => {
-      // Fetch all players from current season
-      const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2020&gameType=S').toPromise();
-      const allPlayers = response.people;
-
-      // Filter by country
-      const filteredPlayers = allPlayers.filter(player => (player.birthCountry === country && player.active));
-
-      // Map to get only ids
-      const playerIds = filteredPlayers.map(player => {
-        const { firstName, lastName, fullName, id, birthDate, currentAge } = player;
-        const position = player.primaryPosition.abbreviation
-        const teamId = player.currentTeam.id;
-        const batSide = player.batSide.code;
-        const pitchHand = player.pitchHand.code;
-        // const {data: {teams: {name: teamName}}} = await axios.get(`https://statsapi.mlb.com/api/v1/teams/${teamId}`);
-
-
-        return id;
-      });
-
-      return playerIds;
-    }
-
-    const dominicanPlayers = await getPlayerByCountry('Dominican Republic');
-    const venezuelanPlayers = await getPlayerByCountry('Venezuela');
-    console.log(JSON.stringify(venezuelanPlayers));
-    console.log(JSON.stringify(dominicanPlayers));
-  }
+   }
 
   // Obtencion de los datos de temporada de un solo jugador
   getPlayeActive(): Observable<StatsDayliPlayer> {
     return this.http.get<StatsDayliPlayer>(this._url);
-  }
-
-  getPlayeActiveOffline(code: number): any {
-    for (const player of playerData) {
-      if (player.id === code) {
-        return player;
-      }
-    }
   }
 
   // Para colocar todos los Json en un solo array. Genera Observables
@@ -89,21 +62,7 @@ export class DominicanService {
       dataAllPlayers.push(dataP);
       this.playerCode = code;
     }
-
-
     return dataAllPlayers;
   }
 
-  getAllPlayersActivesOffline(): any[] {
-    let dataAllPlayers: any[] = [];
-    for (let code of this.venezuelanPlayersCodes) {
-      let dataP = this.getPlayeActiveOffline(code);
-      dataAllPlayers.push(dataP);
-    }
-    return dataAllPlayers;
-
-  }
-
-
-
-}
+ }
