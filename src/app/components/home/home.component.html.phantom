@@ -1,1 +1,1 @@
-<button (click)="playerService.updateDatabase()">Upload to DB</button>
+<button (click)="playerService.getIdsJSON()">Upload to DB</button>
