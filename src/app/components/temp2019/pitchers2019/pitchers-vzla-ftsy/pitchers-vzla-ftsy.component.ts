@@ -73,7 +73,7 @@ export class PitchersVzlaFtsyComponent implements OnInit {
          // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
 
          this.players = this.players.filter(player =>
-          player.stats && player.stats.length !== 0 && player.primaryPosition.name =='Pitcher' && player.stats[0].splits && player.stats[0].splits.length !== 0)
+          player.primaryPosition.name =='Pitcher' )
 
             // se ordenan por nombre
             .sort(({ lastName: a }, { lastName: b }) => {
@@ -106,7 +106,7 @@ export class PitchersVzlaFtsyComponent implements OnInit {
   onSearchChange() {
     if (this.searchText) {
       this.allItems = this.players.filter(player =>
-        player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
+        // player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
         (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
         (player.nickName && player.nickName.toLowerCase().includes(this.searchText)) ||
         (player.primaryPosition.abbreviation && player.primaryPosition.abbreviation.toLowerCase().includes(this.searchText)) ||

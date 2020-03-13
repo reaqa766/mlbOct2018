@@ -118,7 +118,7 @@ export class PlayerInfoDominicanComponent implements OnInit {
         });
       }
     } else {
-      this.players = this.playerService.getAllPlayersActivesOffline();
+      this.players = this.playerService.getAllDominicanPlayersActivesOffline();
       for (const jugador of this.players) {
         // console.log('Comparando: '+jugador.id+' con '+this.idplayer);
         // tslint:disable-next-line:triple-equals
