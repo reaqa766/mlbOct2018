@@ -101,6 +101,7 @@ import {ImgFallbackDirective} from './directives/app-img-fallback.directive';
 import { PlayerInfoDominicanComponent } from './components/playerinfo/player-info-dominican/player-info-dominican.component';
 import { PitchersVzlaFtsyComponent } from './components/temp2019/pitchers2019/pitchers-vzla-ftsy/pitchers-vzla-ftsy.component'
 import { PitchersFtsyComponent } from './components/temp2019/pitchers2019/pitchers-ftsy/pitchers-ftsy.component'
+import { FantasyModule } from './fantasy/fantasy.module';
 
 @NgModule({
   declarations: [
@@ -192,7 +193,8 @@ import { PitchersFtsyComponent } from './components/temp2019/pitchers2019/pitche
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     ReactiveFormsModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    FantasyModule
   ],
   providers: [PlayersService, PagerService, AngularFirestore, AuthService, AuthGuard, FlashMessagesService ],
   bootstrap: [AppComponent]
