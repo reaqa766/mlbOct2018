@@ -1,0 +1,9 @@
+.title_page {
+  color: antiquewhite;
+  font-weight: 700;
+  margin-top: 2%;
+  margin-left: 8%;
+  width: 85%;
+  text-align: center;
+  text-shadow: 2px 2px 8px #111;
+}

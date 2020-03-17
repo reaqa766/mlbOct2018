@@ -53,6 +53,14 @@ export class DominicanService {
     return this.http.get<StatsDayliPlayer>(this._url);
   }
 
+  getPlayeActiveOffline(code: number): any {
+    for (const player of playerData) {
+      if (player.id === code) {
+        return player;
+      }
+    }
+  }
+
   // Para colocar todos los Json en un solo array. Genera Observables
   getAllDominicanPlayersActives(): Observable<StatsDayliPlayer | undefined>[] {
     let dataAllPlayers: Observable<StatsDayliPlayer | undefined>[] = [];
@@ -64,5 +72,17 @@ export class DominicanService {
     }
     return dataAllPlayers;
   }
+  getAllDominicanPlayersActivesOffline(): any[] {
+    let dataAllPlayers: any[] = [];
+    for (let code of this.venezuelanPlayersCodes) {
+      let dataP = this.getPlayeActiveOffline(code);
+      dataAllPlayers.push(dataP);
+    }
+    return dataAllPlayers;
 
- }
+
+
+   }
+
+
+}

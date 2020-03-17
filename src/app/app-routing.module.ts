@@ -72,6 +72,7 @@ import { PostListsComponent } from '../app/components/posts/post-lists/post-list
 import { PostService } from '../app/components/posts/post.service';
 
 import {AuthGuard} from './guards/auth.guard';
+import { LigaFantasySelectComponent } from './fantasy/liga-fantasy-select/liga-fantasy-select.component';
 
 
 const routes: Routes = [
@@ -195,6 +196,8 @@ const routes: Routes = [
   component: HrDiarioComponent },
   { path: 'transacciones',
   component: TransaccionesComponent },
+  { path: 'ligaFantasy',
+  component: LigaFantasySelectComponent },
   { path: 'podCasts',
   component: PodcastsComponent, children:[{
     path: 'TalkBeisbol',

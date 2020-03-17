@@ -194,7 +194,8 @@ import { FantasyModule } from './fantasy/fantasy.module';
     ToastrModule.forRoot(),
     ReactiveFormsModule,
     AngularFireAuthModule,
-    FantasyModule
+    FantasyModule,
+
   ],
   providers: [PlayersService, PagerService, AngularFirestore, AuthService, AuthGuard, FlashMessagesService ],
   bootstrap: [AppComponent]
