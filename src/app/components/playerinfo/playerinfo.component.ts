@@ -118,15 +118,10 @@ export class PlayerinfoComponent implements OnInit {
     } else {
       this.players = this.playerService.getAllPlayersActivesOffline();
       for (const jugador of this.players) {
-        // console.log('Comparando: '+jugador.id+' con '+this.idplayer);
-        // tslint:disable-next-line:triple-equals
         if (jugador.id == this.idplayer) {
-          // console.log('items4', jugador.fullName);
           this.player = jugador;
           break;
         }
-        // console.log('items5', 1);
-        // console.log('items7', this.idplayer);
       }
     }
 

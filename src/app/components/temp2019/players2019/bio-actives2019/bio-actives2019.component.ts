@@ -96,8 +96,8 @@ export class BioActives2019Component implements OnInit {
     // initialize to page 1
     // this.setPage(1);
     const playerstxt1 = this.players
-
   }
+
 
 
   onSearchChange() {

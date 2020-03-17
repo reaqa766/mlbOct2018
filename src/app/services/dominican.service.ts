@@ -80,9 +80,16 @@ export class DominicanService {
     }
     return dataAllPlayers;
 
+<<<<<<< HEAD
 
 
    }
 
+=======
+  }
+  getPlayeActiveOffline(code: any) {
+    throw new Error("Method not implemented.");
+  }
+>>>>>>> fc5de9ae027b4e815544e530b65c4a5f8d36613d
 
 }

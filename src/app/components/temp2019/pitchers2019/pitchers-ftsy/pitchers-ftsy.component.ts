@@ -72,7 +72,6 @@ export class PitchersFtsyComponent implements OnInit {
             return newPlayer;
           });
          // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
-
          this.players = this.players.filter(player =>
           player.primaryPosition.name ==='Pitcher' )
 
@@ -86,6 +85,7 @@ export class PitchersFtsyComponent implements OnInit {
                 return 0;
               }
             });
+            console.log("JugadoresFilt",  this.players)
             this.allItems = this.players;
             this.setPage(1);
           this.isLoading = false;
@@ -100,6 +100,7 @@ export class PitchersFtsyComponent implements OnInit {
     // initialize to page 1
     // this.setPage(1);
     const playerstxt1 = this.players
+ 
 
   }
 
