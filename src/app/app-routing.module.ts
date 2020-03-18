@@ -73,6 +73,7 @@ import { PostService } from '../app/components/posts/post.service';
 
 import {AuthGuard} from './guards/auth.guard';
 import { LigaFantasySelectComponent } from './fantasy/liga-fantasy-select/liga-fantasy-select.component';
+import { LigaTeamComponent } from './fantasy/liga-team/liga-team.component';
 
 
 const routes: Routes = [
@@ -198,6 +199,8 @@ const routes: Routes = [
   component: TransaccionesComponent },
   { path: 'ligaFantasy',
   component: LigaFantasySelectComponent },
+  { path: 'ligaTeam',
+  component: LigaTeamComponent },
   { path: 'podCasts',
   component: PodcastsComponent, children:[{
     path: 'TalkBeisbol',

@@ -55,7 +55,7 @@ export class BioActivesComponent implements OnInit {
   }
 
 
-  // Convertir el Array de Observables a un Array de Objetos.
+  // Convertir   el Array de Observables a un Array de Objetos.
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
     let InfoObsPlayer = this.playerService.getAllPlayersActives();

@@ -1,0 +1,158 @@
+.daily-title {
+  color: antiquewhite;
+  font-size: 2.25rem;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 0.5em .4em;
+  /* background-color: rgba(19, 12, 12, 0.5); */
+  text-shadow: 2px 2px 8px #111;
+  width: fit-content;
+  height: 1.75em;
+  border-radius: 7px;
+}
+
+
+.page-link {
+color: black !important;
+}
+
+.seleccion {
+  color: antiquewhite;
+  padding: 0 0.5em .4em;
+  text-shadow: 2px 2px 8px #111;
+}
+
+
+.advancedSearchDatetbox{
+  color: rgb(2, 1, 0);
+  font-size: 0.75rem;
+  /* font-weight: bold; */
+  /* margin: 1% 0 2% 1%; */
+  width: fit-content;
+  border-radius: 6px;
+  }
+
+.error_search {
+  font-size: 0.7rem;
+  width: 50%;
+  margin-left: 2%;
+  text-align: center;
+  color: antiquewhite;
+  background-color: rgba(12, 10, 9, 0.75);
+
+}
+.table {
+border-collapse: separate;
+
+}
+
+
+.error_message {
+  padding-top: 10px;
+  font-size: 0.7rem;
+
+}
+
+.link_player {
+  text-decoration:none;
+  color: antiquewhite;
+}
+.title-positionA {
+color: white;
+font-size: 1.5rem;
+font-weight: bold;
+width: 80%;
+margin-left: 10%;
+
+/* margin: .5rem 0 .5rem .5rem; */
+
+}
+
+.title-position {
+color: white;
+font-size: 1rem;
+font-weight: bold;
+width: 80%;
+margin-left: 10%;
+  /* margin: .5rem 0 .5rem .5rem; */
+    }
+
+.player_stats {
+  width: 100%;
+  display: table;
+  /* margin: auto; */
+}
+
+.td7, .td8, .td11 {
+  display: none;
+}
+
+.table-header1 {
+  background-color: rgba(12, 10, 9, 0.9);
+  color: antiquewhite;
+  font-size: 1.5rem;
+  align-items: center;
+}
+.table-header {
+  background-color: rgba(12, 10, 9, 0.75);
+  color: antiquewhite;
+  font-size: 1.5rem;
+  align-items: center;
+}
+.title-rows {
+  background-color: antiquewhite;
+  color: rgb(12, 10, 9);
+
+}
+
+.player-name {
+  color: black;
+}
+.player-name:hover {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+.row-color {
+  background-color: rgb(245, 223, 195);
+
+}
+.row-color:hover {
+  background-color: rgb(255, 255, 255);
+
+}
+.row-color1:hover {
+  background-color: rgb(255, 255, 255);
+
+}
+
+.title-rows_header {
+  text-align: center;
+}
+
+.spiner {
+  margin-left: 20% !important;
+
+}
+
+.fa-baseball-ball {
+  font-size: 8rem;
+  margin: 5% 0 0 25%  !important;
+  color: rgba(80, 57, 43, 0.40);
+}
+.spiner_load {
+  font-size: 2.5rem;
+  color: rgba(80, 57, 43, 0.95);
+}
+
+th {
+  padding: 12px 5px;
+  }
+.paginator {
+  margin: auto;
+}
+.paginator_text {
+  display: none;
+}

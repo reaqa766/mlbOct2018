@@ -7,3 +7,39 @@
   text-align: center;
   text-shadow: 2px 2px 8px #111;
 }
+
+.subtitle_fantasy {
+  font-size:  2.25rem;
+  }
+
+.card {
+  margin: auto;
+  width: 30%;
+  /* background-color: whitesmoke; */
+  border-radius: 10px;
+  margin-bottom: 6%;
+}
+
+
+.form-control {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  padding: auto;
+  padding: 0 25%;
+  margin-bottom: 1rem;
+  background-color: #712828;
+
+}
+
+.form_text {
+  margin: .25rem 1rem;
+  font-size: 1.5em;
+  color: rgb(116, 113, 113) !important;
+  height: 3em;
+  border: solid 1px rgb(170, 166, 166) !important;
+  border-radius: 2px !important;
+  width: 90%;
+
+
+}

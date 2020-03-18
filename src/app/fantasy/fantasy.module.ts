@@ -8,11 +8,16 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { AuthService } from '../services/auth.service';
 import { AuthGuard } from '../guards/auth.guard';
 import { FlashMessagesService } from 'angular2-flash-messages';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   imports: [
     CommonModule,
-    SecondaryRoutingModule
+    SecondaryRoutingModule,
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [LigaFantasySelectComponent],
   exports: [

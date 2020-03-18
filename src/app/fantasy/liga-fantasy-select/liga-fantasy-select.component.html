@@ -1,3 +1,39 @@
 <div class="title_page">
-  <h1>MODULO DE ASIGNCION DE JUGADORES</h1>
+  <h1 class="subtitle_fantasy">MODULO DE ASIGNACION DE JUGADORES</h1>
 </div>
+
+<div class="card" *ngIf="!isLoading">
+<div class="card-body">
+
+<form [formGroup]='profileForm' (ngSubmit)="onSubmit(profileForm)">
+  <div class="form-group">
+
+    <div class="form-group  form-group_select">
+      <input type="text" formControlName="liga" id="liga" class="form-control form_liga"
+        placeholder="Nombre de la Liga">
+      <select class="form_text" style="height:3rem;" type="text" formControlName="Liga" [disabled]="true"
+
+      >
+        <option [disabled]="true" [selected]="true" [value]="null">Liga Fantasy</option>
+        <option value="VD">VD</option>
+        <option value="VDVZLA">VD VZLA</option>
+        <option value="VDESTE">VD ESTE</option>
+        <option value="VDOESTE">VD OESTE</option>
+        <option value="VDNORTE">VD NORTE</option>
+        <option value="VDSUR">VD SUR</option>
+        <option value="VDCENTRO">VDCENTRO</option>
+        <option value="VDVZLA">VD VZLA</option>
+        <option value="VDPROESTE">VENEDOMPRO ESTE</option>
+        <option value="VDPROCENTRO">VENEDOMPRO CENTRO</option>
+        <option value="VDPROSUR">VENEDOMPRO SUR</option>
+      </select>
+
+
+    </div>
+
+  </div>
+</form>
+</div>
+</div>
+
+
