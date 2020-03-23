@@ -102,7 +102,6 @@ import { PlayerInfoDominicanComponent } from './components/playerinfo/player-inf
 import { PitchersVzlaFtsyComponent } from './components/temp2019/pitchers2019/pitchers-vzla-ftsy/pitchers-vzla-ftsy.component'
 import { PitchersFtsyComponent } from './components/temp2019/pitchers2019/pitchers-ftsy/pitchers-ftsy.component'
 import { FantasyModule } from './fantasy/fantasy.module';
-import { LigaTeamComponent } from './fantasy/liga-team/liga-team.component';
 
 @NgModule({
   declarations: [
@@ -177,7 +176,6 @@ import { LigaTeamComponent } from './fantasy/liga-team/liga-team.component';
     PlayerInfoDominicanComponent,
     PitchersFtsyComponent,
     PitchersVzlaFtsyComponent,
-    LigaTeamComponent
 
   ],
   imports: [

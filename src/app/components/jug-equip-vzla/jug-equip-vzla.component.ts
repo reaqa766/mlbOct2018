@@ -120,7 +120,7 @@ export class JugEquipVzlaComponent implements OnInit {
     this.jugadoresFiltrados =  this.jugadores.filter(jugador => index === jugador.equipolvbp).sort(({ nombre: a }, { nombre: b }) => {
       if (a > b) {
         return 1;
-      } else if (a < b) {
+      } else if (a < b)  {
         return -1;
       } else if (a === b) {
         return 0;

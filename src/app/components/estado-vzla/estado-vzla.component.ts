@@ -136,7 +136,7 @@ export class EstadoVzlaComponent implements OnInit {searchText: string;
   showMyImage(index) {
     this.jugadoresFiltrados = [];
     this.sumatoria = 0;
-    this.jugadoresFiltrados =  this.jugadores.filter(jugador => index === jugador.estadoNac).sort(({ nombre: a }, { nombre: b }) => {
+    this.jugadoresFiltrados =  this.jugadores.filter(jugador => index ===  jugador.estadoNac).sort(({ nombre: a }, { nombre: b }) => {
       if (a > b) {
         return 1;
       } else if (a < b) {

@@ -44,6 +44,7 @@ export class LigaTeamComponent implements OnInit {
   isLoading: boolean;
 
   constructor(private playerService: PlayersFantasyService, private pagerService: PagerService) { }
+  // constructor(private playerService: PlayersFantasyService, private pagerService: PagerService) { }
 
   ngOnInit() {
         console.log('Jugadores', this.players);
@@ -58,7 +59,7 @@ export class LigaTeamComponent implements OnInit {
 getPlayersMap() {
   this.players = [];
   this.allItems = [];
-  this.setPage(1);
+  // this.setPage(1);
   const InfoObsPlayer = this.playerService.getAllPlayersActives19();
   let index = 0;
   for (let obs of InfoObsPlayer) {
@@ -96,7 +97,7 @@ getPlayersMap() {
 
 
         this.allItems = this.players;
-        this.setPage(1);
+        // this.setPage(1);
         this.isLoading = false;
         // console.log('allItems', this.allItems);
         }

@@ -10,6 +10,9 @@ import { AuthGuard } from '../guards/auth.guard';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { LigaTeamComponent } from './liga-team/liga-team.component';
+import { FantasySeleccionJugadoresComponent } from './fantasy-seleccion-jugadores/fantasy-seleccion-jugadores.component';
+// import { PaginationPipe } from 'src/pipes/pagination.pipe';
 
 @NgModule({
   imports: [
@@ -17,9 +20,10 @@ import { BrowserModule } from '@angular/platform-browser';
     SecondaryRoutingModule,
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ],
-  declarations: [LigaFantasySelectComponent],
+  declarations: [LigaFantasySelectComponent, LigaTeamComponent, FantasySeleccionJugadoresComponent,],
   exports: [
     LigaFantasySelectComponent
   ],

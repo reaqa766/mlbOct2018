@@ -10,6 +10,9 @@
   height: 1.75em;
   border-radius: 7px;
 }
+.container-daily {
+  margin: auto;
+}
 
 
 .page-link {
@@ -61,8 +64,8 @@ border-collapse: separate;
 color: white;
 font-size: 1.5rem;
 font-weight: bold;
-width: 80%;
-margin-left: 10%;
+/* width: 80%;
+margin-left: 10%; */
 
 /* margin: .5rem 0 .5rem .5rem; */
 
@@ -72,8 +75,8 @@ margin-left: 10%;
 color: white;
 font-size: 1rem;
 font-weight: bold;
-width: 80%;
-margin-left: 10%;
+/* width: 80%;
+margin-left: 10%; */
   /* margin: .5rem 0 .5rem .5rem; */
     }
 
@@ -90,13 +93,13 @@ margin-left: 10%;
 .table-header1 {
   background-color: rgba(12, 10, 9, 0.9);
   color: antiquewhite;
-  font-size: 1.5rem;
+  font-size: 1rem;
   align-items: center;
 }
 .table-header {
   background-color: rgba(12, 10, 9, 0.75);
   color: antiquewhite;
-  font-size: 1.5rem;
+  font-size: 1rem;
   align-items: center;
 }
 .title-rows {

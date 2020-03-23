@@ -6,10 +6,12 @@ import { AuthComponent } from '../components/auth/auth/auth.component';
 import { EditorAuthGuard } from '../components/guards/editor-auth.guard.guard';
 import { NotFoundPageComponent } from '../components/not-found-page/not-found-page.component';
 import { LigaTeamComponent } from './liga-team/liga-team.component';
+import { FantasySeleccionJugadoresComponent } from './fantasy-seleccion-jugadores/fantasy-seleccion-jugadores.component';
 
 const secondaryRoutes: Routes = [
   { path: 'ligaFantasy',  component: LigaFantasySelectComponent},
   { path: 'ligaTeam',  component: LigaTeamComponent},
+  { path: 'ligaSeleccion',  component: FantasySeleccionJugadoresComponent},
 ];
 
 

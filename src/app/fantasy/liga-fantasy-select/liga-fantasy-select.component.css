@@ -24,22 +24,84 @@
 .form-control {
   font-size: 1.5em;
   font-weight: 700;
-  color: rgb(0, 0, 0);
   padding: auto;
-  padding: 0 25%;
+  /* padding: 0 25%; */
   margin-bottom: 1rem;
-  background-color: #712828;
+  background-color: #fbdfdf;
+  color: rgb(0, 0, 0) !important;
+}
+
+.form_group_select_team {
+  width: 70%;
+}
+
+.form_team {
+  color: rgb(0, 0, 0) !important;
 
 }
 
 .form_text {
   margin: .25rem 1rem;
   font-size: 1.5em;
-  color: rgb(116, 113, 113) !important;
+  color: rgb(0, 0, 0) !important;
   height: 3em;
   border: solid 1px rgb(170, 166, 166) !important;
   border-radius: 2px !important;
   width: 90%;
+}
+
+.form_text_team {
+  color: rgb(7, 0, 0) !important;
 
 
 }
+
+.form_team {
+  font-size: 1.25em;
+  font-weight: 500;
+  color: black;
+  padding: auto;
+  /* padding: 0 25%; */
+  margin-bottom: 1rem;
+  background-color: #c4eefd;
+
+}
+
+
+.daily-title {
+  color: antiquewhite;
+  font-size: 2.25rem;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 0.5em .4em;
+  /* background-color: rgba(19, 12, 12, 0.5); */
+  text-shadow: 2px 2px 8px #111;
+  width: fit-content;
+  height: 1.75em;
+  border-radius: 7px;
+}
+
+
+
+.seleccion_jugadores {
+  width: 50%;
+  margin: auto;
+}
+
+.container_grid_Jugadores{
+  display: grid;
+
+  grid-template-columns: 1fr 4fr 4fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.seleccion {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  width: 90%;
+ }
+.seleccionados {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  width: 90%;
+ }

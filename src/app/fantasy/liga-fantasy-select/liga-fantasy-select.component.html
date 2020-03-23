@@ -3,37 +3,75 @@
 </div>
 
 <div class="card" *ngIf="!isLoading">
-<div class="card-body">
+  <div class="card-body">
 
-<form [formGroup]='profileForm' (ngSubmit)="onSubmit(profileForm)">
-  <div class="form-group">
+    <form [formGroup]='profileForm' (ngSubmit)="onSubmit(profileForm)">
+      <div class="form-group">
+        <div class="form-group  form-group_selec_liga">
+          <input type="text" formControlName="liga" id="liga" class="form-control form_liga"
+            placeholder="Nombre de la Liga">
+          <select class="form_text" style="height:3rem;" type="text" formControlName="Liga" [disabled]="true">
+            <option [disabled]="true" [selected]="true" [value]="null">Liga Fantasy</option>
+            <option value="VD">VD</option>
+            <option value="VDVZLA">VD VZLA</option>
+            <option value="VDESTE">VD ESTE</option>
+            <option value="VDOESTE">VD OESTE</option>
+            <option value="VDNORTE">VD NORTE</option>
+            <option value="VDSUR">VD SUR</option>
+            <option value="VDCENTRO">VDCENTRO</option>
+            <option value="VDVZLA">VD VZLA</option>
+            <option value="VDPROESTE">VENEDOMPRO ESTE</option>
+            <option value="VDPROCENTRO">VENEDOMPRO CENTRO</option>
+            <option value="VDPROSUR">VENEDOMPRO SUR</option>
+          </select>
+        </div>
+        </div>
+      </form>
 
-    <div class="form-group  form-group_select">
-      <input type="text" formControlName="liga" id="liga" class="form-control form_liga"
-        placeholder="Nombre de la Liga">
-      <select class="form_text" style="height:3rem;" type="text" formControlName="Liga" [disabled]="true"
+<hr>
+  <form [formGroup]='profileForm' (ngSubmit)="onSubmit(profileForm)">
+      <div class="form-group">
 
-      >
-        <option [disabled]="true" [selected]="true" [value]="null">Liga Fantasy</option>
-        <option value="VD">VD</option>
-        <option value="VDVZLA">VD VZLA</option>
-        <option value="VDESTE">VD ESTE</option>
-        <option value="VDOESTE">VD OESTE</option>
-        <option value="VDNORTE">VD NORTE</option>
-        <option value="VDSUR">VD SUR</option>
-        <option value="VDCENTRO">VDCENTRO</option>
-        <option value="VDVZLA">VD VZLA</option>
-        <option value="VDPROESTE">VENEDOMPRO ESTE</option>
-        <option value="VDPROCENTRO">VENEDOMPRO CENTRO</option>
-        <option value="VDPROSUR">VENEDOMPRO SUR</option>
-      </select>
+        <div class="form-group  form_group_select_team">
+            <input type="text" formControlName="liga" id="equipo" class="form-control form_team"
+              placeholder="Nombre del Equipo">
+            <select class="form_text_team" style="height:3rem;" type="text" formControlName="liga" [disabled]="true">
+              <option [disabled]="true" [selected]="true" [value]="null">Equipo</option>
+              <option value="VD">VD</option>
+              <option value="VDVZLA">VD VZLA</option>
+              <option value="VDESTE">VD ESTE</option>
+              <option value="VDOESTE">VD OESTE</option>
+              <option value="VDNORTE">VD NORTE</option>
+              <option value="VDSUR">VD SUR</option>
+              <option value="VDCENTRO">VDCENTRO</option>
+              <option value="VDVZLA">VD VZLA</option>
+              <option value="VDPROESTE">VENEDOMPRO ESTE</option>
+              <option value="VDPROCENTRO">VENEDOMPRO CENTRO</option>
+              <option value="VDPROSUR">VENEDOMPRO SUR</option>
+            </select>
+          </div>
+          </div>
+        </form>
+      </div>
+  </div>
+<!-- </div> -->
+<!-- <div class="seleccion_jugadores"> -->
+    <div class="container-daily">
+        <h1 class="daily-title">Seleccion de Jugadores</h1>
+      <br>
+        <h3 class="daily-title">Temporada 2019</h3>
+        <!-- <h3 class="daily-title">Temporada Regular 2019</h3> -->
+      </div>
 
 
+  <div class="container_grid_Jugadores">
+    <div class="seleccion">
+      <app-liga-team></app-liga-team>
     </div>
+    <div class="seleccionados">
+        <app-liga-team></app-liga-team>
+      </div>
+
 
   </div>
-</form>
-</div>
-</div>
-
-
+<!-- </div> -->
