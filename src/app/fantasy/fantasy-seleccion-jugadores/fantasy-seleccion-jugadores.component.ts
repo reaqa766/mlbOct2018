@@ -35,16 +35,26 @@ export class FantasySeleccionJugadoresComponent implements OnInit {
 
     this.tipoLigas = [{ display: "Paga", esPaga:true }, { display: "Gratis", esPaga:false }];
 
-    this.ligas = [{ nombre: "Venedompro Vzla", esPaga:"true", logo:"", equipos:[] },
-    { nombre: "Venedompro Centro", esPaga:"true", logo:"", equipos:[] },
-    { nombre: " Venedompro Sur", esPaga: "true", logo:"", equipos:[] },
-    { nombre: "VDVzla",esPaga:"false", logo:"", equipos:[] },
-    { nombre: " VD", esPaga:"false", logo:"", equipos:[] },
-    { nombre: "VDEste",  esPaga: "false", logo:"", equipos:[] },
-    { nombre: "VDOeste", esPaga: "false", logo:"", equipos:[] },
-    { nombre: "VDNorte",  esPaga: "false", logo:"", equipos:[] },
-    { nombre: " VDSur",  esPaga: "false", logo:"", equipos:[] },
-    { nombre: "VDCentro",  esPaga: "false", logo:"", equipos:[] }];
+    this.ligas = [{ nombre: "Venedompro Oeste", esPaga:"true", logo:"",
+    equipos:["Los Estrada", "Paseo City", "Mi Familia SBC", "Los Pájaros Rojos", "Halp9779", "Pesqueros de Sucre", "Los Triunfadores","The Black Bull" ] },
+    { nombre: "Venedompro Este", esPaga:"true", logo:"",
+    equipos:[ "Los Mutantes", "Ronceros de Maracay", "Los Monstrones", "Padres", "Diablos Rojos", "Atléticos Del Jarillo", "The Golden", "Niño Team", "The Nuñez Team", "Bombarderos del Tuy", "Tiburones de Miami" ] },
+    { nombre: " Venedompro Sur", esPaga: "true", logo:"",
+    equipos:["Team Reales Primos", "Isafit Team", "Team Madrid", "Perros Locos", "Sin Nombre", "San Mateo MLB", "PanaBrothers", "Los Orientales del Pilar" ] },
+    { nombre: "VDVzla",esPaga:"false", logo:"",
+    equipos:["Los Triunfadores", "Marineros de la Sabana", "Cats Miranda", "Azulejos", "Pikacho Bol", "The Block", "Los Juanchos", "Vikings of the Guaira", "Chapines"] },
+    { nombre: " VD", esPaga:"false", logo:"",
+    equipos:["Guerreros del Centro B.B.C.", "The Chuchos", "Arepa Power", "Centinelas", "Ticodel", "Los Camellos de Falcón", "Estosellamabeisbol", "Aguizuela BBC", "Gringo23", "Team G. R. A."] },
+    { nombre: "VDEste",  esPaga: "false", logo:"",
+    equipos:["Los Monstrones", "Panteras BBC", "Indios de Barcelona", "Monster", "Brohter' Patriots", "Vengadores MLB", "Los Gigantes", "Los Chiclosos", "Noctambulos", "Los Dragones" ] },
+    { nombre: "VDOeste", esPaga: "false", logo:"",
+    equipos:["Niño Team", "Los Roba Señas de Cooperstpwn", "Hardwell Team", "Chapi Team", "Moneyball Inc.", "Perfume de Feyalegria", "The Walkers", "Navegantes del Este", "Los Bad Boys", "Los Macrofagos"] },
+    { nombre: "VDNorte",  esPaga: "false", logo:"",
+    equipos:["Alberto Monsalve Team", "Tucacas BBC", "Broncos", "Los Chonchis", "Leones del Valle", "Machique's Power", "OscarTeams", "Paredes Team", "Isotopos Team" ] },
+    { nombre: " VDSur",  esPaga: "false", logo:"",
+    equipos:["El Cojedeño", "Delgados BBC", "Blue Sox", "D.Prada", "MLB en Santiago", "Pumas Vzla", "Delfines de Margarita", "Los Osos de Carabobo", "El Tarron Sport", "The Nuñez Team"] },
+    { nombre: "VDCentro",  esPaga: "false", logo:"",
+    equipos:["Bravos de Araure", "Anthony BBC", "Gatos de Maracaibo", "La Elegancia", "The Power Family", "Team Peque", "Los Gutiz Baseball", "Chacalaca BBC", "Latinpower Team", "Los Gloriosos de Trujillo"] }];
 
 
   }
@@ -53,21 +63,21 @@ export class FantasySeleccionJugadoresComponent implements OnInit {
   muestraTipodeLiga(tipoDeCampeonatoSeleccionado) {
     this.ligasFiltradas = [];
     this.ligasFiltradas =  this.ligas.filter(liga => tipoDeCampeonatoSeleccionado == liga.esPaga)
-    // .sort(({ nombre: a }, { nombre: b }) => {
-    //   if (a > b) {
-    //     return 1;
-    //   } else if (a < b) {
-    //     return -1;
-    //   } else if (a === b) {
-    //     return 0;
-    //   }});
+    .sort(({ nombre: a }, { nombre: b }) => {
+      if (a > b) {
+        return 1;
+      } else if (a < b) {
+        return -1;
+      } else if (a === b) {
+        return 0;
+      }});
 
 
-      console.log ("ligaFiltrada", this.ligasFiltradas);
-      console.log ("ligas", this.ligas);
-      console.log ("tipoDeCampeonatoSeleccionado", tipoDeCampeonatoSeleccionado);
-      console.log ("Boolean del tipoDeCampeonatoSeleccionado", Boolean(tipoDeCampeonatoSeleccionado));
-      console.log ("Boolean", Boolean(true));
+      // console.log ("ligaFiltrada", this.ligasFiltradas);
+      // console.log ("ligas", this.ligas);
+      // console.log ("tipoDeCampeonatoSeleccionado", tipoDeCampeonatoSeleccionado);
+      // console.log ("Boolean del tipoDeCampeonatoSeleccionado", Boolean(tipoDeCampeonatoSeleccionado));
+      // console.log ("Boolean", Boolean(true));
     // this.tituloEquipo = this.equipos[index-1].equipo;
     // this.logoEquipo = this.equipos[index-1].url;
 }
