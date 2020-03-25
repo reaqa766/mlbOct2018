@@ -29,7 +29,6 @@ export class HrDiarioComponent implements OnInit {
   m: number;
   n1 = 12;
   n10 = 5;
-  // dia = moment().format('YYYY-MM-DD');
   dia = new Date(new Date().getFullYear(),new Date().getMonth(), new Date().getDate() - 1);
   public allItems: any[];
   public allItems2: any[];
@@ -48,8 +47,6 @@ export class HrDiarioComponent implements OnInit {
   constructor(private playerService: DataPlayersService,  private pagerService: PagerService) { }
 
   ngOnInit() {
-    // console.log('JugadoresOnInit', this.players);
-    // console.log('dia', this.dia);
     this.isLoading = true;
     this.getPlayersMap();
   }

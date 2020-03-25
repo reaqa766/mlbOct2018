@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { EstadoVzlaComponent } from 'src/app/components/estado-vzla/estado-vzla.component';
-import { Ligas } from '../Interfaces/Ligas';
+import { Liga } from '../Interfaces/Liga';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserServiceService {
-  ligas: Ligas;
+  ligas: Liga[];
   nombreLiga: string [];
 
 

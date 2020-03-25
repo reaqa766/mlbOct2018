@@ -135,7 +135,6 @@ export class ByteamComponent implements OnInit {
             // se ordenan por nombre
             .sort((a, b) => {
               a = a.fullName;
-              // debugger
               b = b.fullName;
               if (a > b) {
 

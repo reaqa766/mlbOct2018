@@ -1,41 +1,59 @@
 <div class="container_seleccion">
 
-    <div class="title_page">
-        <h1 class="subtitle_fantasy">MODULO DE ASIGNACION DE JUGADORES</h1>
-      </div>
+  <div class="title_page">
+    <h1 class="subtitle_fantasy">MODULO DE ASIGNACION DE JUGADORES</h1>
+  </div>
 
-      <!-- SELECT DE TIPO DE LIGA-->
-      <div class="seleccion_liga">
-          <h3 class="subtitulo_seleccion_liga">Selecciona el tipo de Liga</h3>
-        </div>
+  <!-- SELECT DE TIPO DE LIGA-->
+  <div class="seleccion_liga">
+    <h3 class="subtitulo_seleccion_liga">Selecciona el tipo de Liga</h3>
+  </div>
 
+  <label for="Campeonato">Tipo de Liga</label>
+  <select id="Campeonato" [(ngModel)]="tipoDeCampeonatoSeleccionado" (ngModelChange)="filtrarLigasPorTipo($event)"
+    autofocus>
+    <option [disabled]="" [selected]="true" [value]="">Tipo de Liga</option>
 
-      <select [ngModel]="tipoDeCampeonatoSeleccionado" (ngModelChange)="muestraTipodeLiga($event)">
-      <!-- <select [(ngModel)]="tipoDeCampeonatoSeleccionado"   > -->
-          <option [disabled]="" [selected]="" [value]="null">Tipo de Liga</option>
+    <option *ngFor="let tipo of tipoLigas" [value]="tipo.esPaga">
+      {{tipo.display}}
+    </option>
+  </select>
+  <hr>
 
-          <option *ngFor="let tipo of tipoLigas" [value]="tipo.esPaga" >
-            {{tipo.display}}
-          </option>
-      </select>
-<div> Seleccionado {{tipoDeCampeonatoSeleccionado}}</div>
-      <hr>
+  <!-- SELECT DE NOMBRE DE LIGA-->
+  <div class="seleccion_liga">
+    <h3 class="subtitulo_seleccion_liga">Seleccione el nombre de la Liga</h3>
+  </div>
 
-      <!-- SELECT DE NOMBRE DE LIGA-->
-      <div class="seleccion_liga">
-          <h3 class="subtitulo_seleccion_liga">Seleccione el nombre de  la Liga</h3>
-        </div>
+  <label for="Liga">Nombre de la Liga</label>
 
+  <select id="Liga" [(ngModel)]="ligaSeleccionada" (ngModelChange)="filtrarEquipos($event)" [disabled]="laLiga">
+    <option [disabled]="" [selected]="true">Nombre de la Liga</option>
+    <!-- <option [disabled]="true" [selected]="true" [value]="null">Nombre de la Liga</option> -->
 
-      <select [(ngModel)]="tipoDeLigaSeleccionado" >
-          <option [disabled]="true" [selected]="true" [value]="null">Nombre de la Liga</option>
+    <option *ngFor="let liga of ligasFiltradas" [ngValue]="liga" [disabled]="">
+      {{liga.nombre}}
+    </option>
+  </select>
+  <hr>
 
-          <option *ngFor="let liga of ligasFiltradas" [value]="liga">
-            {{liga.nombre}}
-          </option>
-      </select>
-      <hr>
+  <!-- SELECT DE NOMBRE DE EQUIPO-->
+  <div class="seleccion_liga">
+    <h3 class="subtitulo_seleccion_equipo">Seleccione el nombre del Equipo</h3>
+  </div>
 
+  <label for="Equipo">Nombre del Equipo</label>
 
+  <select id="Equipo" [(ngModel)]="equipoSeleccionado" [disabled]="elEquipo">
+    <option [disabled]="" [selected]="true">Nombre del Equipo</option>
+    <!-- <option [disabled]="true" [selected]="true" [value]="null">Nombre del Equipo</option> -->
+
+    <option *ngFor="let equipo of equiposFiltrados" [value]="equipo">
+      {{equipo}}
+    </option>
+  </select>
+  <hr>
+
+<h4 *ngIf="ligaSeleccionada" >{{equipoSeleccionado}}</h4>
 
 </div>

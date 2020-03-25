@@ -1,4 +1,4 @@
-export interface Equipos {
+export interface Equipo {
 
   nombre: string,
   logo?: string,
