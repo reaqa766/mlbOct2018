@@ -12,7 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { LigaTeamComponent } from './liga-team/liga-team.component';
 import { FantasySeleccionJugadoresComponent } from './fantasy-seleccion-jugadores/fantasy-seleccion-jugadores.component';
-// import { PaginationPipe } from 'src/pipes/pagination.pipe';
+import { SharedModuleModule } from '../shared-module/shared-module.module';
 
 @NgModule({
   imports: [
@@ -21,11 +21,17 @@ import { FantasySeleccionJugadoresComponent } from './fantasy-seleccion-jugadore
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    SharedModuleModule,
+
 
   ],
-  declarations: [LigaFantasySelectComponent, LigaTeamComponent, FantasySeleccionJugadoresComponent,],
+  declarations: [
+    LigaFantasySelectComponent,
+    LigaTeamComponent,
+    FantasySeleccionJugadoresComponent,
+    ],
   exports: [
-    LigaFantasySelectComponent
+    LigaFantasySelectComponent,
   ],
   providers: [PlayersService, PagerService, AngularFirestore, AuthService, AuthGuard, FlashMessagesService ],
 

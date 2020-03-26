@@ -45,10 +45,8 @@ export class BioActivesComponent implements OnInit {
 
   ngOnInit() {
     this.isLoading = true;
-    // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    console.log('Players', this.players);
-    // console.log('FilterPlayers', this.filterPlayers);
+    // console.log('Players', this.players);
 
 
 

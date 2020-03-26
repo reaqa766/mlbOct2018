@@ -35,7 +35,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { RegisterComponent } from './components/user/register/register.component';
 import { BioActivesComponent } from './components/players/bio-actives/bio-actives.component';
-import { PaginationPipe } from '../pipes/pagination.pipe';
+import { SharedModuleModule } from './shared-module/shared-module.module';
+// import { PaginationPipe } from '../pipes/pagination.pipe';
 import { PpalComponent } from './components/news/ppal/ppal.component';
 import { PActivesComponent } from './components/pitchers/p-actives/p-actives.component';
 import { PBioActivesComponent } from './components/pitchers/p-bio-actives/p-bio-actives.component';
@@ -120,7 +121,7 @@ import { FantasyModule } from './fantasy/fantasy.module';
     ContactUsComponent,
     RegisterComponent,
     GrdFilterPipe,
-    PaginationPipe,
+    // PaginationPipe,
     BioActivesComponent,
     PpalComponent,
     PActivesComponent,
@@ -195,6 +196,7 @@ import { FantasyModule } from './fantasy/fantasy.module';
     ReactiveFormsModule,
     AngularFireAuthModule,
     FantasyModule,
+    SharedModuleModule,
 
   ],
   providers: [PlayersService, PagerService, AngularFirestore, AuthService, AuthGuard, FlashMessagesService ],

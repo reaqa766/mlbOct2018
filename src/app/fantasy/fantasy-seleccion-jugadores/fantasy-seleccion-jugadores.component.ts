@@ -4,6 +4,19 @@ import { Liga } from '../Interfaces/Liga';
 import { Equipo } from '../Interfaces/Equipo';
 import { Jugador } from '../Interfaces/Jugador';
 
+
+
+// Para usar en el area de PLAYERS
+import { PlayersService } from '../../../services/players.service';
+import { take } from 'rxjs/operators';
+import { Players } from '../../../interfaces/players';
+
+import { PagerService } from '../../../services/index'
+
+
+// Para usar en el area de PLAYERS
+
+
 @Component({
   selector: 'app-fantasy-seleccion-jugadores',
   templateUrl: './fantasy-seleccion-jugadores.component.html',
@@ -19,8 +32,6 @@ export class FantasySeleccionJugadoresComponent implements OnInit {
   laLiga:boolean = true;
   elEquipo:boolean = true;
 
-
-
   tipoDeCampeonatoSeleccionado: boolean;
   ligaSeleccionada: Liga;
   tipoLigas: { display: string; esPaga: boolean; }[];
@@ -29,16 +40,40 @@ export class FantasySeleccionJugadoresComponent implements OnInit {
   ligasFiltradas: Liga[];
   equiposFiltrados: string [];
   equipoSeleccionado: Equipo;
-
   verSeleccion: string;
 
 
 
+// Para usar en el area de PLAYERS
+public players = [];
+groups: any;
+selectedGroup: any;
+elarray: any;
+datesN: number = 10;
+searchText: string;
+playerAuxList = [];
+counter: number;
+n: number;
+m: number;
+n1: number = 12;
+n10: number = 10;
+public allItems: any[];
 
-  constructor() { }
+// pager object
+pager: any = {};
+
+// paged items
+pagedItems: any[];
+
+isLoading: boolean;
+jsonPlayers: string;
+
+// Para usar en el area de PLAYERS
+
+
+  constructor(private playerService: PlayersService, private pagerService: PagerService) { }
 
   ngOnInit() {
-
     this.tipoLigas = [{ display: "Paga", esPaga:true },
     { display: "Gratis", esPaga:false }];
 
@@ -82,6 +117,15 @@ export class FantasySeleccionJugadoresComponent implements OnInit {
     esPaga: "false",
     logo:"",
     equipos:["Bravos de Araure", "Anthony BBC", "Gatos de Maracaibo", "La Elegancia", "The Power Family", "Team Peque", "Los Gutiz Baseball", "Chacalaca BBC", "Latinpower Team", "Los Gloriosos de Trujillo"] }];
+
+    // Para usar en el area de PLAYERS
+
+    this.isLoading = true;
+    this.getPlayersMap();
+    // console.log('Players', this.players);
+
+  // Para usar en el area de PLAYERS
+
   }
 
 
@@ -98,9 +142,6 @@ export class FantasySeleccionJugadoresComponent implements OnInit {
         return 0;
       }});
 
-      // console.log("Equipos",this.ligasFiltradas );
-      // console.log("tipoDeCampeonatoSeleccionado",this.tipoDeCampeonatoSeleccionado );
-
     }
 
     filtrarEquipos(event) {
@@ -110,6 +151,81 @@ export class FantasySeleccionJugadoresComponent implements OnInit {
 
 }
 
+  // Para usar en el area de PLAYERS
+
+  // Convertir   el Array de Observables a un Array de Objetos.
+  // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
+  getPlayersMap() {
+    let InfoObsPlayer = this.playerService.getAllPlayersActives();
+    let index = 0;
+    for (let obs of InfoObsPlayer) {
+      obs.pipe(take(1)).subscribe(res => {
+        this.players.push(res);
+        // console.log('players', this.players);
+        if ((InfoObsPlayer.length - 1) === index) {
+          this.players = this.players.map(player => {
+            const newPlayer: Players = {};
+            Object.assign(newPlayer, player.people[0]);
+            return newPlayer;
+          });
+
+         // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
+
+         this.players = this.players.filter(player =>
+          player.stats && player.stats.length !== 0 && player.primaryPosition.name !=='Pitcher' && player.stats[0].splits && player.stats[0].splits.length !== 0)
+
+            // se ordenan por nombre
+            .sort(({ lastName: a }, { lastName: b }) => {
+              if (a > b) {
+                return 1;
+              } else if (a < b) {
+                return -1;
+              } else if (a === b) {
+                return 0;
+              }
+            });
+            this.allItems = this.players;
+            this.setPage(1);
+          this.isLoading = false;
+        }
+        index++;
+      });
+    }
+    // set items to json response
+    // this.allItems = InfoObsPlayer;
+
+    // initialize to page 1
+    // this.setPage(1);
+
+    // console.log('players', this.players);
+    const playerstxt1 = this.players
+
+      }
+
+
+  onSearchChange() {
+    // console.log('search', this.searchText);
+
+    if (this.searchText) {
+      this.allItems = this.players.filter(player =>
+        player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
+        (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
+        (player.nickName && player.nickName.toLowerCase().includes(this.searchText)));
+        this.setPage(this.pager.currentPage);
+      } else {
+          this.allItems = this.players;
+          this.setPage(this.pager.currentPage);
+        }
+        return this.allItems;
+      }
+  setPage(page: number) {
+    // get pager object from service
+    this.pager = this.pagerService.getPager2(this.allItems.length, page);
+
+    // get current page of items
+    this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
+  }
+  // Para usar en el area de PLAYERS
 
 
 
