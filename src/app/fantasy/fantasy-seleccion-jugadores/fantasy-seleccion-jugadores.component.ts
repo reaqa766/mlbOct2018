@@ -41,6 +41,7 @@ export class FantasySeleccionJugadoresComponent implements OnInit {
   equiposFiltrados: string [];
   equipoSeleccionado: Equipo;
   verSeleccion: string;
+  mostrarJugadores: boolean = false;
 
 
 
@@ -149,6 +150,10 @@ jsonPlayers: string;
       this.equiposFiltrados= [];
       this.equiposFiltrados = this.ligaSeleccionada.equipos;
 
+}
+
+  seleccionarEquipo (event) {
+    this.mostrarJugadores = true;
 }
 
   // Para usar en el area de PLAYERS

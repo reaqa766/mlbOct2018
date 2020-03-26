@@ -371,5 +371,24 @@ font-weight: 400;
   }
   }
 
+  /* Grid para separar el area de Seleccion de Jugadores */
+
+  .container-jugadores {
+    background-color: rgb(175, 124, 124);
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .container-izquierdo-grid {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .container-derecho-grid {
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+  }
+
   /* Para usar en el area de PLAYERS */
 
