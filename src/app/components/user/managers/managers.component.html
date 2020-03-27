@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card_body">
+    <h3 class="text-center">MANAGERS</h3>
+    <table class="table table-sm table-dark table-striped table-bordered table-hover">
+      <thead class="table-head">
+      <th>Manager No.</th>
+      <th >Usuario Instagram</th>
+      <th >Nombre</th>
+      <th>Apellido</th>
+      <th>Equipo</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let manager of managerList; let i = index ">
+          <td class="table-head">{{i+1}}</td>
+          <td>{{manager.instagram}}</td>
+          <td>{{manager.name}}</td>
+          <td>{{manager.lastname}}</td>
+          <td>{{manager.team}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

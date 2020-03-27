@@ -11,4 +11,6 @@ export class Profile {
   city: string;
   team: string;
   isFantasy: boolean;
+  instagram?: string;
+  liga?: string;
 }

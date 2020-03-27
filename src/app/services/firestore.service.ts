@@ -1,0 +1,16 @@
+import { Injectable } from '@angular/core';
+import { AngularFirestore } from 'angularfire2/firestore';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class FirestoreService {
+
+  constructor(private firestore: AngularFirestore ) { }
+
+getManagersProfiles() {
+ return this.firestore.collection('users').snapshotChanges();
+}
+
+
+}

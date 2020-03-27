@@ -19,12 +19,13 @@ export class FirebaseService {
   }
 
   uploadToFirebase () {
-    console.log('pba2');
+      console.log('pba2');
 
   }
 
 getProfiles() {
   return this.profileList = this.firebase.list('profile');
+
 }
 
 insertProfile(profile: Profile) {
@@ -40,6 +41,27 @@ insertProfile(profile: Profile) {
     city: profile.city,
     team: profile.team
 });
+
+
+
+
+}
+
+updateProfile(profile: Profile) {
+  this.profileList.update(profile.$key, {
+    name: profile.name,
+    lastname: profile.lastname,
+    email: profile.email,
+    birthDate: profile.birthDate,
+    gender: profile.gender,
+    country: profile.country,
+    city: profile.city,
+    team: profile.team
+  });
+}
+
+deleteProfile($key: string) {
+  this.profileList.remove($key);
 }
 
 // updateProfile(profile: Profile) {
