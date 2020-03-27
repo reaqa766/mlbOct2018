@@ -63,13 +63,11 @@
 <!-- Para usar en el area de PLAYERS -->
 
 <div class="container-jugadores">
-<div *ngIf="mostrarJugadores" class="container-izquierdo-grid">
+<div *ngIf="!mostrarJugadoresBORRAR" class="container-izquierdo-grid">
 
   <div class="container-actives">
     <h1 class="bioActives-title">Selección de Jugadores</h1>
     <p class="title-position"> Fantasy 2020 </p>
-    <!-- <p class="title-position"> Temporada Regular 2019 </p> -->
-
 
     <!--LOADER -->
     <div *ngIf="!allItems">
@@ -95,8 +93,13 @@
               <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" appImgFallback
                   src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg"
                   alt="Jugador de Grandes Ligas"></a>
+                  <hr>
               <div class="card-body">
                 <h5 class="card-title">{{player.fullName}}</h5>
+                <h5 class="card-title1">{{player.primaryPosition.name}}</h5>
+                <h5 class="card-title1">{{player.birthCountry}}</h5>
+                <h5 class="card-title1">{{player.stats[0].splits[0].team.name}}</h5>
+                <button class="btn btn-secondary " type="submit">Agregar</button>
               </div>
             </div>
           </ng-container>
@@ -107,8 +110,13 @@
               <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top" appImgFallback
                   src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg"
                   alt="Jugador de Grandes Ligas"></a>
+                  <hr>
               <div class="card-body">
-                <h5 class="card-title">{{player.fullName}} </h5>
+                <h5 class="card-title">{{player.fullName}}</h5>
+                <h5 class="card-title1">{{player.primaryPosition.name}}</h5>
+                <h5 class="card-title1">{{player.birthCountry}}</h5>
+                <h5 class="card-title1">{{player.stats[0].splits[0].team.name}}</h5>
+                <button class="btn btn-secondary " type="submit">Agregar</button>
               </div>
             </div>
           </ng-container>
@@ -142,11 +150,11 @@
 
 <!-- Area de Jugadores Seleccionados -->
 
-<div *ngIf="mostrarJugadores" class="container-derecho-grid">
+<div *ngIf="!mostrarJugadoresBORRAR" class="container-derecho-grid">
 
   <div class="container-actives">
     <h1 class="bioActives-title">Jugadores Seleccionados</h1>
-    <p class="title-position"> {{equipoSeleccionado}} </p>
+    <p class="title-position2"> {{equipoSeleccionado}} </p>
     <!-- <p class="title-position"> Temporada Regular 2019 </p> -->
 
 
@@ -167,52 +175,60 @@
 
       <ng-container *ngIf="!(pager.allItems === 0)">
 
-        <div class="container-actives_cards ">
-          <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
+        <div class="container-actives-cards-selected ">
+          <!-- <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)"> -->
             <div class="card card1 img_picture_box" style="width: 95%;"
-              *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
+              *ngFor="let player of allItems">
               <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" appImgFallback
                   src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg"
                   alt="Jugador de Grandes Ligas"></a>
-              <div class="card-body">
+                  <hr>
+
+              <div class="card-body card-body-selected">
                 <h5 class="card-title">{{player.fullName}}</h5>
+                <h5 class="card-title">{{player.primaryPosition.name}}</h5>
+
               </div>
+              <!-- <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{player.primaryPosition.name}}</li>
+              </ul> -->
             </div>
-          </ng-container>
-          <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
+          <!-- </ng-container> -->
+          <!-- <ng-container *ngIf="pager.allItems-1 === pager.endIndex"> -->
             <div class="card card1"
-              *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*8)">
+              *ngFor="let player of allItems">
               <!-- <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*7)"> -->
               <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top" appImgFallback
                   src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg"
                   alt="Jugador de Grandes Ligas"></a>
-              <div class="card-body">
+                  <hr>
+              <div class="card-body card-body-selected">
                 <h5 class="card-title">{{player.fullName}} </h5>
               </div>
             </div>
-          </ng-container>
+          <!-- </ng-container> -->
         </div>
-        <div class="container paginator">
+        <!-- <div class="container paginator">
           <div class="text-center">
             <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
               <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-                <a (click)="setPage(1)" class="page-link paginator_text">First</a>
+                <a (click)="setPage2(1)" class="page-link paginator_text">First</a>
               </li>
               <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-                <a (click)="setPage(pager.currentPage - 1)" class="page-link paginator_text">Previous</a>
+                <a (click)="setPage2(pager.currentPage - 1)" class="page-link paginator_text">Previous</a>
               </li>
               <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
-                <a (click)="setPage(page)" class="page-link">{{page}}</a>
+                <a (click)="setPage2(page)" class="page-link">{{page}}</a>
               </li>
               <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-                <a (click)="setPage(pager.currentPage + 1)" class="page-link paginator_text">Next</a>
+                <a (click)="setPage2(pager.currentPage + 1)" class="page-link paginator_text">Next</a>
               </li>
               <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-                <a (click)="setPage(pager.totalPages)" class="page-link paginator_text">Last</a>
+                <a (click)="setPage2(pager.totalPages)" class="page-link paginator_text">Last</a>
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
       </ng-container>
     </div>
   </div>

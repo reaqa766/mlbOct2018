@@ -24,8 +24,10 @@ export class PlayersFantasyService {
 
   public venezuelanPlayersCodes;
   public dominicanPlayersCodes;
+  public venezuelandominicanPlayersCodes;
 
-  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(group=hitting,type=season,season=2019,gameType=S)'
+
+  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(group=hitting,type=season,season=2019,gameType=R)'
 
 
   constructor(private http: HttpClient, private afs: AngularFirestore) {
@@ -33,6 +35,7 @@ export class PlayersFantasyService {
     this.dominicanPlayersCollection = this.afs.collection('dominicans');
     this.venezuelanPlayersCodes = _venezuelanPlayersCodes;
     this.dominicanPlayersCodes = _dominicanPlayersCodes;
+    this.venezuelandominicanPlayersCodes = _dominicanPlayersCodes ;
   }
 
   // Searchs for Season Training Venezuelan and Dominican Players

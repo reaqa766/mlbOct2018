@@ -7,7 +7,7 @@ import { Jugador } from '../Interfaces/Jugador';
 
 
 // Para usar en el area de PLAYERS
-import { PlayersService } from '../../../services/players.service';
+import { PlayersFantasyService } from '../../services/players-fantasy.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../interfaces/players';
 
@@ -72,7 +72,7 @@ jsonPlayers: string;
 // Para usar en el area de PLAYERS
 
 
-  constructor(private playerService: PlayersService, private pagerService: PagerService) { }
+  constructor(private playerService: PlayersFantasyService, private pagerService: PagerService) { }
 
   ngOnInit() {
     this.tipoLigas = [{ display: "Paga", esPaga:true },
@@ -123,7 +123,7 @@ jsonPlayers: string;
 
     this.isLoading = true;
     this.getPlayersMap();
-    // console.log('Players', this.players);
+    console.log('Players', this.players);
 
   // Para usar en el area de PLAYERS
 
@@ -161,7 +161,7 @@ jsonPlayers: string;
   // Convertir   el Array de Observables a un Array de Objetos.
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
-    let InfoObsPlayer = this.playerService.getAllPlayersActives();
+    let InfoObsPlayer = this.playerService.getAllPlayersActives19();
     let index = 0;
     for (let obs of InfoObsPlayer) {
       obs.pipe(take(1)).subscribe(res => {
@@ -225,11 +225,21 @@ jsonPlayers: string;
       }
   setPage(page: number) {
     // get pager object from service
-    this.pager = this.pagerService.getPager2(this.allItems.length, page);
+    this.pager = this.pagerService.getPager3(this.allItems.length, page);
 
     // get current page of items
     this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
   }
+
+
+  setPage2(page: number) {
+    // get pager object from service
+    this.pager = this.pagerService.getPager4(this.allItems.length, page);
+
+    // get current page of items
+    this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
+  }
+
   // Para usar en el area de PLAYERS
 
 
