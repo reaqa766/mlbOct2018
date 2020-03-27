@@ -12,6 +12,7 @@ import { first } from 'rxjs/operators';
 import { async } from 'q';
 import _venezuelanPlayersCodes from '../../assets/JSONS/venezuelanPlayersIds'
 import _dominicanPlayersCodes from '../../assets/JSONS/dominicanPlayersIds';
+import _dominicansVenezuelansPlayersCodes from '../../assets/JSONS/DominicansVenezuelansIds';
 
 @Injectable({
   providedIn: 'root'
@@ -21,10 +22,11 @@ export class PlayersFantasyService {
   playerCode = 596115;
   venezuelanPlayersCollection: AngularFirestoreCollection<any>;
   dominicanPlayersCollection: AngularFirestoreCollection<any>;
+  venezuelandominicanPlayersCollection: AngularFirestoreCollection<any>;
 
   public venezuelanPlayersCodes;
   public dominicanPlayersCodes;
-  public venezuelandominicanPlayersCodes;
+  public dominicansVenezuelansPlayersCodes;
 
 
   private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(group=hitting,type=season,season=2019,gameType=R)'
@@ -35,7 +37,7 @@ export class PlayersFantasyService {
     this.dominicanPlayersCollection = this.afs.collection('dominicans');
     this.venezuelanPlayersCodes = _venezuelanPlayersCodes;
     this.dominicanPlayersCodes = _dominicanPlayersCodes;
-    this.venezuelandominicanPlayersCodes = _dominicanPlayersCodes ;
+    this.dominicansVenezuelansPlayersCodes = _dominicansVenezuelansPlayersCodes ;
   }
 
   // Searchs for Season Training Venezuelan and Dominican Players
@@ -87,7 +89,7 @@ export class PlayersFantasyService {
   // Para colocar todos los Json en un solo array. Genera Observables
   getAllPlayersActives19(): Observable<StatsDayliPlayer | undefined>[] {
     let dataAllPlayers: Observable<StatsDayliPlayer | undefined>[] = [];
-    for (let code of this.venezuelanPlayersCodes) {
+    for (let code of this.dominicansVenezuelansPlayersCodes) {
       this._url = this._url.replace(this.playerCode.toString(), code.toString());
       let dataP = this.getPlayeActive19();
       dataAllPlayers.push(dataP);

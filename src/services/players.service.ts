@@ -39,7 +39,8 @@ export class PlayersService {
 
     const getPlayerByCountry = async (country) => {
       // Fetch all players from current season
-      const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2020&gameType=S').toPromise();
+      const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2019&gameType=R').toPromise();
+      // const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2020&gameType=S').toPromise();
       const allPlayers = response.people;
 
       // Filter by country

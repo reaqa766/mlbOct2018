@@ -99,7 +99,7 @@
                 <h5 class="card-title1">{{player.primaryPosition.name}}</h5>
                 <h5 class="card-title1">{{player.birthCountry}}</h5>
                 <h5 class="card-title1">{{player.stats[0].splits[0].team.name}}</h5>
-                <button class="btn btn-secondary " type="submit">Agregar</button>
+                <button class="btn btn-secondary"  (click)="addPlayer(player.id)">Agregar</button>
               </div>
             </div>
           </ng-container>
@@ -116,7 +116,7 @@
                 <h5 class="card-title1">{{player.primaryPosition.name}}</h5>
                 <h5 class="card-title1">{{player.birthCountry}}</h5>
                 <h5 class="card-title1">{{player.stats[0].splits[0].team.name}}</h5>
-                <button class="btn btn-secondary " type="submit">Agregar</button>
+                <button class="btn btn-secondary"  (click)="addPlayer(player.id)">Agregar</button>
               </div>
             </div>
           </ng-container>
@@ -178,7 +178,7 @@
         <div class="container-actives-cards-selected ">
           <!-- <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)"> -->
             <div class="card card1 img_picture_box" style="width: 95%;"
-              *ngFor="let player of allItems">
+              *ngFor="let player of selectedPlayers">
               <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" appImgFallback
                   src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg"
                   alt="Jugador de Grandes Ligas"></a>
@@ -195,9 +195,8 @@
             </div>
           <!-- </ng-container> -->
           <!-- <ng-container *ngIf="pager.allItems-1 === pager.endIndex"> -->
-            <div class="card card1"
-              *ngFor="let player of allItems">
-              <!-- <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*7)"> -->
+            <!-- <div class="card card1"
+              *ngFor="let player of selectedPlayers">
               <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top" appImgFallback
                   src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg"
                   alt="Jugador de Grandes Ligas"></a>
@@ -205,7 +204,7 @@
               <div class="card-body card-body-selected">
                 <h5 class="card-title">{{player.fullName}} </h5>
               </div>
-            </div>
+            </div> -->
           <!-- </ng-container> -->
         </div>
         <!-- <div class="container paginator">
