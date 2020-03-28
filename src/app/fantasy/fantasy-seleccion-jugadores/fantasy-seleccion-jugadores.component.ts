@@ -39,7 +39,7 @@ export class FantasySeleccionJugadoresComponent implements OnInit {
   nombreLigaGratis: { nombreGratis: string; }[];
   ligasFiltradas: Liga[];
   equiposFiltrados: string[];
-  equipoSeleccionado: Equipo;
+  equipoSeleccionado: string;
   verSeleccion: string;
   mostrarJugadores: boolean = false;
 
@@ -84,62 +84,92 @@ export class FantasySeleccionJugadoresComponent implements OnInit {
       nombre: "Venedompro Oeste",
       esPaga: "true",
       logo: "",
-      equipos: ["Los Estrada", "Paseo City", "Mi Familia SBC", "Los Pájaros Rojos", "Halp9779", "Pesqueros de Sucre", "Los Triunfadores", "The Black Bull"]
-    },
+      equipos: [{nombre: "Los Estrada", jugadores: [], managerId:"CREAR" },  {nombre: "Paseo City", jugadores: [], managerId:"CREAR" },
+          {nombre: "Mi Familia SBC",jugadores: [], managerId:"CREAR" }, {nombre: "Los Pájaros Rojos",jugadores: [], managerId:"CREAR" },
+          {nombre: "Halp9779",jugadores: [], managerId:"CREAR" }, {nombre: "Pesqueros de Sucre",jugadores: [], managerId:"CREAR" },
+          {nombre: "Los Triunfadores",jugadores: [], managerId:"CREAR" }, {nombre: "The Black Bull",jugadores: [], managerId:"CREAR" }]},
     {
       nombre: "Venedompro Este",
       esPaga: "true",
       logo: "",
-      equipos: ["Los Mutantes", "Ronceros de Maracay", "Los Monstrones", "Padres", "Diablos Rojos", "Atléticos Del Jarillo", "The Golden", "Niño Team", "The Nuñez Team", "Bombarderos del Tuy", "Tiburones de Miami"]
-    },
+      equipos: [{nombre: "Los Mutantes", jugadores: [], managerId:"CREAR"}, {nombre:  "Ronceros de Maracay", jugadores: [], managerId:"CREAR"},
+        {nombre:  "Los Monstrones", jugadores: [], managerId:"CREAR"}, {nombre:  "Padres", jugadores: [], managerId:"CREAR"},
+        {nombre: "Diablos Rojos", jugadores: [], managerId:"CREAR"},  {nombre: "Atléticos Del Jarillo", jugadores: [], managerId:"CREAR"},
+        {nombre: "The Golden", jugadores: [], managerId:"CREAR"},  {nombre: "Niño Team", jugadores: [], managerId:"CREAR"},
+        {nombre: "The Nuñez Team", jugadores: [], managerId:"CREAR"},  {nombre: "Bombarderos del Tuy", jugadores: [], managerId:"CREAR"},
+        {nombre: "Tiburones de Miami", jugadores: [], managerId:"CREAR"}]},
     {
       nombre: " Venedompro Sur",
       esPaga: "true",
       logo: "",
-      equipos: ["Team Reales Primos", "Isafit Team", "Team Madrid", "Perros Locos", "Sin Nombre", "San Mateo MLB", "PanaBrothers", "Los Orientales del Pilar"]
-    },
+      equipos: [{nombre: "Team Reales Primos",jugadores: [], managerId:"CREAR"}, {nombre:  "Isafit Team",  jugadores: [], managerId:"CREAR"},
+        {nombre:  "Team Madrid", jugadores: [], managerId:"CREAR"},  {nombre:  "Perros Locos", jugadores: [], managerId:"CREAR"},
+        {nombre:  "Sin Nombre", jugadores: [], managerId:"CREAR"},  {nombre:  "San Mateo MLB", jugadores: [], managerId:"CREAR"},
+        {nombre:  "PanaBrothers", jugadores: [], managerId:"CREAR"},  {nombre:  "Los Orientales del Pilar",  jugadores: [], managerId:"CREAR"}]},
     {
       nombre: "VDVzla",
       esPaga: "false",
       logo: "",
-      equipos: ["Los Triunfadores", "Marineros de la Sabana", "Cats Miranda", "Azulejos", "Pikacho Bol", "The Block", "Los Juanchos", "Vikings of the Guaira", "Chapines"]
-    },
+      equipos: [ {nombre: "Los Triunfadores", jugadores: [], managerId:"CREAR"},   {nombre: "Marineros de la Sabana", jugadores: [], managerId:"CREAR"},
+          {nombre: "Cats Miranda", jugadores: [], managerId:"CREAR"},   {nombre: "Azulejos", jugadores: [], managerId:"CREAR"},
+          {nombre: "Pikacho Bol", jugadores: [], managerId:"CREAR"},   {nombre: "The Block", jugadores: [], managerId:"CREAR"} ,
+          {nombre: "Los Juanchos", jugadores: [], managerId:"CREAR"},   {nombre: "Vikings of the Guaira", jugadores: [], managerId:"CREAR"},
+          {nombre: "Chapines", jugadores: [], managerId:"CREAR"}]},
     {
       nombre: " VD",
       esPaga: "false",
       logo: "",
-      equipos: ["Guerreros del Centro B.B.C.", "The Chuchos", "Arepa Power", "Centinelas", "Ticodel", "Los Camellos de Falcón", "Estosellamabeisbol", "Aguizuela BBC", "Gringo23", "Team G. R. A."]
-    },
+      equipos: [ {nombre: "Guerreros del Centro B.B.C.", jugadores: [], managerId:"CREAR"}, {nombre: "The Chuchos", jugadores: [], managerId:"CREAR"},
+          {nombre: "Arepa Power", jugadores: [], managerId:"CREAR"}, {nombre: "Centinelas", jugadores: [], managerId:"CREAR"},
+          {nombre: "Ticodel", jugadores: [], managerId:"CREAR"}, {nombre: "Los Camellos de Falcón", jugadores: [], managerId:"CREAR"},
+          {nombre: "Estosellamabeisbol", jugadores: [], managerId:"CREAR"}, {nombre: "Aguizuela BBC", jugadores: [], managerId:"CREAR"},
+          {nombre: "Gringo23", jugadores: [], managerId:"CREAR"}, {nombre: "Team G. R. A.", jugadores: [], managerId:"CREAR"}]},
     {
       nombre: "VDEste",
       esPaga: "false",
       logo: "",
-      equipos: ["Los Monstrones", "Panteras BBC", "Indios de Barcelona", "Monster", "Brohter' Patriots", "Vengadores MLB", "Los Gigantes", "Los Chiclosos", "Noctambulos", "Los Dragones"]
-    },
+      equipos: [{nombre: "Los Monstrones",  jugadores: [], managerId:"CREAR"}, {nombre: "Panteras BBC",  jugadores: [], managerId:"CREAR"},
+          {nombre:"Indios de Barcelona",  jugadores: [], managerId:"CREAR"}, {nombre: "Monster",  jugadores: [], managerId:"CREAR"},
+          {nombre:"Brohter' Patriots",  jugadores: [], managerId:"CREAR"}, {nombre: "Vengadores MLB",  jugadores: [], managerId:"CREAR"},
+          {nombre:"Los Gigantes",  jugadores: [], managerId:"CREAR"}, {nombre: "Los Chiclosos",  jugadores: [], managerId:"CREAR"},
+          {nombre:"Noctambulos",  jugadores: [], managerId:"CREAR"}, {nombre: "Los Dragones",  jugadores: [], managerId:"CREAR"}]},
     {
       nombre: "VDOeste",
       esPaga: "false",
       logo: "",
-      equipos: ["Niño Team", "Los Roba Señas de Cooperstpwn", "Hardwell Team", "Chapi Team", "Moneyball Inc.", "Perfume de Feyalegria", "The Walkers", "Navegantes del Este", "Los Bad Boys", "Los Macrofagos"]
-    },
+      equipos: [{nombre: "Niño Team", jugadores: [], managerId:"CREAR"}, {nombre: "Los Roba Señas de Cooperstpwn", jugadores: [], managerId:"CREAR"},
+          {nombre:"Hardwell Team", jugadores: [], managerId:"CREAR"}, {nombre: "Chapi Team", jugadores: [], managerId:"CREAR"},
+          {nombre:"Moneyball Inc.", jugadores: [], managerId:"CREAR"}, {nombre: "Perfume de Feyalegria", jugadores: [], managerId:"CREAR"},
+          {nombre:"The Walkers", jugadores: [], managerId:"CREAR"}, {nombre: "Navegantes del Este", jugadores: [], managerId:"CREAR"},
+          {nombre:"Los Bad Boys", jugadores: [], managerId:"CREAR"}, {nombre: "Los Macrofagos", jugadores: [], managerId:"CREAR"}]},
     {
       nombre: "VDNorte",
       esPaga: "false",
       logo: "",
-      equipos: ["Alberto Monsalve Team", "Tucacas BBC", "Broncos", "Los Chonchis", "Leones del Valle", "Machique's Power", "OscarTeams", "Paredes Team", "Isotopos Team"]
-    },
+      equipos: [{nombre: "Alberto Monsalve Team", jugadores: [], managerId:"CREAR"}, {nombre: "Tucacas BBC", jugadores: [], managerId:"CREAR"},
+          {nombre:"Broncos", jugadores: [], managerId:"CREAR"}, {nombre: "Los Chonchis", jugadores: [], managerId:"CREAR"},
+          {nombre: "Leones del Valle", jugadores: [], managerId:"CREAR"}, {nombre: "Machique's Power" , jugadores: [], managerId:"CREAR"},
+          {nombre: "OscarTeams", jugadores: [], managerId:"CREAR"}, {nombre: "Paredes Team", jugadores: [], managerId:"CREAR"},
+          {nombre: "Isotopos Team", jugadores: [], managerId:"CREAR"}]},
     {
       nombre: " VDSur",
       esPaga: "false",
       logo: "",
-      equipos: ["El Cojedeño", "Delgados BBC", "Blue Sox", "D.Prada", "MLB en Santiago", "Pumas Vzla", "Delfines de Margarita", "Los Osos de Carabobo", "El Tarron Sport", "The Nuñez Team"]
-    },
+      equipos: [{nombre:"El Cojedeño",jugadores: [], managerId:"CREAR"}, {nombre: "Delgados BBC",jugadores: [], managerId:"CREAR"},
+          {nombre: "Blue Sox",jugadores: [], managerId:"CREAR"}, {nombre: "D.Prada",jugadores: [], managerId:"CREAR"},
+          {nombre: "MLB en Santiago",jugadores: [], managerId:"CREAR"}, {nombre: "Pumas Vzla",jugadores: [], managerId:"CREAR"},
+          {nombre: "Delfines de Margarita",jugadores: [], managerId:"CREAR"}, {nombre: "Los Osos de Carabobo",jugadores: [], managerId:"CREAR"},
+          {nombre: "El Tarron Sport", jugadores: [], managerId:"CREAR"}, {nombre: "The Nuñez Team", jugadores: [], managerId:"CREAR"}]},
     {
       nombre: "VDCentro",
       esPaga: "false",
       logo: "",
-      equipos: ["Bravos de Araure", "Anthony BBC", "Gatos de Maracaibo", "La Elegancia", "The Power Family", "Team Peque", "Los Gutiz Baseball", "Chacalaca BBC", "Latinpower Team", "Los Gloriosos de Trujillo"]
-    }];
+      equipos: [{nombre:"Bravos de Araure", jugadores: [], managerId:"CREAR"},  {nombre:"Anthony BBC", jugadores: [], managerId:"CREAR"},
+          {nombre:"Gatos de Maracaibo", jugadores: [], managerId:"CREAR"},  {nombre:"La Elegancia", jugadores: [], managerId:"CREAR"},
+          {nombre:"The Power Family", jugadores: [], managerId:"CREAR"},  {nombre:"Team Peque", jugadores: [], managerId:"CREAR"},
+          {nombre:"Los Gutiz Baseball", jugadores: [], managerId:"CREAR"},  {nombre:"Chacalaca BBC", jugadores: [], managerId:"CREAR"},
+          {nombre:"Latinpower Team", jugadores: [], managerId:"CREAR"},  {nombre:"Los Gloriosos de Trujillo", jugadores: [], managerId:"CREAR"}] }
+    ];
 
     // Para usar en el area de PLAYERS
 
@@ -171,12 +201,16 @@ export class FantasySeleccionJugadoresComponent implements OnInit {
   filtrarEquipos(event) {
     this.elEquipo = false;
     this.equiposFiltrados = [];
-    this.equiposFiltrados = this.ligaSeleccionada.equipos;
+    // this.equiposFiltrados = this.ligaSeleccionada.equipos;
+    console.log("ligaSeleccionada",this.ligaSeleccionada );
+
 
   }
 
-  seleccionarEquipo(event) {
+  seleccionarEquipo(equipoSeleccionado) {
     this.mostrarJugadores = true;
+    console.log(equipoSeleccionado);
+
   }
 
   // Para usar en el area de PLAYERS

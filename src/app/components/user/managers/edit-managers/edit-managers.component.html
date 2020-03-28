@@ -1,34 +1,4 @@
-<div *ngIf="ManagersList"  class="card">
-  <div class="card_body">
-    <h3 class="text-center">MANAGERS</h3>
-    <table class="table table-sm table-dark table-striped table-bordered table-hover">
-      <thead class="table-head">
-      <th>Manager No.</th>
-      <th >Usuario Instagram (@)</th>
-      <th >Nombre</th>
-      <th>Apellido</th>
-      <th>Equipo</th>
-      <th>Liga</th>
-      <th>Borrar</th>
-    </thead>
-    <tbody>
-        <tr *ngFor="let manager of managerList; let i = index ">
-          <td class="table-head">{{i+1}}</td>
-          <td>{{manager.instagram}}</td>
-          <td>{{manager.name}}</td>
-          <td>{{manager.lastname}}</td>
-          <td>{{manager.team}}</td>
-          <td></td>
-          <td><a class="btn text-danger"> <i class="fa fa-trash"></i> </a></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-
-<!-- Area de Edicion de Managers-->
-<!-- <header *ngIf="!ManagersList" >
+<header>
     <div class="title">
       <h1 class="title_h1" >EDICION DE DATOS DE LOS MANAGERS</h1>
     </div>
@@ -36,6 +6,9 @@
   <div class="title_page">
     <p>Revise los datos</p>
   </div>
+  <!-- <div class="row">
+    <div class="col-ms-6 col-md-4 col-lg-6   mx-auto"> -->
+  <div class="card" *ngIf="!isLoading">
     <div class="card-body">
       <form [formGroup]='profileForm' (ngSubmit)="onSubmit(profileForm)">
         <div class="form-group">
@@ -95,6 +68,7 @@
                 Colocar su Ciudad</div>
             </div>
             <div class="form-group">
+              <!-- <p class="questions">Nombre de su Equipo</p> -->
               <input type="text" formControlName="team" class="form-control " placeholder="Equipo">
               <div class="alert" *ngIf="!profileForm.controls['team'].valid && profileForm.controls['team'].touched">
                 Indique su Equipo</div>
@@ -121,9 +95,7 @@
         </div>
 
       </form>
-    </div> -->
-
-
-<!-- Area de Edicion de Managers-->
-
-
+    </div>
+  </div>
+  <!-- </div>
+  </div> -->

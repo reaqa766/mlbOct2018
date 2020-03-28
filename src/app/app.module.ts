@@ -104,6 +104,7 @@ import { PitchersVzlaFtsyComponent } from './components/temp2019/pitchers2019/pi
 import { PitchersFtsyComponent } from './components/temp2019/pitchers2019/pitchers-ftsy/pitchers-ftsy.component'
 import { FantasyModule } from './fantasy/fantasy.module';
 import { ManagersComponent } from './components/user/managers/managers.component';
+import { EditManagersComponent } from './components/user/managers/edit-managers/edit-managers.component';
 
 @NgModule({
   declarations: [
@@ -179,6 +180,7 @@ import { ManagersComponent } from './components/user/managers/managers.component
     PitchersFtsyComponent,
     PitchersVzlaFtsyComponent,
     ManagersComponent,
+    EditManagersComponent,
 
   ],
   imports: [

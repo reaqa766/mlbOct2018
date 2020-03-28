@@ -1,7 +1,8 @@
 import { DatePipe } from "@angular/common";
 
 export class Profile {
-  $key: string;
+  $key?:string;
+  id: string;
   name: string;
   lastname: string;
   email: string;

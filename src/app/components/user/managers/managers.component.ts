@@ -5,6 +5,10 @@ import { PlatformReflectionCapabilities } from '@angular/core/src/reflection/pla
 
 import  { Profile } from '../../../models/profile'
 import { FirestoreService } from 'src/app/services/firestore.service';
+import { AngularFirestore } from '@angular/fire/firestore';
+
+import { ToastrService } from 'ngx-toastr';
+import { UserService } from 'src/services/user.service';
 
 @Component({
   selector: 'app-managers',
@@ -15,31 +19,36 @@ export class ManagersComponent implements OnInit {
 
   // managerList: Profile[];
   // constructor(private fireBaseService: FirebaseService ) { }
-
+  ManagersList: boolean ;
   managerList: Profile[];
-  constructor(private firestoreService: FirestoreService ) { }
+  constructor(private userService:UserService,
+    private firestore: AngularFirestore,
+    private toastr:ToastrService ) { }
 
   ngOnInit() {
-
-    this.firestoreService.getManagersProfiles().subscribe(element => {
+    this.ManagersList = true;
+    this.userService.getManagersProfiles().subscribe(element => {
       this.managerList = element.map(item => {
         return {
           id: item.payload.doc.id,
           ...item.payload.doc.data()
-        } as Profile;
-    })
+        };
+      })
+      console.log(this.managerList);
     });
 
-    // this.fireBaseService.getProfiles()
-    // .snapshotChanges()
-    // .subscribe(user => {
-    //   this.managerList= [];
-    //   user.forEach(element => {
-    //     let m = element.payload.toJSON();
-    //     m["$key"] = element.key;
-    //     this.managerList.push(m as Profile);
-    //   });
-    // });
-  }
+   }
+  //  onEdit(manager: Profile) {
+  //   //  const updatedManager = {...formData}
+  //    this.userService.updateProfile(manager.id,updatedManager)
+  //   // this.ManagersList = false;
 
+  // }
+
+  onDelete(id: string) {
+    if (confirm("Are you sure to delete this record?")) {
+      this.firestore.doc('users/' + id).delete();
+      this.toastr.warning('Deleted successfully','MANAGER. Register');
+    }
+  }
 }

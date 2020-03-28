@@ -39,4 +39,10 @@ export class UserService {
   createProfile(id:string,profile: Profile) {
     return this.userCollection.doc(id).set(profile);
   }
+  updateProfile(id:string,profile: Profile) {
+    return this.userCollection.doc(id).update(profile);
+  }
+  getManagersProfiles() {
+    return this.userCollection.snapshotChanges();
+   }
 }

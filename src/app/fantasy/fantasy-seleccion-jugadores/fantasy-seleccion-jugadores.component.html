@@ -20,6 +20,8 @@
   </select>
   <hr>
 
+  <ng-container *ngIf="tipoDeCampeonatoSeleccionado">
+
   <!-- SELECT DE NOMBRE DE LIGA-->
   <div class="seleccion_liga">
     <h3 class="subtitulo_seleccion_liga">Seleccione el nombre de la Liga</h3>
@@ -27,7 +29,7 @@
 
   <label for="Liga">Nombre de la Liga</label>
 
-  <select id="Liga" [(ngModel)]="ligaSeleccionada" (ngModelChange)="filtrarEquipos($event)" [disabled]="laLiga">
+  <select id="Liga" [(ngModel)]="ligaSeleccionada" (ngModelChange)="filtrarEquipos($event)" >
     <option [disabled]="" [selected]="true">Nombre de la Liga</option>
     <!-- <option [disabled]="true" [selected]="true" [value]="null">Nombre de la Liga</option> -->
 
@@ -36,23 +38,27 @@
     </option>
   </select>
   <hr>
+</ng-container>
+
 
   <!-- SELECT DE NOMBRE DE EQUIPO-->
-  <div class="seleccion_liga">
-    <h3 class="subtitulo_seleccion_equipo">Seleccione el nombre del Equipo</h3>
-  </div>
+  <ng-container *ngIf="ligaSeleccionada">
+    <div class="seleccion_liga">
+      <h3 class="subtitulo_seleccion_equipo">Seleccione el nombre del Equipo</h3>
+    </div>
 
-  <label for="Equipo">Nombre del Equipo</label>
+    <label for="Equipo">Nombre del Equipo</label>
 
-  <select id="Equipo" [(ngModel)]="equipoSeleccionado" (ngModelChange)="seleccionarEquipo($event)" [disabled]="elEquipo">
-    <option [disabled]="" [selected]="true">Nombre del Equipo</option>
-    <!-- <option [disabled]="true" [selected]="true" [value]="null">Nombre del Equipo</option> -->
+    <select id="Equipo" [(ngModel)]="equipoSeleccionado" (ngModelChange)="seleccionarEquipo($event)" >
+      <option [disabled]="" [selected]="true">Nombre del Equipo</option>
+      <!-- <option [disabled]="true" [selected]="true" [value]="null">Nombre del Equipo</option> -->
 
-    <option *ngFor="let equipo of equiposFiltrados" [value]="equipo">
-      {{equipo}}
-    </option>
-  </select>
-  <hr>
+      <option *ngFor="let equipo of ligaSeleccionada.equipos" [value]="equipo">
+        {{equipo.nombre}}
+      </option>
+    </select>
+    <hr>
+  </ng-container>
 
   <h4 *ngIf="ligaSeleccionada">{{equipoSeleccionado}}</h4>
 
