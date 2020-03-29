@@ -22,23 +22,23 @@
 
   <ng-container *ngIf="tipoDeCampeonatoSeleccionado">
 
-  <!-- SELECT DE NOMBRE DE LIGA-->
-  <div class="seleccion_liga">
-    <h3 class="subtitulo_seleccion_liga">Seleccione el nombre de la Liga</h3>
-  </div>
+    <!-- SELECT DE NOMBRE DE LIGA-->
+    <div class="seleccion_liga">
+      <h3 class="subtitulo_seleccion_liga">Seleccione el nombre de la Liga</h3>
+    </div>
 
-  <label for="Liga">Nombre de la Liga</label>
+    <label for="Liga">Nombre de la Liga</label>
 
-  <select id="Liga" [(ngModel)]="ligaSeleccionada" (ngModelChange)="filtrarEquipos($event)" >
-    <option [disabled]="" [selected]="true">Nombre de la Liga</option>
-    <!-- <option [disabled]="true" [selected]="true" [value]="null">Nombre de la Liga</option> -->
+    <select id="Liga" [(ngModel)]="ligaSeleccionada" (ngModelChange)="filtrarEquipos($event)">
+      <option [disabled]="" [selected]="true">Nombre de la Liga</option>
+      <!-- <option [disabled]="true" [selected]="true" [value]="null">Nombre de la Liga</option> -->
 
-    <option *ngFor="let liga of ligasFiltradas" [ngValue]="liga" [disabled]="">
-      {{liga.nombre}}
-    </option>
-  </select>
-  <hr>
-</ng-container>
+      <option *ngFor="let liga of ligasFiltradas" [ngValue]="liga" [disabled]="">
+        {{liga.nombre}}
+      </option>
+    </select>
+    <hr>
+  </ng-container>
 
 
   <!-- SELECT DE NOMBRE DE EQUIPO-->
@@ -49,7 +49,7 @@
 
     <label for="Equipo">Nombre del Equipo</label>
 
-    <select id="Equipo" [(ngModel)]="equipoSeleccionado" (ngModelChange)="seleccionarEquipo($event)" >
+    <select id="Equipo" [(ngModel)]="equipoSeleccionado" (ngModelChange)="seleccionarEquipo($event)">
       <option [disabled]="" [selected]="true">Nombre del Equipo</option>
       <!-- <option [disabled]="true" [selected]="true" [value]="null">Nombre del Equipo</option> -->
 
@@ -69,178 +69,141 @@
 <!-- Para usar en el area de PLAYERS -->
 
 <div class="container-jugadores">
-<div *ngIf="!mostrarJugadoresBORRAR" class="container-izquierdo-grid">
+  <div *ngIf="mostrarJugadores" class="container-izquierdo-grid">
 
-  <div class="container-actives">
-    <h1 class="bioActives-title">Selección de Jugadores</h1>
-    <p class="title-position"> Fantasy 2020 </p>
+    <div class="container-actives">
+      <h1 class="bioActives-title">Selección de Jugadores</h1>
+      <p class="title-position"> Fantasy 2020 </p>
 
-    <!--LOADER -->
-    <div *ngIf="!allItems">
-      <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
-      <p class="spiner_load">CARGANDO</p>
-    </div>
-
-    <div *ngIf="allItems">
-      <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..."
-        class="advancedSearchTextbox">
-      <div *ngIf="!allItems[0]" class="error_search d-flex justify-content-center">
-        <h4 class="error_message"> <strong>'{{searchText}}'</strong> El Jugador no existe. Solo busque por nombre,
-          sobrenombre y
-          equipo</h4>
+      <!--LOADER -->
+      <div *ngIf="!allItems">
+        <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
+        <p class="spiner_load">CARGANDO</p>
       </div>
 
-      <ng-container *ngIf="!(pager.allItems === 0)">
+      <div *ngIf="allItems">
+        <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..."
+          class="advancedSearchTextbox">
+        <div *ngIf="!allItems[0]" class="error_search d-flex justify-content-center">
+          <h4 class="error_message"> <strong>'{{searchText}}'</strong> El Jugador no existe. Solo busque por nombre,
+            sobrenombre y
+            equipo</h4>
+        </div>
 
-        <div class="container-actives_cards ">
-          <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
-            <div class="card card1 img_picture_box" style="width: 95%;"
-              *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
-              <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" appImgFallback
-                  src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg"
-                  alt="Jugador de Grandes Ligas"></a>
-                  <hr>
-              <div class="card-body">
-                <h5 class="card-title">{{player.fullName}}</h5>
-                <h5 class="card-title1">{{player.primaryPosition.name}}</h5>
-                <h5 class="card-title1">{{player.birthCountry}}</h5>
-                <h5 class="card-title1">{{player.stats[0].splits[0].team.name}}</h5>
-                <button class="btn btn-secondary"  (click)="addPlayer(player.id)">Agregar</button>
+        <ng-container *ngIf="!(pager.allItems === 0)">
+
+          <div class="container-actives_cards ">
+            <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
+              <div class="card card1 img_picture_box" style="width: 95%;"
+                *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
+                <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" appImgFallback
+                    src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg"
+                    alt="Jugador de Grandes Ligas"></a>
+                <hr>
+                <div class="card-body">
+                  <h5 class="card-title">{{player.fullName}}</h5>
+                  <h5 class="card-title1">{{player.primaryPosition.name}}</h5>
+                  <h5 class="card-title1">{{player.birthCountry}}</h5>
+                  <h5 class="card-title1">{{player.stats[0].splits[0].team.name}}</h5>
+                  <button class="btn btn-secondary" (click)="addPlayer(player.id)">Agregar</button>
+                </div>
               </div>
-            </div>
-          </ng-container>
-          <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
-            <div class="card card1"
-              *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*8)">
-              <!-- <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*7)"> -->
-              <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top" appImgFallback
-                  src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg"
-                  alt="Jugador de Grandes Ligas"></a>
-                  <hr>
-              <div class="card-body">
-                <h5 class="card-title">{{player.fullName}}</h5>
-                <h5 class="card-title1">{{player.primaryPosition.name}}</h5>
-                <h5 class="card-title1">{{player.birthCountry}}</h5>
-                <h5 class="card-title1">{{player.stats[0].splits[0].team.name}}</h5>
-                <button class="btn btn-secondary"  (click)="addPlayer(player.id)">Agregar</button>
+            </ng-container>
+            <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
+              <div class="card card1"
+                *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*8)">
+                <!-- <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*7)"> -->
+                <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top" appImgFallback
+                    src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg"
+                    alt="Jugador de Grandes Ligas"></a>
+                <hr>
+                <div class="card-body">
+                  <h5 class="card-title">{{player.fullName}}</h5>
+                  <h5 class="card-title1">{{player.primaryPosition.name}}</h5>
+                  <h5 class="card-title1">{{player.birthCountry}}</h5>
+                  <h5 class="card-title1">{{player.stats[0].splits[0].team.name}}</h5>
+                  <button class="btn btn-secondary" (click)="addPlayer(player.id)">Agregar</button>
+                </div>
               </div>
-            </div>
-          </ng-container>
-        </div>
-        <div class="container paginator">
-          <div class="text-center">
-            <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
-              <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-                <a (click)="setPage(1)" class="page-link paginator_text">First</a>
-              </li>
-              <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-                <a (click)="setPage(pager.currentPage - 1)" class="page-link paginator_text">Previous</a>
-              </li>
-              <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
-                <a (click)="setPage(page)" class="page-link">{{page}}</a>
-              </li>
-              <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-                <a (click)="setPage(pager.currentPage + 1)" class="page-link paginator_text">Next</a>
-              </li>
-              <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-                <a (click)="setPage(pager.totalPages)" class="page-link paginator_text">Last</a>
-              </li>
-            </ul>
+            </ng-container>
           </div>
-        </div>
-      </ng-container>
+          <div class="container paginator">
+            <div class="text-center">
+              <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
+                <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+                  <a (click)="setPage(1)" class="page-link paginator_text">First</a>
+                </li>
+                <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+                  <a (click)="setPage(pager.currentPage - 1)" class="page-link paginator_text">Previous</a>
+                </li>
+                <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
+                  <a (click)="setPage(page)" class="page-link">{{page}}</a>
+                </li>
+                <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+                  <a (click)="setPage(pager.currentPage + 1)" class="page-link paginator_text">Next</a>
+                </li>
+                <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+                  <a (click)="setPage(pager.totalPages)" class="page-link paginator_text">Last</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </ng-container>
+      </div>
     </div>
   </div>
-</div>
 
 
-<!-- Area de Jugadores Seleccionados -->
+  <!-- Area de Jugadores Seleccionados -->
 
-<div *ngIf="!mostrarJugadoresBORRAR" class="container-derecho-grid">
+  <div *ngIf="mostrarJugadores" class="container-derecho-grid">
 
-  <div class="container-actives">
-    <h1 class="bioActives-title">Jugadores Seleccionados</h1>
-    <p class="title-position2"> {{equipoSeleccionado}} </p>
-    <!-- <p class="title-position"> Temporada Regular 2019 </p> -->
+    <div class="container-actives">
+      <h1 class="bioActives-title">Jugadores Seleccionados</h1>
+      <p class="title-position2"> {{equipoSeleccionado}} </p>
 
 
-    <!--LOADER -->
-    <div *ngIf="!allItems">
-      <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
-      <p class="spiner_load">CARGANDO</p>
-    </div>
-
-    <div *ngIf="allItems">
-      <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..."
-        class="advancedSearchTextbox">
-      <div *ngIf="!allItems[0]" class="error_search d-flex justify-content-center">
-        <h4 class="error_message"> <strong>'{{searchText}}'</strong> El Jugador no existe. Solo busque por nombre,
-          sobrenombre y
-          equipo</h4>
+      <!--LOADER -->
+      <div *ngIf="!allItems">
+        <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
+        <p class="spiner_load">CARGANDO</p>
       </div>
 
-      <ng-container *ngIf="!(pager.allItems === 0)">
+      <div *ngIf="allItems">
+        <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..."
+          class="advancedSearchTextbox">
+        <div *ngIf="!allItems[0]" class="error_search d-flex justify-content-center">
+          <h4 class="error_message"> <strong>'{{searchText}}'</strong> El Jugador no existe. Solo busque por nombre,
+            sobrenombre y
+            equipo</h4>
+        </div>
 
-        <div class="container-actives-cards-selected ">
-          <!-- <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)"> -->
+        <ng-container *ngIf="!(pager.allItems === 0)">
+
+          <div class="container-actives-cards-selected ">
             <div class="card card1 img_picture_box" style="width: 95%;"
-              *ngFor="let player of selectedPlayers">
+              *ngFor="let player of selectedPlayers, let i = index">
               <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" appImgFallback
                   src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg"
                   alt="Jugador de Grandes Ligas"></a>
-                  <hr>
+              <hr>
 
               <div class="card-body card-body-selected">
                 <h5 class="card-title">{{player.fullName}}</h5>
                 <h5 class="card-title">{{player.primaryPosition.name}}</h5>
+              </div>
+              <div> Ya hay {{i+1}} </div>
 
-              </div>
-              <!-- <ul class="list-group list-group-flush">
-                <li class="list-group-item">{{player.primaryPosition.name}}</li>
-              </ul> -->
+              <button *ngIf="i == 19" class="dbSave">Guardar en Base de Datos</button>
             </div>
-          <!-- </ng-container> -->
-          <!-- <ng-container *ngIf="pager.allItems-1 === pager.endIndex"> -->
-            <!-- <div class="card card1"
-              *ngFor="let player of selectedPlayers">
-              <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top" appImgFallback
-                  src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg"
-                  alt="Jugador de Grandes Ligas"></a>
-                  <hr>
-              <div class="card-body card-body-selected">
-                <h5 class="card-title">{{player.fullName}} </h5>
-              </div>
-            </div> -->
-          <!-- </ng-container> -->
-        </div>
-        <!-- <div class="container paginator">
-          <div class="text-center">
-            <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
-              <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-                <a (click)="setPage2(1)" class="page-link paginator_text">First</a>
-              </li>
-              <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-                <a (click)="setPage2(pager.currentPage - 1)" class="page-link paginator_text">Previous</a>
-              </li>
-              <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
-                <a (click)="setPage2(page)" class="page-link">{{page}}</a>
-              </li>
-              <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-                <a (click)="setPage2(pager.currentPage + 1)" class="page-link paginator_text">Next</a>
-              </li>
-              <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-                <a (click)="setPage2(pager.totalPages)" class="page-link paginator_text">Last</a>
-              </li>
-            </ul>
+
+
           </div>
-        </div> -->
-      </ng-container>
+        </ng-container>
     </div>
   </div>
 </div>
 </div>
 
-<!-- Area de Jugadores Seleccionados -->
-<!-- Para usar en el area de PLAYERS -->
 
 

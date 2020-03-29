@@ -302,8 +302,12 @@ export class FantasySeleccionJugadoresComponent implements OnInit {
   addPlayer(id) {
     console.log( this.allItems);
 
+
     const foundPlayer = this.allItems.find(player => player.id == id);
     this.selectedPlayers.push(foundPlayer);
+    console.log("ID", id);
+    this.allItems = this.allItems.filter(playerToRemove => playerToRemove.id != id);
+    console.log( "AllItems", this.allItems);
     // console.log("Jugador seleccionado", this.selectedPlayers);
     // console.log("ID", id);
   }
