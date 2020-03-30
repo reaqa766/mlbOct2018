@@ -80,10 +80,14 @@
         </div>
       </li>
       <li class="nav-item mr-4">
-        <a class="nav-link" (click)="closeMenu()" routerLink="contactUs">Contáctenos</a>
-      </li>
-      <li class="nav-item mr-4">
-        <a class="nav-link" (click)="closeMenu()" routerLink="aboutUs">Nosotros</a>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Vinotintos</a>
+        <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
+          <ng-container *ngIf="!isLogin">
+            <a class="nav-link" (click)="closeMenu()" routerLink="contactUs">Contáctenos</a>
+            <a class="nav-link" (click)="closeMenu()" routerLink="aboutUs">Nosotros</a>
+          </ng-container>
+        </div>
       </li>
 
       <!-- <li class="nav-item mr-4">
@@ -116,7 +120,7 @@
       <li *ngIf="administracion" class="nav-item mr-4 dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
-          Administracion Liga de Fantasía</a>
+          Admin LF2020</a>
         <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
           <ng-container *ngIf="isLogin">
             <a class="dropdown-item" (click)="closeMenu()" routerLink="managersList">Admin Managers</a>

@@ -77,6 +77,7 @@ import { LigaTeamComponent } from './fantasy/liga-team/liga-team.component';
 import { FantasySeleccionJugadoresComponent } from './fantasy/fantasy-seleccion-jugadores/fantasy-seleccion-jugadores.component';
 import { ManagersComponent } from './components/user/managers/managers.component';
 import { EditManagersComponent } from './components/user/managers/edit-managers/edit-managers.component';
+import { Pitcherinfotemp2019Component } from './components/temp2019/pitchers2019/pitcherinfotemp2019/pitcherinfotemp2019.component';
 
 
 const routes: Routes = [
@@ -210,6 +211,8 @@ const routes: Routes = [
   component: ManagersComponent},
   { path: 'editManagers',
   component: EditManagersComponent},
+  { path: 'pitchers2019Info',
+  component: Pitcherinfotemp2019Component},
   { path: 'podCasts',
   component: PodcastsComponent, children:[{
     path: 'TalkBeisbol',

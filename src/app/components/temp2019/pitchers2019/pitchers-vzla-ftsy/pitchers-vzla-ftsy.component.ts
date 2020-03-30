@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PlayersService } from '../../../../../services/players.service';
-import { PlayersfantasyService  } from '../../../../services/playersfantasy.service';
+import { PitchersService } from '../../../../services/pitchers.service';
+// import { PlayersService } from '../../../../../services/players.service';
+import { PlayersfantasyService } from '../../../../services/playersfantasy.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../../../interfaces/players';
 
@@ -42,7 +43,7 @@ export class PitchersVzlaFtsyComponent implements OnInit {
 
   isLoading: boolean;
 
-  constructor(private playerService: PlayersService, private pagerService: PagerService) { }
+  constructor(private playerService: PitchersService, private pagerService: PagerService) { }
 
 
   ngOnInit() {
@@ -56,7 +57,7 @@ export class PitchersVzlaFtsyComponent implements OnInit {
   // Convertir el Array de Observables a un Array de Objetos.
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
-    let InfoObsPlayer = this.playerService.getAllPlayersActives();
+    let InfoObsPlayer = this.playerService.getAllPlayersActives2019();
     // let InfoObsPlayer = this.playerService.getAllPlayersActives();
     let index = 0;
     for (let obs of InfoObsPlayer) {
@@ -70,10 +71,10 @@ export class PitchersVzlaFtsyComponent implements OnInit {
             Object.assign(newPlayer, player.people[0]);
             return newPlayer;
           });
-         // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
+          // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
 
-         this.players = this.players.filter(player =>
-          player.primaryPosition.name =='Pitcher' )
+          this.players = this.players.filter(player =>
+            player.primaryPosition.name == 'Pitcher')
 
             // se ordenan por nombre
             .sort(({ lastName: a }, { lastName: b }) => {
@@ -85,10 +86,12 @@ export class PitchersVzlaFtsyComponent implements OnInit {
                 return 0;
               }
             });
-            this.allItems = this.players;
-            this.setPage(1);
+          this.allItems = this.players;
+          this.setPage(1);
           this.isLoading = false;
           // console.log(JSON.stringify(this.players[0]));
+          console.log("pLAYERS", this.players);
+
         }
         index++;
       });
@@ -111,13 +114,13 @@ export class PitchersVzlaFtsyComponent implements OnInit {
         (player.nickName && player.nickName.toLowerCase().includes(this.searchText)) ||
         (player.primaryPosition.abbreviation && player.primaryPosition.abbreviation.toLowerCase().includes(this.searchText)) ||
         (player.primaryPosition.name && player.primaryPosition.name.toLowerCase().includes(this.searchText)));
-        this.setPage(this.pager.currentPage);
-      } else {
-          this.allItems = this.players;
-          this.setPage(this.pager.currentPage);
-        }
-        return this.allItems;
-      }
+      this.setPage(this.pager.currentPage);
+    } else {
+      this.allItems = this.players;
+      this.setPage(this.pager.currentPage);
+    }
+    return this.allItems;
+  }
   setPage(page: number) {
     // get pager object from service
     this.pager = this.pagerService.getPager2(this.allItems.length, page);

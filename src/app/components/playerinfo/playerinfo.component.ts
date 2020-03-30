@@ -78,11 +78,9 @@ export class PlayerinfoComponent implements OnInit {
     this.route.params.subscribe( params => {
       if (this.idplayer !== params.code) {
         this.idplayer = params.code;
-        // console.log('players', this.players);
         this.getPlayersMap();
       }
     });
-    // console.log('items6', this.players );
 
   }
 

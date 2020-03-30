@@ -31,9 +31,7 @@ export class Playerinfo2019Component implements OnInit {
   counter: number;
   n: number;
   m: number;
-  // tslint:disable-next-line:no-inferrable-types
   n1: number = 12;
-  // tslint:disable-next-line:no-inferrable-types
   n10: number = 5;
 
   public allItems: any[];
@@ -46,26 +44,11 @@ export class Playerinfo2019Component implements OnInit {
     pagedItems: any[];
     player;
 
-    // player = {};
     jugadores = {};
 
 
 
 
-  // playersList = [
-  //   {name:"Jose Altuve",
-  //   position : "segunda base"},
-
-  //   {name : "Gleyber Torres",
-  //   position : "segunda base"},
-
-  //   {name : "Ronald Acuña Jr.",
-  //   position : "Leftfield"},
-
-  //   {name : "Ender Inciarte",
-  //   position : "Centerfield"}
-
-  // ]
   isLoading: boolean;
 
 
@@ -76,16 +59,13 @@ export class Playerinfo2019Component implements OnInit {
 
 
   ngOnInit() {
-    // this.isLoading = true;
     // Cambio de ID potr CODE Dic 2018
     this.route.params.subscribe( params => {
       if (this.idplayer !== params.code) {
         this.idplayer = params.code;
-        // console.log('players', this.players);
         this.getPlayersMap();
       }
     });
-    // console.log('items6', this.players );
 
   }
 
@@ -93,7 +73,7 @@ export class Playerinfo2019Component implements OnInit {
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
     if (!this.isOffline) {
-      let InfoObsPlayer = this.playerService.getAllPlayersActives();
+      let InfoObsPlayer = this.playerService.getAllPlayersActives2019();
       let index = 0;
       for (let obs of InfoObsPlayer) {
         obs.pipe(take(1)).subscribe(res => {
@@ -105,14 +85,10 @@ export class Playerinfo2019Component implements OnInit {
               return newPlayer;
             });
             for (let jugador of this.players) {
-              // console.log('Comparando: '+jugador.id+' con '+this.idplayer);
               if (jugador.id == this.idplayer) {
-                // console.log('items4', jugador.fullName);
                 this.player = jugador;
                 break;
               }
-              // console.log('items5', 1);
-              // console.log('Players', this.players);
             }
           }
           index++;
@@ -121,15 +97,10 @@ export class Playerinfo2019Component implements OnInit {
     } else {
       this.players = this.playerService.getAllPlayersActivesOffline();
       for (const jugador of this.players) {
-        // console.log('Comparando: '+jugador.id+' con '+this.idplayer);
-        // tslint:disable-next-line:triple-equals
         if (jugador.id == this.idplayer) {
-          // console.log('items4', jugador.fullName);
           this.player = jugador;
           break;
         }
-        // console.log('items5', 1);
-        // console.log('items7', this.idplayer);
       }
     }
 

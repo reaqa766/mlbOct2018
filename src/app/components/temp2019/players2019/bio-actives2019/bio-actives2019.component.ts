@@ -45,7 +45,6 @@ export class BioActives2019Component implements OnInit {
   ngOnInit() {
     this.isLoading = true;
     this.getPlayersMap();
-    console.log("Jugadores", this.players)
 
   }
 

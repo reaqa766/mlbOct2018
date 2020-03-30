@@ -13,7 +13,7 @@ import { StatsDayliPlayer } from '../interfaces/stats-dayli-player';
 @Injectable({
   providedIn: 'root'
 })
-export class PitcherspointService {   
+export class PitcherspointService {
   playerCode = 596115;
 
 
@@ -29,7 +29,7 @@ export class PitcherspointService {
     650382, 622694, 621592, 622786,
     622795, 620454, 642578, 614179, 433587,
     660813, 620982, 650671, 624133, 575070,
-  
+
       593163, 600921, 611093, 612792,
       621593, 622459, 642511, 645307, 650347,
       656196, 658530, 658648, 659262, 660749,
@@ -141,7 +141,7 @@ export class PitcherspointService {
   ]
 
   // private _url6 ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2019&hydrate=stats(group=hitting,type=season,season=2019,gameType=S)'
-  private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2020&hydrate=stats(type=gameLog,gameType=S)';
+  private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2019&hydrate=stats(type=gameLog,gameType=R)';
   // private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2019&hydrate=stats(type=gameLog)';
   // private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(type=season=2018),%20team(currentteam)';
 

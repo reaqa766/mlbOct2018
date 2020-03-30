@@ -1,18 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PitchersService } from '../../services/pitchers.service';
-import { Players } from '../../../interfaces/players';
+import { PitchersService } from '../../../../services/pitchers.service';
+// import { PitchersService } from '../../../../services/pitchers.service';
+import { Players } from '../../../../../interfaces/players';
 
 import { Route } from '@angular/compiler/src/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { take } from 'rxjs/operators';
 
+
+
 @Component({
-  selector: 'app-pitcherinfo',
-  templateUrl: './pitcherinfo.component.html',
-  styleUrls: ['./pitcherinfo.component.css']
+  selector: 'app-pitcherinfotemp2019',
+  templateUrl: './pitcherinfotemp2019.component.html',
+  styleUrls: ['./pitcherinfotemp2019.component.css']
 })
-export class PitcherinfoComponent implements OnInit {
+export class Pitcherinfotemp2019Component implements OnInit {
+
   public players = [];
   public playersSort = [];
   groups: any;
@@ -72,10 +76,8 @@ export class PitcherinfoComponent implements OnInit {
   // Convertir el Array de Observables a un Array de Objetos.
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
-    // tslint:disable-next-line:prefer-const
-    let InfoObsPlayer = this.playerService.getAllPlayersActives();
+    let InfoObsPlayer = this.playerService.getAllPlayersActives2019();
     let index = 0;
-    // tslint:disable-next-line:prefer-const
     for (let obs of InfoObsPlayer) {
       obs.pipe(take(1)).subscribe(res => {
         this.players.push(res);
@@ -100,5 +102,5 @@ export class PitcherinfoComponent implements OnInit {
   }
 
 
-
 }
+

@@ -9,8 +9,10 @@ import { AngularFirestoreDocument, AngularFirestoreCollection, AngularFirestore 
 import { take } from 'rxjs-compat/operator/take';
 import { first } from 'rxjs/operators';
 import { async } from 'q';
-import _venezuelanPlayersCodes from '../assets/JSONS/venezuelanPlayersIds'
+import _venezuelanPlayersCodes2019 from '../assets/JSONS/venezuelanPlayersIds2019.'
 import _dominicanPlayersCodes from '../assets/JSONS/dominicanPlayersIds';
+import _venezuelanPlayersCodes from '../assets/JSONS/venezuelanPlayersIds'
+import _dominicanPlayersCodes2019 from '../assets/JSONS/dominicanPlayersIds2019';
 
 
 @Injectable({
@@ -23,8 +25,11 @@ export class PlayersService {
 
   public venezuelanPlayersCodes;
   public dominicanPlayersCodes;
+  public venezuelanPlayersCodes2019;
+  public dominicanPlayersCodes2019;
 
   private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=hitting,type=season,season=2020,gameType=S)'
+  private _url2 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(group=hitting,type=season,season=2019,gameType=R)'
 
 
   constructor(private http: HttpClient, private afs: AngularFirestore) {
@@ -32,6 +37,8 @@ export class PlayersService {
     this.dominicanPlayersCollection = this.afs.collection('dominicans');
     this.venezuelanPlayersCodes = _venezuelanPlayersCodes;
     this.dominicanPlayersCodes = _dominicanPlayersCodes;
+    this.venezuelanPlayersCodes2019 = _venezuelanPlayersCodes2019;
+    this.dominicanPlayersCodes2019 = _dominicanPlayersCodes2019;
   }
 
   // Searchs for Season Training Venezuelan and Dominican Players
@@ -104,7 +111,22 @@ export class PlayersService {
     return dataAllPlayers;
 
   }
+  getPlayeActive2019(): Observable<StatsDayliPlayer> {
+    return this.http.get<StatsDayliPlayer>(this._url2);
+  }
+
+  // Para colocar todos los Json en un solo array. Genera Observables
+  getAllPlayersActives2019(): Observable<StatsDayliPlayer | undefined>[] {
+    let dataAllPlayers: Observable<StatsDayliPlayer | undefined>[] = [];
+    for (let code of this.venezuelanPlayersCodes2019) {
+      this._url2 = this._url2.replace(this.playerCode.toString(), code.toString());
+      let dataP = this.getPlayeActive2019();
+      dataAllPlayers.push(dataP);
+      this.playerCode = code;
+    }
 
 
+    return dataAllPlayers;
+  }
 
 }
