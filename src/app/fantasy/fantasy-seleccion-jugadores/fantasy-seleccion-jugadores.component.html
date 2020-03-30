@@ -54,7 +54,7 @@
         <select id="Equipo" [(ngModel)]="equipoSeleccionado" (ngModelChange)="seleccionarEquipo($event)">
           <option [disabled]="" [selected]="true" disabled>Nombre del Equipo</option>
 
-          <option *ngFor="let equipo of ligaSeleccionada.equipos" [value]="equipo">
+          <option *ngFor="let equipo of ligaSeleccionada.equipos" [ngValue]="equipo">
             {{equipo.nombre}}
           </option>
         </select>
@@ -68,8 +68,9 @@
 
 <!-- Para usar en el area de PLAYERS -->
 
-<div class="container-jugadores" [style.display]="!(selectedPlayers.length > 19) ? 'grid' : 'block'">
-  <div [style.display]="!(selectedPlayers.length > 19) ? 'grid' : 'none'">
+<div class="container-jugadores"
+  [style.display]="equipoSeleccionado && (equipoSeleccionado.jugadores.length > 19)  ? 'block' : 'grid'">
+  <div [style.display]="equipoSeleccionado && (equipoSeleccionado.jugadores.length > 19)  ? 'none' : 'grid'">
     <div *ngIf="mostrarJugadores" class="container-izquierdo-grid">
 
       <div class="container-actives">
@@ -94,40 +95,41 @@
           <ng-container *ngIf="!(pager.allItems === 0)">
 
             <div class="container-actives_cards ">
-              <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex) && selectedPlayers.length < 20">
+              <ng-container
+                *ngIf="!(pager.allItems-1 === pager.endIndex) && equipoSeleccionado && (equipoSeleccionado.jugadores.length < 20)">
 
-                <ng-container
-                  *ngFor="let player of allItems| pagination:pager.startIndex:pager.pageSize; let i = index">
+                <ng-container *ngFor="let item of allItems | pagination:pager.startIndex:pager.pageSize; let i = index">
 
                   <div class="card card1 img_picture_box" style="width: 95%;">
-                    <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element"
-                        appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg"
-                        alt="Jugador de Grandes Ligas"></a>
+                    <img class="card-img-top img_picture_element" appImgFallback
+                      src="https://securea.mlb.com/mlb/images/players/head_shot/{{item.jugador?.id}}.jpg"
+                      alt="Jugador de Grandes Ligas">
                     <hr>
                     <div class="card-body">
-                      <h5 class="card-title">{{player.fullName}}</h5>
-                      <h5 class="card-title1">{{player.primaryPosition.name}}</h5>
-                      <h5 class="card-title1">{{player.birthCountry}}</h5>
-                      <h5 class="card-title1">{{player.stats[0].splits[0].team.name}}</h5>
-                      <button class="btn btn-secondary" (click)="addPlayer(player.id)">Agregar</button>
+                      <h5 class="card-title">{{item.jugador.fullName}}</h5>
+                      <h5 class="card-title1">{{item.jugador.primaryPosition.name}}</h5>
+                      <h5 class="card-title1">{{item.jugador.birthCountry}}</h5>
+                      <h5 class="card-title1">{{item.jugador.stats[0].splits[0].team.name}}</h5>
+                      <button class="btn btn-secondary" (click)="addPlayer(item.jugador.id)">Agregar</button>
                     </div>
                   </div>
                 </ng-container>
               </ng-container>
-              <ng-container *ngIf="pager.allItems-1 === pager.endIndex && selectedPlayers.length < 20">
+              <ng-container
+                *ngIf="pager.allItems-1 === pager.endIndex && equipoSeleccionado && (equipoSeleccionado.jugadores.length < 20)">
                 <div class="card card1"
-                  *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*8); let i = index">
+                  *ngFor="let item of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*8); let i = index">
                   <h1>{{i}}</h1>
-                  <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top" appImgFallback
-                      src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg"
-                      alt="Jugador de Grandes Ligas"></a>
+                  <img class="card-img-top" appImgFallback
+                    src="https://securea.mlb.com/mlb/images/players/head_shot/{{item.jugador?.id}}.jpg"
+                    alt="Jugador de Grandes Ligas">
                   <hr>
                   <div class="card-body">
-                    <h5 class="card-title">{{player.fullName}}</h5>
-                    <h5 class="card-title1">{{player.primaryPosition.name}}</h5>
-                    <h5 class="card-title1">{{player.birthCountry}}</h5>
-                    <h5 class="card-title1">{{player.stats[0].splits[0].team.name}}</h5>
-                    <button class="btn btn-secondary" (click)="addPlayer(player.id)">Agregar</button>
+                    <h5 class="card-title">{{item.jugador.fullName}}</h5>
+                    <h5 class="card-title1">{{item.jugador.primaryPosition.name}}</h5>
+                    <h5 class="card-title1">{{item.jugador.birthCountry}}</h5>
+                    <h5 class="card-title1">{{item.jugador.stats[0].splits[0].team.name}}</h5>
+                    <button class="btn btn-secondary" (click)="addPlayer(item.jugador.id)">Agregar</button>
                   </div>
                 </div>
               </ng-container>
@@ -162,12 +164,13 @@
 
 
   <!-- Area de Jugadores Seleccionados -->
-  <div [style.display]="!(selectedPlayers.length > 19) ? 'grid' : 'block'">
+  <div *ngIf="equipoSeleccionado && equipoSeleccionado.jugadores"
+    [style.display]="equipoSeleccionado && (equipoSeleccionado.jugadores.length > 19)  ? 'block' : 'grid'">
     <div *ngIf="mostrarJugadores" class="container-derecho-grid">
       <!-- <div *ngIf="(selectedPlayers.length > 19)" [ngStyle]="{'background-color': 'yellow' }" > -->
       <div class="container-actives">
         <h1 class="bioActives-title">Jugadores Seleccionados</h1>
-        <p class="title-position2"> {{equipoSeleccionado}} </p>
+        <p class="title-position2"> {{equipoSeleccionado.nombre}} </p>
 
 
         <!--LOADER -->
@@ -189,20 +192,18 @@
 
             <div class="container-actives-cards-selected ">
               <div class="card card1 img_picture_box" style="width: 95%;"
-                *ngFor="let player of selectedPlayers, let i = index">
-                <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top img_picture_element" appImgFallback
-                    src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg"
-                    alt="Jugador de Grandes Ligas"></a>
+                *ngFor="let player of equipoSeleccionado.jugadores, let i = index">
+                <img class="card-img-top img_picture_element" appImgFallback
+                  src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg"
+                  alt="Jugador de Grandes Ligas">
                 <hr>
 
                 <div class="card-body card-body-selected">
                   <h5 class="card-title">{{player.fullName}}</h5>
                   <h5 class="card-title">{{player.primaryPosition.name}}</h5>
-                  <!-- <h5 class="card-title">{{i+1}}</h5>
-                <h5 class="card-title">{{selectedPlayers.length}}</h5> -->
+                  <button (click)="removePlayer(player.id)">Eliminar</button>
                 </div>
               </div>
-
             </div>
 
           </ng-container>
@@ -214,13 +215,11 @@
   </div>
 
 </div>
-<hr *ngIf="(selectedPlayers.length > 19)">
-<div *ngIf="selectedPlayers.length == 20" class="guardar-datos">
-  <button type="button" class=" btn-primary " >Guardar en Base de Datos</button>
-</div>
-<hr *ngIf="(selectedPlayers.length > 19)">
 
-
-
-
-
+<ng-container *ngIf="equipoSeleccionado && (equipoSeleccionado.jugadores.length > 19)">
+  <hr>
+  <div class="guardar-datos">
+    <button type="button" class=" btn-primary ">Guardar en Base de Datos</button>
+  </div>
+  <hr>
+</ng-container>

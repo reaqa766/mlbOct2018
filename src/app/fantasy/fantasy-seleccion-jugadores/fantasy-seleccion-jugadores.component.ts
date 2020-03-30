@@ -39,7 +39,7 @@ export class FantasySeleccionJugadoresComponent implements OnInit {
   nombreLigaGratis: { nombreGratis: string; }[];
   ligasFiltradas: Liga[];
   equiposFiltrados: string[];
-  equipoSeleccionado: string;
+  equipoSeleccionado: Equipo;
   verSeleccion: string;
   mostrarJugadores: boolean = false;
 
@@ -170,12 +170,10 @@ export class FantasySeleccionJugadoresComponent implements OnInit {
           {nombre:"Los Gutiz Baseball", jugadores: [], managerId:"CREAR"},  {nombre:"Chacalaca BBC", jugadores: [], managerId:"CREAR"},
           {nombre:"Latinpower Team", jugadores: [], managerId:"CREAR"},  {nombre:"Los Gloriosos de Trujillo", jugadores: [], managerId:"CREAR"}] }
     ];
-
     // Para usar en el area de PLAYERS
 
     this.isLoading = true;
     this.getPlayersMap();
-    console.log('Players', this.players);
 
     // Para usar en el area de PLAYERS
 
@@ -201,16 +199,14 @@ export class FantasySeleccionJugadoresComponent implements OnInit {
   filtrarEquipos(event) {
     this.elEquipo = false;
     this.equiposFiltrados = [];
-    // this.equiposFiltrados = this.ligaSeleccionada.equipos;
-    console.log("ligaSeleccionada",this.ligaSeleccionada );
-
-
+    this.pager.all
+    this.allItems = this.ligaSeleccionada.jugadores.filter(({equipo}) => !equipo);
+    this.equipoSeleccionado = null;
+    this.mostrarJugadores = false;
   }
 
-  seleccionarEquipo(equipoSeleccionado) {
+  seleccionarEquipo(event) {
     this.mostrarJugadores = true;
-    console.log(equipoSeleccionado);
-
   }
 
   // Para usar en el area de PLAYERS
@@ -223,7 +219,6 @@ export class FantasySeleccionJugadoresComponent implements OnInit {
     for (let obs of InfoObsPlayer) {
       obs.pipe(take(1)).subscribe(res => {
         this.players.push(res);
-        // console.log('players', this.players);
         if ((InfoObsPlayer.length - 1) === index) {
           this.players = this.players.map(player => {
             const newPlayer: Players = {};
@@ -247,35 +242,35 @@ export class FantasySeleccionJugadoresComponent implements OnInit {
               }
             });
           this.allItems = [...this.players];
+          const jugadores = this.players.map(jugador => ({
+            jugador,
+            equipo: null
+          }))
+          this.ligas = this.ligas.map(liga => ({...liga, jugadores}))
+
           this.setPage(1);
           this.isLoading = false;
         }
         index++;
       });
     }
-    // set items to json response
-    // this.allItems = InfoObsPlayer;
 
-    // initialize to page 1
-    // this.setPage(1);
-
-    // console.log('players', this.players);
     const playerstxt1 = this.players
 
   }
 
 
   onSearchChange() {
-    // console.log('search', this.searchText);
 
     if (this.searchText) {
-      this.allItems = this.players.filter(player =>
-        player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
-        (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
-        (player.nickName && player.nickName.toLowerCase().includes(this.searchText)));
+      this.allItems = this.allItems.filter(({jugador, equipo}) =>
+        !equipo &&
+        (jugador.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
+        (jugador.fullName && jugador.fullName.toLowerCase().includes(this.searchText)) ||
+        (jugador.nickName && jugador.nickName.toLowerCase().includes(this.searchText))));
       this.setPage(this.pager.currentPage);
     } else {
-      this.allItems = this.players;
+      this.allItems = this.ligaSeleccionada.jugadores.filter((({equipo} )=> !equipo));
       this.setPage(this.pager.currentPage);
     }
     return this.allItems;
@@ -300,17 +295,30 @@ export class FantasySeleccionJugadoresComponent implements OnInit {
   // Para usar en el area de PLAYERS
 
   addPlayer(id) {
-    console.log( this.allItems);
+    // Agrego a equipo
+    const {jugador} = this.allItems.find(({jugador} )=> jugador.id == id);
+    this.equipoSeleccionado.jugadores.push(jugador);
+    // Reflejo los cambios en la liga
+    this.ligaSeleccionada.jugadores = this.ligaSeleccionada.jugadores.map(({jugador}) => {
+      return {
+        jugador,
+        equipo: jugador.id == id ? this.equipoSeleccionado.nombre : null
+      }
+    });
+    this.allItems = this.ligaSeleccionada.jugadores.filter(({equipo}) => !equipo);
+  }
 
-
-    const foundPlayer = this.allItems.find(player => player.id == id);
-    this.selectedPlayers.push(foundPlayer);
-    console.log("ID", id);
-    this.allItems = this.allItems.filter(playerToRemove => playerToRemove.id != id);
-    console.log( "AllItems", this.allItems);
-    // console.log("Jugador seleccionado", this.selectedPlayers);
-    // console.log("ID", id);
+  removePlayer(id) {
+    // Lo saco del equipo
+    this.equipoSeleccionado.jugadores = this.equipoSeleccionado.jugadores.filter(jugador => jugador.id != id);
+    // Reflejo los cambios en la liga
+    this.ligaSeleccionada.jugadores = this.ligaSeleccionada.jugadores.map(({jugador,equipo}) => {
+      return {
+        jugador,
+        equipo: jugador.id == id ? null : equipo
+      }
+    });
+    this.allItems = this.ligaSeleccionada.jugadores.filter(({equipo}) => !equipo);
   }
 
 }
-
