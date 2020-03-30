@@ -26,20 +26,7 @@ export class DominicanService {
 
 
   // Url del Api con los datos de cada juego para un Jugador particular
-  // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +
-  // '&season=2018&hydrate=stats(group=hitting,type=gameLog)';
-  // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +
-  // '&season=2018&hydrate=stats(group=[hitting,pitching],type=[career,statSplits],sitCodes=a,sportId=12)';
-  private _url5 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +
-  '&season=2018&hydrate=stats(group=[hitting],type=[pecota],sportId=12)';
-  private _url1 = 'http://statsapi.mlb.com/api/v1/people/' + this.playerCode + '/stats/game/' +
-  this.gameCode;
-  // tslint:disable-next-line:max-line-length
-  private _url4 = 'https://statsapi.mlb.com/api/v1/teams/109/roster?hydrate=person(stats(type=season,season=2018),education)&rosterType=Active';
-  // tslint:disable-next-line:max-line-length
-  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=pitching,type=season,season=2020,gameType=S)';
-  // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(type=season=2018),%20team(currentteam)';
-  private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2018&hydrate=stats(type=gameLog)';
+  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(type=season,season=2019,gameType=R)';
 
 
   constructor(private http: HttpClient) {

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayersService } from '../../../../../services/players.service';
-import { PlayersfantasyService  } from '../../../../services/playersfantasy.service';
+import { PlayersFantasyService  } from '../../../../services/players-fantasy.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../../../interfaces/players';
 
@@ -39,7 +39,7 @@ export class BioActives2019Component implements OnInit {
 
   isLoading: boolean;
 
-  constructor(private playerService: PlayersService, private pagerService: PagerService) { }
+  constructor(private playerService: PlayersFantasyService, private pagerService: PagerService) { }
 
 
   ngOnInit() {
@@ -53,7 +53,7 @@ export class BioActives2019Component implements OnInit {
   // Convertir el Array de Observables a un Array de Objetos.
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
-    let InfoObsPlayer = this.playerService.getAllPlayersActives();
+    let InfoObsPlayer = this.playerService.getAllPlayersActives20();
     // let InfoObsPlayer = this.playerService.getAllPlayersActives();
     let index = 0;
     for (let obs of InfoObsPlayer) {

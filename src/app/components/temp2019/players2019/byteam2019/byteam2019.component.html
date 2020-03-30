@@ -1,8 +1,8 @@
 <div class="container-actives">
   <!-- <h1 class="bioActives-title">La Temporada 2019 no ha iniciado</h1> -->
   <h1 class="bioActives-title">Dominicanos Fantasy 2020</h1>
-<p class="title-position"> Spring Training 2020 </p>
-<!-- <p class="title-position"> TEMP. 2019 </p> -->
+<!-- <p class="title-position"> Spring Training 2020 </p> -->
+<p class="title-position"> TEMP. 2019 </p>
 
 
 
@@ -26,7 +26,8 @@
         <div class="card card1 img_picture_box" style="width: 95%;" *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
             <a routerLink="/playerDominicaninfo2019/{{player.id}}"><img class="card-img-top img_picture_element" appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
           <div class="card-body">
-            <h5 class="card-title">{{player.fullName}}{{" " + player.primaryPosition.abbreviation}}</h5>
+            <h5 class="card-title">{{player.fullName}}</h5>
+            <h6 class="card-title">{{player.primaryPosition.abbreviation}}</h6>
           </div>
         </div>
       </ng-container>
@@ -35,7 +36,8 @@
         <!-- <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*7)"> -->
             <a routerLink="/playerDominicaninfo2019/{{player.id}}"><img class="card-img-top" appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
           <div class="card-body">
-            <h5 class="card-title">{{player.fullName}}{{" " + player.primaryPosition.abbreviation}}</h5>
+            <h5 class="card-title">{{player.fullName}}</h5>
+            <h6 class="card-title">{{player.primaryPosition.abbreviation}}</h6>
           </div>
         </div>
       </ng-container>

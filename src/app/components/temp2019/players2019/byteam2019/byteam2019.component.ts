@@ -49,7 +49,7 @@ export class Byteam2019Component implements OnInit {
   ngOnInit() {
     this.isLoading = true;
     this.getPlayersMap();
-    console.log("Jugadores", this.players)
+    console.log("Jugadores", this.allItems)
 
   }
 
@@ -71,6 +71,8 @@ export class Byteam2019Component implements OnInit {
             Object.assign(newPlayer, player.people[0]);
             return newPlayer;
           });
+
+
          // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
 
          this.players = this.players.filter(player =>
@@ -89,7 +91,7 @@ export class Byteam2019Component implements OnInit {
             this.allItems = this.players;
             this.setPage(1);
           this.isLoading = false;
-          // console.log(JSON.stringify(this.players[0]));
+          console.log("Jugadores2", this.allItems)
         }
         index++;
       });
@@ -112,7 +114,6 @@ export class Byteam2019Component implements OnInit {
         (player.nickName && player.nickName.toLowerCase().includes(this.searchText)) ||
         (player.primaryPosition.abbreviation && player.primaryPosition.abbreviation.toLowerCase().includes(this.searchText)) ||
         (player.primaryPosition.name && player.primaryPosition.name.toLowerCase().includes(this.searchText)));
-
         this.setPage(this.pager.currentPage);
       } else {
           this.allItems = this.players;
@@ -120,6 +121,8 @@ export class Byteam2019Component implements OnInit {
         }
         return this.allItems;
       }
+
+
   setPage(page: number) {
     // get pager object from service
     this.pager = this.pagerService.getPager2(this.allItems.length, page);

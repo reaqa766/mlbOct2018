@@ -110,6 +110,21 @@ export class PlayersFantasyService {
 
   }
 
+    // Para colocar todos los Json en un solo array. Genera Observables
+    getAllPlayersActives20(): Observable<StatsDayliPlayer | undefined>[] {
+      let dataAllPlayers: Observable<StatsDayliPlayer | undefined>[] = [];
+      for (let code of this.venezuelanPlayersCodes) {
+        this._url = this._url.replace(this.playerCode.toString(), code.toString());
+        let dataP = this.getPlayeActive19();
+        dataAllPlayers.push(dataP);
+        this.playerCode = code;
+      }
+
+
+      return dataAllPlayers;
+    }
+
+
 
 
 }
