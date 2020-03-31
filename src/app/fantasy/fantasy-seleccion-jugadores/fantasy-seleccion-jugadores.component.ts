@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Campeonato } from '../Interfaces/Campeonato';
 import { Liga } from '../Interfaces/Liga';
 import { Equipo } from '../Interfaces/Equipo';

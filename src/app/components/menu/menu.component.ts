@@ -20,7 +20,7 @@ export class MenuComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.isAdmin = false;
+    this.isAdmin = true;
     this.administracion = true;
     // this.administracion = false;
     this.authService.getAuth().subscribe( auth => {
