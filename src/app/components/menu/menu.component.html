@@ -117,12 +117,13 @@
         </div>
 
       </li>
-      <li *ngIf="administracion" class="nav-item mr-4 dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+      <li class="nav-item mr-4 dropdown" *ngIf="isAdmin">
+      <!-- <li *ngIf="administracion" class="nav-item mr-4 dropdown" *ngIf="isAdmin"> -->
+        <a  *ngIf="administracion" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
           Admin LF2020</a>
         <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
-          <ng-container *ngIf="isLogin">
+          <ng-container>
             <a class="dropdown-item" (click)="closeMenu()" routerLink="managersList">Admin Managers</a>
             <a class="dropdown-item" (click)="closeMenu()" routerLink="ligaSeleccion">Admin Jugadores</a>
             <div class="dropdown-divider"></div>

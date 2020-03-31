@@ -14,12 +14,13 @@ export class MenuComponent implements OnInit {
   public emailUsuario: string;
   public fotoUsuario: string;
   administracion: boolean;
-
+  isAdmin: boolean;
   constructor(
     public authService: AuthService
   ) { }
 
   ngOnInit() {
+    this.isAdmin = false;
     this.administracion = true;
     // this.administracion = false;
     this.authService.getAuth().subscribe( auth => {
