@@ -37,10 +37,6 @@ export class PitchersVzlaFtsyComponent implements OnInit {
 
   // paged items
   pagedItems: any[];
-
-
-
-
   isLoading: boolean;
 
   constructor(private playerService: PitchersService, private pagerService: PagerService) { }
@@ -49,7 +45,7 @@ export class PitchersVzlaFtsyComponent implements OnInit {
   ngOnInit() {
     this.isLoading = true;
     this.getPlayersMap();
-    console.log("Jugadores", this.players)
+    // console.log("Jugadores", this.players)
 
   }
 

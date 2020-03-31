@@ -22,16 +22,13 @@ export class Pitcherinfotemp2019Component implements OnInit {
   groups: any;
   selectedGroup: any;
   elarray: any;
-  // tslint:disable-next-line:no-inferrable-types
   datesN: number = 10;
   searchText: string;
   playerAuxList = [];
   counter: number;
   n: number;
   m: number;
-  // tslint:disable-next-line:no-inferrable-types
   n1: number = 12;
-  // tslint:disable-next-line:no-inferrable-types
   n10: number = 5;
 
   public allItems: any[];
@@ -46,16 +43,7 @@ export class Pitcherinfotemp2019Component implements OnInit {
     player;
     jugadores = {};
 
-
-
-
-
-
   isLoading: boolean;
-
-
-
-
 
   constructor(private playerService: PitchersService, private route: ActivatedRoute) { }
 

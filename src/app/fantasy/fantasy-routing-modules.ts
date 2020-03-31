@@ -14,6 +14,7 @@ const secondaryRoutes: Routes = [
   { path: 'ligaTeam',  component: LigaTeamComponent},
   { path: 'ligaSeleccion',  component: FantasySeleccionJugadoresComponent},
   { path: 'managersList',  component: ManagersComponent},
+
 ];
 
 

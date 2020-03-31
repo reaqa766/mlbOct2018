@@ -211,7 +211,7 @@ const routes: Routes = [
   component: ManagersComponent},
   { path: 'editManagers',
   component: EditManagersComponent},
-  { path: 'pitchers2019Info',
+  { path: 'pitchers2019Info/:id',
   component: Pitcherinfotemp2019Component},
   { path: 'podCasts',
   component: PodcastsComponent, children:[{

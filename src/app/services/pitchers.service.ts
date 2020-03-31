@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+// import { Pitchers } from '../../interfaces/';
 import { Players } from '../../interfaces/players';
 import { StatsDayliPlayer } from '../../interfaces/stats-dayli-player';
 import _venezuelanPlayersCodes from '../../assets/JSONS/venezuelanPlayersIds'
@@ -14,6 +15,7 @@ import { Observable } from 'rxjs';
 })
 export class PitchersService {
   playerCode = 596115;
+  // playerCode2 = 596115;
   public venezuelanPlayersCodes;
   public dominicanPlayersCodes;
   public venezuelanPlayersCodes2019;
@@ -59,14 +61,14 @@ export class PitchersService {
 
   // Para colocar todos los Json en un solo array. Genera Observables
   getAllPlayersActives2019(): Observable<StatsDayliPlayer | undefined>[] {
-    let dataAllPlayers: Observable<StatsDayliPlayer | undefined>[] = [];
+    let dataAllPlayers2: Observable<StatsDayliPlayer | undefined>[] = [];
     for (let code of this.venezuelanPlayersCodes2019) {
       this._url2 = this._url2.replace(this.playerCode.toString(), code.toString());
       let dataP = this.getPlayeActive2019();
-      dataAllPlayers.push(dataP);
+      dataAllPlayers2.push(dataP);
       this.playerCode = code;
     }
-    return dataAllPlayers;
+    return dataAllPlayers2;
   }
 
  }
