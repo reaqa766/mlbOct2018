@@ -73,7 +73,8 @@ export class LigaTeamComponent implements OnInit {
   constructor(private playerService: PlayersFantasyService, private pagerService: PagerService) { }
 
   ngOnInit() {
-    this.ligas = [{
+    this.ligas = [
+    {
       nombre: "Venedompro Oeste",
       esPaga: "true",
       logo: "",
@@ -164,9 +165,10 @@ export class LigaTeamComponent implements OnInit {
           {nombre:"Latinpower Team", jugadores: [], managerId:"CREAR"},  {nombre:"Los Gloriosos de Trujillo", jugadores: [], managerId:"CREAR"}] }
     ];
 
-    console.log("Equipos", this.ligas[0].equipos);
+    console.log("Equipos", this.ligas[4].equipos);
     console.log("Dato(0)", this.ligas[0].equipos[0].nombre);
-    console.log("Dato(0)", this.ligas[0].equipos[0].managerId);
+    console.log("Dato(0)", this.ligas[0].equipos[1].nombre);
+    console.log("Dato(0)", this.ligas[4].equipos[0].managerId);
 
 
     this.isLoading = true;

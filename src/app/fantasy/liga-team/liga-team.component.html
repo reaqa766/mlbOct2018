@@ -4,24 +4,23 @@
 
 
   <div class="container_cards">
-    <div *ngFor="let team of ligas, let x = index" class="card_manager">
-      <!-- <div *ngFor="let datos of ligas, let i = index" class="card_manager"> -->
+    <div *ngFor="let datos of ligas; let i = index" class="card_manager">
+        <h5 class="card-title">{{i}}</h5>
+      <div *ngFor="let team of ligas[i].equipos, let x = index" class="card_manager">
         <div class="card " style="width: 18rem;">
           <div class="card-body">
-            <h5 class="card-title">{{team.equipos[x].nombre}}</h5>
             <h5 class="card-title">{{x}}</h5>
-            <!-- <ng-container *ngFor="let datos of team, let i = index"> -->
-            <h6 class="card-subtitle mb-2 text-muted">{{team.equipos[x].managerId}}</h6>
+            <h5 class="card-title">{{ligas[i].equipos[x].nombre}}</h5>
+            <h5 class="card-title">{{ligas[i].equipos[x].managerId}}</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
             <a href="#" class="card-link">Card link</a>
             <a href="#" class="card-link">Another link</a>
-            <!-- </ng-container> -->
           </div>
         </div>
       <!-- </div> -->
-      <hr>
     </div>
+    <hr>
   </div>
 </div>
 

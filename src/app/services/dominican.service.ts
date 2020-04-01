@@ -10,7 +10,7 @@ import { take } from 'rxjs-compat/operator/take';
 import { first } from 'rxjs/operators';
 import { async } from 'q';
 import _venezuelanPlayersCodes from '../../assets/JSONS/venezuelanPlayersIds'
-import _dominicanPlayersCodes from '../../assets/JSONS/dominicanPlayersIds';
+import _dominicanPlayersIds2019 from '../../assets/JSONS/dominicanPlayersIds2019';
 
 
 @Injectable({
@@ -31,7 +31,7 @@ export class DominicanService {
 
   constructor(private http: HttpClient) {
     this.venezuelanPlayersCodes = _venezuelanPlayersCodes;
-    this.dominicanPlayersCodes = _dominicanPlayersCodes;
+    this.dominicanPlayersCodes = _dominicanPlayersIds2019;
 
    }
 
