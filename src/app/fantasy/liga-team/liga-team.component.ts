@@ -81,7 +81,8 @@ export class LigaTeamComponent implements OnInit {
       equipos: [{nombre: "Los Estrada", jugadores: [], managerId:"CREAR" },  {nombre: "Paseo City", jugadores: [], managerId:"CREAR" },
           {nombre: "Mi Familia SBC",jugadores: [], managerId:"CREAR" }, {nombre: "Los Pájaros Rojos",jugadores: [], managerId:"CREAR" },
           {nombre: "Halp9779",jugadores: [], managerId:"CREAR" }, {nombre: "Pesqueros de Sucre",jugadores: [], managerId:"CREAR" },
-          {nombre: "Los Triunfadores",jugadores: [], managerId:"CREAR" }, {nombre: "The Black Bull",jugadores: [], managerId:"CREAR" }]},
+          {nombre: "Los Triunfadores",jugadores: [], managerId:"CREAR" }, {nombre: "The Black Bull",jugadores: [], managerId:"CREAR" },
+          {nombre: "The FALSE ONE",jugadores: [], managerId:"CREAR" },{nombre: "The FALSE TWO",jugadores: [], managerId:"CREAR" }]},
     {
       nombre: "Venedompro Este",
       esPaga: "true",
@@ -165,8 +166,8 @@ export class LigaTeamComponent implements OnInit {
           {nombre:"Latinpower Team", jugadores: [], managerId:"CREAR"},  {nombre:"Los Gloriosos de Trujillo", jugadores: [], managerId:"CREAR"}] }
     ];
 
-    console.log("Equipos", this.ligas[4].equipos);
-    console.log("Dato(0)", this.ligas[0].equipos[0].nombre);
+    console.log("Ligas", this.ligas);
+    console.log("Dato(0)", this.ligas[0].equipos);
     console.log("Dato(0)", this.ligas[0].equipos[1].nombre);
     console.log("Dato(0)", this.ligas[4].equipos[0].managerId);
 

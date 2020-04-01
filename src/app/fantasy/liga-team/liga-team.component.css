@@ -23,7 +23,18 @@
   }
 .card_manager {
   margin: 0 .5rem;
-  }
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card_manager2 {
+  margin: 0 .5rem;
+
+}
+
 
 .page-link {
 color: black !important;
