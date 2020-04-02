@@ -78,7 +78,7 @@ export class LigaTeamComponent implements OnInit {
       nombre: "Venedompro Oeste",
       esPaga: "true",
       logo: "",
-      equipos: [{nombre: "Los Estrada", jugadores: [], managerId:"CREAR" },  {nombre: "Paseo City", jugadores: [], managerId:"CREAR" },
+      equipos: [{nombre: "Los Estrada", jugadores: [], managerId:"Daniel Estrada" },  {nombre: "Paseo City", jugadores: [], managerId:"CREAR" },
           {nombre: "Mi Familia SBC",jugadores: [], managerId:"CREAR" }, {nombre: "Los Pájaros Rojos",jugadores: [], managerId:"CREAR" },
           {nombre: "Halp9779",jugadores: [], managerId:"CREAR" }, {nombre: "Pesqueros de Sucre",jugadores: [], managerId:"CREAR" },
           {nombre: "Los Triunfadores",jugadores: [], managerId:"CREAR" }, {nombre: "The Black Bull",jugadores: [], managerId:"CREAR" },

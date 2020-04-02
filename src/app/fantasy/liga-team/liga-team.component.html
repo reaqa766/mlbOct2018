@@ -6,22 +6,23 @@
   <div class="container_cards">
     <div *ngFor="let liga of ligas" class="card_manager">
       <h5 class="card-title-liga">{{liga.nombre}}</h5>
+      <div class="card_general">
       <div *ngFor="let equipo of liga.equipos, let x = index" class="card_manager2">
         <!-- <h5 class="card-title">Externo x {{x}}</h5> -->
-        <div class="card " style="width: 18rem;">
+        <div class="card " >
             <div class="card-body">
                 <!-- <h5 class="card-title">Interno i {{i}}</h5> -->
             <!-- <h5 class="card-title">Interno x {{x}}</h5> -->
-            <h5 class="card-title">{{equipo.nombre}}</h5>
-            <h5 class="card-title">{{equipo.managerId}}</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <h5 class="card-title name-title">{{equipo.nombre}}</h5>
+            <h5 class="card-title ">{{equipo.managerId}}</h5>
+            <!-- <p class="card-text">Pincha el link para ver Jugadores.</p> -->
+            <a href="#" class="card-link">Ver Equipo</a>
+            <!-- <a href="#" class="card-link">Another link</a> -->
           </div>
         </div>
         <hr>
       </div>
+    </div>
     <hr>
   </div>
 </div>
