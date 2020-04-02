@@ -78,6 +78,7 @@ import { FantasySeleccionJugadoresComponent } from './fantasy/fantasy-seleccion-
 import { ManagersComponent } from './components/user/managers/managers.component';
 import { EditManagersComponent } from './components/user/managers/edit-managers/edit-managers.component';
 import { Pitcherinfotemp2019Component } from './components/temp2019/pitchers2019/pitcherinfotemp2019/pitcherinfotemp2019.component';
+import { PByteam2019Component } from './components/temp2019/pitchers2019/p-byteam2019/p-byteam2019.component';
 
 
 const routes: Routes = [
@@ -122,7 +123,7 @@ const routes: Routes = [
   component: PlayersComponent},
   { path: 'p_actives19',
   component: PActives2019Component},
-  { path: 'p_ftsy19',
+  { path: 'p_dominic_ftsy19',
   component: PitchersFtsyComponent},
   { path: 'p_Vzlaftsy19',
   component: PitchersVzlaFtsyComponent},
@@ -142,6 +143,8 @@ const routes: Routes = [
   component: Playerinfo2019Component},
   { path: 'playerDominicaninfo2019/:code',
   component: PlayerInfoDominicanComponent},
+  { path: 'PitcherDominicaninfo2019/:code',
+  component: PByteam2019Component},
   { path: 'pitcherinfo2019/ :çode',
   component:Pitcherinfo2019Component},
   { path: 'playeroftheweek',
