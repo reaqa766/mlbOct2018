@@ -4,9 +4,8 @@ export interface Equipo {
 
   nombre: string,
   logo?: string,
-  jugadores: Jugador[];
+  jugadores: Jugador[],
   puntos?: string,
-  managerId: string;
-
-
+  managerId: string,
+  managerName?: string
 }

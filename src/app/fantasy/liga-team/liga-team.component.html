@@ -1,23 +1,83 @@
 <div class="container-daily">
   <h1 class="daily-title">Liga </h1>
-  <!-- <h1 class="daily-title">Liga {{ligas.nombre}}</h1> -->
+
+  <section id="team" class="pb-5">
+    <div class="container">
+      <div *ngFor="let liga of ligas" class="card_manager">
+        <h5 class="section-title ">{{liga.nombre}}</h5>
+        <div class="row card_wrapper">
+          <!-- Team member -->
+          <div *ngFor="let equipo of liga.equipos, let x = index" class="card_manager2">
+            <div class="col-xs-12 col-sm-6 col-md-2">
+              <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                <div class="mainflip">
+                  <div class="frontside">
+                    <div class="card">
+                      <div class="card-body text-center">
+                        <p><img class=" img-fluid" src="{{equipo.logo}}" alt="card image"></p>
+                        <h4 class="card-title">{{equipo.nombre}}</h4>
+                        <h4 class="card-title">{{equipo.managerName}}</h4>
+                        <!-- <p class="card-text">This is basic card with image on top, title, description and button.</p> -->
+                        <a routerLink="/" routerLinkActive="router-link-active" class="btn btn-primary card-link">Ver
+                          Equipo</a>
+
+                        <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="backside">
+                    <div class="card">
+                      <div class="card-body text-center mt-4">
+                        <h4 class="card-title">{{equipo. managerName}}</h4>
+                        <!-- <p class="card-text">This is basic card with image on top, title, description and button.This is
+                        basic card with image on top, title, description and button.This is basic card with image on
+                        top, title, description and button.</p> -->
+                        <ul class="list-inline">
+                          <li class="list-inline-item">
+                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                              <i class="fa fa-facebook"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                              <i class="fa fa-twitter"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                              <i class="fa fa-skype"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                              <i class="fa fa-google"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
-  <div class="container_cards">
+  <!-- <div class="container_cards">
     <div *ngFor="let liga of ligas" class="card_manager">
       <h5 class="card-title-liga">{{liga.nombre}}</h5>
       <div class="card_general">
       <div *ngFor="let equipo of liga.equipos, let x = index" class="card_manager2">
-        <!-- <h5 class="card-title">Externo x {{x}}</h5> -->
         <div class="card " >
+              <img class="card-img-top" src="{{liga.logo}}" alt="Card image cap"  >
             <div class="card-body">
-                <!-- <h5 class="card-title">Interno i {{i}}</h5> -->
-            <!-- <h5 class="card-title">Interno x {{x}}</h5> -->
             <h5 class="card-title name-title">{{equipo.nombre}}</h5>
-            <h5 class="card-title ">{{equipo.managerId}}</h5>
-            <!-- <p class="card-text">Pincha el link para ver Jugadores.</p> -->
-            <a href="#" class="card-link">Ver Equipo</a>
-            <!-- <a href="#" class="card-link">Another link</a> -->
+            <h5 class="card-title name-title ">{{equipo. managerName}}</h5>
+            <a routerLink="/" routerLinkActive="router-link-active"  class="btn btn-primary card-link">Ver Equipo</a>
           </div>
         </div>
         <hr>
@@ -25,7 +85,7 @@
     </div>
     <hr>
   </div>
-</div>
+</div> -->
 
 
   <!-- <div *ngIf="allItems" class="title-position">
