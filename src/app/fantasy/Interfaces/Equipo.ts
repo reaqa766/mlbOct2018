@@ -7,5 +7,7 @@ export interface Equipo {
   jugadores: Jugador[],
   puntos?: string,
   managerId: string,
-  managerName?: string
+  managerName?: string,
+  paisDeResidencia: string,
+  nroJugadores?: any,
 }
