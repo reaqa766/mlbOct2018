@@ -98,6 +98,7 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
           Liga de Fantasía</a>
+
         <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
           <ng-container *ngIf="!isLogin">
             <a class="dropdown-item" (click)="closeMenu()" routerLink="login">Login</a>
@@ -105,19 +106,39 @@
             <a class="dropdown-item" (click)="closeMenu()" routerLink="register">Registrarse</a>
           </ng-container>
           <ng-container *ngIf="isLogin">
-            <a class="dropdown-item" (click)="closeMenu()" routerLink="ligasFantasy">Ligas</a>
-            <a class="dropdown-item" (click)="closeMenu()" routerLink="ligaTeam">Detalle Ligas</a>
-            <a class="dropdown-item" (click)="closeMenu()" routerLink="actives2019">Equipo con Puntos</a>
-            <a class="dropdown-item" (click)="closeMenu()" routerLink="bio_actives2019">Bat Venezolanos</a>
-            <a class="dropdown-item" (click)="closeMenu()" routerLink="team2019">Bat Dominicanos</a>
-            <a class="dropdown-item" (click)="closeMenu()" routerLink="p_Vzlaftsy19">Pitchers Venezolanos</a>
-            <a class="dropdown-item" (click)="closeMenu()" routerLink="p_dominic_ftsy19">Pitchers Dominicanos</a>
-            <div class="dropdown-divider"></div>
-            <span class="dropdown-item" (click)="onClickLogOut()" >Log out</span>
+
+              <a class="dropdown-item sub_Menu_Titulo">Ligas</a>
+              <a class="dropdown-item" (click)="closeMenu()" routerLink="ligasFantasy">Ligas</a>
+              <a class="dropdown-item" (click)="closeMenu()" routerLink="ligaTeam">Detalle Ligas</a>
+
+              <div class="dropdown-divider"></div>
+
+              <a class="dropdown-item sub_Menu_Titulo">Estadísticas Bateo 2019</a>
+              <a class="dropdown-item" (click)="closeMenu()" routerLink="bio_actives2019">Venezolanos</a>
+              <a class="dropdown-item" (click)="closeMenu()" routerLink="team2019">Dominicanos</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item sub_Menu_Titulo">Estadísticas Pitcheo 2019</a>
+
+              <a class="dropdown-item" (click)="closeMenu()" routerLink="p_Vzlaftsy19">Venezolanos</a>
+              <a class="dropdown-item" (click)="closeMenu()" routerLink="p_dominic_ftsy19">Dominicanos</a>
+
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item sub_Menu_Titulo">Simulacro de puntos</a>
+              <a class="dropdown-item" (click)="closeMenu()" routerLink="actives2019">Puntos(hasta 12/03/20)</a>
+
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item sub_Menu_Titulo">Tu Equipo</a>
+              <a class="dropdown-item" (click)="closeMenu()" routerLink="ligaTeam">Revisa de Equipo</a>
+
+
+
+              <div class="dropdown-divider"></div>
+              <span class="dropdown-item" (click)="onClickLogOut()">Log out</span>
           </ng-container>
-        </div>
+          </div>
 
       </li>
+
       <li class="nav-item mr-4 dropdown" *ngIf="isAdmin">
       <!-- <li *ngIf="administracion" class="nav-item mr-4 dropdown" *ngIf="isAdmin"> -->
         <a  *ngIf="administracion" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"

@@ -6,5 +6,5 @@ export  interface  Liga {
   esPaga: string,
   logo?: string,
   equipos: Equipo[],
-  jugadores?: {jugador: Jugador, equipo?: string}[]
+  jugadores?: {jugador?: Jugador, equipo?: string}[]
 }

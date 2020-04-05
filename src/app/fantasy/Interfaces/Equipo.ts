@@ -2,12 +2,12 @@ import { Jugador } from "./Jugador";
 
 export interface Equipo {
 
-  nombre: string,
+  nombre?: string,
   logo?: string,
-  jugadores: Jugador[],
+  jugadores?: Jugador[],
   puntos?: string,
-  managerId: string,
+  managerId?: string,
   managerName?: string,
-  paisDeResidencia: string,
+  paisDeResidencia?: string,
   nroJugadores?: any,
 }

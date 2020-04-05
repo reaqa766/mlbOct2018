@@ -28,7 +28,7 @@ section {
 section .section-title {
   font-weight: bold;
   text-align: center;
-  color: #007b5e;
+  color: #630d15;
   margin-bottom: 50px;
   text-transform: uppercase;
 }
@@ -148,23 +148,6 @@ hr {
 }
 
 /* Prueba de Cards flips */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -392,4 +375,11 @@ th {
 }
 .paginator_text {
   display: none;
+}
+
+@media screen and (max-width:600px) and (min-width: 300px) {
+  .daily-title {
+  font-size: 1.5rem;
+
+}
 }
