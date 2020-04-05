@@ -1,77 +1,219 @@
-<div class="title_page">
-  <h1 class="subtitle_fantasy">MODULO DE ASIGNACION DE JUGADORES</h1>
+<div class="container_seleccion">
+
+  <div class="title_page">
+    <h1 class="subtitle_fantasy">MODULO DE CREACION LISTA PARA DRAFT</h1>
+  </div>
+
+  <!-- AREA DE SELECCIONES -->
+
+  <div class="areaSelecciones">
+
+    <!-- SELECT DE TIPO DE LIGA-->
+
+    <div class="areaSeleccionLiga_1">
+      <label class="seleccionLiga" for="Campeonato">Tipo de Liga</label>
+      <select id="Campeonato" [(ngModel)]="tipoDeCampeonatoSeleccionado" (ngModelChange)="filtrarLigasPorTipo($event)"
+        autofocus>
+        <option [disabled]="" [selected]="true" [value]="" disabled>Tipo de Liga</option>
+
+        <option *ngFor="let tipo of tipoLigas" [value]="tipo.esPaga">
+          {{tipo.display}}
+        </option>
+      </select>
+      <hr>
+    </div>
+
+    <div class="areaSeleccionLiga_2">
+
+      <ng-container *ngIf="tipoDeCampeonatoSeleccionado">
+
+        <!-- SELECT DE NOMBRE DE LIGA-->
+
+        <label class="seleccionLiga" for="Liga">Liga</label>
+
+        <select id="Liga" [(ngModel)]="ligaSeleccionada" (ngModelChange)="filtrarEquipos($event)">
+          <option [disabled]="" [selected]="true" disabled>Nombre de la Liga</option>
+          <option *ngFor="let liga of ligasFiltradas" [ngValue]="liga" [disabled]="">
+            {{liga.nombre}}
+          </option>
+        </select>
+        <hr>
+      </ng-container>
+    </div>
+
+    <div class="areaSeleccionLiga_3">
+
+      <!-- SELECT DE NOMBRE DE EQUIPO-->
+
+      <ng-container *ngIf="ligaSeleccionada">
+
+        <label class="seleccionEquipo" for="Equipo">Equipo</label>
+
+        <select id="Equipo" [(ngModel)]="equipoSeleccionado" (ngModelChange)="seleccionarEquipo($event)">
+          <option [disabled]="" [selected]="true" disabled>Nombre del Equipo</option>
+
+          <option *ngFor="let equipo of ligaSeleccionada.equipos" [ngValue]="equipo">
+            {{equipo.nombre}}
+          </option>
+        </select>
+        <hr>
+      </ng-container>
+    </div>
+    <!-- <h4 *ngIf="ligaSeleccionada">{{equipoSeleccionado}}</h4> -->
+  </div>
 </div>
 
-<div class="card" *ngIf="!isLoading">
-  <div class="card-body">
+<!-- Para usar en el area de PLAYERS -->
 
-    <form [formGroup]='profileForm' (ngSubmit)="onSubmit(profileForm)">
-      <div class="form-group">
-        <div class="form-group  form-group_selec_liga">
-          <input type="text" formControlName="liga" id="liga" class="form-control form_liga"
-            placeholder="Nombre de la Liga">
-          <select class="form_text" style="height:3rem;" type="text" formControlName="Liga" [disabled]="true">
-            <option [disabled]="true" [selected]="true" [value]="null">Liga Fantasy</option>
-            <option value="VD">VD</option>
-            <option value="VDVZLA">VD VZLA</option>
-            <option value="VDESTE">VD ESTE</option>
-            <option value="VDOESTE">VD OESTE</option>
-            <option value="VDNORTE">VD NORTE</option>
-            <option value="VDSUR">VD SUR</option>
-            <option value="VDCENTRO">VDCENTRO</option>
-            <option value="VDVZLA">VD VZLA</option>
-            <option value="VDPROESTE">VENEDOMPRO ESTE</option>
-            <option value="VDPROCENTRO">VENEDOMPRO CENTRO</option>
-            <option value="VDPROSUR">VENEDOMPRO SUR</option>
-          </select>
+<div class="container-jugadores"
+  [style.display]="equipoSeleccionado && (equipoSeleccionado.jugadores.length > 19)  ? 'block' : 'grid'">
+  <div [style.display]="equipoSeleccionado && (equipoSeleccionado.jugadores.length > 19)  ? 'none' : 'grid'">
+    <div *ngIf="mostrarJugadores" class="container-izquierdo-grid">
+
+      <div class="container-actives">
+        <h1 class="bioActives-title">Selección de Jugadores</h1>
+        <p class="title-position"> Fantasy 2020 </p>
+
+        <!--LOADER -->
+        <div *ngIf="!allItems">
+          <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
+          <p class="spiner_load">CARGANDO</p>
         </div>
+
+        <div *ngIf="allItems">
+          <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..."
+            class="advancedSearchTextbox">
+          <div *ngIf="!allItems[0]" class="error_search d-flex justify-content-center">
+            <h4 class="error_message"> <strong>'{{searchText}}'</strong> El Jugador no existe. Solo busque por nombre,
+              sobrenombre y
+              equipo</h4>
+          </div>
+
+          <ng-container *ngIf="!(pager.allItems === 0)">
+
+            <div class="container-actives_cards ">
+              <ng-container
+                *ngIf="!(pager.allItems-1 === pager.endIndex) && equipoSeleccionado && (equipoSeleccionado.jugadores.length < 20)">
+
+                <ng-container *ngFor="let item of allItems | pagination:pager.startIndex:pager.pageSize; let i = index">
+
+                  <div class="card card1 img_picture_box" style="width: 95%;">
+                    <img class="card-img-top img_picture_element" appImgFallback
+                      src="https://securea.mlb.com/mlb/images/players/head_shot/{{item.jugador?.id}}.jpg"
+                      alt="Jugador de Grandes Ligas">
+                    <hr>
+                    <div class="card-body">
+                      <h5 class="card-title">{{item.jugador.fullName}}</h5>
+                      <h5 class="card-title1">{{item.jugador.primaryPosition.name}}</h5>
+                      <h5 class="card-title1">{{item.jugador.birthCountry}}</h5>
+                      <h5 class="card-title1">{{item.jugador.stats[0].splits[0].team.name}}</h5>
+                      <button class="btn btn-secondary" (click)="addPlayer(item.jugador.id)">Agregar</button>
+                    </div>
+                  </div>
+                </ng-container>
+              </ng-container>
+              <ng-container
+                *ngIf="pager.allItems-1 === pager.endIndex && equipoSeleccionado && (equipoSeleccionado.jugadores.length < 20)">
+                <div class="card card1"
+                  *ngFor="let item of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*8); let i = index">
+                  <h1>{{i}}</h1>
+                  <img class="card-img-top" appImgFallback
+                    src="https://securea.mlb.com/mlb/images/players/head_shot/{{item.jugador?.id}}.jpg"
+                    alt="Jugador de Grandes Ligas">
+                  <hr>
+                  <div class="card-body">
+                    <h5 class="card-title">{{item.jugador.fullName}}</h5>
+                    <h5 class="card-title1">{{item.jugador.primaryPosition.name}}</h5>
+                    <h5 class="card-title1">{{item.jugador.birthCountry}}</h5>
+                    <h5 class="card-title1">{{item.jugador.stats[0].splits[0].team.name}}</h5>
+                    <button class="btn btn-secondary" (click)="addPlayer(item.jugador.id)">Agregar</button>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+            <div class="container paginator">
+              <div class="text-center">
+                <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
+                  <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+                    <a (click)="setPage(1)" class="page-link paginator_text">First</a>
+                  </li>
+                  <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+                    <a (click)="setPage(pager.currentPage - 1)" class="page-link paginator_text">Previous</a>
+                  </li>
+                  <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}"
+                    class="page-item">
+                    <a (click)="setPage(page)" class="page-link">{{page}}</a>
+                  </li>
+                  <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+                    <a (click)="setPage(pager.currentPage + 1)" class="page-link paginator_text">Next</a>
+                  </li>
+                  <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+                    <a (click)="setPage(pager.totalPages)" class="page-link paginator_text">Last</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </ng-container>
         </div>
-      </form>
-
-<hr>
-  <form [formGroup]='profileForm' (ngSubmit)="onSubmit(profileForm)">
-      <div class="form-group">
-
-        <div class="form-group  form_group_select_team">
-            <input type="text" formControlName="liga" id="equipo" class="form-control form_team"
-              placeholder="Nombre del Equipo">
-            <select class="form_text_team" style="height:3rem;" type="text" formControlName="liga" [disabled]="true">
-              <option [disabled]="true" [selected]="true" [value]="null">Equipo</option>
-              <option value="VD">VD</option>
-              <option value="VDVZLA">VD VZLA</option>
-              <option value="VDESTE">VD ESTE</option>
-              <option value="VDOESTE">VD OESTE</option>
-              <option value="VDNORTE">VD NORTE</option>
-              <option value="VDSUR">VD SUR</option>
-              <option value="VDCENTRO">VDCENTRO</option>
-              <option value="VDVZLA">VD VZLA</option>
-              <option value="VDPROESTE">VENEDOMPRO ESTE</option>
-              <option value="VDPROCENTRO">VENEDOMPRO CENTRO</option>
-              <option value="VDPROSUR">VENEDOMPRO SUR</option>
-            </select>
-          </div>
-          </div>
-        </form>
       </div>
-  </div>
-<!-- </div> -->
-<!-- <div class="seleccion_jugadores"> -->
-    <div class="container-daily">
-        <h1 class="daily-title">Seleccion de Jugadores</h1>
-      <br>
-        <h3 class="daily-title">Temporada 2019</h3>
-        <!-- <h3 class="daily-title">Temporada Regular 2019</h3> -->
-      </div>
-
-
-  <div class="container_grid_Jugadores">
-    <div class="seleccion">
-      <app-liga-team></app-liga-team>
     </div>
-    <div class="seleccionados">
-        <app-liga-team></app-liga-team>
-      </div>
-
-
   </div>
-<!-- </div> -->
+
+
+
+<!-- Para Exportar Excel-->
+
+<div class="container-derecho-grid" *ngIf="equipoSeleccionado">
+  <hr class="hr_mobil">
+  <div class="row">
+  <!-- <div class="row  justify-content-center"> -->
+  <!-- <div class="row py-5 justify-content-center"> -->
+   <div class="col-md-12">
+   <!-- <div class="col-md-8"> -->
+      <h1 class="bioActives-title ">Listado de Seleccionados</h1>
+    <!-- <h1 class="text-center py-4">Export Data to Excel Sheet in Angular 8</h1> -->
+    <div class="col-md-12 table-responsive" #epltable>
+     <div style="padding-bottom: 10px;padding-top: 10px;">
+      <div class="row">
+       <div class="col-sm-12">
+        <button (click)="exportToExcel()" class="btn btn-success">Export To Excel</button>
+       </div>
+      </div>
+     </div>
+     <table class="table table-hover table-striped table-dark">
+     <!-- <table class="table table-bordered table-responsive"  > -->
+      <thead class="thead-dark">
+      <tr >
+       <th>Nombre</th>
+       <th>Apellido</th>
+       <th>Posición</th>
+       <th>Edad </th>
+       <th>Debut MLB</th>
+       <th>País</th>
+       <!-- <th>AVG/Efect</th>
+       <th>Lost</th>
+       <th>Points</th> -->
+      </tr>
+     </thead>
+     <tbody>
+      <tr *ngFor="let player of equipoSeleccionado.jugadores, let i = index" >
+       <td>{{player.firstName}}</td>
+       <td>{{player.lastName}}</td>
+       <td>{{player.primaryPosition.name}}</td>
+       <td>{{player.currentAge}}</td>
+       <td>{{player.mlbDebutDate}}</td>
+       <td>{{player.birthCountry}}</td>
+       <!-- <td>{{club.drawn}}</td>
+       <td>{{club.lost}}</td>
+       <td>{{club.points}}</td> -->
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+ </div>
+</div>
+<!-- Para Exportar Excel-->
+
+</div>
+
