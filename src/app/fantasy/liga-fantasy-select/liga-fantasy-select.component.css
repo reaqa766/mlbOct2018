@@ -97,6 +97,8 @@ hr {
   font-weight: bold;
   /* margin: 0 0  0 auto; */
   text-align: center;
+  width: fit-content;
+  margin: 0 auto;
 }
 .title-position2 {
   color: antiquewhite;
@@ -104,6 +106,8 @@ hr {
   font-weight: bold;
   /* margin: 0 0  0 auto; */
   text-align: center;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .advancedSearchTextbox {
@@ -115,7 +119,7 @@ hr {
 }
 
 .card-body{
-  max-height: 10rem;
+  max-height: 12rem;
   margin: 0 auto .2rem;
   padding: 0.10rem !important;
 }
@@ -310,9 +314,9 @@ font-weight: 400;
   margin: auto;
   font-size: 0.65rem
 }
-.paginator_text {
+/* .paginator_text {
   display: none;
-}
+} */
 
 @media only screen and (min-width:300px ) and (max-width: 768px)  {
   .container-actives_cards {
@@ -322,7 +326,7 @@ font-weight: 400;
       grid-auto-rows: 1fr 1fr 1fr;
       grid-column-gap: 2px;
       justify-items: center;
-      width: 80%;
+      width: 75%;
 
   }
 .bioActives-title {
@@ -333,6 +337,8 @@ font-weight: 400;
       }
 .title-position {
       font-size: .75rem;
+      width: fit-content;
+      margin: 0 auto;
   }
 
 .advancedSearchTextbox {
@@ -382,9 +388,9 @@ font-weight: 400;
       font-size: .75rem
   }
 
-  .paginator_text {
+  /* .paginator_text {
       display: none;
-  }
+  } */
   .img_picture_box:hover .img_picture_element{
     transform: none;
     opacity: 1;
@@ -516,11 +522,14 @@ font-weight: 400;
   .container-izquierdo-grid {
     grid-column: 1/2;
     grid-row: 1/2;
+    width: 80%;
   }
   .container-derecho-grid {
     grid-column: 2/3;
     grid-row: 1/2;
     margin: 0  auto;
+    width: 80%;
+
   }
 
   .guardar-datos {
@@ -543,11 +552,16 @@ font-weight: 400;
     .container-izquierdo-grid {
       grid-column: 1/2;
       grid-row: 1/2;
+      margin: 0 .5rem 0 0;
+      width: 100%;
+
     }
     .container-derecho-grid {
       grid-column: 1/2;
       grid-row: 2/3;
-      margin: 0  auto;
+      margin: 0 .5rem 0 0;
+      width: 100%;
+
     }
 
     .areaSelecciones {
@@ -582,6 +596,11 @@ font-weight: 400;
      .hr_mobil {
        display: block ;
      }
+     .btn {
+      font-size: .65rem;
+      width: 100%;
+    }
+
 
      .container-actives_cards {
       margin: 1% auto 0;
@@ -591,7 +610,7 @@ font-weight: 400;
       grid-auto-rows: 1fr;
       grid-column-gap: 2px;
       justify-items: center;
-      width: 80%;
+      width: 100%;
 
     }
     .container-actives_cards .card:nth-child(1) {
@@ -615,6 +634,18 @@ font-weight: 400;
       grid-row: 4/5;
       margin-bottom: 20px;
   }
+  .card-title {
+    font-size: 1.85em;
+    font-weight: bold;
+    text-align: center;
+  }
+  .card-title1 {
+    font-size: 1.65em;
+    text-align: center;
+  }
+.table {
+  font-size: .55rem !important;
+}
 
 
     }
