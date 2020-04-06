@@ -66,8 +66,8 @@
 <!-- Para usar en el area de PLAYERS -->
 
 <div class="container-jugadores"
-  [style.display]="equipoSeleccionado && (equipoSeleccionado.jugadores.length > 19)  ? 'block' : 'grid'">
-  <div [style.display]="equipoSeleccionado && (equipoSeleccionado.jugadores.length > 19)  ? 'none' : 'grid'">
+  [style.display]="equipoSeleccionado && (equipoSeleccionado.jugadores.length > 89)  ? 'block' : 'grid'">
+  <div [style.display]="equipoSeleccionado && (equipoSeleccionado.jugadores.length > 89)  ? 'none' : 'grid'">
     <div *ngIf="mostrarJugadores" class="container-izquierdo-grid">
 
       <div class="container-actives">
@@ -93,7 +93,7 @@
 
             <div class="container-actives_cards ">
               <ng-container
-                *ngIf="!(pager.allItems-1 === pager.endIndex) && equipoSeleccionado && (equipoSeleccionado.jugadores.length < 20)">
+                *ngIf="!(pager.allItems-1 === pager.endIndex) && equipoSeleccionado && (equipoSeleccionado.jugadores.length < 90)">
 
                 <ng-container *ngFor="let item of allItems | pagination:pager.startIndex:pager.pageSize; let i = index">
 
@@ -113,7 +113,7 @@
                 </ng-container>
               </ng-container>
               <ng-container
-                *ngIf="pager.allItems-1 === pager.endIndex && equipoSeleccionado && (equipoSeleccionado.jugadores.length < 20)">
+                *ngIf="pager.allItems-1 === pager.endIndex && equipoSeleccionado && (equipoSeleccionado.jugadores.length < 89)">
                 <div class="card card1"
                   *ngFor="let item of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*8); let i = index">
                   <h1>{{i}}</h1>

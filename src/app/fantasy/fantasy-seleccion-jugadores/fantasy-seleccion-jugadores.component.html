@@ -11,7 +11,7 @@
     <!-- SELECT DE TIPO DE LIGA-->
 
     <div class="areaSeleccionLiga_1">
-      <label class="seleccionLiga" for="Campeonato">Selecciona el tipo de Liga</label>
+      <label class="seleccionLiga" for="Campeonato">Tipo de Liga</label>
       <select id="Campeonato" [(ngModel)]="tipoDeCampeonatoSeleccionado" (ngModelChange)="filtrarLigasPorTipo($event)"
         autofocus>
         <option [disabled]="" [selected]="true" [value]="" disabled>Tipo de Liga</option>
@@ -29,7 +29,7 @@
 
         <!-- SELECT DE NOMBRE DE LIGA-->
 
-        <label class="seleccionLiga" for="Liga">Seleccione el nombre de la Liga</label>
+        <label class="seleccionLiga" for="Liga">Liga</label>
 
         <select id="Liga" [(ngModel)]="ligaSeleccionada" (ngModelChange)="filtrarEquipos($event)">
           <option [disabled]="" [selected]="true" disabled>Nombre de la Liga</option>
@@ -49,7 +49,7 @@
 
       <ng-container *ngIf="ligaSeleccionada">
 
-        <label class="seleccionEquipo" for="Equipo">Seleccione el nombre del Equipo</label>
+        <label class="seleccionEquipo" for="Equipo">Equipo</label>
 
         <select id="Equipo" [(ngModel)]="equipoSeleccionado" (ngModelChange)="seleccionarEquipo($event)">
           <option [disabled]="" [selected]="true" disabled>Nombre del Equipo</option>
@@ -188,7 +188,7 @@
             equipo</h4>
         </div> -->
 
-          <ng-container *ngIf="!(pager.allItems === 0)">
+          <!-- <ng-container *ngIf="!(pager.allItems === 0)"> -->
 
             <div class="container-actives-cards-selected ">
               <div class="card card1 img_picture_box" style="width: 95%;"
@@ -201,12 +201,12 @@
                 <div class="card-body card-body-selected">
                   <h5 class="card-title">{{player.fullName}}</h5>
                   <h5 class="card-title">{{player.primaryPosition.name}}</h5>
-                  <button (click)="removePlayer(player.id)">Eliminar</button>
+                  <button class="btn-eliminar" (click)="removePlayer(player.id)">Eliminar</button>
                 </div>
               </div>
             </div>
 
-          </ng-container>
+          <!-- </ng-container> -->
 
         </div>
       </div>

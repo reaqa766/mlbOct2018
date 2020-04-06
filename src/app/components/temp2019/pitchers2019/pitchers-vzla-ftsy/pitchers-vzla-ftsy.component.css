@@ -154,9 +154,9 @@ font-weight: 400;
     margin: auto;
     font-size: 0.65rem
 }
-.paginator_text {
+/* .paginator_text {
     display: none;
-}
+} */
 
  @media only screen and (min-width:300px ) and (max-width: 766px)  {
     .container-actives_cards {
@@ -226,9 +226,9 @@ font-weight: 400;
         font-size: .75rem
     }
 
-    .paginator_text {
+    /* .paginator_text {
         display: none;
-    }
+    } */
  }
  @media only screen and (min-width:767px ) and (max-width: 1023px)  {
     .container-actives_cards {

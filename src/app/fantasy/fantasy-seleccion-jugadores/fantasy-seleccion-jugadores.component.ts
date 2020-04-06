@@ -299,29 +299,37 @@ export class FantasySeleccionJugadoresComponent implements OnInit {
 
   addPlayer(id) {
     // Agrego a equipo
-    const {jugador} = this.allItems.find(({jugador} )=> jugador.id == id);
+    const { jugador } = this.allItems.find(({ jugador }) => jugador.id == id);
     this.equipoSeleccionado.jugadores.push(jugador);
     // Reflejo los cambios en la liga
-    this.ligaSeleccionada.jugadores = this.ligaSeleccionada.jugadores.map(({jugador}) => {
+    this.ligaSeleccionada.jugadores = this.ligaSeleccionada.jugadores.map(({ jugador, equipo }) => {
       return {
         jugador,
-        equipo: jugador.id == id ? this.equipoSeleccionado.nombre : null
+        equipo: jugador.id == id ? this.equipoSeleccionado.nombre : equipo
       }
     });
-    this.allItems = this.ligaSeleccionada.jugadores.filter(({equipo}) => !equipo);
+    this.allItems = this.ligaSeleccionada.jugadores.filter(({ equipo }) => (!equipo));
+    // Filtramos por la busqueda si existe
+    if(this.searchText) {
+      this.onSearchChange();
+    }
   }
 
   removePlayer(id) {
     // Lo saco del equipo
     this.equipoSeleccionado.jugadores = this.equipoSeleccionado.jugadores.filter(jugador => jugador.id != id);
     // Reflejo los cambios en la liga
-    this.ligaSeleccionada.jugadores = this.ligaSeleccionada.jugadores.map(({jugador,equipo}) => {
+    this.ligaSeleccionada.jugadores = this.ligaSeleccionada.jugadores.map(({ jugador, equipo }) => {
       return {
         jugador,
         equipo: jugador.id == id ? null : equipo
       }
     });
-    this.allItems = this.ligaSeleccionada.jugadores.filter(({equipo}) => !equipo);
+    this.allItems = this.ligaSeleccionada.jugadores.filter(({ equipo }) => !equipo);
+    // Filtramos por la busqueda si existe
+    if(this.searchText) {
+      this.onSearchChange();
+    }
   }
 
 }

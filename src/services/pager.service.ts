@@ -104,7 +104,7 @@ export class PagerService {
     }
 
 // Para el Componente fantasy-seleccion-jugadores
-    getPager3(allItems: number, currentPage: number = 1, pageSize: number = 5) {
+    getPager3(allItems: number, currentPage: number = 1, pageSize: number = 4) {
         let totalPages = Math.ceil(allItems / pageSize);
 
         // ensure current page isn't out of range
@@ -115,7 +115,7 @@ export class PagerService {
         }
 
         let startPage: number, endPage: number;
-        if (totalPages <= 5) {
+        if (totalPages <= 4) {
             // less than 5 total pages so show all
             startPage = 1;
             endPage = totalPages;
