@@ -145,7 +145,7 @@ const routes: Routes = [
   component: PlayerInfoDominicanComponent},
   { path: 'PitcherDominicaninfo2019/:code',
   component: PByteam2019Component},
-  { path: 'pitcherinfo2019/ :çode',
+  { path: 'pitcherinfo2019',
   component:Pitcherinfo2019Component},
   { path: 'playeroftheweek',
   component: PlayerOfTheWeekComponent, pathMatch: 'full'},
