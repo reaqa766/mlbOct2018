@@ -66,13 +66,14 @@
 <!-- Para usar en el area de PLAYERS -->
 
 <div class="container-jugadores"
-  [style.display]="equipoSeleccionado && (equipoSeleccionado.jugadores.length > 89)  ? 'block' : 'grid'">
-  <div [style.display]="equipoSeleccionado && (equipoSeleccionado.jugadores.length > 89)  ? 'none' : 'grid'">
+  [style.display]="equipoSeleccionado && (equipoSeleccionado.jugadores.length > 49)  ? 'block' : 'grid'">
+  <div [style.display]="equipoSeleccionado && (equipoSeleccionado.jugadores.length > 49)  ? 'none' : 'grid'">
     <div *ngIf="mostrarJugadores" class="container-izquierdo-grid">
 
       <div class="container-actives">
         <h1 class="bioActives-title">Selección de Jugadores</h1>
         <p class="title-position"> Fantasy 2020 </p>
+        <p class="title-position3"> Puedes escoger hasta 50 Jugadores </p>
 
         <!--LOADER -->
         <div *ngIf="!allItems">
@@ -93,7 +94,7 @@
 
             <div class="container-actives_cards ">
               <ng-container
-                *ngIf="!(pager.allItems-1 === pager.endIndex) && equipoSeleccionado && (equipoSeleccionado.jugadores.length < 90)">
+                *ngIf="!(pager.allItems-1 === pager.endIndex) && equipoSeleccionado && (equipoSeleccionado.jugadores.length < 50)">
 
                 <ng-container *ngFor="let item of allItems | pagination:pager.startIndex:pager.pageSize; let i = index">
 
@@ -113,7 +114,7 @@
                 </ng-container>
               </ng-container>
               <ng-container
-                *ngIf="pager.allItems-1 === pager.endIndex && equipoSeleccionado && (equipoSeleccionado.jugadores.length < 89)">
+                *ngIf="pager.allItems-1 === pager.endIndex && equipoSeleccionado && (equipoSeleccionado.jugadores.length < 50)">
                 <div class="card card1"
                   *ngFor="let item of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*8); let i = index">
                   <h1>{{i}}</h1>
@@ -184,12 +185,14 @@
      <!-- <table class="table table-bordered table-responsive"  > -->
       <thead class="thead-dark">
       <tr >
+       <th>No.</th>
        <th>Nombre</th>
        <th>Apellido</th>
        <th>Posición</th>
-       <th>Edad </th>
-       <th>Debut MLB</th>
-       <th>País</th>
+       <th class="no-mobil">Edad </th>
+       <th class="no-mobil">Debut MLB</th>
+       <th class="no-mobil">País</th>
+       <th>Eliminar</th>
        <!-- <th>AVG/Efect</th>
        <th>Lost</th>
        <th>Points</th> -->
@@ -197,12 +200,14 @@
      </thead>
      <tbody>
       <tr *ngFor="let player of equipoSeleccionado.jugadores, let i = index" >
-       <td>{{player.firstName}}</td>
-       <td>{{player.lastName}}</td>
-       <td>{{player.primaryPosition.name}}</td>
-       <td>{{player.currentAge}}</td>
-       <td>{{player.mlbDebutDate}}</td>
-       <td>{{player.birthCountry}}</td>
+       <td >{{i+1}}</td>
+       <td >{{player.firstName}}</td>
+       <td >{{player.lastName}}</td>
+       <td >{{player.primaryPosition.name}}</td>
+       <td class="no-mobil">{{player.currentAge}}</td>
+       <td class="no-mobil">{{player.mlbDebutDate}}</td>
+       <td class="no-mobil" >{{player.birthCountry}}</td>
+       <td  class="btn-eliminar " (click)="removePlayer(player.id)">Eliminar</td>
        <!-- <td>{{club.drawn}}</td>
        <td>{{club.lost}}</td>
        <td>{{club.points}}</td> -->

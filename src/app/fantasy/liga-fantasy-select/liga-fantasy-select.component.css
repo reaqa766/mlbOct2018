@@ -109,6 +109,19 @@ hr {
   width: fit-content;
   margin: 0 auto;
 }
+.title-position3 {
+  background-color: #fff;
+  color: rgba(27, 27, 27, 0.89);
+  font-size: 1.25rem;
+  font-weight: bold;
+  /* margin: 0 0  0 auto; */
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto 1rem;
+  padding: .25em;
+  border-radius: 7px;
+
+}
 
 .advancedSearchTextbox {
   color: rgb(2, 1, 0);
@@ -132,8 +145,16 @@ hr {
 .btn {
   width: 100%;
   font-size: .65rem;
-  /* margin: 0 0 0 15%; */
+  /* margin: auto .1em; */
 }
+.btn-eliminar {
+  width: 90%;
+  font-size: .65rem;
+  margin:.15em;
+  color: rgba(0, 0, 0, 0.781);
+  background-color: #fff;
+}
+
 
 .fa-baseball-ball {
   font-size: 10rem;
@@ -625,6 +646,10 @@ font-weight: 400;
   }
 .table {
   font-size: .55rem !important;
+}
+
+.no-mobil {
+  display: none;
 }
 
 
