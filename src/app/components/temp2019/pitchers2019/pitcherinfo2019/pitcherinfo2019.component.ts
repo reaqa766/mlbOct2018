@@ -50,6 +50,12 @@ export class Pitcherinfo2019Component implements OnInit {
 
 
   isLoading: boolean;
+  sumaTotal: any;
+  cero_carreras_permitidas: number;
+  una_carreras_permitidas: number;;
+  dos_carreras_permitidas: number;;
+  tres_carreras_permitidas: number;;
+
 
   constructor(private playerService: PitcherspointService, private pagerService: PagerService) { }
 
@@ -66,6 +72,11 @@ export class Pitcherinfo2019Component implements OnInit {
 getPlayersMap() {
   this.players = [];
   this.allItems = [];
+  this.sumaTotal = 0;
+  this.cero_carreras_permitidas = 0;
+  this.una_carreras_permitidas = 0;
+  this.dos_carreras_permitidas = 0;
+  this.tres_carreras_permitidas = 0;
   this.setPage(1);
   const InfoObsPlayer = this.playerService.getAllPlayersDaily3();
   let index = 0;
@@ -88,6 +99,23 @@ getPlayersMap() {
             for(let i = 0; i < player.stats[0].splits.length; i++){
               if(player.stats[0].splits[i].date === this.dia){
                 player.indexStatDate = i;
+                this.cero_carreras_permitidas=0;
+                this.una_carreras_permitidas=0;
+                this.dos_carreras_permitidas=0;
+                this.tres_carreras_permitidas=0;
+                if(player.stats[0].splits[player.indexStatDate].earnedRuns=0){ this.cero_carreras_permitidas = 7}
+                else if (player.stats[0].splits[player.indexStatDate].stat.earnedRuns==1){ this.una_carreras_permitidas = 5}
+                else if (player.stats[0].splits[player.indexStatDate].stat.earnedRuns==2){ this.dos_carreras_permitidas = 3}
+                else if (player.stats[0].splits[player.indexStatDate].statiearnedRuns>=2){ this.tres_carreras_permitidas = 0};
+
+              console.log("this.una_carreras_permitidas", this.una_carreras_permitidas);
+              console.log("EarnedRuns", player.stats[0].splits[player.indexStatDate].stat.earnedRuns);
+
+
+
+                this.sumaTotal = this.sumaTotal + (this.cero_carreras_permitidas + this.una_carreras_permitidas + this.dos_carreras_permitidas + this.tres_carreras_permitidas + player.stats[0].splits[player.indexStatDate].stat.wins) * 3 + (player.stats[0].splits[player.indexStatDate].stat.saves) * 2 +
+                (player.stats[0].splits[player.indexStatDate].stat.losses) * -3;
+
                 return true;
               }
             }
@@ -116,19 +144,22 @@ getPlayersMap() {
         //   if (player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0) {
         //     for (let i = 0; i < player.stats[0].splits.length; i++) {
         //       if (player.stats[0].splits[i].date === this.dia) {
-        //         this.sumaTotal = this.sumaTotal + (player.stats[0].splits[player.indexStatDate].stat.hits) * 1 + (player.stats[0].splits[player.indexStatDate].stat.doubles) * 2 +
-        //           (player.stats[0].splits[player.indexStatDate].stat.triples) * 3 + (player.stats[0].splits[player.indexStatDate].stat.homeRuns) * 4 + (player.stats[0].splits[player.indexStatDate].stat.rbi) * 2 +
-        //           (player.stats[0].splits[player.indexStatDate].stat.runs) * 1 + (player.stats[0].splits[player.indexStatDate].stat.baseOnBalls) * 1 + (player.stats[0].splits[player.indexStatDate].stat.strikeOuts) * -2 +
-        //           (player.stats[0].splits[player.indexStatDate].stat.stolenBases) * 1 + (player.stats[0].splits[player.indexStatDate].stat.caughtStealing) * -2;
+        //         this.sumaTotal = this.sumaTotal + (player.stats[0].splits[player.indexStatDate].stat.wins) * 3 + (player.stats[0].splits[player.indexStatDate].stat.saves) * 2 +
+        //           (player.stats[0].splits[player.indexStatDate].statlosses) * -3;
 
-            //     return true;
-            //   }
-            // }
+        //         return true;
+        //       }
+        //     }
+        //     return false;
+        //   }
+        // })
 
         this.setPage(1);
         this.isLoading = false;
         // console.log('players', this.players);
         }
+        // console.log("index", index);
+
         index++;
 
     });

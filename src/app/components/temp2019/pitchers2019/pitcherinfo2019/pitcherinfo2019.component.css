@@ -53,9 +53,26 @@
   }
 
 
+  .total_pts {
+    background-color: rgb(246, 6, 6);
+    color:#ffffff!important;;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.15rem 10px 0;
+    padding: 0 10px 1px 8px;
+    /* background-color: rgba(3, 2, 2, 0.5); */
+    text-shadow: 2px 2px 8px #111;
+    width: 10%;
+    height: 1.75em;
+    border: solid white 2px;
+    border-radius: 7px;
+
+
+  }
   .Total_Pts {
     background-color: red !important;
   }
+
 
 
   .tarjeta_encabezado {
