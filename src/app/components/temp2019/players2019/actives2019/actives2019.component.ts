@@ -103,7 +103,7 @@ export class Actives2019Component implements OnInit {
           console.log('Original players 6: ', this.players);
           // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
           this.players = this.players.filter(player => {
-            if (player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0) {
+            if (player.stats && player.stats.length !== 0 && player.stats[0].splits  && player.stats[0].splits.length !== 0) {
               for (let i = 0; i < player.stats[0].splits.length; i++) {
                 if (player.stats[0].splits[i].date === this.dia) {
                   player.indexStatDate = i;
