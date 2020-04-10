@@ -111,6 +111,21 @@ getPlayersMap() {
 
 
         this.allItems = this.players;
+
+        // Calculo de Suma Total de Ptos Pitchers
+        // this.players = this.players.filter(player => {
+        //   if (player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0) {
+        //     for (let i = 0; i < player.stats[0].splits.length; i++) {
+        //       if (player.stats[0].splits[i].date === this.dia) {
+        //         this.sumaTotal = this.sumaTotal + (player.stats[0].splits[player.indexStatDate].stat.hits) * 1 + (player.stats[0].splits[player.indexStatDate].stat.doubles) * 2 +
+        //           (player.stats[0].splits[player.indexStatDate].stat.triples) * 3 + (player.stats[0].splits[player.indexStatDate].stat.homeRuns) * 4 + (player.stats[0].splits[player.indexStatDate].stat.rbi) * 2 +
+        //           (player.stats[0].splits[player.indexStatDate].stat.runs) * 1 + (player.stats[0].splits[player.indexStatDate].stat.baseOnBalls) * 1 + (player.stats[0].splits[player.indexStatDate].stat.strikeOuts) * -2 +
+        //           (player.stats[0].splits[player.indexStatDate].stat.stolenBases) * 1 + (player.stats[0].splits[player.indexStatDate].stat.caughtStealing) * -2;
+
+            //     return true;
+            //   }
+            // }
+
         this.setPage(1);
         this.isLoading = false;
         // console.log('players', this.players);

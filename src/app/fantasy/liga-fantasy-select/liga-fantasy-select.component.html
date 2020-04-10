@@ -136,7 +136,7 @@
               <div class="text-center">
                 <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
                   <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-                    <a (click)="setPage(1)" class="page-link paginator_text">First</a>
+                    <a (click)="setPage(1)" class="page-link paginator_text paginator_first_last">First</a>
                   </li>
                   <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
                     <a (click)="setPage(pager.currentPage - 1)" class="page-link paginator_text">Previous</a>
@@ -149,7 +149,7 @@
                     <a (click)="setPage(pager.currentPage + 1)" class="page-link paginator_text">Next</a>
                   </li>
                   <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-                    <a (click)="setPage(pager.totalPages)" class="page-link paginator_text">Last</a>
+                    <a (click)="setPage(pager.totalPages)" class="page-link paginator_text paginator_first_last">Last</a>
                   </li>
                 </ul>
               </div>

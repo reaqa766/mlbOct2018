@@ -333,7 +333,7 @@ font-weight: 400;
   display: none;
 } */
 
-/* @media only screen and (min-width:300px ) and (max-width: 768px)  {
+@media only screen and (min-width:300px ) and (max-width: 768px)  {
   .container-actives_cards {
       margin: 1% auto 0;
       display: grid;
@@ -345,7 +345,7 @@ font-weight: 400;
 
   }
 .bioActives-title {
-      font-size: 0.75rem;
+      font-size: 1.5rem;
       margin-bottom: 0.25rem;
       padding: 0.25rem 0 0;
       width: fit-content;
@@ -406,14 +406,21 @@ font-weight: 400;
   /* .paginator_text {
       display: none;
   } */
- /* .img_picture_box:hover .img_picture_element{
+ .img_picture_box:hover .img_picture_element{
     transform: none;
     opacity: 1;
 }
 .card {
   width: 95%;
 }
-} */
+
+.paginator_first_last {
+display: none;
+}
+.btn {
+  width: 100% !important;
+}
+}
 @media only screen and (min-width:769px ) and (max-width: 1023px)  {
   .container-actives_cards {
       margin: 1% auto 0;
@@ -539,7 +546,7 @@ font-weight: 400;
   }
 
   /* Para usar en el area de PLAYERS */
-  @media only screen and (min-width:300px ) and (max-width: 600px)  {
+  @media only screen and (min-width:300px ) and (max-width: 768px)  {
 
     .container-jugadores {
       background-color: rgb(175, 124, 124);
@@ -555,14 +562,14 @@ font-weight: 400;
       grid-column: 1/2;
       grid-row: 1/2;
       margin: 0 .5rem 0 0;
-      width: 100%;
+      width: 95%;
 
     }
     .container-derecho-grid {
       grid-column: 1/2;
       grid-row: 2/3;
       margin: 0 .5rem 0 0;
-      width: 100%;
+      width: 80%;
 
     }
 
@@ -600,7 +607,8 @@ font-weight: 400;
      }
      .btn {
       font-size: .65rem;
-      width: 100%;
+      width: 80%;
+      margin-top: 1rem;
     }
 
 
