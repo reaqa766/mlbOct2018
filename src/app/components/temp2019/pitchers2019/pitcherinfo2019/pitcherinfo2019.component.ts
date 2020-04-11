@@ -6,7 +6,6 @@ import { Players } from '../../../../../interfaces/players';
 
 // tslint:disable-next-line:semicolon
 import { PagerService } from '../../../../../services/index'
-import { parse } from 'cfb/types';
 
 // import { PlayersService } from '../../../../services/players.service';
 // import { take } from 'rxjs/operators';
@@ -61,6 +60,8 @@ export class Pitcherinfo2019Component implements OnInit {
   diez_ponches_realizados: number;
   quince_ponches_realizados: number;
   masquince_ponches_realizados: number;
+  players_cero_runs: number[];
+  sumaParcial: any;
 
   constructor(private playerService: PitcherspointService, private pagerService: PagerService) { }
 
@@ -83,6 +84,12 @@ getPlayersMap() {
   this.dos_carreras_permitidas = 0;
   this.tres_carreras_permitidas = 0;
   this.Nro_innings = 0;
+  this.cuatro_ponches_realizados = 0;
+  this.diez_ponches_realizados =0;
+  this.quince_ponches_realizados = 0;
+  this.masquince_ponches_realizados = 0;
+  this.players_cero_runs = [];
+
   this.setPage(1);
   const InfoObsPlayer = this.playerService.getAllPlayersDaily3();
   let index = 0;
@@ -100,57 +107,9 @@ getPlayersMap() {
         console.log('Original players: ', this.players);
         // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
         this.players = this.players.filter(player =>{
-
           if(player.stats && player.stats.length !== 0 && player.stats[0].splits && player.primaryPosition.name == "Pitcher" && player.stats[0].splits.length !== 0){
             for(let i = 0; i < player.stats[0].splits.length; i++){
               if(player.stats[0].splits[i].date === this.dia){
-                player.indexStatDate = i;
-                this.Nro_innings = Number(player.stats[0].splits[player.indexStatDate].stat.inningsPitched).valueOf();
-
-                if(player.stats[0].splits[player.indexStatDate].stat.earnedRuns==0){ (this.cero_carreras_permitidas = Math.round(7/9*this.Nro_innings))}
-                else if (player.stats[0].splits[player.indexStatDate].stat.earnedRuns==1){ (this.una_carreras_permitidas = Math.round(5/9*this.Nro_innings ))}
-                else if(player.stats[0].splits[player.indexStatDate].stat.earnedRuns==2){ (this.dos_carreras_permitidas = Math.round(3/9*this.Nro_innings ))}
-                else if (player.stats[0].splits[player.indexStatDate].stat.earnedRuns>=3) { (this.tres_carreras_permitidas = 0)};
-
-
-                if(player.stats[0].splits[player.indexStatDate].stat.strikeOuts>=0 && player.stats[0].splits[player.indexStatDate].stat.strikeOuts<=4 ){ (this.cuatro_ponches_realizados = 1)}
-                else if (player.stats[0].splits[player.indexStatDate].stat.strikeOuts>=5 && player.stats[0].splits[player.indexStatDate].stat.strikeOuts<=10){ (this.diez_ponches_realizados =2 )}
-                else if(player.stats[0].splits[player.indexStatDate].stat.strikeOuts>=11 && player.stats[0].splits[player.indexStatDate].stat.strikeOuts<15){ (this.quince_ponches_realizados =5 )}
-                else if (player.stats[0].splits[player.indexStatDate].stat.strikeOuts>=15) { (this.masquince_ponches_realizados = 10)};
-
-              console.log("i", i);
-              console.log("name", player.fullName);
-              console.log("Innings Original",player.stats[0].splits[player.indexStatDate].stat.inningsPitched );
-              console.log("Innings",  this.Nro_innings );
-              console.log("EarnedRuns", player.stats[0].splits[player.indexStatDate].stat.earnedRuns);
-              console.log("cero_carreras_permitidas", (this.cero_carreras_permitidas));
-              console.log("una_carreras_permitidas", this.una_carreras_permitidas);
-              console.log("dos_carreras_permitidas", this.dos_carreras_permitidas);
-              console.log("tres_carreras_permitidas", this.tres_carreras_permitidas);
-
-              console.log("Ponches Realizados",player.stats[0].splits[player.indexStatDate].stat.strikeOuts);
-              console.log("cuatro_ponches_realizados", this.cuatro_ponches_realizados);
-              console.log("diez_ponches_realizados", this.diez_ponches_realizados);
-              console.log("quince_ponches_realizados", this.quince_ponches_realizados);
-              console.log("masquince_ponches_realizados", this.masquince_ponches_realizados);
-
-
-
-                this.sumaTotal = this.sumaTotal + (this.cero_carreras_permitidas + this.una_carreras_permitidas + this.dos_carreras_permitidas + this.tres_carreras_permitidas + player.stats[0].splits[player.indexStatDate].stat.wins) * 3 + (player.stats[0].splits[player.indexStatDate].stat.saves) * 2 +
-                (player.stats[0].splits[player.indexStatDate].stat.losses) * -3;
-
-
-                this.Nro_innings = 0;
-                this.cero_carreras_permitidas=0;
-                this.una_carreras_permitidas=0;
-                this.dos_carreras_permitidas=0;
-                this.tres_carreras_permitidas=0;
-                this.cuatro_ponches_realizados=0;
-                this.diez_ponches_realizados=0;
-                this.quince_ponches_realizados=0;
-                this.masquince_ponches_realizados=0;
-
-
                 return true;
               }
             }
@@ -172,8 +131,76 @@ getPlayersMap() {
 
 
 
-        this.allItems = this.players;
+        this.allItems = this.players.map(player=> {
+          const mappedPlayer = {...player};
 
+          mappedPlayer.stats[0].splits.forEach((split, index) => {
+            if(split.date == this.dia) {
+              mappedPlayer.indexStatDate = index;
+            }
+          })
+
+          const selectedSplit = mappedPlayer.stats[0].splits[mappedPlayer.indexStatDate];
+                mappedPlayer.Nro_innings = Number(selectedSplit.stat.inningsPitched).valueOf();
+
+                if(selectedSplit.stat.earnedRuns==0){mappedPlayer.cero_carreras_permitidas = Math.round(7/9*mappedPlayer.Nro_innings)}
+                else if (selectedSplit.stat.earnedRuns==1){ (mappedPlayer.una_carreras_permitidas = Math.round(5/9*mappedPlayer.Nro_innings ))}
+                else if(selectedSplit.stat.earnedRuns==2){ (mappedPlayer.dos_carreras_permitidas = Math.round(3/9*mappedPlayer.Nro_innings ))}
+                else if (selectedSplit.stat.earnedRuns>=3) { (mappedPlayer.tres_carreras_permitidas = 0)};
+
+
+                if(selectedSplit.stat.strikeOuts>=0 && selectedSplit.stat.strikeOuts<=4 ){ (mappedPlayer.cuatro_ponches_realizados = 1)}
+                else if (selectedSplit.stat.strikeOuts>=5 && selectedSplit.stat.strikeOuts<=10){ (mappedPlayer.diez_ponches_realizados =2 )}
+                else if(selectedSplit.stat.strikeOuts>=11 && selectedSplit.stat.strikeOuts<15){ (mappedPlayer.quince_ponches_realizados =5 )}
+                else if (selectedSplit.stat.strikeOuts>=15) { (mappedPlayer.masquince_ponches_realizados = 10)};
+
+              // console.log("i", i);
+              // console.log("name", player.fullName);
+              // console.log("Innings Original",player.stats[0].splits[player.indexStatDate].stat.inningsPitched );
+              // console.log("Innings",  this.Nro_innings );
+              // console.log("cero_carreras_permitidas", (this.cero_carreras_permitidas));
+              // console.log("una_carreras_permitidas", this.una_carreras_permitidas);
+              // console.log("dos_carreras_permitidas", this.dos_carreras_permitidas);
+              // console.log("tres_carreras_permitidas", this.tres_carreras_permitidas);
+
+              // console.log("Ponches Realizados",player.stats[0].splits[player.indexStatDate].stat.strikeOuts);
+              // console.log("cuatro_ponches_realizados", this.cuatro_ponches_realizados);
+              // console.log("diez_ponches_realizados", this.diez_ponches_realizados);
+              // console.log("quince_ponches_realizados", this.quince_ponches_realizados);
+              // console.log("masquince_ponches_realizados", this.masquince_ponches_realizados);
+
+
+
+                mappedPlayer.sumaParcial = (mappedPlayer.cero_carreras_permitidas || 0) +
+                  (mappedPlayer.una_carreras_permitidas || 0) +
+                  (mappedPlayer.dos_carreras_permitidas || 0) +
+                  (mappedPlayer.tres_carreras_permitidas || 0) +
+                  (mappedPlayer.cuatro_ponches_realizados || 0) +
+                  (mappedPlayer.diez_ponches_realizados || 0) +
+                  (mappedPlayer.quince_ponches_realizados || 0) +
+                  (mappedPlayer.masquince_ponches_realizados || 0) +
+                  (selectedSplit.stat.wins * 3 || 0) +
+                  (selectedSplit.stat.saves* 2 || 0) +
+                  (selectedSplit.stat.losses * -3);
+
+
+                // this.sumaTotal = this.sumaTotal +
+                //   (this.cero_carreras_permitidas +
+                //   this.una_carreras_permitidas +
+                //   this.dos_carreras_permitidas +
+                //   this.tres_carreras_permitidas +
+                //   this.cuatro_ponches_realizados +
+                //   this.diez_ponches_realizados +
+                //   this.quince_ponches_realizados +
+                //   this.masquince_ponches_realizados +
+                //   player.stats[0].splits[player.indexStatDate].stat.wins * 3 +
+                //   player.stats[0].splits[player.indexStatDate].stat.saves* 2 +
+                //   player.stats[0].splits[player.indexStatDate].stat.losses*-3);
+
+                return mappedPlayer;
+        });
+
+        this.sumaTotal = this.allItems.reduce((accum, player) => player.sumaParcial + accum, 0);
         // Calculo de Suma Total de Ptos Pitchers
         // this.players = this.players.filter(player => {
         //   if (player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0) {

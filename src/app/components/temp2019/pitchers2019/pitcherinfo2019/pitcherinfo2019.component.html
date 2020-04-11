@@ -64,16 +64,32 @@
             <div class="atBat items_estadisticas" ><div class="avg_span">Ganado</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.wins*3}}</div></div>
             <div class="hits items_estadisticas" ><div class="avg_span">Perdido</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.losses*-3}}</div></div>
             <div class="hr items_estadisticas" ><div class="avg_span">Salvado</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.saves*2}}</div></div>
-            <div class="rbi items_estadisticas" ><div class="avg_span">0-4 Ponches</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.strikeOuts*1}}</div></div>
-            <div class="runs items_estadisticas" ><div class="avg_span">5-10 Ponches</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.baseOnBalls*1}}</div></div>
-            <div class="strikeO items_estadisticas" ><div class="avg_span">11-15 Ponches</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.hits*1}}</div></div>
-            <div class="bB items_estadisticas" ><div class="avg_span">+15 Ponches</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.baseOnBalls*1}}</div></div>
-            <div class="stolenB items_estadisticas"><div class="avg_span">0 Carreras</div> <div class="avg_span2">{{cero_carreras_permitidas}}</div></div>
-            <div class="strikeO items_estadisticas" ><div class="avg_span">1 Carrera</div> <div class="avg_span2">{{una_carreras_permitidas}}</div></div>
-            <div class="bB items_estadisticas" ><div class="avg_span">2 Carreras</div> <div class="avg_span2">{{dos_carreras_permitidas}}</div></div>
-            <div class="stolenB items_estadisticas"><div class="Total_Pts avg_span">Total Pts</div> <div class="Total_Pts avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.wins*1 + player.stats[0].splits[player.indexStatDate].stat.losses*-1 +
-                player.stats[0].splits[player.indexStatDate].stat.saves*1 + player.stats[0].splits[player.indexStatDate].stat.strikeOuts*1 + player.stats[0].splits[player.indexStatDate].stat.baseOnBalls*-1 +
-                player.stats[0].splits[player.indexStatDate].stat.runs*-1  }}</div></div>
+            <div class="rbi items_estadisticas" ><div class="avg_span">0-4 Ponches</div> <div class="avg_span2" >{{player.cuatro_ponches_realizados || 0 }}</div></div>
+            <div class="runs items_estadisticas" ><div class="avg_span">5-10 Ponches</div> <div class="avg_span2">{{player.diez_ponches_realizados || 0}}</div></div>
+            <div class="strikeO items_estadisticas" ><div class="avg_span">11-15 Ponches</div> <div class="avg_span2">{{player.quince_ponches_realizados || 0}}</div></div>
+            <div class="bB items_estadisticas" ><div class="avg_span">+15 Ponches</div> <div class="avg_span2">{{player.masquince_ponches_realizados || 0}}</div></div>
+            <div class="stolenB items_estadisticas"><div class="avg_span">0 Carreras</div> <div class="avg_span2">{{player.cero_carreras_permitidas || 0}}</div></div>
+            <div class="strikeO items_estadisticas" ><div class="avg_span">1 Carrera</div> <div class="avg_span2">{{player.una_carreras_permitidas || 0}}</div></div>
+            <div class="bB items_estadisticas" ><div class="avg_span">2 Carreras</div> <div class="avg_span2">{{player.dos_carreras_permitidas || 0}}</div></div>
+            <div class="stolenB items_estadisticas"><div class="Total_Pts avg_span">Total Pts</div> <div class="Total_Pts avg_span2">
+                {{player.sumaParcial}}</div>
+              </div>
+            <!-- <div class="stolenB items_estadisticas"><div class="Total_Pts avg_span">Total Pts</div> <div class="Total_Pts avg_span2">
+                {{player.stats[0].splits[player.indexStatDate].stat.wins*1 +
+                player.stats[0].splits[player.indexStatDate].stat.losses*-1 +
+                player.stats[0].splits[player.indexStatDate].stat.saves*1 +
+                player.stats[0].splits[player.indexStatDate].stat.strikeOuts*1 +
+                player.stats[0].splits[player.indexStatDate].stat.baseOnBalls*-1 +
+                player.stats[0].splits[player.indexStatDate].stat.runs*-1 +
+                cuatro_ponches_realizados +
+                diez_ponches_realizados +
+                quince_ponches_realizados +
+                masquince_ponches_realizados +
+                cero_carreras_permitidas +
+                una_carreras_permitidas +
+                dos_carreras_permitidas
+               }}</div>
+              </div> -->
             <!-- <div class="LNac items_estadisticas"><div class="avg_span">POSICION DEF</div> <div class="avg_span2">{{player.birthCity}}</div></div>
             <div class="Edad items_estadisticas"><div class="avg_span">TOTAL DIA</div> <div class="avg_span2">{{player.currentAge}}</div></div> -->
           </div>
