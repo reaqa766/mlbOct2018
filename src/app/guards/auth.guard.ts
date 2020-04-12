@@ -28,29 +28,14 @@ export class AuthGuard implements CanActivate {
       return this.authService.currentUserObservable.pipe(
         take(1),
         map(user => {
-            console.log('user: ', user);
             return !!user;
         }),
         tap( loggedIn => {
-            console.log('loggedIn: ', loggedIn);
             if (!loggedIn) {
-                console.log('access denied');
                 this.router.navigate(['/login'])
             }
         })
     );
       }
   }
-  // canActivate(
-  //   next: ActivatedRouteSnapshot,
-  //   state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-  //   return this.authService.afAuth.authState
-  //     .take(1)
-  //     .map(authState => !! authState)
-  //     .pipe(tap())( authenticated => {
-  //       if (!authenticated) {
-  //         this.router.navigate(['/login']);
-  //       }
-  //     });
-  // }
 }
