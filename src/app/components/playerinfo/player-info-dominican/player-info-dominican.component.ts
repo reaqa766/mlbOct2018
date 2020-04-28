@@ -104,14 +104,10 @@ export class PlayerInfoDominicanComponent implements OnInit {
               return newPlayer;
             });
             for (let jugador of this.players) {
-              // console.log('Comparando: '+jugador.id+' con '+this.idplayer);
               if (jugador.id == this.idplayer) {
-                // console.log('items4', jugador.fullName);
                 this.player = jugador;
                 break;
               }
-              // console.log('items5', 1);
-              // console.log('Players', this.players);
             }
           }
           index++;
@@ -120,15 +116,10 @@ export class PlayerInfoDominicanComponent implements OnInit {
     } else {
       this.players = this.playerService.getAllDominicanPlayersActivesOffline();
       for (const jugador of this.players) {
-        // console.log('Comparando: '+jugador.id+' con '+this.idplayer);
-        // tslint:disable-next-line:triple-equals
         if (jugador.id == this.idplayer) {
-          // console.log('items4', jugador.fullName);
           this.player = jugador;
           break;
         }
-        // console.log('items5', 1);
-        // console.log('items7', this.idplayer);
       }
     }
 
