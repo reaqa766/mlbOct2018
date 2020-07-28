@@ -57,7 +57,6 @@ export class ActivesComponent implements OnInit {
 
     // console.log('data', JSON.stringify(this.allItems));
 
-
   }
 
   // Convertir el Array de Observables a un Array de Objetos.

@@ -11,9 +11,14 @@ import { FirestoreService } from 'src/app/services/firestore.service';
 export class EditManagersComponent implements OnInit {
 
   // managerList: Profile[];
+  profileForm:any;
+  resetForm:any;
   constructor(private firestoreService: FirestoreService ) { }
 
   ngOnInit() {
+  }
+
+  onSubmit(something: any) {
   }
 
 }
