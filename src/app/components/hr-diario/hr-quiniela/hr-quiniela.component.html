@@ -1,0 +1,106 @@
+<div class="container-actives">
+  <div class="container_players_actives"></div>
+  <h1 class="actives-title">Jonrones del día</h1>
+  <h1 class="actives-title">Quiniela MLB 2020</h1>
+  </div>
+
+  <!-- LOADER -->
+  <div *ngIf="!allItems">
+    <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
+    <p class="spiner_load">CARGANDO</p>
+  </div>
+
+  <div *ngIf="allItems" class="title-position">
+
+    <input #date_Picker type="date" (input)="onSearchDate($event)" placeholder="Escoja la fecha..."  value="" class="advancedSearchDatetbox">
+  <span class="seleccion"> Seleccione una fecha</span>
+  <span class="seleccion"> para ver los jonrones</span>
+  </div>
+  <div class="seleccion2 title-position">Seleccione una fecha</div>
+  <div class="seleccion2 title-position">para ver los jonrones</div>
+  <br>
+  <br>
+
+  <ng-container *ngIf="!isLoading">
+    <!-- <div class="tjta-encabezado"> -->
+
+    <ng-container *ngIf="!(pager.allItems === 0)">
+
+      <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
+        <div class="tarjeta_encabezado">
+          <div *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
+            <div class="tarjeta_izquierda">
+              <div class="foto" ><img class="player_pict2" appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
+              <!-- <a routerLink="/playerinfo/{{player.id}}" class="link_player"> -->
+                <div  class="link_player">{{player.fullName}}</div>
+
+              <!-- </a> -->
+              <div class="avg items_estadisticas" ><div class="avg_span">AVG</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.avg}}</div></div>
+              <div class="atBat items_estadisticas" ><div class="avg_span">VB</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.atBats}}</div></div>
+              <div class="hits items_estadisticas" ><div class="avg_span">Hits</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.hits}}</div></div>
+              <div class="hr items_estadisticas" ><div class="avg_spanHr">HR</div> <div class="avg_span2Hr">{{player.stats[0].splits[player.indexStatDate].stat.homeRuns}}</div></div>
+              <div class="rbi items_estadisticas" ><div class="avg_span">CI</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.rbi}}</div></div>
+              <div class="runs items_estadisticas" ><div class="avg_span">CA</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.runs}}</div></div>
+            </div>
+          </div>
+
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="(pager.allItems-1 === pager.endIndex)">
+        <div class="tarjeta_encabezado">
+          <div *ngFor="let player of allItems | pagination:pager.startIndex:(pager.allItems)-pager.startIndex">
+            <div class="tarjeta_izquierda">
+              <div class="foto" ><img class="player_pict2" appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
+              <!-- <a routerLink="/playerinfo/{{player.id}}" class="link_player"> -->
+                <div  class="link_player">{{player.fullName}}</div>
+              <!-- </a> -->
+              <div class="avg items_estadisticas" ><div class="avg_span">AVG</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.avg}}</div></div>
+              <div class="atBat items_estadisticas" ><div class="avg_span">VB</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.atBats}}</div></div>
+              <div class="hits items_estadisticas" ><div class="avg_span">Hits</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.hits}}</div></div>
+              <div class="hr items_estadisticas" ><div class="avg_spanHr">HR</div> <div class="avg_span2Hr">{{player.stats[0].splits[player.indexStatDate].stat.homeRuns}}</div></div>
+              <div class="rbi items_estadisticas" ><div class="avg_span">CI</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.rbi}}</div></div>
+              <div class="runs items_estadisticas" ><div class="avg_span">CA</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.runs}}</div></div>
+            </div>
+          </div>
+
+        </div>
+      </ng-container>
+
+
+      <!-- PAGINATION-->
+      <br>
+      <br>
+
+      <div>
+        <div class="container">
+          <div class="text-center paginator">
+
+            <!-- pager -->
+            <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
+              <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+                <a (click)="setPage(1)" class="page-link paginator_item">First</a>
+              </li>
+              <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
+                <a (click)="setPage(pager.currentPage - 1)" class="page-link paginator_item">Prev</a>
+              </li>
+              <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
+                <a (click)="setPage(page)" class="page-link">{{page}}</a>
+              </li>
+              <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+                <a (click)="setPage(pager.currentPage + 1)" class="page-link paginator_item">Next</a>
+              </li>
+              <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
+                <a (click)="setPage(pager.totalPages)" class="page-link paginator_item">Last</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+      </div>
+
+
+    </ng-container>
+
+  </ng-container>
+

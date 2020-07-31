@@ -17,13 +17,13 @@
     margin-left: 10%;
     margin-bottom: 0;
   }
-  
-  
+
+
   .tarjeta_encabezado {
     width: 85%;
     margin: 0.2em auto;
     /* background-color: rgb(20, 149, 167); */
-  
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 5px;
@@ -36,8 +36,8 @@
     grid-row: 1/2;
     color: white;
     border: solid white 2px;
-  
-  
+
+
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 2fr ;
     grid-template-rows: 1fr 1fr 1fr;
@@ -48,31 +48,31 @@
     box-shadow: 2px 2px 4px black;
     /* margin-left: 3rem; */
   }
-  
+
   .items_estadisticas {
     text-align: center;
     font-weight: 500;
     border: solid black .15rem;
     padding: 0;
-  
+
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-row-gap: 5px;
     background-color: rgba(2, 2, 2, 0.513);
-  
-  
+
+
   }
-  
+
   .foto {
     grid-column: 1/2;
     grid-row: 1/4;
     color: white;
-  
-  
+
+
   }
   .avg_span {
-  
+
     grid-column: 1/2;
     grid-row: 1/2;
     font-size: 1.75em;
@@ -109,8 +109,8 @@
     width: 11rem;
     padding-bottom: 10px;
     /* margin-left: 2rem; */
-  
-  
+
+
   }
   .posicion {
     grid-column: 1/2;
@@ -119,61 +119,61 @@
     align-self: start;
     border: solid black 2px;
     background-color:red;
-  
+
   }
   .avg {
     grid-column: 2/3;
     grid-row: 1/2;
     color: white;
     border: solid black 2px;
-  
+
   }
   .LNac {
     grid-column: 2/4;
     grid-row: 4/5;
-  
+
   }
   .seleccion {
     display: block;
-  
+
   }
   .seleccion2 {
     display: none;
-  
+
   }
-  
-  
-  
-  
+
+
+
+
   .tarjeta_derecha {
     background-color: yellow;
     grid-column: 2/3;
     grid-row: 1/2;
-  
-  
+
+
     /* display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr; */
   }
-  
-  
+
+
   .advancedSearchTextbox{
     color: rgb(2, 1, 0);
     font-size: 1rem;
     font-weight: bold;
     margin-left: 10%;
     margin-bottom: 0;
-  
+
   }
-  
-  
+
+
   .error_search {
     width: 80%;
     margin-left: 10%;
     text-align: center;
     color: antiquewhite;
     background-color: rgba(12, 10, 9, 0.75);
-  
+
   }
   .fa-baseball-ball {
     font-size: 10rem;
@@ -194,9 +194,9 @@
     width: 20%;
     margin: auto;
   }
-  
+
   @media only screen and (min-width: 330px ) and (max-width: 768px)  {
-  
+
     .actives-title {
       color: antiquewhite;
       font-size: 2.5rem;
@@ -216,13 +216,13 @@
       margin-left: 10%;
       margin-bottom: 0;
     }
-    
-    
+
+
     .tarjeta_encabezado {
       width: 95%;
       margin: 0.2em auto;
       /* background-color: rgb(20, 149, 167); */
-    
+
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
@@ -234,8 +234,8 @@
       grid-row: 1/2;
       color: white;
       border: solid white 2px;
-    
-    
+
+
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr !important;
       grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -246,28 +246,28 @@
       box-shadow: 2px 2px 4px black;
       /* margin-left: 3rem; */
     }
-    
+
     .items_estadisticas {
       text-align: center;
       font-weight: 500;
       border: solid black .15rem;
       padding: 0;
-    
+
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
       grid-row-gap: 5px;
       background-color: rgba(2, 2, 2, 0.513);
-    
-    
+
+
     }
-    
+
     .foto {
       grid-column: 1/2;
       grid-row: 1/4;
       color: white;
-    
-    
+
+
     }
     .avg_span {
       grid-column: 1/2;
@@ -307,7 +307,7 @@
       /* margin-left: 2rem; */
         text-decoration:none;
         color: antiquewhite;
-    
+
     }
     .posicion {
       grid-column: 1/2;
@@ -316,60 +316,60 @@
       align-self: start;
       border: solid black 2px;
       background-color:red;
-    
+
     }
     .avg {
       grid-column: 2/3;
       grid-row: 1/2;
       color: white;
       border: solid black 2px;
-    
+
     }
     .seleccion {
       display: none !important;
     }
     .seleccion2 {
       display: inline-block;
-  
+
     }
     .LNac {
       grid-column: 2/4;
       grid-row: 4/5;
-    
+
     }
-    
-    
-    
-    
+
+
+
+
     .tarjeta_derecha {
       background-color: yellow;
       grid-column: 2/3;
       grid-row: 1/2;
-    
-    
+
+
       /* display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr; */
     }
-    
-    
+
+
     .advancedSearchTextbox{
       color: rgb(2, 1, 0);
       font-size: 1rem;
       font-weight: bold;
       margin-left: 10%;
       margin-bottom: 0;
-    
+
     }
-    
-    
+
+
     .error_search {
       width: 80%;
       margin-left: 10%;
       text-align: center;
       color: antiquewhite;
       background-color: rgba(12, 10, 9, 0.75);
-    
+
     }
     .fa-baseball-ball {
       font-size: 10rem;
@@ -381,16 +381,16 @@
       margin: 0 35% !important;
       color: rgba(80, 57, 43, 0.95);
     }
-  
+
     .paginator {
       font-size: 0.75rem;
       width: 20%;
       margin: auto;
     }
   }
-  
+
   @media only screen and (min-width: 200px ) and (max-width: 329px)  {
-  
+
     .actives-title {
       color: antiquewhite;
       font-size: 2.5rem;
@@ -410,13 +410,13 @@
       margin-left: 10%;
       margin-bottom: 0;
     }
-    
-    
+
+
     .tarjeta_encabezado {
       width: 95%;
       margin: 0.2em auto;
       /* background-color: rgb(20, 149, 167); */
-    
+
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
@@ -428,8 +428,8 @@
       grid-row: 1/2;
       color: white;
       border: solid white 2px;
-    
-    
+
+
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr !important;
       grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -440,28 +440,28 @@
       box-shadow: 2px 2px 4px black;
       /* margin-left: 3rem; */
     }
-    
+
     .items_estadisticas {
       text-align: center;
       font-weight: 500;
       border: solid black .15rem;
       padding: 0;
-    
+
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
       grid-row-gap: 5px;
       background-color: rgba(2, 2, 2, 0.513);
-    
-    
+
+
     }
-    
+
     .foto {
       grid-column: 1/2;
       grid-row: 1/4;
       color: white;
-    
-    
+
+
     }
     .avg_span {
       grid-column: 1/2;
@@ -501,7 +501,7 @@
       /* margin-left: 2rem; */
         text-decoration:none;
         color: antiquewhite;
-    
+
     }
     .posicion {
       grid-column: 1/2;
@@ -510,26 +510,26 @@
       align-self: start;
       border: solid black 2px;
       background-color:red;
-    
+
     }
     .avg {
       grid-column: 2/3;
       grid-row: 1/2;
       color: white;
       border: solid black 2px;
-    
+
     }
     .seleccion {
       display: none !important;
     }
     .seleccion2 {
       display: inline-block;
-  
+
     }
     .LNac {
       grid-column: 2/4;
       grid-row: 4/5;
-    
+
     }
     .paginator {
       font-size: 0.5rem;

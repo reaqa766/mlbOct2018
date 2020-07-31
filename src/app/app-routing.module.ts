@@ -62,6 +62,7 @@ import { TransaccionesComponent  } from './components/players/transacciones/tran
 import { Pruebas2019Component  } from './components/pruebas2019/pruebas2019.component';
 import { LvbpHomeComponent  } from './components/lvbp-home/lvbp-home.component';
 import { HrDiarioComponent  } from './components/hr-diario/hr-diario.component';
+import { HrQuinielaComponent  } from './components/hr-diario/hr-quiniela/hr-quiniela.component';
 
 // import { SharedModule } from '../shared/shared.module'
 
@@ -199,6 +200,8 @@ const routes: Routes = [
   component: LvbpHomeComponent },
   { path: 'HrDiario',
   component: HrDiarioComponent },
+  { path: 'HrDiarioQuiniela',
+  component: HrQuinielaComponent },
   { path: 'transacciones',
   component: TransaccionesComponent },
   { path: 'ligaFantasy',
