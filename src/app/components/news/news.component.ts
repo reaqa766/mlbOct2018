@@ -146,13 +146,13 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://www.mlb.com/es/news/eduardo-rodriguez-candidato-a-dia-inaugural-por-medias-rojas');
+          window.open('https://www.sportsvenezuela.com/chaim-bloom-sobre-la-condicion-de-eduardo-rodriguez-esperamos-recuperarlo/');
   } else if (this.num === 'video3J') {
-    window.open('https://www.mlb.com/es/news/graterol-impresiona-en-su-debut-esta-primavera');
+    window.open('https://elextrabase.com/2020/07/31/rob-manfred-se-plantea-cancelar-la-temporada/');
   } else if (this.num === 'video4J') {
-    window.open('https://www.sportsvenezuela.com/ramos-piloto-mets/');
+    window.open('https://elextrabase.com/2020/07/31/miguel-cabrera-el-dueno-de-la-heladeria/');
   } else if (this.num === 'video5J') {
-    window.open('https://www.mlb.com/es/news/eugenio-suarez-progresa-poco-a-poco-tras-cirugia');
+    window.open('https://www.mlb.com/es/news/que-podemos-esperar-de-andres-gimenez');
   } else if (this.num === 'video3H') {
     window.open('https://www.mlb.com/es/news/perez-aprovecha-consejos-de-su-idolo-pedro');
   } else if (this.num === 'video4H') {

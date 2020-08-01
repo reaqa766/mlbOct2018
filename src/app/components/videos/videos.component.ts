@@ -74,7 +74,7 @@ export class VideosComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video1') {
-          window.open('https://www.mlb.com/es/video/wilson-ramos-first-spring-homer?t=most-popular');
+          window.open('https://www.mlb.com/es/news/gleyber-torres-golpeado-en-el-codo');
   } else if (this.num === 'video2E') {
     window.open('https://www.mlb.com/video/cargo-s-nice-sliding-catch', '_blank');
   } else if (this.num === 'video3E') {
