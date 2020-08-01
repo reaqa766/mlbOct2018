@@ -32,6 +32,10 @@ export class AllplayersService {
     666200,
 
   ];
+  private rookiesCode2020 = [
+    621593, 670550, 658668, 665926, 661388,
+
+  ];
 
   //private _url ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2020&hydrate=stats(type=season,season=2020,gameType=S)'
   private _url ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2020&hydrate=stats(type=season,season=2020,gameType=R)'
@@ -48,6 +52,9 @@ export class AllplayersService {
     return this.http.get<StatsDayliPlayer>(this._url);
   }
   getRookies2019(): Observable<StatsDayliPlayer> {
+    return this.http.get<StatsDayliPlayer>(this._url);
+  }
+  getRookies2020(): Observable<StatsDayliPlayer> {
     return this.http.get<StatsDayliPlayer>(this._url);
   }
 
@@ -92,6 +99,17 @@ export class AllplayersService {
       dataAllPlayers.push(dataP);
       this.rookieCode = code;
     }
+    return dataAllPlayers;
+  }
+  getAllRookiesActives20(): Observable<StatsDayliPlayer | undefined>[] {
+    let dataAllPlayers: Observable<StatsDayliPlayer | undefined>[] = [];
+    for (let code of this.rookiesCode2020) {
+      this._url = this._url.replace(this.rookieCode.toString(), code.toString());
+      let dataP = this.getRookies2020();
+      dataAllPlayers.push(dataP);
+      this.rookieCode = code;
+    }
+
     return dataAllPlayers;
   }
 

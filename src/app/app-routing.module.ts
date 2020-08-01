@@ -57,6 +57,7 @@ import { LetrasComponent  } from './components/letras/letras.component';
 import { JugEquipVzlaComponent  } from './components/jug-equip-vzla/jug-equip-vzla.component';
 import { EstadoVzlaComponent  } from './components/estado-vzla/estado-vzla.component';
 import { NovatosComponent  } from './components/players/novatos/novatos.component';
+import { Novatos2020Component  } from './components/players/novatos/novatos2020/novatos2020.component';
 import { QuepasohoyComponent  } from './components/players/quepasohoy/quepasohoy.component';
 import { TransaccionesComponent  } from './components/players/transacciones/transacciones.component';
 import { Pruebas2019Component  } from './components/pruebas2019/pruebas2019.component';
@@ -194,6 +195,8 @@ const routes: Routes = [
   component: EstadoVzlaComponent },
   { path: 'novatos',
   component: NovatosComponent },
+  { path: 'novatos2020',
+  component: Novatos2020Component },
   { path: 'qpasohoy',
   component: QuepasohoyComponent },
   { path: 'pruebas2019',

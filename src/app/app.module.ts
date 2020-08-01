@@ -109,6 +109,7 @@ import { Pitcherinfotemp2019Component } from './components/temp2019/pitchers2019
 import { HrQuinielaComponent } from './components/quiniela/hr-quiniela/hr-quiniela.component';
 import { DoblesQuinielaComponent } from './components/quiniela/dobles-quiniela/dobles-quiniela.component';
 import { AcumuladoQuinielaComponent } from './components/quiniela/acumulado-quiniela/acumulado-quiniela.component';
+import { Novatos2020Component } from './components/players/novatos/novatos2020/novatos2020.component';
 
 @NgModule({
   declarations: [
@@ -188,7 +189,8 @@ import { AcumuladoQuinielaComponent } from './components/quiniela/acumulado-quin
     Pitcherinfotemp2019Component,
     HrQuinielaComponent,
     DoblesQuinielaComponent,
-    AcumuladoQuinielaComponent
+    AcumuladoQuinielaComponent,
+    Novatos2020Component
 
   ],
   imports: [
