@@ -62,7 +62,9 @@ import { TransaccionesComponent  } from './components/players/transacciones/tran
 import { Pruebas2019Component  } from './components/pruebas2019/pruebas2019.component';
 import { LvbpHomeComponent  } from './components/lvbp-home/lvbp-home.component';
 import { HrDiarioComponent  } from './components/hr-diario/hr-diario.component';
-import { HrQuinielaComponent  } from './components/quiniela/jonron/hr-quiniela.component';
+import { HrQuinielaComponent  } from './components/quiniela/hr-quiniela/hr-quiniela.component';
+import { DoblesQuinielaComponent  } from './components/quiniela/dobles-quiniela/dobles-quiniela.component';
+import { AcumuladoQuinielaComponent  } from './components/quiniela/acumulado-quiniela/acumulado-quiniela.component';
 
 // import { SharedModule } from '../shared/shared.module'
 
@@ -202,6 +204,10 @@ const routes: Routes = [
   component: HrDiarioComponent },
   { path: 'HrDiarioQuiniela',
   component: HrQuinielaComponent },
+  { path: 'DobleDiarioQuiniela',
+  component: DoblesQuinielaComponent },
+  { path: 'AcumDiarioQuiniela',
+  component: AcumuladoQuinielaComponent },
   { path: 'transacciones',
   component: TransaccionesComponent },
   { path: 'ligaFantasy',

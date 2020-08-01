@@ -28,6 +28,14 @@ export class PlayersService {
   public venezuelanPlayersCodes2019;
   public dominicanPlayersCodes2019;
 
+  private playersCodeQ = [
+    640449, 665487, 650333, 592518, 596059,
+    575929, 547180, 519317, 502110, 514888,
+    595879, 665742, 605141, 624413, 571448,
+    408234, 641355, 592885, 553993, 592450,
+    650402, 545361, 660670
+  ]
+
   private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=hitting,type=season,season=2020,gameType=R)';
   // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=hitting,type=season,season=2020,gameType=S)';
   private _url2 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(type=season,season=2019,gameType=R)';
@@ -95,6 +103,20 @@ export class PlayersService {
   getAllPlayersActives(): Observable<StatsDayliPlayer | undefined>[] {
     let dataAllPlayers: Observable<StatsDayliPlayer | undefined>[] = [];
     for (let code of this.venezuelanPlayersCodes) {
+      this._url = this._url.replace(this.playerCode.toString(), code.toString());
+      let dataP = this.getPlayeActive();
+      dataAllPlayers.push(dataP);
+      this.playerCode = code;
+    }
+
+
+    return dataAllPlayers;
+  }
+
+  // Para colocar todos los Json en un solo array. Genera Observables
+  getAllPlayersActivesQ(): Observable<StatsDayliPlayer | undefined>[] {
+    let dataAllPlayers: Observable<StatsDayliPlayer | undefined>[] = [];
+    for (let code of this.playersCodeQ) {
       this._url = this._url.replace(this.playerCode.toString(), code.toString());
       let dataP = this.getPlayeActive();
       dataAllPlayers.push(dataP);

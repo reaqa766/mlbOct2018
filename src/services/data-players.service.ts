@@ -86,6 +86,7 @@ export class DataPlayersService {
   // private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019)';
   private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=hitting,type=gameLog,season,season=2020,gameType=R)';
   private _urlQ = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=hitting,type=gameLog,season,season=2020,gameType=R)';
+  private _urlQ2 = 'https://statsapi.mlb.com/api/v1/sports/1/' + this.playerCode +  'players?season=2020&gameType=R';
   // private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(group=pitching,type=gameLog,season,season=2019,gameType=R)';
   // private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(type=gameLog,gameType=S)';
 
@@ -105,6 +106,9 @@ export class DataPlayersService {
     return this.http.get<StatsDayliPlayer>(this._url6);
   }
   getPlayerDailyQ(): Observable<StatsDayliPlayer> {
+    return this.http.get<StatsDayliPlayer>(this._url6);
+  }
+  getPlayerDailyQ2(): Observable<StatsDayliPlayer> {
     return this.http.get<StatsDayliPlayer>(this._url6);
   }
 
@@ -133,6 +137,8 @@ export class DataPlayersService {
       }
       return dataAllPlayersQ
     }
+
+
 
   //Array de Datos
 
