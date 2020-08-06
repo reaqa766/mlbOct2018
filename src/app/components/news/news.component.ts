@@ -146,7 +146,7 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://www.sportsvenezuela.com/chaim-bloom-sobre-la-condicion-de-eduardo-rodriguez-esperamos-recuperarlo/');
+          window.open('https://www.mlb.com/es/rockies/news/rockies-vencen-a-gigantes-y-german-marquez-brilla');
   } else if (this.num === 'video3J') {
     window.open('https://elextrabase.com/2020/07/31/rob-manfred-se-plantea-cancelar-la-temporada/');
   } else if (this.num === 'video4J') {
@@ -156,7 +156,7 @@ export class NewsComponent implements OnInit {
   } else if (this.num === 'video3H') {
     window.open('https://www.mlb.com/es/news/perez-aprovecha-consejos-de-su-idolo-pedro');
   } else if (this.num === 'video4H') {
-    window.open('https://elextrabase.com/2020/02/28/salvador-perez-disputo-su-primer-juego-como-receptor-desde-2018/');
+    window.open('https://elextrabase.com/2020/07/31/un-hito-venezolano-que-no-ha-sucedido-una-sola-vez/');
   } else if (this.num === 'video5H') {
     window.open('http://www.liderendeportes.com/noticias/baseball/sandoval-y-flores-seran-claves-en-san-francisco/');
   } else if (this.num === 'video3G') {

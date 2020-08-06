@@ -58,7 +58,7 @@ getPlayersMap() {
   this.players = [];
   this.allItems = [];
   this.setPage(1);
-  const InfoObsPlayer = this.playerService.getAllPlayersDailyQ();
+  const InfoObsPlayer = this.playerService.getAllPlayersDailyQExtra();
   let index = 0;
   for (let obs of InfoObsPlayer) {
     obs.pipe(take(1)).subscribe(res => {

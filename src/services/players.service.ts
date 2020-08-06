@@ -33,7 +33,7 @@ export class PlayersService {
     575929, 547180, 519317, 502110, 514888,
     595879, 665742, 605141, 624413, 571448,
     408234, 641355, 592885, 553993, 592450,
-    650402, 545361, 660670
+    650402, 545361, 660670, 646240, 488726,
   ]
 
   private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=hitting,type=season,season=2020,gameType=R)';

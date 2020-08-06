@@ -48,6 +48,8 @@ export class DoblesQuinielaComponent implements OnInit {
   ngOnInit() {
     this.isLoading = true;
     this.getPlayersMap();
+    console.log('JUGADORES',  this.players);
+
   }
 
 // Convertir el Array de Observables a un Array de Objetos.
@@ -75,7 +77,7 @@ getPlayersMap() {
         this.players = this.players.filter(player =>{
           if(player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0){
             for(let i = 0; i < player.stats[0].splits.length; i++){
-              if( player.stats[0].splits[i].stat.doubles!== 0 && player.stats[0].splits[i].date === this.dia){
+              if( player.stats[0].splits[i].stat.stolenBases!== 0 && player.stats[0].splits[i].date === this.dia){
                 player.indexStatDate = i;
                 return true;
               }

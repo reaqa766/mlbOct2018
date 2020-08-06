@@ -110,6 +110,7 @@ import { HrQuinielaComponent } from './components/quiniela/hr-quiniela/hr-quinie
 import { DoblesQuinielaComponent } from './components/quiniela/dobles-quiniela/dobles-quiniela.component';
 import { AcumuladoQuinielaComponent } from './components/quiniela/acumulado-quiniela/acumulado-quiniela.component';
 import { Novatos2020Component } from './components/players/novatos/novatos2020/novatos2020.component';
+import { TablaComponent } from './components/quiniela/tabla/tabla.component';
 
 @NgModule({
   declarations: [
@@ -190,7 +191,8 @@ import { Novatos2020Component } from './components/players/novatos/novatos2020/n
     HrQuinielaComponent,
     DoblesQuinielaComponent,
     AcumuladoQuinielaComponent,
-    Novatos2020Component
+    Novatos2020Component,
+    TablaComponent
 
   ],
   imports: [

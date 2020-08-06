@@ -41,6 +41,7 @@ import { Playerinfo2019Component } from './components/temp2019/players2019/playe
 import { Byteam2019Component } from './components/temp2019/players2019/byteam2019/byteam2019.component';
 import { Pitcherinfo2019Component } from './components/temp2019/pitchers2019/pitcherinfo2019/pitcherinfo2019.component';
 import { InfogShowComponent } from './components/infographics/infog-show/infog-show.component';
+import { TablaComponent } from './components/quiniela/tabla/tabla.component';
 import { PlayerWeekComponent } from './components/player-week/player-week.component';
 import { PitcherrWeekComponent } from './components/pitcherr-week/pitcherr-week.component';
 import { PlayerOfTheWeekComponent } from './components/player-of-the-week/player-of-the-week.component';
@@ -211,6 +212,8 @@ const routes: Routes = [
   component: DoblesQuinielaComponent },
   { path: 'AcumDiarioQuiniela',
   component: AcumuladoQuinielaComponent },
+  { path: 'TablaQuiniela',
+  component: TablaComponent },
   { path: 'transacciones',
   component: TransaccionesComponent },
   { path: 'ligaFantasy',

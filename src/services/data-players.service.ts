@@ -72,11 +72,18 @@ export class DataPlayersService {
   ]
 
   private playersCodeQ = [
-    640449, 665487, 650333, 592518, 596059,
-    575929, 547180, 519317, 502110, 514888,
-    595879, 665742, 605141, 624413, 571448,
-    408234, 641355, 592885, 553993, 592450,
-    650402, 545361, 660670
+    531368, 502054, 643418, 660670, 592206,
+    605141, 641487, 595879, 665487, 664058,
+    621020, 621439, 593428, 520471, 592450,
+
+  ]
+  private playersCodeQExtra = [
+    592450, 547180, 592885, 640449, 641355,
+    553993, 665487, 519317, 650402, 595879,
+    502110, 514888, 665742, 650333, 592518,
+    408234, 545361, 605141, 571448, 624413,
+    660670, 596059, 575929, 443558,
+
   ]
 
 
@@ -129,6 +136,18 @@ export class DataPlayersService {
     getAllPlayersDailyQ(): Observable<StatsDayliPlayer | undefined>[] {
       let dataAllPlayersQ: Observable<StatsDayliPlayer | undefined>[] = [];
       for (let code of this.playersCodeQ) {
+        this._url6 = this._urlQ.replace(this.playerCode.toString(), code.toString())
+        // this._url6 = this._url6.replace(this.playerCode.toString(), code.toString())
+        let dataP2 = this.getPlayerDailyQ();
+        dataAllPlayersQ.push(dataP2);
+        this.playerCodeQ = code;
+      }
+      return dataAllPlayersQ
+    }
+    // Para colocar todos los Json de la QUINIELA en un solo array. Genera Observables
+    getAllPlayersDailyQExtra(): Observable<StatsDayliPlayer | undefined>[] {
+      let dataAllPlayersQ: Observable<StatsDayliPlayer | undefined>[] = [];
+      for (let code of this.playersCodeQExtra) {
         this._url6 = this._urlQ.replace(this.playerCode.toString(), code.toString())
         // this._url6 = this._url6.replace(this.playerCode.toString(), code.toString())
         let dataP2 = this.getPlayerDailyQ();
