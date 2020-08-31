@@ -74,11 +74,11 @@ export class VideosComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video1') {
-          window.open('https://www.mlb.com/es/news/gleyber-torres-golpeado-en-el-codo');
+          window.open('https://www.mlb.com/es/video/aguilar-s-3-hit-4-rbi-game');
   } else if (this.num === 'video2E') {
-    window.open('https://www.mlb.com/video/cargo-s-nice-sliding-catch', '_blank');
+    window.open('https://www.mlb.com/es/video/increible-atrapada-de-gimenez', '_blank');
   } else if (this.num === 'video3E') {
-    window.open('https://www.mlb.com/es/news/garcia-impulso-a-rays-con-hr-dentro-del-parque', '_blank');
+    window.open('https://www.mlb.com/es/video/doble-matanza-de-mets-en-la-5ta', '_blank');
   } else if (this.num === 'video4E') {
     window.open('https://www.mlb.com/es/news/hr-arcia-corona-remontada-milwaukee', '_blank');
   } else if (this.num === 'video2D') {

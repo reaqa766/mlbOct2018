@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class TablaComponent implements OnInit {
 
   selectedImg;
-  imgs = [ {number: 1, url: '../../../../assets/TablaQUINIELA05Agosto1.png'},
-  {number: 2, url: '../../../../assets/TablaQUINIELA05Agosto.png'},
-    {number: 3, url: '../../../../assets/TablaQUINIELA05Agosto3.png'}
+  imgs = [ {number: 1, url: '../../../../assets/Tabla_Act_30_Agosto_2020_1.png'},
+  {number: 2, url: '../../../../assets/Tabla_Act_30_Agosto_2020_2.png'},
+    {number: 3, url: '../../../../assets/Tabla_Act_30_Agosto_2020_3.png'}
 
   ];
 

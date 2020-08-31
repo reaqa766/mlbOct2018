@@ -34,6 +34,7 @@ export class AllplayersService {
   ];
   private rookiesCode2020 = [
     621593, 670550, 658668, 665926, 661388,
+    645305, 656004,
 
   ];
 

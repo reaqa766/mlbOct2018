@@ -146,9 +146,9 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://www.mlb.com/es/rockies/news/rockies-vencen-a-gigantes-y-german-marquez-brilla');
+          window.open('https://www.mlb.com/es/news/ronald-acuna-se-perdera-el-fin-de-semana');
   } else if (this.num === 'video3J') {
-    window.open('https://elextrabase.com/2020/07/31/rob-manfred-se-plantea-cancelar-la-temporada/');
+    window.open('https://www.mlb.com/es/news/perez-lidero-a-reales-en-triunfo-sobre-rojos');
   } else if (this.num === 'video4J') {
     window.open('https://elextrabase.com/2020/07/31/miguel-cabrera-el-dueno-de-la-heladeria/');
   } else if (this.num === 'video5J') {
