@@ -57,7 +57,6 @@ export class BioActivesComponent implements OnInit {
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
     let InfoObsPlayer = this.playerService.getAllPlayersActives();
-    // let InfoObsPlayer = this.playerService.getAllPlayersActives();
     let index = 0;
     for (let obs of InfoObsPlayer) {
       obs.pipe(take(1)).subscribe(res => {

@@ -55,13 +55,14 @@ export class ActivesComponent implements OnInit {
     // console.log('allItems', this.allItems);
     // console.log('players', this.players);
 
-    // console.log('data', JSON.stringify(this.allItems));
+    // console.log('data', JSON.stringify(this.players));
 
   }
 
   // Convertir el Array de Observables a un Array de Objetos.
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
+    // this.playerService.getIdsJSON();
     let InfoObsPlayer = this.playerService.getAllPlayersActives();
     let index = 0;
     for (let obs of InfoObsPlayer) {
@@ -90,6 +91,7 @@ export class ActivesComponent implements OnInit {
           this.allItems = this.players;
           this.jugadores = this.players;
           // console.log('jugadores', JSON.stringify(this.jugadores));
+          // console.log('data2', JSON.stringify(this.players));
 
 
 

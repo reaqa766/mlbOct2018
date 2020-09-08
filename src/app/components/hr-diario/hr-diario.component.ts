@@ -6,6 +6,8 @@ import { Players } from '../../../interfaces/players';
 
 // tslint:disable-next-line:semicolon
 import { PagerService } from '../../../services/index'
+// import { PlayersService } from '../../../services/players.service';
+
 
 
 @Component({
@@ -59,6 +61,7 @@ getPlayersMap() {
   this.players = [];
   this.allItems = [];
   this.setPage(1);
+  // const InfoObsPlayer = this.playerService.getAllPlayersActives();
   const InfoObsPlayer = this.playerService.getAllPlayersDaily2();
   let index = 0;
   for (let obs of InfoObsPlayer) {

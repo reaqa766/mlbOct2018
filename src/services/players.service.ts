@@ -82,7 +82,7 @@ export class PlayersService {
 
     const dominicanPlayers = await getPlayerByCountry('Dominican Republic');
     const venezuelanPlayers = await getPlayerByCountry('Venezuela');
-    console.log(JSON.stringify(venezuelanPlayers));
+    console.log(JSON.stringify(venezuelanPlayers),'VENEZUELAN');
     console.log(JSON.stringify(dominicanPlayers));
   }
 
