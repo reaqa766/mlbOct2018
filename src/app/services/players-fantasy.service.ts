@@ -29,7 +29,7 @@ export class PlayersFantasyService {
   public dominicansVenezuelansPlayersCodes;
 
 
-  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(group=hitting,type=season,season=2019,gameType=R)'
+  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(group=hitting,type=season,season=2019,gameType=F)'
 
 
   constructor(private http: HttpClient, private afs: AngularFirestore) {
@@ -45,7 +45,7 @@ export class PlayersFantasyService {
 
     const getPlayerByCountry = async (country) => {
       // Fetch all players from current season
-      const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2019&gameType=R').toPromise();
+      const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2019&gameType=F').toPromise();
       const allPlayers = response.people;
 
       // Filter by country

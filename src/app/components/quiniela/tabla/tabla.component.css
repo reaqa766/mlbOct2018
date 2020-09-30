@@ -10,6 +10,11 @@
 
 }
 
+.color_infoGraphics {
+  color: rgb(230, 209, 93);
+  text-shadow: 2px 2px 8px black;
+}
+
 .title_infographics {
   color: antiquewhite;
   width: fit-content;
