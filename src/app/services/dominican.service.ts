@@ -26,7 +26,7 @@ export class DominicanService {
 
 
   // Url del Api con los datos de cada juego para un Jugador particular
-  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(type=season,season=2019,gameType=F)';
+  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(type=season,season=2019,gameType=R)';
 
 
   constructor(private http: HttpClient) {

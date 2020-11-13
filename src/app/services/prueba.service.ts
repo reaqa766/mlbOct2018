@@ -130,7 +130,7 @@ export class PruebaService {
   // private _url4 = 'https://statsapi.mlb.com/api/v1/teams/109/roster?hydrate=person(stats(type=season,season=2018),education)&rosterType=Active';
   // // tslint:disable-next-line:max-line-length
   // tslint:disable-next-line:max-line-length
-  private _url ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2020&hydrate=stats(group=hitting,type=season,season=2020,gameType=F)'
+  private _url ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2020&hydrate=stats(group=hitting,type=season,season=2020,gameType=R)'
   //private _url ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2020&hydrate=stats(group=hitting,type=season,season=2020,gameType=S)'
 
 
