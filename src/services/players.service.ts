@@ -36,9 +36,10 @@ export class PlayersService {
     650402, 545361, 660670, 646240, 488726,
   ]
 
-  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=hitting,type=season,season=2020,gameType=R)';
+  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2021&hydrate=stats(group=hitting,type=season,season=2021,gameType=S)';
+  //private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=hitting,type=season,season=2020,gameType=R)';
   // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=hitting,type=season,season=2020,gameType=S)';
-  private _url2 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(type=season,season=2019,gameType=R)';
+  private _url2 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(type=season,season=2020,gameType=S)';
   // private _url2 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(group=hitting,type=season,season=2019,gameType=R)'
 
 
@@ -56,7 +57,8 @@ export class PlayersService {
 
     const getPlayerByCountry = async (country) => {
       // Fetch all players from current season
-      const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2020&gameType=R').toPromise();
+      const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2021&gameType=S').toPromise();
+      //const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2020&gameType=R').toPromise();
      // const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2019&gameType=R').toPromise();
       // const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2020&gameType=S').toPromise();
       const allPlayers = response.people;

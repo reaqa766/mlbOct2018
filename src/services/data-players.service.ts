@@ -88,11 +88,7 @@ export class DataPlayersService {
 
   ]
   private playersCodeQExtra = [
-    592450, 547180, 592885, 640449, 641355,
-    553993, 665487, 519317, 650402, 595879,
-    502110, 514888, 665742, 650333, 592518,
-    408234, 545361, 605141, 571448, 624413,
-    660670, 596059, 575929, 443558,
+    541645, 521692
 
   ]
 
@@ -101,9 +97,12 @@ export class DataPlayersService {
   // private _url6 = 'https://statsapi.mlb.com/api/v1/people/' + this.playerCode + '/stats?stats=gameLog,statSplits,statsSingleSeason&group=hitting&gameType=R&sitCodes=1,2,3,4,5,6,7,8,9,10,11,12&hydrate=team&season=2019&language=en';
   // private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(type=gameLog,gameType=R)';
   // private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019)';
-  private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=hitting,type=gameLog,season,season=2020,gameType=R)';
-  private _urlQ = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=hitting,type=gameLog,season,season=2020,gameType=R)';
-  private _urlQ2 = 'https://statsapi.mlb.com/api/v1/sports/1/' + this.playerCode +  'players?season=2020&gameType=R';
+  private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2021&hydrate=stats(group=hitting,type=gameLog,season,season=2021,gameType=S)';
+  //private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=hitting,type=gameLog,season,season=2020,gameType=R)';
+  private _urlQ = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2021&hydrate=stats(group=hitting,type=gameLog,season,season=2021,gameType=S)';
+ // private _urlQ = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=hitting,type=gameLog,season,season=2020,gameType=R)';
+  private _urlQ2 = 'https://statsapi.mlb.com/api/v1/sports/1/' + this.playerCode +  'players?season=2021&gameType=S';
+  //private _urlQ2 = 'https://statsapi.mlb.com/api/v1/sports/1/' + this.playerCode +  'players?season=2020&gameType=R';
   // private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(group=pitching,type=gameLog,season,season=2019,gameType=R)';
   // private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(type=gameLog,gameType=S)';
 

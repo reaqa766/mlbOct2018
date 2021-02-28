@@ -30,9 +30,11 @@ export class PosicionesComponent implements OnInit {
   AllLeague: Boolean;
   CALEND2: any;
   CALEND3: any;
-  _url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2020&standingsTypes=regularSeason';
+  _url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2021&standingsTypes=springTraining';
+  //_url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2020&standingsTypes=regularSeason';
   // _url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2019&standingsTypes=springTraining';
-  _url1 = 'https://statsapi.mlb.com/api/v1/schedule?sportId=1,51&date=2019-04-14&gameTypes=E,S,R,A,F,D,L,W&hydrate=team(linescore(matchup,runners))&useLatestGames=false&language=en&leagueId=103,104,420';
+  _url1 = 'https://statsapi.mlb.com/api/v1/schedule?sportId=1,51&date=2021-04-14&gameTypes=E,S,R,A,F,D,L,W&hydrate=team(linescore(matchup,runners))&useLatestGames=false&language=en&leagueId=103,104,420';
+  //_url1 = 'https://statsapi.mlb.com/api/v1/schedule?sportId=1,51&date=2019-04-14&gameTypes=E,S,R,A,F,D,L,W&hydrate=team(linescore(matchup,runners))&useLatestGames=false&language=en&leagueId=103,104,420';
 
   constructor(private playerService: PruebaService,
     private pagerService: PagerService,
