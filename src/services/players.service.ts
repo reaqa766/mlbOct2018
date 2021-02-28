@@ -53,6 +53,7 @@ export class PlayersService {
   }
 
   // Searchs for Season Training Venezuelan and Dominican Players
+  // Para obtener los IDs de todos los jugadores o Venezolanos o Diminicanos, Cualquiera de los 3 
   async getIdsJSON() {
 
     const getPlayerByCountry = async (country) => {
@@ -64,6 +65,7 @@ export class PlayersService {
       const allPlayers = response.people;
 
       // Filter by country
+      // const filteredPlayers = allPlayers.filter(player => (player.active));
       const filteredPlayers = allPlayers.filter(player => (player.birthCountry === country && player.active));
 
       // Map to get only ids
@@ -85,7 +87,7 @@ export class PlayersService {
     const dominicanPlayers = await getPlayerByCountry('Dominican Republic');
     const venezuelanPlayers = await getPlayerByCountry('Venezuela');
     console.log(JSON.stringify(venezuelanPlayers),'VENEZUELAN');
-    console.log(JSON.stringify(dominicanPlayers));
+    // console.log(JSON.stringify(dominicanPlayers));
   }
 
   // Obtencion de los datos de temporada de un solo jugador

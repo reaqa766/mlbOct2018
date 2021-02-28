@@ -62,7 +62,7 @@ export class ActivesComponent implements OnInit {
   // Convertir el Array de Observables a un Array de Objetos.
   // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
   getPlayersMap() {
-    // this.playerService.getIdsJSON();
+    this.playerService.getIdsJSON();
     let InfoObsPlayer = this.playerService.getAllPlayersActives();
     let index = 0;
     for (let obs of InfoObsPlayer) {
