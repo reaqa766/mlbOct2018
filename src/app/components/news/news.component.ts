@@ -146,9 +146,9 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://www.mlb.com/es/news/ronald-acuna-se-perdera-el-fin-de-semana');
+          window.open('https://www.sportsvenezuela.com/beisbol/salvador-avisail-cuadrangulares/');
   } else if (this.num === 'video3J') {
-    window.open('https://www.mlb.com/es/news/perez-lidero-a-reales-en-triunfo-sobre-rojos');
+    window.open('https://www.mlb.com/es/news/gleyber-torres-enfocado-en-recuperar-la-forma#:~:text=TAMPA%2C%20Florida%20%2D%2D%20En%20su,defensa%20en%20las%20paradas%20cortas.');
   } else if (this.num === 'video4J') {
     window.open('https://elextrabase.com/2020/07/31/miguel-cabrera-el-dueno-de-la-heladeria/');
   } else if (this.num === 'video5J') {
