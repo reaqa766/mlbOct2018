@@ -41,19 +41,21 @@ export class DoblesQuinielaComponent implements OnInit {
   isLoading: boolean;
 
   EQUIPOS = [
-    { code: 147, name: 'Yankees', liga: 'Americana', division: 'este' },
-    { code: 111, name: 'Boston', liga: 'Americana', division: 'este' },
-    { code: 139, name: 'Tampa', liga: 'Americana', division: 'este' },
-    { code: 110, name: 'Baltimore', liga: 'Americana', division: 'este' },
-    { code: 141, name: 'Toronto', liga: 'Americana', division: 'este' }
+    { code: 1, name: 'Leones de Boston', liga: 'Norte', division: 'este' },
+    { code: 2, name: 'Toros de Pedregal', liga: 'Norte', division: 'este' },
+    { code: 3, name: 'las Vegas BBC', liga: 'Norte', division: 'este' },
+    { code: 4, name: 'La Familia', liga: 'Norte', division: 'este' },
+    { code: 5, name: 'Super Leones', liga: 'Norte', division: 'este' },
+    { code: 6, name: 'Los Frailes', liga: 'Norte', division: 'este' }
   ];
   EQUIPOS2= [
 
-    { code: 116, name: 'Detroit', liga: 'Americana', division: 'central' },
-    { code: 114, name: 'Cleveland', liga: 'Americana', division: 'central' },
-    { code: 142, name: 'Minnesota', liga: 'Americana', division: 'central' },
-    { code: 118, name: 'Kansas', liga: 'Americana', division: 'central' },
-    { code: 145, name: 'White Sox', liga: 'Americana', division: 'central' }
+    { code: 7, name: 'The Bay', liga: 'Sur', division: 'central' },
+    { code: 8, name: 'The Lyons', liga: 'Sur', division: 'central' },
+    { code: 9, name: 'Robaseñas', liga: 'Sur', division: 'central' },
+    { code: 10, name: 'Hedgbogs', liga: 'Sur', division: 'central' },
+    { code: 11, name: 'CPB Hercules', liga: 'Sur', division: 'central' },
+    { code: 12, name: 'Michis Club', liga: 'Sur', division: 'central' }
   ];
 
   EQUIPOS3= [
@@ -71,6 +73,9 @@ export class DoblesQuinielaComponent implements OnInit {
     { code: 118, name: 'Kansas', liga: 'Americana', division: 'central' },
     { code: 145, name: 'White Sox', liga: 'Americana', division: 'central' }
   ];
+  players_definidos: any[];
+  BBplayers: any[];
+  buscando: boolean;
 
 
   constructor(private playerService: DataPlayersService, private pagerService: PagerService) { }
@@ -109,7 +114,8 @@ getPlayersMap() {
         // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
         this.players = this.players.filter(player =>{
 
-          if(player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0){
+          // if(player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0){
+          if(player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0 ){
             for(let i = 0; i < player.stats[0].splits.length; i++){
               if(player.stats[0].splits[i].date === this.dia){
                 player.indexStatDate = i;
@@ -133,40 +139,61 @@ getPlayersMap() {
         // console.log('This players final: ', this.players);
 
 
-
         this.allItems = this.players;
+        this.BBplayers = this.players;
         this.setPage(1);
         this.isLoading = false;
         // console.log('allItems', this.allItems);
+
+        // this.BBplayers = this.BBplayers.filter(bbplayer =>{
+
+        //   // if(player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0){
+        //   if(bbplayer.stats && bbplayer.stats.length !== 0 && bbplayer.stats[0].splits && bbplayer.stats[0].splits.length !== 0 ){
+        //     for(let i = 0; i < bbplayer.stats[0].splits.length; i++){
+        //       if(bbplayer.id === this.EQUIPOS) {
+        //         bbplayer.indexStatCode = bbplayer.id;
+        //         return true;
+        //       }
+        //     }
+        //     return false;
+        //   }
+        // })
+
+
         }
         index++;
 
     });
   }
+  
 
   }
+  
 
-  onSearchDate(fecha) {
+  onSearchDate(fecha: { srcElement: { value: string; }; }) {
     // console.log("FECHA", fecha.srcElement.value);
     this.dia = fecha.srcElement.value;
     this.getPlayersMap();
 }
 
-  // onSearchChange() {
-  //   if (this.searchText) {
-  //     this.allItems = this.players.filter(player =>
-  //       player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
-  //       (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
-  //       (player.nickName && player.nickName.toLowerCase().includes(this.searchText)));
-  //       this.setPage(this.pager.currentPage);
-  //     } else {
-  //         this.allItems = this.players;
-  //         this.setPage(this.pager.currentPage);
+onSearchChange(team: any) {
+  this.buscando = false;
+  if (team) {
+    this.allItems = this.players.filter(player =>
+      player.stats[0].splits[0].equipo.name.toLowerCase().includes(team.toLowerCase()) ||
+      player.fullName.toLowerCase().includes(team.toLowerCase()));
+      // this.setPage(this.pager.currentPage);
 
-  //       }
-  //       return this.allItems;
+  } else {
+    this.allItems = this.players;
+    // this.setPage(this.pager.currentPage);
+  }
+  return this.allItems;
 
-  //     }
+
+}
+
+
   setPage(page: number) {
 
     // get pager object from service

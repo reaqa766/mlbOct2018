@@ -12,7 +12,10 @@
   <div class="team_logo">
     <div *ngFor="let equipo of EQUIPOS; let i=index">
       <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
-        <a class="img_picture_element" >{{equipo.name}}</a>
+        <a class="img_picture_element"  (click)="onSearchChange(equipo.name)"  data-hover="tooltip" data-placement="top"
+        title="Pincha para ver Jugadores">{{equipo.name}}</a>
+         <!-- <div (click)="onSearchChange(equipo.name)"  data-hover="tooltip" data-placement="top"
+            title="Pincha para ver Jugadores"></div> -->
         <!-- <a ><img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
             src="{{team.code}}" alt="Team Logo" data-hover="tooltip" data-placement="top"
             title="Pincha para ver Jugadores"></a> -->
