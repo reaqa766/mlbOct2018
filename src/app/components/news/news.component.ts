@@ -150,11 +150,11 @@ export class NewsComponent implements OnInit {
   } else if (this.num === 'video3J') {
     window.open('https://www.mlb.com/es/news/gleyber-torres-enfocado-en-recuperar-la-forma#:~:text=TAMPA%2C%20Florida%20%2D%2D%20En%20su,defensa%20en%20las%20paradas%20cortas.');
   } else if (this.num === 'video4J') {
-    window.open('https://elextrabase.com/2020/07/31/miguel-cabrera-el-dueno-de-la-heladeria/');
+    window.open('https://elextrabase.com/2021/03/01/manuel-pina-coloca-interesante-la-pelea-por-la-receptoria-en-milwaukee/');
   } else if (this.num === 'video5J') {
-    window.open('https://www.mlb.com/es/news/que-podemos-esperar-de-andres-gimenez');
+    window.open('https://www.liderendeportes.com/noticias/baseball/senzatela-a-consolidarse-en-la-rotacion-de-rockies/');
   } else if (this.num === 'video3H') {
-    window.open('https://www.mlb.com/es/news/perez-aprovecha-consejos-de-su-idolo-pedro');
+    window.open('https://www.sportsvenezuela.com/beisbol/elvis-andrus-mudanza-oakland/');
   } else if (this.num === 'video4H') {
     window.open('https://elextrabase.com/2020/07/31/un-hito-venezolano-que-no-ha-sucedido-una-sola-vez/');
   } else if (this.num === 'video5H') {

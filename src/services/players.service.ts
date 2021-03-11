@@ -19,6 +19,9 @@ import _dominicanPlayersCodes2019 from '../assets/JSONS/dominicanPlayersIds2019'
   providedIn: 'root'
 })
 export class PlayersService {
+  // getAllPlayersDailyQExtra() {
+  //   throw new Error('Method not implemented.');
+  // }
   playerCode = 596115;
   venezuelanPlayersCollection: AngularFirestoreCollection<any>;
   dominicanPlayersCollection: AngularFirestoreCollection<any>;
@@ -87,7 +90,7 @@ export class PlayersService {
     const dominicanPlayers = await getPlayerByCountry('Dominican Republic');
     const venezuelanPlayers = await getPlayerByCountry('Venezuela');
     console.log(JSON.stringify(venezuelanPlayers),'VENEZUELAN');
-    console.log(JSON.stringify(dominicanPlayers));
+    // console.log(JSON.stringify(dominicanPlayers));
   }
 
   // Obtencion de los datos de temporada de un solo jugador

@@ -74,7 +74,7 @@ export class VideosComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video1') {
-          window.open('https://www.mlb.com/es/video/aguilar-s-3-hit-4-rbi-game');
+          window.open('https://www.mlb.com/video/ronald-acuna-jr-s-spring-debut');
   } else if (this.num === 'video2E') {
     window.open('https://www.mlb.com/es/video/increible-atrapada-de-gimenez', '_blank');
   } else if (this.num === 'video3E') {
