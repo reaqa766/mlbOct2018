@@ -36,7 +36,7 @@ export class EstadoVzlaComponent implements OnInit {searchText: string;
 
 
   jugadores = [ {codigo:408234, nombre: 'Miguel Cabrera', url: '../../../../assets/408234.jpg', estadoNac: 4, tipoJugador: 1},
-                {codigo:471865, nombre: 'Carlos Gonzalez ', url: '../../../../assets/471865.jpg', estadoNac: 24, tipoJugador: 1},
+                // {codigo:471865, nombre: 'Carlos Gonzalez ', url: '../../../../assets/471865.jpg', estadoNac: 24, tipoJugador: 1},
                 {codigo:542255, nombre: 'Ender Inciarte', url: '../../../../assets/542255.jpg', estadoNac: 24, tipoJugador: 1},
                 {codigo:520471, nombre: 'Freddy Galvis', url: '../../../../assets/520471.jpg', estadoNac: 11, tipoJugador: 1},
                 {codigo:596059, nombre: 'Rougned Odor', url: '../../../../assets/596059.jpg', estadoNac: 24, tipoJugador: 1},
@@ -57,7 +57,7 @@ export class EstadoVzlaComponent implements OnInit {searchText: string;
                 {codigo:650402, nombre: 'Gleyber Torres', url: '../../../../assets/650402.jpg', estadoNac: 8, tipoJugador: 1},
                 {codigo:602922, nombre: 'Jose Rondon', url: '../../../../assets/602922.jpg', estadoNac: 15, tipoJugador: 1},
                 {codigo:462101, nombre: 'Elvis Andrus', url: '../../../../assets/462101.jpg', estadoNac: 4, tipoJugador: 1},
-                {codigo:465041, nombre: 'Francisco Cervelli', url: '../../../../assets/465041.jpg', estadoNac: 7, tipoJugador: 1},
+                // {codigo:465041, nombre: 'Francisco Cervelli', url: '../../../../assets/465041.jpg', estadoNac: 7, tipoJugador: 1},
                 // {codigo:491696, nombre: 'Jesus Sucre', url: '../../../../assets/491696.jpg', estadoNac: 19, tipoJugador: 1},
                 {codigo:514888, nombre: 'Jose Altuve', url: '../../../../assets/514888.jpg', estadoNac: 4, tipoJugador: 1},
                 {codigo:606299, nombre: 'Jose Peraza', url: '../../../../assets/606299.jpg', estadoNac: 5, tipoJugador: 1},
@@ -80,7 +80,7 @@ export class EstadoVzlaComponent implements OnInit {searchText: string;
                 {codigo:575929, nombre: 'Willson Contreras', url: '../../../../assets/575929.jpg', estadoNac: 7, tipoJugador: 1},
                 {codigo:467092, nombre: 'Wilson Ramos', url: '../../../../assets/467092.jpg', estadoNac: 7, tipoJugador: 1},
                 // {codigo:517369, nombre: 'Jose Pirela', url: '../../../../assets/517369.jpg', estadoNac: 21, tipoJugador: 1},
-                {codigo:434671, nombre: 'Anibal Sanchez', url: '../../../../assets/434671.jpg', estadoNac: 4, tipoJugador: 2},
+                // {codigo:434671, nombre: 'Anibal Sanchez', url: '../../../../assets/434671.jpg', estadoNac: 4, tipoJugador: 2},
                 {codigo:501625, nombre: 'Jose Alvarez', url: '../../../../assets/501625.jpg', estadoNac: 1, tipoJugador: 2},
                 {codigo:471911, nombre: 'Carlos Carrasco', url: '../../../../assets/471911.jpg', estadoNac: 13, tipoJugador: 2},
                 // {codigo:553878, nombre: 'Felipe Vazquez', url: '../../../../assets/553878.jpg', estadoNac: 23, tipoJugador: 2},

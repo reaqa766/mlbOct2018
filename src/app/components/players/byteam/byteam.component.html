@@ -10,12 +10,12 @@
   <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
   <p class="spiner_load">CARGANDO</p>
 </div>
+
 <div class="container-position" *ngIf='buscando'>
   <main class="liga_americana">
      <div class="container_americana_este container_border">
     <h3 class="titulo_liga">Americana Este</h3>
     <div class="team_logo">
-
       <div *ngFor="let team of teamsAmE; let i=index">
         <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
           <a >
@@ -108,23 +108,29 @@
         </div>
 
     </ng-container>
+
     <ng-container *ngIf="!(pager.allItems === 0)">
 
       <div class="container-actives_cards ">
         <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
           <div class="card card1 img_picture_box" style="width: 95%;" *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
-            <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top" src="../../../../assets/{{player.id}}.jpg"
-                alt="Jugador de Grandes Ligas"></a>
+            <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top" src="https://securea.mlb.com/mlb/images/players/head_shot/{{player.id}}.jpg"
+              alt="Jugador de Grandes Ligas"></a>
+            <!-- <a routerLink="/playerinfo/{{player.id}}"><img class="card-img-top" src="../../../../assets/{{player.id}}.jpg"
+                alt="Jugador de Grandes Ligas"></a> -->
             <div class="card-body">
               <h5 class="card-title">{{player.fullName}}</h5>
               <h5 class="card-title2">{{player.primaryPosition.name}}</h5>
             </div>
           </div>
+
         </ng-container>
         <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
           <div class="card card1" *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*7)">
             <a routerLink="/{{player.primaryPosition.name === 'Pitcher' ? 'pitcherinfo' : 'playerinfo'}}/{{ player.id }} "><img
-                class="card-img-top" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a>
+                class="card-img-top" src="https://securea.mlb.com/mlb/images/players/head_shot/{{player.id}}.jpg
+                " alt="Jugador de Grandes Ligas"></a>
+                <!-- class="card-img-top" src="../../../../assets/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a> -->
             <!-- <a routerLink="/pitcherinfo/{{player.id}}"><img class="card-img-top" src="../../../../assets/Jugadores Spring T 2019/Todos/{{player.id}}.jpg" alt="Jugador de Grandes Ligas"></a> -->
             <div class="card-body">
               <h5 class="card-title">{{player.fullName}} </h5>

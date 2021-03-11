@@ -40,6 +40,39 @@ export class DoblesQuinielaComponent implements OnInit {
 
   isLoading: boolean;
 
+  EQUIPOS = [
+    { code: 147, name: 'Yankees', liga: 'Americana', division: 'este' },
+    { code: 111, name: 'Boston', liga: 'Americana', division: 'este' },
+    { code: 139, name: 'Tampa', liga: 'Americana', division: 'este' },
+    { code: 110, name: 'Baltimore', liga: 'Americana', division: 'este' },
+    { code: 141, name: 'Toronto', liga: 'Americana', division: 'este' }
+  ];
+  EQUIPOS2= [
+
+    { code: 116, name: 'Detroit', liga: 'Americana', division: 'central' },
+    { code: 114, name: 'Cleveland', liga: 'Americana', division: 'central' },
+    { code: 142, name: 'Minnesota', liga: 'Americana', division: 'central' },
+    { code: 118, name: 'Kansas', liga: 'Americana', division: 'central' },
+    { code: 145, name: 'White Sox', liga: 'Americana', division: 'central' }
+  ];
+
+  EQUIPOS3= [
+    { code: 117, name: 'Astros', liga: 'Americana', division: 'oeste' },
+    { code: 133, name: 'Oakland', liga: 'Americana', division: 'oeste' },
+    { code: 108, name: 'Angels', liga: 'Americana', division: 'oeste' },
+    { code: 136, name: 'Seattle', liga: 'Americana', division: 'oeste' },
+    { code: 140, name: 'Texas', liga: 'Americana', division: 'oeste' }
+  ];
+  EQUIPOS4= [
+
+    { code: 116, name: 'Detroit', liga: 'Americana', division: 'central' },
+    { code: 114, name: 'Cleveland', liga: 'Americana', division: 'central' },
+    { code: 142, name: 'Minnesota', liga: 'Americana', division: 'central' },
+    { code: 118, name: 'Kansas', liga: 'Americana', division: 'central' },
+    { code: 145, name: 'White Sox', liga: 'Americana', division: 'central' }
+  ];
+
+
   constructor(private playerService: DataPlayersService, private pagerService: PagerService) { }
 
   ngOnInit() {
@@ -59,7 +92,7 @@ getPlayersMap() {
   this.players = [];
   this.allItems = [];
   this.setPage(1);
-  const InfoObsPlayer = this.playerService.getAllPlayersDaily2();
+  const InfoObsPlayer = this.playerService.getAllPlayersDailyQuin();
   let index = 0;
   for (let obs of InfoObsPlayer) {
     obs.pipe(take(1)).subscribe(res => {
@@ -119,21 +152,21 @@ getPlayersMap() {
     this.getPlayersMap();
 }
 
-  onSearchChange() {
-    if (this.searchText) {
-      this.allItems = this.players.filter(player =>
-        player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
-        (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
-        (player.nickName && player.nickName.toLowerCase().includes(this.searchText)));
-        this.setPage(this.pager.currentPage);
-      } else {
-          this.allItems = this.players;
-          this.setPage(this.pager.currentPage);
+  // onSearchChange() {
+  //   if (this.searchText) {
+  //     this.allItems = this.players.filter(player =>
+  //       player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
+  //       (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
+  //       (player.nickName && player.nickName.toLowerCase().includes(this.searchText)));
+  //       this.setPage(this.pager.currentPage);
+  //     } else {
+  //         this.allItems = this.players;
+  //         this.setPage(this.pager.currentPage);
 
-        }
-        return this.allItems;
+  //       }
+  //       return this.allItems;
 
-      }
+  //     }
   setPage(page: number) {
 
     // get pager object from service

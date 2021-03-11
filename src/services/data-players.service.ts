@@ -125,12 +125,17 @@ export class DataPlayersService {
     605141, 641487, 595879, 665487, 664058,
     621020, 621439, 593428, 520471, 592450,
   ]
+  private playersCodeQuin = [
+   531368, 502054, 643418, 660670, 592206,
+    605141, 641487, 595879, 665487, 664058,
+    621020, 621439, 593428, 520471, 592450,
+  ]
 
   public teams =[
     {
       id: 'losEstrada',
       name: 'Los Estrada',
-      playerCodes: [
+      playersCodeQuin: [
         531368, 502054, 643418, 660670, 592206,
          605141, 641487, 595879, 665487, 664058,
          621020, 621439, 593428, 520471, 592450,
@@ -139,7 +144,7 @@ export class DataPlayersService {
       {
         id: 'losEstrada1',
         name: 'Los Estrada1',
-        playerCodes: [
+        pplayersCodeQuin: [
      542255,500871,462101,467092,514888,
      527048,501303,503556,640470,433587,
      593958,641154,541645,660670,444482,
@@ -189,6 +194,19 @@ export class DataPlayersService {
   getAllPlayersDaily2(): Observable<StatsDayliPlayer | undefined>[] {
     let dataAllPlayers2: Observable<StatsDayliPlayer | undefined>[] = [];
     for (let code of this.playersCode) {
+      this._url6 = this._url6.replace(this.playerCode.toString(), code.toString())
+      // this._url6 = this._url6.replace(this.playerCode.toString(), code.toString())
+      let dataP2 = this.getPlayerDaily2();
+      dataAllPlayers2.push(dataP2);
+      this.playerCode = code;
+    }
+    return dataAllPlayers2
+  }
+
+  // algoritmo para quiniela/doubles -  jugadores de cada equipo en cada Liga 
+  getAllPlayersDailyQuin(): Observable<StatsDayliPlayer | undefined>[] {
+    let dataAllPlayers2: Observable<StatsDayliPlayer | undefined>[] = [];
+    for (let code of this.playersCodeQuin) {
       this._url6 = this._url6.replace(this.playerCode.toString(), code.toString())
       // this._url6 = this._url6.replace(this.playerCode.toString(), code.toString())
       let dataP2 = this.getPlayerDaily2();

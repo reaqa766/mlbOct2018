@@ -40,6 +40,7 @@ export class DailyComponent implements OnInit {
 
   isLoading: boolean;
 
+ 
   constructor(private playerService: DataPlayersService, private pagerService: PagerService) { }
 
   ngOnInit() {

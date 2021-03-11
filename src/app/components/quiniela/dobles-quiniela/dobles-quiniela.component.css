@@ -10,7 +10,77 @@
   height: 1.75em;
   border-radius: 7px;
 }
+.container-position {
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 1px;
+}
 
+.container_americana_norte {
+  margin: 1.5rem auto;
+  background-color: rgba(11, 95, 191, 0.465);
+  width: 20rem;
+  height: fit-content;
+  border-radius: 7px;
+}
+.container_americana_sur {
+  margin: 1.5rem auto;
+  background-color: rgba(194, 161, 31, 0.465);
+  width: 20rem;
+  height: fit-content;
+  border-radius: 7px;
+}
+.container_americana_este {
+  margin: 1.5rem auto;
+  background-color: rgba(16, 179, 103, 0.465);
+  width: 20rem;
+  height: fit-content;
+  border-radius: 7px;
+}
+.container_americana_oeste {
+  margin: 1.5rem auto;
+  background-color: rgba(50, 120, 196, 0.465);
+  width: 20rem;
+  height: fit-content;
+  border-radius: 7px;
+}
+
+.titulo_liga {
+  margin: 1.5rem 0 0;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  text-decoration: underline rgb(214, 214, 214);
+}
+
+.team_logo {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 1px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+}
+
+.img_picture_element {
+  color: antiquewhite;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 auto;
+  /* background-color: rgba(19, 12, 12, 0.5); */
+  text-shadow: 2px 2px 8px #111;
+  width: fit-content;
+  height: 1.75em;
+  border-radius: 7px;
+  padding: 0 0.5em 0.4em;
+  cursor: pointer;
+}
 /* input[type="date"]:before {
   content: attr(placeholder) !important;
   color: #aaa;
@@ -155,6 +225,15 @@ th {
   display: none;
 }
 
+@media only screen and (min-width: 300px) and (max-width: 650px) {
+  .container-position {
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 1px;
+  }
+}
 @media only screen and (orientation: landscape) and (min-width: 500px) and (max-width: 600px) {
   .daily-title {
     color: antiquewhite;
