@@ -1,8 +1,8 @@
 <div class="container_players_actives"></div>
 <div class="container-daily">
-  <h1 class="daily-title">Actuación Diaria de Bateadores</h1>
+  <h1 class="daily-title">LIGA DE FANTASIA 2021</h1>
 <br>
-  <h3 class="daily-title">Spring Trainning 2021</h3>
+  <h3 class="daily-title">Actuación diaria jugadores de posición</h3>
   <!-- <h3 class="daily-title">Temporada Regular 2019</h3> -->
 </div>
 <p class="title-positionA">{{dia | date }} </p>
@@ -21,7 +21,7 @@
   <input #date_Picker [(ngModel)]="searchDate" type="date" (input)="onSearchDate()" placeholder="Escoja   la fecha.."  value="" class="advancedSearchDatetbox">
 </div> -->
 <div *ngIf="allItems" class="title-position">
-  <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchDatetbox">
+  <!-- <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchDatetbox">
   <span class="seleccion">   Indique el nombre de un Jugador (en minúsculas)</span>
   <div *ngIf="!allItems[0] && busqueda.value" class="error_search d-flex justify-content-center">
     <h4 class="error_message"> '{{ busqueda.value }}' No se encuentra el Jugador</h4>
@@ -29,7 +29,7 @@
 
   <div *ngIf="allItems.length == 0 " class="espacioInferior">
     <h1 class="title-position"> No ha terminado ningún juego hoy </h1>
-  </div>
+  </div> -->
 
 
   <ng-container *ngIf="!isLoading">

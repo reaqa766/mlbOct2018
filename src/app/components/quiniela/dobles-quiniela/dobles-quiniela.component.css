@@ -1,331 +1,252 @@
-/* .actives-title {
+.daily-title {
   color: antiquewhite;
-  font-size: 4rem;
+  font-size: 1rem;
   text-align: center;
-  margin: 0.15rem auto 0;
-  padding: 0.5rem 0;
+  margin: 0 auto;
+  padding: 0 0.5em 0.4em;
+  /* background-color: rgba(19, 12, 12, 0.5); */
   text-shadow: 2px 2px 8px #111;
-  width: auto;
+  width: fit-content;
   height: 1.75em;
   border-radius: 7px;
+}
+
+/* input[type="date"]:before {
+  content: attr(placeholder) !important;
+  color: #aaa;
+  margin-right: 0.5em;
+}
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
+  content: "";
 } */
-.title-position {
-  color: antiquewhite;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-left: 10%;
-  margin-bottom: 0;
+
+.espacioInferior {
+  margin-bottom: 1rem;
+}
+.page-link {
+  color: black !important;
 }
 
-.tarjeta_encabezado {
-  width: 85%;
-  margin: 0.2em auto;
-  /* background-color: rgb(28,56,7); */
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 5px;
-  grid-template-rows: 1fr;
-  grid-row-gap: 5px;
-  /* border: solid black 2px; */
-}
-.tarjeta_izquierda {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  color: white;
-  border: solid white 2px;
-  background-color: rgb(28, 56, 7);
-
-  display: grid;
-  grid-template-columns: 1fr 2fr 2fr 2fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 10px;
-}
-.player_pict2 {
-  width: 13rem;
-  box-shadow: 2px 2px 4px black;
-  /* margin-left: 3rem; */
-}
-
-.items_estadisticas {
-  text-align: center;
-  font-weight: 500;
-  border: solid black 0.15rem;
-  padding: 0;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-row-gap: 5px;
-  background-color: rgba(2, 2, 2, 0.513);
-}
-
-.foto {
-  grid-column: 1/2;
-  grid-row: 1/4;
-  color: white;
-}
-.avg_span {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  font-size: 1.75em;
-  background-color: black;
-}
-.avg_spanHr {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  font-size: 1.75em;
-  background-color: rgb(31, 37, 226);
-}
-
-.avg_span2 {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  font-size: 1.75em;
-}
-.avg_span2Hr {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  font-size: 1.75em;
-  background-color: rgb(31, 37, 226);
-}
-
-.link_player {
-  grid-column: 2/4;
-  grid-row: 3/4;
-  color: white;
-  font-size: 1.25em;
-  text-align: center;
-  font-weight: 500;
-  /* align-self: center; */
-  width: 11rem;
-  padding-bottom: 10px;
-  /* margin-left: 2rem; */
-}
-.posicion {
-  grid-column: 1/2;
-  grid-row: 4/5;
-  color: white;
-  align-self: start;
-  border: solid black 2px;
-  background-color: red;
-}
-.avg {
-  grid-column: 2/3;
-  grid-row: 1/2;
-  color: white;
-  border: solid black 2px;
-}
-.LNac {
-  grid-column: 2/4;
-  grid-row: 4/5;
-}
 .seleccion {
-  display: block;
-}
-.seleccion2 {
-  display: none;
-}
-
-.tarjeta_derecha {
-  background-color: yellow;
-  grid-column: 2/3;
-  grid-row: 1/2;
-
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr; */
+  color: antiquewhite;
+  padding: 0 0.5em 0.4em;
+  text-shadow: 2px 2px 8px #111;
 }
 
-.advancedSearchTextbox {
+.advancedSearchDatetbox {
   color: rgb(2, 1, 0);
-  font-size: 1rem;
-  font-weight: bold;
-  margin-left: 10%;
-  margin-bottom: 0;
+  font-size: 0.75rem;
+  /* font-weight: bold; */
+  /* margin: 1% 0 2% 1%; */
+  width: fit-content;
+  border-radius: 6px;
 }
 
 .error_search {
-  width: 80%;
-  margin-left: 10%;
+  font-size: 0.7rem;
+  width: 50%;
+  margin-left: 2%;
   text-align: center;
   color: antiquewhite;
   background-color: rgba(12, 10, 9, 0.75);
 }
-.fa-baseball-ball {
-  font-size: 10rem;
-  margin: 5% 40% 0 !important;
-  color: rgba(80, 57, 43, 0.4);
+.table {
+  border-collapse: separate;
 }
-.spiner_load {
-  font-size: 5rem;
-  margin: 0 35% !important;
-  color: rgba(80, 57, 43, 0.95);
+
+.error_message {
+  padding-top: 10px;
+  font-size: 0.7rem;
 }
+
 .link_player {
   text-decoration: none;
   color: antiquewhite;
 }
-.paginator {
-  font-size: 0.75rem;
-  width: 20%;
-  margin: auto;
+.title-positionA {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0 0.5rem 0.5rem;
 }
 
-@media only screen and (min-width: 330px) and (max-width: 768px) {
-  /* .actives-title {
+.title-position {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.player_stats {
+  width: 100%;
+  display: table;
+}
+
+.td2,
+.td7,
+.td8,
+.td11 {
+  display: none;
+}
+
+.table-header1 {
+  background-color: rgba(12, 10, 9, 0.9);
+  color: antiquewhite;
+  font-size: 0.8rem;
+  align-items: center;
+}
+.table-header {
+  background-color: rgba(12, 10, 9, 0.75);
+  color: antiquewhite;
+  font-size: 0.8rem;
+  align-items: center;
+}
+.title-rows {
+  background-color: antiquewhite;
+  color: rgb(12, 10, 9);
+}
+
+.player-name {
+  color: black;
+}
+.player-name:hover {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+.row-color {
+  background-color: rgb(245, 223, 195);
+}
+.row-color:hover {
+  background-color: rgb(255, 255, 255);
+}
+.row-color1:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.title-rows_header {
+  text-align: center;
+}
+
+.spiner {
+  margin-left: 20% !important;
+}
+
+.fa-baseball-ball {
+  font-size: 8rem;
+  margin: 5% 0 0 25% !important;
+  color: rgba(80, 57, 43, 0.4);
+}
+.spiner_load {
+  font-size: 2.5rem;
+  color: rgba(80, 57, 43, 0.95);
+}
+
+th {
+  padding: 12px 5px;
+}
+.paginator {
+  margin: auto;
+}
+.paginator_text {
+  display: none;
+}
+
+@media only screen and (orientation: landscape) and (min-width: 500px) and (max-width: 600px) {
+  .daily-title {
     color: antiquewhite;
-    font-size: 2.5rem;
+    font-size: 1rem;
     text-align: center;
-    margin: 0.15rem auto 0;
-    padding: 0.5rem 0;
+    margin: 0 auto;
+    /* background-color: rgba(19, 12, 12, 0.5); */
     text-shadow: 2px 2px 8px #111;
-    width: auto;
+    width: fit-content;
     height: 1.75em;
     border-radius: 7px;
-  } */
-  .title-position {
-    color: antiquewhite;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-left: 10%;
-    margin-bottom: 0;
+    padding: 0 0.5em 0.4em;
   }
 
-  .tarjeta_encabezado {
-    width: 95%;
-    margin: 0.2em auto;
-    /* background-color: rgb(20, 149, 167); */
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-row-gap: 5px;
-    /* border: solid black 2px; */
-  }
-  .tarjeta_izquierda {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    color: white;
-    border: solid white 2px;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr !important;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    /* grid-gap: 10px; */
-  }
-  .player_pict2 {
-    width: 11rem;
-    box-shadow: 2px 2px 4px black;
-    /* margin-left: 3rem; */
-  }
-
-  .items_estadisticas {
-    text-align: center;
-    font-weight: 500;
-    border: solid black 0.15rem;
-    padding: 0;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-row-gap: 5px;
-    background-color: rgba(2, 2, 2, 0.513);
-  }
-
-  .foto {
-    grid-column: 1/2;
-    grid-row: 1/4;
-    color: white;
-  }
-  .avg_span {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    font-size: 1em;
-    background-color: black;
-  }
-  .avg_spanHr {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    font-size: 1em;
-    background-color: rgb(31, 37, 226);
-  }
-
-  .avg_span2 {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    font-size: 1em;
-  }
-  .avg_span2Hr {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    font-size: 1em;
-    background-color: rgb(31, 37, 226);
-  }
-  .link_player {
-    grid-column: 1/2;
-    grid-row: 4/5;
-    color: white;
-    font-size: 1em;
-    text-align: center;
-    font-weight: 500;
-    /* align-self: center; */
-    width: 11rem;
-    padding-bottom: 10px;
-    /* margin-left: 2rem; */
-    text-decoration: none;
-    color: antiquewhite;
-  }
-  .posicion {
-    grid-column: 1/2;
-    grid-row: 4/5;
-    color: white;
-    align-self: start;
-    border: solid black 2px;
-    background-color: red;
-  }
-  .avg {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    color: white;
-    border: solid black 2px;
-  }
-  .seleccion {
-    display: none !important;
-  }
-  .seleccion2 {
-    display: inline-block;
-  }
-  .LNac {
-    grid-column: 2/4;
-    grid-row: 4/5;
-  }
-
-  .tarjeta_derecha {
-    background-color: yellow;
-    grid-column: 2/3;
-    grid-row: 1/2;
-
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr; */
-  }
-
-  .advancedSearchTextbox {
+  .advancedSearchDatetbox {
     color: rgb(2, 1, 0);
-    font-size: 1rem;
-    font-weight: bold;
-    margin-left: 10%;
-    margin-bottom: 0;
+    font-size: 0.75rem;
+    /* font-weight: bold; */
+    /* margin: 2% 0 2% 2%; */
   }
 
   .error_search {
+    font-size: 1rem;
     width: 80%;
-    margin-left: 10%;
+    margin-left: 2%;
     text-align: center;
     color: antiquewhite;
     background-color: rgba(12, 10, 9, 0.75);
   }
+
+  .error_message {
+    padding-top: 10px;
+    font-size: 1rem;
+  }
+
+  .link_player {
+    text-decoration: none;
+    color: antiquewhite;
+  }
+
+  .title-position {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+  }
+  .player_stats {
+    width: 100%;
+    display: table;
+  }
+
+  .table-header1 {
+    background-color: rgba(12, 10, 9, 0.9);
+    color: antiquewhite;
+    font-size: 0.8rem;
+    align-items: center;
+  }
+  .table-header {
+    background-color: rgba(12, 10, 9, 0.75);
+    color: antiquewhite;
+    font-size: 0.8rem;
+    align-items: center;
+  }
+  .title-rows {
+    background-color: antiquewhite;
+    color: rgb(12, 10, 9);
+  }
+
+  .player-name {
+    color: black;
+  }
+  .player-name:hover {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 1.15rem;
+    text-decoration: none;
+  }
+
+  .row-color {
+    background-color: rgb(245, 223, 195);
+  }
+  .row-color:hover {
+    background-color: rgb(255, 255, 255);
+  }
+  .row-color1:hover {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .title-rows_header {
+    text-align: center;
+  }
+
   .fa-baseball-ball {
     font-size: 10rem;
     margin: 5% 40% 0 !important;
@@ -337,511 +258,626 @@
     color: rgba(80, 57, 43, 0.95);
   }
 
-  .paginator {
-    font-size: 0.75rem;
-    width: 20%;
-    margin: auto;
+  th {
+    padding: 12px 5px;
   }
 }
-
-@media only screen and (min-width: 200px) and (max-width: 329px) {
-  /* .actives-title {
-    color: antiquewhite;
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 0.15rem auto 0;
-    padding: 0.5rem 0;
-    text-shadow: 2px 2px 8px #111;
-    width: auto;
-    height: 1.75em;
-    border-radius: 7px;
-  } */
-  .title-position {
+@media only screen and (orientation: landscape) and (min-width: 601px) and (max-width: 700px) {
+  .daily-title {
     color: antiquewhite;
     font-size: 1.5rem;
-    font-weight: bold;
-    margin-left: 10%;
-    margin-bottom: 0;
-  }
-
-  .tarjeta_encabezado {
-    width: 95%;
-    margin: 0.2em auto;
-    /* background-color: rgb(20, 149, 167); */
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-row-gap: 5px;
-    /* border: solid black 2px; */
-  }
-  .tarjeta_izquierda {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    color: white;
-    border: solid white 2px;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr !important;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    /* grid-gap: 10px; */
-  }
-  .player_pict2 {
-    width: 11rem;
-    box-shadow: 2px 2px 4px black;
-    /* margin-left: 3rem; */
-  }
-
-  .items_estadisticas {
     text-align: center;
-    font-weight: 500;
-    border: solid black 0.15rem;
-    padding: 0;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-row-gap: 5px;
-    background-color: rgba(2, 2, 2, 0.513);
+    margin: 0 auto;
+    padding: 0 0.5em 0.4em;
+    /* background-color: rgba(19, 12, 12, 0.5); */
+    text-shadow: 2px 2px 8px #111;
+    width: fit-content;
+    height: 1.75em;
+    border-radius: 7px;
   }
 
-  .foto {
-    grid-column: 1/2;
-    grid-row: 1/4;
-    color: white;
+  .advancedSearchDatetbox {
+    color: rgb(2, 1, 0);
+    font-size: 0.75rem;
+    /* font-weight: bold; */
+    /* margin: 2% 0 2% 2%; */
   }
-  .avg_span {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    font-size: 0.75em;
-    background-color: black;
+
+  .error_search {
+    font-size: 1rem;
+    width: 80%;
+    margin-left: 2%;
+    text-align: center;
+    color: antiquewhite;
+    background-color: rgba(12, 10, 9, 0.75);
   }
-  .avg_spanHr {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    font-size: 0.75em;
-    background-color: rgb(31, 37, 226);
-  }
-  .avg_span2 {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    font-size: 0.75em;
-  }
-  .avg_span2Hr {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    font-size: 0.75em;
-    background-color: rgb(31, 37, 226);
+
+  .error_message {
+    padding-top: 10px;
+    font-size: 1rem;
   }
 
   .link_player {
-    grid-column: 1/2;
-    grid-row: 4/5;
-    color: white;
-    font-size: 1em;
-    text-align: center;
-    font-weight: 500;
-    /* align-self: center; */
-    width: 11rem;
-    padding-bottom: 10px;
-    /* margin-left: 2rem; */
     text-decoration: none;
     color: antiquewhite;
   }
-  .posicion {
-    grid-column: 1/2;
-    grid-row: 4/5;
+
+  .title-position {
     color: white;
-    align-self: start;
-    border: solid black 2px;
-    background-color: red;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0.5rem 0.5rem;
   }
-  .avg {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    color: white;
-    border: solid black 2px;
+  .player_stats {
+    width: 100%;
+    display: table;
   }
-  .seleccion {
-    display: none !important;
+  .td2,
+  .td5,
+  .td7,
+  .td8,
+  .td9,
+  .td11 {
+    display: table-cell;
   }
-  .seleccion2 {
-    display: inline-block;
+
+  .table-header1 {
+    background-color: rgba(12, 10, 9, 0.9);
+    color: antiquewhite;
+    font-size: 0.8rem;
+    align-items: center;
   }
-  .LNac {
-    grid-column: 2/4;
-    grid-row: 4/5;
+  .table-header {
+    background-color: rgba(12, 10, 9, 0.75);
+    color: antiquewhite;
+    font-size: 0.8rem;
+    align-items: center;
+  }
+  .title-rows {
+    background-color: antiquewhite;
+    color: rgb(12, 10, 9);
+  }
+  .player-name {
+    color: black;
+  }
+  .player-name:hover {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 1.15rem;
+    text-decoration: none;
+  }
+
+  .row-color {
+    background-color: rgb(245, 223, 195);
+  }
+  .row-color:hover {
+    background-color: rgb(255, 255, 255);
+  }
+  .row-color1:hover {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .title-rows_header {
+    text-align: center;
+  }
+
+  .fa-baseball-ball {
+    font-size: 10rem;
+    margin: 5% 40% 0 !important;
+    color: rgba(80, 57, 43, 0.4);
+  }
+  .spiner_load {
+    font-size: 5rem;
+    margin: 0 35% !important;
+    color: rgba(80, 57, 43, 0.95);
+  }
+
+  th {
+    padding: 12px 5px;
   }
   .paginator {
-    font-size: 0.5rem;
-    width: 15%;
     margin: auto;
   }
-}
-
-/* INICIO CSS Nuevo modulo de Equipos de la Liga de Fantasia */
-.actives-title {
-  color: antiquewhite;
-  font-size: 2.5rem;
-  text-align: center;
-  margin: 0.15rem auto 1rem;
-  padding: 0.3rem 0;
-  text-shadow: 2px 2px 8px #111;
-  width: 50rem;
-  height: 1.5em;
-  border-radius: 7px;
-}
-.actives-title1 {
-  color: antiquewhite;
-  font-size: 1.85rem;
-  text-align: center;
-  margin: 0.15rem auto 0;
-  padding: 0.3rem 0;
-  text-shadow: 2px 2px 8px #111;
-  width: 27rem;
-  height: 1.5em;
-  border-radius: 7px;
-}
-.title-position {
-  color: antiquewhite;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-left: 10%;
-  margin-bottom: 0;
-}
-
-.container_grid_nvo {
-  width: 100%;
-  align-self: center;
-  display: grid;
-  grid-auto-columns: fr fr;
-  grid-auto-rows: auto;
-}
-
-.container_buttons {
-  margin: 0 15%;
-  text-align: center;
-}
-
-.sub_lideres_nvo {
-  margin: 1rem 1rem;
-  color: antiquewhite;
-  font-size: 1.5rem;
-  text-align: center;
-  background-color: rgba(3, 2, 2, 0.5);
-  width: 12rem;
-  height: 1.75em;
-  border-radius: 7px;
-}
-.sub_lideres_nvo2 {
-  margin: 1rem 1rem;
-  color: antiquewhite;
-  font-size: 1.5rem;
-  text-align: center;
-  background-color: rgba(3, 2, 2, 0.5);
-  width: auto;
-  height: 1.75em;
-  border-radius: 7px;
-  padding: 0 0.5rem;
-}
-
-.tableAVG_nvo {
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
-.img_average {
-  grid-column: 2/3;
-  grid-row: 1/2;
-  align-self: center;
-  max-width: 100%;
-  height: auto;
-  justify-self: center;
-}
-.img_average1 {
-  width: 65%;
-}
-.img_average2 {
-  width: 65%;
-}
-.img_average3 {
-  width: 65%;
-}
-.img_average4 {
-  width: 65%;
-}
-.img_average5 {
-  width: 65%;
-}
-.container_grid {
-  margin: 0 auto;
-  width: 100%;
-  display: grid;
-  grid-auto-columns: fr fr;
-  column-gap: 10px;
-  grid-auto-rows: repeat (6, fr);
-}
-
-.tableAVG {
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-.tableHR {
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-.tableDOBLES {
-  grid-column: 1/2;
-  grid-row: 4/5;
-}
-.tableTRIPLES {
-  grid-column: 2/3;
-  grid-row: 4/5;
-}
-.tableBR {
-  grid-column: 1/2;
-  grid-row: 6/7;
-}
-.tableHITS {
-  grid-column: 2/3;
-  grid-row: 6/7;
-}
-
-.table {
-  width: 100%;
-  margin: 0.2em auto;
-  display: table;
-  border-collapse: separate;
-  align-self: center;
-}
-
-.table-header {
-  background-color: rgba(12, 10, 9, 0.9);
-  color: antiquewhite;
-  text-align: center;
-  width: 100%;
-}
-.table-header2 {
-  background-color: rgba(12, 10, 9, 0.75);
-  color: antiquewhite;
-  text-align: center;
-}
-.title-rows {
-  background-color: antiquewhite;
-  color: rgb(12, 10, 9);
-  text-align: center;
-}
-.subtitulo_lideres2 {
-  grid-column: 2/3;
-  grid-row: 1/2;
-}
-.subtitulo_lideres3 {
-  grid-column: 1/2;
-  grid-row: 3/4;
-}
-.subtitulo_lideres4 {
-  grid-column: 2/3;
-  grid-row: 3/4;
-}
-.subtitulo_lideres5 {
-  grid-column: 1/2;
-  grid-row: 5/6;
-}
-.subtitulo_lideres6 {
-  grid-column: 2/3;
-  grid-row: 5/6;
-}
-
-.sub_lideres {
-  font-size: 2rem;
-  font-weight: bold;
-  height: 1rem;
-  text-align: center;
-}
-.tbA1,
-.tb2A {
-  color: black;
-  background-color: #fff;
-  font-size: 1.5rem;
-  font-weight: bold;
-  height: 1rem;
-  text-align: center;
-}
-.espacioInferior {
-  height: 100px;
-}
-.link_player {
-  text-decoration: none;
-  color: antiquewhite;
-}
-.paginator {
-  font-size: 0.75rem;
-  width: 20%;
-  margin: auto;
-}
-.tb1 {
-  width: 5rem;
-}
-.tb2,
-.tb3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-.tbA {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.sub_lideres {
-  font-size: 2rem;
-  font-weight: bold;
-  height: 1rem;
-  text-align: center;
-  margin: 2rem 0;
-}
-.tbA1,
-.tb2A {
-  color: black;
-  background-color: #fff;
-  font-size: 1.5rem;
-  font-weight: bold;
-  height: 1rem;
-  text-align: center;
-}
-.espacioInferior {
-  height: 100px;
-}
-.tbAA,
-.tb11,
-.tbA1,
-.tb2A {
-  font-size: 1rem;
-  font-weight: 600;
-}
-.sub_lideres {
-  display: none;
-}
-
-@media only screen and (min-width: 300px) and (max-width: 769px) {
-  .container_grid_nvo {
-    display: block;
+  .paginator_text {
+    display: table-cell;
   }
-
-  .container-actives {
-    margin: 0 20%;
-  }
-  .img_average {
-    display: none;
-  }
-  .subtitulo_lideres1 {
-    width: 15rem;
-    /* width: fit-content; */
-    font-size: 0.9em;
-  }
-
-  .actives-title1 {
-    font-size: 1rem;
-    width: 12rem;
-  }
-  .actives-title {
-    font-size: 1.5rem;
-    width: 90%;
-  }
-  .title-position {
+}
+@media only screen and (min-width: 767px) and (max-width: 1020px) {
+  .daily-title {
     color: antiquewhite;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0.15em 0.4em;
+    /* background-color: rgba(19, 12, 12, 0.5); */
+    text-shadow: 2px 2px 8px #111;
+    width: fit-content;
+    height: 1.75em;
+    border-radius: 7px;
+  }
+
+  .advancedSearchDatetbox {
+    color: rgb(2, 1, 0);
+    font-size: 0.75rem;
+    /* font-weight: bold; */
+    /* margin: 2% 0 2% 2%; */
+  }
+
+  .error_search {
     font-size: 1rem;
+    width: 80%;
     margin-left: 2%;
+    text-align: center;
+    color: antiquewhite;
+    background-color: rgba(12, 10, 9, 0.75);
   }
 
-  .table {
-    margin: 0.2em 0;
-    border-collapse: separate;
-    padding: 0;
-  }
-
-  .table-header {
-    font-size: 0.65rem;
-    width: 1rem;
-  }
-  .subtitulo_lideres2 {
-    grid-column: 1/2;
-    grid-row: 3/4;
-  }
-  .subtitulo_lideres3 {
-    grid-column: 1/2;
-    grid-row: 5/6;
-  }
-  .subtitulo_lideres4 {
-    grid-column: 1/2;
-    grid-row: 7/8;
-  }
-  .subtitulo_lideres5 {
-    grid-column: 1/2;
-    grid-row: 9/10;
-  }
-
-  .subtitulo_lideres6 {
-    grid-column: 1/2;
-    grid-row: 11/12;
-  }
-
-  .tableAVG {
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-
-  .tableHR {
-    grid-column: 1/2;
-    grid-row: 4/5;
-  }
-
-  .tableDOBLES {
-    grid-column: 1/2;
-    grid-row: 6/7;
-  }
-  .tableTRIPLES {
-    grid-column: 1/2;
-    grid-row: 8/9;
-  }
-  .tableBR {
-    grid-column: 1/2;
-    grid-row: 10/11;
-  }
-  .tableHITS {
-    grid-column: 1/2;
-    grid-row: 12/13;
-  }
-  .tbAA,
-  .tb11,
-  .tbA1,
-  .tb2A {
+  .error_message {
+    padding-top: 10px;
     font-size: 1rem;
-    font-weight: 600;
   }
-  .img_average {
-    align-self: center;
-    max-width: 90%;
+
+  .link_player {
+    text-decoration: none;
+    color: antiquewhite;
+  }
+
+  .title-position {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+  }
+  .player_stats {
+    width: 100%;
+    display: table;
+  }
+  .td2,
+  .td5,
+  .td7,
+  .td8,
+  .td9,
+  .td11 {
+    display: table-cell;
+  }
+
+  .table-header1 {
+    background-color: rgba(12, 10, 9, 0.9);
+    color: antiquewhite;
+    font-size: 0.8rem;
+    align-items: center;
+  }
+  .table-header {
+    background-color: rgba(12, 10, 9, 0.75);
+    color: antiquewhite;
+    font-size: 0.8rem;
+    align-items: center;
+  }
+  .title-rows {
+    background-color: antiquewhite;
+    color: rgb(12, 10, 9);
+  }
+  .player-name {
+    color: black;
+  }
+  .player-name:hover {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 1.15rem;
+    text-decoration: none;
+  }
+
+  .row-color {
+    background-color: rgb(245, 223, 195);
+  }
+  .row-color:hover {
+    background-color: rgb(255, 255, 255);
+  }
+  .row-color1:hover {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .title-rows_header {
+    text-align: center;
+  }
+
+  .fa-baseball-ball {
+    font-size: 8rem;
+    margin: 5% 0 0 45% !important;
+    color: rgba(80, 57, 43, 0.4);
+  }
+  .spiner_load {
+    font-size: 2.5rem;
+    margin: 0 0 0 40% !important;
+    color: rgba(80, 57, 43, 0.95);
+  }
+
+  th {
+    padding: 12px 5px;
+  }
+  .paginator {
+    margin: auto;
+  }
+  .paginator_text {
+    display: table-cell;
   }
 }
-@media only screen and (min-width: 770px) and (max-width: 1024px) {
-  .container_grid_nvo {
-    align-self: center;
+
+@media only screen and (min-width: 1023px) and (max-width: 1429px) {
+  .daily-title {
+    color: antiquewhite;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0.5em 0.4em;
+    /* background-color: rgba(19, 12, 12, 0.5); */
+    text-shadow: 2px 2px 8px #111;
+    width: fit-content;
+    height: 1.75em;
+    border-radius: 7px;
   }
 
-  .img_average {
-    align-self: center;
-    max-width: 90%;
+  .advancedSearchDatetbox {
+    color: rgb(2, 1, 0);
+    font-size: 1em;
+    /* font-weight: bold; */
+    /* margin: 0 0 1% 2%; */
   }
-  .tbAA,
-  .tb11,
-  .tbA1,
-  .tb2A,
-  .tbA {
+
+  .error_search {
     font-size: 1rem;
-    font-weight: 600;
+    width: 80%;
+    margin-left: 2%;
+    text-align: center;
+    color: antiquewhite;
+    background-color: rgba(12, 10, 9, 0.75);
   }
-  .table {
+
+  .error_message {
+    padding-top: 10px;
+    font-size: 1rem;
+  }
+
+  .link_player {
+    text-decoration: none;
+    color: antiquewhite;
+  }
+
+  .title-position {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+  }
+  .player_stats {
+    width: 100%;
+    display: table;
+  }
+  .fa-baseball-ball {
+    font-size: 10rem;
+    margin: 5% 38% 0 !important;
+    color: rgba(80, 57, 43, 0.4);
+  }
+  .spiner_load {
+    font-size: 5rem;
+    margin: 0 30% !important;
+    color: rgba(80, 57, 43, 0.95);
+  }
+
+  .td2,
+  .td5,
+  .td7,
+  .td8,
+  .td9,
+  .td11 {
+    display: table-cell;
+  }
+
+  .table-header1 {
+    background-color: rgba(12, 10, 9, 0.9);
+    color: antiquewhite;
+    font-size: 1.25rem;
+    align-items: center;
+  }
+  .table-header {
+    background-color: rgba(12, 10, 9, 0.75);
+    color: antiquewhite;
+    font-size: 1.25rem;
+    align-items: center;
+  }
+  .paginator {
+    font-size: 1.25rem;
+  }
+  .paginator_text {
+    display: table-cell;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 701px) and (max-width: 900px) {
+  .daily-title {
+    color: antiquewhite;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0.5em 0.4em;
+    /* background-color: rgba(19, 12, 12, 0.5); */
+    text-shadow: 2px 2px 8px #111;
+    width: fit-content;
+    height: 1.75em;
+    border-radius: 7px;
+  }
+
+  .advancedSearchDatetbox {
+    color: rgb(2, 1, 0);
+    font-size: 0.75rem;
+    /* font-weight: bold; */
+    /* margin: 2% 0 2% 2%; */
+  }
+
+  .error_search {
+    font-size: 1rem;
+    width: 80%;
+    margin-left: 2%;
+    text-align: center;
+    color: antiquewhite;
+    background-color: rgba(12, 10, 9, 0.75);
+  }
+
+  .error_message {
+    padding-top: 10px;
+    font-size: 1rem;
+  }
+
+  .link_player {
+    text-decoration: none;
+    color: antiquewhite;
+  }
+
+  .title-position {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+  }
+  .player_stats {
+    width: 100%;
+    display: table;
+  }
+  .td2,
+  .td5,
+  .td7,
+  .td8,
+  .td9,
+  .td11 {
+    display: table-cell;
+  }
+
+  .table-header1 {
+    background-color: rgba(12, 10, 9, 0.9);
+    color: antiquewhite;
+    font-size: 0.8rem;
+    align-items: center;
+  }
+  .table-header {
+    background-color: rgba(12, 10, 9, 0.75);
+    color: antiquewhite;
+    font-size: 0.8rem;
+    align-items: center;
+  }
+  .title-rows {
+    background-color: antiquewhite;
+    color: rgb(12, 10, 9);
+  }
+  .player-name {
+    color: black;
+  }
+  .player-name:hover {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 1.15rem;
+    text-decoration: none;
+  }
+
+  .row-color {
+    background-color: rgb(245, 223, 195);
+  }
+  .row-color:hover {
+    background-color: rgb(255, 255, 255);
+  }
+  .row-color1:hover {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .title-rows_header {
+    text-align: center;
+  }
+
+  .fa-baseball-ball {
+    font-size: 10rem;
+    margin: 5% 40% 0 !important;
+    color: rgba(80, 57, 43, 0.4);
+  }
+  .spiner_load {
+    font-size: 5rem;
+    margin: 0 35% !important;
+    color: rgba(80, 57, 43, 0.95);
+  }
+
+  th {
+    padding: 12px 5px;
+  }
+  .paginator {
+    margin: auto;
+  }
+  .paginator_text {
+    display: table-cell;
+  }
+}
+@media only screen and (min-width: 1430px) and (max-width: 1920px) {
+  .daily-title {
+    color: antiquewhite;
+    font-size: 2rem !important;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0.5em 0.4em;
+    /* background-color: rgba(19, 12, 12, 0.5); */
+    text-shadow: 2px 2px 8px #111;
+    width: fit-content;
+    height: 1.75em;
+    border-radius: 7px;
+  }
+
+  .advancedSearchDatetbox {
+    color: rgb(2, 1, 0);
+    font-size: 1em;
+    /* font-weight: bold; */
+    /* margin: 1% 0 1% 2%; */
+  }
+
+  .error_search {
+    font-size: 1.25rem;
+    width: 80%;
+    margin-left: 2%;
+    text-align: center;
+    color: antiquewhite;
+    background-color: rgba(12, 10, 9, 0.75);
+  }
+
+  .error_message {
+    padding-top: 10px;
+    font-size: 1.75rem;
+  }
+
+  .link_player {
+    text-decoration: none;
+    color: antiquewhite;
+  }
+  .fa-baseball-ball {
+    font-size: 10rem;
+    margin: 5% 30% 0 !important;
+    color: rgba(80, 57, 43, 0.4);
+  }
+  .spiner_load {
+    font-size: 5rem;
+    margin: 0 25% !important;
+    color: rgba(80, 57, 43, 0.95);
+  }
+
+  .title-position {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+  }
+  .player_stats {
+    width: 100%;
+    display: table;
+  }
+  .td2,
+  .td5,
+  .td7,
+  .td8,
+  .td9,
+  .td11 {
+    display: table-cell;
+  }
+
+  .table-header1 {
+    background-color: rgba(12, 10, 9, 0.9);
+    color: antiquewhite;
+    font-size: 1.25rem;
+    align-items: center;
+  }
+  .table-header {
+    background-color: rgba(12, 10, 9, 0.75);
+    color: antiquewhite;
+    font-size: 1.25rem;
+    align-items: center;
+  }
+  .paginator {
+    font-size: 1.75rem;
+  }
+  .paginator_text {
+    display: table-cell;
+  }
+}
+@media only screen and (min-width: 1921px) and (max-width: 3500px) {
+  .daily-title {
+    color: antiquewhite;
+    font-size: 3.25rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0.5em 0.4em;
+    /* background-color: rgba(19, 12, 12, 0.5); */
+    text-shadow: 2px 2px 8px #111;
+    width: fit-content;
+    height: 1.75em;
+    border-radius: 7px;
+  }
+
+  .advancedSearchDatetbox {
+    color: rgb(2, 1, 0);
+    font-size: 1em;
+    /* font-weight: bold; */
+    /* margin: 1% 0 1% 2%; */
+  }
+
+  .error_search {
+    font-size: 3rem;
+    width: 80%;
+    margin-left: 2%;
+    text-align: center;
+    color: antiquewhite;
+    background-color: rgba(12, 10, 9, 0.75);
+  }
+
+  .error_message {
+    padding-top: 10px;
+    font-size: 3rem;
+  }
+
+  .link_player {
+    text-decoration: none;
+    color: antiquewhite;
+  }
+
+  .title-position {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+  }
+  .player_stats {
+    width: 100%;
+    display: table;
+  }
+  .td2,
+  .td5,
+  .td7,
+  .td8,
+  .td9,
+  .td11 {
+    display: table-cell;
+  }
+
+  .table-header1 {
+    background-color: rgba(12, 10, 9, 0.9);
+    color: antiquewhite;
+    font-size: 2.5rem;
+    align-items: center;
+  }
+  .table-header {
+    background-color: rgba(12, 10, 9, 0.75);
+    color: antiquewhite;
+    font-size: 2.25rem;
+    align-items: center;
+  }
+  .paginator {
+    font-size: 3rem;
     width: 100%;
   }
-}
 
-/* FINAL  CSS Nuevo modulo de Equipos de la Liga de Fantasia */
+  .paginator_text {
+    font-size: 3;
+    display: table-cell;
+  }
+}
