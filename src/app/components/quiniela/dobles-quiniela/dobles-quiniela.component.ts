@@ -41,38 +41,99 @@ export class DoblesQuinielaComponent implements OnInit {
   isLoading: boolean;
 
   EQUIPOS = [
-    { code: 1, name: 'Leones de Boston', liga: 'Norte', division: 'este' },
-    { code: 2, name: 'Toros de Pedregal', liga: 'Norte', division: 'este' },
-    { code: 3, name: 'las Vegas BBC', liga: 'Norte', division: 'este' },
-    { code: 4, name: 'La Familia', liga: 'Norte', division: 'este' },
-    { code: 5, name: 'Super Leones', liga: 'Norte', division: 'este' },
-    { code: 6, name: 'Los Frailes', liga: 'Norte', division: 'este' }
+    { code: 1, name: 'Leones de Boston', liga: 'Norte', jugadores:[
+      542255,500871,462101,467092,514888,
+      527048,501303,503556,640470,433587,
+      593958,641154,541645,660670,444482,
+      553993,650402,650333,542583,575929] },
+    { code: 2, name: 'Toros de Pedregal', liga: 'Norte', jugadores:[
+    600524, 602922, 570560, 408234, 591741,
+    455139, 514888, 503556, 542255,
+    650402, 553882, 541645, 462101, 452678,
+    596059, 520471, 500874, 467055, 467827,
+    ] },
+    { code: 3, name: 'las Vegas BBC', liga: 'Norte', jugadores:[
+    600524, 602922, 570560, 408234, 591741,
+    455139, 514888, 501303, 503556, 542255,
+    650402, 553882, 541645, 462101, 452678,
+    596059, 520471, 500874, 467055, 467827,
+    514917, 467092, 650859, 605612, 445988,
+    444489, 542583, 606115, 600858, 506703,
+    500743, 606299, 553993, 575929] },
+    { code: 4, name: 'La Familia', liga: 'Norte', jugadores:[
+    600524, 602922, 570560, 408234, 591741,
+    455139, 514888, 501303, 503556, 542255,
+    650402, 553882, 541645, 462101, 452678,
+    596059, 520471, 500874, 467055, 467827,
+    514917, 467092, 650859, 605612, 445988,
+    444489, 542583, 606115, 600858, 506703,
+    500743, 606299, 553993, 575929] },
+    { code: 5, name: 'Super Leones', liga: 'Norte', jugadores:[
+    600524, 602922, 570560, 408234, 591741,
+    455139, 514888, 501303, 503556, 542255,
+    650402, 553882, 541645, 462101, 452678,
+    596059, 520471, 500874, 467055, 467827,
+    514917, 467092, 650859, 605612, 445988,
+    444489, 542583, 606115, 600858, 506703,
+    500743, 606299, 553993, 575929] },
+    { code: 6, name: 'Los Frailes', liga: 'Norte', jugadores:[
+    600524, 602922, 570560, 408234, 591741,
+    455139, 514888, 501303, 503556, 542255,
+    650402, 553882, 541645, 462101, 452678,
+    596059, 520471, 500874, 467055, 467827,
+    514917, 467092, 650859, 605612, 445988,
+    444489, 542583, 606115, 600858, 506703,
+    500743, 606299, 553993, 575929] },
+    { code: 7, name: 'The Bay', liga: 'Sur', jugadores:[
+    600524, 602922, 570560, 408234, 591741,
+    455139, 514888, 501303, 503556, 542255,
+    650402, 553882, 541645, 462101, 452678,
+    596059, 520471, 500874, 467055, 467827,
+    514917, 467092, 650859, 605612, 445988,
+    444489, 542583, 606115, 600858, 506703,
+    500743, 606299, 553993, 575929] },
+    { code: 8, name: 'The Lyons', liga: 'Sur', jugadores:[
+    600524, 602922, 570560, 408234, 591741,
+    455139, 514888, 501303, 503556, 542255,
+    650402, 553882, 541645, 462101, 452678,
+    596059, 520471, 500874, 467055, 467827,
+    514917, 467092, 650859, 605612, 445988,
+    444489, 542583, 606115, 600858, 506703,
+    500743, 606299, 553993, 575929] },
+    { code: 9, name: 'Robaseñas', liga: 'Sur', jugadores:[
+    600524, 602922, 570560, 408234, 591741,
+    455139, 514888, 501303, 503556, 542255,
+    650402, 553882, 541645, 462101, 452678,
+    596059, 520471, 500874, 467055, 467827,
+    514917, 467092, 650859, 605612, 445988,
+    444489, 542583, 606115, 600858, 506703,
+    500743, 606299, 553993, 575929] },
+    { code: 10, name: 'Hedgbogs', liga: 'Sur', jugadores:[
+    600524, 602922, 570560, 408234, 591741,
+    455139, 514888, 501303, 503556, 542255,
+    650402, 553882, 541645, 462101, 452678,
+    596059, 520471, 500874, 467055, 467827,
+    514917, 467092, 650859, 605612, 445988,
+    444489, 542583, 606115, 600858, 506703,
+    500743, 606299, 553993, 575929] },
+    { code: 11, name: 'CPB Hercules', liga: 'Sur', jugadores:[
+    600524, 602922, 570560, 408234, 591741,
+    455139, 514888, 501303, 503556, 542255,
+    650402, 553882, 541645, 462101, 452678,
+    596059, 520471, 500874, 467055, 467827,
+    514917, 467092, 650859, 605612, 445988,
+    444489, 542583, 606115, 600858, 506703,
+    500743, 606299, 553993, 575929] },
+    { code: 12, name: 'Michis Club', liga: 'Sur', jugadores:[
+    600524, 602922, 570560, 408234, 591741,
+    455139, 514888, 501303, 503556, 542255,
+    650402, 553882, 541645, 462101, 452678,
+    596059, 520471, 500874, 467055, 467827,
+    514917, 467092, 650859, 605612, 445988,
+    444489, 542583, 606115, 600858, 506703,
+    500743, 606299, 553993, 575929] }
   ];
-  EQUIPOS2= [
-
-    { code: 7, name: 'The Bay', liga: 'Sur', division: 'central' },
-    { code: 8, name: 'The Lyons', liga: 'Sur', division: 'central' },
-    { code: 9, name: 'Robaseñas', liga: 'Sur', division: 'central' },
-    { code: 10, name: 'Hedgbogs', liga: 'Sur', division: 'central' },
-    { code: 11, name: 'CPB Hercules', liga: 'Sur', division: 'central' },
-    { code: 12, name: 'Michis Club', liga: 'Sur', division: 'central' }
-  ];
-
-  EQUIPOS3= [
-    { code: 117, name: 'Astros', liga: 'Americana', division: 'oeste' },
-    { code: 133, name: 'Oakland', liga: 'Americana', division: 'oeste' },
-    { code: 108, name: 'Angels', liga: 'Americana', division: 'oeste' },
-    { code: 136, name: 'Seattle', liga: 'Americana', division: 'oeste' },
-    { code: 140, name: 'Texas', liga: 'Americana', division: 'oeste' }
-  ];
-  EQUIPOS4= [
-
-    { code: 116, name: 'Detroit', liga: 'Americana', division: 'central' },
-    { code: 114, name: 'Cleveland', liga: 'Americana', division: 'central' },
-    { code: 142, name: 'Minnesota', liga: 'Americana', division: 'central' },
-    { code: 118, name: 'Kansas', liga: 'Americana', division: 'central' },
-    { code: 145, name: 'White Sox', liga: 'Americana', division: 'central' }
-  ];
+  equipo_actual: any;
   players_definidos: any[];
   BBplayers: any[];
   buscando: boolean;
@@ -179,12 +240,14 @@ getPlayersMap() {
 onSearchChange(team: any) {
   this.buscando = false;
   if (team) {
-    this.allItems = this.players.filter(player =>
-      player.stats[0].splits[0].equipo.name.toLowerCase().includes(team.toLowerCase()) ||
-      player.fullName.toLowerCase().includes(team.toLowerCase()));
+    this.equipo_actual = team;
+    this.allItems = this.players.filter((player: Players) =>
+      (this.equipo_actual.jugadores as Array<number>).includes(player.id)
+    );
       // this.setPage(this.pager.currentPage);
 
   } else {
+    this.equipo_actual = undefined;
     this.allItems = this.players;
     // this.setPage(this.pager.currentPage);
   }
