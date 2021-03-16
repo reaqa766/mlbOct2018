@@ -78,7 +78,7 @@
 <div class="container_americana_oeste container_border">
   <h3 class="titulo_liga">Liga Oeste</h3>
   <div class="team_logo">
-    <div *ngFor="let equipo of EQUIPOS4; let i=index">
+    <div *ngFor="let equipo of EQUIPOS; let i=index">
       <ng-container *ngIf="equipo.liga === 'Oeste'">
         <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
           <a class="img_picture_element"  (click)="onSearchChange(equipo)"  data-hover="tooltip" data-placement="top"
@@ -99,8 +99,8 @@
 <!--Inicio Modulo de prueba para EQUIPOS  2-->
 <ng-container *ngIf="equipo_actual">
 
-  <h1 style="text-align: center;">Liga: {{equipo_actual.liga}}</h1>
-  <h2 style="text-align: center;">Equipo: {{equipo_actual.name}}</h2>
+  <h1 class="daily-title" style="text-align: center;">Liga: {{equipo_actual.liga}}</h1>
+  <h2 class="daily-title" style="text-align: center;">Equipo: {{equipo_actual.name}}</h2>
   
   
   <p class="title-positionA">{{dia | date }} </p>
@@ -136,9 +136,9 @@
         <thead class="table-header1">
           <tr>
             <th class="td1" style="width: 10%;" scope="col">Nombre</th>
-            <th class="td2" style="width: 10%;" scope="col">Equipo</th>
+            <!-- <th class="td2" style="width: 10%;" scope="col">Equipo</th> -->
             <th class="td4" style="width: 5%;" scope="col">Hit</th>
-            <th class="td3" style="width: 5%;" scope="col">Double</th>
+            <th class="td3" style="width: 5%;" scope="col">Doble</th>
             <th class="td5" style="width: 5%;" scope="col">Triple</th>
             <th class="td6" style="width: 5%;" scope="col">HR</th>
             <th class="td7" style="width: 5%;" scope="col">CA</th>
@@ -146,7 +146,7 @@
             <th class="td9" style="width: 5%;" scope="col">BB</th>
             <th class="td10" style="width: 5%;" scope="col">BR</th>
             <th class="td11" style="width: 5%;" scope="col">Cap. Rob.</th>
-            <th class="td12" style="width: 5%;" scope="col">Err.</th>
+            <!-- <th class="td12" style="width: 5%;" scope="col">Err.</th> -->
             <th class="td13" style="width: 5%;" scope="col">Total</th>
           </tr>
         </thead>
@@ -156,24 +156,54 @@
                 <a routerLink="/playerinfo/{{player.id}}" class="link_player">
                   <td class="link_player" class="td1" style="width: 10%;">{{player.fullName}}</td>
                 </a>
-                <td class="td2" style="width: 10%;">{{player.stats[0].splits[player.indexStatDate].team.name }}</td>
+                <!-- <td class="td2" style="width: 10%;">{{player.stats[0].splits[player.indexStatDate].team.name }}</td> -->
                 <td class="td3" style="width: 5%;">
                   <p>{{player.stats[0].splits[player.indexStatDate].stat.hits }}</p>
-                  <p style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.hits * 1 }} pts.)</p>
+                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.hits * 1 }} pts.)</p>
                 </td>
 
 
 
-                <td class="td4" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.avg}}</td>
-                <td class="td5" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.runs}}</td>
-                <td class="td6" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.hits}}</td>
-                <td class="td7" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.strikeOuts}}</td>
-                <td class="td8" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.baseOnBalls}}</td>
-                <td class="td9" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.rbi}}</td>
-                <td class="td10" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.homeRuns}}</td>
-                <td class="td11" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.stolenBases}}</td>
-                <td class="td12" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.stolenBases}}</td>
-                <td class="td13" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.stolenBases}}</td>
+                <td class="td4" style="width: 5%;">
+                  <p>{{player.stats[0].splits[player.indexStatDate].stat.doubles}}</p>
+                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.doubles * 2 }} pts.)</p>
+                </td>
+                <td class="td5" style="width: 5%;">
+                  <p>{{player.stats[0].splits[player.indexStatDate].stat.triples}}</p>
+                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.triples * 3 }} pts.)</p>
+                  </td>
+                <td class="td6" style="width: 5%;">
+                  <p>{{player.stats[0].splits[player.indexStatDate].stat.homeRuns}}</p>
+                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.homeRuns * 4 }} pts.)</p>
+                </td>
+                <td class="td7" style="width: 5%;">
+                  <p>{{player.stats[0].splits[player.indexStatDate].stat.runs}}</p>
+                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.runs * 1 }} pts.)</p>
+                </td>
+                <td class="td8" style="width: 5%;">
+                 <p> {{player.stats[0].splits[player.indexStatDate].stat.rbi}}</p>
+                 <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.rbi * 2 }} pts.)</p>
+                </td>
+                <td class="td9" style="width: 5%;">
+                  <p>{{player.stats[0].splits[player.indexStatDate].stat.baseOnBalls}}</p>
+                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.baseOnBalls * 1 }} pts.)</p>
+                  </td>
+                <td class="td10" style="width: 5%;">
+                  <p>{{player.stats[0].splits[player.indexStatDate].stat.stolenBases}}</p>
+                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.stolenBases * 1 }} pts.)</p>
+                  </td>
+                <td class="td11" style="width: 5%;">
+                  <p>{{player.stats[0].splits[player.indexStatDate].stat.caughtStealing}}</p>
+                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.stolenBases * -1 }} pts.)</p>
+                </td>
+                <!-- <td class="td12" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.stolenBases}}</td> -->
+                <td class="td13" style="width: 5%;">
+                  <p style="margin: 1.5rem 0rem;">{{(player.stats[0].splits[player.indexStatDate].stat.hits * 1)+(player.stats[0].splits[player.indexStatDate].stat.doubles * 2 )+
+                  (player.stats[0].splits[player.indexStatDate].stat.triples * 3) + (player.stats[0].splits[player.indexStatDate].stat.homeRuns * 4 )+
+                  (player.stats[0].splits[player.indexStatDate].stat.runs * 1)+(player.stats[0].splits[player.indexStatDate].stat.rbi * 2) +
+                  (player.stats[0].splits[player.indexStatDate].stat.baseOnBalls * 1 )+(player.stats[0].splits[player.indexStatDate].stat.stolenBases * 1)+
+                  (player.stats[0].splits[player.indexStatDate].stat.stolenBases * -1)}}pts.</p>
+                </td>
               </tr>
             
           </tbody>

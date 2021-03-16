@@ -90,6 +90,10 @@ input[type="date"]:focus:before,
 input[type="date"]:valid:before {
   content: "";
 } */
+.points {
+  color: black;
+  background-color: white;
+}
 
 .espacioInferior {
   margin-bottom: 1rem;
