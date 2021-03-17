@@ -198,17 +198,14 @@
                 </td>
                 <!-- <td class="td12" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.stolenBases}}</td> -->
                 <td class="td13" style="width: 5%;">
-                  <p style="margin: 1.5rem 0rem;">{{(player.stats[0].splits[player.indexStatDate].stat.hits * 1)+(player.stats[0].splits[player.indexStatDate].stat.doubles * 2 )+
-                  (player.stats[0].splits[player.indexStatDate].stat.triples * 3) + (player.stats[0].splits[player.indexStatDate].stat.homeRuns * 4 )+
-                  (player.stats[0].splits[player.indexStatDate].stat.runs * 1)+(player.stats[0].splits[player.indexStatDate].stat.rbi * 2) +
-                  (player.stats[0].splits[player.indexStatDate].stat.baseOnBalls * 1 )+(player.stats[0].splits[player.indexStatDate].stat.stolenBases * 1)+
-                  (player.stats[0].splits[player.indexStatDate].stat.stolenBases * -1)}}pts.</p>
+                  <p style="margin: 1.5rem 0rem;">{{ player.totalDiario }}pts.</p>
                 </td>
               </tr>
             
           </tbody>
         </ng-container>
       </table>
+      <h1>TOTAL EQUIPO = {{equipo_actual.totalDiario}} pts</h1>
     </div>
       <hr />
     </ng-container>

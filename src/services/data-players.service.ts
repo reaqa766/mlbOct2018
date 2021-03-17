@@ -126,7 +126,7 @@ export class DataPlayersService {
     621020, 621439, 593428, 520471, 592450,
   ]
   private playersCodeQuin = [
-    521692,  ]
+    531368,   ]
 
   public teams =[
     {
@@ -201,9 +201,9 @@ export class DataPlayersService {
   }
 
   // algoritmo para quiniela/doubles -  jugadores de cada equipo en cada Liga 
-  getAllPlayersDailyQuin(): Observable<StatsDayliPlayer | undefined>[] {
+  getAllPlayersDailyQuin(jugadores: Array<number>): Observable<StatsDayliPlayer | undefined>[] {
     let dataAllPlayers2: Observable<StatsDayliPlayer | undefined>[] = [];
-    for (let code of this.playersCodeQuin) {
+    for (let code of jugadores) {
       this._url6 = this._url6.replace(this.playerCode.toString(), code.toString())
       // this._url6 = this._url6.replace(this.playerCode.toString(), code.toString())
       let dataP2 = this.getPlayerDaily2();
