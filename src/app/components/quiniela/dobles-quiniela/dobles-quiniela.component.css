@@ -13,42 +13,46 @@
 .container-position {
   margin-bottom: 3rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-column-gap: 1px;
 }
 
 .container_americana_norte {
   margin: 1.5rem auto;
   background-color: rgba(11, 95, 191, 0.465);
-  width: 20rem;
+  width: 15rem;
   height: fit-content;
   border-radius: 7px;
+  padding: 0 0 0.5rem 0;
 }
 .container_americana_sur {
   margin: 1.5rem auto;
   background-color: rgba(194, 161, 31, 0.465);
-  width: 20rem;
+  width: 15rem;
   height: fit-content;
   border-radius: 7px;
+  padding: 0 0 0.5rem 0;
 }
 .container_americana_este {
   margin: 1.5rem auto;
   background-color: rgba(16, 179, 103, 0.465);
-  width: 20rem;
+  width: 15rem;
   height: fit-content;
   border-radius: 7px;
+  padding: 0 0 0.5rem 0;
 }
 .container_americana_oeste {
   margin: 1.5rem auto;
   background-color: rgba(50, 120, 196, 0.465);
-  width: 20rem;
+  width: 15rem;
   height: fit-content;
   border-radius: 7px;
+  padding: 0 0 0.5rem 0;
 }
 
 .titulo_liga {
-  margin: 1.5rem 0 0;
+  margin: 0.5rem 0 0;
   font-size: 2rem;
   text-align: center;
   font-weight: 400;
@@ -127,6 +131,7 @@ input[type="date"]:valid:before {
 }
 .table {
   border-collapse: separate;
+  width: 98%;
 }
 
 .error_message {
@@ -236,6 +241,26 @@ th {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 1px;
+  }
+  .player_stats {
+    width: 50%;
+    display: table;
+  }
+  .title-positionA {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+  }
+  .seleccion {
+    font-size: 0.5rem;
+    color: antiquewhite;
+    padding: 0 0.5em 0.4em;
+    text-shadow: 2px 2px 8px #111;
+  }
+  .table {
+    border-collapse: separate;
+    width: 75%;
   }
 }
 @media only screen and (orientation: landscape) and (min-width: 500px) and (max-width: 600px) {
@@ -357,6 +382,10 @@ th {
     width: fit-content;
     height: 1.75em;
     border-radius: 7px;
+  }
+  .table {
+    border-collapse: separate;
+    width: 85%;
   }
 
   .advancedSearchDatetbox {
