@@ -41,55 +41,60 @@ export class DoblesQuinielaComponent implements OnInit {
   isLoading: boolean;
 
   EQUIPOS = [
-    { code: 1, totalDiario:0, name: 'Leones de Boston', liga: 'Norte', jugadores:[
-      521692, 572228, 664040, 608070, 665487, 594807, 545361, 605141,  ] },
-    { code: 2, totalDiario:0, name: 'Toros de Pedregal', liga: 'Norte', jugadores:[
-      592663, 547989, 669374, 592518, 608369, 572041, 660670, 594777,     ] },
-    { code: 3, totalDiario:0, name: 'las Vegas BBC', liga: 'Norte', jugadores:[
-      596142,624413, 518934, 553993, 607208, 650391, 543807, 606192,    ] },
-    { code: 4, totalDiario:0, name: 'La Familia', liga: 'Norte', jugadores:[
-      518595,621566, 596059, 605119, 593428, 592696, 621439, 571976,     ] },
-    { code: 5, totalDiario:0, name: 'Super Leones', liga: 'Norte', jugadores:[
-      518735,518692, ] },
-    { code: 6, totalDiario:0, name: 'Los Frailes', liga: 'Norte', jugadores:[
-      669257, ] },
-    { code: 7, totalDiario:0, name: 'The Bay', liga: 'Sur', jugadores:[
-      575929, ] },
-    { code: 8, totalDiario:0, name: 'The Lyons', liga: 'Sur', jugadores:[
-      543510, ] },
-    { code: 9, totalDiario:0, name: 'Robaseñas', liga: 'Sur', jugadores:[
-      669221, ] },
-    { code: 10, totalDiario:0, name: 'San Cristobal Rockies', liga: 'Sur', jugadores:[
-      543592, ] },
-    { code: 11, totalDiario:0, name: 'CPB Hercules', liga: 'Sur', jugadores:[
-      543877, ] },
-    { code: 12, totalDiario:0, name: 'Michis Club', liga: 'Sur', jugadores:[
-      592200, ] },
-    { code: 13, totalDiario:0, name: 'Yankeesvnzl', liga: 'Este', jugadores:[
-      643376,] },
-    { code: 14, totalDiario:0, name: 'Starxx', liga: 'Este', jugadores:[
-      455117, ] },
-    { code: 15, totalDiario:0, name: 'Los Estrada', liga: 'Este', jugadores:[
-      521692,
-    ] },
-    { code: 16, totalDiario:0, name: 'Guatire soy', liga: 'Este', jugadores:[
-      571466,] },
-    { code: 17, totalDiario:0, name: 'Perfume de Feyalegria', liga: 'Este', jugadores:[
-      608348, ] },
-    { code: 18, totalDiario:0, name: 'Zamuros', liga: 'Este', jugadores:[
-      467092, ] },
-    { code: 19, totalDiario:0, name: 'The Black Cubs', liga: 'Oeste', jugadores:[
-      467092, ] },
-    { code: 20, totalDiario:0, name: 'Diablos Rojos', liga: 'Oeste', jugadores:[
-      608348, ] },
-    { code: 21, totalDiario:0, name: 'Bombarderos del Bronx', liga: 'Oeste', jugadores:[
-      521692, ] },
-    { code: 22, totalDiario:0, name: 'Tiburon121', liga: 'Oeste', jugadores:[
-      543877, ] },
-    { code: 23, totalDiario:0, name: 'Astros de Carabobo', liga: 'Oeste', jugadores:[
-      669221, ] },
-    { code: 24, totalDiario:0, name: 'Garate158', liga: 'Oeste', jugadores:[
-      518595, ] }
+    { code: 1, totalDiario:0, name: 'Toros de Carabobo', liga: 'Norte', jugadores:[
+      660670,518692,592885,608336,669456,514917,669257,592178,593428,622491,
+      425844,605397,665489,666971,445276,664238,669242,593871,594777,622666,] },
+    { code: 2, totalDiario:0, name: 'San Cristobal Rockies', liga: 'Norte', jugadores:[
+      605141,596115,623352,660271,571448,453568,621566,506433,593160,592626,543272,596142,
+      608566,571578,641313,518595,602074,517008,656941,519293,] },
+    { code: 3, totalDiario:0, name: 'lLa Familia', liga: 'Norte', jugadores:[
+      545361,594798,596019,641355,608070,453286,543685,621111,607208,477132,
+      605400,553993,646240,645277,502110,656305,624424,521230,621242,641598,] },
+    { code: 4, totalDiario:0, name: 'Los Quintereños', liga: 'Norte', jugadores:[
+      665742,592518,624413,521692,514888,408234,650402,623993,666200,542303,
+      641154,547943,673357,622694,665926,570482,543135,573262,516782,503556,] },
+    { code: 5, totalDiario:0, name: 'Perfume Fe y Alegria', liga: 'Norte', jugadores:[
+      665487,592663,518934,592450,457759,668227,605483,502671,443558,519317,
+      607043,608337,571771,446372,457708,553902,425794,518626,650333,621043,] },
+    { code: 6, totalDiario:0, name: 'The Lyons', liga: 'Norte', jugadores:[
+      6543037,545333,547180,608369,547989,608324,575929,630105,543807,595879,
+      624585,608331,544931,592206,541645,518735,519203,624415,547973,664023, ] },
+    { code: 7, totalDiario:0, name: 'Team Alcala', liga: 'Sur', jugadores:[
+      609275,605400,669203,622694,656427,592626,628317,669374,663656,458681,
+      656305,621566,592206,646240,668227,544931,593428,425877,670541,  ] },
+    { code: 8, totalDiario:0, name: 'Super Leones', liga: 'Sur', jugadores:[
+      665926,547180,519242,596019,608566,547989,514888,608070,623352,665742,
+      489446,650333,673357,545361,669456,660271,543243,621111,575929,518735, ] },
+    { code: 9, totalDiario:0, name: 'Michis Club', liga: 'Sur', jugadores:[
+      608324,543685,547973,621043,448801,477132,553993,665487,519317,650402,
+      543510,502110,456501,408234,605141,516782,669242,665489,425844, ] },
+    { code: 10, totalDiario:0, name: 'Las Vegas', liga: 'Sur', jugadores:[
+      605400,608369,592885,543807,543037,592663,608336,445276,521230,608337,
+      592518,543760,453286,645277,502671,624413,660670,607208,545333,596115,] },
+    { code: 11, totalDiario:0, name: 'YankeesVzla', liga: 'Sur', jugadores:[
+      605137,624415,514917,572816,446372,444482,544369,593423,518792,542583,
+      605137,592178,518516,608331,596146,641154,607192,                     ] },
+    { code: 12, totalDiario:0, name: 'Zamuros', liga: 'Sur', jugadores:[
+      592450,657077,519203,605483,664040,453568,641355,659275,518934,518692,
+      594798,595879,542303,571970,443558,571448,521692,571976,669257,506433, ] },
+    { code: 13, totalDiario:0, name: 'Los Frailes', liga: 'Este', jugadores:[
+      543685,664040,547180,624415,592885,543333,665487,543037,547943,630105,
+      608336,547989,592178,608337,443558,571976,527038,518735,               ] },
+    { code: 14, totalDiario:0, name: 'The Bay', liga: 'Este', jugadores:[
+      543305,592450,608324,605483,595879,502110,621244,592663,457759,445276,
+      622491,542303,453286,488726,545361,646240,656555,596115,467092,660162, ] },
+    { code: 15, totalDiario:0, name: 'Robaseñas', liga: 'Este', jugadores:[
+      547973,666182,621043,572971,553993,596142,519317,650402,594798,514888,
+      621566,408234,592789,571448,502671,624413,668227,660670,516782,493329, ] },
+    { code: 16, totalDiario:0, name: 'Toros de Pedregal', liga: 'Este', jugadores:[
+      541645,514917,477132,596019,665742,628317,669374,606466,592518,573186,
+      592206,546318,657656,660271,545333,645302,665489,575929,506433,425844, ] },
+    { code: 17, totalDiario:0, name: 'KenGriffeyJr', liga: 'Este', jugadores:[
+      605540,518692,656427,624585,608070,605137,623352,663656,673357,624424,
+      605141,645277,669456,543243,641313,607208,621111,593160,669257,593428, ] },
+    { code: 18, totalDiario:0, name: 'Diablos Rojos', liga: 'Este', jugadores:[
+      605400,572041,657077,543272,641355,446372,608369,518934,543807,570482,
+      666200,571771,458681,521230,503556,571970,647336,663611,521692,670541, ] }
   ];
   equipo_actual: any;
   players_definidos: any[];

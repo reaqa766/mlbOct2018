@@ -154,7 +154,7 @@ export class HomeComponent implements OnInit {
   filtroTopCincoAvg(estadistica: string) {
     let filtrado = [];
 
-    filtrado = this.jugadores.filter(jugador => jugador.stats && jugador.stats[0].splits && jugador.stats[0].splits[0].stat.atBats >= (1)
+    filtrado = this.jugadores.filter(jugador => jugador.stats && jugador.stats[0].splits && jugador.stats[0].splits[0].stat.atBats >= (20)
       // jugador => jugad or.stats && jugador.stats[0].splits &&  jugador.stats[0].splits[0].stat.atBats >= (this.teamPlays.record * 3.1)
     ).
       sort((jugadorA, jugadorB) => {

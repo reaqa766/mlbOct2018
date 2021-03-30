@@ -13,7 +13,7 @@
 .container-position {
   margin-bottom: 3rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 1px;
 }
@@ -239,7 +239,7 @@ th {
     margin-bottom: 3rem;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 1px;
   }
   .player_stats {
