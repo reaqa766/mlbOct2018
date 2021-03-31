@@ -113,7 +113,7 @@ getPlayersMap() {
         this.allItems = this.players;
         this.setPage(1);
         this.isLoading = false;
-        // console.log('allItems', this.allItems);
+        console.log('allItems', this.allItems);
 
         }
         index++;

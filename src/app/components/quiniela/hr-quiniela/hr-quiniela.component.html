@@ -1,10 +1,217 @@
-<div class="container-actives">
+<div class="container_players_actives"></div>
+<div class="container-daily">
+  <h1 class="daily-title">LIGA DE FANTASIA 2021</h1>
+<br>
+  <h3 class="daily-title">Actuación diaria Pitchers</h3>
+  <!-- <h3 class="daily-title">Temporada Regular 2019</h3> -->
+</div>
+<!--Inicio Modulo de prueba para EQUIPOS -->
+<div class="container-position">
+<div class="container_americana_norte container_border">
+  <h3 class="titulo_liga">Liga Norte</h3>
+  <div class="team_logo">
+    <div *ngFor="let equipo of EQUIPOS; let i=index">
+      <ng-container *ngIf="equipo.liga === 'Norte'">
+        <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
+          <a class="img_picture_element"  (click)="onSearchChange(equipo)"  data-hover="tooltip" data-placement="top"
+          title="Pincha para ver Jugadores">{{equipo.name}}</a> 
+          <!-- <a class="img_picture_element"  (click)="onSearchChange(equipo.name)"  data-hover="tooltip" data-placement="top"
+          title="Pincha para ver Jugadores">{{equipo.name}}</a> -->
+           <!-- <div (click)="onSearchChange(equipo.name)"  data-hover="tooltip" data-placement="top"
+              title="Pincha para ver Jugadores"></div> -->
+          <!-- <a ><img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
+              src="{{team.code}}" alt="Team Logo" data-hover="tooltip" data-placement="top"
+              title="Pincha para ver Jugadores"></a> -->
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<!--Inicio Modulo de prueba para EQUIPOS -->
+
+<!--Inicio Modulo de prueba para EQUIPOS 2 -->
+<div class="container_americana_sur container_border">
+  <h3 class="titulo_liga">Liga Sur</h3>
+  <div class="team_logo">
+    <div *ngFor="let equipo of EQUIPOS; let i=index">
+      <ng-container *ngIf="equipo.liga === 'Sur'">
+        <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
+          <a class="img_picture_element"  (click)="onSearchChange(equipo)"  data-hover="tooltip" data-placement="top"
+          title="Pincha para ver Jugadores">{{equipo.name}}</a> 
+          <!-- <a class="img_picture_element"  (click)="onSearchChange(equipo.name)"  data-hover="tooltip" data-placement="top"
+          title="Pincha para ver Jugadores">{{equipo.name}}</a> -->
+           <!-- <div (click)="onSearchChange(equipo.name)"  data-hover="tooltip" data-placement="top"
+              title="Pincha para ver Jugadores"></div> -->
+          <!-- <a ><img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
+              src="{{team.code}}" alt="Team Logo" data-hover="tooltip" data-placement="top"
+              title="Pincha para ver Jugadores"></a> -->
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div class="container_americana_este container_border">
+  <h3 class="titulo_liga">Liga Este</h3>
+  <div class="team_logo">
+    <div *ngFor="let equipo of EQUIPOS; let i=index">
+      <ng-container *ngIf="equipo.liga === 'Este'">
+        <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
+          <a class="img_picture_element"  (click)="onSearchChange(equipo)"  data-hover="tooltip" data-placement="top"
+          title="Pincha para ver Jugadores">{{equipo.name}}</a> 
+          <!-- <a class="img_picture_element"  (click)="onSearchChange(equipo.name)"  data-hover="tooltip" data-placement="top"
+          title="Pincha para ver Jugadores">{{equipo.name}}</a> -->
+           <!-- <div (click)="onSearchChange(equipo.name)"  data-hover="tooltip" data-placement="top"
+              title="Pincha para ver Jugadores"></div> -->
+          <!-- <a ><img class="img_picture_element" [ngClass]="'img_pic_'+ (i+1)" (click)="onSearchChange(team.name)"
+              src="{{team.code}}" alt="Team Logo" data-hover="tooltip" data-placement="top"
+              title="Pincha para ver Jugadores"></a> -->
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<!--Inicio Modulo de prueba para EQUIPOS -->
+
+
+</div>
+<!--Inicio Modulo de prueba para EQUIPOS  2-->
+<ng-container *ngIf="equipo_actual">
+
+  <h1 class="daily-title" style="text-align: center;">Liga: {{equipo_actual.liga}}</h1>
+  <h2 class="daily-title" style="text-align: center;">Equipo: {{equipo_actual.name}}</h2>
+  
+  
+  <p class="title-positionA">{{dia | date }} </p>
+  
+  <!-- LOADER -->
+  <div class="spiner"  *ngIf="!allItems">
+    <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
+    <p class="spiner_load">CARGANDO</p>
+  </div>
+  
+  <div *ngIf="allItems" class="title-position">
+    <input #date_Picker type="date" (input)="onSearchDate($event)" placeholder="Escoja la fecha..."  value="" class="advancedSearchDatetbox">
+  <span class="seleccion">   Seleccione una fecha con el</span><img src="../../../../assets/SELECCION.PNG" alt="">
+  </div>
+  <!-- <div *ngIf="allItems">
+    <input #date_Picker [(ngModel)]="searchDate" type="date" (input)="onSearchDate()" placeholder="Escoja   la fecha.."  value="" class="advancedSearchDatetbox">
+  </div> -->
+  <div *ngIf="allItems" class="title-position">
+    <!-- <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchDatetbox">
+    <span class="seleccion">   Indique el nombre de un Jugador (en minúsculas)</span>
+    <div *ngIf="!allItems[0] && busqueda.value" class="error_search d-flex justify-content-center">
+      <h4 class="error_message"> '{{ busqueda.value }}' No se encuentra el Jugador</h4>
+    </div>
+  
+    <div *ngIf="allItems.length == 0 " class="espacioInferior">
+      <h1 class="title-position"> No ha terminado ningún juego hoy </h1>
+    </div> -->
+  
+  
+    <ng-container *ngIf="!isLoading">
+  <div class="player_stats">
+      <table class="table  text-center">
+        <thead class="table-header1">
+          <tr>
+            <th class="td1" style="width: 5%;" scope="col">Nombre</th>
+            <!-- <th class="td2" style="width: 10%;" scope="col">Equipo</th> -->
+            <th class="td4" style="width: 2%;" scope="col">Hit</th>
+            <th class="td3" style="width: 2%;" scope="col">2B</th>
+            <th class="td5" style="width: 2%;" scope="col">3B</th>
+            <th class="td6" style="width: 2%;" scope="col">HR</th>
+            <th class="td7" style="width: 2%;" scope="col">CA</th>
+            <th class="td8" style="width: 2%;" scope="col">CI</th>
+            <th class="td9" style="width: 2%;" scope="col">BB</th>
+            <th class="td10" style="width: 2%;" scope="col">BR</th>
+            <th class="td11" style="width: 3%;" scope="col">Cap. Rob.</th>
+            <!-- <th class="td12" style="width: 5%;" scope="col">Err.</th> -->
+            <th class="td13" style="width: 3%;" scope="col">Total</th>
+          </tr>
+        </thead>
+        <ng-container>
+          <tbody class="table-header">
+              <tr *ngFor="let player of allItems; let i = index">
+                <a routerLink="/playerinfo/{{player.id}}" class="link_player">
+                  <td class="link_player" class="td1" style="width: 5%;">{{player.fullName}}</td>
+                </a>
+                <!-- <td class="td2" style="width: 10%;">{{player.stats[0].splits[player.indexStatDate].team.name }}</td> -->
+                <td class="td3" style="width: 2%;">
+                  <p>{{player.stats[0].splits[player.indexStatDate].stat.hits }}</p>
+                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.hits * 1 }} pts.)</p>
+                </td>
+
+
+
+                <td class="td4" style="width: 2%;">
+                  <p>{{player.stats[0].splits[player.indexStatDate].stat.doubles}}</p>
+                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.doubles * 2 }} pts.)</p>
+                </td>
+                <td class="td5" style="width: 2%;">
+                  <p>{{player.stats[0].splits[player.indexStatDate].stat.triples}}</p>
+                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.triples * 3 }} pts.)</p>
+                  </td>
+                <td class="td6" style="width: 2%;">
+                  <p>{{player.stats[0].splits[player.indexStatDate].stat.homeRuns}}</p>
+                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.homeRuns * 4 }} pts.)</p>
+                </td>
+                <td class="td7" style="width: 2%;">
+                  <p>{{player.stats[0].splits[player.indexStatDate].stat.runs}}</p>
+                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.runs * 1 }} pts.)</p>
+                </td>
+                <td class="td8" style="width: 2%;">
+                 <p> {{player.stats[0].splits[player.indexStatDate].stat.rbi}}</p>
+                 <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.rbi * 2 }} pts.)</p>
+                </td>
+                <td class="td9" style="width: 2%;">
+                  <p>{{player.stats[0].splits[player.indexStatDate].stat.baseOnBalls}}</p>
+                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.baseOnBalls * 1 }} pts.)</p>
+                  </td>
+                <td class="td10" style="width: 2%;">
+                  <p>{{player.stats[0].splits[player.indexStatDate].stat.stolenBases}}</p>
+                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.stolenBases * 1 }} pts.)</p>
+                  </td>
+                <td class="td11" style="width: 3%;">
+                  <p>{{player.stats[0].splits[player.indexStatDate].stat.caughtStealing}}</p>
+                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.stolenBases * -1 }} pts.)</p>
+                </td>
+                <!-- <td class="td12" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.stolenBases}}</td> -->
+                <td class="td13" style="width: 3%;">
+                  <p style="margin: 1.5rem 0rem;">{{ player.totalDiario }}pts.</p>
+                </td>
+              </tr>
+            
+          </tbody>
+        </ng-container>
+      </table>
+      <h3 class="daily-title" style="background-color: black;" >Total puntos del Equipo = {{equipo_actual.totalDiario}} pts</h3>
+    </div>
+      <hr />
+    </ng-container>
+  </div>
+
+</ng-container>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- VIEJO HTML  30 marzo 2021 -->
+<!-- <div class="container-actives">
   <div class="container_players_actives"></div>
   <h1 class="actives-title">Jonrones del día</h1>
   <h1 class="actives-title">Quiniela MLB 2021</h1>
   </div>
 
-  <!-- LOADER -->
   <div *ngIf="!allItems">
     <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
     <p class="spiner_load">CARGANDO</p>
@@ -22,7 +229,6 @@
   <br>
 
   <ng-container *ngIf="!isLoading">
-    <!-- <div class="tjta-encabezado"> -->
 
     <ng-container *ngIf="!(pager.allItems === 0)">
 
@@ -31,10 +237,8 @@
           <div *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
             <div class="tarjeta_izquierda">
               <div class="foto" ><img class="player_pict2" appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
-              <!-- <a routerLink="/playerinfo/{{player.id}}" class="link_player"> -->
                 <div  class="link_player">{{player.fullName}}</div>
 
-              <!-- </a> -->
               <div class="avg items_estadisticas" ><div class="avg_span">AVG</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.avg}}</div></div>
               <div class="atBat items_estadisticas" ><div class="avg_span">VB</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.atBats}}</div></div>
               <div class="hits items_estadisticas" ><div class="avg_span">Hits</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.hits}}</div></div>
@@ -52,9 +256,7 @@
           <div *ngFor="let player of allItems | pagination:pager.startIndex:(pager.allItems)-pager.startIndex">
             <div class="tarjeta_izquierda">
               <div class="foto" ><img class="player_pict2" appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas"></div>
-              <!-- <a routerLink="/playerinfo/{{player.id}}" class="link_player"> -->
                 <div  class="link_player">{{player.fullName}}</div>
-              <!-- </a> -->
               <div class="avg items_estadisticas" ><div class="avg_span">AVG</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.avg}}</div></div>
               <div class="atBat items_estadisticas" ><div class="avg_span">VB</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.atBats}}</div></div>
               <div class="hits items_estadisticas" ><div class="avg_span">Hits</div> <div class="avg_span2">{{player.stats[0].splits[player.indexStatDate].stat.hits}}</div></div>
@@ -68,7 +270,6 @@
       </ng-container>
 
 
-      <!-- PAGINATION-->
       <br>
       <br>
 
@@ -76,7 +277,6 @@
         <div class="container">
           <div class="text-center paginator">
 
-            <!-- pager -->
             <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
               <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
                 <a (click)="setPage(1)" class="page-link paginator_item">First</a>
@@ -102,5 +302,5 @@
 
     </ng-container>
 
-  </ng-container>
+  </ng-container> -->
 

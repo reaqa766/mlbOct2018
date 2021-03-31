@@ -100,6 +100,8 @@ export class DoblesQuinielaComponent implements OnInit {
   players_definidos: any[];
   BBplayers: any[];
   buscando: boolean;
+  playersP: any[];
+  allItemsP: any[];
 
 
   constructor(private playerService: DataPlayersService, private pagerService: PagerService) { }
@@ -213,6 +215,8 @@ async getPlayersMap() {
       (player.stats[0].splits[player.indexStatDate].stat.stolenBases * 1) +
       (player.stats[0].splits[player.indexStatDate].stat.stolenBases * -1);
       console.log(total);
+      console.log('Jugadores', this.allItems);
+
       
       player.totalDiario = total;
       this.equipo_actual.totalDiario += player.totalDiario;
@@ -253,5 +257,7 @@ onSearchChange(team: any) {
     // get current page of items
     this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
   }
+
+
 
 }

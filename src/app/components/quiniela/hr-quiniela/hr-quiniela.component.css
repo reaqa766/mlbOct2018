@@ -1,10 +1,1007 @@
-.actives-title {
+.daily-title {
+  color: antiquewhite;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 0.5em 0.4em;
+  /* background-color: rgba(19, 12, 12, 0.5); */
+  text-shadow: 2px 2px 8px #111;
+  width: fit-content;
+  height: 1.75em;
+  border-radius: 7px;
+}
+.container-position {
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 1px;
+}
+
+.container_americana_norte {
+  margin: 1.5rem auto;
+  background-color: rgba(11, 95, 191, 0.465);
+  width: 15rem;
+  height: fit-content;
+  border-radius: 7px;
+  padding: 0 0 0.5rem 0;
+}
+.container_americana_sur {
+  margin: 1.5rem auto;
+  background-color: rgba(194, 161, 31, 0.465);
+  width: 15rem;
+  height: fit-content;
+  border-radius: 7px;
+  padding: 0 0 0.5rem 0;
+}
+.container_americana_este {
+  margin: 1.5rem auto;
+  background-color: rgba(16, 179, 103, 0.465);
+  width: 15rem;
+  height: fit-content;
+  border-radius: 7px;
+  padding: 0 0 0.5rem 0;
+}
+.container_americana_oeste {
+  margin: 1.5rem auto;
+  background-color: rgba(50, 120, 196, 0.465);
+  width: 15rem;
+  height: fit-content;
+  border-radius: 7px;
+  padding: 0 0 0.5rem 0;
+}
+
+.titulo_liga {
+  margin: 0.5rem 0 0;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  text-decoration: underline rgb(214, 214, 214);
+}
+
+.team_logo {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 1px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+}
+
+.img_picture_element {
+  color: antiquewhite;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 auto;
+  /* background-color: rgba(19, 12, 12, 0.5); */
+  text-shadow: 2px 2px 8px #111;
+  width: fit-content;
+  height: 1.75em;
+  border-radius: 7px;
+  padding: 0 0.5em 0.4em;
+  cursor: pointer;
+}
+/* input[type="date"]:before {
+  content: attr(placeholder) !important;
+  color: #aaa;
+  margin-right: 0.5em;
+}
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
+  content: "";
+} */
+.points {
+  color: black;
+  background-color: white;
+}
+
+.espacioInferior {
+  margin-bottom: 1rem;
+}
+.page-link {
+  color: black !important;
+}
+
+.seleccion {
+  color: antiquewhite;
+  padding: 0 0.5em 0.4em;
+  text-shadow: 2px 2px 8px #111;
+}
+
+.advancedSearchDatetbox {
+  color: rgb(2, 1, 0);
+  font-size: 0.75rem;
+  /* font-weight: bold; */
+  /* margin: 1% 0 2% 1%; */
+  width: fit-content;
+  border-radius: 6px;
+}
+
+.error_search {
+  font-size: 0.7rem;
+  width: 50%;
+  margin-left: 2%;
+  text-align: center;
+  color: antiquewhite;
+  background-color: rgba(12, 10, 9, 0.75);
+}
+.table {
+  border-collapse: separate;
+  width: 98%;
+}
+
+.error_message {
+  padding-top: 10px;
+  font-size: 0.7rem;
+}
+
+.link_player {
+  text-decoration: none;
+  color: antiquewhite;
+}
+.title-positionA {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.title-position {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.player_stats {
+  width: 100%;
+  display: table;
+}
+
+.td2,
+.td7,
+.td8,
+.td11 {
+  display: none;
+}
+
+.table-header1 {
+  background-color: rgba(12, 10, 9, 0.9);
+  color: antiquewhite;
+  font-size: 0.8rem;
+  align-items: center;
+}
+.table-header {
+  background-color: rgba(12, 10, 9, 0.75);
+  color: antiquewhite;
+  font-size: 0.8rem;
+  align-items: center;
+}
+.title-rows {
+  background-color: antiquewhite;
+  color: rgb(12, 10, 9);
+}
+
+.player-name {
+  color: black;
+}
+.player-name:hover {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+.row-color {
+  background-color: rgb(245, 223, 195);
+}
+.row-color:hover {
+  background-color: rgb(255, 255, 255);
+}
+.row-color1:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.title-rows_header {
+  text-align: center;
+}
+
+.spiner {
+  margin-left: 20% !important;
+}
+
+.fa-baseball-ball {
+  font-size: 8rem;
+  margin: 5% 0 0 25% !important;
+  color: rgba(80, 57, 43, 0.4);
+}
+.spiner_load {
+  font-size: 2.5rem;
+  color: rgba(80, 57, 43, 0.95);
+}
+
+th {
+  padding: 12px 5px;
+}
+.paginator {
+  margin: auto;
+}
+.paginator_text {
+  display: none;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 650px) {
+  .container-position {
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 1px;
+  }
+  .player_stats {
+    width: 50%;
+    display: table;
+  }
+  .title-positionA {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+  }
+  .seleccion {
+    font-size: 0.5rem;
+    color: antiquewhite;
+    padding: 0 0.5em 0.4em;
+    text-shadow: 2px 2px 8px #111;
+  }
+  .table {
+    border-collapse: separate;
+    width: 75%;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 500px) and (max-width: 600px) {
+  .daily-title {
+    color: antiquewhite;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 auto;
+    /* background-color: rgba(19, 12, 12, 0.5); */
+    text-shadow: 2px 2px 8px #111;
+    width: fit-content;
+    height: 1.75em;
+    border-radius: 7px;
+    padding: 0 0.5em 0.4em;
+  }
+
+  .advancedSearchDatetbox {
+    color: rgb(2, 1, 0);
+    font-size: 0.75rem;
+    /* font-weight: bold; */
+    /* margin: 2% 0 2% 2%; */
+  }
+
+  .error_search {
+    font-size: 1rem;
+    width: 80%;
+    margin-left: 2%;
+    text-align: center;
+    color: antiquewhite;
+    background-color: rgba(12, 10, 9, 0.75);
+  }
+
+  .error_message {
+    padding-top: 10px;
+    font-size: 1rem;
+  }
+
+  .link_player {
+    text-decoration: none;
+    color: antiquewhite;
+  }
+
+  .title-position {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+  }
+  .player_stats {
+    width: 100%;
+    display: table;
+  }
+
+  .table-header1 {
+    background-color: rgba(12, 10, 9, 0.9);
+    color: antiquewhite;
+    font-size: 0.8rem;
+    align-items: center;
+  }
+  .table-header {
+    background-color: rgba(12, 10, 9, 0.75);
+    color: antiquewhite;
+    font-size: 0.8rem;
+    align-items: center;
+  }
+  .title-rows {
+    background-color: antiquewhite;
+    color: rgb(12, 10, 9);
+  }
+
+  .player-name {
+    color: black;
+  }
+  .player-name:hover {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 1.15rem;
+    text-decoration: none;
+  }
+
+  .row-color {
+    background-color: rgb(245, 223, 195);
+  }
+  .row-color:hover {
+    background-color: rgb(255, 255, 255);
+  }
+  .row-color1:hover {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .title-rows_header {
+    text-align: center;
+  }
+
+  .fa-baseball-ball {
+    font-size: 10rem;
+    margin: 5% 40% 0 !important;
+    color: rgba(80, 57, 43, 0.4);
+  }
+  .spiner_load {
+    font-size: 5rem;
+    margin: 0 35% !important;
+    color: rgba(80, 57, 43, 0.95);
+  }
+
+  th {
+    padding: 12px 5px;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 601px) and (max-width: 700px) {
+  .daily-title {
+    color: antiquewhite;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0.5em 0.4em;
+    /* background-color: rgba(19, 12, 12, 0.5); */
+    text-shadow: 2px 2px 8px #111;
+    width: fit-content;
+    height: 1.75em;
+    border-radius: 7px;
+  }
+  .table {
+    border-collapse: separate;
+    width: 85%;
+  }
+
+  .advancedSearchDatetbox {
+    color: rgb(2, 1, 0);
+    font-size: 0.75rem;
+    /* font-weight: bold; */
+    /* margin: 2% 0 2% 2%; */
+  }
+
+  .error_search {
+    font-size: 1rem;
+    width: 80%;
+    margin-left: 2%;
+    text-align: center;
+    color: antiquewhite;
+    background-color: rgba(12, 10, 9, 0.75);
+  }
+
+  .error_message {
+    padding-top: 10px;
+    font-size: 1rem;
+  }
+
+  .link_player {
+    text-decoration: none;
+    color: antiquewhite;
+  }
+
+  .title-position {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+  }
+  .player_stats {
+    width: 100%;
+    display: table;
+  }
+  .td2,
+  .td5,
+  .td7,
+  .td8,
+  .td9,
+  .td11 {
+    display: table-cell;
+  }
+
+  .table-header1 {
+    background-color: rgba(12, 10, 9, 0.9);
+    color: antiquewhite;
+    font-size: 0.8rem;
+    align-items: center;
+  }
+  .table-header {
+    background-color: rgba(12, 10, 9, 0.75);
+    color: antiquewhite;
+    font-size: 0.8rem;
+    align-items: center;
+  }
+  .title-rows {
+    background-color: antiquewhite;
+    color: rgb(12, 10, 9);
+  }
+  .player-name {
+    color: black;
+  }
+  .player-name:hover {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 1.15rem;
+    text-decoration: none;
+  }
+
+  .row-color {
+    background-color: rgb(245, 223, 195);
+  }
+  .row-color:hover {
+    background-color: rgb(255, 255, 255);
+  }
+  .row-color1:hover {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .title-rows_header {
+    text-align: center;
+  }
+
+  .fa-baseball-ball {
+    font-size: 10rem;
+    margin: 5% 40% 0 !important;
+    color: rgba(80, 57, 43, 0.4);
+  }
+  .spiner_load {
+    font-size: 5rem;
+    margin: 0 35% !important;
+    color: rgba(80, 57, 43, 0.95);
+  }
+
+  th {
+    padding: 12px 5px;
+  }
+  .paginator {
+    margin: auto;
+  }
+  .paginator_text {
+    display: table-cell;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1020px) {
+  .daily-title {
+    color: antiquewhite;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0.15em 0.4em;
+    /* background-color: rgba(19, 12, 12, 0.5); */
+    text-shadow: 2px 2px 8px #111;
+    width: fit-content;
+    height: 1.75em;
+    border-radius: 7px;
+  }
+
+  .advancedSearchDatetbox {
+    color: rgb(2, 1, 0);
+    font-size: 0.75rem;
+    /* font-weight: bold; */
+    /* margin: 2% 0 2% 2%; */
+  }
+
+  .error_search {
+    font-size: 1rem;
+    width: 80%;
+    margin-left: 2%;
+    text-align: center;
+    color: antiquewhite;
+    background-color: rgba(12, 10, 9, 0.75);
+  }
+
+  .error_message {
+    padding-top: 10px;
+    font-size: 1rem;
+  }
+
+  .link_player {
+    text-decoration: none;
+    color: antiquewhite;
+  }
+
+  .title-position {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+  }
+  .player_stats {
+    width: 100%;
+    display: table;
+  }
+  .td2,
+  .td5,
+  .td7,
+  .td8,
+  .td9,
+  .td11 {
+    display: table-cell;
+  }
+
+  .table-header1 {
+    background-color: rgba(12, 10, 9, 0.9);
+    color: antiquewhite;
+    font-size: 0.8rem;
+    align-items: center;
+  }
+  .table-header {
+    background-color: rgba(12, 10, 9, 0.75);
+    color: antiquewhite;
+    font-size: 0.8rem;
+    align-items: center;
+  }
+  .title-rows {
+    background-color: antiquewhite;
+    color: rgb(12, 10, 9);
+  }
+  .player-name {
+    color: black;
+  }
+  .player-name:hover {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 1.15rem;
+    text-decoration: none;
+  }
+
+  .row-color {
+    background-color: rgb(245, 223, 195);
+  }
+  .row-color:hover {
+    background-color: rgb(255, 255, 255);
+  }
+  .row-color1:hover {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .title-rows_header {
+    text-align: center;
+  }
+
+  .fa-baseball-ball {
+    font-size: 8rem;
+    margin: 5% 0 0 45% !important;
+    color: rgba(80, 57, 43, 0.4);
+  }
+  .spiner_load {
+    font-size: 2.5rem;
+    margin: 0 0 0 40% !important;
+    color: rgba(80, 57, 43, 0.95);
+  }
+
+  th {
+    padding: 12px 5px;
+  }
+  .paginator {
+    margin: auto;
+  }
+  .paginator_text {
+    display: table-cell;
+  }
+}
+
+@media only screen and (min-width: 1023px) and (max-width: 1429px) {
+  .daily-title {
+    color: antiquewhite;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0.5em 0.4em;
+    /* background-color: rgba(19, 12, 12, 0.5); */
+    text-shadow: 2px 2px 8px #111;
+    width: fit-content;
+    height: 1.75em;
+    border-radius: 7px;
+  }
+
+  .advancedSearchDatetbox {
+    color: rgb(2, 1, 0);
+    font-size: 1em;
+    /* font-weight: bold; */
+    /* margin: 0 0 1% 2%; */
+  }
+
+  .error_search {
+    font-size: 1rem;
+    width: 80%;
+    margin-left: 2%;
+    text-align: center;
+    color: antiquewhite;
+    background-color: rgba(12, 10, 9, 0.75);
+  }
+
+  .error_message {
+    padding-top: 10px;
+    font-size: 1rem;
+  }
+
+  .link_player {
+    text-decoration: none;
+    color: antiquewhite;
+  }
+
+  .title-position {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+  }
+  .player_stats {
+    width: 100%;
+    display: table;
+  }
+  .fa-baseball-ball {
+    font-size: 10rem;
+    margin: 5% 38% 0 !important;
+    color: rgba(80, 57, 43, 0.4);
+  }
+  .spiner_load {
+    font-size: 5rem;
+    margin: 0 30% !important;
+    color: rgba(80, 57, 43, 0.95);
+  }
+
+  .td2,
+  .td5,
+  .td7,
+  .td8,
+  .td9,
+  .td11 {
+    display: table-cell;
+  }
+
+  .table-header1 {
+    background-color: rgba(12, 10, 9, 0.9);
+    color: antiquewhite;
+    font-size: 1.25rem;
+    align-items: center;
+  }
+  .table-header {
+    background-color: rgba(12, 10, 9, 0.75);
+    color: antiquewhite;
+    font-size: 1.25rem;
+    align-items: center;
+  }
+  .paginator {
+    font-size: 1.25rem;
+  }
+  .paginator_text {
+    display: table-cell;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 701px) and (max-width: 900px) {
+  .daily-title {
+    color: antiquewhite;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0.5em 0.4em;
+    /* background-color: rgba(19, 12, 12, 0.5); */
+    text-shadow: 2px 2px 8px #111;
+    width: fit-content;
+    height: 1.75em;
+    border-radius: 7px;
+  }
+
+  .advancedSearchDatetbox {
+    color: rgb(2, 1, 0);
+    font-size: 0.75rem;
+    /* font-weight: bold; */
+    /* margin: 2% 0 2% 2%; */
+  }
+
+  .error_search {
+    font-size: 1rem;
+    width: 80%;
+    margin-left: 2%;
+    text-align: center;
+    color: antiquewhite;
+    background-color: rgba(12, 10, 9, 0.75);
+  }
+
+  .error_message {
+    padding-top: 10px;
+    font-size: 1rem;
+  }
+
+  .link_player {
+    text-decoration: none;
+    color: antiquewhite;
+  }
+
+  .title-position {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+  }
+  .player_stats {
+    width: 100%;
+    display: table;
+  }
+  .td2,
+  .td5,
+  .td7,
+  .td8,
+  .td9,
+  .td11 {
+    display: table-cell;
+  }
+
+  .table-header1 {
+    background-color: rgba(12, 10, 9, 0.9);
+    color: antiquewhite;
+    font-size: 0.8rem;
+    align-items: center;
+  }
+  .table-header {
+    background-color: rgba(12, 10, 9, 0.75);
+    color: antiquewhite;
+    font-size: 0.8rem;
+    align-items: center;
+  }
+  .title-rows {
+    background-color: antiquewhite;
+    color: rgb(12, 10, 9);
+  }
+  .player-name {
+    color: black;
+  }
+  .player-name:hover {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 1.15rem;
+    text-decoration: none;
+  }
+
+  .row-color {
+    background-color: rgb(245, 223, 195);
+  }
+  .row-color:hover {
+    background-color: rgb(255, 255, 255);
+  }
+  .row-color1:hover {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .title-rows_header {
+    text-align: center;
+  }
+
+  .fa-baseball-ball {
+    font-size: 10rem;
+    margin: 5% 40% 0 !important;
+    color: rgba(80, 57, 43, 0.4);
+  }
+  .spiner_load {
+    font-size: 5rem;
+    margin: 0 35% !important;
+    color: rgba(80, 57, 43, 0.95);
+  }
+
+  th {
+    padding: 12px 5px;
+  }
+  .paginator {
+    margin: auto;
+  }
+  .paginator_text {
+    display: table-cell;
+  }
+}
+@media only screen and (min-width: 1430px) and (max-width: 1920px) {
+  .daily-title {
+    color: antiquewhite;
+    font-size: 2rem !important;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0.5em 0.4em;
+    /* background-color: rgba(19, 12, 12, 0.5); */
+    text-shadow: 2px 2px 8px #111;
+    width: fit-content;
+    height: 1.75em;
+    border-radius: 7px;
+  }
+
+  .advancedSearchDatetbox {
+    color: rgb(2, 1, 0);
+    font-size: 1em;
+    /* font-weight: bold; */
+    /* margin: 1% 0 1% 2%; */
+  }
+
+  .error_search {
+    font-size: 1.25rem;
+    width: 80%;
+    margin-left: 2%;
+    text-align: center;
+    color: antiquewhite;
+    background-color: rgba(12, 10, 9, 0.75);
+  }
+
+  .error_message {
+    padding-top: 10px;
+    font-size: 1.75rem;
+  }
+
+  .link_player {
+    text-decoration: none;
+    color: antiquewhite;
+  }
+  .fa-baseball-ball {
+    font-size: 10rem;
+    margin: 5% 30% 0 !important;
+    color: rgba(80, 57, 43, 0.4);
+  }
+  .spiner_load {
+    font-size: 5rem;
+    margin: 0 25% !important;
+    color: rgba(80, 57, 43, 0.95);
+  }
+
+  .title-position {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+  }
+  .player_stats {
+    width: 100%;
+    display: table;
+  }
+  .td2,
+  .td5,
+  .td7,
+  .td8,
+  .td9,
+  .td11 {
+    display: table-cell;
+  }
+
+  .table-header1 {
+    background-color: rgba(12, 10, 9, 0.9);
+    color: antiquewhite;
+    font-size: 1.25rem;
+    align-items: center;
+  }
+  .table-header {
+    background-color: rgba(12, 10, 9, 0.75);
+    color: antiquewhite;
+    font-size: 1.25rem;
+    align-items: center;
+  }
+  .paginator {
+    font-size: 1.75rem;
+  }
+  .paginator_text {
+    display: table-cell;
+  }
+}
+@media only screen and (min-width: 1921px) and (max-width: 3500px) {
+  .daily-title {
+    color: antiquewhite;
+    font-size: 3.25rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0.5em 0.4em;
+    /* background-color: rgba(19, 12, 12, 0.5); */
+    text-shadow: 2px 2px 8px #111;
+    width: fit-content;
+    height: 1.75em;
+    border-radius: 7px;
+  }
+
+  .advancedSearchDatetbox {
+    color: rgb(2, 1, 0);
+    font-size: 1em;
+    /* font-weight: bold; */
+    /* margin: 1% 0 1% 2%; */
+  }
+
+  .error_search {
+    font-size: 3rem;
+    width: 80%;
+    margin-left: 2%;
+    text-align: center;
+    color: antiquewhite;
+    background-color: rgba(12, 10, 9, 0.75);
+  }
+
+  .error_message {
+    padding-top: 10px;
+    font-size: 3rem;
+  }
+
+  .link_player {
+    text-decoration: none;
+    color: antiquewhite;
+  }
+
+  .title-position {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+  }
+  .player_stats {
+    width: 100%;
+    display: table;
+  }
+  .td2,
+  .td5,
+  .td7,
+  .td8,
+  .td9,
+  .td11 {
+    display: table-cell;
+  }
+
+  .table-header1 {
+    background-color: rgba(12, 10, 9, 0.9);
+    color: antiquewhite;
+    font-size: 2.5rem;
+    align-items: center;
+  }
+  .table-header {
+    background-color: rgba(12, 10, 9, 0.75);
+    color: antiquewhite;
+    font-size: 2.25rem;
+    align-items: center;
+  }
+  .paginator {
+    font-size: 3rem;
+    width: 100%;
+  }
+
+  .paginator_text {
+    font-size: 3;
+    display: table-cell;
+  }
+}
+
+/* VIEJO CSS 30 marzo 2021 */
+
+/* .actives-title {
   color: antiquewhite;
   font-size: 4rem;
   text-align: center;
   margin: 0.15rem auto 0;
   padding: .5rem 0;
-  /* background-color: rgba(3, 2, 2, 0.5); */
   text-shadow: 2px 2px 8px #111;
   width: auto;
   height: 1.75em;
@@ -22,14 +1019,12 @@
 .tarjeta_encabezado {
   width: 85%;
   margin: 0.2em auto;
-  /* background-color: rgb(20, 149, 167); */
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 5px;
   grid-template-rows: 1fr;
   grid-row-gap: 5px;
-  /* border: solid black 2px; */
 }
 .tarjeta_izquierda {
   grid-column: 1/2;
@@ -48,7 +1043,6 @@
 .player_pict2 {
   width: 13rem;
   box-shadow: 2px 2px 4px black;
-  /* margin-left: 3rem; */
 }
 
 .items_estadisticas {
@@ -107,10 +1101,8 @@
   font-size: 1.25em;
   text-align: center;
   font-weight: 500;
-  /* align-self: center; */
   width: 11rem;
   padding-bottom: 10px;
-  /* margin-left: 2rem; */
 
 
 }
@@ -153,9 +1145,6 @@
   grid-row: 1/2;
 
 
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr; */
 }
 
 
@@ -205,7 +1194,6 @@ color: antiquewhite;
     text-align: center;
     margin: 0.15rem auto 0;
     padding: .5rem 0;
-    /* background-color: rgba(3, 2, 2, 0.5); */
     text-shadow: 2px 2px 8px #111;
     width: auto;
     height: 1.75em;
@@ -223,13 +1211,11 @@ color: antiquewhite;
   .tarjeta_encabezado {
     width: 95%;
     margin: 0.2em auto;
-    /* background-color: rgb(20, 149, 167); */
 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-row-gap: 5px;
-    /* border: solid black 2px; */
   }
   .tarjeta_izquierda {
     grid-column: 1/2;
@@ -241,12 +1227,10 @@ color: antiquewhite;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr !important;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    /* grid-gap: 10px; */
   }
   .player_pict2 {
     width: 11rem;
     box-shadow: 2px 2px 4px black;
-    /* margin-left: 3rem; */
   }
 
   .items_estadisticas {
@@ -303,10 +1287,8 @@ color: antiquewhite;
     font-size: 1em;
     text-align: center;
     font-weight: 500;
-    /* align-self: center; */
     width: 11rem;
     padding-bottom: 10px;
-    /* margin-left: 2rem; */
       text-decoration:none;
       color: antiquewhite;
 
@@ -349,9 +1331,6 @@ color: antiquewhite;
     grid-row: 1/2;
 
 
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr; */
   }
 
 
@@ -399,7 +1378,6 @@ color: antiquewhite;
     text-align: center;
     margin: 0.15rem auto 0;
     padding: .5rem 0;
-    /* background-color: rgba(3, 2, 2, 0.5); */
     text-shadow: 2px 2px 8px #111;
     width: auto;
     height: 1.75em;
@@ -417,13 +1395,11 @@ color: antiquewhite;
   .tarjeta_encabezado {
     width: 95%;
     margin: 0.2em auto;
-    /* background-color: rgb(20, 149, 167); */
 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-row-gap: 5px;
-    /* border: solid black 2px; */
   }
   .tarjeta_izquierda {
     grid-column: 1/2;
@@ -435,12 +1411,10 @@ color: antiquewhite;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr !important;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    /* grid-gap: 10px; */
   }
   .player_pict2 {
     width: 11rem;
     box-shadow: 2px 2px 4px black;
-    /* margin-left: 3rem; */
   }
 
   .items_estadisticas {
@@ -497,10 +1471,8 @@ color: antiquewhite;
     font-size: 1em;
     text-align: center;
     font-weight: 500;
-    /* align-self: center; */
     width: 11rem;
     padding-bottom: 10px;
-    /* margin-left: 2rem; */
       text-decoration:none;
       color: antiquewhite;
 
@@ -538,4 +1510,4 @@ color: antiquewhite;
     width: 15%;
     margin: auto;
   }
-}
+} */

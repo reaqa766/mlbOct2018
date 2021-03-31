@@ -158,7 +158,7 @@ export class DataPlayersService {
   // private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(type=gameLog,gameType=R)';
   // private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019)';
   private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2021&hydrate=stats(group=hitting,type=gameLog,season,season=2021,gameType=S)';
-  //private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=hitting,type=gameLog,season,season=2020,gameType=R)';
+  private _url6Pitchers = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2021&hydrate=stats(group=pitching,type=gameLog,gameType=S)';
   private _urlQ = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2021&hydrate=stats(group=hitting,type=gameLog,season,season=2021,gameType=S)';
  // private _urlQ = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=hitting,type=gameLog,season,season=2020,gameType=R)';
   private _urlQ2 = 'https://statsapi.mlb.com/api/v1/sports/1/' + this.playerCode +  'players?season=2021&gameType=S';
@@ -180,6 +180,9 @@ export class DataPlayersService {
   // Obtencion de los datos diarios de un solo jugador
   getPlayerDaily2(): Observable<StatsDayliPlayer> {
     return this.http.get<StatsDayliPlayer>(this._url6);
+  }
+  getPlayerDailyPitchers(): Observable<StatsDayliPlayer> {
+    return this.http.get<StatsDayliPlayer>(this._url6Pitchers);
   }
   getPlayerDailyQ(): Observable<StatsDayliPlayer> {
     return this.http.get<StatsDayliPlayer>(this._url6);
@@ -207,6 +210,18 @@ export class DataPlayersService {
       this._url6 = this._url6.replace(this.playerCode.toString(), code.toString())
       // this._url6 = this._url6.replace(this.playerCode.toString(), code.toString())
       let dataP2 = this.getPlayerDaily2();
+      dataAllPlayers2.push(dataP2);
+      this.playerCode = code;
+    }
+    return dataAllPlayers2
+  }
+  // algoritmo para quiniela/doubles -  jugadores de cada equipo en cada Liga 
+  getAllPlayersDailyQuinPitchers(jugadores: Array<number>): Observable<StatsDayliPlayer | undefined>[] {
+    let dataAllPlayers2: Observable<StatsDayliPlayer | undefined>[] = [];
+    for (let code of jugadores) {
+      this._url6Pitchers = this._url6Pitchers.replace(this.playerCode.toString(), code.toString())
+      // this._url6 = this._url6.replace(this.playerCode.toString(), code.toString())
+      let dataP2 = this.getPlayerDailyPitchers();
       dataAllPlayers2.push(dataP2);
       this.playerCode = code;
     }
