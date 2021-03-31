@@ -207,15 +207,15 @@ async getPlayersMap() {
 
     this.equipo_actual.totalDiario = 0;
     for(let player of this.allItems) {
-      const total = (player.stats[0].splits[player.indexStatDate].stat.hits * 1) +
-      (player.stats[0].splits[player.indexStatDate].stat.doubles * 2 ) +
-      (player.stats[0].splits[player.indexStatDate].stat.triples * 3) + 
-      (player.stats[0].splits[player.indexStatDate].stat.homeRuns * 4 ) +
-      (player.stats[0].splits[player.indexStatDate].stat.runs * 1)+
-      (player.stats[0].splits[player.indexStatDate].stat.rbi * 2) +
-      (player.stats[0].splits[player.indexStatDate].stat.baseOnBalls * 1 )+
-      (player.stats[0].splits[player.indexStatDate].stat.stolenBases * 1) +
-      (player.stats[0].splits[player.indexStatDate].stat.stolenBases * -1);
+      const total = (player.stats[0].splits[player.indexStatDate].stat.wins * 1) +
+      (player.stats[0].splits[player.indexStatDate].stat.losses * -2 ) +
+      (player.stats[0].splits[player.indexStatDate].stat.saves * 1) + 
+      (player.stats[0].splits[player.indexStatDate].stat.runs * -1 ) +
+      (player.stats[0].splits[player.indexStatDate].stat.strikeOuts * 1)+
+      (player.stats[0].splits[player.indexStatDate].stat.caughtStealing * 1) +
+      (player.stats[0].splits[player.indexStatDate].stat.homeRuns * -1 )+
+      (player.stats[0].splits[player.indexStatDate].stat.stolenBases * -1) +
+      (player.stats[0].splits[player.indexStatDate].stat.baseOnBalls * -1);
       console.log(total);
       console.log('Jugadores', this.allItems);
 
