@@ -1,13 +1,76 @@
-<div class="container_players_actives"></div>
+<div class="container_title_infographics">
+  <h1 class="title_infographics">LIGA DE FANTASÍA VINOTINTOSMLB 2021</h1>
+  <!-- <h1 class="title_infographics"> ________________________</h1> -->
+
+  <h3 class="title_infographics">         </h3>
+  <h3 class="title_infographics">TABLAS DE POSICION</h3>
+  <h4 class="title_infographics texto_Pinchar">Pincha sobre una imagen para verla mas grande</h4>
+  <!-- <h3 class="title_infographics; color_infoGraphics ">Se encuentra contabilizado el Jugador Extra - Fernando Tatis Jr 02 HR- </h3> -->
+  <!-- <h1 class="title_infographics"> _______________________</h1> -->
+
+</div>
+<!-- Espacio Para colocar las tablas -->
+   <div class="container_infographics">
+
+  <div *ngFor="let img of imgs; let i = index">
+    <div class="img1" data-toggle="modal" data-target="#exampleModal">
+      <div class="{{img.number}}">
+        <a data-toggle="modal" data-target="#exampleModal"> <img (click)="showMyImage(i)" class=" image_click " src="{{img.url}}" alt="TABLA 1 DE LA QUINIELA MLB 2020"></a>
+
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div data-backdrop="static" data-keyboard="false" class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Infografía</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div >
+          <img class="img-modal-body" src="{{selectedImg}}" alt="">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" >Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ANTIGUO HTML 30 MARZO 2021 -->
+<!-- <div class="container_players_actives"></div>
 <div class="container-actives">
   <h1 class="actives-title">ACUMULADOS QUINIELA MLB</h1>
 </div>
 
 <p class="title-position"> Temporada 2020 </p>
-<!-- <p class="title-position"> Temporada Regular 2019 </p> -->
-<!-- <p class="title-position"> TEMP. 2019 </p> -->
-
-<!-- LOADER -->
 <div *ngIf="!allItems">
   <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
   <p class="spiner_load">CARGANDO</p>
@@ -25,9 +88,7 @@
   <table class="table  text-center">
     <thead class="table-header">
       <tr>
-        <!-- <th style="width: 5%;" scope="col">Id</th> -->
         <th style="width: 10%;" scope="col">Name</th>
-        <!-- <th style="width: 15%;" scope="col">Codigo</th> -->
         <th class="th1" style="width: 8%;" scope="col">Posicion</th>
         <th class="th3" style="width: 3%;" scope="col">Avg</th>
         <th class="th2" style="width: 3%;" scope="col">VB</th>
@@ -40,18 +101,13 @@
         <th class="th10" style="width: 3%;" scope="col">Br</th>
       </tr>
     </thead>
-    <!-- </table> -->
 
     <ng-container *ngIf="!(pager.allItems === 0)">
 
-      <!-- <table class="table  "> -->
       <tbody class="table-header2">
         <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
           <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
-            <!-- <td style="width: 5%;">{{i +1}}</td> -->
             <a  class="link_player"><td style="width: 10%;" class="link_player">{{player.fullName}}</td></a>
-            <!-- <a routerLink="/playerinfo/{{player.id}}" class="link_player"><td style="width: 10%;" class="link_player">{{player.fullName}}</td></a> -->
-            <!-- <td style="width: 15%;">{{player.id}}</td> -->
             <td class="th1" style="width: 8%;">{{player.primaryPosition.abbreviation}}</td>
             <td class="th3" style="width: 3%;">{{player.stats[0].splits[0].stat.avg}}</td>
             <td class="th2" style="width: 3%;">{{player.stats[0].splits[0].stat.atBats}}</td>
@@ -67,10 +123,7 @@
 
         <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
           <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*5)">
-            <!-- <td style="width: 5%;">{{i +1}}</td> -->
             <a  class="link_player"><td class="link_player" style="width: 10%;">{{player.fullName}}</td></a>
-            <!-- <a routerLink="/playerinfo/{{player.id}}" class="link_player"><td class="link_player" style="width: 10%;">{{player.fullName}}</td></a> -->
-            <!-- <td style="width: 15%;">{{player.id}}</td> -->
             <td class="th1" style="width: 8%;">{{player.primaryPosition.abbreviation}}</td>
             <td class="th3" style="width: 3%;">{{player.stats[0].splits[0].stat.avg}}</td>
             <td class="th2" style="width: 3%;">{{player.stats[0].splits[0].stat.atBats}}</td>
@@ -84,22 +137,14 @@
           </tr>
 
         </ng-container>
-        <!-- <span *ngIf="!allItems[0]" class="d-flex justify-content-center">
-        <h1> Error: '{{ busqueda.value }}' no existe</h1>
-      </span> -->
       </tbody>
     </ng-container>
 
   </table>
-  <!-- PAGINATION-->
 
   <div>
     <div class="container">
       <div class="text-center paginator">
-        <!-- items being paged -->
-        <!-- <div *ngFor="let item of pagedItems">{{item.name}}</div> -->
-
-        <!-- pager -->
         <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
           <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
             <a (click)="setPage(1)" class="page-link paginator_item">First</a>
@@ -122,4 +167,4 @@
     <hr />
   </div>
 
-</ng-container>
+</ng-container> -->
