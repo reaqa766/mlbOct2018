@@ -209,7 +209,7 @@ async getPlayersMap() {
     for(let player of this.allItems) {
       const total = (player.stats[0].splits[player.indexStatDate].stat.wins * 3) +
       (player.stats[0].splits[player.indexStatDate].stat.losses * -2 ) +
-      (player.stats[0].splits[player.indexStatDate].stat.saves * 1) + 
+      (player.stats[0].splits[player.indexStatDate].stat.saves * 2) + 
       (player.stats[0].splits[player.indexStatDate].stat.holds * 1 ) +
       (player.stats[0].splits[player.indexStatDate].stat.strikeOuts * 1)+
       (player.stats[0].splits[player.indexStatDate].stat.caughtStealing * 1) +
