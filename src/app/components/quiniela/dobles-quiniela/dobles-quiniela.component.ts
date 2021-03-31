@@ -213,7 +213,8 @@ async getPlayersMap() {
       (player.stats[0].splits[player.indexStatDate].stat.rbi * 2) +
       (player.stats[0].splits[player.indexStatDate].stat.baseOnBalls * 1 )+
       (player.stats[0].splits[player.indexStatDate].stat.stolenBases * 1) +
-      (player.stats[0].splits[player.indexStatDate].stat.stolenBases * -1);
+      (player.stats[0].splits[player.indexStatDate].stat.caughtStealing * -1)+
+      (player.stats[0].splits[player.indexStatDate].stat.strikeOuts * -1);
       console.log(total);
       console.log('Jugadores', this.allItems);
 

@@ -125,7 +125,8 @@
             <th class="td8" style="width: 2%;" scope="col">CI</th>
             <th class="td9" style="width: 2%;" scope="col">BB</th>
             <th class="td10" style="width: 2%;" scope="col">BR</th>
-            <th class="td11" style="width: 3%;" scope="col">Cap. Rob.</th>
+            <th class="td11" style="width: 2%;" scope="col">Cap. Rob.</th>
+            <th class="td12" style="width: 2%;" scope="col">Pches.</th>
             <!-- <th class="td12" style="width: 5%;" scope="col">Err.</th> -->
             <th class="td13" style="width: 3%;" scope="col">Total</th>
           </tr>
@@ -170,13 +171,16 @@
                   </td>
                 <td class="td10" style="width: 2%;">
                   <p>{{player.stats[0].splits[player.indexStatDate].stat.stolenBases}}</p>
-                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.stolenBases * 1 }} pts.)</p>
+                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.caughtStealing * 1 }} pts.)</p>
                   </td>
-                <td class="td11" style="width: 3%;">
+                <td class="td11" style="width: 2%;">
                   <p>{{player.stats[0].splits[player.indexStatDate].stat.caughtStealing}}</p>
                   <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.stolenBases * -1 }} pts.)</p>
                 </td>
-                <!-- <td class="td12" style="width: 5%;">{{player.stats[0].splits[player.indexStatDate].stat.stolenBases}}</td> -->
+                <td class="td12" style="width: 2%;">
+                  <p>{{player.stats[0].splits[player.indexStatDate].stat.strikeOuts}}</p>
+                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.strikeOuts * -1 }} pts.)</p>
+                </td>
                 <td class="td13" style="width: 3%;">
                   <p style="margin: 1.5rem 0rem;">{{ player.totalDiario }}pts.</p>
                 </td>
