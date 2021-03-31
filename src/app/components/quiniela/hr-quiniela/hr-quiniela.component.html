@@ -120,7 +120,7 @@
             <th class="td4" style="width: 2%;" scope="col">G</th>
             <th class="td3" style="width: 2%;" scope="col">P</th>
             <th class="td5" style="width: 2%;" scope="col">S</th>
-            <th class="td6" style="width: 2%;" scope="col">CP</th>
+            <th class="td6" style="width: 2%;" scope="col">Hold</th>
             <th class="td7" style="width: 2%;" scope="col">Pchs</th>
             <th class="td8" style="width: 2%;" scope="col">CROB</th>
             <th class="td9" style="width: 2%;" scope="col">HR</th>
@@ -139,7 +139,7 @@
                 <!-- <td class="td2" style="width: 10%;">{{player.stats[0].splits[player.indexStatDate].team.name }}</td> -->
                 <td class="td3" style="width: 2%;">
                   <p>{{player.stats[0].splits[player.indexStatDate].stat.wins }}</p>
-                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.wins * 1 }} pts.)</p>
+                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.wins * 3 }} pts.)</p>
                 </td>
 
 
@@ -153,8 +153,8 @@
                   <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.saves * 1 }} pts.)</p>
                   </td>
                 <td class="td6" style="width: 2%;">
-                  <p>{{player.stats[0].splits[player.indexStatDate].stat.runs}}</p>
-                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.runs * -1 }} pts.)</p>
+                  <p>{{player.stats[0].splits[player.indexStatDate].stat.holds}}</p>
+                  <p class="points" style="font-size: 0.75em;">({{player.stats[0].splits[player.indexStatDate].stat.holds * 1 }} pts.)</p>
                 </td>
                 <td class="td7" style="width: 2%;">
                   <p>{{player.stats[0].splits[player.indexStatDate].stat.strikeOuts}}</p>

@@ -207,10 +207,10 @@ async getPlayersMap() {
 
     this.equipo_actual.totalDiario = 0;
     for(let player of this.allItems) {
-      const total = (player.stats[0].splits[player.indexStatDate].stat.wins * 1) +
+      const total = (player.stats[0].splits[player.indexStatDate].stat.wins * 3) +
       (player.stats[0].splits[player.indexStatDate].stat.losses * -2 ) +
       (player.stats[0].splits[player.indexStatDate].stat.saves * 1) + 
-      (player.stats[0].splits[player.indexStatDate].stat.runs * -1 ) +
+      (player.stats[0].splits[player.indexStatDate].stat.holds * 1 ) +
       (player.stats[0].splits[player.indexStatDate].stat.strikeOuts * 1)+
       (player.stats[0].splits[player.indexStatDate].stat.caughtStealing * 1) +
       (player.stats[0].splits[player.indexStatDate].stat.homeRuns * -1 )+
