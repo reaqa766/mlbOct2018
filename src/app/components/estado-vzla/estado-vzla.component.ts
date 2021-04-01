@@ -53,7 +53,7 @@ export class EstadoVzlaComponent implements OnInit {searchText: string;
                 {codigo:606115, nombre: 'Orlando Arcia', url: '../../../../assets/606115.jpg', estadoNac: 1, tipoJugador: 1},
                 {codigo:452678, nombre: 'Asdrubal Cabrera ', url: '../../../../assets/452678.jpg', estadoNac: 1, tipoJugador: 1},
                 {codigo:553993, nombre: 'Eugenio Suarez', url: '../../../../assets/553993.jpg', estadoNac: 6, tipoJugador: 1},
-                // {codigo:467827, nombre: 'Gerardo Parra', url: '../../../../assets/467827.jpg', estadoNac: 24, tipoJugador: 1},
+                {codigo:467827, nombre: 'Gerardo Parra', url: '../../../../assets/467827.jpg', estadoNac: 24, tipoJugador: 1},
                 {codigo:650402, nombre: 'Gleyber Torres', url: '../../../../assets/650402.jpg', estadoNac: 8, tipoJugador: 1},
                 {codigo:602922, nombre: 'Jose Rondon', url: '../../../../assets/602922.jpg', estadoNac: 15, tipoJugador: 1},
                 {codigo:462101, nombre: 'Elvis Andrus', url: '../../../../assets/462101.jpg', estadoNac: 4, tipoJugador: 1},
@@ -109,9 +109,9 @@ export class EstadoVzlaComponent implements OnInit {searchText: string;
                 {codigo:622682, nombre: 'Victor Reyes', url: '../../../../assets/622682.jpg', estadoNac: 1, tipoJugador: 1},
                 {codigo:623993, nombre: 'Anthony Santander', url: '../../../../assets/623993.jpg', estadoNac: 17, tipoJugador: 1},
                 {codigo:541600, nombre: 'Wilfredo Tovar', url: '../../../../assets/541600.jpg', estadoNac: 15, tipoJugador: 1},
-                // {codigo:660761, nombre: 'José Suarez', url: '../../../../assets/660761.jpg', estadoNac: 7, tipoJugador: 2},
-                // {codigo:622786, nombre: 'Jesús Tinoco', url: '../../../../assets/622786.jpg', estadoNac: 16, tipoJugador: 2},
-                // {codigo:600858, nombre: 'Humberto Arteaga', url: '../../../../assets/600858.jpg', estadoNac: 2, tipoJugador: 1},
+                {codigo:660761, nombre: 'José Suarez', url: '../../../../assets/660761.jpg', estadoNac: 7, tipoJugador: 2},
+                {codigo:622786, nombre: 'Jesús Tinoco', url: '../../../../assets/622786.jpg', estadoNac: 16, tipoJugador: 2},
+                {codigo:600858, nombre: 'Humberto Arteaga', url: '../../../../assets/600858.jpg', estadoNac: 2, tipoJugador: 1},
                 {codigo:640470, nombre: 'Adbert Alzolay ', url: '../../../../assets/640470.jpg', estadoNac: 6, tipoJugador: 2},
 
 
