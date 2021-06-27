@@ -16,7 +16,7 @@ export class LideresComponent implements OnInit {
   data: any;
   lider_avg: any;
   row: any;
-  estadistica = [true, false, false, false, false, false, false, false];
+  estadistica = [true, false, false, false, false, false, false, false, false, false];
   public players = [];
   public playersSort = [];
   groups: any;
