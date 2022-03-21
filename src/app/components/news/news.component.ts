@@ -146,9 +146,9 @@ export class NewsComponent implements OnInit {
 
   urladdress(): void {
     if (this.num === 'video2') {
-          window.open('https://www.sportsvenezuela.com/beisbol/salvador-avisail-cuadrangulares/');
+          window.open('https://www.liderendeportes.com/noticias/slider/conoce-que-dicen-las-proyecciones-sobre-acuna-jr-para-2022/');
   } else if (this.num === 'video3J') {
-    window.open('https://www.mlb.com/es/news/gleyber-torres-enfocado-en-recuperar-la-forma#:~:text=TAMPA%2C%20Florida%20%2D%2D%20En%20su,defensa%20en%20las%20paradas%20cortas.');
+    window.open('https://meridiano.net/beisbol/beisbol-grandes-ligas/240286/eduardo-escobar-da-a-los-mets-muchas-opciones-en-su-infield.html');
   } else if (this.num === 'video4J') {
     window.open('https://elextrabase.com/2021/03/01/manuel-pina-coloca-interesante-la-pelea-por-la-receptoria-en-milwaukee/');
   } else if (this.num === 'video5J') {
