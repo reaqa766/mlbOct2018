@@ -58,8 +58,8 @@ export class HomeComponent implements OnInit {
   CALEND3: any;
   teamPlays: any;
 
-  // _url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2021&standingsTypes=springTrainning';
-  _url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2019&standingsTypes=regularSeason';
+  _url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2022&standingsTypes=springTrainning';
+ //  _url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2019&standingsTypes=regularSeason';
   _url1 = 'https://statsapi.mlb.com/api/v1/schedule?sportId=1,51&date=2019-04-14&gameTypes=E,S,R,A,F,D,L,W&hydrate=team(linescore(matchup,runners))&useLatestGames=false&language=en&leagueId=103,104,420';
 
   // FIN DE MODULO DE LIDERES
@@ -154,7 +154,7 @@ export class HomeComponent implements OnInit {
   filtroTopCincoAvg(estadistica: string) {
     let filtrado = [];
 
-    filtrado = this.jugadores.filter(jugador => jugador.stats && jugador.stats[0].splits && jugador.stats[0].splits[0].stat.atBats >= (200)
+    filtrado = this.jugadores.filter(jugador => jugador.stats && jugador.stats[0].splits && jugador.stats[0].splits[0].stat.atBats >= (1)
       // jugador => jugad or.stats && jugador.stats[0].splits &&  jugador.stats[0].splits[0].stat.atBats >= (this.teamPlays.record * 3.1)
     ).
       sort((jugadorA, jugadorB) => {

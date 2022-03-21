@@ -8,10 +8,10 @@
 <!--Inicio Modulo de prueba para EQUIPOS -->
 <div class="container-position">
 <div class="container_americana_norte container_border">
-  <h3 class="titulo_liga">Liga Norte</h3>
+  <h3 class="titulo_liga">Equipo A</h3>
   <div class="team_logo">
     <div *ngFor="let equipo of EQUIPOS; let i=index">
-      <ng-container *ngIf="equipo.liga === 'Norte'">
+      <ng-container *ngIf="equipo.liga === 'Grupo A'">
         <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
           <a class="img_picture_element"  (click)="onSearchChange(equipo)"  data-hover="tooltip" data-placement="top"
           title="Pincha para ver Jugadores">{{equipo.name}}</a> 
@@ -32,7 +32,7 @@
 
 <!--Inicio Modulo de prueba para EQUIPOS 2 -->
 <div class="container_americana_sur container_border">
-  <h3 class="titulo_liga">Liga Sur</h3>
+  <h3 class="titulo_liga">-------------</h3>
   <div class="team_logo">
     <div *ngFor="let equipo of EQUIPOS; let i=index">
       <ng-container *ngIf="equipo.liga === 'Sur'">
@@ -52,10 +52,10 @@
   </div>
 </div>
 <div class="container_americana_este container_border">
-  <h3 class="titulo_liga">Liga Este</h3>
+  <h3 class="titulo_liga">Equipo B</h3>
   <div class="team_logo">
     <div *ngFor="let equipo of EQUIPOS; let i=index">
-      <ng-container *ngIf="equipo.liga === 'Este'">
+      <ng-container *ngIf="equipo.liga === 'Grupo B'">
         <div class="img_picture_box" [ngClass]="'pic_'+ (i+1)">
           <a class="img_picture_element"  (click)="onSearchChange(equipo)"  data-hover="tooltip" data-placement="top"
           title="Pincha para ver Jugadores">{{equipo.name}}</a> 

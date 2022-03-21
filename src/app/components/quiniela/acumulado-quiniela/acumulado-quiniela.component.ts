@@ -15,9 +15,9 @@ import { PagerService } from '../../../../services/index';
 export class AcumuladoQuinielaComponent implements OnInit {
 
   selectedImg;
-  imgs = [ {number: 1, url: '../../../../assets/TABLA DE POSICIONES DIV NORTE.jpg'},
-  {number: 2, url: '../../../../assets/TABLA DE POSICIONES DIV SUR.jpg'},
-  {number: 2, url: '../../../../assets/TABLA DE POSICIONES DIV ESTE.jpg'},
+  imgs = [ {number: 1, url: '../../../../assets/TABLA DE POSICIONES GRUPO A.jpg'},
+  // {number: 2, url: '../../../../assets/TABLA CENTRAL DE LAS TABLAS  DE POSICIONES GRUPO B.jpg'},
+  // {number: 2, url: '../../../../assets/TABLA DE POSICIONES GRUPO B.jpg'},
   // {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO SUR 1.jpg'},
   // {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO SUR 2.jpg'},
   // {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO SUR 3.jpg'},

@@ -8,15 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class TablaComponent implements OnInit {
 
   selectedImg;
-  imgs = [ {number: 1, url: '../../../../assets/TABLA SEMANAL DE RESULTADO 1 NORTE.jpg'},
-  {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO NORTE 2.jpg'},
-  {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO NORTE 3.jpg'},
-  {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO SUR 1.jpg'},
-  {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO SUR 2.jpg'},
-  {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO SUR 3.jpg'},
-  {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO ESTE 1.jpg'},
-  {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO ESTE 2.jpg'},
-  {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO ESTE 3.jpg'},
+  imgs = [ {number: 1, url: '../../../../assets/TABLA SEMANAL DE RESULTADO GRUPO A1 SEMANA 1.jpg'},
+  // {number: 2, url: '../../../../assets/TABLA CENTRAL DE LAS TABLAS SEMANALES  DE RESULTADO.jpg'},
+  // {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO GRUPO A2 SEMANA 1.jpg'},
+  // {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO GRUPO B1 SEMANA 1.jpg'},
+  // {number: 2, url: '../../../../assets/TABLA CENTRAL DE LAS TABLAS SEMANALES  DE RESULTADO.jpg'},
+  // {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO GRUPO B2 SEMANA 1.jpg'},
+  // {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO ESTE 1.jpg'},
+  // {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO ESTE 2.jpg'},
+  // {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO ESTE 3.jpg'},
   // imgs = [ {number: 1, url: '../../../../assets/Tabla Wild Card Quiniela 2020 1.png'},
   // {number: 2, url: '../../../../assets/Tabla Wild Card Quiniela 2020 2.png'},
     // {number: 3, url: '../../../../assets/Tabla Wild Card Quiniela 2020 3.png'}

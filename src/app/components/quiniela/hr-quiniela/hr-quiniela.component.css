@@ -10,6 +10,18 @@
   height: 1.75em;
   border-radius: 7px;
 }
+.daily-title {
+  color: antiquewhite;
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 0.5em 0.4em;
+  /* background-color: rgba(19, 12, 12, 0.5); */
+  text-shadow: 2px 2px 8px #111;
+  width: fit-content;
+  height: 1.75em;
+  border-radius: 7px;
+}
 .container-position {
   margin-bottom: 3rem;
   display: grid;
@@ -63,7 +75,7 @@
 .team_logo {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 1px;
   border-radius: 6px;
   font-size: 1.2rem;

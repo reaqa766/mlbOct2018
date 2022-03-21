@@ -63,7 +63,7 @@
 .team_logo {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 1px;
   border-radius: 6px;
   font-size: 1.2rem;
