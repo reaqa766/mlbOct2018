@@ -88,7 +88,7 @@ import { PByteam2019Component } from './components/temp2019/pitchers2019/p-bytea
 
 const routes: Routes = [
 
-  { path: '',
+  { path: 'home',
   component: HomeComponent},
   { path: 'news',
   component: NewsComponent},
@@ -182,7 +182,7 @@ const routes: Routes = [
   component: PruebajsonsComponent},
   { path: 'posiciones',
   component: PosicionesComponent},
-  { path: 'lideres',
+  { path: '',
   component: LideresComponent},
   { path: 'resultados',
   component: ResultadosTeamsComponent},

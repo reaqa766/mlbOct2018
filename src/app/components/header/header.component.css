@@ -25,9 +25,10 @@
     grid-column: 2/3;
     grid-row: 1/2;
     align-self: center;
+    /* color: rgb(40, 40, 40); */
     color: antiquewhite;
     font-size: 1.75rem;
-    text-shadow: 2px 2px 18px black;
+    /* text-shadow: 2px 2px 18px black; */
     margin: 5% 0;
     text-align: center; 
 }

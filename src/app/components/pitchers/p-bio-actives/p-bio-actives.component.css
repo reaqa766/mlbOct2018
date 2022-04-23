@@ -1,6 +1,6 @@
 
 .bioActives-title {
-  color: antiquewhite;
+  color: rgb(41, 41, 41);
   font-size: 2.5rem;
   text-align: center;
   margin: 0 auto;
@@ -10,6 +10,12 @@
   height: 2em;
   border-radius: 7px;
 }
+.container-actives {
+background-color: antiquewhite;
+padding-bottom: 1.25rem;
+
+}
+
 .title-position {
   color: antiquewhite;
   font-size: 1.25rem;
@@ -34,7 +40,8 @@
 }
 .card-body{
   max-height: 1rem;
-  margin: 0 auto 1rem;
+  margin: 3px auto 2rem;
+  padding-bottom: 2.25rem;
 }
 
 .fa-baseball-ball {

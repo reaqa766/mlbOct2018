@@ -1,9 +1,10 @@
-<div class="container_players_actives"></div>
+<div class="container_players_actives">
 <div class="container-actives">
-  <h1 class="actives-title">LIDERES</h1>
+  <h1 class="actives-title"><a class="title_liders" routerLink="bioActives">Bio Jugadores</a> <a class="title_liders_int"> - LIDERES - </a><a class="title_liders" routerLink="p_bio">Bio Pitchers</a></h1>
+
   <!-- <h3 class="actives-title1">TEMP. REGULAR 2019</h3> -->
   <!-- <h3 class="actives-title1">TEMPORADA REGULAR 2022</h3> -->
-  <h3 class="actives-title1">SPRING TRAINING 2022</h3>
+  <!--  <h3 class="actives-title1">MLB 2022</h3> -->
 </div>
 
 
@@ -15,16 +16,16 @@
 
     <!-- LIDERES AVERAGE -->
     <div class="container_buttons">
-    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(0)">AVERAGE</button>
-    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(1)">HITS</button>
-    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(2)">JONRONES </button>
-    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(3)">TRIPLES </button>
-    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(4)">DOBLES </button>
-    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(5)">BASES R </button>
-    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(6)">EMPUJADAS</button>
-    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(7)">ANOTADAS</button>
-    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(8)">TOTALBASES</button>
-    <button class="subtitulo_lideres1 _mod sub_lideres_nvo2" routerLink="/actives">VER TODOS LOS JUGADORES </button>
+    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(0)">AVG</button>
+    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(1)">H</button>
+    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(2)">HR's </button>
+    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(3)">3B </button>
+    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(4)">2B </button>
+    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(5)">BR </button>
+    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(6)">CE</button>
+    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(7)">CA</button>
+    <button class="subtitulo_lideres1 _mod sub_lideres_nvo" (click)="avgClick(8)">TB</button>
+    <!-- <button class="subtitulo_lideres1 _mod sub_lideres_nvo2" routerLink="/actives">VER TODOS LOS JUGADORES </button> -->
 
   </div>
 <div class="container  container_grid_nvo_no" *ngIf="!isLoading">
@@ -32,142 +33,180 @@
   <table class="table   text-center tableAVG_nvo">
     <thead class="table-header">
       <tr>
+        <th class="tbAA" style="width: 5%;" scope="col">#</th>
+        <th class="tbAA" style="width: 10%;" scope="col">Foto</th>
         <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
-        <th class="tbA" style="width: 5%;" scope="col">VB</th>
-        <th class="tbA" style="width: 5%;" scope="col">HITS</th>
+
+         <!--  <th class="tbA" style="width: 5%;" scope="col">VB</th>
+        <th class="tbA" style="width: 5%;" scope="col">HITS</th> -->
         <th class="tbA1" style="width: 5%;" scope="col">AVG</th>
       </tr>
     </thead>
       <tbody class="table-header2">
-          <tr *ngFor="let jugador of filtroTopCincoAvg('avg')">
-            <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
-            <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-            <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.hits}}</td>
+          <tr *ngFor="let jugador of filtroTopCincoAvg('avg'); let i=index">
+            <td class="tb2A" style="width: 5%;">{{i+1}}</td>
+            <td class="tb2A"><a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><img class="card-img-top img_picture_element "  appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{jugador?.id}}.jpg" alt="Jugador de Grandes Ligas"> </a> </td>
+
+
+            <td class="tb2A" style="width: 5%;"> <a routerLink="/playerinfo/{{jugador.id}}" class="link_player">{{jugador.firstLastName}}</a></td>
+            <!-- <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+            <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.hits}}</td> -->
             <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+
+          </tr>
       </tbody>
 
 
     </table>
-    <img class="img_average" src="../../../assets/ALTUVE BATEANDO.png" alt="">
+   <!--  <img class="img_average" src="../../../assets/ALTUVE BATEANDO.png" alt=""> -->
     </div>
       <!-- LIDERES HRs -->
       <div class="container_grid_nvo" *ngIf="estadistica[2]">
-      <h4 class="subtitulo_lideres2 sub_lideres">JONRONES</h4>
+      <h4 class="subtitulo_lideres2 sub_lideres">HR's</h4>
   <table class="table   text-center tableAVG_nvo">
       <thead class="table-header">
       <tr>
+        <th class="tbAA" style="width: 5%;" scope="col">#</th>
+        <th class="tbAA" style="width: 10%;" scope="col">Foto</th>
+
         <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
-        <th class="tbA" style="width: 5%;" scope="col">VB</th>
-        <th class="tbA" style="width: 5%;" scope="col">AVG</th>
+        <!--  <th class="tbA" style="width: 5%;" scope="col">VB</th>
+        <th class="tbA" style="width: 5%;" scope="col">AVG</th> -->
         <th class="tbA1" style="width: 5%;" scope="col">HR</th>
       </tr>
     </thead>
 
       <tbody class="table-header2">
-        <tr *ngFor="let jugador of filtroTopCinco('homeRuns')">
-          <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
-          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+        <tr *ngFor="let jugador of filtroTopCinco('homeRuns'); let i=index">
+          <td class="tb2A" style="width: 5%;">{{i+1}}</td>
+          <td class="tb2A"><a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><img class="card-img-top img_picture_element "  appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{jugador?.id}}.jpg" alt="Jugador de Grandes Ligas"> </a> </td>
+          <td class="tb11" style="width: 10%;"> <a routerLink="/playerinfo/{{jugador.id}}" class="link_player">{{jugador.firstLastName}}</a></td>
+          <!-- <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td> -->
            <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.homeRuns}}</td>
       </tbody>
 
   </table>
-  <img class="img_average" src="../../../assets/CABRE.png" alt="">
+  <!-- <img class="img_average" src="../../../assets/CABRE.png" alt=""> -->
 
   </div>
-  <h4 class="subtitulo_lideres3 sub_lideres">DOBLES</h4>
+  <h4 class="subtitulo_lideres3 sub_lideres">2B</h4>
   <div class="container_grid_nvo" *ngIf="estadistica[4]">
   <table class="table   text-center tableAVG_nvo">
       <thead class="table-header">
       <tr>
+        <th class="tbAA" style="width: 5%;" scope="col">#</th>
+        <th class="tbAA" style="width: 10%;" scope="col">Foto</th>
+
         <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
-        <th class="tbA" style="width: 5%;" scope="col">VB</th>
-        <th class="tbA" style="width: 5%;" scope="col">AVG</th>
-        <th class="tbA1" style="width: 5%;" scope="col">Dobles</th>
+        <!-- <th class="tbA" style="width: 5%;" scope="col">VB</th>
+        <th class="tbA" style="width: 5%;" scope="col">AVG</th> -->
+        <th class="tbA1" style="width: 5%;" scope="col">2B</th>
       </tr>
     </thead>
 
        <tbody class="table-header2">
-        <tr *ngFor="let jugador of filtroTopCinco('doubles')">
-          <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
-          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+        <tr *ngFor="let jugador of filtroTopCinco('doubles'); let i=index">
+          <td class="tb2A" style="width: 5%;">{{i+1}}</td>
+          <td class="tb2A"><a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><img class="card-img-top img_picture_element "  appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{jugador?.id}}.jpg" alt="Jugador de Grandes Ligas"> </a> </td>
+          <td class="tb11" style="width: 10%;"><a routerLink="/playerinfo/{{jugador.id}}" class="link_player">{{jugador.firstLastName}}</a></td>
+         <!-- <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td> -->
            <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.doubles}}</td>
       </tbody>
 
   </table>
-  <img class="img_average" src="../../../assets/Eduardo.png" alt="">
+  <!-- <img class="img_average" src="../../../assets/Eduardo.png" alt=""> -->
 </div>
 
 
-   <h4 class="subtitulo_lideres4 sub_lideres">TRIPLES</h4>
+   <h4 class="subtitulo_lideres4 sub_lideres">3B</h4>
    <div class="container_grid_nvo" *ngIf="estadistica[3]">
   <table class="table   text-center tableAVG_nvo">
       <thead class="table-header">
       <tr>
+        <th class="tbAA" style="width: 5%;" scope="col">#</th>
+        <th class="tbAA" style="width: 10%;" scope="col">Foto</th>
+
         <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
-        <th class="tbA" style="width: 5%;" scope="col">VB</th>
-        <th class="tbA" style="width: 5%;" scope="col">AVG</th>
-        <th class="tbA1" style="width: 5%;" scope="col">TRIPLES</th>
+        <!-- <th class="tbA" style="width: 5%;" scope="col">VB</th>
+        <th class="tbA" style="width: 5%;" scope="col">AVG</th> -->
+        <th class="tbA1" style="width: 5%;" scope="col">3B</th>
       </tr>
     </thead>
 
       <tbody class="table-header2">
-        <tr *ngFor="let jugador of filtroTopCinco('triples')">
-          <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
-          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+        <tr *ngFor="let jugador of filtroTopCinco('triples'); let i=index">
+          <td class="tb2A" style="width: 5%;">{{i+1}}</td>
+          <td class="tb2A"><a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><img class="card-img-top img_picture_element "  appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{jugador?.id}}.jpg" alt="Jugador de Grandes Ligas"> </a> </td>
+
+          <td class="tb11" style="width: 10%;"><a routerLink="/playerinfo/{{jugador.id}}" class="link_player">{{jugador.firstLastName}}</a></td>
+          <!-- <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td> -->
            <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.triples}}</td>
       </tbody>
 
   </table>
-  <img class="img_average" src="../../../assets/YOLMER S.png" alt="">
+ <!--  <img class="img_average" src="../../../assets/YOLMER S.png" alt=""> -->
 </div>
-  <h4 class="subtitulo_lideres5 sub_lideres">B. ROBADAS</h4>
+  <h4 class="subtitulo_lideres5 sub_lideres">BR</h4>
   <div class="container_grid_nvo" *ngIf="estadistica[5]">
   <table class="table   text-center tableAVG_nvo">
       <thead class="table-header">
       <tr>
+        <th class="tbAA" style="width: 5%;" scope="col">#</th>
+        <th class="tbAA" style="width: 10%;" scope="col">Foto</th>
+
         <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
-        <th class="tbA" style="width: 5%;" scope="col">VB</th>
-        <th class="tbA" style="width: 5%;" scope="col">AVG</th>
+       <!-- <th class="tbA" style="width: 5%;" scope="col">VB</th>
+        <th class="tbA" style="width: 5%;" scope="col">AVG</th> -->
         <th class="tbA1" style="width: 5%;" scope="col">BR</th>
       </tr>
     </thead>
 
       <tbody class="table-header2 ">
-        <tr *ngFor="let jugador of filtroTopCinco('stolenBases')">
-          <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
-          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+        <tr *ngFor="let jugador of filtroTopCinco('stolenBases'); let i=index">
+          <td class="tb2A" style="width: 5%;">{{i+1}}</td>
+          <td class="tb2A"><a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><img class="card-img-top img_picture_element "  appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{jugador?.id}}.jpg" alt="Jugador de Grandes Ligas"> </a> </td>
+
+          <td class="tb11" style="width: 10%;"><a routerLink="/playerinfo/{{jugador.id}}" class="link_player">{{jugador.firstLastName}}</a></td>
+          <!-- <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td> -->
           <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.stolenBases}}</td>
       </tbody>
     </table>
-    <img class="img_average" src="../../../assets/ACUNARUN.png" alt="">
+    <!-- <img class="img_average" src="../../../assets/ACUNARUN.png" alt=""> -->
 
 <!-- LIDERES ANOTADAS SOLO PRUEBA -->
     <div class="container_grid_nvo" *ngIf="estadistica[2]">
-      <h4 class="subtitulo_lideres2 sub_lideres">ANOTADAS</h4>
+      <h4 class="subtitulo_lideres2 sub_lideres">CA</h4>
   <table class="table   text-center tableAVG_nvo">
       <thead class="table-header">
       <tr>
+        <th class="tbAA" style="width: 5%;" scope="col">#</th>
+        <th class="tbAA" style="width: 10%;" scope="col">Foto</th>
+
         <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
-        <th class="tbA" style="width: 5%;" scope="col">VB</th>
-        <th class="tbA" style="width: 5%;" scope="col">AVG</th>
+        <!-- <th class="tbA" style="width: 5%;" scope="col">VB</th>
+        <th class="tbA" style="width: 5%;" scope="col">AVG</th> -->
         <th class="tbA1" style="width: 5%;" scope="col">CA</th>
       </tr>
     </thead>
 
       <tbody class="table-header2">
-        <tr *ngFor="let jugador of filtroTopCinco('homeRuns')">
-          <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
-          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+        <tr *ngFor="let jugador of filtroTopCinco('homeRuns'); let i=index">
+          <td class="tb2A" style="width: 5%;">{{i+1}}</td>
+          <td class="tb2A"><a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><img class="card-img-top img_picture_element "  appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{jugador?.id}}.jpg" alt="Jugador de Grandes Ligas"> </a> </td>
+
+          <td class="tb11" style="width: 10%;"><a routerLink="/playerinfo/{{jugador.id}}" class="link_player">{{jugador.firstLastName}}</a></td>
+          <!-- <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td> -->
            <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.runs}}</td>
+        </tr>
       </tbody>
 
   </table>
-  <img class="img_average" src="../../../assets/CABRE.png" alt="">
+  <!-- <img class="img_average" src="../../../assets/CABRE.png" alt=""> -->
 
   </div>
 
@@ -178,47 +217,61 @@
   <table class="table   text-center tableAVG_nvo">
       <thead class="table-header">
       <tr>
+        <th class="tbAA" style="width: 5%;" scope="col">#</th>
+        <th class="tbAA" style="width: 10%;" scope="col">Foto</th>
+
         <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
-        <th class="tbA" style="width: 5%;" scope="col">VB</th>
-        <th class="tbA" style="width: 5%;" scope="col">AVG</th>
+        <!-- <th class="tbA" style="width: 5%;" scope="col">VB</th>
+        <th class="tbA" style="width: 5%;" scope="col">AVG</th> -->
         <th class="tbA1" style="width: 5%;" scope="col">HITS</th>
       </tr>
     </thead>
 
       <tbody class="table-header2">
-        <tr *ngFor="let jugador of filtroTopCinco('hits')">
-          <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
-          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+        <tr *ngFor="let jugador of filtroTopCinco('hits'); let i=index">
+          <td class="tb2A" style="width: 5%;">{{i+1}}</td>
+          <td class="tb2A"><a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><img class="card-img-top img_picture_element "  appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{jugador?.id}}.jpg" alt="Jugador de Grandes Ligas"> </a> </td>
+
+          <td class="tb11" style="width: 10%;"><a routerLink="/playerinfo/{{jugador.id}}" class="link_player">{{jugador.firstLastName}}</a></td>
+          <!-- <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td> -->
            <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.hits}}</td>
+        </tr>
       </tbody>
 
   </table>
-  <img class="img_average" src="../../../assets/Ender-Inciarte HITS.png" alt="">
+  <!-- <img class="img_average" src="../../../assets/Ender-Inciarte HITS.png" alt=""> -->
 
   </div>
   <div class="container_grid_nvo" *ngIf="estadistica[6]">
-  <h4 class="subtitulo_lideres6 sub_lideres">EMPUJADAS</h4>
+  <h4 class="subtitulo_lideres6 sub_lideres">CE</h4>
   <table class="table   text-center tableAVG_nvo">
       <thead class="table-header">
       <tr>
+        <th class="tbAA" style="width: 5%;" scope="col">#</th>
+        <th class="tbAA" style="width: 10%;" scope="col">Foto</th>
+
         <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
-        <th class="tbA" style="width: 5%;" scope="col">VB</th>
-        <th class="tbA" style="width: 5%;" scope="col">AVG</th>
+        <!-- <th class="tbA" style="width: 5%;" scope="col">VB</th>
+        <th class="tbA" style="width: 5%;" scope="col">AVG</th> -->
         <th class="tbA1" style="width: 5%;" scope="col">CE</th>
       </tr>
     </thead>
 
       <tbody class="table-header2">
-        <tr *ngFor="let jugador of filtroTopCinco('rbi')">
-          <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
-          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+        <tr *ngFor="let jugador of filtroTopCinco('rbi'); let i=index">
+          <td class="tb2A" style="width: 5%;">{{i+1}}</td>
+          <td class="tb2A"><a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><img class="card-img-top img_picture_element "  appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{jugador?.id}}.jpg" alt="Jugador de Grandes Ligas"> </a> </td>
+
+          <td class="tb11" style="width: 10%;"><a routerLink="/playerinfo/{{jugador.id}}" class="link_player">{{jugador.firstLastName}}</a></td>
+          <!-- <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+          <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td> -->
            <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.rbi}}</td>
+        </tr>
       </tbody>
 
   </table>
-  <img class="img_average" src="../../../assets/aguilarLider.png" alt="">
+  <!-- <img class="img_average" src="../../../assets/aguilarLider.png" alt=""> -->
 
   </div>
 
@@ -226,27 +279,35 @@
 
 
   <div class="container_grid_nvo" *ngIf="estadistica[7]">
-    <h4 class="subtitulo_lideres6 sub_lideres">ANOTADAS</h4>
+    <h4 class="subtitulo_lideres6 sub_lideres">CA</h4>
     <table class="table   text-center tableAVG_nvo">
         <thead class="table-header">
         <tr>
+          <th class="tbAA" style="width: 5%;" scope="col">#</th>
+          <th class="tbAA" style="width: 10%;" scope="col">Foto</th>
+
           <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
-          <th class="tbA" style="width: 5%;" scope="col">VB</th>
-          <th class="tbA" style="width: 5%;" scope="col">AVG</th>
+          <!-- <th class="tbA" style="width: 5%;" scope="col">VB</th>
+          <th class="tbA" style="width: 5%;" scope="col">AVG</th> -->
           <th class="tbA1" style="width: 5%;" scope="col">CA</th>
         </tr>
       </thead>
   
         <tbody class="table-header2">
-          <tr *ngFor="let jugador of filtroTopCinco('runs')">
-            <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
-            <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-            <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+          <tr *ngFor="let jugador of filtroTopCinco('runs'); let i=index">
+            <td class="tb2A" style="width: 5%;">{{i+1}}</td>
+
+            <td class="tb2A"><a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><img class="card-img-top img_picture_element "  appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{jugador?.id}}.jpg" alt="Jugador de Grandes Ligas"> </a> </td>
+
+
+            <td class="tb11" style="width: 10%;"><a routerLink="/playerinfo/{{jugador.id}}" class="link_player">{{jugador.firstLastName}}</a></td>
+            <!-- <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+            <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td> -->
              <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.runs}}</td>
         </tbody>
   
     </table>
-    <img class="img_average" src="../../../assets/ACUNARUN.png" alt="">
+    <!-- <img class="img_average" src="../../../assets/ACUNARUN.png" alt=""> -->
     <!-- <img class="img_average" src="../../../assets/aguilarLider.png" alt=""> -->
   
     </div>
@@ -257,23 +318,29 @@
       <table class="table   text-center tableAVG_nvo">
           <thead class="table-header">
           <tr>
+            <th class="tbAA" style="width: 5%;" scope="col">#</th>
+            <th class="tbAA" style="width: 10%;" scope="col">Foto</th>
+
             <th class="tbAA" style="width: 10%;" scope="col">JUGADOR</th>
-            <th class="tbA" style="width: 5%;" scope="col">VB</th>
-            <th class="tbA" style="width: 5%;" scope="col">AVG</th>
+            <!-- <th class="tbA" style="width: 5%;" scope="col">VB</th>
+            <th class="tbA" style="width: 5%;" scope="col">AVG</th> -->
             <th class="tbA1" style="width: 5%;" scope="col">TBA</th>
           </tr>
         </thead>
     
           <tbody class="table-header2">
-            <tr *ngFor="let jugador of filtroTopCinco('totalBases')">
-              <a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><td class="tb11" style="width: 10%;">{{jugador.firstLastName}}</td></a>
-              <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
-              <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td>
+            <tr *ngFor="let jugador of filtroTopCinco('totalBases'); let i=index">
+              <td class="tb2A" style="width: 5%;">{{i+1}}</td>
+              <td class="tb2A"><a routerLink="/playerinfo/{{jugador.id}}" class="link_player"><img class="card-img-top img_picture_element "  appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{jugador?.id}}.jpg" alt="Jugador de Grandes Ligas"> </a> </td>
+
+              <td class="tb11" style="width: 10%;"><a routerLink="/playerinfo/{{jugador.id}}" class="link_player">{{jugador.firstLastName}}</a></td>
+              <!-- <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.atBats}}</td>
+              <td class="tb2" style="width: 5%;">{{jugador.stats[0].splits[0].stat.avg}}</td> -->
                <td class="tb2A" style="width: 5%;">{{jugador.stats[0].splits[0].stat.totalBases}}</td>
           </tbody>
     
       </table>
-      <img class="img_average" src="../../../assets/ACUNARUN.png" alt="">
+      <!-- <img class="img_average" src="../../../assets/ACUNARUN.png" alt=""> -->
       <!-- <img class="img_average" src="../../../assets/aguilarLider.png" alt=""> -->
     
       </div>
@@ -281,5 +348,5 @@
   <div class="espacioInferior"></div>
 
 </div>
-
+</div>
 
