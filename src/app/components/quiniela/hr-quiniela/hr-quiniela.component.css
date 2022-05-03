@@ -1,1183 +1,44 @@
-.daily-title {
-  color: antiquewhite;
-  font-size: 1rem;
-  text-align: center;
-  margin: 0 auto;
-  padding: 0 0.5em 0.4em;
-  /* background-color: rgba(19, 12, 12, 0.5); */
-  text-shadow: 2px 2px 8px #111;
-  width: fit-content;
-  height: 1.75em;
-  border-radius: 7px;
-}
-.daily-title {
-  color: antiquewhite;
-  font-size: 0.8rem;
-  text-align: center;
-  margin: 0 auto;
-  padding: 0 0.5em 0.4em;
-  /* background-color: rgba(19, 12, 12, 0.5); */
-  text-shadow: 2px 2px 8px #111;
-  width: fit-content;
-  height: 1.75em;
-  border-radius: 7px;
-}
-.container-position {
-  margin-bottom: 3rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 1px;
+.container-actives {
+  background-color: rgb(240, 234, 227);
+  padding-bottom: 3rem;
+  /* margin-top: 5%; */
 }
 
-.container_americana_norte {
-  margin: 1.5rem auto;
-  background-color: rgba(11, 95, 191, 0.465);
-  width: 15rem;
-  height: fit-content;
-  border-radius: 7px;
-  padding: 0 0 0.5rem 0;
-}
-.container_americana_sur {
-  margin: 1.5rem auto;
-  background-color: rgba(194, 161, 31, 0.465);
-  width: 15rem;
-  height: fit-content;
-  border-radius: 7px;
-  padding: 0 0 0.5rem 0;
-}
-.container_americana_este {
-  margin: 1.5rem auto;
-  background-color: rgba(16, 179, 103, 0.465);
-  width: 15rem;
-  height: fit-content;
-  border-radius: 7px;
-  padding: 0 0 0.5rem 0;
-}
-.container_americana_oeste {
-  margin: 1.5rem auto;
-  background-color: rgba(50, 120, 196, 0.465);
-  width: 15rem;
-  height: fit-content;
-  border-radius: 7px;
-  padding: 0 0 0.5rem 0;
-}
-
-.titulo_liga {
-  margin: 0.5rem 0 0;
-  font-size: 2rem;
-  text-align: center;
-  font-weight: 400;
-  color: rgb(255, 255, 255);
-  text-decoration: underline rgb(214, 214, 214);
-}
-
-.team_logo {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(1, 1fr);
-  grid-column-gap: 1px;
-  border-radius: 6px;
-  font-size: 1.2rem;
-  text-align: center;
-  font-weight: 400;
-  color: rgb(255, 255, 255);
-}
-
-.img_picture_element {
-  color: antiquewhite;
-  font-size: 1rem;
-  text-align: center;
-  margin: 0 auto;
-  /* background-color: rgba(19, 12, 12, 0.5); */
-  text-shadow: 2px 2px 8px #111;
-  width: fit-content;
-  height: 1.75em;
-  border-radius: 7px;
-  padding: 0 0.5em 0.4em;
-  cursor: pointer;
-}
-/* input[type="date"]:before {
-  content: attr(placeholder) !important;
-  color: #aaa;
-  margin-right: 0.5em;
-}
-input[type="date"]:focus:before,
-input[type="date"]:valid:before {
-  content: "";
-} */
-.points {
-  color: black;
-  background-color: white;
-}
-
-.espacioInferior {
-  margin-bottom: 1rem;
-}
-.page-link {
-  color: black !important;
-}
-
-.seleccion {
-  color: antiquewhite;
-  padding: 0 0.5em 0.4em;
-  text-shadow: 2px 2px 8px #111;
-}
-
-.advancedSearchDatetbox {
-  color: rgb(2, 1, 0);
-  font-size: 0.75rem;
-  /* font-weight: bold; */
-  /* margin: 1% 0 2% 1%; */
-  width: fit-content;
-  border-radius: 6px;
-}
-
-.error_search {
-  font-size: 0.7rem;
-  width: 50%;
-  margin-left: 2%;
-  text-align: center;
-  color: antiquewhite;
-  background-color: rgba(12, 10, 9, 0.75);
-}
-.table {
-  border-collapse: separate;
-  width: 98%;
-}
-
-.error_message {
-  padding-top: 10px;
-  font-size: 0.7rem;
-}
-
-.link_player {
-  text-decoration: none;
-  color: antiquewhite;
-}
-.title-positionA {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.title-position {
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  margin: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.player_stats {
-  width: 100%;
-  display: table;
-}
-
-.td2,
-.td7,
-.td8,
-.td11 {
-  display: none;
-}
-
-.table-header1 {
-  background-color: rgba(12, 10, 9, 0.9);
-  color: antiquewhite;
-  font-size: 0.8rem;
-  align-items: center;
-}
-.table-header {
-  background-color: rgba(12, 10, 9, 0.75);
-  color: antiquewhite;
-  font-size: 0.8rem;
-  align-items: center;
-}
-.title-rows {
-  background-color: antiquewhite;
-  color: rgb(12, 10, 9);
-}
-
-.player-name {
-  color: black;
-}
-.player-name:hover {
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  font-size: 1.15rem;
-  text-decoration: none;
-}
-
-.row-color {
-  background-color: rgb(245, 223, 195);
-}
-.row-color:hover {
-  background-color: rgb(255, 255, 255);
-}
-.row-color1:hover {
-  background-color: rgb(255, 255, 255);
-}
-
-.title-rows_header {
-  text-align: center;
-}
-
-.spiner {
-  margin-left: 20% !important;
-}
-
-.fa-baseball-ball {
-  font-size: 8rem;
-  margin: 5% 0 0 25% !important;
-  color: rgba(80, 57, 43, 0.4);
-}
-.spiner_load {
+.bioActives-title {
+  /* color: antiquewhite; */
+  color: rgb(41, 41, 41);
   font-size: 2.5rem;
-  color: rgba(80, 57, 43, 0.95);
-}
-
-th {
-  padding: 12px 5px;
-}
-.paginator {
-  margin: auto;
-}
-.paginator_text {
-  display: none;
-}
-
-@media only screen and (min-width: 300px) and (max-width: 650px) {
-  .container-position {
-    margin-bottom: 3rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 1px;
-  }
-  .player_stats {
-    width: 50%;
-    display: table;
-  }
-  .title-positionA {
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 0.5rem 0 0.5rem 0.5rem;
-  }
-  .seleccion {
-    font-size: 0.5rem;
-    color: antiquewhite;
-    padding: 0 0.5em 0.4em;
-    text-shadow: 2px 2px 8px #111;
-  }
-  .table {
-    border-collapse: separate;
-    width: 75%;
-  }
-}
-@media only screen and (orientation: landscape) and (min-width: 500px) and (max-width: 600px) {
-  .daily-title {
-    color: antiquewhite;
-    font-size: 1rem;
-    text-align: center;
-    margin: 0 auto;
-    /* background-color: rgba(19, 12, 12, 0.5); */
-    text-shadow: 2px 2px 8px #111;
-    width: fit-content;
-    height: 1.75em;
-    border-radius: 7px;
-    padding: 0 0.5em 0.4em;
-  }
-
-  .advancedSearchDatetbox {
-    color: rgb(2, 1, 0);
-    font-size: 0.75rem;
-    /* font-weight: bold; */
-    /* margin: 2% 0 2% 2%; */
-  }
-
-  .error_search {
-    font-size: 1rem;
-    width: 80%;
-    margin-left: 2%;
-    text-align: center;
-    color: antiquewhite;
-    background-color: rgba(12, 10, 9, 0.75);
-  }
-
-  .error_message {
-    padding-top: 10px;
-    font-size: 1rem;
-  }
-
-  .link_player {
-    text-decoration: none;
-    color: antiquewhite;
-  }
-
-  .title-position {
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 0.5rem 0 0.5rem 0.5rem;
-  }
-  .player_stats {
-    width: 100%;
-    display: table;
-  }
-
-  .table-header1 {
-    background-color: rgba(12, 10, 9, 0.9);
-    color: antiquewhite;
-    font-size: 0.8rem;
-    align-items: center;
-  }
-  .table-header {
-    background-color: rgba(12, 10, 9, 0.75);
-    color: antiquewhite;
-    font-size: 0.8rem;
-    align-items: center;
-  }
-  .title-rows {
-    background-color: antiquewhite;
-    color: rgb(12, 10, 9);
-  }
-
-  .player-name {
-    color: black;
-  }
-  .player-name:hover {
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-size: 1.15rem;
-    text-decoration: none;
-  }
-
-  .row-color {
-    background-color: rgb(245, 223, 195);
-  }
-  .row-color:hover {
-    background-color: rgb(255, 255, 255);
-  }
-  .row-color1:hover {
-    background-color: rgb(255, 255, 255);
-  }
-
-  .title-rows_header {
-    text-align: center;
-  }
-
-  .fa-baseball-ball {
-    font-size: 10rem;
-    margin: 5% 40% 0 !important;
-    color: rgba(80, 57, 43, 0.4);
-  }
-  .spiner_load {
-    font-size: 5rem;
-    margin: 0 35% !important;
-    color: rgba(80, 57, 43, 0.95);
-  }
-
-  th {
-    padding: 12px 5px;
-  }
-}
-@media only screen and (orientation: landscape) and (min-width: 601px) and (max-width: 700px) {
-  .daily-title {
-    color: antiquewhite;
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 0 auto;
-    padding: 0 0.5em 0.4em;
-    /* background-color: rgba(19, 12, 12, 0.5); */
-    text-shadow: 2px 2px 8px #111;
-    width: fit-content;
-    height: 1.75em;
-    border-radius: 7px;
-  }
-  .table {
-    border-collapse: separate;
-    width: 85%;
-  }
-
-  .advancedSearchDatetbox {
-    color: rgb(2, 1, 0);
-    font-size: 0.75rem;
-    /* font-weight: bold; */
-    /* margin: 2% 0 2% 2%; */
-  }
-
-  .error_search {
-    font-size: 1rem;
-    width: 80%;
-    margin-left: 2%;
-    text-align: center;
-    color: antiquewhite;
-    background-color: rgba(12, 10, 9, 0.75);
-  }
-
-  .error_message {
-    padding-top: 10px;
-    font-size: 1rem;
-  }
-
-  .link_player {
-    text-decoration: none;
-    color: antiquewhite;
-  }
-
-  .title-position {
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 0.5rem 0 0.5rem 0.5rem;
-  }
-  .player_stats {
-    width: 100%;
-    display: table;
-  }
-  .td2,
-  .td5,
-  .td7,
-  .td8,
-  .td9,
-  .td11 {
-    display: table-cell;
-  }
-
-  .table-header1 {
-    background-color: rgba(12, 10, 9, 0.9);
-    color: antiquewhite;
-    font-size: 0.8rem;
-    align-items: center;
-  }
-  .table-header {
-    background-color: rgba(12, 10, 9, 0.75);
-    color: antiquewhite;
-    font-size: 0.8rem;
-    align-items: center;
-  }
-  .title-rows {
-    background-color: antiquewhite;
-    color: rgb(12, 10, 9);
-  }
-  .player-name {
-    color: black;
-  }
-  .player-name:hover {
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-size: 1.15rem;
-    text-decoration: none;
-  }
-
-  .row-color {
-    background-color: rgb(245, 223, 195);
-  }
-  .row-color:hover {
-    background-color: rgb(255, 255, 255);
-  }
-  .row-color1:hover {
-    background-color: rgb(255, 255, 255);
-  }
-
-  .title-rows_header {
-    text-align: center;
-  }
-
-  .fa-baseball-ball {
-    font-size: 10rem;
-    margin: 5% 40% 0 !important;
-    color: rgba(80, 57, 43, 0.4);
-  }
-  .spiner_load {
-    font-size: 5rem;
-    margin: 0 35% !important;
-    color: rgba(80, 57, 43, 0.95);
-  }
-
-  th {
-    padding: 12px 5px;
-  }
-  .paginator {
-    margin: auto;
-  }
-  .paginator_text {
-    display: table-cell;
-  }
-}
-@media only screen and (min-width: 767px) and (max-width: 1020px) {
-  .daily-title {
-    color: antiquewhite;
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 0 auto;
-    padding: 0 0.15em 0.4em;
-    /* background-color: rgba(19, 12, 12, 0.5); */
-    text-shadow: 2px 2px 8px #111;
-    width: fit-content;
-    height: 1.75em;
-    border-radius: 7px;
-  }
-
-  .advancedSearchDatetbox {
-    color: rgb(2, 1, 0);
-    font-size: 0.75rem;
-    /* font-weight: bold; */
-    /* margin: 2% 0 2% 2%; */
-  }
-
-  .error_search {
-    font-size: 1rem;
-    width: 80%;
-    margin-left: 2%;
-    text-align: center;
-    color: antiquewhite;
-    background-color: rgba(12, 10, 9, 0.75);
-  }
-
-  .error_message {
-    padding-top: 10px;
-    font-size: 1rem;
-  }
-
-  .link_player {
-    text-decoration: none;
-    color: antiquewhite;
-  }
-
-  .title-position {
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 0.5rem 0 0.5rem 0.5rem;
-  }
-  .player_stats {
-    width: 100%;
-    display: table;
-  }
-  .td2,
-  .td5,
-  .td7,
-  .td8,
-  .td9,
-  .td11 {
-    display: table-cell;
-  }
-
-  .table-header1 {
-    background-color: rgba(12, 10, 9, 0.9);
-    color: antiquewhite;
-    font-size: 0.8rem;
-    align-items: center;
-  }
-  .table-header {
-    background-color: rgba(12, 10, 9, 0.75);
-    color: antiquewhite;
-    font-size: 0.8rem;
-    align-items: center;
-  }
-  .title-rows {
-    background-color: antiquewhite;
-    color: rgb(12, 10, 9);
-  }
-  .player-name {
-    color: black;
-  }
-  .player-name:hover {
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-size: 1.15rem;
-    text-decoration: none;
-  }
-
-  .row-color {
-    background-color: rgb(245, 223, 195);
-  }
-  .row-color:hover {
-    background-color: rgb(255, 255, 255);
-  }
-  .row-color1:hover {
-    background-color: rgb(255, 255, 255);
-  }
-
-  .title-rows_header {
-    text-align: center;
-  }
-
-  .fa-baseball-ball {
-    font-size: 8rem;
-    margin: 5% 0 0 45% !important;
-    color: rgba(80, 57, 43, 0.4);
-  }
-  .spiner_load {
-    font-size: 2.5rem;
-    margin: 0 0 0 40% !important;
-    color: rgba(80, 57, 43, 0.95);
-  }
-
-  th {
-    padding: 12px 5px;
-  }
-  .paginator {
-    margin: auto;
-  }
-  .paginator_text {
-    display: table-cell;
-  }
-}
-
-@media only screen and (min-width: 1023px) and (max-width: 1429px) {
-  .daily-title {
-    color: antiquewhite;
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 0 auto;
-    padding: 0 0.5em 0.4em;
-    /* background-color: rgba(19, 12, 12, 0.5); */
-    text-shadow: 2px 2px 8px #111;
-    width: fit-content;
-    height: 1.75em;
-    border-radius: 7px;
-  }
-
-  .advancedSearchDatetbox {
-    color: rgb(2, 1, 0);
-    font-size: 1em;
-    /* font-weight: bold; */
-    /* margin: 0 0 1% 2%; */
-  }
-
-  .error_search {
-    font-size: 1rem;
-    width: 80%;
-    margin-left: 2%;
-    text-align: center;
-    color: antiquewhite;
-    background-color: rgba(12, 10, 9, 0.75);
-  }
-
-  .error_message {
-    padding-top: 10px;
-    font-size: 1rem;
-  }
-
-  .link_player {
-    text-decoration: none;
-    color: antiquewhite;
-  }
-
-  .title-position {
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 0.5rem 0 0.5rem 0.5rem;
-  }
-  .player_stats {
-    width: 100%;
-    display: table;
-  }
-  .fa-baseball-ball {
-    font-size: 10rem;
-    margin: 5% 38% 0 !important;
-    color: rgba(80, 57, 43, 0.4);
-  }
-  .spiner_load {
-    font-size: 5rem;
-    margin: 0 30% !important;
-    color: rgba(80, 57, 43, 0.95);
-  }
-
-  .td2,
-  .td5,
-  .td7,
-  .td8,
-  .td9,
-  .td11 {
-    display: table-cell;
-  }
-
-  .table-header1 {
-    background-color: rgba(12, 10, 9, 0.9);
-    color: antiquewhite;
-    font-size: 1.25rem;
-    align-items: center;
-  }
-  .table-header {
-    background-color: rgba(12, 10, 9, 0.75);
-    color: antiquewhite;
-    font-size: 1.25rem;
-    align-items: center;
-  }
-  .paginator {
-    font-size: 1.25rem;
-  }
-  .paginator_text {
-    display: table-cell;
-  }
-}
-@media only screen and (orientation: landscape) and (min-width: 701px) and (max-width: 900px) {
-  .daily-title {
-    color: antiquewhite;
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 0 auto;
-    padding: 0 0.5em 0.4em;
-    /* background-color: rgba(19, 12, 12, 0.5); */
-    text-shadow: 2px 2px 8px #111;
-    width: fit-content;
-    height: 1.75em;
-    border-radius: 7px;
-  }
-
-  .advancedSearchDatetbox {
-    color: rgb(2, 1, 0);
-    font-size: 0.75rem;
-    /* font-weight: bold; */
-    /* margin: 2% 0 2% 2%; */
-  }
-
-  .error_search {
-    font-size: 1rem;
-    width: 80%;
-    margin-left: 2%;
-    text-align: center;
-    color: antiquewhite;
-    background-color: rgba(12, 10, 9, 0.75);
-  }
-
-  .error_message {
-    padding-top: 10px;
-    font-size: 1rem;
-  }
-
-  .link_player {
-    text-decoration: none;
-    color: antiquewhite;
-  }
-
-  .title-position {
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 0.5rem 0 0.5rem 0.5rem;
-  }
-  .player_stats {
-    width: 100%;
-    display: table;
-  }
-  .td2,
-  .td5,
-  .td7,
-  .td8,
-  .td9,
-  .td11 {
-    display: table-cell;
-  }
-
-  .table-header1 {
-    background-color: rgba(12, 10, 9, 0.9);
-    color: antiquewhite;
-    font-size: 0.8rem;
-    align-items: center;
-  }
-  .table-header {
-    background-color: rgba(12, 10, 9, 0.75);
-    color: antiquewhite;
-    font-size: 0.8rem;
-    align-items: center;
-  }
-  .title-rows {
-    background-color: antiquewhite;
-    color: rgb(12, 10, 9);
-  }
-  .player-name {
-    color: black;
-  }
-  .player-name:hover {
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-size: 1.15rem;
-    text-decoration: none;
-  }
-
-  .row-color {
-    background-color: rgb(245, 223, 195);
-  }
-  .row-color:hover {
-    background-color: rgb(255, 255, 255);
-  }
-  .row-color1:hover {
-    background-color: rgb(255, 255, 255);
-  }
-
-  .title-rows_header {
-    text-align: center;
-  }
-
-  .fa-baseball-ball {
-    font-size: 10rem;
-    margin: 5% 40% 0 !important;
-    color: rgba(80, 57, 43, 0.4);
-  }
-  .spiner_load {
-    font-size: 5rem;
-    margin: 0 35% !important;
-    color: rgba(80, 57, 43, 0.95);
-  }
-
-  th {
-    padding: 12px 5px;
-  }
-  .paginator {
-    margin: auto;
-  }
-  .paginator_text {
-    display: table-cell;
-  }
-}
-@media only screen and (min-width: 1430px) and (max-width: 1920px) {
-  .daily-title {
-    color: antiquewhite;
-    font-size: 2rem !important;
-    text-align: center;
-    margin: 0 auto;
-    padding: 0 0.5em 0.4em;
-    /* background-color: rgba(19, 12, 12, 0.5); */
-    text-shadow: 2px 2px 8px #111;
-    width: fit-content;
-    height: 1.75em;
-    border-radius: 7px;
-  }
-
-  .advancedSearchDatetbox {
-    color: rgb(2, 1, 0);
-    font-size: 1em;
-    /* font-weight: bold; */
-    /* margin: 1% 0 1% 2%; */
-  }
-
-  .error_search {
-    font-size: 1.25rem;
-    width: 80%;
-    margin-left: 2%;
-    text-align: center;
-    color: antiquewhite;
-    background-color: rgba(12, 10, 9, 0.75);
-  }
-
-  .error_message {
-    padding-top: 10px;
-    font-size: 1.75rem;
-  }
-
-  .link_player {
-    text-decoration: none;
-    color: antiquewhite;
-  }
-  .fa-baseball-ball {
-    font-size: 10rem;
-    margin: 5% 30% 0 !important;
-    color: rgba(80, 57, 43, 0.4);
-  }
-  .spiner_load {
-    font-size: 5rem;
-    margin: 0 25% !important;
-    color: rgba(80, 57, 43, 0.95);
-  }
-
-  .title-position {
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 0.5rem 0 0.5rem 0.5rem;
-  }
-  .player_stats {
-    width: 100%;
-    display: table;
-  }
-  .td2,
-  .td5,
-  .td7,
-  .td8,
-  .td9,
-  .td11 {
-    display: table-cell;
-  }
-
-  .table-header1 {
-    background-color: rgba(12, 10, 9, 0.9);
-    color: antiquewhite;
-    font-size: 1.25rem;
-    align-items: center;
-  }
-  .table-header {
-    background-color: rgba(12, 10, 9, 0.75);
-    color: antiquewhite;
-    font-size: 1.25rem;
-    align-items: center;
-  }
-  .paginator {
-    font-size: 1.75rem;
-  }
-  .paginator_text {
-    display: table-cell;
-  }
-}
-@media only screen and (min-width: 1921px) and (max-width: 3500px) {
-  .daily-title {
-    color: antiquewhite;
-    font-size: 3.25rem;
-    text-align: center;
-    margin: 0 auto;
-    padding: 0 0.5em 0.4em;
-    /* background-color: rgba(19, 12, 12, 0.5); */
-    text-shadow: 2px 2px 8px #111;
-    width: fit-content;
-    height: 1.75em;
-    border-radius: 7px;
-  }
-
-  .advancedSearchDatetbox {
-    color: rgb(2, 1, 0);
-    font-size: 1em;
-    /* font-weight: bold; */
-    /* margin: 1% 0 1% 2%; */
-  }
-
-  .error_search {
-    font-size: 3rem;
-    width: 80%;
-    margin-left: 2%;
-    text-align: center;
-    color: antiquewhite;
-    background-color: rgba(12, 10, 9, 0.75);
-  }
-
-  .error_message {
-    padding-top: 10px;
-    font-size: 3rem;
-  }
-
-  .link_player {
-    text-decoration: none;
-    color: antiquewhite;
-  }
-
-  .title-position {
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 0.5rem 0 0.5rem 0.5rem;
-  }
-  .player_stats {
-    width: 100%;
-    display: table;
-  }
-  .td2,
-  .td5,
-  .td7,
-  .td8,
-  .td9,
-  .td11 {
-    display: table-cell;
-  }
-
-  .table-header1 {
-    background-color: rgba(12, 10, 9, 0.9);
-    color: antiquewhite;
-    font-size: 2.5rem;
-    align-items: center;
-  }
-  .table-header {
-    background-color: rgba(12, 10, 9, 0.75);
-    color: antiquewhite;
-    font-size: 2.25rem;
-    align-items: center;
-  }
-  .paginator {
-    font-size: 3rem;
-    width: 100%;
-  }
-
-  .paginator_text {
-    font-size: 3;
-    display: table-cell;
-  }
-}
-
-/* VIEJO CSS 30 marzo 2021 */
-
-/* .actives-title {
-  color: antiquewhite;
-  font-size: 4rem;
   text-align: center;
-  margin: 0.15rem auto 0;
-  padding: .5rem 0;
-  text-shadow: 2px 2px 8px #111;
-  width: auto;
-  height: 1.75em;
+  margin: 0 auto;
+  padding: 1rem 0 0;
+  /* background-color: rgba(3, 2, 2, 0.5); */
+  /* text-shadow: 2px 2px 8px #111; */
+  width: 18em;
+  height: 2em;
   border-radius: 7px;
 }
-.title-position{
+.title-position {
   color: antiquewhite;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
-  margin-left: 10%;
-  margin-bottom: 0;
+  margin: 0 0  0 10.35%;
 }
 
-
-.tarjeta_encabezado {
-  width: 85%;
-  margin: 0.2em auto;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 5px;
-  grid-template-rows: 1fr;
-  grid-row-gap: 5px;
-}
-.tarjeta_izquierda {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  color: white;
-  border: solid white 2px;
-  background-color: rgb(9, 100, 14);
-
-
-
-  display: grid;
-  grid-template-columns: 1fr 2fr 2fr 2fr ;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 10px;
-}
-.player_pict2 {
-  width: 13rem;
-  box-shadow: 2px 2px 4px black;
-}
-
-.items_estadisticas {
-  text-align: center;
-  font-weight: 500;
-  border: solid black .15rem;
-  padding: 0;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-row-gap: 5px;
-  background-color: rgba(2, 2, 2, 0.513);
-
-
-}
-
-.foto {
-  grid-column: 1/2;
-  grid-row: 1/4;
-  color: white;
-
-
-}
-.avg_span {
-
-  grid-column: 1/2;
-  grid-row: 1/2;
-  font-size: 1.75em;
-  background-color: black;
-}
-.avg_spanHr {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  font-size: 1.75em;
-  background-color: rgb(31, 37, 226);
-}
-
-.avg_span2 {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  font-size: 1.75em;
-}
-.avg_span2Hr {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  font-size: 1.75em;
-  background-color: rgb(31, 37, 226);
-
-}
-
-.link_player {
-  grid-column: 2/4;
-  grid-row: 3/4;
-  color: white;
-  font-size: 1.25em;
-  text-align: center;
-  font-weight: 500;
-  width: 11rem;
-  padding-bottom: 10px;
-
-
-}
-.posicion {
-  grid-column: 1/2;
-  grid-row: 4/5;
-  color: white;
-  align-self: start;
-  border: solid black 2px;
-  background-color:red;
-
-}
-.avg {
-  grid-column: 2/3;
-  grid-row: 1/2;
-  color: white;
-  border: solid black 2px;
-
-}
-.LNac {
-  grid-column: 2/4;
-  grid-row: 4/5;
-
-}
-.seleccion {
-  display: block;
-
-}
-.seleccion2 {
-  display: none;
-
-}
-
-
-
-
-.tarjeta_derecha {
-  background-color: yellow;
-  grid-column: 2/3;
-  grid-row: 1/2;
-
-
-}
-
-
-.advancedSearchTextbox{
+.advancedSearchTextbox {
   color: rgb(2, 1, 0);
   font-size: 1rem;
   font-weight: bold;
-  margin-left: 10%;
-  margin-bottom: 0;
+  margin: 0 0  0 10.35%;
 
 }
 
-
-.error_search {
-  width: 80%;
-  margin-left: 10%;
-  text-align: center;
-  color: antiquewhite;
-  background-color: rgba(12, 10, 9, 0.75);
-
+.card-body{
+  max-height: 1rem;
+  margin: 3px auto 2rem;
+  padding-bottom: 2.25rem;
 }
+
+
 .fa-baseball-ball {
   font-size: 10rem;
   margin: 5% 40% 0 !important;
@@ -1188,338 +49,307 @@ th {
   margin: 0 35% !important;
   color: rgba(80, 57, 43, 0.95);
 }
-.link_player {
-text-decoration:none;
-color: antiquewhite;
+.error_search {
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  color: antiquewhite;
+  background-color: rgba(12, 10, 9, 0.75);
+
+}
+
+.error_message {
+  padding-top: 10px;
+
+}
+.container-actives_cards {
+  margin: 1% auto 0;
+  /* margin-top: 1%;
+  margin-left: 2%;
+  margin-right: 2%; */
+  display: grid;
+  grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+  grid-column-gap: 2px;
+  justify-items: center;
+  width: 80%;
+
+}
+
+.card-title {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+.card {
+  max-width: 99%;
+  margin: 0 auto;
+}
+
+.container-actives_cards .card:nth-child(1) {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-bottom: 20px;
+}
+.container-actives_cards .card:nth-child(2) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-bottom: 20px;
+}
+.container-actives_cards .card:nth-child(3) {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  margin-bottom: 20px;
+}
+.container-actives_cards .card:nth-child(4) {
+  grid-column: 4/5;
+  grid-row: 1/2;
+  margin-bottom: 20px;
+}
+.container-actives_cards .card:nth-child(5) {
+  grid-column: 5/6;
+  grid-row: 1/2;
+  margin-bottom: 20px;
+}
+.container-actives_cards .card:nth-child(6) {
+  grid-column: 6/7;
+  grid-row: 1/2;
+  margin-bottom: 20px;
+}
+.container-actives_cards .card:nth-child(7) {
+  grid-column: 7/8;
+  grid-row: 1/2;
+  margin-bottom: 20px;
+}
+.container-actives_cards .card:nth-child(8) {
+  grid-column: 8/9;
+  grid-row: 1/2;
+  margin-bottom: 20px;
+}
+
+.card-img-top {
+  max-height: 580px;
+}
+
+.img_picture_element{
+  transition: .4s;
+}
+
+.img_picture_box:hover .img_picture_element{
+  transform: scale(1.075);
+  opacity: .98;
+}
+
+
+.container {
+  margin-top: 20px;
+}
+
+.list-group-item {
+  padding: 0.2rem 1.25rem;
+  font-size: 0.85rem;
+}
+
+
+.page-link {
+background-color: rgba(250, 235, 215,0.8)!important;
+border:solid 2px #7e7b7b;
+color: rgb(0, 0, 0)!important;
+font-weight: 400;
 }
 .paginator {
-  font-size: 0.75rem;
-  width: 20%;
   margin: auto;
+  font-size: 0.65rem
+}
+.paginator_text {
+  display: none;
 }
 
-@media only screen and (min-width: 330px ) and (max-width: 768px)  {
-
-  .actives-title {
-    color: antiquewhite;
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 0.15rem auto 0;
-    padding: .5rem 0;
-    text-shadow: 2px 2px 8px #111;
-    width: auto;
-    height: 1.75em;
-    border-radius: 7px;
-  }
-  .title-position{
-    color: antiquewhite;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-left: 10%;
-    margin-bottom: 0;
-  }
-
-
-  .tarjeta_encabezado {
-    width: 95%;
-    margin: 0.2em auto;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-row-gap: 5px;
-  }
-  .tarjeta_izquierda {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    color: white;
-    border: solid white 2px;
-
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr !important;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-  }
-  .player_pict2 {
-    width: 11rem;
-    box-shadow: 2px 2px 4px black;
-  }
-
-  .items_estadisticas {
-    text-align: center;
-    font-weight: 500;
-    border: solid black .15rem;
-    padding: 0;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-row-gap: 5px;
-    background-color: rgba(2, 2, 2, 0.513);
-
+@media only screen and (min-width:300px ) and (max-width: 768px)  {
+  .container-actives_cards {
+      margin: 1% auto 0;
+      display: grid;
+      grid-auto-columns: 1fr 1fr;
+      grid-auto-rows: 1fr 1fr 1fr;
+      grid-column-gap: 2px;
+      justify-items: center;
+      width: 80%;
 
   }
-
-  .foto {
-    grid-column: 1/2;
-    grid-row: 1/4;
-    color: white;
-
-
+.bioActives-title {
+      font-size: 0.75rem;
+      margin-bottom: 1rem;
+      padding: 0.4rem 0 0;
+      width: 15rem;
   }
-  .avg_span {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    font-size: 1em;
-    background-color: black;
-  }
-  .avg_spanHr {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    font-size: 1em;
-    background-color: rgb(31, 37, 226);
+.title-position {
+      font-size: .75rem;
   }
 
-  .avg_span2 {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    font-size: 1em;
-  }
-  .avg_span2Hr {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    font-size: 1em;
-    background-color: rgb(31, 37, 226);
+.advancedSearchTextbox {
+      font-size: .75rem;
 
   }
-  .link_player {
-    grid-column: 1/2;
-    grid-row: 4/5;
-    color: white;
-    font-size: 1em;
-    text-align: center;
-    font-weight: 500;
-    width: 11rem;
-    padding-bottom: 10px;
-      text-decoration:none;
-      color: antiquewhite;
-
+.container-actives_cards .card:nth-child(1) {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      margin-bottom: 20px;
   }
-  .posicion {
-    grid-column: 1/2;
-    grid-row: 4/5;
-    color: white;
-    align-self: start;
-    border: solid black 2px;
-    background-color:red;
-
+  .container-actives_cards .card:nth-child(2) {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      margin-bottom: 20px;
   }
-  .avg {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    color: white;
-    border: solid black 2px;
-
+  .container-actives_cards .card:nth-child(3) {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      margin-bottom: 20px;
   }
-  .seleccion {
-    display: none !important;
+   .container-actives_cards .card:nth-child(4) {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      margin-bottom: 20px;
   }
-  .seleccion2 {
-    display: inline-block;
-
+  .container-actives_cards .card:nth-child(5) {
+      grid-column: 1/2;
+      grid-row: 3/4;
+      margin-bottom: 20px;
   }
-  .LNac {
-    grid-column: 2/4;
-    grid-row: 4/5;
-
+  .container-actives_cards .card:nth-child(6) {
+      grid-column: 2/3;
+      grid-row: 3/4;
+      margin-bottom: 20px;
   }
-
-
-
-
-  .tarjeta_derecha {
-    background-color: yellow;
-    grid-column: 2/3;
-    grid-row: 1/2;
-
-
+  .container-actives_cards .card:nth-child(7) {
+      display: none;
   }
+  .container-actives_cards .card:nth-child(8) {
+      display: none;
 
-
-  .advancedSearchTextbox{
-    color: rgb(2, 1, 0);
-    font-size: 1rem;
-    font-weight: bold;
-    margin-left: 10%;
-    margin-bottom: 0;
-
-  }
-
-
-  .error_search {
-    width: 80%;
-    margin-left: 10%;
-    text-align: center;
-    color: antiquewhite;
-    background-color: rgba(12, 10, 9, 0.75);
-
-  }
-  .fa-baseball-ball {
-    font-size: 10rem;
-    margin: 5% 40% 0 !important;
-    color: rgba(80, 57, 43, 0.40);
-  }
-  .spiner_load {
-    font-size: 5rem;
-    margin: 0 35% !important;
-    color: rgba(80, 57, 43, 0.95);
   }
 
   .paginator {
-    font-size: 0.75rem;
-    width: 20%;
-    margin: auto;
+      margin: auto;
+      font-size: .75rem
   }
+
+  .paginator_text {
+      display: none;
+  }
+  .img_picture_box:hover .img_picture_element{
+    transform: none;
+    opacity: 1;
 }
-
-@media only screen and (min-width: 200px ) and (max-width: 329px)  {
-
-  .actives-title {
-    color: antiquewhite;
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 0.15rem auto 0;
-    padding: .5rem 0;
-    text-shadow: 2px 2px 8px #111;
-    width: auto;
-    height: 1.75em;
-    border-radius: 7px;
-  }
-  .title-position{
-    color: antiquewhite;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-left: 10%;
-    margin-bottom: 0;
-  }
-
-
-  .tarjeta_encabezado {
-    width: 95%;
-    margin: 0.2em auto;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-row-gap: 5px;
-  }
-  .tarjeta_izquierda {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    color: white;
-    border: solid white 2px;
-
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr !important;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-  }
-  .player_pict2 {
-    width: 11rem;
-    box-shadow: 2px 2px 4px black;
-  }
-
-  .items_estadisticas {
-    text-align: center;
-    font-weight: 500;
-    border: solid black .15rem;
-    padding: 0;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-row-gap: 5px;
-    background-color: rgba(2, 2, 2, 0.513);
-
+.card {
+  width: 95%;
+}
+}
+@media only screen and (min-width:769px ) and (max-width: 1023px)  {
+  .container-actives_cards {
+      margin: 1% auto 0;
+      display: grid;
+      grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-auto-rows: 1fr;
+      grid-column-gap: 2px;
+      justify-items: center;
+      width: 80%;
 
   }
-
-  .foto {
-    grid-column: 1/2;
-    grid-row: 1/4;
-    color: white;
-
-
-  }
-  .avg_span {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    font-size: .75em;
-    background-color: black;
-  }
-  .avg_spanHr {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    font-size: .75em;
-    background-color: rgb(31, 37, 226);
-  }
-  .avg_span2 {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    font-size: .75em;
-  }
-  .avg_span2Hr {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    font-size: .75em;
-    background-color: rgb(31, 37, 226);
-
+  .bioActives-title {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      padding: 0.4rem 0 0;
+      width: 22rem;
   }
 
-  .link_player {
-    grid-column: 1/2;
-    grid-row: 4/5;
-    color: white;
-    font-size: 1em;
-    text-align: center;
-    font-weight: 500;
-    width: 11rem;
-    padding-bottom: 10px;
-      text-decoration:none;
-      color: antiquewhite;
-
+  .card-title {
+      font-size: 1em;
+      font-weight: bold;
+      text-align: center;
   }
-  .posicion {
-    grid-column: 1/2;
-    grid-row: 4/5;
-    color: white;
-    align-self: start;
-    border: solid black 2px;
-    background-color:red;
-
+  .card {
+      max-width: 99%;
+      margin: 0 auto;
   }
-  .avg {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    color: white;
-    border: solid black 2px;
 
+  .container-actives_cards .card:nth-child(1) {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      margin-bottom: 20px;
   }
-  .seleccion {
-    display: none !important;
+  .container-actives_cards .card:nth-child(2) {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      margin-bottom: 20px;
   }
-  .seleccion2 {
-    display: inline-block;
+  .container-actives_cards .card:nth-child(3) {
+      grid-column: 3/4;
+      grid-row: 1/2;
+      margin-bottom: 20px;
+  }
+   .container-actives_cards .card:nth-child(4) {
+      grid-column: 4/5;
+      grid-row: 1/2;
+      margin-bottom: 20px;
+  }
+  .container-actives_cards .card:nth-child(5) {
+      grid-column: 5/6;
+      grid-row: 1/2;
+      margin-bottom: 20px;
+  }
+  .container-actives_cards .card:nth-child(6) {
+      grid-column: 6/7;
+      grid-row: 1/2;
+      margin-bottom: 20px;
+  }
+  .container-actives_cards .card:nth-child(7) {
+          display: none;    }
+  .container-actives_cards .card:nth-child(8) {
+      display: none;
+  }
 
+   .card-img-top {
+      max-height: 580px;
   }
-  .LNac {
-    grid-column: 2/4;
-    grid-row: 4/5;
 
+  .container {
+      margin-top: 20px;
+  }
+
+  .list-group-item {
+      padding: 0.2rem 1.25rem;
+      font-size: 0.85rem;
+  }
+
+
+  .page-link {
+  background-color: rgba(250, 235, 215,0.8)!important;
+  border:solid 2px #7e7b7b;
+  color: rgb(0, 0, 0)!important;
+  font-weight: 400;
   }
   .paginator {
-    font-size: 0.5rem;
-    width: 15%;
-    margin: auto;
+      margin: auto;
+      font-size: 0.65rem
   }
-} */
+  .paginator_text {
+      display: table-cell;
+  }
+  }
+@media only screen and (min-width:1024px ) and (max-width: 2220px)  {
+
+  .paginator {
+      margin: auto;
+      font-size: 1rem
+  }
+  .paginator_text {
+      display: table-cell;
+  }
+  }
+@media only screen and (min-width:2221px ) and (max-width: 3200px)  {
+
+  .paginator {
+      margin: auto;
+      font-size: 1.75rem
+  }
+  }

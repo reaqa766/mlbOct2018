@@ -37,7 +37,8 @@ export class PruebajsonsComponent implements OnInit {
   n1 = 12;
   n10 = 5;
   // dia = moment().format('YYYY-MM-DD');
-  dia = new Date(new Date().getFullYear(),new Date().getMonth(), new Date().getDate() - 1);
+  dia = moment().format('YYYY-MM-DD');
+  // dia = new Date(new Date().getFullYear(),new Date().getMonth(), new Date().getDate() - 1);
   public allItems: any[];
   gamePlays: string;
 

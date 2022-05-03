@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PlayersService } from '../../../services/players.service';
+import { AllplayersService } from '../../services/allplayers.service';
+// import { PlayersService } from '../../../services/players.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../interfaces/players';
 import { PagerService } from '../../../services/index';
@@ -69,7 +70,8 @@ export class PlayerinfoComponent implements OnInit {
 
 
 
-  constructor(private playerService: PlayersService, private pagerService: PagerService, private route: ActivatedRoute) { }
+  constructor(private playerService: AllplayersService, private pagerService: PagerService, private route: ActivatedRoute) { }
+  // constructor(private playerService: PlayersService, private pagerService: PagerService, private route: ActivatedRoute) { }
 
 
   ngOnInit() {

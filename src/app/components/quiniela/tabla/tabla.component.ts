@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+import { AllplayersService  } from '../../../../../src/app/services/allplayers.service';
+// import { PlayersService } from '../../../../services/players.service';
+import { take } from 'rxjs/operators';
+import { Players } from '../../../../interfaces/players';
+
+import { PagerService } from '../../../../services/index'
 @Component({
   selector: 'app-tabla',
   templateUrl: './tabla.component.html',
@@ -7,56 +13,117 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TablaComponent implements OnInit {
 
-  selectedImg;
-  imgs = [ {number: 1, url: '../../../../assets/TABLA SEMANAL DE RESULTADO GRUPO A1 SEMANA 1.jpg'},
-  // {number: 2, url: '../../../../assets/TABLA CENTRAL DE LAS TABLAS SEMANALES  DE RESULTADO.jpg'},
-  // {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO GRUPO A2 SEMANA 1.jpg'},
-  // {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO GRUPO B1 SEMANA 1.jpg'},
-  // {number: 2, url: '../../../../assets/TABLA CENTRAL DE LAS TABLAS SEMANALES  DE RESULTADO.jpg'},
-  // {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO GRUPO B2 SEMANA 1.jpg'},
-  // {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO ESTE 1.jpg'},
-  // {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO ESTE 2.jpg'},
-  // {number: 2, url: '../../../../assets/TABLA SEMANAL DE RESULTADO ESTE 3.jpg'},
-  // imgs = [ {number: 1, url: '../../../../assets/Tabla Wild Card Quiniela 2020 1.png'},
-  // {number: 2, url: '../../../../assets/Tabla Wild Card Quiniela 2020 2.png'},
-    // {number: 3, url: '../../../../assets/Tabla Wild Card Quiniela 2020 3.png'}
+  public players = [];
+  groups: any;
+  selectedGroup: any;
+  elarray: any;
+  // tslint:disable-next-line:no-inferrable-types
+  datesN: number = 10;
+  searchText: string;
+  playerAuxList = [];
+  counter: number;
+  n: number;
+  m: number;
+  // tslint:disable-next-line:no-inferrable-types
+  n1: number = 12;
+  // tslint:disable-next-line:no-inferrable-types
+  n10: number = 10;
+  public allItems: any[];
 
-  ];
+  // pager object
+  pager: any = {};
 
-// export class InfogShowComponent implements OnInit {
-//   selectedImg;
-//   imgs = [ {number: 1, url: '../../../../assets/CamisetasRonald2018.jpg'},
-//     {number: 2, url: '../../../../assets/VZLA EN MLB LIGA AMERICANA.jpg'},
-//     {number: 3, url: '../../../../assets/VZLA EN MLB LIGA NACIONAL.jpg'},
-//     {number: 4, url: '../../../../assets/VENEZOLANOS MLB NUEVOS EQUIPOS 2019.jpg'},
-//     {number: 5, url: '../../../../assets/VENEZOLANOS MLB NUEVOS EQUIPOS 2019 2.jpg'},
-//     {number: 6, url: '../../../../assets/VENEZOLANOS MLB NUEVOS EQUIPOS 2019 3.jpg'},
-//     {number: 7, url: '../../../../assets/VENEZOLANOS MLB NUEVOS EQUIPOS 2019 4.jpg'},
-//     {number: 8, url: '../../../../assets/JugadoresGLVZLAporEstados20181.jpg'},
-//     {number: 9, url: '../../../../assets/INFOSPRINGTNATIONALEST.jpg'},
-//     {number: 10, url: '../../../../assets/VZLAEQUIPOSNATIONALCENTRAL.jpg'},
-//     {number: 11, url: '../../../../assets/INFO SPRING T NATIONAL WEST.jpg'},
-//     {number: 12, url: '../../../../assets/INFO SPRING T AMERICAN ESTE.jpg'},
-//     {number: 13, url: '../../../../assets/INFO SPRING T AMERICAN CENTRAL.jpg'},
-//     {number: 14, url: '../../../../assets/INFO SPRING T AMERICAN WEST.jpg'},
-//     {number: 15, url: '../../../../assets/CamisetasRonald2018.jpg'},
-//     {number: 16, url: '../../../../assets/ALINEACION AMERICANA ESTE 2019.jpg'},
-//     {number: 17, url: '../../../../assets/ALINEACION AMERICANA CENTRAL 2019.jpg'},
-//     {number: 18, url: '../../../../assets/ALINEACION AMERICANA OESTE 2019.jpg'},
-//     {number: 19, url: '../../../../assets/ALINEACION NACIONAL ESTE 2019.jpg'},
-//     {number: 20, url: '../../../../assets/ALINEACION NACIONAL CENTRAL 2019.jpg'},
-//     {number: 21, url: '../../../../assets/ALINEACION NACIONAL OESTE 2019.jpg'}
-//   ];
+  // paged items
+  pagedItems: any[];
 
-  constructor() { }
+
+  isLoading: boolean;
+  jsonPlayers: string;
+
+  constructor(private playerService: AllplayersService, private pagerService: PagerService) { }
+  // constructor(private playerService: PlayersService, private pagerService: PagerService) { }
+
 
   ngOnInit() {
+    this.isLoading = true;
+    this.getPlayersMap();
+    console.log('Players', this.players);
+
+
+
   }
 
 
-  showMyImage(index) {
-    this.selectedImg = this.imgs[index].url;
+  // Convertir   el Array de Observables a un Array de Objetos.
+  // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
+  getPlayersMap() {
+    let InfoObsPlayer = this.playerService.getAllPlayersActives();
+    let index = 0;
+    for (let obs of InfoObsPlayer) {
+      obs.pipe(take(1)).subscribe(res => {
+        this.players.push(res);
+        // console.log('players', this.players);
+        if ((InfoObsPlayer.length - 1) === index) {
+          this.players = this.players.map(player => {
+            const newPlayer: Players = {};
+            Object.assign(newPlayer, player.people[0]);
+            return newPlayer;
+          });
+         // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
+
+         this.players = this.players.filter(player =>
+          player.stats && player.active !=='true' && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0)
+          // player.stats && player.stats.length !== 0 && player.primaryPosition.name !=='Pitcher' && player.stats[0].splits && player.stats[0].splits.length !== 0)
+          
+            // se ordenan por nombre
+            .sort(({ lastName: a }, { lastName: b }) => {
+              if (a > b) {
+                return 1;
+              } else if (a < b) {
+                return -1;
+              } else if (a === b) {
+                return 0;
+              }
+            });
+            this.allItems = this.players;
+            this.setPage(1);
+          this.isLoading = false;
+        }
+        index++;
+      });
+    }
+    // set items to json response
+    // this.allItems = InfoObsPlayer;
+
+    // initialize to page 1
+    // this.setPage(1);
+
+    // console.log('playersNVO', this.players);
+    const playerstxt1 = this.players
+
+      }
+
+
+  onSearchChange() {
+    // console.log('search', this.searchText);
+
+    if (this.searchText) {
+      this.allItems = this.players.filter(player =>
+        player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
+        (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
+        (player.nickName && player.nickName.toLowerCase().includes(this.searchText)))
+        // ;this.setPage(this.pager.currentPage);
+      } else {
+          this.allItems = this.players;
+          // this.setPage(this.pager.currentPage);
+        }
+        return this.allItems;
+      }
+  setPage(page: number) {
+    // get pager object from service
+    this.pager = this.pagerService.getPager2(this.allItems.length, page);
+
+    // get current page of items
+    this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
   }
-
-
 }

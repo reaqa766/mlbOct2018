@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import * as moment from 'moment';
-import { DataPlayersService } from '../../../../services/data-players.service';
+import { PlayersService } from '../../../../services/players.service';
 import { take } from 'rxjs/operators';
 import { Players } from '../../../../interfaces/players';
 
-// tslint:disable-next-line:semicolon
 import { PagerService } from '../../../../services/index'
 
 @Component({
@@ -16,437 +14,115 @@ import { PagerService } from '../../../../services/index'
 export class HrQuinielaComponent implements OnInit {
 
   public players = [];
-  public playersSort = [];
   groups: any;
   selectedGroup: any;
   elarray: any;
-  datesN = 10;
+  // tslint:disable-next-line:no-inferrable-types
+  datesN: number = 10;
   searchText: string;
   playerAuxList = [];
   counter: number;
   n: number;
   m: number;
-  n1 = 12;
-  n10 = 5;
-  dia = moment().format('YYYY-MM-DD');
+  // tslint:disable-next-line:no-inferrable-types
+  n1: number = 12;
+  // tslint:disable-next-line:no-inferrable-types
+  n10: number = 10;
   public allItems: any[];
-  gamePlays: string;
 
   // pager object
   pager: any = {};
 
   // paged items
   pagedItems: any[];
-  fechaHoy: Date;
 
 
   isLoading: boolean;
-  EQUIPOS = [
-    { code: 1, totalDiario:0, name: 'Toros de Carabobo', liga: 'Grupo B', jugadores:[
-      668804,592206,593428,592178,621121,605397,571970,521692,665487,666971,
-      660623,518692,665489,453286,] },
-    // { code: 2, totalDiario:0, name: 'San Cristobal Rockies', liga: 'Grupo A', jugadores:[
-    //   665487,457763,660271,571448,592662,554430,593160,
-    //   594807,621566,543760,656941,669203,641313,571745, ] },
-    // { code: 3, totalDiario:0, name: 'La Familia', liga: 'Grupo A', jugadores:[
-    //   621111,628711,608070,545341,657656,614177,570731,
-    //   453286,575929,657077,646240,645277,592332,553993,] },
-      // 545361,594798,596019,670541,608070,595943,607208,553993,
-      // 502110,624424,521230,621242,641598,621111, ] },
-    // { code: 4, totalDiario:0, name: 'Los Quintereños', liga: 'Norte', jugadores:[
-    //   665742,503556,521692,514888,408234,656669,543768,666200,640457,
-    //   641154,547943,543135,570482,592518,] },
-    // { code: 5, totalDiario:0, name: 'Perfume Fe y Alegria', liga: 'Norte', jugadores:[
-    //   425794,592663,519317,665487,571980,605483,592450,
-    //   608337,443558,621043,621052,518934,571970,457759,] },
-    // { code: 6, totalDiario:0, name: 'The Lyons', liga: 'Norte', jugadores:[
-    //   543037,545333,543807,624428,666182,621550,547989,
-    //   488726,547973,575929,592206,592332,547180,595879, ] },
-    // { code: 7, totalDiario:0, name: 'Team Alcala', liga: 'Sur', jugadores:[
-    //   500871,605400,656427,592206,669203,669374,663656,
-    //   656775,670541,646240,668227,628317,593428,425877,  ] },
-    { code: 4, totalDiario:0, name: 'Super Leones', liga: 'Grupo A', jugadores:[
-      547180,554430,514888,547989,665742,608070,607208,
-      545341,673357,605397,660271,621111,592206,521692, ] },
-    // { code: 5, totalDiario:0, name: 'Michis Club', liga: 'Grupo B', jugadores:[
-    //   547973,408234,668731,488726,666182,646240,425844,
-    //   543510,621043,456501,516782,605141,663776,665489, ] },
-    // { code: 6, totalDiario:0, name: 'Las Vegas', liga: 'Grupo B', jugadores:[
-    //   608369,670541,592663,608337,543807,543760,502671, 
-    //   592518,453286,645277,521230,596115,608336,605400,] },
-    // { code: 11, totalDiario:0, name: 'YankeesVzla', liga: 'Sur', jugadores:[
-    //   605137,514917,446372,444482,544369,518792,542583,
-    //   641658,592178,518516,596146,607192,467092,572020,                    ] },
-    // { code: 12, totalDiario:0, name: 'Zamuros', liga: 'Sur', jugadores:[
-    //   592450,518692,594798,518934,657077,572971,640457,
-    //   656302,595879,571448,521692,506433,571970,663757, ] },
-    // { code: 13, totalDiario:0, name: 'Los Frailes', liga: 'Este', jugadores:[
-    //   630105,592332,543037,547943,500871, 
-    //   547989,592178,608337,547180,608336,572287,443558,665487,592885,              ] },
-    // { code: 14, totalDiario:0, name: 'The Bay', liga: 'Este', jugadores:[
-    //   592450,608324,605483,595879,621244,592663,457759,
-    //   502110,453286,646240,545361,656555,596115,607644, ] },
-    // { code: 15, totalDiario:0, name: 'Robaseñas', liga: 'Este', jugadores:[
-    //   605540,621043,592662,596142,621566,594798,514888,
-    //   543760,571448,656302,660670,665120,543063,621035, ] },
-    // { code: 7, totalDiario:0, name: 'Toros de Pedregal', liga: 'Grupo B', jugadores:[
-    //   630105,605397,642715,606192,669203,592518,665742,
-    //   592206,665487,660271,646240,665489,467092,641816, ] },
-    // { code: 8, totalDiario:0, name: 'KenGriffeyJr', liga: 'Grupo A', jugadores:[
-    //   502110,621111,666182,650391,554430,656427,656941,
-    //   607208,457763,608070,458015,642547,593428,656775,  ] }
-    // { code: 18, totalDiario:0, name: 'Diablos Rojos', liga: 'Este', jugadores:[
-    //   605400,628711,458681,657077,503556,518934,571976,
-    //   670541,641355,571970,607192,571745,521692,570482, ] }
-  ];
+  jsonPlayers: string;
 
-  // EQUIPOS = [
-  //   { code: 1, totalDiario:0, name: 'Toros de Carabobo', liga: 'Norte', jugadores:[
-  //     660670,608336,666969,668804,592836,527038,669257,605397,593428,542583,
-  //     669432,518692,665489,607074,] },
-  //   { code: 2, totalDiario:0, name: 'San Cristobal Rockies', liga: 'Norte', jugadores:[
-  //     605141,457763,660271,571448,641313,554430,593160,
-  //     592626,621566,543760,642547,641820,506433,571745, ] },
-  //   { code: 3, totalDiario:0, name: 'La Familia', liga: 'Norte', jugadores:[
-  //     657077,594798,608070,545341,607208,628711,570731,
-  //     477132,596019,605400,646240,645277,571466,502110,] },
-  //     // 545361,594798,596019,670541,608070,595943,607208,553993,
-  //     // 502110,624424,521230,621242,641598,621111, ] },
-  //   { code: 4, totalDiario:0, name: 'Los Quintereños', liga: 'Norte', jugadores:[
-  //     665742,503556,521692,514888,408234,656669,543768,666200,640457,
-  //     641154,547943,543135,570482,592518,] },
-  //   { code: 5, totalDiario:0, name: 'Perfume Fe y Alegria', liga: 'Norte', jugadores:[
-  //     425794,592663,519317,665487,571980,605483,592450,
-  //     608337,443558,621043,621052,518934,571970,457759,] },
-  //   { code: 6, totalDiario:0, name: 'The Lyons', liga: 'Norte', jugadores:[
-  //     543037,545333,543807,624428,666182,621550,547989,
-  //     488726,547973,575929,592206,592332,547180,595879, ] },
-  //   { code: 7, totalDiario:0, name: 'Team Alcala', liga: 'Sur', jugadores:[
-  //     500871,605400,656427,592206,669203,669374,663656,
-  //     656775,670541,646240,668227,628317,593428,425877,  ] },
-  //   { code: 8, totalDiario:0, name: 'Super Leones', liga: 'Sur', jugadores:[
-  //     547180,596019,514888,547989,665742,608070,623352,
-  //     650333,608385,669456,660271,621111,575929,554430, ] },
-  //   { code: 9, totalDiario:0, name: 'Michis Club', liga: 'Sur', jugadores:[
-  //     547973,477132,608324,665487,621043,650402,425844,
-  //     543510,502110,456501,543685,605141,669242,665489, ] },
-  //   { code: 10, totalDiario:0, name: 'Las Vegas', liga: 'Sur', jugadores:[
-  //     608369,521230,592663,608336,605400,543760,502671, 
-  //     592518,453286,645277,660670,596115,545333,607208,] },
-  //   { code: 11, totalDiario:0, name: 'YankeesVzla', liga: 'Sur', jugadores:[
-  //     605137,514917,446372,444482,544369,518792,542583,
-  //     641658,592178,518516,596146,607192,467092,572020,                    ] },
-  //   { code: 12, totalDiario:0, name: 'Zamuros', liga: 'Sur', jugadores:[
-  //     592450,518692,594798,518934,657077,572971,640457,
-  //     656302,595879,571448,521692,506433,571970,663757, ] },
-  //   { code: 13, totalDiario:0, name: 'Los Frailes', liga: 'Este', jugadores:[
-  //     630105,592332,543037,547943,500871, 
-  //     547989,592178,608337,547180,608336,572287,443558,665487,592885,              ] },
-  //   { code: 14, totalDiario:0, name: 'The Bay', liga: 'Este', jugadores:[
-  //     592450,608324,605483,595879,621244,592663,457759,
-  //     502110,453286,646240,545361,656555,596115,607644, ] },
-  //   { code: 15, totalDiario:0, name: 'Robaseñas', liga: 'Este', jugadores:[
-  //     605540,621043,592662,596142,621566,594798,514888,
-  //     543760,571448,656302,660670,665120,543063,621035, ] },
-  //   { code: 16, totalDiario:0, name: 'Toros de Pedregal', liga: 'Este', jugadores:[
-  //     514917,477132,596019,608385,669203,592518,665742,
-  //     592206,668804,660271,545333,665489,575929,506433, ] },
-  //   { code: 17, totalDiario:0, name: 'KenGriffeyJr', liga: 'Este', jugadores:[
-  //     677551,621111,642547,457763,641933,669432,554430,
-  //     605141,609275,608070,593428,518692,593160,645277,  ] },
-  //   { code: 18, totalDiario:0, name: 'Diablos Rojos', liga: 'Este', jugadores:[
-  //     605400,628711,458681,657077,503556,518934,571976,
-  //     670541,641355,571970,607192,571745,521692,570482, ] }
-  // ];
-  equipo_actual: any;
-  players_definidos: any[];
-  BBplayers: any[];
-  buscando: boolean;
-  playersP: any[];
-  allItemsP: any[];
+  constructor(private playerService: PlayersService, private pagerService: PagerService) { }
 
-
-  constructor(private playerService: DataPlayersService, private pagerService: PagerService) { }
 
   ngOnInit() {
-    // console.log('Jugadores', this.players);
-    // console.log('dia', this.dia);
-
-
     this.isLoading = true;
     this.getPlayersMap();
+    console.log('Players', this.players);
+
+
+
   }
 
 
-// Convertir el Array de Observables a un Array de Objetos.
-// Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json)
-// y colocarlos en un nuevo Array
-async getPlayersMap() {
-  this.players = [];
-  this.allItems = [];
-  this.setPage(1);
-  const InfoObsPlayer = this.playerService.getAllPlayersDailyQuinPitchers(this.equipo_actual ? this.equipo_actual.jugadores : []);
-  let index = 0;
-  await new Promise((resolve, reject) => {
+  // Convertir   el Array de Observables a un Array de Objetos.
+  // Seleccionar los items necesarios del nuevo Array (con todo el contenido del Json) y colocarlos en un nuevo Array
+  getPlayersMap() {
+    let InfoObsPlayer = this.playerService.getAllPlayersActives();
+    let index = 0;
     for (let obs of InfoObsPlayer) {
       obs.pipe(take(1)).subscribe(res => {
         this.players.push(res);
-  
+        // console.log('players', this.players);
         if ((InfoObsPlayer.length - 1) === index) {
-  
           this.players = this.players.map(player => {
             const newPlayer: Players = {};
             Object.assign(newPlayer, player.people[0]);
             return newPlayer;
           });
-          // console.log('Original players: ', this.players);
-          // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
-          this.players = this.players.filter(player =>{
-  
-            // if(player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0){
-            if(player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0 ){
-              for(let i = 0; i < player.stats[0].splits.length; i++){
-                if(player.stats[0].splits[i].date === this.dia){
-                  player.indexStatDate = i;
-                  return true;
-                }
+         // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
+
+         this.players = this.players.filter(player =>
+          player.stats && player.stats.length !== 0 && player.primaryPosition.name && player.stats[0].splits && player.stats[0].splits.length !== 0)
+          // player.stats && player.stats.length !== 0 && player.primaryPosition.name !=='Pitcher' && player.stats[0].splits && player.stats[0].splits.length !== 0)
+          
+            // se ordenan por nombre
+            .sort(({ lastName: a }, { lastName: b }) => {
+              if (a > b) {
+                return 1;
+              } else if (a < b) {
+                return -1;
+              } else if (a === b) {
+                return 0;
               }
-              return false;
-            }
-          })
-          // se ordenan por nombre
-          .sort(({lastName: a}, {lastName: b}) => {
-            if (a > b) {
-              return 1;
-            } else if (a < b) {
-              return -1;
-            } else if (a === b) {
-              return 0;
-            }
-  
-          });
-          // console.log('This players final: ', this.players);
-  
-  
-          this.allItems = this.players;
-          this.BBplayers = this.players;
-          this.setPage(1);
-          resolve(true);
-          // console.log('allItems', this.allItems);
-  
-          // this.BBplayers = this.BBplayers.filter(bbplayer =>{
-  
-          //   // if(player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0){
-          //   if(bbplayer.stats && bbplayer.stats.length !== 0 && bbplayer.stats[0].splits && bbplayer.stats[0].splits.length !== 0 ){
-          //     for(let i = 0; i < bbplayer.stats[0].splits.length; i++){
-          //       if(bbplayer.id === this.EQUIPOS) {
-          //         bbplayer.indexStatCode = bbplayer.id;
-          //         return true;
-          //       }
-          //     }
-          //     return false;
-          //   }
-          // })
-  
-  
-          }
-          index++;
-  
+            });
+            this.allItems = this.players;
+            this.setPage(1);
+          this.isLoading = false;
+        }
+        index++;
       });
     }
+    // set items to json response
+    // this.allItems = InfoObsPlayer;
 
-  });
+    // initialize to page 1
+    // this.setPage(1);
 
-  
-  
-  if (this.equipo_actual) {
-    
-    this.allItems = this.players.filter((player: Players) =>
-    (this.equipo_actual.jugadores as Array<number>).includes(player.id)
-    );
+    console.log('playersNVO', this.players);
+    const playerstxt1 = this.players
 
-    this.equipo_actual.totalDiario = 0;
-    for(let player of this.allItems) {
-      const total = (player.stats[0].splits[player.indexStatDate].stat.wins * 3) +
-      (player.stats[0].splits[player.indexStatDate].stat.losses * -2 ) +
-      (player.stats[0].splits[player.indexStatDate].stat.saves * 2) + 
-      (player.stats[0].splits[player.indexStatDate].stat.holds * 1 ) +
-      (player.stats[0].splits[player.indexStatDate].stat.strikeOuts * 1)+
-      (player.stats[0].splits[player.indexStatDate].stat.caughtStealing * 1) +
-      (player.stats[0].splits[player.indexStatDate].stat.homeRuns * -1 )+
-      (player.stats[0].splits[player.indexStatDate].stat.stolenBases * -1) +
-      (player.stats[0].splits[player.indexStatDate].stat.baseOnBalls * -1);
-      console.log(total);
-      console.log('Jugadores', this.allItems);
-
-      
-      player.totalDiario = total;
-      this.equipo_actual.totalDiario += player.totalDiario;
-      
-    }
-      // this.setPage(this.pager.currentPage);
-
-  } else {
-    this.allItems = this.players;
-    // this.setPage(this.pager.currentPage);
-  }
-  
-  this.isLoading = false;
-  this.buscando = false;
-}
-  
-
-  onSearchDate(fecha: { srcElement: { value: string; }; }) {
-    // console.log("FECHA", fecha.srcElement.value);
-    this.dia = fecha.srcElement.value;
-    this.getPlayersMap();
-}
-
-onSearchChange(team: any) {
-  this.buscando = true;
-  this.equipo_actual = team;
-  this.getPlayersMap();
+      }
 
 
-}
+  onSearchChange() {
+    // console.log('search', this.searchText);
 
-
+    if (this.searchText) {
+      this.allItems = this.players.filter(player =>
+        player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
+        (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
+        (player.nickName && player.nickName.toLowerCase().includes(this.searchText)));
+        this.setPage(this.pager.currentPage);
+      } else {
+          this.allItems = this.players;
+          this.setPage(this.pager.currentPage);
+        }
+        return this.allItems;
+      }
   setPage(page: number) {
-
     // get pager object from service
-    this.pager = this.pagerService.getPager(this.allItems.length, page);
+    this.pager = this.pagerService.getPager2(this.allItems.length, page);
 
     // get current page of items
     this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
   }
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-  // VIEJO TS 30 marzo 2021
-
-//   public players = [];
-//   public players2 = [];
-//   public playersSort = [];
-//   groups: any;
-//   selectedGroup: any;
-//   elarray: any;
-//   datesN = 10;
-//   searchText: string;
-//   playerAuxList = [];
-//   counter: number;
-//   n: number;
-//   m: number;
-//   n1 = 12;
-//   n10 = 5;
-//   dia = new Date(new Date().getFullYear(),new Date().getMonth(), new Date().getDate() - 1);
-//   public allItems: any[];
-//   public allItems2: any[];
-//   gamePlays: string;
-
-//   pager: any = {};
-
-//   pagedItems: any[];
-//   fechaHoy: Date;
-
-
-//   isLoading: boolean;
-
-//   constructor(private playerService: DataPlayersService,  private pagerService: PagerService) { }
-
-//   ngOnInit() {
-//     this.isLoading = true;
-//     this.getPlayersMap();
-//   }
-
-// getPlayersMap() {
-//   this.players = [];
-//   this.allItems = [];
-//   this.setPage(1);
-//   const InfoObsPlayer = this.playerService.getAllPlayersDailyQExtra();
-//   let index = 0;
-//   for (let obs of InfoObsPlayer) {
-//     obs.pipe(take(1)).subscribe(res => {
-//       this.players.push(res);
-
-//       if ((InfoObsPlayer.length - 1) === index) {
-
-//         this.players = this.players.map(player => {
-//           const newPlayer: Players = {};
-//           Object.assign(newPlayer, player.people[0]);
-//           return newPlayer;
-//         });
-//         this.players = this.players.filter(player =>{
-//           if(player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0){
-//             for(let i = 0; i < player.stats[0].splits.length; i++){
-//               if( player.stats[0].splits[i].stat!== 0 && player.stats[0].splits[i].date === this.dia){
-//                 player.indexStatDate = i;
-//                 return true;
-//               }
-//             }
-//             return false;
-//           }
-//         })
-//         .sort(({fullName: a}, {fullName: b}) => {
-//           if (a > b) {
-//             return 1;
-//           } else if (a < b) {
-//             return -1;
-//           } else if (a === b) {
-//             return 0;
-//           }
-
-//         });
-
-
-
-//         this.allItems = this.players;
-//         this.setPage(1);
-//         this.isLoading = false;
-//         }
-//         index++;
-
-//     });
-//   }
-
-//   }
-
-//   onSearchDate(fecha) {
-//     this.dia= fecha.srcElement.value;
-//     this.getPlayersMap();
-// }
-
-//   onSearchChange() {
-//     if (this.searchText) {
-//       this.allItems = this.players.filter(player =>
-//         player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
-//         (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
-//         (player.nickName && player.nickName.toLowerCase().includes(this.searchText)));
-//         this.setPage(this.pager.currentPage);
-//       } else {
-//           this.allItems = this.players;
-//           this.setPage(this.pager.currentPage);
-
-//         }
-//         return this.allItems;
-
-//       }
-//   setPage(page: number) {
-
-//     this.pager = this.pagerService.getPager(this.allItems.length, page);
-
-//     this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
-//   }
-
-// }
