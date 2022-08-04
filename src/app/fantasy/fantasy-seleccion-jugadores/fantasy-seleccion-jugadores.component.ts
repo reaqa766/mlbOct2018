@@ -266,11 +266,11 @@ export class FantasySeleccionJugadoresComponent implements OnInit {
     if (this.searchText) {
       this.allItems = this.allItems.filter(({jugador, equipo}) =>
         !equipo &&
-        (jugador.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
+        // (jugador.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
         (jugador.fullName && jugador.fullName.toLowerCase().includes(this.searchText)) ||
         (jugador.primaryPosition.abbreviation && jugador.primaryPosition.abbreviation.toLowerCase().includes(this.searchText)) ||
         (jugador.primaryPosition.name && jugador.primaryPosition.name.toLowerCase().includes(this.searchText)) ||
-        (jugador.nickName && jugador.nickName.toLowerCase().includes(this.searchText))));
+        (jugador.nickName && jugador.nickName.toLowerCase().includes(this.searchText)));
       this.setPage(this.pager.currentPage);
     } else {
       this.allItems = this.ligaSeleccionada.jugadores.filter((({equipo} )=> !equipo));

@@ -143,7 +143,7 @@ export class PByteamComponent implements OnInit {
     this.buscando = false;
     if (team) {
       this.allItems = this.players.filter(player =>
-        player.stats[0].splits[0].team.name.toLowerCase().includes(team.toLowerCase()) ||
+        // player.stats[0].splits[0].team.name.toLowerCase().includes(team.toLowerCase()) ||
         player.fullName.toLowerCase().includes(team.toLowerCase()));
       this.setPage(this.pager.currentPage);
     } else {

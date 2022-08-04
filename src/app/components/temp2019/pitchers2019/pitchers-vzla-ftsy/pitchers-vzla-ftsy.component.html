@@ -16,8 +16,7 @@
 <div *ngIf="allItems">
   <input #busqueda [(ngModel)]="searchText" (input)="onSearchChange()" placeholder="Buscar Jugador..." class="advancedSearchTextbox">
   <div *ngIf="!allItems[0]" class="error_search d-flex justify-content-center">
-    <h4 class="error_message"> <strong>'{{searchText}}'</strong> El Jugador no existe. Solo busque por nombre, sobrenombre y
-      equipo</h4>
+    <h4 class="error_message"> <strong>'{{searchText}}'</strong> El Jugador no existe. Solo busque en minúsculas, por nombre y/o apellido </h4>
   </div>
 
   <ng-container *ngIf="!(pager.allItems === 0)">

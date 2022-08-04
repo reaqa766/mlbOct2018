@@ -102,7 +102,7 @@ export class BioActives2019Component implements OnInit {
   onSearchChange() {
     if (this.searchText) {
       this.allItems = this.players.filter(player =>
-        player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
+        // player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
         (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
         (player.nickName && player.nickName.toLowerCase().includes(this.searchText)) ||
         (player.primaryPosition.abbreviation && player.primaryPosition.abbreviation.toLowerCase().includes(this.searchText)) ||
