@@ -1,10 +1,517 @@
-.daily-title {
+
+.actives-title {
+  color: antiquewhite;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0.15rem auto 0;
+  padding: .5rem 0;
+  /* background-color: rgba(3, 2, 2, 0.5); */
+  text-shadow: 2px 2px 8px #111;
+  width: auto;
+  height: 1.75em;
+  border-radius: 7px;
+}
+.title-position{
+  color: antiquewhite;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 10%;
+  margin-bottom: 0;
+}
+
+
+.tarjeta_encabezado {
+  width: 85%;
+  margin: 0.2em auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 5px;
+  grid-template-rows: 1fr;
+  grid-row-gap: 5px;
+  /* border: solid black 2px; */
+}
+.tarjeta_izquierda {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  color: white;
+  border: solid white 2px;
+  background-color: rgb(20, 149, 167);
+
+
+
+  display: grid;
+  grid-template-columns: repeat(10, 1fr) ;
+  grid-template-rows: 1fr;
+  grid-gap: 5px;
+}
+.player_pict2 {
+  width: 3rem;
+  box-shadow: 2px 2px 4px black;
+  /* margin-left: 3rem; */
+}
+
+.items_estadisticas {
+  text-align: center;
+  font-weight: 500;
+  border: solid black .15rem;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-row-gap: 5px;
+  background-color: rgba(2, 2, 2, 0.513);
+
+
+}
+
+.foto {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  color: white;
+  margin-left: 7pxß;
+
+
+}
+.avg_span {
+
+  grid-column: 1/2;
+  grid-row: 1/2;
+  font-size: 0.75em;
+  background-color: black;
+  height: 2rem;
+  padding-top: 0.5rem;
+}
+.avg_span2 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  font-size: 0.95em;
+  height: 3rem;
+  
+
+
+}
+.link_player {
+  grid-column: 1/10;
+  grid-row: 2/3;
+  color: rgb(254, 252, 252);
+  font-size: 0.75em;
+  text-align: center;
+  font-weight: bold;
+  /* align-self: center; */
+  width: 3rem;
+  padding-bottom: 10px;
+  margin-top: 17px;
+  /* margin-left: 2rem; */
+  text-shadow: 1px 2px 1px #111;
+
+  
+
+
+}
+.posicion {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  color: white;
+  align-self: start;
+  border: solid black 2px;
+  background-color:red;
+
+}
+.avg {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  color: white;
+  border: solid black 2px;
+
+}
+.LNac {
+  grid-column: 2/4;
+  grid-row: 1/2;
+
+}
+.seleccion {
+  display: block;
+
+}
+.seleccion2 {
+  display: none;
+
+}
+
+
+
+
+.tarjeta_derecha {
+  background-color: yellow;
+  grid-column: 2/3;
+  grid-row: 1/2;
+
+
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr; */
+}
+
+
+.advancedSearchTextbox{
+  color: rgb(2, 1, 0);
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 10%;
+  margin-bottom: 0;
+
+}
+
+
+.error_search {
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  color: antiquewhite;
+  background-color: rgba(12, 10, 9, 0.75);
+
+}
+.fa-baseball-ball {
+  font-size: 10rem;
+  margin: 5% 40% 0 !important;
+  color: rgba(80, 57, 43, 0.40);
+}
+.spiner_load {
+  font-size: 5rem;
+  margin: 0 35% !important;
+  color: rgba(80, 57, 43, 0.95);
+}
+.link_player {
+text-decoration:none;
+color: antiquewhite;
+}
+.paginator {
+  font-size: 0.75rem;
+  width: 20%;
+  margin: auto;
+}
+
+/* @media only screen and (min-width: 330px ) and (max-width: 768px)  {
+
+  .actives-title {
+    color: antiquewhite;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.15rem auto 0;
+    padding: .5rem 0;
+    text-shadow: 2px 2px 8px #111;
+    width: auto;
+    height: 1.75em;
+    border-radius: 7px;
+  }
+  .title-position{
+    color: antiquewhite;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 10%;
+    margin-bottom: 0;
+  }
+
+
+  .tarjeta_encabezado {
+    width: 95%;
+    margin: 0.2em auto;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-row-gap: 5px;
+    border: solid black 2px;
+  }
+  .tarjeta_izquierda {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    color: white;
+    border: solid white 2px;
+    background-color: rgb(20, 149, 167);
+
+
+    display: grid;
+    grid-template-columns: repeat(10, 1fr) !important;
+    grid-template-rows: 1fr;
+  }
+  .player_pict2 {
+    width: 3rem;
+    box-shadow: 2px 2px 4px black;
+  }
+
+  .items_estadisticas {
+    text-align: center;
+    font-weight: 500;
+    border: solid black .15rem;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-row-gap: 5px;
+    background-color: rgba(2, 2, 2, 0.513);
+
+
+  }
+
+  .foto {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    color: white;
+
+
+  }
+  .avg_span {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: 1em;
+    background-color: black;
+  }
+  .avg_span2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    font-size: 1em;
+  }
+  .link_player {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 500;
+    width: 3rem;
+    padding-bottom: 10px;
+      text-decoration:none;
+      color: antiquewhite;
+
+  }
+  .posicion {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    color: white;
+    align-self: start;
+    border: solid black 2px;
+    background-color:red;
+
+  }
+  .avg {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    color: white;
+    border: solid black 2px;
+
+  }
+  .seleccion {
+    display: none !important;
+  }
+  .seleccion2 {
+    display: inline-block;
+
+  }
+  .LNac {
+    grid-column: 2/4;
+    grid-row: 4/5;
+
+  }
+
+
+
+
+  .tarjeta_derecha {
+    background-color: yellow;
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+
+  }
+
+
+  .advancedSearchTextbox{
+    color: rgb(2, 1, 0);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 10%;
+    margin-bottom: 0;
+
+  }
+
+
+  .error_search {
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    color: antiquewhite;
+    background-color: rgba(12, 10, 9, 0.75);
+
+  }
+  .fa-baseball-ball {
+    font-size: 10rem;
+    margin: 5% 40% 0 !important;
+    color: rgba(80, 57, 43, 0.40);
+  }
+  .spiner_load {
+    font-size: 5rem;
+    margin: 0 35% !important;
+    color: rgba(80, 57, 43, 0.95);
+  }
+
+  .paginator {
+    font-size: 0.75rem;
+    width: 20%;
+    margin: auto;
+  }
+} */
+
+/* @media only screen and (min-width: 200px ) and (max-width: 329px)  {
+
+  .actives-title {
+    color: antiquewhite;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0.15rem auto 0;
+    padding: .5rem 0;
+    text-shadow: 2px 2px 8px #111;
+    width: auto;
+    height: 1.75em;
+    border-radius: 7px;
+  }
+  .title-position{
+    color: antiquewhite;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 10%;
+    margin-bottom: 0;
+  }
+
+
+  .tarjeta_encabezado {
+    width: 95%;
+    margin: 0.2em auto;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-row-gap: 5px;
+    border: solid black 2px;
+  }
+  .tarjeta_izquierda {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    color: white;
+    border: solid white 2px;
+    background-color: rgb(20, 149, 167);
+
+
+    display: grid;
+    grid-template-columns: repeat(10, 1fr) !important;
+    grid-template-rows: 1fr; */
+    /* grid-gap: 10px; */
+  /* }
+  .player_pict2 {
+    width: 11rem;
+    box-shadow: 2px 2px 4px black; */
+    /* margin-left: 3rem; */
+  /* }
+
+  .items_estadisticas {
+    text-align: center;
+    font-weight: 500;
+    border: solid black .15rem;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-row-gap: 5px;
+    background-color: rgba(2, 2, 2, 0.513);
+
+
+  }
+
+  .foto {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    color: white;
+
+
+  }
+  .avg_span {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: .75em;
+    background-color: black;
+  }
+  .avg_span2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    font-size: .75em;
+  }
+  .link_player {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 500; */
+    /* align-self: center; */
+    /* width: 11rem;
+    padding-bottom: 10px; */
+    /* margin-left: 2rem; */
+      /* text-decoration:none;
+      color: antiquewhite;
+
+  }
+  .posicion {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    color: white;
+    align-self: start;
+    border: solid black 2px;
+    background-color:red;
+
+  }
+  .avg {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    color: white;
+    border: solid black 2px;
+
+  }
+  .seleccion {
+    display: none !important;
+  }
+  .seleccion2 {
+    display: inline-block;
+
+  }
+  .LNac {
+    grid-column: 2/4;
+    grid-row: 4/5;
+
+  }
+  .paginator {
+    font-size: 0.5rem;
+    width: 15%;
+    margin: auto;
+  } */
+/* } */
+
+
+
+
+
+
+/* ANTIGUO CSS LIGA FANTASIA 
+
+/* .daily-title {
   color: antiquewhite;
   font-size: 1rem;
   text-align: center;
   margin: 0 auto;
   padding: 0 0.5em 0.4em;
-  /* background-color: rgba(19, 12, 12, 0.5); */
   text-shadow: 2px 2px 8px #111;
   width: fit-content;
   height: 1.75em;
@@ -77,7 +584,6 @@
   font-size: 1rem;
   text-align: center;
   margin: 0 auto;
-  /* background-color: rgba(19, 12, 12, 0.5); */
   text-shadow: 2px 2px 8px #111;
   width: fit-content;
   height: 1.75em;
@@ -85,15 +591,6 @@
   padding: 0 0.5em 0.4em;
   cursor: pointer;
 }
-/* input[type="date"]:before {
-  content: attr(placeholder) !important;
-  color: #aaa;
-  margin-right: 0.5em;
-}
-input[type="date"]:focus:before,
-input[type="date"]:valid:before {
-  content: "";
-} */
 .points {
   color: black;
   background-color: white;
@@ -115,8 +612,6 @@ input[type="date"]:valid:before {
 .advancedSearchDatetbox {
   color: rgb(2, 1, 0);
   font-size: 0.75rem;
-  /* font-weight: bold; */
-  /* margin: 1% 0 2% 1%; */
   width: fit-content;
   border-radius: 6px;
 }
@@ -269,7 +764,6 @@ th {
     font-size: 1rem;
     text-align: center;
     margin: 0 auto;
-    /* background-color: rgba(19, 12, 12, 0.5); */
     text-shadow: 2px 2px 8px #111;
     width: fit-content;
     height: 1.75em;
@@ -280,8 +774,6 @@ th {
   .advancedSearchDatetbox {
     color: rgb(2, 1, 0);
     font-size: 0.75rem;
-    /* font-weight: bold; */
-    /* margin: 2% 0 2% 2%; */
   }
 
   .error_search {
@@ -377,7 +869,6 @@ th {
     text-align: center;
     margin: 0 auto;
     padding: 0 0.5em 0.4em;
-    /* background-color: rgba(19, 12, 12, 0.5); */
     text-shadow: 2px 2px 8px #111;
     width: fit-content;
     height: 1.75em;
@@ -391,8 +882,6 @@ th {
   .advancedSearchDatetbox {
     color: rgb(2, 1, 0);
     font-size: 0.75rem;
-    /* font-weight: bold; */
-    /* margin: 2% 0 2% 2%; */
   }
 
   .error_search {
@@ -501,7 +990,6 @@ th {
     text-align: center;
     margin: 0 auto;
     padding: 0 0.15em 0.4em;
-    /* background-color: rgba(19, 12, 12, 0.5); */
     text-shadow: 2px 2px 8px #111;
     width: fit-content;
     height: 1.75em;
@@ -511,8 +999,6 @@ th {
   .advancedSearchDatetbox {
     color: rgb(2, 1, 0);
     font-size: 0.75rem;
-    /* font-weight: bold; */
-    /* margin: 2% 0 2% 2%; */
   }
 
   .error_search {
@@ -622,7 +1108,6 @@ th {
     text-align: center;
     margin: 0 auto;
     padding: 0 0.5em 0.4em;
-    /* background-color: rgba(19, 12, 12, 0.5); */
     text-shadow: 2px 2px 8px #111;
     width: fit-content;
     height: 1.75em;
@@ -632,8 +1117,6 @@ th {
   .advancedSearchDatetbox {
     color: rgb(2, 1, 0);
     font-size: 1em;
-    /* font-weight: bold; */
-    /* margin: 0 0 1% 2%; */
   }
 
   .error_search {
@@ -711,7 +1194,6 @@ th {
     text-align: center;
     margin: 0 auto;
     padding: 0 0.5em 0.4em;
-    /* background-color: rgba(19, 12, 12, 0.5); */
     text-shadow: 2px 2px 8px #111;
     width: fit-content;
     height: 1.75em;
@@ -721,8 +1203,6 @@ th {
   .advancedSearchDatetbox {
     color: rgb(2, 1, 0);
     font-size: 0.75rem;
-    /* font-weight: bold; */
-    /* margin: 2% 0 2% 2%; */
   }
 
   .error_search {
@@ -831,7 +1311,6 @@ th {
     text-align: center;
     margin: 0 auto;
     padding: 0 0.5em 0.4em;
-    /* background-color: rgba(19, 12, 12, 0.5); */
     text-shadow: 2px 2px 8px #111;
     width: fit-content;
     height: 1.75em;
@@ -841,8 +1320,6 @@ th {
   .advancedSearchDatetbox {
     color: rgb(2, 1, 0);
     font-size: 1em;
-    /* font-weight: bold; */
-    /* margin: 1% 0 1% 2%; */
   }
 
   .error_search {
@@ -919,7 +1396,6 @@ th {
     text-align: center;
     margin: 0 auto;
     padding: 0 0.5em 0.4em;
-    /* background-color: rgba(19, 12, 12, 0.5); */
     text-shadow: 2px 2px 8px #111;
     width: fit-content;
     height: 1.75em;
@@ -929,8 +1405,6 @@ th {
   .advancedSearchDatetbox {
     color: rgb(2, 1, 0);
     font-size: 1em;
-    /* font-weight: bold; */
-    /* margin: 1% 0 1% 2%; */
   }
 
   .error_search {
@@ -992,4 +1466,4 @@ th {
     font-size: 3;
     display: table-cell;
   }
-}
+} */
