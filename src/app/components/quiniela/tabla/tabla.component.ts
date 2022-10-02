@@ -47,7 +47,7 @@ export class TablaComponent implements OnInit {
   ngOnInit() {
     this.isLoading = true;
     this.getPlayersMap();
-    console.log('Players', this.players);
+    // console.log('Players', this.players);
 
 
 
@@ -88,6 +88,7 @@ export class TablaComponent implements OnInit {
             this.allItems = this.players;
             this.setPage(1);
           this.isLoading = false;
+          console.log('playersHOY', this.players);
         }
         index++;
       });
@@ -98,7 +99,6 @@ export class TablaComponent implements OnInit {
     // initialize to page 1
     // this.setPage(1);
 
-    // console.log('playersNVO', this.players);
     const playerstxt1 = this.players
 
       }
@@ -107,7 +107,7 @@ export class TablaComponent implements OnInit {
   onSearchChange() {
     
     if (this.searchText) {
-      console.log('SEARCH HOY');
+      // console.log('SEARCH HOY');
       this.allItems = this.players.filter(player =>
         // player.stats[0].splits[0].team.name.toLowerCase().includes(this.searchText) ||
         (player.fullName && player.fullName.toLowerCase().includes(this.searchText)) ||
