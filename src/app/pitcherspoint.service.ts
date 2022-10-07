@@ -147,7 +147,7 @@ export class PitcherspointService {
     531368,
   ]
 
-  private _url6 ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2021&hydrate=stats(type=gameLog,season,season=2021,gameType=R)';
+  private _url6 ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2021&hydrate=stats(type=gameLog,season,season=2021,gameType=F)';
   // private _url6 ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(group=pitching,type=gameLog,season,season=2019,gameType=R)';
 
   // private _url6 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2019&hydrate=stats(type=gameLog,gameType=R)';
