@@ -41,7 +41,7 @@ export class AllplayersService {
   ];
 
   //private _url ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2020&hydrate=stats(type=season,season=2020,gameType=S)'
-  private _url ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2022&hydrate=stats(type=season,season=2022,gameType=R)'
+  private _url ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2023&hydrate=stats(type=season,season=2023,gameType=S)'
   //private _url ='https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode +  '&season=2020&hydrate=stats(type=season,season=2020,gameType=R)'
 
 
