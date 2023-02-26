@@ -71,7 +71,7 @@ export class HrQuinielaComponent implements OnInit {
          // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
 
          this.players = this.players.filter(player =>
-          player.stats && player.mlbDebutDate !== 0 && player.stats.length !== 0 && player.primaryPosition.name && player.stats[0].splits && player.stats[0].splits.length !== 0)
+          player.stats && player.stats.length !== 0 && player.primaryPosition.name && player.stats[0].splits && player.stats[0].splits.length !== 0)
           // player.stats && player.stats.length !== 0 && player.primaryPosition.name !=='Pitcher' && player.stats[0].splits && player.stats[0].splits.length !== 0)
           
             // se ordenan por nombre
