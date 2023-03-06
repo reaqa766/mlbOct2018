@@ -38,6 +38,7 @@ export class PruebajsonsComponent implements OnInit {
   n10 = 5;
   // dia = moment().format('YYYY-MM-DD');
   dia = moment().format('YYYY-MM-DD');
+  ayer=moment().subtract(1, 'days').calendar();
   // dia = new Date(new Date().getFullYear(),new Date().getMonth(), new Date().getDate() - 1);
   public allItems: any[];
   gamePlays: string;
@@ -125,8 +126,9 @@ getPlayersMap() {
   }
 
   onSearchDate(fecha) {
-    // console.log("FECHA", fecha.srcElement.value);
+    console.log("FECHA", fecha.srcElement.value);
     this.dia= fecha.srcElement.value;
+    // this.dia=this.ayer;
     // this.dia= fecha.srcElement.value;
     this.getPlayersMap();
 }
