@@ -92,7 +92,7 @@ export class PActivesComponent implements OnInit {
 
           this.setPage(1);
           this.isLoading = false;
-          // console.log(JSON.stringify(this.players[0]));
+          // console.log("Players(0)", JSON.stringify(this.players[0]));
 
         }
         index++;

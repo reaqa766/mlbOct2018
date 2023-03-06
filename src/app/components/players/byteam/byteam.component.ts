@@ -151,7 +151,7 @@ export class ByteamComponent implements OnInit {
           this.allItems = this.players;
           this.setPage(1);
           this.isLoading = false;
-          // console.log(JSON.stringify(this.players[0]));
+          // console.log("JUGADORES JSON:", JSON.stringify(this.players[0]));
         }
         index++;
       });
