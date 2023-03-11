@@ -130,6 +130,26 @@
  .card-img-top {
     max-height: 580px;
 }
+ .card-img-top2 {
+    max-height: 300px;
+    margin: auto;
+    display: block;
+    padding: 1rem 0 0;
+
+}
+
+.Title-barajitas {
+    /* margin: auto; */
+    text-align: center;
+    font-size: 0.95rem;
+
+
+}
+
+.Bjtas {
+    font-size: 0.85rem;
+
+}
 
 .img_picture_element{
     transition: .4s;
@@ -182,6 +202,11 @@ font-weight: 400;
         padding: 0.4rem 0 0;
         width: 15rem;
     }
+    .Bjtas {
+        font-size: 0.85rem;
+    
+    }
+    
 .title-position {
         font-size: .75rem;
     }
@@ -261,6 +286,11 @@ font-weight: 400;
         padding: 0.4rem 0 0;
         width: 22rem;
     }
+    .Bjtas {
+        font-size: 0.85rem;
+    
+    }
+    
 
     .card-title {
         font-size: 1em;
@@ -311,6 +341,14 @@ font-weight: 400;
      .card-img-top {
         max-height: 580px;
     }
+    .card-img-top2 {
+        max-height: 300px;
+        margin: auto;
+        display: block;        
+        padding: 1rem 0 0;
+    
+    }
+    
 
     .container {
         margin-top: 20px;

@@ -151,7 +151,7 @@ export class ByteamComponent implements OnInit {
           this.allItems = this.players;
           this.setPage(1);
           this.isLoading = false;
-          // console.log("JUGADORES JSON:", JSON.stringify(this.players[0]));
+          // console.log("JUGADORES JSON 2:", JSON.stringify(this.allItems));
         }
         index++;
       });
@@ -164,13 +164,16 @@ export class ByteamComponent implements OnInit {
     this.buscando = false;
     if (team) {
       this.allItems = this.players.filter(player =>
-        // player.stats[0].splits[0].team.name.toLowerCase().includes(team.toLowerCase()) ||
+        player.stats[0].splits[0].team.name.toLowerCase().includes(team.toLowerCase()) ||
         player.fullName.toLowerCase().includes(team.toLowerCase()));
+        console.log("JUGADORES JSON:", JSON.stringify(this.allItems));
         this.setPage(this.pager.currentPage);
+
 
     } else {
       this.allItems = this.players;
       this.setPage(this.pager.currentPage);
+      
     }
     return this.allItems;
 

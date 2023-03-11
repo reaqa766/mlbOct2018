@@ -17,6 +17,19 @@
     text-align: center;
 }
 
+.title_infographics2 {
+    color: antiquewhite;
+    width: fit-content;
+    font-size: .55em;
+    text-align: center;
+}
+.title_infographics3 {
+    color: antiquewhite;
+    width: fit-content;
+    font-size: .45em;
+    text-align: center;
+}
+
 
 .container_infographics {
 display: grid;

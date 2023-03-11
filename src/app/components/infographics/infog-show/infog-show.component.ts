@@ -7,7 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfogShowComponent implements OnInit {
   selectedImg;
-  imgs = [ {number: 1, url: '../../../../assets/CamisetasRonald2018.jpg'},
+  imgs = [ {number: 1, url: '../../../../assets/Barajitas/BEugenioSuarez.png'},
+      {number: 2, url: '../../../../assets/Barajitas/BAndresGimenez.png'},
+      {number: 2, url: '../../../../assets/Barajitas/BAnthonySantander.png'},
+      {number: 2, url: '../../../../assets/Barajitas/BCarlosHernandez.png'},
+      {number: 2, url: '../../../../assets/Barajitas/BDarwinzon Hernandez.png'},
+      {number: 2, url: '../../../../assets/Barajitas/BDavidPeralta.png'},
+      // {number: 2, url: '../../../../assets/Barajitas/BEduardoEscobar.png'},
+      // {number: 2, url: '../../../../assets/Barajitas/BAndresGimenez.png'},
+      // {number: 2, url: '../../../../assets/Barajitas/BAndresGimenez.png'},
+      // {number: 2, url: '../../../../assets/Barajitas/BAndresGimenez.png'},
+      // {number: 2, url: '../../../../assets/Barajitas/BAndresGimenez.png'},
+      // {number: 2, url: '../../../../assets/Barajitas/BAndresGimenez.png'},
+      // {number: 2, url: '../../../../assets/Barajitas/BAndresGimenez.png'},
+      // {number: 2, url: '../../../../assets/Barajitas/BAndresGimenez.png'},
+      // {number: 2, url: '../../../../assets/Barajitas/BAndresGimenez.png'},
+      // {number: 2, url: '../../../../assets/Barajitas/BAndresGimenez.png'},
+      // {number: 2, url: '../../../../assets/Barajitas/BAndresGimenez.png'},
+      // {number: 2, url: '../../../../assets/Barajitas/BAndresGimenez.png'},
+      // {number: 2, url: '../../../../assets/Barajitas/BAndresGimenez.png'},
+      // {number: 2, url: '../../../../assets/Barajitas/BAndresGimenez.png'},
+      // {number: 2, url: '../../../../assets/Barajitas/BAndresGimenez.png'},
+      // {number: 2, url: '../../../../assets/Barajitas/BAndresGimenez.png'},
+      // {number: 2, url: '../../../../assets/Barajitas/BAndresGimenez.png'},
+      // {number: 2, url: '../../../../assets/Barajitas/BAndresGimenez.png'},
+
 
   ];
 

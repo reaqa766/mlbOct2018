@@ -84,6 +84,7 @@ export class BioActivesComponent implements OnInit {
               }
             });
             this.allItems = this.players;
+            // console.log(JSON.stringify(this.players),'VENEZUELAN');
             this.setPage(1);
           this.isLoading = false;
         }
@@ -97,7 +98,6 @@ export class BioActivesComponent implements OnInit {
     // this.setPage(1);
 
     // console.log('players', this.players);
-    // console.log(JSON.stringify(this.players),'VENEZUELAN');
 
     const playerstxt1 = this.players
 

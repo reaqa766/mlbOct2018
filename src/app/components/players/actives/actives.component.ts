@@ -90,7 +90,7 @@ export class ActivesComponent implements OnInit {
             });
           this.allItems = this.players;
           this.jugadores = this.players;
-          // console.log('jugadores', JSON.stringify(this.jugadores));
+          console.log('jugadores', JSON.stringify(this.jugadores));
           // console.log('data2', JSON.stringify(this.players));
 
 
