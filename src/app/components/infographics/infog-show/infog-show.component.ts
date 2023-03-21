@@ -25,12 +25,12 @@ export class InfogShowComponent implements OnInit {
       {number: 16, url: '../../../../assets/Barajitas/BJoseQuijada.png'},
       {number: 17, url: '../../../../assets/Barajitas/BRobinsonChirinos.png'},
       {number: 18, url: '../../../../assets/Barajitas/BLuisGarcia.png'},
-      {number: 2, url: '../../../../assets/Barajitas/BRonaldAcunaJr.png'},
-      {number: 2, url: '../../../../assets/Barajitas/BRANGERSUAREZ.png'},
-      {number: 2, url: '../../../../assets/Barajitas/BMiguelRojas.png'},
-      // {number: 2, url: '../../../../assets/Barajitas/BAndresGimenez.png'},
-      // {number: 2, url: '../../../../assets/Barajitas/BAndresGimenez.png'},
-      // {number: 2, url: '../../../../assets/Barajitas/BAndresGimenez.png'},
+      {number: 19, url: '../../../../assets/Barajitas/BRonaldAcunaJr.png'},
+      {number: 20, url: '../../../../assets/Barajitas/BRANGERSUAREZ.png'},
+      {number: 21, url: '../../../../assets/Barajitas/BMiguelRojas.png'},
+      {number: 22, url: '../../../../assets/Barajitas/BMiguelCabrera.png'},
+      {number: 23, url: '../../../../assets/Barajitas/BLuisArraez.png'},
+      {number: 24, url: '../../../../assets/Barajitas/BMARTINPEREZ.png'},
 
 
   ];
