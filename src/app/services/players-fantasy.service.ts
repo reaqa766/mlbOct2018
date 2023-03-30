@@ -29,7 +29,7 @@ export class PlayersFantasyService {
   public dominicansVenezuelansPlayersCodes;
 
 
-  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2023&hydrate=stats(group=hitting,type=season,season=2023,gameType=S)'
+  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2023&hydrate=stats(group=hitting,type=season,season=2023,gameType=R)'
 
 
   constructor(private http: HttpClient, private afs: AngularFirestore) {
