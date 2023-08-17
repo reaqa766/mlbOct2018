@@ -93,7 +93,7 @@ export class PlayersService {
     const venezuelanPlayers = await getPlayerByCountry('Venezuela');
     // const venezuelanPlayers = await getPlayerByCountry('Venezuela');
     console.log(JSON.stringify(venezuelanPlayers),'VENEZUELAN');
-    // console.log(JSON.stringify(dominicanPlayers));
+    console.log(JSON.stringify(dominicanPlayers));
   }
 
   // Obtencion de los datos de temporada de un solo jugador

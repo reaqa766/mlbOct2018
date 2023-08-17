@@ -80,7 +80,8 @@ export class PlayerInfoDominicanComponent implements OnInit {
     this.route.params.subscribe( params => {
       if (this.idplayer !== params.code) {
         this.idplayer = params.code;
-        // console.log('players', this.players);
+        console.log('players', this.players);
+        console.log('IDplayers', this.idplayer);
         this.getPlayersMap();
       }
     });

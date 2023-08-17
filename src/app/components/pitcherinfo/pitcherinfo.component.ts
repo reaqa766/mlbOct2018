@@ -14,7 +14,9 @@ import { take } from 'rxjs/operators';
 })
 export class PitcherinfoComponent implements OnInit {
   public players = [];
+  public cod_players = [];
   public playersSort = [];
+  public CODIGOS = [];
   groups: any;
   selectedGroup: any;
   elarray: any;
@@ -34,6 +36,7 @@ export class PitcherinfoComponent implements OnInit {
     // pager object
     pager: any = {};
     idplayer: any;
+    id: any;
     jugador: any = {};
 
 
@@ -61,6 +64,7 @@ export class PitcherinfoComponent implements OnInit {
       if (this.idplayer !== params.id) {
         this.idplayer = params.id;
         console.log("Players", this.players);
+        // this.players2= this.players;
         console.log("IdPlayer", this.idplayer);
         console.log("Params", params.id);
         this.getPlayersMap();
@@ -79,23 +83,31 @@ export class PitcherinfoComponent implements OnInit {
     for (let obs of InfoObsPlayer) {
       obs.pipe(take(1)).subscribe(res => {
         this.players.push(res);
-
+        // console.log("REAQA", this.players[index].people[0].id);
+         this.CODIGOS= this.players[index].people[0].id
+        this.cod_players.push(this.CODIGOS)
         if ((InfoObsPlayer.length - 1) === index) {
           this.players = this.players.map(player => {
             const newPlayer: Players = {};
             Object.assign(newPlayer, player.people[0]);
             return newPlayer;
           });
-                    for (let jugador of this.players) {
-                      if (jugador.id == this.idplayer) {
-                        this.player = jugador;
-                        break;
-                      }
-                    }
+          for (let jugador of this.players) {
+            if (jugador.id == this.idplayer) {
+              this.player = jugador;
+              break;
+            }
+          }
+          
+          
         }
+        
         index++;
       });
+      
     }
+    console.log('CODIGOS',this.cod_players);
+
 
   }
 

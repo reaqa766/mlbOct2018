@@ -16,6 +16,7 @@ import { PagerService } from '../../../../services/index'
 export class PBioActivesComponent implements OnInit {
 
   public players = [];
+  public players2 = [];
   groups: any;
   selectedGroup: any;
   elarray: any;
@@ -64,7 +65,9 @@ export class PBioActivesComponent implements OnInit {
     for (let obs of InfoObsPlayer) {
       obs.pipe(take(1)).subscribe(res => {
         this.players.push(res);
-
+        // console.log('PRUEBAsss',JSON.stringify(this.players));
+        this.players2 = this.players;
+        
 
         if ((InfoObsPlayer.length - 1) === index) {
           this.players = this.players.map(player => {
@@ -89,8 +92,9 @@ export class PBioActivesComponent implements OnInit {
             this.allItems = this.players;
             this.setPage(1);
           this.isLoading = false;
-          // console.log(JSON.stringify(this.players[0]));
+          console.log('PRUEBA',this.players2);
         }
+        
         index++;
       });
     }

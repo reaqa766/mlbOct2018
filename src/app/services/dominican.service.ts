@@ -9,16 +9,17 @@ import { AngularFirestoreDocument, AngularFirestoreCollection, AngularFirestore 
 import { take } from 'rxjs-compat/operator/take';
 import { first } from 'rxjs/operators';
 import { async } from 'q';
-import _venezuelanPlayersCodes from '../../assets/JSONS/venezuelanPlayersIds'
+// import _venezuelanPlayersCodes from '../../assets/JSONS/venezuelanPlayersIds'
 import _dominicanPlayersIds2019 from '../../assets/JSONS/dominicanPlayersIds2019';
+import _dominicanPlayersCodes from '../../assets/JSONS/dominicanPlayersIds';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class DominicanService {
-  playerCode = 596115;
-  public venezuelanPlayersCodes;
+  playerCode = 642715;
+  // public venezuelanPlayersCodes;
   public dominicanPlayersCodes;
   private gameCode = [
     531368,
@@ -31,8 +32,9 @@ export class DominicanService {
 
 
   constructor(private http: HttpClient) {
-    this.venezuelanPlayersCodes = _venezuelanPlayersCodes;
-    this.dominicanPlayersCodes = _dominicanPlayersIds2019;
+    // this.venezuelanPlayersCodes = _venezuelanPlayersCodes;
+    this.dominicanPlayersCodes = _dominicanPlayersCodes;
+    // this.dominicanPlayersCodes = _dominicanPlayersIds2019;
 
    }
 
@@ -62,7 +64,7 @@ export class DominicanService {
   }
   getAllDominicanPlayersActivesOffline(): any[] {
     let dataAllPlayers: any[] = [];
-    for (let code of this.venezuelanPlayersCodes) {
+    for (let code of this.dominicanPlayersCodes) {
       let dataP = this.getPlayeActiveOffline(code);
       dataAllPlayers.push(dataP);
     }
