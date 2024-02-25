@@ -104,6 +104,7 @@ getPlayersMap() {
 
 
 
+
         this.allItems = this.players;
         this.setPage(1);
         this.isLoading = false;

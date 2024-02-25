@@ -39,11 +39,11 @@ export class PlayersService {
     650402, 545361, 660670, 646240, 488726,
   ]
 
-  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2023&hydrate=stats(group=hitting,type=season,season=2023,gameType=R)';
+  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2024&hydrate=stats(group=hitting,type=season,season=2024,gameType=S)';
   // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2021&hydrate=stats(group=hitting,type=season,season=2021,gameType=R)';
   //private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=hitting,type=season,season=2020,gameType=R)';
   // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=hitting,type=season,season=2020,gameType=S)';
-  private _url2 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2023&hydrate=stats(type=season,season=2023,gameType=R)';
+  private _url2 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2024&hydrate=stats(type=season,season=2024,gameType=S)';
   // private _url2 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(group=hitting,type=season,season=2019,gameType=R)'
 
 
@@ -62,7 +62,7 @@ export class PlayersService {
 
     const getPlayerByCountry = async (country) => {
       // Fetch all players from current season
-      const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2023&gameType=R').toPromise();
+      const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2024&gameType=S').toPromise();
       // const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2021&gameType=R').toPromise();
       //const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2020&gameType=R').toPromise();
      // const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2019&gameType=R').toPromise();
@@ -85,15 +85,23 @@ export class PlayersService {
 
         return id;
       });
+      console.log(playerIds, "vzla22");
+
 
       return playerIds;
+
     }
 
     const dominicanPlayers = await getPlayerByCountry('Dominican Republic');
     const venezuelanPlayers = await getPlayerByCountry('Venezuela');
+    const cubanPlayers = await getPlayerByCountry('Cuba');
+
     // const venezuelanPlayers = await getPlayerByCountry('Venezuela');
+    const venezuelanIds = JSON.stringify(venezuelanPlayers);
     console.log(JSON.stringify(venezuelanPlayers),'VENEZUELAN');
-    console.log(JSON.stringify(dominicanPlayers));
+    // console.log(JSON.stringify(cubanPlayers),'CUBAN');
+
+    // console.log(JSON.stringify(dominicanPlayers));
   }
 
   // Obtencion de los datos de temporada de un solo jugador
@@ -113,7 +121,8 @@ export class PlayersService {
   getAllPlayersActives(): Observable<StatsDayliPlayer | undefined>[] {
     let dataAllPlayers: Observable<StatsDayliPlayer | undefined>[] = [];
     for (let code of this.venezuelanPlayersCodes) {
-      this._url = this._url.replace(this.playerCode.toString(), code.toString());
+      //  for (let code of venezuelanPlayers) {
+    this._url = this._url.replace(this.playerCode.toString(), code.toString());
       let dataP = this.getPlayeActive();
       dataAllPlayers.push(dataP);
       this.playerCode = code;

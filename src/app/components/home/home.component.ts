@@ -59,7 +59,7 @@ export class HomeComponent implements OnInit {
   teamPlays: any;
 
   //  _url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2022&standingsTypes=springTrainning';
- _url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2023&standingsTypes=regularSeason';
+ _url = 'https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2024&standingsTypes=regularSeason';
   _url1 = 'https://statsapi.mlb.com/api/v1/schedule?sportId=1,51&date=2019-04-14&gameTypes=E,S,R,A,F,D,L,W&hydrate=team(linescore(matchup,runners))&useLatestGames=false&language=en&leagueId=103,104,420';
 
   // FIN DE MODULO DE LIDERES

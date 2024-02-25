@@ -17,8 +17,8 @@ export const actualizarPuntos = functions.https.onRequest(async (request, respon
         for (const equipo of liga.equipos) {
           const personIds = equipo.jugadores.map(({ id }) => id).join(',');
           // Por cada equipo, obtengo los jugadores y los mappeo con la bdd de MLB
-          const { data: jugadoresAPI } = await axios.get(`https://statsapi.mlb.com/api/v1/people?personIds=${personIds}&season=2023&hydrate=stats(type=gameLog,season,season=2023,gameType=R)`)
-          // const { data: jugadoresAPI } = await axios.get(`https://statsapi.mlb.com/api/v1/people?personIds=${personIds}&season=2019&hydrate=stats(type=gameLog,season,season=2019,gameType=R)`)
+          const { data: jugadoresAPI } = await axios.get(`https://statsapi.mlb.com/api/v1/people?personIds=${personIds}&season=2024&hydrate=stats(type=gameLog,season,season=2024,gameType=S)`)
+          // const { data: jugadoresAPI } = await axios.get(`https://statsapi.mlb.com/api/v1/people?personIds=${personIds}&season=2019&hydrate=stats(type=gameLog,season,season=2019,gameType=S)`)
 
           // Filtro jugadores activos
           const jugadoresFiltrados = jugadoresAPI.map(({ people }) => people).filter(player => {

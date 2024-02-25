@@ -27,7 +27,7 @@ export class ColombianService {
 
 
   // Url del Api con los datos de cada juego para un Jugador particular
-  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2023&hydrate=stats(type=season,season=2023,gameType=R)';
+  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2024&hydrate=stats(type=season,season=2024,gameType=S)';
   //private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(type=season,season=2019,gameType=R)';
 
 
