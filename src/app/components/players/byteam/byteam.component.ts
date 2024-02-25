@@ -131,6 +131,7 @@ export class ByteamComponent implements OnInit {
           });
           // Se filtran los jugadores que no esten activos (no tienen stats ni splits)
           this.players = this.players.filter(player =>
+            // player.active === true && player.stats[0].splits[0].team)
              player.stats && player.stats.length !== 0 && player.stats[0].splits && player.stats[0].splits.length !== 0)
             // se ordenan por nombre
             .sort((a, b) => {

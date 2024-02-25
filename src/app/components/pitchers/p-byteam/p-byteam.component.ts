@@ -130,9 +130,12 @@ export class PByteamComponent implements OnInit {
             this.allItems = this.players;
             this.setPage(1);
           this.isLoading = false;
+
           // console.log(JSON.stringify(this.players[0]));
         }
+
         index++;
+
       });
     }
 
@@ -141,15 +144,19 @@ export class PByteamComponent implements OnInit {
 
   onSearchChange(team) {
     this.buscando = false;
+    console.log("equipo", team)
+
     if (team) {
       this.allItems = this.players.filter(player =>
-        // player.stats[0].splits[0].team.name.toLowerCase().includes(team.toLowerCase()) ||
+        player.stats[0].splits[0].team.name.toLowerCase().includes(team.toLowerCase()) ||
         player.fullName.toLowerCase().includes(team.toLowerCase()));
       this.setPage(this.pager.currentPage);
     } else {
       this.allItems = this.players;
       this.setPage(this.pager.currentPage);
     }
+    console.log("PITCHERSXEQUIPO", this.players)
+
     return this.allItems;
   }
 

@@ -62,12 +62,18 @@ export class PlayersService {
 
     const getPlayerByCountry = async (country) => {
       // Fetch all players from current season
-      const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2024&gameType=S').toPromise();
+      const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/11/players?season=2024&gameType=S').toPromise();
+      // const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/14/players?season=2024&gameType=S').toPromise();  LIGAS MENORES AAA
+
+      
+      // https://statsapi.mlb.com/api/v1/sports/1/players?season=2023&gameType=R
       // const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2021&gameType=R').toPromise();
       //const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2020&gameType=R').toPromise();
      // const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2019&gameType=R').toPromise();
       // const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2020&gameType=S').toPromise();
       const allPlayers = response.people;
+
+      console.log(allPlayers,"Todos Ligas M")
 
       // Filter by country
       // const filteredPlayers = allPlayers.filter(player => (player.active));
@@ -98,7 +104,8 @@ export class PlayersService {
 
     // const venezuelanPlayers = await getPlayerByCountry('Venezuela');
     const venezuelanIds = JSON.stringify(venezuelanPlayers);
-    console.log(JSON.stringify(venezuelanPlayers),'VENEZUELAN');
+    console.log(venezuelanPlayers,'VENEZUELAN');
+    // console.log(JSON.stringify(venezuelanPlayers),'VENEZUELAN');
     // console.log(JSON.stringify(cubanPlayers),'CUBAN');
 
     // console.log(JSON.stringify(dominicanPlayers));

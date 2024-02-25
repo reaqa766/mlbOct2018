@@ -1,6 +1,6 @@
 <div class="container-actives">
   <div class="container-all">
-    <h1 class="bioActives-title">Estadísticas Temporada 2023 del Jugador</h1>
+    <h1 class="bioActives-title">Estadísticas Temporada 2024 del Jugador</h1>
     <!-- <h1 class="bioActives-title">Estadísticas 2019 del Jugador</h1> -->
     <div *ngIf="!players">
       <i class="fas fa-baseball-ball fa-spin fa-3x fa-fw"></i>
@@ -12,7 +12,7 @@
         <div class="player_pict">
           <h5 class="card-title">{{player?.fullName}}</h5>
           <img class="player_pict2" appImgFallback src="https://securea.mlb.com/mlb/images/players/head_shot/{{player?.id}}.jpg" alt="Jugador de Grandes Ligas">
-          <p class="title-position">2023 </p>
+          <p class="title-position">2024 </p>
           <!-- <p class="title-position"> Temp. 2019 </p> -->
         </div>
         <div class="logo_team" *ngIf="player && player.stats[0].splits.length === 1  ">
