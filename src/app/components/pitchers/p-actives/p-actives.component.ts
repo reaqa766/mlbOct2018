@@ -85,10 +85,10 @@ export class PActivesComponent implements OnInit {
 
             this.allItems = this.players;
             this.jugadores = this.players;
-            // console.log('allItems', this.allItems);
-            // console.log('players', this.players);
+            console.log('allItems', this.allItems);
+            console.log('players', this.players);
 
-              // console.log(JSON.stringify(this.players), 'pbajson');
+              console.log(JSON.stringify(this.players), 'pbajson');
 
           this.setPage(1);
           this.isLoading = false;
@@ -114,7 +114,7 @@ export class PActivesComponent implements OnInit {
       }
   setPage(page: number) {
     // get pager object from service
-    this.pager = this.pagerService.getPager2(this.allItems.length, page);
+    this.pager = this.pagerService.getPager2(this.allItems.length-1, page);
 
     // get current page of items
     this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);

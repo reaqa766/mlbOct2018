@@ -73,7 +73,7 @@ export class PlayersService {
       // const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2020&gameType=S').toPromise();
       const allPlayers = response.people;
 
-      console.log(allPlayers,"Todos Ligas M")
+      console.log(allPlayers,"Todos Ligas Mayores")
 
       // Filter by country
       // const filteredPlayers = allPlayers.filter(player => (player.active));
@@ -105,8 +105,7 @@ export class PlayersService {
     // const venezuelanPlayers = await getPlayerByCountry('Venezuela');
     const venezuelanIds = JSON.stringify(venezuelanPlayers);
     console.log(venezuelanPlayers,'VENEZUELAN');
-    // console.log(JSON.stringify(venezuelanPlayers),'VENEZUELAN');
-    // console.log(JSON.stringify(cubanPlayers),'CUBAN');
+     console.log(JSON.stringify(cubanPlayers),'CUBAN');
 
     // console.log(JSON.stringify(dominicanPlayers));
   }

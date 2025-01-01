@@ -1,5 +1,5 @@
 export class PagerService {
-    getPager(allItems: number, currentPage: number = 1, pageSize: number = 7) {
+    getPager(allItems: number, currentPage: number = 1, pageSize: number = 8) {
         let totalPages = Math.ceil(allItems / pageSize);
 
         // ensure current page isn't out of range
@@ -52,7 +52,7 @@ export class PagerService {
 
 
 
-    getPager2(allItems: number, currentPage: number = 1, pageSize: number = 7) {
+    getPager2(allItems: number, currentPage: number = 1, pageSize: number = 8) {
         // tslint:disable-next-line:prefer-const
         let totalPages = Math.ceil(allItems / pageSize);
 

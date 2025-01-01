@@ -25,7 +25,7 @@
         <thead class="table-header">
           <tr>
             <th class="th2" style="width: 10%;" scope="col">Nombre</th>
-            <th class="th3" style="width: 10%;" scope="col">Equipo</th>
+            <!-- <th class="th3" style="width: 10%;" scope="col">Equipo</th> -->
             <th class="th4" style="width: 5%;" scope="col">Inic</th>
             <th class="th5" style="width: 5%;" scope="col">G</th>
             <th class="th6" style="width: 5%;" scope="col">P</th>
@@ -44,7 +44,7 @@
           <ng-container *ngIf="!(pager.allItems-1 === pager.endIndex)">
             <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.pageSize">
               <a routerLink="/pitcherinfo/{{player.id}}" class="link_player"><td class="link_player" class="th2" style="width: 8%;">{{player.fullName}}</td></a>
-              <td class="th2" style="width: 8%;">{{player.stats[0].splits[0].team.name}}</td>
+              <!-- <td class="th2" style="width: 8%;">{{player.stats[0].splits[0].team.name}}</td> -->
               <td class="th3" style="width: 5%;">{{player.stats[0].splits[0].stat.gamesPitched}}</td>
               <td class="th4" style="width: 5%;">{{player.stats[0].splits[0].stat.wins}}</td>
               <td class="th5" style="width: 5%;">{{player.stats[0].splits[0].stat.losses}}</td>
@@ -59,9 +59,10 @@
           </ng-container>
 
           <ng-container *ngIf="pager.allItems-1 === pager.endIndex">
+            
             <tr *ngFor="let player of allItems | pagination:pager.startIndex:pager.allItems-((pager.totalPages-1)*8)">
               <a routerLink="/pitcherinfo/{{player.id}}" class="link_player"><td class="link_player" class="th2" style="width: 8%;">{{player.fullName}}</td></a>
-              <td class="th2" style="width: 8%;">{{player.stats[0].splits[0].team.name}}</td>
+              <!-- <td class="th2" style="width: 8%;">{{player.stats[0].splits[0].team.name}}</td> -->
               <td class="th3" style="width: 5%;">{{player.stats[0].splits[0].stat.gamesPitched}}</td>
               <td class="th4" style="width: 5%;">{{player.stats[0].splits[0].stat.wins}}</td>
               <td class="th5" style="width: 5%;">{{player.stats[0].splits[0].stat.losses}}</td>
@@ -87,24 +88,24 @@
             <!-- pager -->
             <ul *ngIf="pager.pages && pager.pages.length" class="pagination d-flex justify-content-center">
               <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-                <a (click)="setPage(1)" class="page-link  paginator_item">First</a>
+                <a (click)="setPage(1)" class="page-link paginator_item">First</a>
               </li>
               <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item ">
-                <a (click)="setPage(pager.currentPage - 1)" class="page-link  paginator_item">Previous</a>
+                <a (click)="setPage(pager.currentPage - 1)" class="page-link paginator_item">Previous</a>
               </li>
               <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
                 <a (click)="setPage(page)" class="page-link">{{page}}</a>
               </li>
               <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-                <a (click)="setPage(pager.currentPage + 1)" class="page-link  paginator_item">Next</a>
+                <a (click)="setPage(pager.currentPage + 1)" class="page-link paginator_item">Next</a>
               </li>
               <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item ">
-                <a (click)="setPage(pager.totalPages)" class="page-link  paginator_item">Last</a>
+                <a (click)="setPage(pager.totalPages)" class="page-link paginator_item">Last</a>
               </li>
             </ul>
           </div>
         </div>
         <hr />
       </div>
-    </ng-container>
+        </ng-container>
 
