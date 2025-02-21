@@ -39,12 +39,12 @@ export class PlayersService {
     650402, 545361, 660670, 646240, 488726,
   ]
 
-  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2024&hydrate=stats(group=hitting,type=season,season=2024,gameType=R)';
-  // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2021&hydrate=stats(group=hitting,type=season,season=2021,gameType=R)';
-  //private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=hitting,type=season,season=2020,gameType=R)';
+  private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2025&hydrate=stats(group=hitting,type=season,season=2025,gameType=S)';
+  // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2021&hydrate=stats(group=hitting,type=season,season=2021,gameType=S)';
+  //private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=hitting,type=season,season=2020,gameType=S)';
   // private _url = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2020&hydrate=stats(group=hitting,type=season,season=2020,gameType=S)';
-  private _url2 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2024&hydrate=stats(type=season,season=2024,gameType=R)';
-  // private _url2 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(group=hitting,type=season,season=2019,gameType=R)'
+  private _url2 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2025&hydrate=stats(type=season,season=2025,gameType=S)';
+  // private _url2 = 'https://statsapi.mlb.com/api/v1/people?personIds=' + this.playerCode + '&season=2019&hydrate=stats(group=hitting,type=season,season=2019,gameType=S)'
 
 
   constructor(private http: HttpClient, private afs: AngularFirestore) {
@@ -62,14 +62,14 @@ export class PlayersService {
 
     const getPlayerByCountry = async (country) => {
       // Fetch all players from current season
-      const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2024&gameType=R').toPromise();
-      // const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/14/players?season=2024&gameType=S').toPromise();  LIGAS MENORES AAA
+      const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2025&gameType=S').toPromise();
+      // const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/14/players?season=2025&gameType=S').toPromise();  LIGAS MENORES AAA
 
       
-      // https://statsapi.mlb.com/api/v1/sports/1/players?season=2023&gameType=R
-      // const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2021&gameType=R').toPromise();
-      //const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2020&gameType=R').toPromise();
-     // const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2019&gameType=R').toPromise();
+      // https://statsapi.mlb.com/api/v1/sports/1/players?season=2023&gameType=S
+      // const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2021&gameType=S').toPromise();
+      //const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2020&gameType=S').toPromise();
+     // const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2019&gameType=S').toPromise();
       // const response: any = await this.http.get('https://statsapi.mlb.com/api/v1/sports/1/players?season=2020&gameType=S').toPromise();
       const allPlayers = response.people;
 
