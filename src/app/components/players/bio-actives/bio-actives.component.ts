@@ -84,7 +84,7 @@ export class BioActivesComponent implements OnInit {
               }
             });
             this.allItems = this.players;
-            console.log(JSON.stringify(this.players),'VENEZUELAN');
+            console.log(JSON.stringify(this.players),'VENEZUELAN CODS');
             this.setPage(1);
           this.isLoading = false;
         }

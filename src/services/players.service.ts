@@ -104,7 +104,7 @@ export class PlayersService {
 
     // const venezuelanPlayers = await getPlayerByCountry('Venezuela');
     const venezuelanIds = JSON.stringify(venezuelanPlayers);
-    console.log(venezuelanPlayers,'VENEZUELAN');
+    console.log(venezuelanPlayers,'VENEZUELAN CODS');
      console.log(JSON.stringify(cubanPlayers),'CUBAN');
 
     // console.log(JSON.stringify(dominicanPlayers));
