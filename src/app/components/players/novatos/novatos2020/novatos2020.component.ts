@@ -52,7 +52,7 @@ export class Novatos2020Component implements OnInit {
     this.isLoading = true;
     // this.playerService.getPlayerDaily();
     this.getPlayersMap();
-    console.log('players', this.players);
+    console.log('player 20', this.players);
     // console.log('allItems', this.allItems);
     // console.log('año', this.añoEnCurso);
     // console.log(this.date);
